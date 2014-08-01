@@ -24,5 +24,5 @@ by grandtheftjiujitsu
 
 
 ### Screenshots
-> ![Picture](https://raw.githubusercontent.com/grandtheftjiujitsu/DotFiles/master/zsh-20140511.png)
-> ![Picture](https://raw.githubusercontent.com/grandtheftjiujitsu/DotFiles/master/zsh-20140508.png)
+> ![Picture](https://raw.githubusercontent.com/grandtheftjiujitsu/Configs/master/zsh-20140511.png)
+> ![Picture](https://raw.githubusercontent.com/grandtheftjiujitsu/Configs/master/zsh-20140508.png)
