@@ -1,0 +1,43 @@
+# color shemes for i3
+40 Palletes - http://www.webdesigndev.com/web-development/40-cold-colour-palettes-for-winter-inspired-web-designs
+####################################################################################
+# Blues and Grays
+Wallpaper = http://www.wallsave.com/wallpapers/1920x1080/linux/269409/linux-archlinux-images-enrique-lu-s-blue-269409.jpg
+GTK 2/3 Theme = dorian-theme
+Icons = gnome
+Xfce-Term = "white on black" preset; cursor = cyan
+Mousepad Color Scheme = Oblivion
+
+i3 Config - Windows
+	client.focused		#224257	#224257 #ffffff #3f8ac2
+	client.focused_inactive	#333333	#5f676a	#ffffff #484e50
+	client.unfocused	#333333	#292d2e	#888888	#000000
+	client.urgent		#cl0004	#900000	#ffffff	#900000
+
+i3 Config - Bar Array
+	background #0d1820
+	statusline #dcdcdc
+	separator #0d1820
+
+.conkyrc TEXT
+${execi 300 curl -s "http://weather.yahooapis.com/forecastrss?w=2375544&u=f" -o ~/.cache/weather.xml}${image ~/.conky-weather/assets/Elune/right-bar.png -p 302,14 -s 128x572}${image ~/.conky-weather/assets/Elune/shadow-2.png -p 304,20 -s 54x560}
+
+ [{ "full_text" : "${time %H} : ${time %M} - ${time %a}, ${time %b} ${time %d} - ${execi 300 grep "yweather:condition" ~/.cache/weather.xml | grep -o "temp=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}°F" , "color" : "\#3dbcd9" },
+  { "full_text" : "RAM ${memperc}%" , "color" : "\#006be5" },
+  { "full_text" : "CPU ${cpu}% - ${acpitemp}°F" , "color" : "\#006be5" },
+  { "full_text" : "Wifi:${downspeed wlp3s0}" , "color" : "\#a3a7b4" },
+  { "full_text" : "Eth:${downspeed enp5s0}" , "color" : "\#a3a7b4" },
+  { "full_text" : "Root ${fs_used /} [${fs_used_perc /}%]" , "color" : "\#4666a6" },
+  { "full_text" : "Home ${fs_used /home} [${fs_used_perc /home}%]" , "color" : "\#4666a6" },
+  { "full_text" : "Uptime: ${uptime_short}" , "color" : 
+"\#ffffff" },
+  { "full_text" : "Batt: ${battery_short} / ${battery_percent}%" ,  "color" : 
+    ${if_match ${battery_short}=D}"\#00ff65"${else}"\#51e43f"
+    ${battery_percent}<40}"\#fbfb24" ${battery_percent}<15}"\#d81e23"${else}"\#51e43f"${endif}
+}],
+
+lxdm theme (stock as of 1/31/14)
+####################################################################################
+# Green/Yellow and Grays
+Wallpaper = http://images2.alphacoders.com/834/83462.jpg
+Start here - http://xenull.deviantart.com/art/gStruct-Archlinux-OB-busy-303424639

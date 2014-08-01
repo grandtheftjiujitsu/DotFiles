@@ -1,0 +1,164 @@
+# i3 config file (v4)
+# http://i3wm.org/docs/userguide.html
+# /etc/i3/config
+
+#########################
+# General Configuration #
+#########################
+
+# Mod1 = ALT
+set $mod Mod1
+
+# Start New Treminal			
+bindsym $mod+Return exec i3-sensible-terminal
+
+# Horizontal Split L/R
+bindsym $mod+h split h
+
+# Vertical Split T/B
+bindsym $mod+v split v
+
+# Reload i3 Settings
+bindsym $mod+Shift+c reload
+
+# Restart i3 In Place				
+bindsym $mod+Shift+r restart
+
+# Logout of i3 While Preserving X
+bindsym $mod+Control+Delete exec i3-msg exit
+
+# Lockscreen and Suspend System
+bindsym XF86Launch6 exec i3lock && systemctl suspend
+
+# Switch Workspaces
+bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+1 workspace 1: Main
+bindsym $mod+2 workspace 2: Web
+bindsym $mod+3 workspace 3: Media
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+#####################
+# Window Management #
+#####################
+# Kill focused window
+bindsym $mod+F4 kill
+
+# Toggle Fullscreen Focused Window
+bindsym $mod+KP_Add fullscreen
+
+# Change Window Focus
+bindsym $mod+Right focus right
+bindsym $mod+Left focus left
+bindsym $mod+Up focus up
+bindsym $mod+Down focus down
+
+# Toggle Floating / Tiled Window
+bindsym $mod+space floating toggle
+
+# Move Floating Window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Use Mouse To Drag / Drop Floating Window
+floating_modifier $mod
+
+# Resize Floating Window
+bindsym $mod+r mode "resize"
+mode "resize" {
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+##################
+# Audio / Visual #
+##################
+
+# Screen Shot
+bindsym Print exec scrot
+
+# Screen Brightness
+bindsym $mod+F5 exec xbacklight -dec -10
+bindsym $mod+F6 exec xbacklight -inc +10
+
+# Remove window borders
+for_window [class="^.*"] border pixel 1
+
+# Window Font
+# font pango:[family list] , [style options] , [size]
+font pango:terminus 10
+
+# Window Colors
+# Class					Border	Bkgrnd	Text	Indicator
+client.focused			#224257	#224257	#ffffff	#3f8ac2
+client.focused_inactive	#333333	#5f676a	#ffffff	#484e50
+client.unfocused		#333333	#292d2e	#888888	#000000
+client.urgent			#cl0004	#900000	#ffffff	#900000
+
+# Hotkey Volume Control
+bindsym XF86AudioMute exec /usr/bin/pulseaudio-ctl mute
+bindsym XF86AudioLowerVolume exec /usr/bin/pulseaudio-ctl down
+bindsym XF86AudioRaiseVolume exec /usr/bin/pulseaudio-ctl up
+
+# F-Key Volume Control
+bindsym $mod+F10 exec /usr/bin/pulseaudio-ctl mute
+bindsym $mod+F11 exec /usr/bin/pulseaudio-ctl down
+bindsym $mod+F12 exec /usr/bin/pulseaudio-ctl up
+
+# Music Player Shortcuts
+bindsym $mod+Control+Right exec cmus-remote -n					# Cmus Skip / Next
+bindsym $mod+Control+Left exec cmus-remote -r					# Cmus Skip / Previous
+bindsym $mod+Control+Down exec cmus-remote -u					# Cmus Toggle Play / Pause
+bindsym $mod+Control+Up exec cmus-remote -s						# Cmus Stop
+
+##############
+# Status Bar #
+##############
+
+bar {
+	position top
+#	tray_output none
+	workspace_buttons yes
+	font pango:Droid Sans, Bold, 10
+	status_command $HOME/Scripts/i3bar-conky.sh
+	colors{
+		background #383838
+#		statusline #dcdcdc
+#		separator #0d1820
+	}
+}
+
+#################
+# Start Up Apps #
+#################
+
+# Audio Startup
+exec --no-startup-id pulseaudio --start							# Pulseaudio equalizer start up
+exec --no-startup-id pactl load-module module-equalizer-sink
+exec --no-startup-id pactl load-module module-dbus-protocol
+
+# Screen Timeout (seconds)
+exec --no-startup-id exec dpms 300
+
+# Load Wallpaper
+exec --no-startup-id sh ~/.fehbg &
+
+# Kalu Update Manager
+exec --no-startup-id kalu
+
+# Cache Recovery
+exec --no-startup-id rsync -aAXv ~/.cache-backup/ ~/.cache
+
+# Terminal
+exec --no-startup-id xfce4-terminal
