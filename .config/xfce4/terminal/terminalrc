@@ -22,5 +22,5 @@ ScrollingBar=TERMINAL_SCROLLBAR_NONE
 ScrollingLines=500000
 BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
 BackgroundDarkness=0.400000
-ColorForeground=#0000aaaaaaaa
+ColorForeground=#aaaaaaaaaaaa
 

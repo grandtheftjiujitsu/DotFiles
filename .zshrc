@@ -112,8 +112,9 @@ source ~/.zkbd/xfce-unknown-linux-gnu
 #########
 # Theme #
 #########
-PROMPT="%{$fg_bold[magenta]%}[%{$fg_bold[white]%}%m%{$fg_bold[magenta]%}]%{%{$fg_no_bold[white]%}%d%{$fg_bold[magenta]%} %# %{$reset_color%}"
+PROMPT="%{$fg_bold[magenta]%}[%{$fg_bold[white]%}%m%{$fg_bold[magenta]%}]%{%{$fg_bold[green]%}%~%{$fg_bold[magenta]%} %# %{$reset_color%}"
 
+# Colors:  Black, Red, Green, Yellow, Blue, Magenta, Cyan, White
 # %n = username
 # %m = computer's hostname truncated to first period
 # %M = computer's hostname
