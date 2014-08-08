@@ -13,17 +13,16 @@ alias zedit="nano ~/.zshrc"
 alias zupdate="source ~/.zshrc"
 
 # pacman
-alias installS="sudo pacman -S"						# Install from official repo
-alias installU="sudo pacman -U"						# Install from file
-alias uninstall="sudo pacman -Rns"					# Uninstall package
-alias pacloc="pacman -Qi"							# Query locally installed package and display info
-alias pacrep="pacman -Ss"							# Query official repository
-alias offpkgs="pacman -Qe"							# List installed official packages
-alias aurpkgs="pacman -Qqm"							# List installed unofficial packages
-alias testingpkgs="paclist testing"					# List packages installed from testing repo
-alias lsorphans="sudo pacman -Qdt"					# List orphaned packages
+alias installS="sudo pacman -S"				# Install from official repo
+alias installU="sudo pacman -U"				# Install from file
+alias uninstall="sudo pacman -Rns"			# Uninstall package
+alias pacloc="pacman -Qi"				# Query locally installed package and display info
+alias pacrep="pacman -Ss"				# Query official repository
+alias offpkgs="pacman -Qe"				# List installed official packages
+alias aurpkgs="pacman -Qqm"				# List installed unofficial packages
+alias testingpkgs="paclist testing"			# List packages installed from testing repo
+alias lsorphans="sudo pacman -Qdt"			# List orphaned packages
 alias rmorphans="sudo pacman -Rs $(pacman -Qtdq)"	# Remove orphaned packages
-
 
 # utilities
 alias colortest="zsh ~/Scripts/terminal-colortest.sh"
@@ -112,7 +111,7 @@ source ~/.zkbd/xfce-unknown-linux-gnu
 #########
 # Theme #
 #########
-PROMPT="%{$fg_bold[magenta]%}[%{$fg_bold[white]%}%m%{$fg_bold[magenta]%}]%{%{$fg_bold[green]%}%~%{$fg_bold[magenta]%} %# %{$reset_color%}"
+PROMPT="%{$fg_bold[magenta]%}[%{$fg_bold[green]%}%m%{$fg_bold[magenta]%}]%{%{$fg_no_bold[white]%}%~%{$fg_bold[magenta]%} %# %{$reset_color%}"
 
 # Colors:  Black, Red, Green, Yellow, Blue, Magenta, Cyan, White
 # %n = username
