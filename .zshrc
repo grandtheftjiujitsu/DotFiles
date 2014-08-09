@@ -50,7 +50,7 @@ alias tsm-info="transmission-remote -r "$1" -i"
 
 # git
 alias gadd="git add -A"
-alias gcom="git commit -m"
+alias gcom="git commit -a --allow-empty-message -m ''"
 alias gstat="git status"
 alias glog="git log --graph --abbrev-commit --decorate --date=relative"
 alias gpush="git push"
