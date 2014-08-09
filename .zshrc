@@ -33,6 +33,8 @@ alias unitconversion="/bin/python2.7 ~/Scripts/unit_conversion.py"
 alias usbbackup="sudo zsh ~/Scripts/Backups/USBbackup.sh"
 alias dice="/bin/python2.7 ~/Scripts/RPG_dice.py"
 alias music_sync="zsh ~/Scripts/phone_music_sync.sh"
+alias systemd-fail="systemctl --failed"
+alias systemd-error="sudo journalctl -p 0..3 -xn"
 
 # transmission
 alias tsm-dmn="transmission-daemon"
