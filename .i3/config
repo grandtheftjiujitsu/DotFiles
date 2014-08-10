@@ -101,8 +101,8 @@ mode "resize" {
 bindsym Print exec scrot
 
 # Screen Brightness
-bindsym $mod+F5 exec xbacklight -dec -10
-bindsym $mod+F6 exec xbacklight -inc +10
+bindsym $mod+F5 exec xbacklight -dec 10
+bindsym $mod+F6 exec xbacklight -inc 10
 
 # Remove window borders
 for_window [class="^.*"] border pixel 1
