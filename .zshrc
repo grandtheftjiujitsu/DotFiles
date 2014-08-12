@@ -11,6 +11,7 @@ alias py2.7="/bin/python2.7"
 alias q="exit"
 alias zedit="nano ~/.zshrc"
 alias zupdate="source ~/.zshrc"
+alias scratch="nano ~/scratch.pad"
 
 # pacman
 alias installS="sudo pacman -S"				# Install from official repo
