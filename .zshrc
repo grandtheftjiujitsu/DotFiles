@@ -37,6 +37,7 @@ alias music_sync="zsh ~/Scripts/phone_music_sync.sh"
 alias systemd-fail="systemctl --failed"
 alias systemd-error="sudo journalctl -p 0..3 -xn"
 alias thumb="convert -resize 250x250"
+alias dvdplay="mpv dvd:// --dvd-device=/dev/sr0"
 
 # transmission
 alias tsm-dmn="transmission-daemon"
