@@ -36,6 +36,7 @@ alias dice="/bin/python2.7 ~/Scripts/RPG_dice.py"
 alias music_sync="zsh ~/Scripts/phone_music_sync.sh"
 alias systemd-fail="systemctl --failed"
 alias systemd-error="sudo journalctl -p 0..3 -xn"
+alias thumb="convert -resize 250x250"
 
 # transmission
 alias tsm-dmn="transmission-daemon"
