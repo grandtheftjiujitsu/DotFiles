@@ -10,6 +10,8 @@ alias py2.7="/bin/python2.7"
 alias zedit="nano ~/.zshrc"
 alias zupdate="source ~/.zshrc"
 alias scratch="nano ~/scratch.pad"
+alias unzip="7z x"
+alias eq="qpaeq"
 
 # pacman
 alias installS="sudo pacman -S"				# Install from official repo
@@ -33,7 +35,6 @@ alias systemd-fail="systemctl --failed"
 alias systemd-error="sudo journalctl -p 0..3 -xn"
 alias thumb="convert -resize 250x250"
 alias dvdplay="mpv dvd:// --dvd-device=/dev/sr0"
-alias eq="qpaeq"
 alias use_gpu="xrandr --setprovideroffloadsink nouveau Intel && xcompmgr -c | DRI_PRIME=1"
 
 # transmission
