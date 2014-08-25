@@ -34,6 +34,7 @@ alias systemd-error="sudo journalctl -p 0..3 -xn"
 alias thumb="convert -resize 250x250"
 alias dvdplay="mpv dvd:// --dvd-device=/dev/sr0"
 alias eq="qpaeq"
+alias use_gpu="xrandr --setprovideroffloadsink nouveau Intel && xcompmgr -c | DRI_PRIME=1"
 
 # transmission
 alias tsm-dmn="transmission-daemon"
