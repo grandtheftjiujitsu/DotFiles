@@ -6,29 +6,22 @@
     <body>
         <h1>General Information</h1>
          <ul>
-             <li>HTML files are opened using a browser which 
-then renders the file.</li>
-             <li>The "head" section is printed as a 
-header(different from a heading).</li>
-             <li>The "title" is NOT printed.  It is like 
-metadata for the page.</li>
+             <li>HTML files are opened using a browser which then renders the file.</li>
+             <li>The "head" section is printed as a header(different from a heading).</li>
+             <li>The "title" is NOT printed.  It is like metadata for the page.</li>
          </ul>
         <h1>Printing Text</h1>
         <ul>
             <li><h2>Simple Text</h2></li>
             <ol>
                 <li>Regular text is printed with "p" tags</li>
-                <li>Comments are left like this: <!--Comment 
-Here--></li>
-                <li><strong>Bold </strong>text is done by 
-using "strong" tags.</li>
-                <li><em>Italic </em>text is done by using "em" 
-(emphasis) tags.</li>
+                <li>Comments are left like this: <!Comment Here></li>
+                <li><strong>Bold </strong>text is done by using "strong" tags.</li>
+                <li><em>Italic </em>text is done by using "em" (emphasis) tags.</li>
             </ol>
             <li><h2>Headings</h2></li>
             <ul>
-                <li>THere are 6 heading sizes:  1 = largest; 6 
-= smallest</li>
+                <li>THere are 6 heading sizes:  1 = largest; 6 = smallest</li>
                 <li><h1>Heading 1</h1></li>
                 <li><h2>Heading 2</h2></li>
                 <li><h3>Heading 3</h3></li>
@@ -38,109 +31,95 @@ using "strong" tags.</li>
             </ul>
             <li><h2>Rich Text</h2></li>
             <ul>
-                <li>This is done under a "style" section 
-within the opening text tag ("p" or "h1" for example)</li>
+                <li>This is done under a "style" section within the opening text tag ("p" or "h1" 
+for example)</li>
                 <li><h3>Size</h3></li>
                 <ul>
-                    <li>style="font-size: XXpx"</li>
+                    <li>style="font-size:XXpx"</li>
+                    <li>*for relative sizing use "em" instead of "px"</li>
+                    <ul>
+                        <li>Do this by dividing content size (XXpx) by default (most) browser 
+fonts size (16px)</li>
+                        <li>16px (font) / 16px (browser default) = 1.000em</li>
+                    </ul>
+                    <li>Examples:</li>
                     <ul>
                         <li>Default Font</li>
-                        <li><p style="font-size: 8px">8px 
-Font</p></li>
+                        <li><p style="font-size:0.5em">0.5em Font</p></li>
+                        <li><p style="font-size:8px">8px Font</p></li>
                         <li><h6>Heading 6</h6></li>
-                        <li><p style="font-size: 10px">10px 
-Font</p></li>
-                      <li><p style="font-size: 12px">12px 
-Font</p></li>
-                        <li><p style="font-size: 16px">16px 
-Font</p></li>
-                      <li><p style="font-size: 20px">20px 
-Font</p></li>
-                        <li><p style="font-size: 40px">40px 
-Font</p></li>
+                        <li><p style="font-size:10px">10px Font</p></li>
+                        <li><p style="font-size:0.625em">0.625em Font</p></li>
+                        <li><p style="font-size:12px">12px Font</p></li>
+                        <li><p style="font-size:0.75em">0.75em Font</p></li>
+                        <li><p style="font-size:16px">16px Font</p></li>
+                        <li><p style="font-size:1.25em">1.25em Font</p></li>
+                        <li><p style="font-size:20px">20px Font</p></li>
+                        <li><p style="font-size:2.5em">2.5em Font</p></li>
+                        <li><p style="font-size:40px">40px Font</p></li>
                         <li><h1>Heading 1</h1></li>
                     </ul>
                 </ul>
                 <li><h3>Color</h3></li>
                 <ul>
-                    <li>Similarly, use "color: 
-color-name"</li>
-                    <li style="color: violet">Violet 
-Example</li>
-                    <li style="color:  #00FF00">Or use a HEX 
-color (#00ff00) insead of a color's name</li>
+                    <li>Similarly, use "color:color-name"</li>
+                    <li style="color:violet">Violet Example</li>
+                    <li style="color:#00FF00">Or use a HEX color (#00ff00) insead of a color's 
+name</li>
+                    <li>A good list of HEX colors can be found at <a 
+href="http://www.colorhexa.com/">www.colorhexa.com</a></li>
                 </ul>
                 <li><h3>Font Families</h3></li>
                 <ul>
-                    <li>The style feature used here is 
-"font-family:  Family-Name"</li>
-                    <li>Be sure to capitalize the first letter 
-of the Family-Name (e.g.: Verdana, Impact, Arial, etc...)</li>
+                    <li>The style feature used here is "font-family:Family-Name"</li>
+                    <li>Be sure to capitalize the first letter of the Family-Name (e.g.: Verdana, 
+Impact, Arial, etc...)</li>
                     <li>Examples of Common Fonts:</li>
                     <ul>
                         <li>Default (browser dependent)</li>
-                        <li style="font-family: 
-Arial">Arial</li>
-                        <li style="font-family: 
-Georgia">Georgia</li>
-                        <li style="font-family: 
-Verdana">Verdana</li>
-                        <li style="font-family: 
-Impact">Impact</li>
-                        <li style="font-family: Times New 
-Roman">Times New Roman</li>
-                        <li style="font-family: 
-Lucida">Lucida</li>
-                        <li style="font-family: 
-Clean">Clean</li>
-                        <li style="font-family: 
-Lucida">Lucida</li>
-                        <li style="font-family: 
-Terminal">Terminal</li>
-                        <li style="font-family: New Century 
-Schoolbook">New Century Schoolbook</li>
+                        <li style="font-family:Arial">Arial</li>
+                        <li style="font-family:Georgia">Georgia</li>
+                        <li style="font-family:Verdana">Verdana</li>
+                        <li style="font-family:Impact">Impact</li>
+                        <li style="font-family:Times New Roman">Times New Roman</li>
+                        <li style="font-family:Lucida">Lucida</li>
+                        <li style="font-family:Clean">Clean</li>
+                        <li style="font-family:Lucida">Lucida</li>
+                        <li style="font-family:Terminal">Terminal</li>
+                        <li style="font-family:New Century Schoolbook">New Century Schoolbook</li>
                     </ul>
                 </ul>
                 <li><h3>Background Color</h3></li>
                 <ul>
-                    <li style="color: white; background-color: 
-black">Simply use "background-color: color-name" inside the 
-"style" section of the first tag</li>
+                    <li style="color:white; background-color:black">Simply use 
+"background-color:color-name" inside the "style" section of the first tag</li>
                 </ul>
                 <li>Text Alignment</li>
                 <ul>
-                    <li>Another "style" feature using 
-"text-align: alignment"</li>
-                    <li style="text-align: center">Center 
-Align</li>
-                    <li style="text-align: right">Right 
-Align</li>
+                    <li>Another "style" feature using "text-align: alignment"</li>
+                    <li style="text-align:center">Center Align</li>
+                    <li style="text-align:right">Right Align</li>
                 </ul>
                 <li><h3>Nesting Styles</h3></li>
                 <ul>
-                    <li>There should only be ONE "style" 
-section per tag pair</li>
-                    <li>Inside the quoted section use a "; " 
-to separate style features (style="color: green; font-size: 
+                    <li>There should only be ONE "style" section per tag pair</li>
+                    <li>Inside the quoted section use a "; " to separate style features 
+(style="color: green; font-size: 
 12px")</li>
-                    <li style="color: red; font-size: 
-20px">Example</li>
+                    <li style="color:red; font-size:1.25em">Example</li>
                 </ul>
             </ul>
-            
         </ul>
         <h1>Hyperlinks</h1>
         <ul>
             <li>Start with an "a" tag</li>
-            <li>Within the first "a" use --> 
-href="www.whatever.com"</li>
-            <li>Also within the first "a" you can also add --> 
-title="title" -- which prints as a tooltip when hovered 
+            <li>Within the first "a" use --> href="www.whatever.com"</li>
+            <li>Also within the first "a" you can also add --> title="title" -- which prints as a 
+tooltip when hovered 
 over.</li>
-            <li>Between the "a" and "/a" tags is where the 
-printed / displayed text goes</li>
-            <li>Example:  <a href="www.google.com" title="Link 
-to Google">Google Hyperlink</a></li>
+            <li>Between the "a" and "/a" tags is where the printed / displayed text goes</li>
+            <li>Example:  <a href="www.google.com" title="Link to Google">Google 
+Hyperlink</a></li>
         </ul>
         <h1>Images / Image Links</h1>
         <ul>
@@ -148,13 +127,11 @@ to Google">Google Hyperlink</a></li>
             <ul>
                 <li>img src="www.website.com/image.jpg" /</li>
             </ul>
-            <li>Example:  <img 
-src="https://www.google.com/images/srpr/logo11w.png" /></li>
-            <li>Similarly you can use an image tag in place of 
-the Link Text that is diplayed for a hyperlink.</li>
+            <li>Example:  <img src="https://www.google.com/images/srpr/logo11w.png" /></li>
+            <li>Similarly you can use an image tag in place of the Link Text that is diplayed for 
+a hyperlink.</li>
             <li>Example:  <a href="www.google.com"><img 
-src="https://www.google.com/images/srpr/logo11w.png" 
-title="Link to Google" /></a></li>
+src="https://www.google.com/images/srpr/logo11w.png" title="Link to Google" /></a></li>
         </ul>
         <h1>Lists</h1>
         <ul>
@@ -167,7 +144,35 @@ title="Link to Google" /></a></li>
             <ul>
                 <li>Start with "ul" tag</li>
                 <li>Use "li" tag for "list item"</li>
-            </l>
+            </ul>
         </ul>
+        <h1>Tables</h1>
+        <!Table border must be given in px, not em>
+        <table border="1px">
+            <thead>
+                <tr>
+                    <th colspan="2">Title Merged Across Columns</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="background-color:red">Table Data - Row 1 - Column 1</td>
+                    <td>Table Data - Row 1 - Column 2</td>
+                </tr>
+                <tr>
+                    <td>Table Data - Row 2 - Column 1</td>
+                    <td>Table Data - Row 2 - Column 2</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Divisions and Span</h1>
+        <div style="width:3.125em; height:3.125em; background-color:red"></div>
+        <div style="width:4.6875em; height:3.125em; background-color:blue"></div>
+        <div style="width:6.5em; height:3.125em; background-color:green"></div>
+        <a href="www.google.com"><div style="width:50px; height:50px; 
+background-color:yellow"></div></a>
+        <div><p>This text is balck, except for the word <span 
+style="color:red">red</span>!</p></div>
+        <div><p>*Remember, new divisons <strong>ALWAYS</strong> start on a new line.<p></div>
     </body>
 </html>
