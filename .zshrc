@@ -7,13 +7,13 @@ alias ls="ls -1 --color=auto"
 alias lsa="ls -a --color=auto"
 alias lsl="ls -la --color=auto"
 alias py2.7="/bin/python2.7"
-alias zedit="nano ~/.zshrc"
 alias zupdate="source ~/.zshrc"
 alias scratch="nano ~/scratch.pad"
 alias unzip="7z x"
 alias eq="qpaeq"
 
 # pacman
+alias update="sudo pacman -Syu"
 alias installS="sudo pacman -S"				# Install from official repo
 alias installU="sudo pacman -U"				# Install from file
 alias uninstall="sudo pacman -Rns"			# Uninstall package
@@ -26,13 +26,15 @@ alias lsorphans="sudo pacman -Qdt"			# List orphaned packages
 alias rmorphans="sudo pacman -Rs $(pacman -Qtdq)"	# Remove orphaned packages
 
 # utilities
+alias wifi-connect="sudo zsh ~/Scripts/wifi-connect.sh"
+alias eth0up="sudo systemctl start dhcpcd@enp5s0 && ping -c 1 www.google.com"
 alias colortest="zsh ~/Scripts/terminal-colortest.sh"
 alias dvdrip="sudo zsh ~/Scripts/dvdrip.sh"
 alias seagatebackup="sudo zsh ~/Scripts/Backups/SeagateBackup.sh"
 alias sysinfo="zsh ~/Scripts/sysinfo.sh"
 alias music_sync="zsh ~/Scripts/phone_music_sync.sh"
-alias systemd-fail="systemctl --failed"
-alias systemd-error="sudo journalctl -p 0..3 -xn"
+alias sysfail="systemctl --failed"
+alias syserror="sudo journalctl -p 0..3 -xn"
 alias thumb="convert -resize 250x250"
 alias dvdplay="mpv dvd:// --dvd-device=/dev/sr0"
 alias use_gpu="xrandr --setprovideroffloadsink nouveau Intel && xcompmgr -c | DRI_PRIME=1"
@@ -54,6 +56,7 @@ alias gcom="git commit -a --allow-empty-message -m ''"
 alias gstat="git status"
 alias gpush="git push"
 alias grm="git rm"
+alias gpull="git pull"
 
 ############
 # Settings #
@@ -109,10 +112,10 @@ source ~/.zkbd/xfce-unknown-linux-gnu
 [[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}" end-of-buffer-or-history
 [[ -n "${key[Pause]}"	 ]]  && bindkey  "${key[Pause]}"    kill-whole-line
 
-#########
-# Theme #
-#########
-PROMPT="%{$fg_bold[magenta]%}[%{$fg_bold[green]%}%m%{$fg_bold[magenta]%}]%{%{$fg_no_bold[white]%}%~%{$fg_bold[magenta]%} %# %{$reset_color%}"
+##########
+# Prompt #
+##########
+PROMPT="%{$fg_bold[blue]%}[%{$fg_bold[cyan]%}%m%{$fg_bold[blue]%}]%{%{$fg_no_bold[white]%}%~%{$fg_bold[blue]%} %# %{$fg_no_bold[magenta]%}" 
 
 # Colors:  Black, Red, Green, Yellow, Blue, Magenta, Cyan, White
 # %n = username

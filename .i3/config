@@ -145,14 +145,14 @@ bar {
 	font pango:Droid Sans, Bold, 10
 	status_command $HOME/Scripts/i3bar-conky.sh
 	colors{
-		background #383838
+		background #000000
 #		statusline #dcdcdc
 #		separator #0d1820
 # 		Class              Border	Bkgrnd	Text	Indicator
-        	focused_workspace  #383838 	#383838	#ff55ff
-		active_workspace   #383838  	#383838	#00aaaa	
-		inactive_workspace #383838	#383838	#00aaaa	
-#		urgent_workspace   #e4e4e4 	#121212	#e4e4e4
+        	focused_workspace  #000000 	#000000	#ffffff
+		active_workspace   #000000  	#000000	#00aaaa	
+		inactive_workspace #000000	#000000	#00aaaa	
+#		urgent_workspace   #000000 	#000000	#ffffff
 	}
 }
 
