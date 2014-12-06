@@ -27,7 +27,7 @@ alias rmorphans="sudo pacman -Rs $(pacman -Qtdq)"	# Remove orphaned packages
 
 # utilities
 alias wifi-connect="sudo zsh ~/Scripts/wifi-connect.sh"
-alias eth0up="sudo systemctl start dhcpcd@enp5s0 && ping -c 1 www.google.com"
+alias eth0up="sudo systemctl start dhcpcd@enp5s0 | sudo systemctl start ufw"
 alias colortest="zsh ~/Scripts/terminal-colortest.sh"
 alias dvdrip="sudo zsh ~/Scripts/dvdrip.sh"
 alias seagatebackup="sudo zsh ~/Scripts/Backups/SeagateBackup.sh"
@@ -115,7 +115,7 @@ source ~/.zkbd/xfce-unknown-linux-gnu
 ##########
 # Prompt #
 ##########
-PROMPT="%{$fg_bold[blue]%}[%{$fg_bold[cyan]%}%m%{$fg_bold[blue]%}]%{%{$fg_no_bold[white]%}%~%{$fg_bold[blue]%} %# %{$fg_no_bold[magenta]%}" 
+PROMPT="%{$fg_bold[blue]%}[%{$fg_bold[cyan]%}%m%{$fg_bold[blue]%}]%{%{$fg_no_bold[white]%}%~%{$fg_bold[blue]%} %# %{$fg_no_bold[white]%}" 
 
 # Colors:  Black, Red, Green, Yellow, Blue, Magenta, Cyan, White
 # %n = username
