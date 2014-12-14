@@ -7,10 +7,9 @@ alias ls="ls -1 --color=auto"
 alias lsa="ls -a --color=auto"
 alias lsl="ls -la --color=auto"
 alias py2.7="/bin/python2.7"
-alias zupdate="source ~/.zshrc"
 alias scratch="nano ~/scratch.pad"
 alias unzip="7z x"
-alias eq="qpaeq"
+alias zupdate="source ~/.zshrc"
 
 # pacman
 alias update="sudo pacman -Syu"
@@ -26,18 +25,19 @@ alias lsorphans="sudo pacman -Qdt"			# List orphaned packages
 alias rmorphans="sudo pacman -Rs $(pacman -Qtdq)"	# Remove orphaned packages
 
 # utilities
-alias wifi-connect="sudo zsh ~/Scripts/wifi-connect.sh"
-alias eth0up="sudo systemctl start dhcpcd@enp5s0 | sudo systemctl start ufw"
 alias colortest="zsh ~/Scripts/terminal-colortest.sh"
-alias dvdrip="sudo zsh ~/Scripts/dvdrip.sh"
-alias seagatebackup="sudo zsh ~/Scripts/Backups/SeagateBackup.sh"
-alias sysinfo="zsh ~/Scripts/sysinfo.sh"
-alias music_sync="zsh ~/Scripts/phone_music_sync.sh"
-alias sysfail="systemctl --failed"
-alias syserror="sudo journalctl -p 0..3 -xn"
-alias thumb="convert -resize 250x250"
 alias dvdplay="mpv dvd:// --dvd-device=/dev/sr0"
+alias dvdrip="sudo zsh ~/Scripts/dvdrip.sh"
+alias eq="qpaeq"
+alias eth0up="sudo systemctl start dhcpcd@enp5s0 && sudo systemctl start ufw"
+alias kernconf="zcat /proc/config.gz > ~/.config/$(uname -r).config"
+alias music_sync="zsh ~/Scripts/phone_music_sync.sh"
+alias seagatebackup="sudo zsh ~/Scripts/Backups/SeagateBackup.sh"
+alias syserror="sudo journalctl -p 0..3 -xn"
+alias sysfail="systemctl --failed"
+alias sysinfo="zsh ~/Scripts/sysinfo.sh"
 alias use_gpu="xrandr --setprovideroffloadsink nouveau Intel && xcompmgr -c | DRI_PRIME=1"
+alias wifi-connect="sudo zsh ~/Scripts/wifi-connect.sh"
 
 # transmission
 alias tsm-dmn="transmission-daemon"
@@ -115,7 +115,7 @@ source ~/.zkbd/xfce-unknown-linux-gnu
 ##########
 # Prompt #
 ##########
-PROMPT="%{$fg_bold[blue]%}[%{$fg_bold[cyan]%}%m%{$fg_bold[blue]%}]%{%{$fg_no_bold[white]%}%~%{$fg_bold[blue]%} %# %{$fg_no_bold[white]%}" 
+PROMPT="%{$fg_bold[blue]%}[%{$fg_bold[cyan]%}%m%{$fg_bold[blue]%}]%{%{$fg_no_bold[white]%}%~%{$fg_bold[blue]%} %# $reset_color" 
 
 # Colors:  Black, Red, Green, Yellow, Blue, Magenta, Cyan, White
 # %n = username

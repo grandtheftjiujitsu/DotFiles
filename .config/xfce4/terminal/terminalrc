@@ -20,8 +20,11 @@ MiscBordersDefaults=FALSE
 MiscBordersDefault=FALSE
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
 ScrollingLines=500000
-BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
-BackgroundDarkness=0.400000
-ColorForeground=#0000aaaaaaaa
+BackgroundMode=TERMINAL_BACKGROUND_IMAGE
+BackgroundDarkness=0.300000
+ColorForeground=#ffffffffffff
 ColorCursor=#ffff5555ffff
+ColorBackground=#3b4c34303430
+BackgroundImageStyle=TERMINAL_BACKGROUND_STYLE_CENTERED
+BackgroundImageFile=/home/grandtheftjiujitsu/Pictures/Wallpapers/arch-whiteonblue.png
 
