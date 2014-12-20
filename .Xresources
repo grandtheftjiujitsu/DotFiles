@@ -1,0 +1,51 @@
+! rxvt
+
+! artificial transparency
+rxvt*inheritPixmap: true
+rxvt*backgroundPixmap:/home/grandtheftjiujitsu/Pictures/Wallpapers/arch-whiteonblue.png
+
+! unicode fonts - /usr/share/fonts/misc/fonts.alias
+rxvt*font: 9x15
+rxvt*boldFont: 9x15bold
+
+! character glyphs
+rxvt*cutchars: true
+
+! scrolling
+rxvt*scrollBar: false
+rxvt*scrollTtyOutput: true
+rxvt*scrollTtyKeypress: true
+rxvt*savelines: 100
+rxvt*mouseWheelScrollPage: true
+
+rxvt*cursorColor: magenta
+
+!colors
+! Arch Wiki - Xresources
+! tangoesque scheme
+rxvt*background: #111111
+rxvt*foreground: #babdb6
+! Black (not tango) + DarkGrey
+rxvt*color0:  #000000
+rxvt*color8:  #555753
+! DarkRed + Red
+rxvt*color1:  #ff6565
+rxvt*color9:  #ff8d8d
+! DarkGreen + Green
+rxvt*color2:  #93d44f
+rxvt*color10: #c8e7a8
+! DarkYellow + Yellow
+rxvt*color3:  #eab93d
+rxvt*color11: #ffc123
+! DarkBlue + Blue
+rxvt*color4:  #204a87
+rxvt*color12: #3465a4
+! DarkMagenta + Magenta
+rxvt*color5:  #ce5c00
+rxvt*color13: #f57900
+!DarkCyan + Cyan (both not tango)
+rxvt*color6:  #89b6e2
+rxvt*color14: #46a4ff
+! LightGrey + White
+rxvt*color7:  #cccccc
+rxvt*color15: #ffffff

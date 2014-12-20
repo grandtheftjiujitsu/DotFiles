@@ -7,14 +7,8 @@ alias ls="ls -1 --color=auto"
 alias lsa="ls -a --color=auto"
 alias lsl="ls -la --color=auto"
 alias py2.7="/bin/python2.7"
-alias scratch="nano ~/scratch.pad"
-alias unzip="7z x"
-alias zupdate="source ~/.zshrc"
 
 # pacman
-alias update="sudo pacman -Syu"
-alias installS="sudo pacman -S"				# Install from official repo
-alias installU="sudo pacman -U"				# Install from file
 alias uninstall="sudo pacman -Rns"			# Uninstall package
 alias pacloc="pacman -Qi"				# Query locally installed package and display info
 alias pacrep="pacman -Ss"				# Query official repository
@@ -29,19 +23,23 @@ alias colortest="zsh ~/Scripts/terminal-colortest.sh"
 alias dvdplay="mpv dvd:// --dvd-device=/dev/sr0"
 alias dvdrip="sudo zsh ~/Scripts/dvdrip.sh"
 alias eq="qpaeq"
-alias eth0up="sudo systemctl start dhcpcd@enp5s0 && sudo systemctl start ufw"
-alias kernconf="zcat /proc/config.gz > ~/.config/$(uname -r).config"
-alias music_sync="zsh ~/Scripts/phone_music_sync.sh"
-alias seagatebackup="sudo zsh ~/Scripts/Backups/SeagateBackup.sh"
+alias ethup="sudo systemctl start dhcpcd@enp5s0 && sudo systemctl start ufw"
+alias redwm="cd ~/dwm && makepkg -efi --skipinteg"
+alias scratch="nano ~/scratch.pad"
 alias syserror="sudo journalctl -p 0..3 -xn"
 alias sysfail="systemctl --failed"
 alias sysinfo="zsh ~/Scripts/sysinfo.sh"
+alias unzip="7z x"
 alias use_gpu="xrandr --setprovideroffloadsink nouveau Intel && xcompmgr -c | DRI_PRIME=1"
 alias wifi-connect="sudo zsh ~/Scripts/wifi-connect.sh"
+alias xcp="xclip -i"
+alias xmerge="xrdb -merge ~/.Xresources"
+alias xpst="xclip -o"
+alias zupdate="source ~/.zshrc"
 
 # transmission
-alias tsm-dmn="transmission-daemon"
-alias tsm-quit="killall transmission-daemon"
+alias tsmd="transmission-daemon"
+alias tsmd-quit="killall transmission-daemon"
 alias tsm-add="transmission-remote -a "$1""
 alias tsm-start="transmission-remote -t "$1" -s"
 alias tsm-pause="transmission-remote -t "$1" -S"
