@@ -1,30 +1,3 @@
-! rxvt
-
-! artificial transparency
-rxvt*inheritPixmap: true
-rxvt*backgroundPixmap:/home/grandtheftjiujitsu/Pictures/Wallpapers/arch-whiteonblue.png
-
-! unicode fonts - /usr/share/fonts/misc/fonts.alias
-rxvt*font: 9x15
-rxvt*boldFont: 9x15bold
-
-! character glyphs
-rxvt*cutchars: true
-
-! scrolling
-rxvt*scrollBar: false
-rxvt*scrollTtyOutput: true
-rxvt*scrollTtyKeypress: true
-rxvt*savelines: 100
-rxvt*mouseWheelScrollPage: true
-
-rxvt*cursorColor: magenta
-
-!colors
-! Arch Wiki - Xresources
-! tangoesque scheme
-rxvt*background: #000000
-rxvt*foreground: #ffffff
 ! Image: - http://fc06.deviantart.net/fs71/f/2013/034/9/2/pantone_fluorescence_by_brandon88tube-d5tpe9o.png
 ! black                                                                         
 *color0: #000000                                                                

@@ -1,20 +1,20 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const char font[]            = "-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*";
-static const char normbordercolor[] = "#444444";
-static const char normbgcolor[]     = "#222222";
-static const char normfgcolor[]     = "#bbbbbb";
-static const char selbordercolor[]  = "#005577";
-static const char selbgcolor[]      = "#005577";
-static const char selfgcolor[]      = "#eeeeee";
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const char font[]            = "-misc-*-*-*-*-*-14-*-*-*-*-*-iso8859-1";
+static const char normbordercolor[] = "#000000";
+static const char normbgcolor[]     = "#000000";
+static const char normfgcolor[]     = "#00b0d8";
+static const char selbordercolor[]  = "#000000";
+static const char selbgcolor[]      = "#ff535a";
+static const char selfgcolor[]      = "#00b0d8";
+static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "Main", "Web", "Media", "4", "5", "6" };
 
 static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
@@ -48,6 +48,19 @@ static const Layout layouts[] = {
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "rxvt", NULL };
+
+// custom commads //
+static const char *lcksspnd[]   = { "sflock", "&&", "systemcl", "suspend", NULL };
+static const char *darken[]    = { "xbacklight", "-dec", "10", NULL };
+static const char *brighten[]  = { "xbacklight", "-inc", "10", NULL };
+static const char *volmute[]   = { "/usr/bin/pulseaudio-ctl", "mute", NULL };
+static const char *voldwn[]    = { "/usr/bin/pulseaudio-ctl", "down", NULL };
+static const char *volup[]     = { "/usr/bin/pulseaudio-ctl", "up", NULL };
+static const char *cmusstop[]  = { "cmus-remote", "-s", NULL };
+static const char *cmusplay[]  = { "cmus-remote", "-u", NULL };
+static const char *cmusfwd[]   = { "cmus-remote", "-n", NULL };
+static const char *cmusbck[]   = { "cmus-remote", "-r", NULL };
+static const char *prtsc[]     = { "scrot", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -84,7 +97,20 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-};
+
+// custom keys //
+	{ MODKEY,			XK_F5,     spawn,          {.v = darken } },
+	{ MODKEY,                       XK_F6,     spawn,          {.v = brighten } },
+	{ MODKEY,			XK_F10,    spawn,          {.v = volmute } },
+	{ MODKEY,			XK_F11,    spawn,          {.v = voldwn } },
+	{ MODKEY,			XK_F12,    spawn,          {.v = volup } },
+	{ MODKEY,			XK_Up,     spawn,          {.v = cmusstop } },
+	{ MODKEY,			XK_Down,   spawn,          {.v = cmusplay } },
+	{ MODKEY,			XK_Left,   spawn,          {.v = cmusbck } },
+	{ MODKEY,			XK_Right,  spawn,          {.v = cmusfwd } },
+	{ 0,                            XK_Print,  spawn,          {.v = prtsc } },
+	{ 0,				0x1006ff46, spawn,         {.v = lcksspnd } },
+} ;
 
 /* button definitions */
 /* click can be ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */

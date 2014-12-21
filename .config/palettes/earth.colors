@@ -1,0 +1,26 @@
+Image: http://imgbox.com/Eb7xTJe9
+!black dark/light
+*color0: #50443b
+*color8: #817267
+!red dark/light
+*color1: #8c644c
+*color9: #9f7155
+!green dark/light
+*color2:  #746C48
+*color10: #8F8558
+!yello dark/light
+*color3: #bfba92
+*color11: #E0DAAC
+!blue dark/light
+*color4: #646a6d
+*color12: #777E82
+!magenta dark/light
+*color5: #766782
+*color13: #897796
+!cyan dark/light
+*color6: #4B5C5E
+*color14: #556D70
+!white dark/light
+*color7: #504339
+*color15: #9a875f
+
