@@ -7,7 +7,7 @@ static const char normbgcolor[]     = "#000000";
 static const char normfgcolor[]     = "#00b0d8";
 static const char selbordercolor[]  = "#000000";
 static const char selbgcolor[]      = "#ff535a";
-static const char selfgcolor[]      = "#00b0d8";
+static const char selfgcolor[]      = "#000000";
 static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */
@@ -50,7 +50,8 @@ static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, 
 static const char *termcmd[]  = { "rxvt", NULL };
 
 // custom commads //
-static const char *lcksspnd[]   = { "sflock", "&&", "systemcl", "suspend", NULL };
+static const char *lcksspnd[]  = { "sflock", "&&", "systemctl", "suspend", NULL };
+static const char *lidlock[]   = { "sflock", "&&", "systemctl", "suspend", NULL };
 static const char *darken[]    = { "xbacklight", "-dec", "10", NULL };
 static const char *brighten[]  = { "xbacklight", "-inc", "10", NULL };
 static const char *volmute[]   = { "/usr/bin/pulseaudio-ctl", "mute", NULL };
@@ -65,17 +66,17 @@ static const char *prtsc[]     = { "scrot", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
-	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
-	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
-	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY,                       XK_Return, zoom,           {0} },
+	{ MODKEY,                       XK_Left,   focusstack,     {.i = +1 } },
+	{ MODKEY,                       XK_Right,  focusstack,     {.i = -1 } },
+	{ MODKEY,                       XK_v,      incnmaster,     {.i = +1 } },
+	{ MODKEY,                       XK_h,      incnmaster,     {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_Left,   setmfact,       {.f = -0.05} },
+	{ MODKEY|ShiftMask,             XK_Right,  setmfact,       {.f = +0.05} },
+	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
+	{ 0,                       	XK_Escape, killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
@@ -96,7 +97,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ControlMask,           XK_Delete, quit,           {0} },
 
 // custom keys //
 	{ MODKEY,			XK_F5,     spawn,          {.v = darken } },
@@ -104,12 +105,13 @@ static Key keys[] = {
 	{ MODKEY,			XK_F10,    spawn,          {.v = volmute } },
 	{ MODKEY,			XK_F11,    spawn,          {.v = voldwn } },
 	{ MODKEY,			XK_F12,    spawn,          {.v = volup } },
-	{ MODKEY,			XK_Up,     spawn,          {.v = cmusstop } },
-	{ MODKEY,			XK_Down,   spawn,          {.v = cmusplay } },
-	{ MODKEY,			XK_Left,   spawn,          {.v = cmusbck } },
-	{ MODKEY,			XK_Right,  spawn,          {.v = cmusfwd } },
+	{ MODKEY|ControlMask,		XK_Up,     spawn,          {.v = cmusstop } },
+	{ MODKEY|ControlMask,		XK_Down,   spawn,          {.v = cmusplay } },
+	{ MODKEY|ControlMask,		XK_Left,   spawn,          {.v = cmusbck } },
+	{ MODKEY|ControlMask,		XK_Right,  spawn,          {.v = cmusfwd } },
+	{ MODKEY|ControlMask,		XK_Return, spawn,         {.v = lcksspnd } },
 	{ 0,                            XK_Print,  spawn,          {.v = prtsc } },
-	{ 0,				0x1006ff46, spawn,         {.v = lcksspnd } },
+	{ 0,				150,       spawn,          {.v = lidlock} },
 } ;
 
 /* button definitions */

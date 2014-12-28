@@ -23,17 +23,17 @@ alias colortest="zsh ~/Scripts/terminal-colortest.sh"
 alias dvdplay="mpv dvd:// --dvd-device=/dev/sr0"
 alias dvdrip="sudo zsh ~/Scripts/dvdrip.sh"
 alias eq="qpaeq"
-alias ethup="sudo systemctl start dhcpcd@enp5s0 && sudo systemctl start ufw"
+alias eUP="sudo systemctl start dhcpcd@enp5s0 && sudo systemctl start ufw"
 alias scratch="nano ~/scratch.pad"
 alias syserror="sudo journalctl -p 0..3 -xn"
 alias sysfail="systemctl --failed"
 alias sysinfo="zsh ~/Scripts/sysinfo.sh"
 alias unzip="7z x"
-alias upddwm="cd ~/Builds/dwm && updpkgsums && makepkg -efi"
+alias upddwm="cd ~/.dwm && updpkgsums && makepkg -efi"
 alias updzsh="source ~/.zshrc"
 alias updxrsrc="xrdb -merge ~/.Xresources"
 alias use_gpu="xrandr --setprovideroffloadsink nouveau Intel && xcompmgr -c | DRI_PRIME=1"
-alias wifi-connect="sudo zsh ~/Scripts/wifi-connect.sh"
+alias wUP="sudo bash ~/Scripts/wifi-connect.sh"
 alias xcp="xclip -i"
 alias xpst="xclip -o"
 
@@ -113,7 +113,7 @@ source ~/.zkbd/xfce-unknown-linux-gnu
 ##########
 # Prompt #
 ##########
-PROMPT="%{$fg_bold[green]%}[%{$fg_bold[magenta]%}%m%{$fg_bold[green]%}]%{%{$fg_no_bold[blue]%}%~%{$fg_bold[green]%} %# $reset_color" 
+PROMPT="%{$fg_bold[green]%}[%{$fg_bold[red]%}%m%{$fg_bold[green]%}]%{%{$fg_no_bold[blue]%}%~%{$fg_bold[green]%} %# $reset_color" 
 
 # Colors:  Black, Red, Green, Yellow, Blue, Magenta, Cyan, White
 # %n = username
