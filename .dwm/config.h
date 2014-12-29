@@ -50,8 +50,8 @@ static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, 
 static const char *termcmd[]  = { "rxvt", NULL };
 
 // custom commads //
-static const char *lcksspnd[]  = { "sflock", "&&", "systemctl", "suspend", NULL };
-static const char *lidlock[]   = { "sflock", "&&", "systemctl", "suspend", NULL };
+static const char *scrnlck[]   = { "sflock", NULL };
+static const char *suspend[]   = { "systemctl", "suspend", NULL };
 static const char *darken[]    = { "xbacklight", "-dec", "10", NULL };
 static const char *brighten[]  = { "xbacklight", "-inc", "10", NULL };
 static const char *volmute[]   = { "/usr/bin/pulseaudio-ctl", "mute", NULL };
@@ -76,7 +76,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Right,  setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ 0,                       	XK_Escape, killclient,     {0} },
+	{ MODKEY,                       XK_F4,     killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
@@ -109,9 +109,9 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,		XK_Down,   spawn,          {.v = cmusplay } },
 	{ MODKEY|ControlMask,		XK_Left,   spawn,          {.v = cmusbck } },
 	{ MODKEY|ControlMask,		XK_Right,  spawn,          {.v = cmusfwd } },
-	{ MODKEY|ControlMask,		XK_Return, spawn,         {.v = lcksspnd } },
+	{ MODKEY|ControlMask,		XK_Return, spawn,          {.v = scrnlck } },
+        { MODKEY|ControlMask,           XK_Return, spawn,          {.v = suspend } },
 	{ 0,                            XK_Print,  spawn,          {.v = prtsc } },
-	{ 0,				150,       spawn,          {.v = lidlock} },
 } ;
 
 /* button definitions */

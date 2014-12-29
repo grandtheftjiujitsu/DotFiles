@@ -33,7 +33,7 @@ alias upddwm="cd ~/.dwm && updpkgsums && makepkg -efi"
 alias updzsh="source ~/.zshrc"
 alias updxrsrc="xrdb -merge ~/.Xresources"
 alias use_gpu="xrandr --setprovideroffloadsink nouveau Intel && xcompmgr -c | DRI_PRIME=1"
-alias wUP="sudo bash ~/Scripts/wifi-connect.sh"
+alias wUP="sudo bash ~/Scripts/wifi-connect.sh && systemctl start ufw"
 alias xcp="xclip -i"
 alias xpst="xclip -o"
 
