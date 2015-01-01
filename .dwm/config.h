@@ -50,7 +50,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, 
 static const char *termcmd[]  = { "rxvt", NULL };
 
 // custom commads //
-static const char *scrnlck[]   = { "sflock", NULL };
+static const char *scrnlck[]   = { "sflock", "-f", "10x20", NULL };
 static const char *suspend[]   = { "systemctl", "suspend", NULL };
 static const char *darken[]    = { "xbacklight", "-dec", "10", NULL };
 static const char *brighten[]  = { "xbacklight", "-inc", "10", NULL };

@@ -6,7 +6,6 @@ alias grep="grep --color=auto"
 alias ls="ls -1 --color=auto"
 alias lsa="ls -a --color=auto"
 alias lsl="ls -la --color=auto"
-alias py2.7="/bin/python2.7"
 
 # pacman
 alias uninstall="sudo pacman -Rns"			# Uninstall package
@@ -19,21 +18,21 @@ alias lsorphans="sudo pacman -Qdt"			# List orphaned packages
 alias rmorphans="sudo pacman -Rs $(pacman -Qtdq)"	# Remove orphaned packages
 
 # utilities
-alias colortest="zsh ~/Scripts/terminal-colortest.sh"
-alias dvdplay="mpv dvd:// --dvd-device=/dev/sr0"
-alias dvdrip="sudo zsh ~/Scripts/dvdrip.sh"
+alias colortest="~/Scripts/terminal-colortest.sh"
+alias dvdtools="~/Scripts/dvd-tools.sh"
 alias eq="qpaeq"
+alias eDWN="sudo systemctl stop ufw && ssudo systemctl stop dhcpcd@enp5s0"
 alias eUP="sudo systemctl start dhcpcd@enp5s0 && sudo systemctl start ufw"
-alias scratch="nano ~/scratch.pad"
 alias syserror="sudo journalctl -p 0..3 -xn"
 alias sysfail="systemctl --failed"
-alias sysinfo="zsh ~/Scripts/sysinfo.sh"
+alias sysinfo="~/Scripts/sysinfo.sh"
 alias unzip="7z x"
 alias upddwm="cd ~/.dwm && updpkgsums && makepkg -efi"
 alias updzsh="source ~/.zshrc"
-alias updxrsrc="xrdb -merge ~/.Xresources"
+alias updx="xrdb -merge ~/.Xresources"
 alias use_gpu="xrandr --setprovideroffloadsink nouveau Intel && xcompmgr -c | DRI_PRIME=1"
-alias wUP="sudo bash ~/Scripts/wifi-connect.sh && systemctl start ufw"
+alias wDWN="sudo systemctl stop ufw && sudo systemctl stop dhcpcd@wlp3s0"
+alias wUP="sudo ~/Scripts/wifi-connect.sh && sudo systemctl start ufw"
 alias xcp="xclip -i"
 alias xpst="xclip -o"
 
