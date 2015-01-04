@@ -1,25 +1,3 @@
-! rxvt
-
-rxvt*internalBorder: 0
-rxvt*externalBorder: 0
-rxvt*name: terminal
-
-rxvt*font: 9x15
-rxvt*boldFont: 9x15bold
-rxvt*selectstyle: old
-rxvt*colorBD: #ff535a
-rxvt*colorUL: #00b0d8
-
-rxvt*scrollBar: false
-rxvt*scrollTtyOutput: true
-rxvt*scrollTtyKeypress: true
-rxvt*savelines: 500
-rxvt*mouseWheelScrollPage: true
-
-rxvt*cursorColor: magenta
-rxvt*inheritPixmap: true
-rxvt*backgroundPixmap:/home/grandtheftjiujitsu/Pictures/Wallpapers/arch-whiteonblue.png
-
 *background: #000000
 *foreground: #ffffff
 
@@ -62,3 +40,4 @@ rxvt*backgroundPixmap:/home/grandtheftjiujitsu/Pictures/Wallpapers/arch-whiteonb
 *color7: #d4d4d4
 ! bold_white
 *color15: #ffffff
+

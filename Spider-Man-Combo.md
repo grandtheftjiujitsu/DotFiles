@@ -151,50 +151,71 @@ by grandtheftjiujitsu (GitHub / Arch Linux Forums)
 > PROMPT="%{$fg_bold[green]%}[%{$fg_bold[red]%}%m%{$fg_bold[green]%}]%{%{$fg_no_bold[blue]%}%~%{$fg_bold[green]%} %# $reset_color"
 
 ### ~/.Xresources
-> ! black                                                                         
+> *background: #000000
 
-> *color0: #000000                                                                
+> *foreground: #ffffff
 
-> *color8: #000000                                                                
+> ! black
 
-> ! red PANTONE 805c                                                              
+> *color0: #000000
 
-> *color1: #ff535a                                                                
+> ! bold_black
 
-> *color9: #ff535a                                                                
+> *color8: #555555
 
-> ! green PANTONE 802c                                                            
+> ! red
 
-> *color2: #5adb3c                                                                
+> *color1: #ff535a
 
-> *color10: #5adb3c                                                               
+> ! bold_red
 
-> ! yellow PANTONE 803c                                                           
+> *color9: #ff535a
 
-> *color3: #ffe818                                                                
+> ! green
 
-> *color11: #ffe818                                                               
+> *color2: #5adb3c
 
-> ! blue PANTONE 801c                                                             
+> ! bold_green
 
-> *color4: #00b0d8                                                                
+> *color10: #5adb3c
 
-> *color12: #00b0d8                                                               
+> ! yellow
 
-> ! magenta PANTONE 806c                                                          
+> *color3: #ffe818
 
-> *color5: #ff10a4                                                                
+> ! bold_yellow
 
-> *color13: #ff10a4                                                               
+> *color11: #ffe818
 
-> ! cyan (orange) PANTONE 804c                                                    
+> ! blue
 
-> *color6: #ff9838                                                                
+> *color4: #00b0d8
 
-> *color14: #ff9838 
+> ! bold_blue
 
-> ! white                                                                         
+> *color12: #00b0d8
 
-> *color7: #ffffff                                                                
+> ! magenta
+
+> *color5: #ff10a4
+
+> ! bold_magenta
+
+> *color13: #ff10a4
+
+> ! cyan
+
+> *color6: #ff9838
+
+> ! bold_cyan
+
+> *color14: #ff9838
+
+> ! white
+
+> *color7: #d4d4d4
+
+> ! bold_white
 
 > *color15: #ffffff
+

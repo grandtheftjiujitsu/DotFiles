@@ -1,26 +1,25 @@
-! Image - 
-Image: http://img34.imageshack.us/img34/8285/201105231306167864508x2.png
-!Black
+! Image - http://img34.imageshack.us/img34/8285/201105231306167864508x2.png
+! Black
 *color0:            #212121
 *color8:            #5D5F5E
-Red
+! Red
 *color1:            #490A05
 *color9:            #8C1312
-!Green
+! Green
 *color2:            #054949
 *color10:           #076969
-!Yellow
+! Yellow
 *color3:            #8B751F
 *color11:           #A3A617
-!Blue
+! Blue
 *color4:            #242447
 *color12:           #3720B3
-!Magenta
+! Magenta
 *color5:            #450549
 *color13:           #721374
-!Cyan
+! Cyan
 *color6:            #09728D
 *color14:           #108FBF
-!White
+! White
 *color7:            #92A183
 *color15:           #B8D29D
