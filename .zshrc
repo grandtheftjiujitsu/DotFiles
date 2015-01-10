@@ -8,7 +8,6 @@ alias lsa="ls -a --color=auto"
 alias lsl="ls -la --color=auto"
 
 # pacman
-alias uninstall="sudo pacman -Rns"			# Uninstall package
 alias pacloc="pacman -Qi"				# Query locally installed package and display info
 alias pacrep="pacman -Ss"				# Query official repository
 alias offpkgs="pacman -Qe"				# List installed official packages
@@ -16,6 +15,7 @@ alias aurpkgs="pacman -Qqm"				# List installed unofficial packages
 alias testingpkgs="paclist testing"			# List packages installed from testing repo
 alias lsorphans="sudo pacman -Qdt"			# List orphaned packages
 alias rmorphans="sudo pacman -Rs $(pacman -Qtdq)"	# Remove orphaned packages
+alias exppkgs="pacman -Qet"				# Explicitly installed and not dependencies
 
 # utilities
 alias colortest="~/Scripts/terminal-colortest.sh"

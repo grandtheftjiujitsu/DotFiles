@@ -47,9 +47,10 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "rxvt", NULL };
+static const char *termcmd[]  = { "urxvt", NULL };
 
 // custom commads //
+static const char *shutdwn[]   = { "shutdown", "-h", "now", NULL };
 static const char *scrnlck[]   = { "sflock", "-f", "10x20", NULL };
 static const char *suspend[]   = { "systemctl", "suspend", NULL };
 static const char *darken[]    = { "xbacklight", "-dec", "10", NULL };
@@ -62,6 +63,7 @@ static const char *cmusplay[]  = { "cmus-remote", "-u", NULL };
 static const char *cmusfwd[]   = { "cmus-remote", "-n", NULL };
 static const char *cmusbck[]   = { "cmus-remote", "-r", NULL };
 static const char *prtsc[]     = { "scrot", NULL };
+static const char *chrome[]    = { "chromium", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -100,6 +102,8 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,           XK_Delete, quit,           {0} },
 
 // custom keys //
+	{ MODKEY,			XK_F1,     spawn,          {.v = shutdwn } },
+        { MODKEY,                       XK_F2,     spawn,          {.v = chrome } },
 	{ MODKEY,			XK_F5,     spawn,          {.v = darken } },
 	{ MODKEY,                       XK_F6,     spawn,          {.v = brighten } },
 	{ MODKEY,			XK_F10,    spawn,          {.v = volmute } },
