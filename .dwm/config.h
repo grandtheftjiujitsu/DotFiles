@@ -50,6 +50,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, 
 static const char *termcmd[]  = { "urxvt", NULL };
 
 // custom commads //
+static const char *reboot[]    = { "reboot", NULL };
 static const char *shutdwn[]   = { "shutdown", "-h", "now", NULL };
 static const char *scrnlck[]   = { "sflock", "-f", "10x20", NULL };
 static const char *suspend[]   = { "systemctl", "suspend", NULL };
@@ -102,6 +103,7 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,           XK_Delete, quit,           {0} },
 
 // custom keys //
+        { MODKEY,                       XK_Escape, spawn,          {.v = reboot } },
 	{ MODKEY,			XK_F1,     spawn,          {.v = shutdwn } },
         { MODKEY,                       XK_F2,     spawn,          {.v = chrome } },
 	{ MODKEY,			XK_F5,     spawn,          {.v = darken } },
