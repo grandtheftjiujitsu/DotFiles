@@ -7,6 +7,8 @@ by grandtheftjiujitsu (GitHub / Arch Linux Forums)
 
 ![Picture](https://lh6.googleusercontent.com/-d46fv7uZhlU/VJcxfALM3MI/AAAAAAAAChY/xJ24HdwDIkM/w542-h305-no/2014-12-21-153917_1920x1080_scrot.png)
 
+[Wallpaper](http://daringfireball.net/projects/markdown/syntax)
+
 ### dwm - ~/.dwm/config.h
 > static const char normbordercolor[] = "#000000";
 
