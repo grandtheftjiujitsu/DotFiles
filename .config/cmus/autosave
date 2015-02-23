@@ -11,11 +11,7 @@ set color_cmdline_bg=default
 set color_cmdline_fg=blue
 set color_cur_sel_attr=default
 set color_error=yellow
-<<<<<<< HEAD
 set color_info=lightred
-=======
-set color_info=red
->>>>>>> 7d95e8babe2f37c7ea841c6f30f6a37e2c3bff26
 set color_separator=blue
 set color_statusline_attr=default
 set color_statusline_bg=default
@@ -29,22 +25,14 @@ set color_win_cur=gray
 set color_win_cur_sel_attr=default
 set color_win_cur_sel_bg=default
 set color_win_cur_sel_fg=gray
-<<<<<<< HEAD
 set color_win_dir=gray
-=======
-set color_win_dir=black
->>>>>>> 7d95e8babe2f37c7ea841c6f30f6a37e2c3bff26
 set color_win_fg=blue
 set color_win_inactive_cur_sel_attr=default
 set color_win_inactive_cur_sel_bg=blue
 set color_win_inactive_cur_sel_fg=gray
 set color_win_inactive_sel_attr=default
 set color_win_inactive_sel_bg=blue
-<<<<<<< HEAD
 set color_win_inactive_sel_fg=default
-=======
-set color_win_inactive_sel_fg=black
->>>>>>> 7d95e8babe2f37c7ea841c6f30f6a37e2c3bff26
 set color_win_sel_attr=default
 set color_win_sel_bg=red
 set color_win_sel_fg=black
@@ -55,7 +43,6 @@ set confirm_run=true
 set continue=true
 set device=/dev/opt
 set display_artist_sort_name=false
-<<<<<<< HEAD
 set dsp.alsa.device=default
 set dsp.ao.buffer_size=16384
 set dsp.ao.driver=
@@ -63,9 +50,6 @@ set dsp.ao.wav_counter=1
 set dsp.ao.wav_dir=/home/grandtheftjiujitsu
 set dsp.jack.resampling_quality=2
 set dsp.jack.server_name=
-=======
-set dsp.alsa.device=
->>>>>>> 7d95e8babe2f37c7ea841c6f30f6a37e2c3bff26
 set dsp.oss.device=
 set follow=false
 set format_current= %a - %l -%3n. %t%= %y 

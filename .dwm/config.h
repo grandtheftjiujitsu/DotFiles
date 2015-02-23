@@ -103,7 +103,7 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,           XK_Delete, quit,           {0} },
 
 // custom keys //
-        { MODKEY,                       XK_Escape, spawn,          {.v = reboot } },
+	{ MODKEY,			XK_Escape, spawn,          {.v = reboot } },
 	{ MODKEY,			XK_F1,     spawn,          {.v = shutdwn } },
         { MODKEY,                       XK_F2,     spawn,          {.v = chrome } },
 	{ MODKEY,			XK_F5,     spawn,          {.v = darken } },
