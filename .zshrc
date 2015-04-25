@@ -16,6 +16,7 @@ alias testingpkgs="paclist testing"			# List packages installed from testing rep
 alias lsorphans="sudo pacman -Qdt"			# List orphaned packages
 alias rmorphans="sudo pacman -Rs $(pacman -Qtdq)"	# Remove orphaned packages
 alias exppkgs="pacman -Qet"				# Explicitly installed and not dependencies
+alias pkgowner="pacman -Qo "$1""			# Which package owns input file / library
 
 # utilities
 alias colortest="~/Scripts/terminal-colortest.sh"
@@ -24,7 +25,7 @@ alias eq="qpaeq"
 alias eDWN="sudo systemctl stop ufw && sudo pkill dhcpcd"
 alias eUP="sudo systemctl start dhcpcd@enp5s0 && sudo systemctl start ufw"
 alias scratch="nano ~/scratch.pad"
-alias ssdbu="sudo zsh ~/Scripts/Backups/ssd_backup.sh"
+alias ssdbu="sudo ~/Scripts/Backups/ssd_backup.sh"
 alias syserror="sudo journalctl -p 0..3 -xn"
 alias sysfail="systemctl --failed"
 alias sysinfo="~/Scripts/sysinfo.sh"
@@ -34,8 +35,8 @@ alias updzsh="source ~/.zshrc && cp ~/.zshrc ~/Git/Configs/"
 alias updx="xrdb -merge ~/.Xresources && cp ~/.Xresources ~/Git/Configs/"
 alias use_gpu="xrandr --setprovideroffloadsink nouveau Intel && xcompmgr -c | DRI_PRIME=1"
 alias vbox="sudo modprobe vboxdrv && virtualbox"
-alias wDWN="sudo systemctl stop ufw && sudo pkill dhcpcd && sudo ip link set wlp3s0 down"
-alias wUP="sudo ~/Scripts/wifi-netctl.sh && sudo systemctl start ufw"
+alias wDWN="sudo pkill netctl && sudo systemctl stop dhcpcd && sudo ip link set wlp3s0 down"
+alias wUP="sudo wifi-menu -o && sudo systemctl start ufw"
 alias xcp="xclip -i"
 alias xpst="xclip -o"
 

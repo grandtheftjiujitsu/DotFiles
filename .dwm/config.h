@@ -50,7 +50,57 @@ static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, 
 static const char *termcmd[]  = { "urxvt", NULL };
 
 // custom commads //
-static const char *reboot[]    = { "reboot", NULL };
+static void x_nexttag(const Arg *arg);
+static void x_prevtag(const Arg *arg);
+static void x_adjtag(int n);
+//	Tag Cycling From //
+//	ap0calypse.agitatio.org/articles/2012/08/17/cycle-through-your-tags-in-dwm.html //
+static void x_prevtag(const Arg *arg) {
+    (void)arg;
+    x_adjtag(-1);    
+}
+
+static void x_nexttag(const Arg *arg) {
+    (void)arg;
+    x_adjtag(+1);    
+}
+
+static void x_adjtag(int n) {
+    {
+        int i, curtags;
+        int seltag = 0;
+        Arg arg;
+
+        /*
+         *     * Check first tag currently selected.  If there are
+         *         * several tags selected we only pick first one.
+         *             */
+        if (selmon != NULL) {
+            curtags = (selmon->tagset[selmon->seltags] & TAGMASK);
+        } else {
+            return;
+        }
+        for (i = 0; i < LENGTH(tags); i++) {
+            if ((curtags & (1 << i)) != 0) {
+                seltag = i;
+                break;
+            }
+        }
+
+        /*
+         *      * Calculate next selected tag wrapping around
+         *           * when tag overflows.
+         *                */
+        seltag = (seltag + n) % (int)LENGTH(tags);
+        if (seltag < 0)
+            seltag += LENGTH(tags);
+
+        arg.ui = (1 << seltag);
+        view(&arg);
+    }
+}
+
+static const char *reboot[]    = { "/usr/bin/reboot", NULL };
 static const char *shutdwn[]   = { "shutdown", "-h", "now", NULL };
 static const char *scrnlck[]   = { "sflock", "-f", "10x20", NULL };
 static const char *suspend[]   = { "systemctl", "suspend", NULL };
@@ -72,19 +122,21 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_Left,   focusstack,     {.i = +1 } },
+	{ MODKEY,                       XK_l,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_Right,  focusstack,     {.i = -1 } },
+	{ MODKEY,                       XK_r,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_v,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_h,      incnmaster,     {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_Left,   setmfact,       {.f = -0.05} },
 	{ MODKEY|ShiftMask,             XK_Right,  setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
-	{ MODKEY,                       XK_Tab,    view,           {0} },
+	{ MODKEY,                       XK_space,  view,           {0} },
 	{ MODKEY,                       XK_F4,     killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY,                       XK_space,  setlayout,      {0} },
-	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
+	{ MODKEY,                       XK_Tab,    setlayout,      {0} },
+	{ MODKEY|ShiftMask,             XK_Tab,    togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
@@ -103,7 +155,7 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,           XK_Delete, quit,           {0} },
 
 // custom keys //
-	{ MODKEY,			XK_Escape, spawn,          {.v = reboot } },
+	{ MODKEY,                       XK_Escape, spawn,          {.v = reboot } },
 	{ MODKEY,			XK_F1,     spawn,          {.v = shutdwn } },
         { MODKEY,                       XK_F2,     spawn,          {.v = chrome } },
 	{ MODKEY,			XK_F5,     spawn,          {.v = darken } },
@@ -111,6 +163,8 @@ static Key keys[] = {
 	{ MODKEY,			XK_F10,    spawn,          {.v = volmute } },
 	{ MODKEY,			XK_F11,    spawn,          {.v = voldwn } },
 	{ MODKEY,			XK_F12,    spawn,          {.v = volup } },
+	{ MODKEY,			XK_Up,     x_nexttag,      {0} },
+	{ MODKEY,                       XK_Down,   x_prevtag,      {0} },
 	{ MODKEY|ControlMask,		XK_Up,     spawn,          {.v = cmusstop } },
 	{ MODKEY|ControlMask,		XK_Down,   spawn,          {.v = cmusplay } },
 	{ MODKEY|ControlMask,		XK_Left,   spawn,          {.v = cmusbck } },
