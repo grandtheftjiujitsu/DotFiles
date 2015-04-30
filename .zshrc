@@ -8,8 +8,7 @@ alias ls="ls -1 --color=auto"
 alias lsa="ls -a --color=auto"
 alias lsl="ls -l --color=auto"
 alias lsr="ls -R --color=auto"
-rmf () { mkdir -p /tmp/trash && mv $* /tmp/trash/ }
-rmd () { mkdir -p /tmp/trash && cp -rf $* /tmp/trash/ && rm -rf $* }
+rm () { mkdir -p /tmp/trash && cp -rf $* /tmp/trash/ && rm -rf $* }
 
 # pacman
 alias pacloc="pacman -Qi"				# Query locally installed package and display info
