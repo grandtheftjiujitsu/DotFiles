@@ -1,11 +1,15 @@
 ###########
 # Aliases #
 ###########
+
 # shell convenience
 alias grep="grep --color=auto"
 alias ls="ls -1 --color=auto"
 alias lsa="ls -a --color=auto"
-alias lsl="ls -la --color=auto"
+alias lsl="ls -l --color=auto"
+alias lsr="ls -R --color=auto"
+rmf () { mkdir -p /tmp/trash && mv $* /tmp/trash/ }
+rmd () { mkdir -p /tmp/trash && cp -rf $* /tmp/trash/ && rm -rf $* }
 
 # pacman
 alias pacloc="pacman -Qi"				# Query locally installed package and display info
@@ -44,7 +48,7 @@ alias xpst="xclip -o"
 alias tsm="transmission-remote -l"
 alias tsmd="transmission-daemon"
 alias tsmd-kill="killall transmission-daemon"
-alias tsm-add="transmission-remote -a "$1""
+alias tsm-add="transmission-remote -a $*"
 alias tsm-start="transmission-remote -t "$1" -s"
 alias tsm-pause="transmission-remote -t "$1" -S"
 alias tsm-rm="transmission-remote -t "$1" -r"
