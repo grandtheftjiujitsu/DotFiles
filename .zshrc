@@ -8,7 +8,7 @@ alias ls="ls -1 --color=auto"
 alias lsa="ls -a --color=auto"
 alias lsl="ls -l --color=auto"
 alias lsr="ls -R --color=auto"
-rm () { mkdir -p /tmp/trash && cp -rf $* /tmp/trash/ && rm -rf $* }
+rmd () { mkdir -p /tmp/trash && cp -rf $* /tmp/trash/ && rm -rf $* }
 
 # pacman
 alias pacloc="pacman -Qi"				# Query locally installed package and display info
@@ -27,11 +27,15 @@ alias dvdtools="~/Scripts/dvd-tools.sh"
 alias eq="qpaeq"
 alias eDWN="sudo systemctl stop ufw && sudo pkill dhcpcd"
 alias eUP="sudo systemctl start dhcpcd@enp5s0 && sudo systemctl start ufw"
+gpgzip () { tar -cf - $* | gzip -9 - | gpg -c -o $*.tar.gz.gpg }
 alias scratch="nano ~/scratch.pad"
 alias ssdbu="sudo ~/Scripts/Backups/ssd_backup.sh"
 alias syserror="sudo journalctl -p 0..3 -xn"
 alias sysfail="systemctl --failed"
 alias sysinfo="~/Scripts/sysinfo.sh"
+targzip () { tar -cf - $* | gzip -9 - > $*.tar.gz }
+tarxzip () { tar -cf - $* | xz -9 - > $*.tar.xz }
+ungpg () { gpg -o $1 -d $2 && tar -xvf $1 && rm $1 }
 alias unzip="7z x"
 alias upddwm="cd ~/.dwm && updpkgsums && makepkg -efi && cp ~/.dwm/config.h ~/Git/Configs/.dwm/"
 alias updzsh="source ~/.zshrc && cp ~/.zshrc ~/Git/Configs/"
