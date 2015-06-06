@@ -8,6 +8,8 @@ alias ls="ls -1 --color=auto"
 alias lsa="ls -a --color=auto"
 alias lsl="ls -l --color=auto"
 alias lsr="ls -R --color=auto"
+alias py="python -q"
+alias py2="/usr/bin/python2.7"
 rmd () { mkdir -p /tmp/trash && cp -rf $* /tmp/trash/ && rm -rf $* }
 
 # pacman
@@ -22,12 +24,19 @@ alias exppkgs="pacman -Qet"				# Explicitly installed and not dependencies
 alias pkgowner="pacman -Qo "$1""			# Which package owns input file / library
 
 # utilities
+alias audio-ana="pacmd set-card-profile alsa_card.pci-0000_01_00.1 output:analog-stereo"
+alias audio-dig="pacmd set-card-profile alsa_card.pci-0000_01_00.1 output:hdmi-stereo-extra1"
+alias changegov="sudo zsh ~/Scripts/changegov.sh"
+alias changeio="sudo zsh ~/Scripts/changeio.sh"
 alias colortest="~/Scripts/terminal-colortest.sh"
 alias dvdtools="~/Scripts/dvd-tools.sh"
 alias eq="qpaeq"
 alias eDWN="sudo systemctl stop ufw && sudo pkill dhcpcd"
-alias eUP="sudo systemctl start dhcpcd@enp5s0 && sudo systemctl start ufw"
-gpgzip () { tar -cf - $* | gzip -9 - | gpg -c -o $*.tar.gz.gpg }
+alias eUP="sudo systemctl start dhcpcd@enp3s0 && sudo systemctl start ufw"
+gpgzip () { tar -cf - $* | gzip -9 - | gpg -c -o $*.tar.gz.gpg && rm -rf $* }
+alias grive="grive2"
+#alias hdmioff="xrandr --output HDMI1 --off --output LVDS1 --auto && amixer set IEC958 mute"
+#alias hdmion="xrandr --output LVDS1 --off --output HDMI1 --auto && amixer set IEC958 unmute"
 alias scratch="nano ~/scratch.pad"
 alias ssdbu="sudo ~/Scripts/Backups/ssd_backup.sh"
 alias syserror="sudo journalctl -p 0..3 -xn"
@@ -35,17 +44,17 @@ alias sysfail="systemctl --failed"
 alias sysinfo="~/Scripts/sysinfo.sh"
 targzip () { tar -cf - $* | gzip -9 - > $*.tar.gz }
 tarxzip () { tar -cf - $* | xz -9 - > $*.tar.xz }
-ungpg () { gpg -o $1 -d $2 && tar -xvf $1 && rm $1 }
+#ungpg () { gpg -o $2 -d $1 && tar -xvf $1 && rm $1 }
+alias ungpg="zsh ~/Scripts/ungpg.sh"
 alias unzip="7z x"
 alias upddwm="cd ~/.dwm && updpkgsums && makepkg -efi && cp ~/.dwm/config.h ~/Git/Configs/.dwm/"
 alias updzsh="source ~/.zshrc && cp ~/.zshrc ~/Git/Configs/"
 alias updx="xrdb -merge ~/.Xresources && cp ~/.Xresources ~/Git/Configs/"
-alias use_gpu="xrandr --setprovideroffloadsink nouveau Intel && xcompmgr -c | DRI_PRIME=1"
+#alias use_gpu="xrandr --setprovideroffloadsink nouveau Intel && xcompmgr -c | DRI_PRIME=1"
 alias vbox="sudo modprobe vboxdrv && virtualbox"
-alias wDWN="sudo pkill netctl && sudo systemctl stop dhcpcd && sudo ip link set wlp3s0 down"
-alias wUP="sudo wifi-menu -o && sudo systemctl start ufw"
-alias xcp="xclip -i"
-alias xpst="xclip -o"
+#alias wDWN="sudo pkill netctl && sudo systemctl stop dhcpcd && sudo ip link set wlp3s0 down"
+#alias wUP="sudo wifi-menu -o && sudo systemctl start ufw"
+alias winxp="sudo modprobe vboxdrv && virtualbox --startvm Windows\ XP"
 
 # transmission
 alias tsm="transmission-remote -l"
@@ -86,6 +95,9 @@ zstyle ':completion:*' menu select	# Auto Completion Selection with Arrows
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
+export WINEPREFIX=~/.config/wine
+export WINEARCH=win32
+
 ###########
 # Options #
 ###########
@@ -112,7 +124,6 @@ unsetopt flowcontrol
 # Keybindings #
 ###############
 autoload ~/.zkbd
-source ~/.zkbd/xfce-unknown-linux-gnu
 [[ -n "${key[Home]}"     ]]  && bindkey  "${key[Home]}"     beginning-of-line
 [[ -n "${key[End]}"      ]]  && bindkey  "${key[End]}"      end-of-line
 [[ -n "${key[Insert]}"   ]]  && bindkey  "${key[Insert]}"   overwrite-mode

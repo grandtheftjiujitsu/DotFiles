@@ -104,17 +104,21 @@ static const char *reboot[]    = { "/usr/bin/reboot", NULL };
 static const char *shutdwn[]   = { "shutdown", "-h", "now", NULL };
 static const char *scrnlck[]   = { "sflock", "-f", "10x20", NULL };
 static const char *suspend[]   = { "systemctl", "suspend", NULL };
-static const char *darken[]    = { "xbacklight", "-dec", "10", NULL };
-static const char *brighten[]  = { "xbacklight", "-inc", "10", NULL };
-static const char *volmute[]   = { "/usr/bin/pulseaudio-ctl", "mute", NULL };
-static const char *voldwn[]    = { "/usr/bin/pulseaudio-ctl", "down", NULL };
-static const char *volup[]     = { "/usr/bin/pulseaudio-ctl", "up", NULL };
+static const char *volmute[]   = { "amixer", "set", "Master", "toggle", NULL };
+static const char *voldwn[]    = { "amixer", "set", "Master", "5%-", NULL };
+static const char *volup[]     = { "amixer", "set", "Master", "5%+", NULL };
 static const char *cmusstop[]  = { "cmus-remote", "-s", NULL };
 static const char *cmusplay[]  = { "cmus-remote", "-u", NULL };
 static const char *cmusfwd[]   = { "cmus-remote", "-n", NULL };
 static const char *cmusbck[]   = { "cmus-remote", "-r", NULL };
 static const char *prtsc[]     = { "scrot", NULL };
 static const char *chrome[]    = { "chromium", NULL };
+static const char *nightmode[] = { "xrandr", "--ouptut", "HDMI-0", "--brightness", "0.3", NULL };
+static const char *daymode[]   = { "xrandr", "--output", "HDMI-0", "--brightness", "1", NULL };
+/*
+static const char *darken[]    = { "xbacklight", "-dec", "10", NULL };
+static const char *brighten[]  = { "xbacklight", "-inc", "10", NULL };
+*/
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -155,14 +159,13 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,           XK_Delete, quit,           {0} },
 
 // custom keys //
-	{ MODKEY,                       XK_Escape, spawn,          {.v = reboot } },
-	{ MODKEY,			XK_F1,     spawn,          {.v = shutdwn } },
-        { MODKEY,                       XK_F2,     spawn,          {.v = chrome } },
-	{ MODKEY,			XK_F5,     spawn,          {.v = darken } },
-	{ MODKEY,                       XK_F6,     spawn,          {.v = brighten } },
-	{ MODKEY,			XK_F10,    spawn,          {.v = volmute } },
-	{ MODKEY,			XK_F11,    spawn,          {.v = voldwn } },
-	{ MODKEY,			XK_F12,    spawn,          {.v = volup } },
+	{ MODKEY|ShiftMask,		XK_space,  spawn,          {.v = reboot } },
+	{ MODKEY|ControlMask,		XK_space,  spawn,          {.v = shutdwn } },
+	{ MODKEY,			XK_Home,   spawn,          {.v = nightmode } },
+	{ MODKEY,                       XK_End,    spawn,          {.v = daymode } },
+	{ MODKEY,			XK_Next,   spawn,          {.v = voldwn } },
+	{ MODKEY,			XK_Prior,  spawn,          {.v = volup } },
+        { MODKEY,                       XK_c,      spawn,          {.v = chrome } },
 	{ MODKEY,			XK_Up,     x_nexttag,      {0} },
 	{ MODKEY,                       XK_Down,   x_prevtag,      {0} },
 	{ MODKEY|ControlMask,		XK_Up,     spawn,          {.v = cmusstop } },
