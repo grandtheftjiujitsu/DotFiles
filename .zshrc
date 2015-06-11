@@ -10,7 +10,7 @@ alias lsl="ls -l --color=auto"
 alias lsr="ls -R --color=auto"
 alias py="python -q"
 alias py2="/usr/bin/python2.7"
-rmd () { mkdir -p /tmp/trash && cp -rf $* /tmp/trash/ && rm -rf $* }
+alias isrun="ps -ax | grep $1"
 
 # pacman
 alias pacloc="pacman -Qi"				# Query locally installed package and display info
@@ -34,7 +34,6 @@ alias eq="qpaeq"
 alias eDWN="sudo systemctl stop ufw && sudo pkill dhcpcd"
 alias eUP="sudo systemctl start dhcpcd@enp3s0 && sudo systemctl start ufw"
 gpgzip () { tar -cf - $* | gzip -9 - | gpg -c -o $*.tar.gz.gpg && rm -rf $* }
-alias grive="grive2"
 #alias hdmioff="xrandr --output HDMI1 --off --output LVDS1 --auto && amixer set IEC958 mute"
 #alias hdmion="xrandr --output LVDS1 --off --output HDMI1 --auto && amixer set IEC958 unmute"
 alias scratch="nano ~/scratch.pad"
@@ -139,7 +138,7 @@ autoload ~/.zkbd
 ##########
 # Prompt #
 ##########
-PROMPT="%{$fg_bold[green]%}[%{$fg_bold[red]%}%m%{$fg_bold[green]%}]%{%{$fg_no_bold[blue]%}%~%{$fg_bold[green]%} %# $reset_color" 
+PROMPT="%{$fg_bold[blue]%}[%{$fg_bold[magenta]%}@%m%{$fg_bold[blue]%}]%{%{$fg_no_bold[magenta]%}%~%{$fg_bold[blue]%}%# $reset_color" 
 
 # Colors:  Black, Red, Green, Yellow, Blue, Magenta, Cyan, White
 # %n = username
