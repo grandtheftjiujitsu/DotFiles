@@ -31,14 +31,9 @@ by grandtheftjiujitsu (GitHub / Arch Linux Forums)
 
 >update_interval 0.5
 
->#  in seconds
-
 >total_run_times 0
->#  0 = run forever
 
 >use_spacer none
-
->#  right, left, none
 
 >short_units yes
 
