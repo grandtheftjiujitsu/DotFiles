@@ -1,1 +1,4 @@
-/home/grandtheftjiujitsu/.gtkrc-2.0
+gtk-theme-name = "Think-Correctly-GTK"
+gtk-font-name = "Droid Sans 10"
+gtk-icon-theme-name = "Zukitre"
+gtk-can-change-accels = 1	# Hover mouse over menu entry and pressy key combination to set

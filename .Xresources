@@ -1,1 +1,94 @@
-/home/grandtheftjiujitsu/.Xresources
+! urxvt
+!  full list of options @ ~/.Xresources-commented
+
+! Misc
+URxvt*cursorBlink: true
+Urxvt*saveLines: 0
+!  Improve performace by reducing [deafult 64]
+
+! Native Transparency
+URxvt*transparent: true
+URxvt*shading: 65
+!  0 to 99 darkens, 101 to 200 lightens
+
+! Scrolling
+URxvt*scrollBar: false
+!URxvt*scrollstyle: rxvt
+!  scrollbar style - rxvt (default), palin (most compact), next, or xterm
+URxvt*scrollTtyOutput: true
+URxvt*scrollWithBuffer: true
+URxvt*scrollTtyKeypress: true
+
+! Font
+!  avoid xft fonts for best performance
+!  - if must use xft font, include ":antialias=false" to value
+Urxvt*fontBold: 9x15bold
+URxvt*font:  9x15
+!  9x15 (same as below misc font)
+!  -misc-fixed-bold-r-normal--15-140-75-75-c-90-iso8859-1
+!  xft:font-name:bold:size=10
+
+! Perl Extensions
+!  Disable for best performance
+URxvt*perl-ext:
+URxvt*perl-ext-common:
+!  URxvt*perl-ext-common: default,matcher,tabbed
+!  URxvt*url-launcher: /usr/bin/chromium
+!  URxvt*matcher.button: 1
+!  URxvt*tabbed.tabbar-fg: 4
+!  URxvt*tabbed.tabbar-bg: 0
+!  URxvt*tabbed.tab-fg: 1
+!  URxvt*tabbed.tab-bg: 0
+!    Shift+Down  New tab
+!    Shift+Left  Go to tab left
+!    Shift+Right Go to tab right
+!    Ctrl+Left   Move tab to left
+!    Ctrl+Right  Move tab to right
+!    Ctrl+d      Close tab
+
+! Colors
+URxvt*background: 0
+URxvt*foreground: 15
+URxvt*colorBD: 3
+Urxvt*colorUL: 4
+URxvt*cursorColor: 13
+
+! black
+*color0: #000000
+! bold_black
+*color8: #555555
+
+! red
+*color1: #ff535a
+! bold_red
+*color9: #ff535a
+
+! green
+*color2: #5adb3c
+! bold_green
+*color10: #5adb3c
+
+! yellow
+*color3: #ffe818
+! bold_yellow
+*color11: #ffe818
+
+! blue
+*color4: #00b0d8
+! bold_blue
+*color12: #00b0d8
+
+! magenta
+*color5: #ff10a4
+! bold_magenta
+*color13: #ff10a4
+
+! cyan
+*color6: #ff9838
+! bold_cyan
+*color14: #ff9838
+
+! white
+*color7: #d4d4d4
+! bold_white
+*color15: #ffffff

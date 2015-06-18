@@ -5,7 +5,7 @@ by grandtheftjiujitsu (GitHub / Arch Linux Forums)
 
 --------------------------------------------------
 
-![Picture](https://lh5.googleusercontent.com/aKDPIltM_DAansOxixYZ_QG9hEE8nrbkBpNL7b6E1L6_5zAGo0oWK0kI-9TRQ2M0PfOecFT-2yqxFV4=w936-h881-rw)
+![Picture](http://postimg.org/image/gtuplh215/)
 
 [Wallpaper](http://1ms.net/cheshire-cat-in-the-tea-steam-386706.html)
 
