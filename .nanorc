@@ -44,6 +44,7 @@ include /usr/share/nano-syntax-highlighting/nginx.nanorc
 include /usr/share/nano-syntax-highlighting/patch.nanorc
 include /usr/share/nano-syntax-highlighting/peg.nanorc
 include /usr/share/nano-syntax-highlighting/perl.nanorc
+include /usr/share/nano-syntax-highlighting/perl6.nanorc
 include /usr/share/nano-syntax-highlighting/php.nanorc
 include /usr/share/nano-syntax-highlighting/pkgbuild.nanorc
 include /usr/share/nano-syntax-highlighting/pkg-config.nanorc
@@ -69,4 +70,3 @@ include /usr/share/nano-syntax-highlighting/xresources.nanorc
 include /usr/share/nano-syntax-highlighting/yaml.nanorc
 include /usr/share/nano-syntax-highlighting/yum.nanorc
 include /usr/share/nano-syntax-highlighting/zsh.nanorc
-

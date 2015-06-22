@@ -6,12 +6,12 @@ static const char normbordercolor[] = "#000000";
 static const char normbgcolor[]     = "#000000";
 static const char normfgcolor[]     = "#ffffff";
 static const char selbordercolor[]  = "#000000";
-static const char selbgcolor[]      = "#ff69b4";
+static const char selbgcolor[]      = "#5adb3c";
 static const char selfgcolor[]      = "#000000";
 static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */
-static const Bool topbar            = True;     /* False means bottom bar */
+static const Bool topbar            = False;     /* False means bottom bar */
 
 /* tagging */
 static const char *tags[] = { "Main", "Web", "Media", "4", "5", "6" };
@@ -57,12 +57,12 @@ static void x_adjtag(int n);
 //	ap0calypse.agitatio.org/articles/2012/08/17/cycle-through-your-tags-in-dwm.html //
 static void x_prevtag(const Arg *arg) {
     (void)arg;
-    x_adjtag(-1);    
+    x_adjtag(-1);
 }
 
 static void x_nexttag(const Arg *arg) {
     (void)arg;
-    x_adjtag(+1);    
+    x_adjtag(+1);
 }
 
 static void x_adjtag(int n) {

@@ -1,4 +1,13 @@
-gtk-theme-name = "Think-Correctly-GTK"
+gtk-theme-name = "BSM Simple Dark"
 gtk-font-name = "Droid Sans 10"
 gtk-icon-theme-name = "Zukitre"
-gtk-can-change-accels = 1	# Hover mouse over menu entry and pressy key combination to set
+gtk-can-change-accels = 1
+
+
+
+# Recomendations #
+#----------------#
+# http://gnome-look.org/content/show.php/DeLorean-Dark-Themes?content=159296
+# http://gnome-look.org/content/show.php/BSM+Simple?content=121685
+# http://gnome-look.org/content/show.php/DarkCold?content=143165
+

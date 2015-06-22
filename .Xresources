@@ -3,6 +3,7 @@
 
 ! Misc
 URxvt*cursorBlink: true
+URxvt*cursorUnderline: false
 Urxvt*saveLines: 0
 !  Improve performace by reducing [deafult 64]
 
@@ -51,7 +52,7 @@ URxvt*background: 0
 URxvt*foreground: 15
 URxvt*colorBD: 3
 Urxvt*colorUL: 4
-URxvt*cursorColor: 13
+URxvt*cursorColor: 2
 
 ! black
 *color0: #000000
