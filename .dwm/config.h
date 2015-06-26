@@ -13,8 +13,25 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = False;     /* False means bottom bar */
 
+/* custom */
+static const char *reboot[]    = { "/usr/bin/reboot", NULL };
+static const char *shutdwn[]   = { "shutdown", "-h", "now", NULL };
+static const char *scrnlck[]   = { "sflock", "-f", "10x20", NULL };
+static const char *suspend[]   = { "systemctl", "suspend", NULL };
+static const char *volmute[]   = { "amixer", "set", "Master", "toggle", NULL };
+static const char *voldwn[]    = { "amixer", "set", "Master", "5%-", NULL };
+static const char *volup[]     = { "amixer", "set", "Master", "5%+", NULL };
+static const char *cmusstop[]  = { "cmus-remote", "-s", NULL };
+static const char *cmusplay[]  = { "cmus-remote", "-u", NULL };
+static const char *cmusfwd[]   = { "cmus-remote", "-n", NULL };
+static const char *cmusbck[]   = { "cmus-remote", "-r", NULL };
+static const char *prtsc[]     = { "scrot", NULL };
+static const char *chrome[]    = { "chromium", NULL };
+static const char *nightmode[] = { "xrandr", "--ouptut", "HDMI-0", "--brightness", "0.3", NULL };
+static const char *daymode[]   = { "xrandr", "--output", "HDMI-0", "--brightness", "1", NULL };
+
 /* tagging */
-static const char *tags[] = { "Main", "Web", "Media", "4", "5", "6" };
+static const char *tags[] = { "Main", "Media", "3", "4", "5", "6" };
 
 static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
@@ -100,47 +117,25 @@ static void x_adjtag(int n) {
     }
 }
 
-static const char *reboot[]    = { "/usr/bin/reboot", NULL };
-static const char *shutdwn[]   = { "shutdown", "-h", "now", NULL };
-static const char *scrnlck[]   = { "sflock", "-f", "10x20", NULL };
-static const char *suspend[]   = { "systemctl", "suspend", NULL };
-static const char *volmute[]   = { "amixer", "set", "Master", "toggle", NULL };
-static const char *voldwn[]    = { "amixer", "set", "Master", "5%-", NULL };
-static const char *volup[]     = { "amixer", "set", "Master", "5%+", NULL };
-static const char *cmusstop[]  = { "cmus-remote", "-s", NULL };
-static const char *cmusplay[]  = { "cmus-remote", "-u", NULL };
-static const char *cmusfwd[]   = { "cmus-remote", "-n", NULL };
-static const char *cmusbck[]   = { "cmus-remote", "-r", NULL };
-static const char *prtsc[]     = { "scrot", NULL };
-static const char *chrome[]    = { "chromium", NULL };
-static const char *nightmode[] = { "xrandr", "--ouptut", "HDMI-0", "--brightness", "0.3", NULL };
-static const char *daymode[]   = { "xrandr", "--output", "HDMI-0", "--brightness", "1", NULL };
-/*
-static const char *darken[]    = { "xbacklight", "-dec", "10", NULL };
-static const char *brighten[]  = { "xbacklight", "-inc", "10", NULL };
-*/
-
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_Left,   focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_l,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_Right,  focusstack,     {.i = -1 } },
-	{ MODKEY,                       XK_r,      focusstack,     {.i = -1 } },
-	{ MODKEY,                       XK_v,      incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_h,      incnmaster,     {.i = -1 } },
+	{ MODKEY,                       XK_equal,  incnmaster,     {.i = +1 } },
+	{ MODKEY,                       XK_minus,  incnmaster,     {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_Left,   setmfact,       {.f = -0.05} },
 	{ MODKEY|ShiftMask,             XK_Right,  setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_space,  view,           {0} },
-	{ MODKEY,                       XK_F4,     killclient,     {0} },
+	{ 0,                            XK_Escape, killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_Tab,    setlayout,      {0} },
-	{ MODKEY|ShiftMask,             XK_Tab,    togglefloating, {0} },
+	{ MODKEY|ShiftMask,             XK_f,      togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
@@ -160,21 +155,21 @@ static Key keys[] = {
 
 // custom keys //
 	{ MODKEY|ShiftMask,		XK_space,  spawn,          {.v = reboot } },
-	{ MODKEY|ControlMask,		XK_space,  spawn,          {.v = shutdwn } },
-	{ MODKEY,			XK_Home,   spawn,          {.v = nightmode } },
-	{ MODKEY,                       XK_End,    spawn,          {.v = daymode } },
-	{ MODKEY,			XK_Next,   spawn,          {.v = voldwn } },
-	{ MODKEY,			XK_Prior,  spawn,          {.v = volup } },
-        { MODKEY,                       XK_c,      spawn,          {.v = chrome } },
-	{ MODKEY,			XK_Up,     x_nexttag,      {0} },
-	{ MODKEY,                       XK_Down,   x_prevtag,      {0} },
-	{ MODKEY|ControlMask,		XK_Up,     spawn,          {.v = cmusstop } },
-	{ MODKEY|ControlMask,		XK_Down,   spawn,          {.v = cmusplay } },
-	{ MODKEY|ControlMask,		XK_Left,   spawn,          {.v = cmusbck } },
-	{ MODKEY|ControlMask,		XK_Right,  spawn,          {.v = cmusfwd } },
-	{ MODKEY|ControlMask,		XK_Return, spawn,          {.v = scrnlck } },
-        { MODKEY|ControlMask,           XK_Return, spawn,          {.v = suspend } },
-	{ 0,                            XK_Print,  spawn,          {.v = prtsc } },
+	{ MODKEY|ControlMask, XK_space,  spawn,          {.v = shutdwn } },
+	{ MODKEY,             XK_Home,   spawn,          {.v = nightmode } },
+	{ MODKEY,             XK_End,    spawn,          {.v = daymode } },
+	{ MODKEY,             XK_Next,   spawn,          {.v = voldwn } },
+	{ MODKEY,             XK_Prior,  spawn,          {.v = volup } },
+  { MODKEY,             XK_c,      spawn,          {.v = chrome } },
+	{ MODKEY,             XK_Up,     x_nexttag,      {0} },
+	{ MODKEY,             XK_Down,   x_prevtag,      {0} },
+	{ MODKEY|ControlMask, XK_Up,     spawn,          {.v = cmusstop } },
+	{ MODKEY|ControlMask, XK_Down,   spawn,          {.v = cmusplay } },
+	{ MODKEY|ControlMask, XK_Left,   spawn,          {.v = cmusbck } },
+	{ MODKEY|ControlMask, XK_Right,  spawn,          {.v = cmusfwd } },
+	{ MODKEY|ControlMask, XK_Return, spawn,          {.v = scrnlck } },
+  { MODKEY|ControlMask, XK_Return, spawn,          {.v = suspend } },
+	{ 0,                  XK_Print,  spawn,          {.v = prtsc } },
 } ;
 
 /* button definitions */
