@@ -46,6 +46,7 @@ alias audio-ana="pacmd set-card-profile alsa_card.pci-0000_01_00.1 output:analog
 alias audio-dig="pacmd set-card-profile alsa_card.pci-0000_01_00.1 output:hdmi-stereo-extra1"
 alias changegov="~/scripts/changegov.sh"
 alias changeio="~/scripts/changeio.sh"
+alias cmusd="tmux new -s cmus -d cmus"
 alias colortest="~/scripts/colortest.sh"
 alias dvd="~/scripts/dvd-tools.sh"
 alias dwnspd="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"

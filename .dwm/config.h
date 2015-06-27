@@ -31,7 +31,7 @@ static const char *nightmode[] = { "xrandr", "--ouptut", "HDMI-0", "--brightness
 static const char *daymode[]   = { "xrandr", "--output", "HDMI-0", "--brightness", "1", NULL };
 
 /* tagging */
-static const char *tags[] = { "Main", "Media", "3", "4", "5", "6" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6" };
 
 static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */

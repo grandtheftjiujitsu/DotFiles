@@ -1,8 +1,8 @@
 set aaa_mode=all
-set altformat_current= %F 
-set altformat_playlist= %f%= %d 
+set altformat_current= %F
+set altformat_playlist= %f%= %d
 set altformat_title=%f
-set altformat_trackwin= %f%= %d 
+set altformat_trackwin= %f%= %d
 set auto_expand_albums=true
 set auto_reshuffle=true
 set buffer_seconds=10
@@ -18,7 +18,7 @@ set color_statusline_bg=default
 set color_statusline_fg=blue
 set color_titleline_attr=default
 set color_titleline_bg=default
-set color_titleline_fg=lightmagenta
+set color_titleline_fg=lightgreen
 set color_win_attr=default
 set color_win_bg=default
 set color_win_cur=blue
@@ -31,14 +31,14 @@ set color_win_inactive_cur_sel_attr=default
 set color_win_inactive_cur_sel_bg=white
 set color_win_inactive_cur_sel_fg=gray
 set color_win_inactive_sel_attr=default
-set color_win_inactive_sel_bg=white
-set color_win_inactive_sel_fg=default
+set color_win_inactive_sel_bg=yellow
+set color_win_inactive_sel_fg=black
 set color_win_sel_attr=default
-set color_win_sel_bg=magenta
+set color_win_sel_bg=green
 set color_win_sel_fg=black
 set color_win_title_attr=default
 set color_win_title_bg=black
-set color_win_title_fg=lightmagenta
+set color_win_title_fg=lightgreen
 set confirm_run=true
 set continue=true
 set device=/dev/opt
@@ -52,12 +52,12 @@ set dsp.jack.resampling_quality=2
 set dsp.jack.server_name=
 set dsp.oss.device=
 set follow=false
-set format_current= %a - %l -%3n. %t%= %y 
-set format_playlist= %-25%a %3n. %t%= %y %d 
-set format_playlist_va= %-25%A %3n. %t (%a)%= %y %d 
+set format_current= %a - %l -%3n. %t%= %y
+set format_playlist= %-25%a %3n. %t%= %y %d
+set format_playlist_va= %-25%A %3n. %t (%a)%= %y %d
 set format_title=%a - %l - %t (%y)
-set format_trackwin=%3n. %t%= %y %d 
-set format_trackwin_va=%3n. %t (%a)%= %y %d 
+set format_trackwin=%3n. %t%= %y %d
+set format_trackwin_va=%3n. %t (%a)%= %y %d
 set icecast_default_charset=ISO-8859-1
 set id3_default_charset=ISO-8859-1
 set input.cdio.cddb_url=freedb.freedb.org:8880
@@ -97,7 +97,7 @@ bind browser backspace browser-up
 bind browser i toggle show_hidden
 bind browser space win-activate
 bind browser u win-update
-bind common ! push shell 
+bind common ! push shell
 bind common + vol +10%
 bind common , seek -1m
 bind common - vol -10%
@@ -113,10 +113,10 @@ bind common = vol +10%
 bind common C toggle continue
 bind common D win-remove
 bind common E win-add-Q
-bind common F push filter 
+bind common F push filter
 bind common G win-bottom
 bind common I echo {}
-bind common L push live-filter 
+bind common L push live-filter
 bind common M toggle play_library
 bind common N search-prev
 bind common P win-mv-before
