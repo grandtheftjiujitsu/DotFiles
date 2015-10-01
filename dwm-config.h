@@ -1,37 +1,30 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const char font[]            = "-misc-*-*-*-*-*-14-*-*-*-*-*-iso8859-1";
-static const char normbordercolor[] = "#000000";
-static const char normbgcolor[]     = "#000000";
-static const char normfgcolor[]     = "#ffffff";
-static const char selbordercolor[]  = "#000000";
-static const char selbgcolor[]      = "#5adb3c";
-static const char selfgcolor[]      = "#000000";
-static const unsigned int borderpx  = 0;        /* border pixel of windows */
+static const char font[]            = "-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*";
+static const char normbordercolor[] = "#444444";
+static const char normbgcolor[]     = "#222222";
+static const char normfgcolor[]     = "#bbbbbb";
+static const char selbordercolor[]  = "#005577";
+static const char selbgcolor[]      = "#005577";
+static const char selfgcolor[]      = "#eeeeee";
+static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */
-static const Bool topbar            = False;     /* False means bottom bar */
+static const Bool topbar            = True;     /* False means bottom bar */
 
 /* custom */
-static const char *reboot[]    = { "/usr/bin/reboot", NULL };
-static const char *shutdwn[]   = { "shutdown", "-h", "now", NULL };
-static const char *scrnlck[]   = { "sflock", "-f", "10x20", NULL };
-static const char *suspend[]   = { "systemctl", "suspend", NULL };
-static const char *volmute[]   = { "amixer", "set", "Master", "toggle", NULL };
-static const char *voldwn[]    = { "amixer", "set", "Master", "5%-", NULL };
-static const char *volup[]     = { "amixer", "set", "Master", "5%+", NULL };
-static const char *cmusstop[]  = { "cmus-remote", "-s", NULL };
-static const char *cmusplay[]  = { "cmus-remote", "-u", NULL };
-static const char *cmusfwd[]   = { "cmus-remote", "-n", NULL };
-static const char *cmusbck[]   = { "cmus-remote", "-r", NULL };
-static const char *prtsc[]     = { "scrot", NULL };
-static const char *chrome[]    = { "chromium", NULL };
-static const char *nightmode[] = { "xrandr", "--ouptut", "HDMI-0", "--brightness", "0.3", NULL };
-static const char *daymode[]   = { "xrandr", "--output", "HDMI-0", "--brightness", "1", NULL };
+static const char reboot[]	= { "systemctl", "reboot", NULL };
+static const char shutdown[]	= { "sudo", "shutdown", "-h", "now", NULL };
+static const char scrnlck[]	= { "sflock", "-f", "10x20", NULL };
+static const char suspend[]	= { "systemctl", "suspend", NULL };
+static const char dim[]	= { "xbacklight", "-dec", "10", NULL };
+static const char brt[]	= { "xbacklight", "-inc", "10", NULL };
+static const char prtsc[]	= { "scrot", NULL };
+static const char chrome[]	= { "chromium", NULL };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
@@ -66,57 +59,6 @@ static const Layout layouts[] = {
 static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "urxvt", NULL };
 
-// custom commads //
-static void x_nexttag(const Arg *arg);
-static void x_prevtag(const Arg *arg);
-static void x_adjtag(int n);
-//	Tag Cycling From //
-//	ap0calypse.agitatio.org/articles/2012/08/17/cycle-through-your-tags-in-dwm.html //
-static void x_prevtag(const Arg *arg) {
-    (void)arg;
-    x_adjtag(-1);
-}
-
-static void x_nexttag(const Arg *arg) {
-    (void)arg;
-    x_adjtag(+1);
-}
-
-static void x_adjtag(int n) {
-    {
-        int i, curtags;
-        int seltag = 0;
-        Arg arg;
-
-        /*
-         *     * Check first tag currently selected.  If there are
-         *         * several tags selected we only pick first one.
-         *             */
-        if (selmon != NULL) {
-            curtags = (selmon->tagset[selmon->seltags] & TAGMASK);
-        } else {
-            return;
-        }
-        for (i = 0; i < LENGTH(tags); i++) {
-            if ((curtags & (1 << i)) != 0) {
-                seltag = i;
-                break;
-            }
-        }
-
-        /*
-         *      * Calculate next selected tag wrapping around
-         *           * when tag overflows.
-         *                */
-        seltag = (seltag + n) % (int)LENGTH(tags);
-        if (seltag < 0)
-            seltag += LENGTH(tags);
-
-        arg.ui = (1 << seltag);
-        view(&arg);
-    }
-}
-
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -126,8 +68,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Right,  focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_equal,  incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_minus,  incnmaster,     {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_Left,   setmfact,       {.f = -0.05} },
-	{ MODKEY|ShiftMask,             XK_Right,  setmfact,       {.f = +0.05} },
+	{ MODKEY,                       XK_Left,   setmfact,       {.f = -0.05} },
+	{ MODKEY,                       XK_Right,  setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_space,  view,           {0} },
 	{ 0,                            XK_Escape, killclient,     {0} },
@@ -152,25 +94,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ControlMask,           XK_Delete, quit,           {0} },
-
-// custom keys //
-	{ MODKEY|ShiftMask,		XK_space,  spawn,          {.v = reboot } },
-	{ MODKEY|ControlMask, XK_space,  spawn,          {.v = shutdwn } },
-	{ MODKEY,             XK_Home,   spawn,          {.v = nightmode } },
-	{ MODKEY,             XK_End,    spawn,          {.v = daymode } },
-	{ MODKEY,             XK_Next,   spawn,          {.v = voldwn } },
-	{ MODKEY,             XK_Prior,  spawn,          {.v = volup } },
-  { MODKEY,             XK_c,      spawn,          {.v = chrome } },
-	{ MODKEY,             XK_Up,     x_nexttag,      {0} },
-	{ MODKEY,             XK_Down,   x_prevtag,      {0} },
-	{ MODKEY|ControlMask, XK_Up,     spawn,          {.v = cmusstop } },
-	{ MODKEY|ControlMask, XK_Down,   spawn,          {.v = cmusplay } },
-	{ MODKEY|ControlMask, XK_Left,   spawn,          {.v = cmusbck } },
-	{ MODKEY|ControlMask, XK_Right,  spawn,          {.v = cmusfwd } },
-	{ MODKEY|ControlMask, XK_Return, spawn,          {.v = scrnlck } },
-  { MODKEY|ControlMask, XK_Return, spawn,          {.v = suspend } },
-	{ 0,                  XK_Print,  spawn,          {.v = prtsc } },
-} ;
+};
 
 /* button definitions */
 /* click can be ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
@@ -189,3 +113,14 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
 
+// custom keys //
+
+	{ MODKEY|ControlMask,	XK_Return,	spawn,	{.v = scrnlck} },
+	{ MODKEY|ControlMask,	XK_Return,	spawn,	{.v = suspend} },
+	{ MODKEY|ControlMask,	XK_space,	spawn,	{.v = reboot} },
+	{ MODKEY|ControlMask,	XK_BackSpace,	spawn,	{.v = shutdown} },
+	{ MODKEY,		XK_c,		spawn,	{.v = chrome} },
+	{ MODKEY,		XK_Up,		spawn,	{.v = brt} },
+	{ MODKEY,		XK_Down,	spawn,	{.v = dim} },
+	{ 0,			XK_Print,	spawn,	{.v = prtsc} },
+};
