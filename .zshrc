@@ -42,42 +42,52 @@ PROMPT="%{$fg_bold[green]%}%n%{$fg_bold[white]%} @%m %{$fg_no_bold[green]%}%~  %
 
 # shell convenience & utilities
 alias addgrp="sudo usermod -aG "$1" $(whoami)"
+alias backup="sudo ~/scripts/backups/netbook-bk.sh"
 alias changegov="~/scripts/changegov.sh"
 alias changeio="~/scripts/changeio.sh"
 alias colortest="~/scripts/colortest.sh"
-alias dvd="~/scripts/dvd-tools.sh"
 alias dwnspd="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
+alias getip="curl icanhazip.com"
 alias grep="grep --color=auto"
-alias icanotes="rdesktop -g 1366x752 -P -z -x l -r sound:off -d INTERNET -u ahaedicke -p - internet.icanotes.com"
 alias isrun="ps -ax | grep $1"
 alias jekyll="~/.gem/ruby/2.2.0/bin/jekyll"
 alias ls="ls -1 --color=auto"
 alias lsa="ls -a --color=auto"
 alias lsl="ls -l --color=auto"
 alias lsr="ls -R --color=auto"
+alias mtp-dwn="fusermount -u ~/phone"
+alias mtp-list="simple-mtpfs --list-devices"
+alias mtp-up="simple-mtpfs ~/phone"
 alias p6="perl6"
 alias pl="perl -de 0"
 alias pts="phoronix-test-suite"
+alias pts-i="phoronix-test-suite interactive"
 alias py="python -q"
 alias reboot="sudo reboot"
 alias scratch="nano ~/scratch.pad"
 alias shutdown="sudo shutdown -h now"
 alias syserror="sudo journalctl -p 0..3 -xn"
 alias sysfail="systemctl --failed"
-alias ungpg="~/scripts/ungpg.sh"
-alias upddwm="cd ~/abs/dwm; updpkgsums; makepkg -efi"
+alias sysinfo="~/scripts/sysinfo.sh"
+alias upddwm="cd ~/abs/dwm; makepkg -efi --skipchecksums"
+alias vault-lock="cd ~/; tar -czvf vault.tar.gz vault; gpg -c -o vault.tar.gz.gpg vault.tar.gz; rm -rf vault vault.tar.gz"
+alias vault-unlock="cd ~/; gpg --output vault.tar.gz --decrypt vault.tar.gz.gpg; tar -xvf vault.tar.gz; rm vault.tar.gz vault.tar.gz.gpg"
 alias updsh="source ~/.zshrc"
 alias updx="xrdb -merge ~/git/dotfiles/.Xresources"
-alias vbox="sudo modprobe vboxdrv && virtualbox"
 alias wup="sudo zsh ~/scripts/iptables.rules; sudo wifi-menu"
-alias winxp="sudo modprobe vboxdrv && virtualbox --startvm Windows\ XP"
-alias getip="curl icanhazip.com"
+
 gpgzip () {
   tar -cf - $* | gzip -9 - | gpg -c -o $*.tar.gz.gpg && rm -rf $*
 }
+
+ungpgzip () {
+  gpg --output $*.tar.gz --decrypt $*.tar.gz.gpg ; tar -xvf $*.tar.gz ; rm -rf $*{.tar.gz,.tar.gz.gpg}
+}
+
 targzip () {
   tar -cf - $* | gzip -9 - > $*.tar.gz
 }
+
 tarxzip () {
   tar -cf - $* | xz -9 - > $*.tar.xz
 }
