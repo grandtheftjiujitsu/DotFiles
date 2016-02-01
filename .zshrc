@@ -41,6 +41,9 @@ PROMPT="%{$fg_bold[green]%}%n%{$fg_bold[white]%} @%m %{$fg_no_bold[green]%}%~  %
 ###########
 
 # shell convenience & utilities
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
 alias addgrp="sudo usermod -aG "$1" $(whoami)"
 alias backup="sudo ~/scripts/backups/netbook-bk.sh"
 alias changegov="~/scripts/changegov.sh"
@@ -69,12 +72,12 @@ alias shutdown="sudo shutdown -h now"
 alias syserror="sudo journalctl -p 0..3 -xn"
 alias sysfail="systemctl --failed"
 alias sysinfo="~/scripts/sysinfo.sh"
-alias upddwm="cd ~/abs/dwm; makepkg -efi --skipchecksums"
+alias upddwm="cd ~/abs/dwm-git; makepkg -efi --skipchecksums"
 alias vault-lock="cd ~/; tar -czvf vault.tar.gz vault; gpg -c -o vault.tar.gz.gpg vault.tar.gz; rm -rf vault vault.tar.gz"
 alias vault-unlock="cd ~/; gpg --output vault.tar.gz --decrypt vault.tar.gz.gpg; tar -xvf vault.tar.gz; rm vault.tar.gz vault.tar.gz.gpg"
 alias updsh="source ~/.zshrc"
 alias updx="xrdb -merge ~/git/dotfiles/.Xresources"
-alias wup="sudo zsh ~/scripts/iptables.rules; sudo wifi-menu"
+alias wup="sudo wifi-menu; sudo ~/scripts/iptables.rules; systemctl --user start syncthing"
 
 gpgzip () {
   tar -cf - $* | gzip -9 - | gpg -c -o $*.tar.gz.gpg && rm -rf $*
