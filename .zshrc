@@ -27,7 +27,7 @@ PROMPT="%{$fg_bold[green]%}%n%{$fg_bold[white]%} @%m %{$fg_no_bold[green]%}%~  %
 # %` = short working directory
 # %m = hostname
 # %t = 12 hour time
-# %T = 24 hour time
+		# %T = 24 hour time
 # %n = username
 # %# = % for user, # for root
 
@@ -40,30 +40,37 @@ PROMPT="%{$fg_bold[green]%}%n%{$fg_bold[white]%} @%m %{$fg_no_bold[green]%}%~  %
 # Aliases #
 ###########
 
-# shell convenience & utilities
+# shell convenience
+alias addgrp="sudo usermod -aG "$1" $(whoami)"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
-alias addgrp="sudo usermod -aG "$1" $(whoami)"
-alias backup="sudo ~/scripts/backups/netbook-bk.sh"
+alias dwnspd="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
+
+
+# scripts & utilities
+alias androidsdk="~/abs/android-studio/bin/studio.sh"
 alias changegov="~/scripts/changegov.sh"
 alias changeio="~/scripts/changeio.sh"
 alias colortest="~/scripts/colortest.sh"
-alias dwnspd="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
 alias getip="curl icanhazip.com"
 alias grep="grep --color=auto"
 alias isrun="ps -ax | grep $1"
-alias jekyll="~/.gem/ruby/2.2.0/bin/jekyll"
+alias jekyll="~/.gem/ruby/2.3.0/bin/jekyll"
 alias ls="ls -1 --color=auto"
 alias lsa="ls -a --color=auto"
 alias lsl="ls -l --color=auto"
 alias lsr="ls -R --color=auto"
-alias lp-up="sudo systemctl start org.cups.cupsd.service"
 alias mtp-dwn="fusermount -u ~/phone"
 alias mtp-list="simple-mtpfs --list-devices"
 alias mtp-up="simple-mtpfs ~/phone"
 alias p6="perl6"
 alias pl="perl -de 0"
+alias printer-default="sudo lpadmin -d $*"
+alias printer-list="sudo lpinf -v"
+alias printer-on="sudo systemctl start org.cups.cupsd.service"
+alias printer-off="sudo systemctl stop org.cups.cupsd.service"
+alias printer-status="lpstat -s"
 alias pts="phoronix-test-suite"
 alias pts-i="phoronix-test-suite interactive"
 alias py="python -q"

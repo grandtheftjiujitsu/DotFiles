@@ -9,7 +9,7 @@ Urxvt*saveLines: 0
 
 ! Native Transparency
 URxvt*transparent: true
-URxvt*shading: 80
+URxvt*shading: 60
 !  0 to 99 darkens, 101 to 200 lightens
 
 ! Scrolling
