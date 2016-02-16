@@ -139,3 +139,6 @@ alias gpush="git push"
 alias grm="git rm"
 alias grmt="git remote -v"
 alias gstat="git status"
+
+eval "$(/home/austin/.rakudobrew/bin/rakudobrew init -)"
+export PATH=~/.rakudobrew/bin:$PATH
