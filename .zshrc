@@ -140,5 +140,9 @@ alias grm="git rm"
 alias grmt="git remote -v"
 alias gstat="git status"
 
-eval "$(/home/austin/.rakudobrew/bin/rakudobrew init -)"
-export PATH=~/.rakudobrew/bin:$PATH
+#Setting the GEM_PATH and GEM_HOME variables may not be necessary, check 'gem env' output to verify whether both variables already exist 
+GEM_HOME=$(ls -t -U | ruby -e 'puts Gem.user_dir')
+GEM_PATH=$GEM_HOME
+export PATH=$PATH:$GEM_HOME/bin
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

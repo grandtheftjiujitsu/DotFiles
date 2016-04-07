@@ -18,9 +18,6 @@ fi
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources &	# merge Xresources
 
-exec ~/.fehbg &							# loads background image
-~/scripts/dzconky &						# start conky + dzen
-exec /usr/bin/dwm						# start window manager
-#exec pulseaudio --start &					# start pulseaudio (done in dwm)
-#exec pactl load-module module-equalizer-sink &
-#exec pactl load-module module-dbus-protocol &
+~/scripts/dzconky &					# start dzen2 + conky
+sh ~/.fehbg &						# set wallpaper
+exec /usr/bin/dwm					# start window manager

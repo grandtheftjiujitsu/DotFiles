@@ -5,9 +5,9 @@ by grandtheftjiujitsu (GitHub / Arch Linux Forums)
 
 --------------------------------------------------
 
-![Picture](http://postimg.org/image/gtuplh215/)
+![Screenshot](https://drive.google.com/uc?export=view&id=0B2RH_BSaD6YPTkhnM0RWd0llRUU)
 
-[Wallpaper](http://1ms.net/cheshire-cat-in-the-tea-steam-386706.html)
+[Wallpaper](http://wallpapercave.com/w/Ypfe87k)
 
 ### dwm - ~/.dwm/config.h
 >static const char normbordercolor[] = "#000000";
