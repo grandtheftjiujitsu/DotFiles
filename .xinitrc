@@ -18,6 +18,7 @@ fi
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources &	# merge Xresources
 
-~/scripts/dzconky &					# start dzen2 + conky
+~/scripts/dzconky-main &				# dzen2 + conky main
+~/scripts/dzconky-clock &				# dzen2 + conky clock
 sh ~/.fehbg &						# set wallpaper
 exec /usr/bin/dwm					# start window manager

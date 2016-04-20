@@ -1,13 +1,11 @@
 Spider-Man Themed Configuration Set
-===================================
+====================================
 
-by grandtheftjiujitsu (GitHub / Arch Linux Forums)
-
---------------------------------------------------
+-------------------------------------
 
 ![Picture](https://lh6.googleusercontent.com/-d46fv7uZhlU/VJcxfALM3MI/AAAAAAAAChY/xJ24HdwDIkM/w542-h305-no/2014-12-21-153917_1920x1080_scrot.png)
 
-[Wallpaper](http://daringfireball.net/projects/markdown/syntax)
+[Wallpaper](https://wallpaperscraft.com/download/the_amazing_spider_man_2_logo_superhero_2014_92992/1920x1080)
 
 ### dwm - ~/.dwm/config.h
 > static const char normbordercolor[] = "#000000";

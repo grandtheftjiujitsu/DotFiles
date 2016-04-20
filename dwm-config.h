@@ -5,12 +5,12 @@ static const char *fonts[] = {
 	"monospace:size=10"
 };
 static const char dmenufont[]       = "monospace:size=10";
-static const char normbordercolor[] = "#444444";
-static const char normbgcolor[]     = "#222222";
-static const char normfgcolor[]     = "#bbbbbb";
-static const char selbordercolor[]  = "#005577";
-static const char selbgcolor[]      = "#005577";
-static const char selfgcolor[]      = "#eeeeee";
+static const char normbordercolor[] = "#3aab20";
+static const char normbgcolor[]     = "#3aab20";
+static const char normfgcolor[]     = "#000000";
+static const char selbordercolor[]  = "#000000";
+static const char selbgcolor[]      = "#000000";
+static const char selfgcolor[]      = "#3aab20";
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */

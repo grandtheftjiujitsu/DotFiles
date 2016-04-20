@@ -21,7 +21,7 @@ zstyle ':completop:*' menu select   # arrow key completion
 
 # Prompt #
 ##########
-PROMPT="%{$fg_bold[green]%}%n%{$fg_bold[white]%} @%m %{$fg_no_bold[green]%}%~  %{$reset_color%}%"
+PROMPT="%{$fg_bold[green]%}%n%{$fg_bold[yellow]%} @%m %{$fg_no_bold[green]%}%~  %{$reset_color%}%"
 #RPROMPT="[%{$fg_no_bold[yellow]%}%?%{$reset_color%}]"
 
 # %` = short working directory
@@ -53,8 +53,9 @@ alias androidsdk="~/abs/android-studio/bin/studio.sh"
 alias changegov="~/scripts/changegov.sh"
 alias changeio="~/scripts/changeio.sh"
 alias colortest="~/scripts/colortest.sh"
-alias getip="curl icanhazip.com"
+alias forecast="cat /tmp/forecast"
 alias grep="grep --color=auto"
+alias ipinfo="curl ipinfo.io"
 alias isrun="ps -ax | grep $1"
 alias jekyll="~/.gem/ruby/2.3.0/bin/jekyll"
 alias ls="ls -1 --color=auto"
@@ -67,7 +68,7 @@ alias mtp-up="simple-mtpfs ~/phone"
 alias p6="perl6"
 alias pl="perl -de 0"
 alias printer-default="sudo lpadmin -d $*"
-alias printer-list="sudo lpinf -v"
+alias printer-list="sudo lpinfo -v"
 alias printer-on="sudo systemctl start org.cups.cupsd.service"
 alias printer-off="sudo systemctl stop org.cups.cupsd.service"
 alias printer-status="lpstat -s"
@@ -85,7 +86,8 @@ alias vault-lock="cd ~/; tar -czvf vault.tar.gz vault; gpg -c -o vault.tar.gz.gp
 alias vault-unlock="cd ~/; gpg --output vault.tar.gz --decrypt vault.tar.gz.gpg; tar -xvf vault.tar.gz; rm vault.tar.gz vault.tar.gz.gpg"
 alias updsh="source ~/.zshrc"
 alias updx="xrdb -merge ~/git/dotfiles/.Xresources"
-alias wup="sudo wifi-menu; sudo ~/scripts/iptables.rules; systemctl --user start syncthing"
+alias wttr="cat /tmp/wttr"
+alias wup="$HOME/scripts/wup.sh"
 
 gpgzip () {
   tar -cf - $* | gzip -9 - | gpg -c -o $*.tar.gz.gpg && rm -rf $*

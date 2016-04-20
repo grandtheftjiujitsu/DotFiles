@@ -1,9 +1,7 @@
 Cheshire Cat Themed Configuration Set
-===================================
+======================================
 
-by grandtheftjiujitsu (GitHub / Arch Linux Forums)
-
---------------------------------------------------
+--------------------------------------
 
 ![Screenshot](https://drive.google.com/uc?export=view&id=0B2RH_BSaD6YPTkhnM0RWd0llRUU)
 
