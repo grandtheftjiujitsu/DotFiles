@@ -54,7 +54,6 @@ URxvt*colorBD: 3
 Urxvt*colorUL: 4
 URxvt*cursorColor: 2
 
-! Image - http://img34.imageshack.us/img34/8285/201105231306167864508x2.png
 ! Black
 *color0:            #6e6e6e
 *color8:            #6e6e6e
