@@ -9,5 +9,6 @@ Configurations and tinkerings.
 
 ### Configuration Compilations
 
-- [Spider-Man](https://github.com/gtbjj/dotfiles/blob/master/Spider-Man-Combo.md)
-- [Cheshire Cat](https://github.com/gtbjj/dotfiles/blob/master/Cheshire-Cat-Combo.md)
+- [Spider-Man](Spider-Man-Combo.md)
+- [Cheshire Cat](Cheshire-Cat-Combo.md)
+- [Wicked](Wicked-Combo.md)

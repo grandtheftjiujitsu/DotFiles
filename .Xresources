@@ -50,7 +50,7 @@ URxvt*perl-ext-common:
 ! Colors
 URxvt*background: 0
 URxvt*foreground: 15
-URxvt*colorBD: 3
+URxvt*colorBD: 1
 Urxvt*colorUL: 4
 URxvt*cursorColor: 2
 
