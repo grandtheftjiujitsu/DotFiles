@@ -20,5 +20,10 @@ fi
 
 ~/scripts/dzconky-main &				# dzen2 + conky main
 ~/scripts/dzconky-clock &				# dzen2 + conky clock
+~/scripts/dzconky-music &				# dzen2 + conky music
 sh ~/.fehbg &						# set wallpaper
-exec /usr/bin/dwm					# start window manager
+exec /usr/bin/pulseaudio --start &			# start sound server
+exec /usr/bin/pactl load-module module-equalizer-sink &	# load equalizer
+exec /usr/bin/pactl load-module module-dbus-protocol &	# load equalizer
+exec /usr/bin/mpd &					# music player daemon
+exec dwm						# start window manager

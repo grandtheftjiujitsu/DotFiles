@@ -1,4 +1,5 @@
 # ~/.zshrc
+TERM="rxvt-unicode"
 
 # Settings #
 ############
@@ -21,7 +22,7 @@ zstyle ':completop:*' menu select   # arrow key completion
 
 # Prompt #
 ##########
-PROMPT="%{$fg_bold[green]%}%n%{$fg_bold[yellow]%} @%m %{$fg_no_bold[green]%}%~  %{$reset_color%}%"
+PROMPT="%{$fg_bold[cyan]%}%n%{$fg_bold[white]%} @%m %{$fg_no_bold[cyan]%}%~  %{$reset_color%}%"
 #RPROMPT="[%{$fg_no_bold[yellow]%}%?%{$reset_color%}]"
 
 # %` = short working directory
@@ -50,6 +51,7 @@ alias dwnspd="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/t
 
 # scripts & utilities
 alias androidsdk="~/abs/android-studio/bin/studio.sh"
+alias btup="~/scripts/bluetooth.sh"
 alias changegov="~/scripts/changegov.sh"
 alias changeio="~/scripts/changeio.sh"
 alias colortest="~/scripts/colortest.sh"
@@ -65,6 +67,7 @@ alias lsr="ls -R --color=auto"
 alias mtp-dwn="fusermount -u ~/phone"
 alias mtp-list="simple-mtpfs --list-devices"
 alias mtp-up="simple-mtpfs ~/phone"
+alias off="sleep 1 && sudo shutdown now | sudo systemctl stop slim"
 alias p6="perl6"
 alias pl="perl -de 0"
 alias printer-default="sudo lpadmin -d $*"
@@ -77,16 +80,14 @@ alias pts-i="phoronix-test-suite interactive"
 alias py="python -q"
 alias reboot="sudo reboot"
 alias scratch="nano ~/scratch.pad"
-alias shutdown="sudo shutdown -h now"
 alias syserror="sudo journalctl -p 0..3 -xn"
 alias sysfail="systemctl --failed"
 alias sysinfo="~/scripts/sysinfo.sh"
 alias upddwm="cd ~/abs/dwm-git; makepkg -efi --skipchecksums"
-alias vault-lock="cd ~/; tar -czvf vault.tar.gz vault; gpg -c -o vault.tar.gz.gpg vault.tar.gz; rm -rf vault vault.tar.gz"
-alias vault-unlock="cd ~/; gpg --output vault.tar.gz --decrypt vault.tar.gz.gpg; tar -xvf vault.tar.gz; rm vault.tar.gz vault.tar.gz.gpg"
 alias updsh="source ~/.zshrc"
 alias updx="xrdb -merge ~/git/dotfiles/.Xresources"
-alias wttr="cat /tmp/wttr"
+alias winxp="sudo mount /dev/mmcblk2p2 ~/VirtualBox\ VMs; sudo modprobe vboxdrv; virtualbox --scale --startvm Windows\ XP"
+alias wttr="cat /tmp/forecast | head -n 7 | tail -n 6"
 alias wup="$HOME/scripts/wup.sh"
 
 gpgzip () {
@@ -148,3 +149,4 @@ GEM_PATH=$GEM_HOME
 export PATH=$PATH:$GEM_HOME/bin
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH=~/.rakudobrew/bin:$PATH
