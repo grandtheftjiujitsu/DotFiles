@@ -143,6 +143,26 @@ alias grm="git rm"
 alias grmt="git remote -v"
 alias gstat="git status"
 
+# adb
+alias adb-dev="adb devices"
+alias adb-fb="adb fastboot devices"
+alias adb-rb="adb reboot"
+alias adb-rbl="adb reboot bootloader"
+alias adb-rbr="adb reboot recovery"
+alias adb-psh="adb push"
+alias fb-dev="fastboot devices"
+alias fb-erase"fastboot erase"
+alias fb-flash-boot="fastboot flash boot"
+alias fb-flash-bl="fastboot flash bootloader"
+alias fb-flash-cache="fastboot flash cache"
+alias fb-flash-radio="fastboot flash radio"
+alias fb-flash-recovery="fastboot flash recovery"
+alias fb-flash-sys="fastboot flash system"
+alias fb-flash-vendor="fastboot flash vendor"
+alias fb-rb="fastboot reboot"
+
+
+
 #Setting the GEM_PATH and GEM_HOME variables may not be necessary, check 'gem env' output to verify whether both variables already exist 
 GEM_HOME=$(ls -t -U | ruby -e 'puts Gem.user_dir')
 GEM_PATH=$GEM_HOME
