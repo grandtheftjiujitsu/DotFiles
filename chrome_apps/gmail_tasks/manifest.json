@@ -1,0 +1,21 @@
+{
+"name": "Gtask",
+"description": "Gmail / Google Tasks",
+"version": "1.1",
+"manifest_version": 2,
+"icons": {
+"128": "icon.png"
+},
+"app": {
+"urls": [
+"https://mail.google.com/tasks/canvas"
+],
+"launch": {
+"web_url": "https://mail.google.com/tasks/canvas"
+}
+},
+"permissions": [
+"unlimitedStorage",
+"notifications"
+]
+}
