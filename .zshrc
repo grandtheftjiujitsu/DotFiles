@@ -1,4 +1,4 @@
-# ~/.zshrc
+# $HOME/.zshrc
 TERM="rxvt-unicode"
 
 # Settings #
@@ -50,23 +50,24 @@ alias dwnspd="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/t
 
 
 # scripts & utilities
-alias androidsdk="~/abs/android-studio/bin/studio.sh"
-alias btup="~/scripts/bluetooth.sh"
-alias changegov="~/scripts/changegov.sh"
-alias changeio="~/scripts/changeio.sh"
-alias colortest="~/scripts/colortest.sh"
+alias btup="$HOME/scripts/bluetooth.sh"
+alias changegov="$HOME/scripts/changegov.sh"
+alias changeio="$HOME/scripts/changeio.sh"
+alias colortest="$HOME/scripts/colortest.sh"
 alias forecast="cat /tmp/forecast"
 alias grep="grep --color=auto"
 alias ipinfo="curl ipinfo.io"
 alias isrun="ps -ax | grep $1"
-alias jekyll="~/.gem/ruby/2.3.0/bin/jekyll"
+alias jekyll="$HOME/.gem/ruby/2.3.0/bin/jekyll"
 alias ls="ls -1 --color=auto"
+alias keysearch="gpg --keyserver gpg.mit.edu --search"
+alias keyadd="gpg --recv-key $1 && gpg --lsign $1"
 alias lsa="ls -a --color=auto"
 alias lsl="ls -l --color=auto"
 alias lsr="ls -R --color=auto"
-alias mtp-dwn="fusermount -u ~/phone"
+alias mtp-dwn="fusermount -u $HOME/phone"
 alias mtp-list="simple-mtpfs --list-devices"
-alias mtp-up="simple-mtpfs ~/phone"
+alias mtp-up="simple-mtpfs $HOME/phone"
 alias off="sleep 1 && sudo shutdown now | sudo systemctl stop slim"
 alias p6="perl6"
 alias pl="perl -de 0"
@@ -79,14 +80,14 @@ alias pts="phoronix-test-suite"
 alias pts-i="phoronix-test-suite interactive"
 alias py="python -q"
 alias reboot="sudo reboot"
-alias scratch="nano ~/scratch.pad"
+alias scan="sudo scanimage --device-name=epson2:libusb:001:005 --source='Automatic Document Feeder' --format=pdf"
+alias scratch="nano $HOME/scratch.pad"
 alias syserror="sudo journalctl -p 0..3 -xn"
 alias sysfail="systemctl --failed"
-alias sysinfo="~/scripts/sysinfo.sh"
-alias upddwm="cd ~/abs/dwm-git; makepkg -efi --skipchecksums"
-alias updsh="source ~/.zshrc"
-alias updx="xrdb -merge ~/git/dotfiles/.Xresources"
-alias winxp="sudo mount /dev/mmcblk2p2 ~/VirtualBox\ VMs; sudo modprobe vboxdrv; virtualbox --scale --startvm Windows\ XP"
+alias sysinfo="$HOME/scripts/sysinfo.sh"
+alias upddwm="cd $HOME/abs/dwm-git; makepkg -efi --skipchecksums"
+alias updsh="source $HOME/.zshrc"
+alias updx="xrdb -merge $HOME/git/dotfiles/.Xresources"
 alias wttr="cat /tmp/forecast | head -n 7 | tail -n 6"
 alias wup="$HOME/scripts/wup.sh"
 
@@ -169,4 +170,4 @@ GEM_PATH=$GEM_HOME
 export PATH=$PATH:$GEM_HOME/bin
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH=~/.rakudobrew/bin:$PATH
+export PATH=$HOME/.rakudobrew/bin:$PATH

@@ -60,7 +60,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "urxvt", NULL };
 
 /* custom commands */
-static const char *chrome[]	= { "chromium", NULL };
+static const char *chrome[]	= { "google-chrome-unstable", NULL };
 static const char *prtsc[]	= { "cd", "/home/austin/pictures/", "&&", "scrot", NULL };
 static const char *dim[]	= { "xbacklight", "-dec", "10", NULL };
 static const char *brt[]	= { "xbacklight", "-inc", "10", NULL };
