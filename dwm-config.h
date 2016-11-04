@@ -61,7 +61,8 @@ static const char *termcmd[]  = { "urxvt", NULL };
 
 /* custom commands */
 static const char *brt[]      = { "xbacklight", "-inc", "10", NULL };
-static const char *chrome[]   = { "google-chrome-unstable", NULL };
+/*static const char *chrome[]   = { "chromium --single-process", NULL };*/
+static const char *chrome[]   = { "chromium", NULL };
 static const char *dim[]      = { "xbacklight", "-dec", "10", NULL };
 static const char *geany[]    = { "geany", NULL };
 static const char *libreofc[] = { "libreoffice", NULL };

@@ -42,36 +42,41 @@ PROMPT="%{$fg_bold[cyan]%}%n%{$fg_bold[white]%} @%m %{$fg_no_bold[cyan]%}%~  %{$
 ###########
 
 # shell convenience
-alias addgrp="sudo usermod -aG "$1" $(whoami)"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+alias addgrp="sudo usermod -aG "$1" $(whoami)"
 alias dwnspd="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
-
-
-# scripts & utilities
-alias btup="$HOME/scripts/bluetooth.sh"
-alias changegov="$HOME/scripts/changegov.sh"
-alias changeio="$HOME/scripts/changeio.sh"
-alias chrome="google-chrome-unstable"
-alias colortest="$HOME/scripts/colortest.sh"
-alias forecast="cat /tmp/forecast"
 alias grep="grep --color=auto"
-alias ipinfo="curl ipinfo.io"
-alias isrun="ps -ax | grep $1"
-alias jekyll="$HOME/.gem/ruby/2.3.0/bin/jekyll"
 alias ls="ls -1 --color=auto"
-alias keysearch="gpg --keyserver gpg.mit.edu --search"
-alias keyadd="gpg --recv-key $1 && gpg --lsign $1"
 alias lsa="ls -a --color=auto"
 alias lsl="ls -l --color=auto"
 alias lsr="ls -R --color=auto"
-alias mtp-dwn="fusermount -u $HOME/phone"
-alias mtp-list="simple-mtpfs --list-devices"
-alias mtp-up="simple-mtpfs $HOME/phone"
+alias mount="sudo mount"
 alias off="sleep 1 && sudo shutdown now | sudo systemctl stop slim"
 alias p6="perl6"
 alias pl="perl -de 0"
+alias py="python -q"
+alias reboot="sudo reboot"
+alias umount="sudo umount"
+alias wifi-menu="sudo wifi-menu"
+
+# scripts & utilities
+alias android-remote=""
+alias btup="$HOME/scripts/bluetooth.sh"
+alias changegov="$HOME/scripts/changegov.sh"
+alias changeio="$HOME/scripts/changeio.sh"
+alias colortest="$HOME/scripts/colortest.sh"
+alias forecast="cat /tmp/forecast"
+alias ipinfo="curl ipinfo.io"
+alias isrun="ps -ax | grep $1"
+alias jekyll="$HOME/.gem/ruby/2.3.0/bin/jekyll"
+alias keysearch="gpg --keyserver pgp.mit.edu --search"
+alias keyadd="gpg --recv-key $1 && gpg --lsign $1"
+alias mtp-dwn="fusermount -u $HOME/phone"
+alias mtp-list="simple-mtpfs --list-devices"
+alias mtp-up="simple-mtpfs $HOME/phone"
+alias pcms="chromium https://pcms.pathways.com"
 alias printer-default="sudo lpadmin -d $*"
 alias printer-list="sudo lpinfo -v"
 alias printer-on="sudo systemctl start org.cups.cupsd.service"
@@ -79,16 +84,18 @@ alias printer-off="sudo systemctl stop org.cups.cupsd.service"
 alias printer-status="lpstat -s"
 alias pts="phoronix-test-suite"
 alias pts-i="phoronix-test-suite interactive"
-alias py="python -q"
-alias reboot="sudo reboot"
 alias scan="sudo scanimage --device-name=epson2:libusb:001:007 --source='Automatic Document Feeder' --format=pdf"
 alias scratch="nano $HOME/scratch.pad"
 alias syserror="sudo journalctl -p 0..3 -xn"
 alias sysfail="systemctl --failed"
 alias sysinfo="$HOME/scripts/sysinfo.sh"
+alias updaur="$HOME/scripts/aur-update.sh /tmp/aur.pkglist"
 alias upddwm="cd $HOME/abs/dwm-git; makepkg -efi --skipchecksums"
 alias updsh="source $HOME/.zshrc"
 alias updx="xrdb -merge $HOME/git/dotfiles/.Xresources"
+alias vnc-host="x11vnc -display :0 -rfbauth ~/.x11vnc/passwd"
+alias vnc-adb="adb forward tcp:5900 tcp:5900; vncviewer -passwd $HOME/.vnc/android-arch.pwd localhost:5900"
+alias vnc-ota="vncviewer -passwd $HOME/.vnc/android-arch.pwd 192.168.1.2:5900"
 alias winxp="sudo modprobe vboxdrv; sudo mount /dev/mmcblk2p2 $HOME/vbox; virtualbox --scale --startvm 'Windows XP'"
 alias wttr="cat /tmp/forecast | head -n 7 | tail -n 6"
 alias wup="$HOME/scripts/wup.sh"
@@ -164,12 +171,9 @@ alias fb-flash-sys="fastboot flash system"
 alias fb-flash-vendor="fastboot flash vendor"
 alias fb-rb="fastboot reboot"
 
-
-
 #Setting the GEM_PATH and GEM_HOME variables may not be necessary, check 'gem env' output to verify whether both variables already exist 
 GEM_HOME=$(ls -t -U | ruby -e 'puts Gem.user_dir')
 GEM_PATH=$GEM_HOME
 export PATH=$PATH:$GEM_HOME/bin
-
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH=$HOME/.rakudobrew/bin:$PATH
