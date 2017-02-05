@@ -56,6 +56,7 @@ alias mount="sudo mount"
 alias off="sleep 1 && sudo shutdown now | sudo systemctl stop slim"
 alias p6="perl6"
 alias pl="perl -de 0"
+alias pwsafe="pwsafe -f $HOME/documents/.pwsafe.dat"
 alias py="python -q"
 alias reboot="sudo reboot"
 alias umount="sudo umount"
@@ -63,6 +64,8 @@ alias wifi-menu="sudo wifi-menu"
 
 # scripts & utilities
 alias android-remote=""
+alias aur-get="$HOME/scripts/aur-get.sh"
+alias aur-upd="$HOME/scripts/aur-update.sh"
 alias btup="$HOME/scripts/bluetooth.sh"
 alias changegov="$HOME/scripts/changegov.sh"
 alias changeio="$HOME/scripts/changeio.sh"
@@ -70,9 +73,8 @@ alias colortest="$HOME/scripts/colortest.sh"
 alias forecast="cat /tmp/forecast"
 alias ipinfo="curl ipinfo.io"
 alias isrun="ps -ax | grep $1"
-alias jekyll="$HOME/.gem/ruby/2.3.0/bin/jekyll"
-alias keysearch="gpg --keyserver pgp.mit.edu --search"
-alias keyadd="gpg --recv-key $1 && gpg --lsign $1"
+#alias jekyll="$HOME/.gem/ruby/2.3.0/bin/jekyll"
+alias jekyll-serve="bundle exec jekyll serve"
 alias mtp-dwn="fusermount -u $HOME/phone"
 alias mtp-list="simple-mtpfs --list-devices"
 alias mtp-up="simple-mtpfs $HOME/phone"
@@ -89,7 +91,6 @@ alias scratch="nano $HOME/scratch.pad"
 alias syserror="sudo journalctl -p 0..3 -xn"
 alias sysfail="systemctl --failed"
 alias sysinfo="$HOME/scripts/sysinfo.sh"
-alias updaur="$HOME/scripts/aur-update.sh /tmp/aur.pkglist"
 alias upddwm="cd $HOME/abs/dwm-git; makepkg -efi --skipchecksums"
 alias updsh="source $HOME/.zshrc"
 alias updx="xrdb -merge $HOME/git/dotfiles/.Xresources"
@@ -99,22 +100,6 @@ alias vnc-ota="vncviewer -passwd $HOME/.vnc/android-arch.pwd 192.168.1.2:5900"
 alias winxp="sudo modprobe vboxdrv; sudo mount /dev/mmcblk2p2 $HOME/vbox; virtualbox --scale --startvm 'Windows XP'"
 alias wttr="cat /tmp/forecast | head -n 7 | tail -n 6"
 alias wup="$HOME/scripts/wup.sh"
-
-gpgzip () {
-  tar -cf - $* | gzip -9 - | gpg -c -o $*.tar.gz.gpg && rm -rf $*
-}
-
-ungpgzip () {
-  gpg --output $*.tar.gz --decrypt $*.tar.gz.gpg ; tar -xvf $*.tar.gz ; rm -rf $*{.tar.gz,.tar.gz.gpg}
-}
-
-targzip () {
-  tar -cf - $* | gzip -9 - > $*.tar.gz
-}
-
-tarxzip () {
-  tar -cf - $* | xz -9 - > $*.tar.xz
-}
 
 # pacman
 alias pacloc="pacman -Qi"				# Query locally installed package and display info
@@ -170,6 +155,36 @@ alias fb-flash-recovery="fastboot flash recovery"
 alias fb-flash-sys="fastboot flash system"
 alias fb-flash-vendor="fastboot flash vendor"
 alias fb-rb="fastboot reboot"
+
+# functions
+keyadd () {
+  gpg --recv-key $1;
+  gpg --lsign $1
+}
+
+keysearch () {
+  gpg --keyserver pgp.mit.edu --search "$*"
+}
+
+keygen () {
+  dd bs=512 count=4 if=/dev/urandom of=$*.keyfile
+}
+
+gpgzip () {
+  tar -cf - $* | gzip -9 - | gpg -c -o $*.tar.gz.gpg && rm -rf $*
+}
+
+ungpgzip () {
+  gpg --output $*.tar.gz --decrypt $*.tar.gz.gpg ; tar -xvf $*.tar.gz ; rm -rf $*{.tar.gz,.tar.gz.gpg}
+}
+
+targzip () {
+  tar -cf - $* | gzip -9 - > $*.tar.gz
+}
+
+tarxzip () {
+  tar -cf - $* | xz -9 - > $*.tar.xz
+}
 
 #Setting the GEM_PATH and GEM_HOME variables may not be necessary, check 'gem env' output to verify whether both variables already exist 
 GEM_HOME=$(ls -t -U | ruby -e 'puts Gem.user_dir')
