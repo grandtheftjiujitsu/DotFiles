@@ -42,34 +42,31 @@ PROMPT="%{$fg_bold[cyan]%}%n%{$fg_bold[white]%} @%m %{$fg_no_bold[cyan]%}%~  %{$
 ###########
 
 # shell convenience
+alias abi="abiword"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias addgrp="sudo usermod -aG "$1" $(whoami)"
 alias dwnspd="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
+alias eup="sudo systemctl start dhcpcd@enp0s25; $HOME/scripts/web_connect_extras.sh"
+alias eq="qpaeq"
 alias grep="grep --color=auto"
 alias ls="ls -1 --color=auto"
 alias lsa="ls -a --color=auto"
 alias lsl="ls -l --color=auto"
 alias lsr="ls -R --color=auto"
-alias mount="sudo mount"
-alias off="sleep 1 && sudo shutdown now | sudo systemctl stop slim"
+#alias mount="sudo mount"
+#alias off="sleep 1 && sudo shutdown -h now | sudo systemctl stop slim"
+alias off="shutdown -h now"
 alias p6="perl6"
 alias pl="perl -de 0"
 alias pwsafe="pwsafe -f $HOME/documents/.pwsafe.dat"
 alias py="python -q"
-alias reboot="sudo reboot"
+#alias reboot="sudo reboot"
 alias umount="sudo umount"
 alias wifi-menu="sudo wifi-menu"
 
 # scripts & utilities
-alias android-remote=""
-alias aur-get="$HOME/scripts/aur-get.sh"
-alias aur-upd="$HOME/scripts/aur-update.sh"
-alias btup="$HOME/scripts/bluetooth.sh"
-alias changegov="$HOME/scripts/changegov.sh"
-alias changeio="$HOME/scripts/changeio.sh"
-alias colortest="$HOME/scripts/colortest.sh"
 alias forecast="cat /tmp/forecast"
 alias ipinfo="curl ipinfo.io"
 alias isrun="ps -ax | grep $1"
@@ -78,28 +75,27 @@ alias jekyll-serve="bundle exec jekyll serve"
 alias mtp-dwn="fusermount -u $HOME/phone"
 alias mtp-list="simple-mtpfs --list-devices"
 alias mtp-up="simple-mtpfs $HOME/phone"
-alias pcms="chromium https://pcms.pathways.com"
+alias pcms="sudo openconnect vpn.pathways.com"
 alias printer-default="sudo lpadmin -d $*"
 alias printer-list="sudo lpinfo -v"
 alias printer-on="sudo systemctl start org.cups.cupsd.service"
 alias printer-off="sudo systemctl stop org.cups.cupsd.service"
 alias printer-status="lpstat -s"
 alias pts="phoronix-test-suite"
+alias pts-add="phoronix-test-suite install"
+alias pts-build="phoronix-test-suite benchmark build-linux-kernel"
+alias pts-gcrypt="phoronix-test-suite benchmark gcrypt"
+alias pts-gzip="phoronix-test-suite benchmark compress-gzip"
 alias pts-i="phoronix-test-suite interactive"
 alias scan="sudo scanimage --device-name=epson2:libusb:001:007 --source='Automatic Document Feeder' --format=pdf"
 alias scratch="nano $HOME/scratch.pad"
 alias syserror="sudo journalctl -p 0..3 -xn"
 alias sysfail="systemctl --failed"
-alias sysinfo="$HOME/scripts/sysinfo.sh"
 alias upddwm="cd $HOME/abs/dwm-git; makepkg -efi --skipchecksums"
 alias updsh="source $HOME/.zshrc"
 alias updx="xrdb -merge $HOME/git/dotfiles/.Xresources"
-alias vnc-host="x11vnc -display :0 -rfbauth ~/.x11vnc/passwd"
-alias vnc-adb="adb forward tcp:5900 tcp:5900; vncviewer -passwd $HOME/.vnc/android-arch.pwd localhost:5900"
-alias vnc-ota="vncviewer -passwd $HOME/.vnc/android-arch.pwd 192.168.1.2:5900"
-alias winxp="sudo modprobe vboxdrv; sudo mount /dev/mmcblk2p2 $HOME/vbox; virtualbox --scale --startvm 'Windows XP'"
 alias wttr="cat /tmp/forecast | head -n 7 | tail -n 6"
-alias wup="$HOME/scripts/wup.sh"
+alias wup="sudo wifi-menu; $HOME/scripts/web_connect_extras.sh"
 
 # pacman
 alias pacloc="pacman -Qi"				# Query locally installed package and display info
@@ -192,3 +188,20 @@ GEM_PATH=$GEM_HOME
 export PATH=$PATH:$GEM_HOME/bin
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH=$HOME/.rakudobrew/bin:$PATH
+
+# redirect android build path, OUT_DIR_COMMON_BASE/android/
+#export OUT_DIR_COMMON_BASE=$HOME/android/build
+
+# change java version for android
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+export PATH=$PATH:$JAVA_HOME/bin
+
+# cache aosp build
+export USE_CCACHE=1
+export CCACHE_DIR=~/.ccache
+
+# android kernel toolchain
+export PATH=$HOME/android/prebuilts/gcc/linux-86/aarch64/aarch64-linux-android-4.9/bin:$PATH
+
+# user executables
+export PATH=$HOME/scripts:$PATH
