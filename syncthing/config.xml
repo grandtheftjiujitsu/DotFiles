@@ -1,0 +1,348 @@
+<configuration version="17">
+    <folder id="documents" label="documents" path="/home/austin/documents/" type="readonly" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="PDRH4LY-M466TYU-ILJN7DI-YE4H7YG-GGZCLEC-7JNIRFK-YT2TUBD-FKVXYAA" introducedBy=""></device>
+        <device id="SQGGOCD-WMXOZGX-A4QJA5I-2XSZTAR-2CQLFEK-QI3MZOY-WOEJVFL-L223FQU" introducedBy=""></device>
+        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
+        <minDiskFreePct>1</minDiskFreePct>
+        <versioning></versioning>
+        <copiers>0</copiers>
+        <pullers>0</pullers>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerSleepS>0</pullerSleepS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <fsync>true</fsync>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+    </folder>
+    <folder id="downloads" label="downloads" path="/home/austin/download/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="PDRH4LY-M466TYU-ILJN7DI-YE4H7YG-GGZCLEC-7JNIRFK-YT2TUBD-FKVXYAA" introducedBy=""></device>
+        <device id="SQGGOCD-WMXOZGX-A4QJA5I-2XSZTAR-2CQLFEK-QI3MZOY-WOEJVFL-L223FQU" introducedBy=""></device>
+        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
+        <minDiskFreePct>1</minDiskFreePct>
+        <versioning></versioning>
+        <copiers>0</copiers>
+        <pullers>0</pullers>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerSleepS>0</pullerSleepS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <fsync>true</fsync>
+        <paused>true</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+    </folder>
+    <folder id="music" label="music" path="/home/austin/music/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="PDRH4LY-M466TYU-ILJN7DI-YE4H7YG-GGZCLEC-7JNIRFK-YT2TUBD-FKVXYAA" introducedBy=""></device>
+        <device id="SQGGOCD-WMXOZGX-A4QJA5I-2XSZTAR-2CQLFEK-QI3MZOY-WOEJVFL-L223FQU" introducedBy=""></device>
+        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
+        <minDiskFreePct>1</minDiskFreePct>
+        <versioning></versioning>
+        <copiers>0</copiers>
+        <pullers>0</pullers>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerSleepS>0</pullerSleepS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <fsync>true</fsync>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+    </folder>
+    <folder id="notifications" label="notifications" path="/home/austin/phone/notifications/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="PDRH4LY-M466TYU-ILJN7DI-YE4H7YG-GGZCLEC-7JNIRFK-YT2TUBD-FKVXYAA" introducedBy=""></device>
+        <device id="SQGGOCD-WMXOZGX-A4QJA5I-2XSZTAR-2CQLFEK-QI3MZOY-WOEJVFL-L223FQU" introducedBy=""></device>
+        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
+        <minDiskFreePct>1</minDiskFreePct>
+        <versioning></versioning>
+        <copiers>0</copiers>
+        <pullers>0</pullers>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerSleepS>0</pullerSleepS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <fsync>true</fsync>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+    </folder>
+    <folder id="pcbackup" label="pcbackup" path="/home/austin/" type="readonly" rescanIntervalS="60" ignorePerms="true" autoNormalize="true">
+        <device id="PDRH4LY-M466TYU-ILJN7DI-YE4H7YG-GGZCLEC-7JNIRFK-YT2TUBD-FKVXYAA" introducedBy=""></device>
+        <device id="SQGGOCD-WMXOZGX-A4QJA5I-2XSZTAR-2CQLFEK-QI3MZOY-WOEJVFL-L223FQU" introducedBy=""></device>
+        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
+        <minDiskFreePct>1</minDiskFreePct>
+        <versioning></versioning>
+        <copiers>0</copiers>
+        <pullers>0</pullers>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerSleepS>0</pullerSleepS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <fsync>true</fsync>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+    </folder>
+    <folder id="playlists" label="playlists" path="/home/austin/playlists/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="PDRH4LY-M466TYU-ILJN7DI-YE4H7YG-GGZCLEC-7JNIRFK-YT2TUBD-FKVXYAA" introducedBy=""></device>
+        <device id="SQGGOCD-WMXOZGX-A4QJA5I-2XSZTAR-2CQLFEK-QI3MZOY-WOEJVFL-L223FQU" introducedBy=""></device>
+        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
+        <minDiskFreePct>1</minDiskFreePct>
+        <versioning></versioning>
+        <copiers>0</copiers>
+        <pullers>0</pullers>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerSleepS>0</pullerSleepS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <fsync>true</fsync>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+    </folder>
+    <folder id="ringtones" label="ringtones" path="/home/austin/phone/ringtones/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="PDRH4LY-M466TYU-ILJN7DI-YE4H7YG-GGZCLEC-7JNIRFK-YT2TUBD-FKVXYAA" introducedBy=""></device>
+        <device id="SQGGOCD-WMXOZGX-A4QJA5I-2XSZTAR-2CQLFEK-QI3MZOY-WOEJVFL-L223FQU" introducedBy=""></device>
+        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
+        <minDiskFreePct>1</minDiskFreePct>
+        <versioning></versioning>
+        <copiers>0</copiers>
+        <pullers>0</pullers>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerSleepS>0</pullerSleepS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <fsync>true</fsync>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+    </folder>
+    <folder id="screens_desktop" label="screens_desktop" path="/home/austin/pictures/screens_desktop/" type="readonly" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="PDRH4LY-M466TYU-ILJN7DI-YE4H7YG-GGZCLEC-7JNIRFK-YT2TUBD-FKVXYAA" introducedBy=""></device>
+        <device id="SQGGOCD-WMXOZGX-A4QJA5I-2XSZTAR-2CQLFEK-QI3MZOY-WOEJVFL-L223FQU" introducedBy=""></device>
+        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
+        <minDiskFreePct>1</minDiskFreePct>
+        <versioning></versioning>
+        <copiers>0</copiers>
+        <pullers>0</pullers>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerSleepS>0</pullerSleepS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <fsync>true</fsync>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+    </folder>
+    <folder id="screens_phone" label="screens_phone" path="/home/austin/pictures/screens_phone/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="PDRH4LY-M466TYU-ILJN7DI-YE4H7YG-GGZCLEC-7JNIRFK-YT2TUBD-FKVXYAA" introducedBy=""></device>
+        <device id="SQGGOCD-WMXOZGX-A4QJA5I-2XSZTAR-2CQLFEK-QI3MZOY-WOEJVFL-L223FQU" introducedBy=""></device>
+        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
+        <minDiskFreePct>1</minDiskFreePct>
+        <versioning></versioning>
+        <copiers>0</copiers>
+        <pullers>0</pullers>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerSleepS>0</pullerSleepS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <fsync>true</fsync>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+    </folder>
+    <folder id="scripts" label="scripts" path="/home/austin/scripts/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="PDRH4LY-M466TYU-ILJN7DI-YE4H7YG-GGZCLEC-7JNIRFK-YT2TUBD-FKVXYAA" introducedBy=""></device>
+        <device id="SQGGOCD-WMXOZGX-A4QJA5I-2XSZTAR-2CQLFEK-QI3MZOY-WOEJVFL-L223FQU" introducedBy=""></device>
+        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
+        <minDiskFreePct>1</minDiskFreePct>
+        <versioning></versioning>
+        <copiers>0</copiers>
+        <pullers>0</pullers>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerSleepS>0</pullerSleepS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <fsync>true</fsync>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+    </folder>
+    <folder id="snapseed" label="snapseed" path="/home/austin/pictures/snapseed/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="PDRH4LY-M466TYU-ILJN7DI-YE4H7YG-GGZCLEC-7JNIRFK-YT2TUBD-FKVXYAA" introducedBy=""></device>
+        <device id="SQGGOCD-WMXOZGX-A4QJA5I-2XSZTAR-2CQLFEK-QI3MZOY-WOEJVFL-L223FQU" introducedBy=""></device>
+        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
+        <minDiskFreePct>1</minDiskFreePct>
+        <versioning></versioning>
+        <copiers>0</copiers>
+        <pullers>0</pullers>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerSleepS>0</pullerSleepS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <fsync>true</fsync>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+    </folder>
+    <folder id="titanium" label="titanium" path="/home/austin/phone/titanium/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="PDRH4LY-M466TYU-ILJN7DI-YE4H7YG-GGZCLEC-7JNIRFK-YT2TUBD-FKVXYAA" introducedBy=""></device>
+        <device id="SQGGOCD-WMXOZGX-A4QJA5I-2XSZTAR-2CQLFEK-QI3MZOY-WOEJVFL-L223FQU" introducedBy=""></device>
+        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
+        <minDiskFreePct>1</minDiskFreePct>
+        <versioning></versioning>
+        <copiers>0</copiers>
+        <pullers>0</pullers>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerSleepS>0</pullerSleepS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <fsync>true</fsync>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+    </folder>
+    <folder id="videos" label="videos" path="/home/austin/videos/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="PDRH4LY-M466TYU-ILJN7DI-YE4H7YG-GGZCLEC-7JNIRFK-YT2TUBD-FKVXYAA" introducedBy=""></device>
+        <device id="SQGGOCD-WMXOZGX-A4QJA5I-2XSZTAR-2CQLFEK-QI3MZOY-WOEJVFL-L223FQU" introducedBy=""></device>
+        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
+        <minDiskFreePct>1</minDiskFreePct>
+        <versioning></versioning>
+        <copiers>0</copiers>
+        <pullers>0</pullers>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerSleepS>0</pullerSleepS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <fsync>true</fsync>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+    </folder>
+    <folder id="wallpapers" label="wallpapers" path="/home/austin/pictures/wallpapers/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="PDRH4LY-M466TYU-ILJN7DI-YE4H7YG-GGZCLEC-7JNIRFK-YT2TUBD-FKVXYAA" introducedBy=""></device>
+        <device id="SQGGOCD-WMXOZGX-A4QJA5I-2XSZTAR-2CQLFEK-QI3MZOY-WOEJVFL-L223FQU" introducedBy=""></device>
+        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
+        <minDiskFreePct>1</minDiskFreePct>
+        <versioning></versioning>
+        <copiers>0</copiers>
+        <pullers>0</pullers>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerSleepS>0</pullerSleepS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <fsync>true</fsync>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+    </folder>
+    <device id="PDRH4LY-M466TYU-ILJN7DI-YE4H7YG-GGZCLEC-7JNIRFK-YT2TUBD-FKVXYAA" name="Nexus 6P" compression="always" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+        <address>dynamic</address>
+        <paused>false</paused>
+    </device>
+    <device id="SQGGOCD-WMXOZGX-A4QJA5I-2XSZTAR-2CQLFEK-QI3MZOY-WOEJVFL-L223FQU" name="N6P-TMP" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+        <address>dynamic</address>
+        <paused>false</paused>
+    </device>
+    <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" name="T530" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+        <address>dynamic</address>
+        <paused>false</paused>
+    </device>
+    <gui enabled="true" tls="false" debugging="false">
+        <address>127.0.0.1:8384</address>
+        <apikey>vZ73qPPGZSbhS3csJJ87dGmJIh5Fsfrh</apikey>
+        <theme>dark</theme>
+    </gui>
+    <options>
+        <listenAddress>default</listenAddress>
+        <globalAnnounceServer>default</globalAnnounceServer>
+        <globalAnnounceEnabled>true</globalAnnounceEnabled>
+        <localAnnounceEnabled>true</localAnnounceEnabled>
+        <localAnnouncePort>21027</localAnnouncePort>
+        <localAnnounceMCAddr>[ff12::8384]:21027</localAnnounceMCAddr>
+        <maxSendKbps>0</maxSendKbps>
+        <maxRecvKbps>0</maxRecvKbps>
+        <reconnectionIntervalS>60</reconnectionIntervalS>
+        <relaysEnabled>true</relaysEnabled>
+        <relayReconnectIntervalM>10</relayReconnectIntervalM>
+        <startBrowser>true</startBrowser>
+        <natEnabled>true</natEnabled>
+        <natLeaseMinutes>60</natLeaseMinutes>
+        <natRenewalMinutes>30</natRenewalMinutes>
+        <natTimeoutSeconds>10</natTimeoutSeconds>
+        <urAccepted>2</urAccepted>
+        <urUniqueID>l9iju2wl</urUniqueID>
+        <urURL>https://data.syncthing.net/newdata</urURL>
+        <urPostInsecurely>false</urPostInsecurely>
+        <urInitialDelayS>1800</urInitialDelayS>
+        <restartOnWakeup>true</restartOnWakeup>
+        <autoUpgradeIntervalH>12</autoUpgradeIntervalH>
+        <keepTemporariesH>24</keepTemporariesH>
+        <cacheIgnoredFiles>false</cacheIgnoredFiles>
+        <progressUpdateIntervalS>5</progressUpdateIntervalS>
+        <symlinksEnabled>true</symlinksEnabled>
+        <limitBandwidthInLan>false</limitBandwidthInLan>
+        <minHomeDiskFreePct>1</minHomeDiskFreePct>
+        <releasesURL>https://upgrades.syncthing.net/meta.json</releasesURL>
+        <overwriteRemoteDeviceNamesOnConnect>false</overwriteRemoteDeviceNamesOnConnect>
+        <tempIndexMinBlocks>10</tempIndexMinBlocks>
+        <trafficClass>0</trafficClass>
+    </options>
+</configuration>
