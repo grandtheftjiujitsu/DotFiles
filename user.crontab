@@ -1,6 +1,5 @@
 # minute	hour	day_of_month	month	day_of_week	command
-*/5		*	*		*	*		/usr/bin/sh /home/austin/scripts/tmpfs_cache_bk.sh
+*/5		*	*		*	*		/usr/bin/sh /home/austin/git/scripts/tmpfs_cache_bk.sh
 */15		*	*		*	*		curl -o /tmp/forecast wttr.in/$(cat /tmp/zip)
-*		*/4	*		*	*		/usr/bin/sh /home/austin/scripts/aur-update-check.sh
+*		*/4	*		*	*		/usr/bin/sh /home/austin/git/scripts/aur-update-check.sh
 *		*/4	*		*	*		checkupdates > /tmp/off.updates
-1		*	*		*	*		/usr/bin/sh /home/austin/scripts/gdrive_sync.sh

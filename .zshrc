@@ -48,7 +48,7 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias addgrp="sudo usermod -aG "$1" $(whoami)"
 alias dwnspd="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
-alias eup="sudo systemctl start dhcpcd@enp0s25; $HOME/scripts/web_connect_extras.sh"
+alias eup="sudo systemctl start dhcpcd@enp0s25; $HOME/git/scripts/web_connect_extras.sh"
 alias eq="qpaeq"
 alias grep="grep --color=auto"
 alias ls="ls -1 --color=auto"
@@ -95,7 +95,7 @@ alias upddwm="cd $HOME/abs/dwm-git; makepkg -efi --skipchecksums"
 alias updsh="source $HOME/.zshrc"
 alias updx="xrdb -merge $HOME/git/dotfiles/.Xresources"
 alias wttr="cat /tmp/forecast | head -n 7 | tail -n 6"
-alias wup="sudo wifi-menu; $HOME/scripts/web_connect_extras.sh"
+alias wup="sudo wifi-menu; $HOME/git/scripts/web_connect_extras.sh"
 
 # pacman
 alias pacloc="pacman -Qi"				# Query locally installed package and display info
@@ -198,10 +198,10 @@ export PATH=$PATH:$JAVA_HOME/bin
 
 # cache aosp build
 export USE_CCACHE=1
-export CCACHE_DIR=~/.ccache
+export CCACHE_DIR=$HOME/.ccache
 
 # android kernel toolchain
 export PATH=$HOME/android/prebuilts/gcc/linux-86/aarch64/aarch64-linux-android-4.9/bin:$PATH
 
 # user executables
-export PATH=$HOME/scripts:$PATH
+export PATH=$HOME/git/scripts:$PATH
