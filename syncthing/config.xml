@@ -1,6 +1,6 @@
 <configuration version="17">
-    <folder id="dcim" label="dcim" path="/home/austin/pictures/dcim/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="AOQW744-5NDSCPA-HXD5I2W-ZKWS4MY-AQFHCOB-JTWZY3W-OZQJHEJ-XBTZNQL" introducedBy=""></device>
+    <folder id="dsiik-p24s4" label="dcim" path="/home/austin/pictures/dcim/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
         <minDiskFreePct>1</minDiskFreePct>
         <versioning></versioning>
@@ -19,8 +19,8 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
     </folder>
-    <folder id="documents" label="documents" path="/home/austin/documents/" type="readonly" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="AOQW744-5NDSCPA-HXD5I2W-ZKWS4MY-AQFHCOB-JTWZY3W-OZQJHEJ-XBTZNQL" introducedBy=""></device>
+    <folder id="vg3gc-wu65k" label="documents" path="/home/austin/documents/" type="readonly" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
         <minDiskFreePct>1</minDiskFreePct>
         <versioning></versioning>
@@ -39,8 +39,8 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
     </folder>
-    <folder id="downloads" label="downloads" path="/home/austin/download/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="AOQW744-5NDSCPA-HXD5I2W-ZKWS4MY-AQFHCOB-JTWZY3W-OZQJHEJ-XBTZNQL" introducedBy=""></device>
+    <folder id="w7fap-r13bc" label="movies" path="/home/austin/videos/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
         <minDiskFreePct>1</minDiskFreePct>
         <versioning></versioning>
@@ -59,8 +59,8 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
     </folder>
-    <folder id="music" label="music" path="/home/austin/music/the cranberries/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="AOQW744-5NDSCPA-HXD5I2W-ZKWS4MY-AQFHCOB-JTWZY3W-OZQJHEJ-XBTZNQL" introducedBy=""></device>
+    <folder id="ulr19-nz0nh" label="music" path="/home/austin/music/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
         <minDiskFreePct>1</minDiskFreePct>
         <versioning></versioning>
@@ -79,8 +79,8 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
     </folder>
-    <folder id="notifications" label="notifications" path="/home/austin/phone/notifications/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="AOQW744-5NDSCPA-HXD5I2W-ZKWS4MY-AQFHCOB-JTWZY3W-OZQJHEJ-XBTZNQL" introducedBy=""></device>
+    <folder id="wmdoh-chqgh" label="notifications" path="/home/austin/phone/Notifications/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
         <minDiskFreePct>1</minDiskFreePct>
         <versioning></versioning>
@@ -99,8 +99,8 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
     </folder>
-    <folder id="pc-backup" label="pc-backup" path="/home/austin/" type="readonly" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="AOQW744-5NDSCPA-HXD5I2W-ZKWS4MY-AQFHCOB-JTWZY3W-OZQJHEJ-XBTZNQL" introducedBy=""></device>
+    <folder id="nq0pi-xjnx0" label="panorama" path="/home/austin/pictures/panorama/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
         <minDiskFreePct>1</minDiskFreePct>
         <versioning></versioning>
@@ -119,8 +119,8 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
     </folder>
-    <folder id="recordings" label="recordings" path="/home/austin/phone/recordings/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="AOQW744-5NDSCPA-HXD5I2W-ZKWS4MY-AQFHCOB-JTWZY3W-OZQJHEJ-XBTZNQL" introducedBy=""></device>
+    <folder id="5zstj-nerte" label="pc_backup" path="/home/austin/gdrive/personal/pc_backup/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
         <minDiskFreePct>1</minDiskFreePct>
         <versioning></versioning>
@@ -139,8 +139,8 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
     </folder>
-    <folder id="ringtones" label="ringtones" path="/home/austin/phone/ringtones/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="AOQW744-5NDSCPA-HXD5I2W-ZKWS4MY-AQFHCOB-JTWZY3W-OZQJHEJ-XBTZNQL" introducedBy=""></device>
+    <folder id="it385-cc8da" label="playlists" path="/home/austin/phone/Playlists/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
         <minDiskFreePct>1</minDiskFreePct>
         <versioning></versioning>
@@ -159,8 +159,8 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
     </folder>
-    <folder id="screens_desktop" label="screens_desktop" path="/home/austin/pictures/screens_desktop/" type="readonly" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="AOQW744-5NDSCPA-HXD5I2W-ZKWS4MY-AQFHCOB-JTWZY3W-OZQJHEJ-XBTZNQL" introducedBy=""></device>
+    <folder id="y9ima-zhwv0" label="recordings" path="/home/austin/phone/Recordings/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
         <minDiskFreePct>1</minDiskFreePct>
         <versioning></versioning>
@@ -179,8 +179,8 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
     </folder>
-    <folder id="screens_phone" label="screens_phone" path="/home/austin/pictures/screens_phone/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="AOQW744-5NDSCPA-HXD5I2W-ZKWS4MY-AQFHCOB-JTWZY3W-OZQJHEJ-XBTZNQL" introducedBy=""></device>
+    <folder id="h2ygn-bzxen" label="ringtones" path="/home/austin/phone/Ringtones/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
         <minDiskFreePct>1</minDiskFreePct>
         <versioning></versioning>
@@ -199,8 +199,8 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
     </folder>
-    <folder id="scripts-android" label="scripts-android" path="/home/austin/git/scripts/android/" type="readonly" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="AOQW744-5NDSCPA-HXD5I2W-ZKWS4MY-AQFHCOB-JTWZY3W-OZQJHEJ-XBTZNQL" introducedBy=""></device>
+    <folder id="04xx0-qn4mu" label="screens_desktop" path="/home/austin/pictures/screens_desktop/" type="readonly" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
         <minDiskFreePct>1</minDiskFreePct>
         <versioning></versioning>
@@ -219,8 +219,8 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
     </folder>
-    <folder id="snapseed" label="snapseed" path="/home/austin/pictures/snapseed/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="AOQW744-5NDSCPA-HXD5I2W-ZKWS4MY-AQFHCOB-JTWZY3W-OZQJHEJ-XBTZNQL" introducedBy=""></device>
+    <folder id="mgu19-47x3a" label="screens_phone" path="/home/austin/pictures/screens_phone/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
         <minDiskFreePct>1</minDiskFreePct>
         <versioning></versioning>
@@ -239,8 +239,8 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
     </folder>
-    <folder id="titanium" label="titanium" path="/home/austin/phone/titanium/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="AOQW744-5NDSCPA-HXD5I2W-ZKWS4MY-AQFHCOB-JTWZY3W-OZQJHEJ-XBTZNQL" introducedBy=""></device>
+    <folder id="e9m06-xhfqv" label="titanium" path="/home/austin/phone/TitaniumBackup/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
         <minDiskFreePct>1</minDiskFreePct>
         <versioning></versioning>
@@ -259,8 +259,8 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
     </folder>
-    <folder id="videos" label="videos" path="/home/austin/videos/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="AOQW744-5NDSCPA-HXD5I2W-ZKWS4MY-AQFHCOB-JTWZY3W-OZQJHEJ-XBTZNQL" introducedBy=""></device>
+    <folder id="1z7ik-2nisd" label="twrp" path="/home/austin/phone/TWRP/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
         <minDiskFreePct>1</minDiskFreePct>
         <versioning></versioning>
@@ -279,8 +279,8 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
     </folder>
-    <folder id="wallpapers" label="wallpapers" path="/home/austin/pictures/wallpapers/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="AOQW744-5NDSCPA-HXD5I2W-ZKWS4MY-AQFHCOB-JTWZY3W-OZQJHEJ-XBTZNQL" introducedBy=""></device>
+    <folder id="93hp2-upui5" label="wallpapers" path="/home/austin/pictures/wallpapers/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
         <minDiskFreePct>1</minDiskFreePct>
         <versioning></versioning>
@@ -299,7 +299,7 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
     </folder>
-    <device id="AOQW744-5NDSCPA-HXD5I2W-ZKWS4MY-AQFHCOB-JTWZY3W-OZQJHEJ-XBTZNQL" name="Nexus 6P" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+    <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" name="Nexus 6P" compression="always" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
         <paused>false</paused>
     </device>

@@ -1,0 +1,96 @@
+########################### Menu & Menuitem silver #############################
+
+style "menu-silver"			= "default"
+{
+  text[PRELIGHT]	= "#000000"
+  fg[NORMAL]		= "#000000"  
+  fg[ACTIVE]		= "#000000"
+  fg[PRELIGHT]		= "#000000"
+  fg[SELECTED]		= "#000000"
+  fg[INSENSITIVE]	= "#eeeeee"
+#bg_pixmap[NORMAL]       = "Menu-Menubar/menu-overlay.png"
+xthickness			= 5
+ythickness			= 3
+  engine "pixmap"
+  {
+    image
+    {
+      function			= BOX
+     recolorable    		= TRUE
+      detail				= "menu"
+      file				= "Menu-Menubar/menu-alt.png"
+      border			= { 7, 3, 3, 3 } #{ 34, 3, 3, 3 }
+      stretch			= TRUE
+    }
+  }
+}
+
+style "menuitem-silver"	= "default"
+{
+  xthickness			= 1
+  fg[PRELIGHT] = "#000000"
+  text[PRELIGHT] = "#000000"
+
+
+  engine "pixmap"
+  {
+    image
+    {
+      function			= BOX
+      recolorable		= TRUE
+     file				= "Menu-Menubar/menu_hi-light_3.png"
+
+      border			= { 2, 2, 2, 2 }
+      stretch			= TRUE
+    }
+    image
+    {
+      function			= ARROW
+      recolorable		= TRUE
+      state				= NORMAL
+      overlay_file		= "Arrows/arrow-right-norm.png"
+      overlay_stretch	= FALSE
+      arrow_direction	= RIGHT
+    }
+  image
+    {
+      function			= ARROW
+      recolorable		= TRUE
+      state				= PRELIGHT
+      overlay_file		= "Arrows/arrow-right.png"
+      overlay_stretch	= FALSE
+      arrow_direction	= RIGHT
+    }
+#    image
+#    {
+#      function			= HLINE
+#      recolorable			= TRUE
+#      file				= "Menu-Menubar/menuline.png"
+#      border				= { 0, 0, 0, 0 }
+#      stretch			= TRUE
+#    }
+
+  }
+}
+
+style "tearoffmenuitem-silver"	= "menuitem"
+{
+  engine "pixmap"
+  {
+    image
+    {
+      function			= ARROW
+      file				= "Arrows/arrow-left.png"
+      stretch			= TRUE
+      arrow_direction	= LEFT
+    }
+#    image
+#    {
+#      function	= HLINE
+#      file			= "cuthere.png"
+#      border		= { 0, 0, 0, 0 }
+#      stretch		= TRUE
+#    }
+  }
+}
+

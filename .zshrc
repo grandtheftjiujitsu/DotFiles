@@ -65,8 +65,10 @@ alias py="python -q"
 #alias reboot="sudo reboot"
 alias umount="sudo umount"
 alias wifi-menu="sudo wifi-menu"
+alias zef="/usr/share/perl6/vendor/bin/zef"
 
 # scripts & utilities
+#alias aur-pull="git clone ssh://aur@aur.archlinux.org/$1.git"
 alias forecast="cat /tmp/forecast"
 alias ipinfo="curl ipinfo.io"
 alias isrun="ps -ax | grep $1"
@@ -187,21 +189,24 @@ GEM_HOME=$(ls -t -U | ruby -e 'puts Gem.user_dir')
 GEM_PATH=$GEM_HOME
 export PATH=$PATH:$GEM_HOME/bin
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH=$HOME/.rakudobrew/bin:$PATH
+#export PATH=$HOME/.rakudobrew/bin:$PATH
 
-# redirect android build path, OUT_DIR_COMMON_BASE/android/
-#export OUT_DIR_COMMON_BASE=$HOME/android/build
-
+## android
 # change java version for android
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
 export PATH=$PATH:$JAVA_HOME/bin
+export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx6g"
 
 # cache aosp build
 export USE_CCACHE=1
 export CCACHE_DIR=$HOME/.ccache
 
-# android kernel toolchain
-export PATH=$HOME/android/prebuilts/gcc/linux-86/aarch64/aarch64-linux-android-4.9/bin:$PATH
-
 # user executables
-export PATH=$HOME/git/scripts:$PATH
+#export PATH=$HOME/git/scripts:$PATH
+#export PATH=~/.rakudobrew/bin:$PATH
+
+# for android sdk - needs "vmname installed"
+alias studio="wmname LG3D; sh $HOME/abs/android-studio/bin/studio.sh"
+
+# for java / android studio
+export _JAVA_AWT_WM_NONREPARENTING=1

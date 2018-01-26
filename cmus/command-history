@@ -1,6 +1,4 @@
-search 
-add ~/music/playlists
 quit
-add /home/austin/music/
-add /home/austin/music/*
-add /home/austin/music
+q
+s
+as

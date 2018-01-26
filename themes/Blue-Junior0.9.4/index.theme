@@ -1,0 +1,7 @@
+[X-GNOME-Metatheme]
+Name=kore
+Comment=kore for gnome
+Encoding=UTF-8
+GtkTheme=kore
+MetacityTheme=kore
+IconTheme=Tango

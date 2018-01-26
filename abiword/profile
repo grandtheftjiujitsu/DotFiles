@@ -7,8 +7,8 @@
 
 <!--         Build_ID          = unknown -->
 <!--         Build_Version     = 3.0.2 -->
-<!--         Build_CompileTime = 15:31:26 -->
-<!--         Build_CompileDate = Jan 31 2017 -->
+<!--         Build_CompileTime = 11:06:49 -->
+<!--         Build_CompileDate = Jun  5 2017 -->
 
 <AbiPreferences app="abiword" ver="1.0">
 
@@ -28,26 +28,58 @@
 
 	<Scheme
 		name="_builtin_"
-		ColorRevision8="0485c3"
-		CursorBlink="1"
+		LockStyles="0"
+		InsertMode="1"
+		RemapGlyphsDefault="&#xb0;"
+		RulerUnits="inch"
+		ColorRevision5="0fb305"
+		StringSet="en-US"
+		ColorRevision10="ff0000"
+		SaveContextGlyphs="0"
+		SpellCheckCaps="1"
+		AutoSaveFileExt=".bak~"
+		DirMarkerAfterClosingParenthesis="0"
+		OptionsTabNumber="0"
+		ColorShowPara="7f7f7f"
+		StringSetDirectory="strings"
+		KeyBindingsCycle="0"
+		ColorRevision6="08b3f8"
+		TableBarVisible="0"
+		StandardBarVisible="1"
+		AutoSpellCheck="1"
+		SimpleBarVisible="0"
+		DefaultDirectionRtl="0"
+		CloseOnLastDoc="0"
+		UseSuffix="1"
+		AutoSaveFilePeriod="5"
+		MenuLayouts="Main"
+		ToolbarAppearance="icon"
 		EnableSmoothScrolling="1"
-		InsertModeToggle="0"
+		CursorBlink="1"
+		SpellCheckNumbers="1"
+		ColorRevision8="0485c3"
+		ColorRevision7="04cec3"
 		AutoGrammarCheck="0"
-		SpellAutoReplace="0"
+		ColorFieldOffset="0c0c0c"
+		ColorHdrFtr="000000"
 		ZoomType="Width"
+		DefaultGraphics="0"
 		AutoSaveFile="0"
-		ToolbarLayouts="FileEditOps FormatOps TableOps ExtraOps"
+		ColorMargin="7f7f7f"
+		SpellAutoReplace="0"
+		AlwaysPromptEncoding="0"
+		InnerQuoteStyle="1"
 		NoMACinUUID="0"
+		layoutMode="1"
 		HTML_Export_Options="?xml,xmlns:awml,+CSS"
 		ColorRevision1="ab04fe"
+		SpellCheckDirectory="dictionary"
 		ColorRevision9="0712c3"
 		SpellCheckInternet="1"
 		OuterQuoteStyle="0"
 		LatinLigatures="0"
 		DefaultSaveFormat=".abw"
-		DirMarkerAfterClosingParenthesis="0"
 		AutoLoadPlugins="1"
-		SpellCheckDirectory="dictionary"
 		SmartQuotesEnable="1"
 		ColorRevision2="ab1477"
 		TransparentColor="ffffff"
@@ -57,36 +89,36 @@
 
 	<Scheme
 		name="_custom_"
-		ZoomType="133"
 		TransparentColor="#ffffff"
 		ZoomPercentage="133"
+		ZoomType="133"
 		AutoGrammarCheck="1"
 		/>
 
 	<Plugin
 		name="_AbiPaint_"
-		szImageEditor="gimp"
 		bLeaveImageAsPNG="1"
+		szImageEditor="gimp"
 		/>
 
 	<Recent
 		max="9"
-		name1="file:///home/austin/documents/vault/0424stbr.abw"
-		name2="file:///home/austin/documents/vault/0422chro.abw"
-		name3="file:///home/austin/documents/vault/0419joth.abw"
-		name4="file:///home/austin/documents/vault/0418iscr.abw"
-		name5="file:///home/austin/documents/0417lubr.abw"
-		name6="file:///home/austin/documents/vault/0414kabr.abw"
-		name7="file:///home/austin/documents/vault/0414gamy.abw"
-		name8="file:///home/austin/documents/vault/0414anpr.abw"
-		name9="file:///home/austin/documents/vault/0412abry.abw"
+		name1="file:///tmp/GHP+Dog+App+020415.doc"
+		name2="file:///tmp/HEIMDALL_6P_v4"
+		name3="file:///home/austin/documents/vault/0629-bero.abw"
+		name4="file:///home/austin/documents/vault/0628-hakis.abw"
+		name5="file:///home/austin/documents/vault/0627kaen.abw"
+		name6="file:///home/austin/documents/vault/0628-jaro.abw"
+		name7="file:///home/austin/documents/vault/0628-kabr.abw"
+		name8="file:///home/austin/documents/vault/0628-jeor.abw"
+		name9="file:///home/austin/documents/how-to-age-gracefully.doc"
 		/>
 
 	<Geometry
 		width="1364"
-		height="749"
+		height="747"
 		posx="34"
-		posy="126"
+		posy="134"
 		flags="2"
 		/>
 

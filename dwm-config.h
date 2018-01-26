@@ -60,22 +60,30 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "urxvt", NULL };
 
 /* custom commands */
+static const char *abiword[]  = { "abiword", NULL };
 static const char *brt[]      = { "xbacklight", "-inc", "10", NULL };
 /*static const char *chrome[]   = { "chromium --single-process", NULL };*/
 static const char *chrome[]   = { "chromium", NULL };
+/*static const char *cmus[]     = { "urxvt", "-e", "cmus", NULL };*/
+static const char *cmusnxt[]  = { "cmus-remote", "-n", NULL };
+static const char *cmusply[]  = { "cmus-remote", "-u", NULL };
+static const char *cmusprv[]  = { "cmus-remote", "-r", NULL };
 static const char *dim[]      = { "xbacklight", "-dec", "10", NULL };
-static const char *geany[]    = { "geany", NULL };
-static const char *libreofc[] = { "libreoffice", NULL };
+static const char *bluefish[] = { "bluefish", NULL };
+/*static const char *libreofc[] = { "libreoffice", NULL };*/
 static const char *logout[]   = { "killall", "dwm", NULL };
-static const char *mnext[]    = { "mpc", "next", NULL };
-static const char *mprev[]    = { "mpc", "prev", NULL };
-static const char *mtoggle[]  = { "mpc", "toggle", NULL };
-static const char *prtsc[]    = { "cd", "/home/austin/pictures/", "&&", "scrot", NULL };
+/*static const char *mnext[]    = { "mpc", "next", NULL };*/
+/*static const char *mprev[]    = { "mpc", "prev", NULL };*/
+/*static const char *mtoggle[]  = { "mpc", "toggle", NULL };*/
+static const char *prtsc[]    = { "scrot", "'%Y-%m-%d-%H%M%S.jpg'", "-e", "'mv $f ~/pictures/screens_desktop/'", NULL };
 static const char *reboot[]   = { "sudo", "reboot", NULL };
 static const char *scrnlck[]  = { "sflock", "-f", "10x20", NULL };
 static const char *shutdown[] = { "sleep", "1", "&&", "sudo", "shutdown", "now", "|", "sudo", "systemctl", "stop", "slim", NULL };
 static const char *suspend[]  = { "systemctl", "suspend", NULL };
-static const char *wifi[]     = { "sudo", "wifi-menu", NULL };
+static const char *voldwn[]   = { "amixer", "sset", "Master", "10%-", NULL };
+static const char *volmute[]  = { "amixer", "sset", "Master", "toggle", NULL };
+static const char *volup[]    = { "amixer", "sset", "Master", "10%+", NULL };
+/*static const char *wifi[]     = { "sudo", "wifi-menu", NULL };*/
 
 //	Tag Cycling From //
 //	ap0calypse.agitatio.org/articles/2012/08/17/cycle-through-your-tags-in-dwm.html //
@@ -163,26 +171,33 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_Delete,      quit,           {0} },
 	
   /* custom keys */
+	{ MODKEY,             XK_a,         spawn,     {.v = abiword} },
 	{ MODKEY,             XK_c,         spawn,     {.v = chrome} },
-	{ MODKEY,             XK_g,         spawn,     {.v = geany} },
-	{ MODKEY,             XK_l,         spawn,     {.v = libreofc} },
+	{ MODKEY,             XK_g,         spawn,     {.v = bluefish} },
+/*	{ MODKEY,             XK_l,         spawn,     {.v = libreofc} },*/
 	{ MODKEY,             XK_Print,     spawn,     {.v = prtsc} },
 	{ MODKEY|ControlMask, XK_Delete,    spawn,     {.v = logout} },
 	{ MODKEY|ControlMask, XK_Return,    spawn,     {.v = suspend} },
 	{ MODKEY|ControlMask, XK_Return,    spawn,     {.v = scrnlck} },
 	{ MODKEY|ControlMask, XK_space,     spawn,     {.v = reboot} },
 	{ MODKEY|ControlMask, XK_BackSpace, spawn,     {.v = shutdown} },
-	{ MODKEY|ControlMask, XK_Down,      spawn,     {.v = mtoggle} },
-	{ MODKEY|ControlMask, XK_Right,     spawn,     {.v = mnext} },
-	{ MODKEY|ControlMask, XK_Left,      spawn,     {.v = mprev} },
+/*	{ MODKEY|ControlMask, XK_Down,      spawn,     {.v = mtoggle} },*/
+/*	{ MODKEY|ControlMask, XK_Right,     spawn,     {.v = mnext} },*/
+/*	{ MODKEY|ControlMask, XK_Left,      spawn,     {.v = mprev} },*/
 	{ MODKEY,             XK_Up,        x_nexttag, {0} },
 	{ MODKEY,             XK_Down,      x_prevtag, {0} },
-	{ MODKEY|ControlMask, XK_F2,        spawn,     {.v = wifi} },
-	{ MODKEY,             XK_F5,        spawn,     {.v = dim} },
-	{ MODKEY,             XK_F6,        spawn,     {.v = brt} },
+	{ MODKEY,             XK_F8,        spawn,     {.v = dim} },
+	{ MODKEY,             XK_F9,        spawn,     {.v = brt} },
+        { MODKEY,             XK_F10,       spawn,     {.v = cmusprv} },
+        { MODKEY,             XK_F11,       spawn,     {.v = cmusply} },
+        { MODKEY,             XK_F12,       spawn,     {.v = cmusnxt} },
+        { 0,                  0x1008ff12,   spawn,     {.v = volmute} },     
+        { 0,                  0x1008ff11,   spawn,     {.v = voldwn} },
+        { 0,                  0x1008ff13,   spawn,     {.v = volup} },
+/*        { 0,                  0x1008ffb2,   spawn,      {.v = cmus} },*/
 };
 
 /* button definitions */
