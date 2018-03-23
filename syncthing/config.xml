@@ -1,8 +1,9 @@
-<configuration version="17">
-    <folder id="dsiik-p24s4" label="dcim" path="/home/austin/pictures/dcim/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
+<configuration version="26">
+    <folder id="owx6g-4m6w6" label="Documents" path="/home/austin/documents" type="readonly" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+        <filesystemType>basic</filesystemType>
+        <device id="XGYM2VE-5ODYRLP-DHHPXUZ-EYO24KY-ZZXJ6JZ-FNGRNAU-3WU4BTA-NDFSAQ2" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
-        <minDiskFreePct>1</minDiskFreePct>
+        <minDiskFree unit="%">1</minDiskFree>
         <versioning></versioning>
         <copiers>0</copiers>
         <pullers>0</pullers>
@@ -10,19 +11,19 @@
         <order>random</order>
         <ignoreDelete>false</ignoreDelete>
         <scanProgressIntervalS>0</scanProgressIntervalS>
-        <pullerSleepS>0</pullerSleepS>
         <pullerPauseS>0</pullerPauseS>
         <maxConflicts>10</maxConflicts>
         <disableSparseFiles>false</disableSparseFiles>
         <disableTempIndexes>false</disableTempIndexes>
-        <fsync>true</fsync>
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
+        <markerName>.stfolder</markerName>
     </folder>
-    <folder id="vg3gc-wu65k" label="documents" path="/home/austin/documents/" type="readonly" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
+    <folder id="33a35-z1fuh" label="Music" path="/home/austin/music" type="readwrite" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+        <filesystemType>basic</filesystemType>
+        <device id="XGYM2VE-5ODYRLP-DHHPXUZ-EYO24KY-ZZXJ6JZ-FNGRNAU-3WU4BTA-NDFSAQ2" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
-        <minDiskFreePct>1</minDiskFreePct>
+        <minDiskFree unit="%">1</minDiskFree>
         <versioning></versioning>
         <copiers>0</copiers>
         <pullers>0</pullers>
@@ -30,19 +31,19 @@
         <order>random</order>
         <ignoreDelete>false</ignoreDelete>
         <scanProgressIntervalS>0</scanProgressIntervalS>
-        <pullerSleepS>0</pullerSleepS>
         <pullerPauseS>0</pullerPauseS>
         <maxConflicts>10</maxConflicts>
         <disableSparseFiles>false</disableSparseFiles>
         <disableTempIndexes>false</disableTempIndexes>
-        <fsync>true</fsync>
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
+        <markerName>.stfolder</markerName>
     </folder>
-    <folder id="w7fap-r13bc" label="movies" path="/home/austin/videos/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
+    <folder id="ppmgg-2s6wg" label="Notifications" path="/home/austin/phone/notifications" type="readwrite" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+        <filesystemType>basic</filesystemType>
+        <device id="XGYM2VE-5ODYRLP-DHHPXUZ-EYO24KY-ZZXJ6JZ-FNGRNAU-3WU4BTA-NDFSAQ2" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
-        <minDiskFreePct>1</minDiskFreePct>
+        <minDiskFree unit="%">1</minDiskFree>
         <versioning></versioning>
         <copiers>0</copiers>
         <pullers>0</pullers>
@@ -50,19 +51,19 @@
         <order>random</order>
         <ignoreDelete>false</ignoreDelete>
         <scanProgressIntervalS>0</scanProgressIntervalS>
-        <pullerSleepS>0</pullerSleepS>
         <pullerPauseS>0</pullerPauseS>
         <maxConflicts>10</maxConflicts>
         <disableSparseFiles>false</disableSparseFiles>
         <disableTempIndexes>false</disableTempIndexes>
-        <fsync>true</fsync>
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
+        <markerName>.stfolder</markerName>
     </folder>
-    <folder id="ulr19-nz0nh" label="music" path="/home/austin/music/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
+    <folder id="wxjre-krzmn" label="PC Backup" path="gdrive_personal/pc_backup/" type="readonly" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+        <filesystemType>basic</filesystemType>
+        <device id="XGYM2VE-5ODYRLP-DHHPXUZ-EYO24KY-ZZXJ6JZ-FNGRNAU-3WU4BTA-NDFSAQ2" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
-        <minDiskFreePct>1</minDiskFreePct>
+        <minDiskFree unit="%">1</minDiskFree>
         <versioning></versioning>
         <copiers>0</copiers>
         <pullers>0</pullers>
@@ -70,19 +71,19 @@
         <order>random</order>
         <ignoreDelete>false</ignoreDelete>
         <scanProgressIntervalS>0</scanProgressIntervalS>
-        <pullerSleepS>0</pullerSleepS>
         <pullerPauseS>0</pullerPauseS>
         <maxConflicts>10</maxConflicts>
         <disableSparseFiles>false</disableSparseFiles>
         <disableTempIndexes>false</disableTempIndexes>
-        <fsync>true</fsync>
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
+        <markerName>.stfolder</markerName>
     </folder>
-    <folder id="wmdoh-chqgh" label="notifications" path="/home/austin/phone/Notifications/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
+    <folder id="p0qn0-650nz" label="Playlists" path="/home/austin/phone/playlists" type="readwrite" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+        <filesystemType>basic</filesystemType>
+        <device id="XGYM2VE-5ODYRLP-DHHPXUZ-EYO24KY-ZZXJ6JZ-FNGRNAU-3WU4BTA-NDFSAQ2" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
-        <minDiskFreePct>1</minDiskFreePct>
+        <minDiskFree unit="%">1</minDiskFree>
         <versioning></versioning>
         <copiers>0</copiers>
         <pullers>0</pullers>
@@ -90,19 +91,19 @@
         <order>random</order>
         <ignoreDelete>false</ignoreDelete>
         <scanProgressIntervalS>0</scanProgressIntervalS>
-        <pullerSleepS>0</pullerSleepS>
         <pullerPauseS>0</pullerPauseS>
         <maxConflicts>10</maxConflicts>
         <disableSparseFiles>false</disableSparseFiles>
         <disableTempIndexes>false</disableTempIndexes>
-        <fsync>true</fsync>
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
+        <markerName>.stfolder</markerName>
     </folder>
-    <folder id="nq0pi-xjnx0" label="panorama" path="/home/austin/pictures/panorama/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
+    <folder id="sdj7e-nbwtc" label="Recordings" path="/home/austin/phone/recordings" type="readwrite" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+        <filesystemType>basic</filesystemType>
+        <device id="XGYM2VE-5ODYRLP-DHHPXUZ-EYO24KY-ZZXJ6JZ-FNGRNAU-3WU4BTA-NDFSAQ2" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
-        <minDiskFreePct>1</minDiskFreePct>
+        <minDiskFree unit="%">1</minDiskFree>
         <versioning></versioning>
         <copiers>0</copiers>
         <pullers>0</pullers>
@@ -110,19 +111,19 @@
         <order>random</order>
         <ignoreDelete>false</ignoreDelete>
         <scanProgressIntervalS>0</scanProgressIntervalS>
-        <pullerSleepS>0</pullerSleepS>
         <pullerPauseS>0</pullerPauseS>
         <maxConflicts>10</maxConflicts>
         <disableSparseFiles>false</disableSparseFiles>
         <disableTempIndexes>false</disableTempIndexes>
-        <fsync>true</fsync>
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
+        <markerName>.stfolder</markerName>
     </folder>
-    <folder id="5zstj-nerte" label="pc_backup" path="/home/austin/gdrive/personal/pc_backup/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
+    <folder id="gy48v-m1330" label="Ringtones" path="/home/austin/phone/ringtones/" type="readwrite" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+        <filesystemType>basic</filesystemType>
+        <device id="XGYM2VE-5ODYRLP-DHHPXUZ-EYO24KY-ZZXJ6JZ-FNGRNAU-3WU4BTA-NDFSAQ2" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
-        <minDiskFreePct>1</minDiskFreePct>
+        <minDiskFree unit="%">1</minDiskFree>
         <versioning></versioning>
         <copiers>0</copiers>
         <pullers>0</pullers>
@@ -130,182 +131,23 @@
         <order>random</order>
         <ignoreDelete>false</ignoreDelete>
         <scanProgressIntervalS>0</scanProgressIntervalS>
-        <pullerSleepS>0</pullerSleepS>
         <pullerPauseS>0</pullerPauseS>
         <maxConflicts>10</maxConflicts>
         <disableSparseFiles>false</disableSparseFiles>
         <disableTempIndexes>false</disableTempIndexes>
-        <fsync>true</fsync>
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
+        <markerName>.stfolder</markerName>
     </folder>
-    <folder id="it385-cc8da" label="playlists" path="/home/austin/phone/Playlists/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
-        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
-        <minDiskFreePct>1</minDiskFreePct>
-        <versioning></versioning>
-        <copiers>0</copiers>
-        <pullers>0</pullers>
-        <hashers>0</hashers>
-        <order>random</order>
-        <ignoreDelete>false</ignoreDelete>
-        <scanProgressIntervalS>0</scanProgressIntervalS>
-        <pullerSleepS>0</pullerSleepS>
-        <pullerPauseS>0</pullerPauseS>
-        <maxConflicts>10</maxConflicts>
-        <disableSparseFiles>false</disableSparseFiles>
-        <disableTempIndexes>false</disableTempIndexes>
-        <fsync>true</fsync>
-        <paused>false</paused>
-        <weakHashThresholdPct>25</weakHashThresholdPct>
-    </folder>
-    <folder id="y9ima-zhwv0" label="recordings" path="/home/austin/phone/Recordings/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
-        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
-        <minDiskFreePct>1</minDiskFreePct>
-        <versioning></versioning>
-        <copiers>0</copiers>
-        <pullers>0</pullers>
-        <hashers>0</hashers>
-        <order>random</order>
-        <ignoreDelete>false</ignoreDelete>
-        <scanProgressIntervalS>0</scanProgressIntervalS>
-        <pullerSleepS>0</pullerSleepS>
-        <pullerPauseS>0</pullerPauseS>
-        <maxConflicts>10</maxConflicts>
-        <disableSparseFiles>false</disableSparseFiles>
-        <disableTempIndexes>false</disableTempIndexes>
-        <fsync>true</fsync>
-        <paused>false</paused>
-        <weakHashThresholdPct>25</weakHashThresholdPct>
-    </folder>
-    <folder id="h2ygn-bzxen" label="ringtones" path="/home/austin/phone/Ringtones/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
-        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
-        <minDiskFreePct>1</minDiskFreePct>
-        <versioning></versioning>
-        <copiers>0</copiers>
-        <pullers>0</pullers>
-        <hashers>0</hashers>
-        <order>random</order>
-        <ignoreDelete>false</ignoreDelete>
-        <scanProgressIntervalS>0</scanProgressIntervalS>
-        <pullerSleepS>0</pullerSleepS>
-        <pullerPauseS>0</pullerPauseS>
-        <maxConflicts>10</maxConflicts>
-        <disableSparseFiles>false</disableSparseFiles>
-        <disableTempIndexes>false</disableTempIndexes>
-        <fsync>true</fsync>
-        <paused>false</paused>
-        <weakHashThresholdPct>25</weakHashThresholdPct>
-    </folder>
-    <folder id="04xx0-qn4mu" label="screens_desktop" path="/home/austin/pictures/screens_desktop/" type="readonly" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
-        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
-        <minDiskFreePct>1</minDiskFreePct>
-        <versioning></versioning>
-        <copiers>0</copiers>
-        <pullers>0</pullers>
-        <hashers>0</hashers>
-        <order>random</order>
-        <ignoreDelete>false</ignoreDelete>
-        <scanProgressIntervalS>0</scanProgressIntervalS>
-        <pullerSleepS>0</pullerSleepS>
-        <pullerPauseS>0</pullerPauseS>
-        <maxConflicts>10</maxConflicts>
-        <disableSparseFiles>false</disableSparseFiles>
-        <disableTempIndexes>false</disableTempIndexes>
-        <fsync>true</fsync>
-        <paused>false</paused>
-        <weakHashThresholdPct>25</weakHashThresholdPct>
-    </folder>
-    <folder id="mgu19-47x3a" label="screens_phone" path="/home/austin/pictures/screens_phone/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
-        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
-        <minDiskFreePct>1</minDiskFreePct>
-        <versioning></versioning>
-        <copiers>0</copiers>
-        <pullers>0</pullers>
-        <hashers>0</hashers>
-        <order>random</order>
-        <ignoreDelete>false</ignoreDelete>
-        <scanProgressIntervalS>0</scanProgressIntervalS>
-        <pullerSleepS>0</pullerSleepS>
-        <pullerPauseS>0</pullerPauseS>
-        <maxConflicts>10</maxConflicts>
-        <disableSparseFiles>false</disableSparseFiles>
-        <disableTempIndexes>false</disableTempIndexes>
-        <fsync>true</fsync>
-        <paused>false</paused>
-        <weakHashThresholdPct>25</weakHashThresholdPct>
-    </folder>
-    <folder id="e9m06-xhfqv" label="titanium" path="/home/austin/phone/TitaniumBackup/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
-        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
-        <minDiskFreePct>1</minDiskFreePct>
-        <versioning></versioning>
-        <copiers>0</copiers>
-        <pullers>0</pullers>
-        <hashers>0</hashers>
-        <order>random</order>
-        <ignoreDelete>false</ignoreDelete>
-        <scanProgressIntervalS>0</scanProgressIntervalS>
-        <pullerSleepS>0</pullerSleepS>
-        <pullerPauseS>0</pullerPauseS>
-        <maxConflicts>10</maxConflicts>
-        <disableSparseFiles>false</disableSparseFiles>
-        <disableTempIndexes>false</disableTempIndexes>
-        <fsync>true</fsync>
-        <paused>false</paused>
-        <weakHashThresholdPct>25</weakHashThresholdPct>
-    </folder>
-    <folder id="1z7ik-2nisd" label="twrp" path="/home/austin/phone/TWRP/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
-        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
-        <minDiskFreePct>1</minDiskFreePct>
-        <versioning></versioning>
-        <copiers>0</copiers>
-        <pullers>0</pullers>
-        <hashers>0</hashers>
-        <order>random</order>
-        <ignoreDelete>false</ignoreDelete>
-        <scanProgressIntervalS>0</scanProgressIntervalS>
-        <pullerSleepS>0</pullerSleepS>
-        <pullerPauseS>0</pullerPauseS>
-        <maxConflicts>10</maxConflicts>
-        <disableSparseFiles>false</disableSparseFiles>
-        <disableTempIndexes>false</disableTempIndexes>
-        <fsync>true</fsync>
-        <paused>false</paused>
-        <weakHashThresholdPct>25</weakHashThresholdPct>
-    </folder>
-    <folder id="93hp2-upui5" label="wallpapers" path="/home/austin/pictures/wallpapers/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
-        <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" introducedBy=""></device>
-        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
-        <minDiskFreePct>1</minDiskFreePct>
-        <versioning></versioning>
-        <copiers>0</copiers>
-        <pullers>0</pullers>
-        <hashers>0</hashers>
-        <order>random</order>
-        <ignoreDelete>false</ignoreDelete>
-        <scanProgressIntervalS>0</scanProgressIntervalS>
-        <pullerSleepS>0</pullerSleepS>
-        <pullerPauseS>0</pullerPauseS>
-        <maxConflicts>10</maxConflicts>
-        <disableSparseFiles>false</disableSparseFiles>
-        <disableTempIndexes>false</disableTempIndexes>
-        <fsync>true</fsync>
-        <paused>false</paused>
-        <weakHashThresholdPct>25</weakHashThresholdPct>
-    </folder>
-    <device id="KJVYE3L-LHY2UDE-M6BE2OF-FXEOZO3-KNFJZCE-UD553N4-7FH5OPZ-3T6CBAF" name="Nexus 6P" compression="always" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+    <device id="XGYM2VE-5ODYRLP-DHHPXUZ-EYO24KY-ZZXJ6JZ-FNGRNAU-3WU4BTA-NDFSAQ2" name="Nexus 6P" compression="always" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
         <paused>false</paused>
+        <autoAcceptFolders>false</autoAcceptFolders>
     </device>
     <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" name="T530" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
         <paused>false</paused>
+        <autoAcceptFolders>false</autoAcceptFolders>
     </device>
     <gui enabled="true" tls="false" debugging="false">
         <address>127.0.0.1:8384</address>
@@ -329,22 +171,36 @@
         <natLeaseMinutes>60</natLeaseMinutes>
         <natRenewalMinutes>30</natRenewalMinutes>
         <natTimeoutSeconds>10</natTimeoutSeconds>
-        <urAccepted>2</urAccepted>
+        <urAccepted>3</urAccepted>
+        <urSeen>2</urSeen>
         <urUniqueID>l9iju2wl</urUniqueID>
         <urURL>https://data.syncthing.net/newdata</urURL>
         <urPostInsecurely>false</urPostInsecurely>
         <urInitialDelayS>1800</urInitialDelayS>
         <restartOnWakeup>true</restartOnWakeup>
         <autoUpgradeIntervalH>12</autoUpgradeIntervalH>
+        <upgradeToPreReleases>true</upgradeToPreReleases>
         <keepTemporariesH>24</keepTemporariesH>
         <cacheIgnoredFiles>false</cacheIgnoredFiles>
         <progressUpdateIntervalS>5</progressUpdateIntervalS>
-        <symlinksEnabled>true</symlinksEnabled>
         <limitBandwidthInLan>false</limitBandwidthInLan>
-        <minHomeDiskFreePct>1</minHomeDiskFreePct>
+        <minHomeDiskFree unit="%">1</minHomeDiskFree>
         <releasesURL>https://upgrades.syncthing.net/meta.json</releasesURL>
         <overwriteRemoteDeviceNamesOnConnect>false</overwriteRemoteDeviceNamesOnConnect>
         <tempIndexMinBlocks>10</tempIndexMinBlocks>
         <trafficClass>0</trafficClass>
+        <weakHashSelectionMethod>auto</weakHashSelectionMethod>
+        <stunServer>default</stunServer>
+        <stunKeepaliveSeconds>24</stunKeepaliveSeconds>
+        <kcpNoDelay>false</kcpNoDelay>
+        <kcpUpdateIntervalMs>25</kcpUpdateIntervalMs>
+        <kcpFastResend>false</kcpFastResend>
+        <kcpCongestionControl>true</kcpCongestionControl>
+        <kcpSendWindowSize>128</kcpSendWindowSize>
+        <kcpReceiveWindowSize>128</kcpReceiveWindowSize>
+        <defaultFolderPath>~</defaultFolderPath>
+        <setLowPriority>true</setLowPriority>
+        <minHomeDiskFreePct>0</minHomeDiskFreePct>
     </options>
+    <ignoredFolder>cxumk-sfu5e</ignoredFolder>
 </configuration>

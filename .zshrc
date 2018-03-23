@@ -68,7 +68,7 @@ alias wifi-menu="sudo wifi-menu"
 alias zef="/usr/share/perl6/vendor/bin/zef"
 
 # scripts & utilities
-#alias aur-pull="git clone ssh://aur@aur.archlinux.org/$1.git"
+alias aur-pull="git clone https://aur.archlinux.org/$1.git"
 alias forecast="cat /tmp/forecast"
 alias ipinfo="curl ipinfo.io"
 alias isrun="ps -ax | grep $1"
