@@ -1,7 +1,7 @@
 <configuration version="26">
-    <folder id="owx6g-4m6w6" label="Documents" path="/home/austin/documents" type="readonly" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="kt3ng-9jr4v" label="Documents - Keys" path="/home/austin/documents/keys" type="readonly" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
-        <device id="XGYM2VE-5ODYRLP-DHHPXUZ-EYO24KY-ZZXJ6JZ-FNGRNAU-3WU4BTA-NDFSAQ2" introducedBy=""></device>
+        <device id="ODEKWQL-JHX3CDI-6VCZCHT-3T3G3E5-KF5C4KX-LFNPXLG-A7FNT2U-Y5L2NQ6" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
         <minDiskFree unit="%">1</minDiskFree>
         <versioning></versioning>
@@ -19,9 +19,9 @@
         <weakHashThresholdPct>25</weakHashThresholdPct>
         <markerName>.stfolder</markerName>
     </folder>
-    <folder id="33a35-z1fuh" label="Music" path="/home/austin/music" type="readwrite" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="4atjz-diqe9" label="Documents - Vault" path="/home/austin/documents/vault" type="readonly" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
-        <device id="XGYM2VE-5ODYRLP-DHHPXUZ-EYO24KY-ZZXJ6JZ-FNGRNAU-3WU4BTA-NDFSAQ2" introducedBy=""></device>
+        <device id="ODEKWQL-JHX3CDI-6VCZCHT-3T3G3E5-KF5C4KX-LFNPXLG-A7FNT2U-Y5L2NQ6" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
         <minDiskFree unit="%">1</minDiskFree>
         <versioning></versioning>
@@ -39,9 +39,9 @@
         <weakHashThresholdPct>25</weakHashThresholdPct>
         <markerName>.stfolder</markerName>
     </folder>
-    <folder id="ppmgg-2s6wg" label="Notifications" path="/home/austin/phone/notifications" type="readwrite" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="knp5e-uwg5q" label="Download" path="/home/austin/mega/phone_backup/sdcard/Download/" type="readwrite" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
-        <device id="XGYM2VE-5ODYRLP-DHHPXUZ-EYO24KY-ZZXJ6JZ-FNGRNAU-3WU4BTA-NDFSAQ2" introducedBy=""></device>
+        <device id="ODEKWQL-JHX3CDI-6VCZCHT-3T3G3E5-KF5C4KX-LFNPXLG-A7FNT2U-Y5L2NQ6" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
         <minDiskFree unit="%">1</minDiskFree>
         <versioning></versioning>
@@ -59,9 +59,9 @@
         <weakHashThresholdPct>25</weakHashThresholdPct>
         <markerName>.stfolder</markerName>
     </folder>
-    <folder id="wxjre-krzmn" label="PC Backup" path="gdrive_personal/pc_backup/" type="readonly" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="eewmw-pwrj9" label="MagiskManager" path="/home/austin/mega/phone_backup/sdcard/MagiskManager/" type="readwrite" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
-        <device id="XGYM2VE-5ODYRLP-DHHPXUZ-EYO24KY-ZZXJ6JZ-FNGRNAU-3WU4BTA-NDFSAQ2" introducedBy=""></device>
+        <device id="ODEKWQL-JHX3CDI-6VCZCHT-3T3G3E5-KF5C4KX-LFNPXLG-A7FNT2U-Y5L2NQ6" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
         <minDiskFree unit="%">1</minDiskFree>
         <versioning></versioning>
@@ -79,9 +79,9 @@
         <weakHashThresholdPct>25</weakHashThresholdPct>
         <markerName>.stfolder</markerName>
     </folder>
-    <folder id="p0qn0-650nz" label="Playlists" path="/home/austin/phone/playlists" type="readwrite" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="gdarx-4afgz" label="Music" path="/home/austin/mega/phone_backup/sdcard/Music/" type="readwrite" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
-        <device id="XGYM2VE-5ODYRLP-DHHPXUZ-EYO24KY-ZZXJ6JZ-FNGRNAU-3WU4BTA-NDFSAQ2" introducedBy=""></device>
+        <device id="ODEKWQL-JHX3CDI-6VCZCHT-3T3G3E5-KF5C4KX-LFNPXLG-A7FNT2U-Y5L2NQ6" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
         <minDiskFree unit="%">1</minDiskFree>
         <versioning></versioning>
@@ -99,9 +99,9 @@
         <weakHashThresholdPct>25</weakHashThresholdPct>
         <markerName>.stfolder</markerName>
     </folder>
-    <folder id="sdj7e-nbwtc" label="Recordings" path="/home/austin/phone/recordings" type="readwrite" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="hd665-9xdcx" label="Notifications" path="/home/austin/mega/phone_backup/sdcard/Notifications/" type="readwrite" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
-        <device id="XGYM2VE-5ODYRLP-DHHPXUZ-EYO24KY-ZZXJ6JZ-FNGRNAU-3WU4BTA-NDFSAQ2" introducedBy=""></device>
+        <device id="ODEKWQL-JHX3CDI-6VCZCHT-3T3G3E5-KF5C4KX-LFNPXLG-A7FNT2U-Y5L2NQ6" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
         <minDiskFree unit="%">1</minDiskFree>
         <versioning></versioning>
@@ -119,9 +119,9 @@
         <weakHashThresholdPct>25</weakHashThresholdPct>
         <markerName>.stfolder</markerName>
     </folder>
-    <folder id="gy48v-m1330" label="Ringtones" path="/home/austin/phone/ringtones/" type="readwrite" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="hdww7-xjmeh" label="PC Backup" path="/home/austin/mega/pc_backup" type="readonly" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
-        <device id="XGYM2VE-5ODYRLP-DHHPXUZ-EYO24KY-ZZXJ6JZ-FNGRNAU-3WU4BTA-NDFSAQ2" introducedBy=""></device>
+        <device id="ODEKWQL-JHX3CDI-6VCZCHT-3T3G3E5-KF5C4KX-LFNPXLG-A7FNT2U-Y5L2NQ6" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
         <minDiskFree unit="%">1</minDiskFree>
         <versioning></versioning>
@@ -139,7 +139,107 @@
         <weakHashThresholdPct>25</weakHashThresholdPct>
         <markerName>.stfolder</markerName>
     </folder>
-    <device id="XGYM2VE-5ODYRLP-DHHPXUZ-EYO24KY-ZZXJ6JZ-FNGRNAU-3WU4BTA-NDFSAQ2" name="Nexus 6P" compression="always" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+    <folder id="sgc2x-au7zu" label="Playlists" path="/home/austin/mega/phone_backup/sdcard/Playlists/" type="readwrite" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+        <filesystemType>basic</filesystemType>
+        <device id="ODEKWQL-JHX3CDI-6VCZCHT-3T3G3E5-KF5C4KX-LFNPXLG-A7FNT2U-Y5L2NQ6" introducedBy=""></device>
+        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
+        <minDiskFree unit="%">1</minDiskFree>
+        <versioning></versioning>
+        <copiers>0</copiers>
+        <pullers>0</pullers>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+        <markerName>.stfolder</markerName>
+    </folder>
+    <folder id="gz53i-nerc4" label="Recordings" path="/home/austin/mega/phone_backup/sdcard/Recordings/" type="readwrite" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+        <filesystemType>basic</filesystemType>
+        <device id="ODEKWQL-JHX3CDI-6VCZCHT-3T3G3E5-KF5C4KX-LFNPXLG-A7FNT2U-Y5L2NQ6" introducedBy=""></device>
+        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
+        <minDiskFree unit="%">1</minDiskFree>
+        <versioning></versioning>
+        <copiers>0</copiers>
+        <pullers>0</pullers>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+        <markerName>.stfolder</markerName>
+    </folder>
+    <folder id="mqtg6-fa4dq" label="Ringtones" path="/home/austin/mega/phone_backup/sdcard/Ringtones/" type="readwrite" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+        <filesystemType>basic</filesystemType>
+        <device id="ODEKWQL-JHX3CDI-6VCZCHT-3T3G3E5-KF5C4KX-LFNPXLG-A7FNT2U-Y5L2NQ6" introducedBy=""></device>
+        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
+        <minDiskFree unit="%">1</minDiskFree>
+        <versioning></versioning>
+        <copiers>0</copiers>
+        <pullers>0</pullers>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+        <markerName>.stfolder</markerName>
+    </folder>
+    <folder id="jkh3j-acngb" label="Signal" path="/home/austin/mega/phone_backup/sdcard/Signal/" type="readwrite" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+        <filesystemType>basic</filesystemType>
+        <device id="ODEKWQL-JHX3CDI-6VCZCHT-3T3G3E5-KF5C4KX-LFNPXLG-A7FNT2U-Y5L2NQ6" introducedBy=""></device>
+        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
+        <minDiskFree unit="%">1</minDiskFree>
+        <versioning></versioning>
+        <copiers>0</copiers>
+        <pullers>0</pullers>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+        <markerName>.stfolder</markerName>
+    </folder>
+    <folder id="zaerv-jjaji" label="TitaniumBackup" path="/home/austin/mega/phone_backup/sdcard/TitaniumBackup/" type="readwrite" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+        <filesystemType>basic</filesystemType>
+        <device id="ODEKWQL-JHX3CDI-6VCZCHT-3T3G3E5-KF5C4KX-LFNPXLG-A7FNT2U-Y5L2NQ6" introducedBy=""></device>
+        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
+        <minDiskFree unit="%">1</minDiskFree>
+        <versioning></versioning>
+        <copiers>0</copiers>
+        <pullers>0</pullers>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+        <markerName>.stfolder</markerName>
+    </folder>
+    <device id="ODEKWQL-JHX3CDI-6VCZCHT-3T3G3E5-KF5C4KX-LFNPXLG-A7FNT2U-Y5L2NQ6" name="Nexus 6P" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
         <paused>false</paused>
         <autoAcceptFolders>false</autoAcceptFolders>

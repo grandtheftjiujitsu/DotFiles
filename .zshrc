@@ -14,6 +14,7 @@ setopt HIST_IGNORE_DUPS             # ignore duplicates in history
 setopt correctall                   # spell check comamnds and arguments
 setopt autocd                       # no "cd" required
 
+export VISUAL="nano"
 zstyle ':completop:*' menu select   # arrow key completion
 
 # history search
@@ -48,8 +49,10 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias addgrp="sudo usermod -aG "$1" $(whoami)"
 alias dwnspd="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
+alias electrum="electrum -w $HOME/.electrum/wallets/electrum_wallet"
 alias eup="sudo systemctl start dhcpcd@enp0s25; $HOME/git/scripts/web_connect_extras.sh"
 alias eq="qpaeq"
+alias geth="geth --datadir $HOME/documents/vault/ethereum"
 alias grep="grep --color=auto"
 alias ls="ls -1 --color=auto"
 alias lsa="ls -a --color=auto"
@@ -57,6 +60,7 @@ alias lsl="ls -l --color=auto"
 alias lsr="ls -R --color=auto"
 #alias mount="sudo mount"
 #alias off="sleep 1 && sudo shutdown -h now | sudo systemctl stop slim"
+alias monero="monero-wallet-cli"
 alias off="shutdown -h now"
 alias p6="perl6"
 alias pl="perl -de 0"
@@ -97,7 +101,7 @@ alias upddwm="cd $HOME/abs/dwm-git; makepkg -efi --skipchecksums"
 alias updsh="source $HOME/.zshrc"
 alias updx="xrdb -merge $HOME/git/dotfiles/.Xresources"
 alias wttr="cat /tmp/forecast | head -n 7 | tail -n 6"
-alias wup="sudo wifi-menu; $HOME/git/scripts/web_connect_extras.sh"
+alias wup="sudo wifi-menu; sudo $HOME/git/scripts/web_connect_extras.sh"
 
 # pacman
 alias pacloc="pacman -Qi"				# Query locally installed package and display info
@@ -143,6 +147,7 @@ alias adb-rb="adb reboot"
 alias adb-rbl="adb reboot bootloader"
 alias adb-rbr="adb reboot recovery"
 alias adb-psh="adb push"
+alias adb-wifi="adb connect 10.0.0.103:5555"
 alias fb-dev="fastboot devices"
 alias fb-erase"fastboot erase"
 alias fb-flash-boot="fastboot flash boot"
@@ -156,12 +161,12 @@ alias fb-rb="fastboot reboot"
 
 # functions
 keyadd () {
-  gpg --recv-key $1;
+  gpg --keyserver hkp://pgp.mit.edu --recv-keys $1;
   gpg --lsign $1
 }
 
 keysearch () {
-  gpg --keyserver pgp.mit.edu --search "$*"
+  gpg --keyserver hkp://pgp.mit.edu --search "$*"
 }
 
 keygen () {
