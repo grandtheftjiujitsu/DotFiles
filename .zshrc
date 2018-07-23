@@ -50,7 +50,7 @@ alias ....="cd ../../.."
 alias addgrp="sudo usermod -aG "$1" $(whoami)"
 alias dwnspd="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
 alias electrum="electrum -w $HOME/.electrum/wallets/electrum_wallet"
-alias eup="sudo systemctl start dhcpcd@enp0s25; $HOME/git/scripts/web_connect_extras.sh"
+alias eup="sudo systemctl start dhcpcd@enp0s25; sudo web-connect-extras"
 alias eq="qpaeq"
 alias geth="geth --datadir $HOME/documents/vault/ethereum"
 alias grep="grep --color=auto"
@@ -101,7 +101,7 @@ alias upddwm="cd $HOME/abs/dwm-git; makepkg -efi --skipchecksums"
 alias updsh="source $HOME/.zshrc"
 alias updx="xrdb -merge $HOME/git/dotfiles/.Xresources"
 alias wttr="cat /tmp/forecast | head -n 7 | tail -n 6"
-alias wup="sudo wifi-menu; sudo $HOME/git/scripts/web_connect_extras.sh"
+alias wup="sudo wifi-menu; sudo web-connect-extras"
 
 # pacman
 alias pacloc="pacman -Qi"				# Query locally installed package and display info
@@ -147,7 +147,7 @@ alias adb-rb="adb reboot"
 alias adb-rbl="adb reboot bootloader"
 alias adb-rbr="adb reboot recovery"
 alias adb-psh="adb push"
-alias adb-wifi="adb connect 10.0.0.103:5555"
+alias adb-wifi="adb connect 10.0.0.204:5555"
 alias fb-dev="fastboot devices"
 alias fb-erase"fastboot erase"
 alias fb-flash-boot="fastboot flash boot"
@@ -159,35 +159,11 @@ alias fb-flash-sys="fastboot flash system"
 alias fb-flash-vendor="fastboot flash vendor"
 alias fb-rb="fastboot reboot"
 
-# functions
-keyadd () {
-  gpg --keyserver hkp://pgp.mit.edu --recv-keys $1;
-  gpg --lsign $1
-}
-
-keysearch () {
-  gpg --keyserver hkp://pgp.mit.edu --search "$*"
-}
-
-keygen () {
-  dd bs=512 count=4 if=/dev/urandom of=$*.keyfile
-}
-
-gpgzip () {
-  tar -cf - $* | gzip -9 - | gpg -c -o $*.tar.gz.gpg && rm -rf $*
-}
-
-ungpgzip () {
-  gpg --output $*.tar.gz --decrypt $*.tar.gz.gpg ; tar -xvf $*.tar.gz ; rm -rf $*{.tar.gz,.tar.gz.gpg}
-}
-
-targzip () {
-  tar -cf - $* | gzip -9 - > $*.tar.gz
-}
-
-tarxzip () {
-  tar -cf - $* | xz -9 - > $*.tar.xz
-}
+# user executables
+export PATH=$HOME/git/scripts/shell/:$PATH
+export PATH=$HOME/git/scripts/python/:$PATH
+export PATH=$HOME/git/scirpts/r/:$PATH
+#export PATH=$HOME/.rakudobrew/bin:$PATH
 
 #Setting the GEM_PATH and GEM_HOME variables may not be necessary, check 'gem env' output to verify whether both variables already exist 
 GEM_HOME=$(ls -t -U | ruby -e 'puts Gem.user_dir')
@@ -197,7 +173,7 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 #export PATH=$HOME/.rakudobrew/bin:$PATH
 
 ## android
-# change java version for android
+# change java version
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
 export PATH=$PATH:$JAVA_HOME/bin
 export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx6g"
@@ -205,10 +181,6 @@ export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -X
 # cache aosp build
 export USE_CCACHE=1
 export CCACHE_DIR=$HOME/.ccache
-
-# user executables
-#export PATH=$HOME/git/scripts:$PATH
-#export PATH=~/.rakudobrew/bin:$PATH
 
 # for android sdk - needs "vmname installed"
 alias studio="wmname LG3D; sh $HOME/abs/android-studio/bin/studio.sh"

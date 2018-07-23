@@ -1,2 +1,2 @@
 # minute	hour	day_of_month	month	day_of_week	command
-0		*/4	*		*	*		/usr/bin/sh /home/austin/git/scripts/system-bk.sh
+0		0	1		*	*		/usr/bin/sh /home/austin/git/scripts/shell/maintenance

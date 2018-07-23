@@ -15,11 +15,11 @@ htmlbar_thumbnailwidth: 300
 view_left_panel: 1
 bookmarks_default_store: 1
 image_thumbnail_refresh_quality: 1
-opendir: file:///home/austin/git/anykernel/ramdisk
+opendir: file:///home/austin/git/dnd-tools
 c2e.convert_iso: 0
 wrap_text_default: 1
 htmlbar_in_sidepanel: 1
-ssearch_text: def modifiers_fn
+ssearch_text: def start_fn
 main_window_width: 1364
 snr_casesens: 1
 image_thumbnailsizing_val1: 100
@@ -57,14 +57,10 @@ ssearch_casesens: 0
 htmlbar_transient: 0
 main_window_height: 747
 lowercase_tags: 1
-recent_files: file:///home/austin/git/savagezen.github.io/_posts/2018-03-31-DND5E-Darkening-of-Entsteig-3.md
 recent_files: file:///home/austin/git/savagezen.github.io/_posts/2018-03-18-DND5E-Tristram.md
 recent_files: file:///home/austin/git/savagezen.github.io/_posts/2018-03-18-DND5E-Caldeum.md
 recent_files: file:///home/austin/git/savagezen.github.io/_posts/2018-03-18-DND5E-Lut-Gholein.md
 recent_files: file:///home/austin/git/savagezen.github.io/_posts/2018-06-10-Release-Notes-2018-06.md
-recent_files: file:///home/austin/git/dnd-tools/setup.py
-recent_files: file:///home/austin/git/dnd-tools/devnotes.md
-recent_files: file:///home/austin/git/dnd-tools/scripts/dnd-tools
 recent_files: file:///home/austin/git/anykernel/ramdisk/init.profiles.sh
 recent_files: file:///home/austin/git/anykernel/ramdisk/init.profiles.rc
 recent_files: file:///home/austin/git/savagezen.github.io/_drafts/android/release_notes.md
@@ -73,12 +69,16 @@ recent_files: file:///home/austin/git/anykernel/anykernel.sh
 recent_files: file:///home/austin/git/ak-old/ramdisk/init.savagezen.rc
 recent_files: file:///home/austin/git/ak-old/ramdisk/init.profiles.sh
 recent_files: file:///home/austin/git/ak-old/ramdisk/init.profiles.rc
-recent_files: file:///home/austin/git/anykernel/ramdisk/init.spectrum.sh
 recent_files: file:///home/austin/git/anykernel/ramdisk/init.sz.rc
-recent_files: file:///home/austin/git/savagezen.github.io/_posts/2018-06-18-Release-Notes-2018-06-18.md
 recent_files: file:///home/austin/git/anykernel/ramdisk/init.spectrum.rc
+recent_files: file:///home/austin/git/anykernel/ramdisk/init.spectrum.sh
+recent_files: file:///home/austin/git/savagezen.github.io/_posts/2018-06-18-Release-Notes-2018-06-18.md
+recent_files: file:///home/austin/git/dnd-tools/scripts/dnd-tools
+recent_files: file:///home/austin/git/dnd-tools/setup.py
+recent_files: file:///home/austin/git/dnd-tools/README.md
+recent_files: file:///home/austin/git/dnd-tools/devnotes.md
 snr_replacetype: 0
-savedir: file:///home/austin/git/savagezen.github.io/_posts
+savedir: file:///home/austin/git/dnd-tools/scripts
 image_thumnailformatstring: <a href="%r"><img src="%t" width="%x" height="%y" border="0"></a>
 spell_check_default: 1
 spell_insert_entities: 0
@@ -94,9 +94,6 @@ spell_lang: en_GB
 outputb_show_all_output: 0
 left_panel_width: 194
 ssearch_dotmatchall: 0
-searchlist: mail
-searchlist: platform/external/clang
-searchlist: build
 searchlist: frameworks/base/services
 searchlist: angler
 searchlist: frameworks/base
@@ -107,8 +104,11 @@ searchlist: input_bpo
 searchlist: input_boost_freq
 searchlist: class
 searchlist: ability
-searchlist: def modifiers_fn
 searchlist: flash
+searchlist: def modifiers_fn
+searchlist: def saves_fn
+searchlist: sleight
+searchlist: def start_fn
 filefilters: Hide objectfiles:0::*.o:
 filefilters: Images:1:image/png\:image/jpeg\:image/gif\:image/tiff::
 filefilters: Web files:1:text/html\:text/css\:image/png\:image/jpeg::

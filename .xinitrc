@@ -18,8 +18,8 @@ fi
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources &	# merge Xresources
 
-$HOME/git/scripts/vaultcrypt.sh &			# make encrypted copy of vault and gpg keys
-$HOME/git/scripts/tmpfs_cache_restore.sh &		# populate tmpfs cache
+$HOME/git/scripts/shell/vaultcrypt &			# make encrypted copy of vault and gpg keys
+$HOME/git/scripts/tmpfs-cache-restore &			# populate tmpfs cache
 
 $HOME/.conky/dzconky-main &				# dzen2 + conky main
 $HOME/.conky/dzconky-clock &				# dzen2 + conky clock
