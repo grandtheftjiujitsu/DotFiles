@@ -53,6 +53,7 @@ alias electrum="electrum -w $HOME/.electrum/wallets/electrum_wallet"
 alias eup="sudo systemctl start dhcpcd@enp0s25; sudo web-connect-extras"
 alias eq="qpaeq"
 alias geth="geth --datadir $HOME/documents/vault/ethereum"
+alias git-clear="git reset --hard HEAD; git clean -fdx"
 alias grep="grep --color=auto"
 alias ls="ls -1 --color=auto"
 alias lsa="ls -a --color=auto"
@@ -147,7 +148,7 @@ alias adb-rb="adb reboot"
 alias adb-rbl="adb reboot bootloader"
 alias adb-rbr="adb reboot recovery"
 alias adb-psh="adb push"
-alias adb-wifi="adb connect 10.0.0.204:5555"
+alias adb-wifi="adb connect 192.168.0.11:5555"
 alias fb-dev="fastboot devices"
 alias fb-erase"fastboot erase"
 alias fb-flash-boot="fastboot flash boot"
@@ -160,9 +161,10 @@ alias fb-flash-vendor="fastboot flash vendor"
 alias fb-rb="fastboot reboot"
 
 # user executables
-export PATH=$HOME/git/scripts/shell/:$PATH
-export PATH=$HOME/git/scripts/python/:$PATH
-export PATH=$HOME/git/scirpts/r/:$PATH
+export PATH=$HOME/git/scripts/shell:$PATH
+export PATH=$HOME/git/scripts/python:$PATH
+export PATH=$HOME/git/scirpts/r:$PATH
+export PATH=$HOME/git/scripts/android:$PATH
 #export PATH=$HOME/.rakudobrew/bin:$PATH
 
 #Setting the GEM_PATH and GEM_HOME variables may not be necessary, check 'gem env' output to verify whether both variables already exist 
@@ -172,15 +174,10 @@ export PATH=$PATH:$GEM_HOME/bin
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 #export PATH=$HOME/.rakudobrew/bin:$PATH
 
-## android
-# change java version
+# for aosp build
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
 export PATH=$PATH:$JAVA_HOME/bin
 export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx6g"
-
-# cache aosp build
-export USE_CCACHE=1
-export CCACHE_DIR=$HOME/.ccache
 
 # for android sdk - needs "vmname installed"
 alias studio="wmname LG3D; sh $HOME/abs/android-studio/bin/studio.sh"
