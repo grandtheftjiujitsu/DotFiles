@@ -1,5 +1,5 @@
 <configuration version="28">
-    <folder id="1e8gk-2xp9k" label="MusicFXPresets" path="/home/austin/mega/phone_backup/sdcard/MusicFXPresets" type="sendreceive" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="1e8gk-2xp9k" label="MusicFXPresets" path="/home/austin/mega/phone_backup/sdcard/MusicFXPresets" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="I6GZFI7-ZOWFMH4-NAGYVQW-YC6EJM6-NB6ZXTC-IA2VOFF-JYPJPMI-2VE6BAE" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
@@ -20,7 +20,7 @@
         <markerName>.stfolder</markerName>
         <useLargeBlocks>false</useLargeBlocks>
     </folder>
-    <folder id="4atjz-diqe9" label="Documents - Vault" path="/home/austin/documents/vault" type="sendreceive" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="4atjz-diqe9" label="Documents - Vault" path="/home/austin/documents/vault" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="I6GZFI7-ZOWFMH4-NAGYVQW-YC6EJM6-NB6ZXTC-IA2VOFF-JYPJPMI-2VE6BAE" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
@@ -41,7 +41,7 @@
         <markerName>.stfolder</markerName>
         <useLargeBlocks>false</useLargeBlocks>
     </folder>
-    <folder id="eewmw-pwrj9" label="MagiskManager" path="/home/austin/mega/phone_backup/sdcard/MagiskManager/" type="sendreceive" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="eewmw-pwrj9" label="MagiskManager" path="/home/austin/mega/phone_backup/sdcard/MagiskManager/" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="I6GZFI7-ZOWFMH4-NAGYVQW-YC6EJM6-NB6ZXTC-IA2VOFF-JYPJPMI-2VE6BAE" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
@@ -62,7 +62,7 @@
         <markerName>.stfolder</markerName>
         <useLargeBlocks>false</useLargeBlocks>
     </folder>
-    <folder id="gdarx-4afgz" label="Music" path="/home/austin/mega/phone_backup/sdcard/Music" type="sendreceive" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="gdarx-4afgz" label="Music" path="/home/austin/mega/phone_backup/sdcard/Music" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="I6GZFI7-ZOWFMH4-NAGYVQW-YC6EJM6-NB6ZXTC-IA2VOFF-JYPJPMI-2VE6BAE" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
@@ -83,7 +83,7 @@
         <markerName>.stfolder</markerName>
         <useLargeBlocks>false</useLargeBlocks>
     </folder>
-    <folder id="gz53i-nerc4" label="Recordings" path="/home/austin/mega/phone_backup/sdcard/Recordings/" type="sendreceive" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="gz53i-nerc4" label="Recordings" path="/home/austin/mega/phone_backup/sdcard/Recordings/" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="I6GZFI7-ZOWFMH4-NAGYVQW-YC6EJM6-NB6ZXTC-IA2VOFF-JYPJPMI-2VE6BAE" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
@@ -104,7 +104,7 @@
         <markerName>.stfolder</markerName>
         <useLargeBlocks>false</useLargeBlocks>
     </folder>
-    <folder id="hd665-9xdcx" label="Notifications" path="/home/austin/mega/phone_backup/sdcard/Notifications" type="sendreceive" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="hd665-9xdcx" label="Notifications" path="/home/austin/mega/phone_backup/sdcard/Notifications" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="I6GZFI7-ZOWFMH4-NAGYVQW-YC6EJM6-NB6ZXTC-IA2VOFF-JYPJPMI-2VE6BAE" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
@@ -125,7 +125,7 @@
         <markerName>.stfolder</markerName>
         <useLargeBlocks>false</useLargeBlocks>
     </folder>
-    <folder id="hdww7-xjmeh" label="PC Backup" path="/home/austin/mega/pc_backup" type="sendonly" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="hdww7-xjmeh" label="PC Backup" path="/home/austin/mega/pc_backup" type="sendonly" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="I6GZFI7-ZOWFMH4-NAGYVQW-YC6EJM6-NB6ZXTC-IA2VOFF-JYPJPMI-2VE6BAE" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
@@ -146,7 +146,7 @@
         <markerName>.stfolder</markerName>
         <useLargeBlocks>false</useLargeBlocks>
     </folder>
-    <folder id="jkh3j-acngb" label="Signal" path="/home/austin/mega/phone_backup/sdcard/Signal" type="sendreceive" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="jkh3j-acngb" label="Signal" path="/home/austin/mega/phone_backup/sdcard/Signal" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="I6GZFI7-ZOWFMH4-NAGYVQW-YC6EJM6-NB6ZXTC-IA2VOFF-JYPJPMI-2VE6BAE" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
@@ -167,7 +167,7 @@
         <markerName>.stfolder</markerName>
         <useLargeBlocks>false</useLargeBlocks>
     </folder>
-    <folder id="knp5e-uwg5q" label="Download" path="/home/austin/mega/phone_backup/sdcard/Download/" type="sendreceive" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="knp5e-uwg5q" label="Download" path="/home/austin/mega/phone_backup/sdcard/Download/" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="I6GZFI7-ZOWFMH4-NAGYVQW-YC6EJM6-NB6ZXTC-IA2VOFF-JYPJPMI-2VE6BAE" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
@@ -188,7 +188,7 @@
         <markerName>.stfolder</markerName>
         <useLargeBlocks>false</useLargeBlocks>
     </folder>
-    <folder id="kt3ng-9jr4v" label="Documents - Keys" path="/home/austin/documents/keys" type="sendonly" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="kt3ng-9jr4v" label="Documents - Keys" path="/home/austin/documents/keys" type="sendonly" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="I6GZFI7-ZOWFMH4-NAGYVQW-YC6EJM6-NB6ZXTC-IA2VOFF-JYPJPMI-2VE6BAE" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
@@ -209,7 +209,7 @@
         <markerName>.stfolder</markerName>
         <useLargeBlocks>false</useLargeBlocks>
     </folder>
-    <folder id="mqtg6-fa4dq" label="Ringtones" path="/home/austin/mega/phone_backup/sdcard/Ringtones/" type="sendreceive" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="mqtg6-fa4dq" label="Ringtones" path="/home/austin/mega/phone_backup/sdcard/Ringtones/" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="I6GZFI7-ZOWFMH4-NAGYVQW-YC6EJM6-NB6ZXTC-IA2VOFF-JYPJPMI-2VE6BAE" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
@@ -230,7 +230,7 @@
         <markerName>.stfolder</markerName>
         <useLargeBlocks>false</useLargeBlocks>
     </folder>
-    <folder id="sgc2x-au7zu" label="Playlists" path="/home/austin/mega/phone_backup/sdcard/Playlists/" type="sendreceive" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="sgc2x-au7zu" label="Playlists" path="/home/austin/mega/phone_backup/sdcard/Playlists/" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="I6GZFI7-ZOWFMH4-NAGYVQW-YC6EJM6-NB6ZXTC-IA2VOFF-JYPJPMI-2VE6BAE" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
@@ -251,7 +251,7 @@
         <markerName>.stfolder</markerName>
         <useLargeBlocks>false</useLargeBlocks>
     </folder>
-    <folder id="zaerv-jjaji" label="TitaniumBackup" path="/home/austin/mega/phone_backup/sdcard/TitaniumBackup" type="sendreceive" rescanIntervalS="60" fsWatcherEnabled="false" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="zaerv-jjaji" label="TitaniumBackup" path="/home/austin/mega/phone_backup/sdcard/TitaniumBackup" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="I6GZFI7-ZOWFMH4-NAGYVQW-YC6EJM6-NB6ZXTC-IA2VOFF-JYPJPMI-2VE6BAE" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
@@ -291,6 +291,7 @@
         <apikey>vZ73qPPGZSbhS3csJJ87dGmJIh5Fsfrh</apikey>
         <theme>dark</theme>
     </gui>
+    <ldap></ldap>
     <options>
         <listenAddress>default</listenAddress>
         <globalAnnounceServer>default</globalAnnounceServer>
@@ -325,13 +326,9 @@
         <releasesURL>https://upgrades.syncthing.net/meta.json</releasesURL>
         <overwriteRemoteDeviceNamesOnConnect>false</overwriteRemoteDeviceNamesOnConnect>
         <tempIndexMinBlocks>10</tempIndexMinBlocks>
-        <unackedNotificationID>fsWatcherNotification</unackedNotificationID>
         <trafficClass>0</trafficClass>
         <defaultFolderPath>~</defaultFolderPath>
         <setLowPriority>true</setLowPriority>
         <minHomeDiskFreePct>0</minHomeDiskFreePct>
     </options>
-    <ignoredFolder>cxumk-sfu5e</ignoredFolder>
-    <ignoredFolder>gs3qe-e3uia</ignoredFolder>
-    <ignoredFolder>nma8h-96n7g</ignoredFolder>
 </configuration>

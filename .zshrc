@@ -65,7 +65,7 @@ alias monero="monero-wallet-cli"
 alias off="shutdown -h now"
 alias p6="perl6"
 alias pl="perl -de 0"
-alias pwsafe="pwsafe -f $HOME/documents/.pwsafe.dat"
+alias pwsafe="pwsafe -f $HOME/documents/vault/.pwsafe.dat"
 alias py="python -q"
 #alias reboot="sudo reboot"
 alias umount="sudo umount"
@@ -74,6 +74,7 @@ alias zef="/usr/share/perl6/vendor/bin/zef"
 
 # scripts & utilities
 alias aur-pull="git clone https://aur.archlinux.org/$1.git"
+alias findinfile="grep -rnw -e $1"
 alias forecast="cat /tmp/forecast"
 alias ipinfo="curl ipinfo.io"
 alias isrun="ps -ax | grep $1"
@@ -98,11 +99,10 @@ alias scan="sudo scanimage --device-name=epson2:libusb:001:007 --source='Automat
 alias scratch="nano $HOME/scratch.pad"
 alias syserror="sudo journalctl -p 0..3 -xn"
 alias sysfail="systemctl --failed"
-alias upddwm="cd $HOME/abs/dwm-git; makepkg -efi --skipchecksums"
 alias updsh="source $HOME/.zshrc"
 alias updx="xrdb -merge $HOME/git/dotfiles/.Xresources"
 alias wttr="cat /tmp/forecast | head -n 7 | tail -n 6"
-alias wup="sudo wifi-menu; sudo web-connect-extras"
+alias wup="sudo wifi-menu; sleep 10; web-connect-extras"
 
 # pacman
 alias pacloc="pacman -Qi"				# Query locally installed package and display info
@@ -166,6 +166,32 @@ export PATH=$HOME/git/scripts/python:$PATH
 export PATH=$HOME/git/scirpts/r:$PATH
 export PATH=$HOME/git/scripts/android:$PATH
 #export PATH=$HOME/.rakudobrew/bin:$PATH
+kernel-prep ()
+  {
+  #quick prep to build android kernel
+  KERNEL_DIR=$HOME/git/kernel_huawei_angler
+  DEFCON=savagezen_defconfig
+
+  cd $KERNEL_DIR
+  export ARCH=arm64
+  export SUBARCH=arm64
+  export CROSS_COMPILE=$HOME/git/linaro-prebuilts/bin/aarch64-linux-android-
+  make clean
+  make mrproper
+  make $DEFCON
+  }
+
+kernel-zip ()
+  {
+  #quick zip tool for android kernel
+  KERNEL_NAME=angler-kernel-oreo-testing.zip
+  KERNEL_DIR=$HOME/git/kernel_huawei_angler
+  AK_DIR=$HOME/git/anykernel
+  cp $KERNEL_DIR/arch/arm64/boot/Image.gz-dtb $AK_DIR/zImage-dtb
+  cd $AK_DIR
+  rm *.zip
+  zip -r9 $KERNEL_NAME * -x README.md $KERNEL_NAME
+  }
 
 #Setting the GEM_PATH and GEM_HOME variables may not be necessary, check 'gem env' output to verify whether both variables already exist 
 GEM_HOME=$(ls -t -U | ruby -e 'puts Gem.user_dir')
