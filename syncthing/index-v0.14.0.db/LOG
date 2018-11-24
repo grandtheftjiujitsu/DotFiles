@@ -10476,3 +10476,225 @@
 09:31:05.933216 table@remove removed @45896
 09:31:05.933953 table@remove removed @45897
 09:31:05.934539 table@remove removed @45898
+=============== Nov 4, 2018 (EST) ===============
+14:02:54.967084 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:02:54.972982 version@stat F·[0 0 45] S·92MiB[0B 0B 92MiB] Sc·[0.00 0.00 0.09]
+14:02:54.973005 db@open opening
+14:02:54.973118 journal@recovery F·1
+14:02:54.975444 journal@recovery recovering @45899
+14:02:55.059527 memdb@flush created L0@45907 N·27468 S·2MiB "\x00\x00\x00..ies,v43022186":"\f\x00\x00..zip,v43027723"
+14:02:55.060147 version@stat F·[1 0 45] S·94MiB[2MiB 0B 92MiB] Sc·[0.25 0.00 0.09]
+14:02:55.109766 db@janitor F·48 G·0
+14:02:55.109801 db@open done T·136.786462ms
+14:02:55.142355 table@move L0@45907 -> L1
+14:02:55.142648 version@stat F·[0 1 45] S·94MiB[0B 2MiB 92MiB] Sc·[0.00 0.02 0.09]
+14:02:55.157875 table@compaction L1·1 -> L2·6 S·12MiB Q·43031775
+14:02:55.198993 table@build created L2@45910 N·10089 S·2MiB "\x00\x00\x00..ies,v40699172":"\x00\x00\x00..mp3,v42922111"
+14:02:55.229081 table@build created L2@45911 N·1754 S·2MiB "\x00\x00\x00..ter,v40313261":"\x00\x00\x00..mp3,v42880754"
+14:02:55.263846 table@build created L2@45912 N·12617 S·2MiB "\x00\x00\x00..ool,v42866313":"\x02\x00\x00...gz,v43012632"
+14:02:55.328558 table@build created L2@45913 N·27579 S·2MiB "\x02\x00\x00...gz,v43012796":"\x02\x00\x00..mp3,v42941911"
+14:02:55.371940 table@build created L2@45914 N·32405 S·1MiB "\x02\x00\x00..mp3,v42943810":"\v\x00\x00..\x00\x00\t,v42865972"
+14:02:55.372049 version@stat F·[0 0 44] S·91MiB[0B 0B 91MiB] Sc·[0.00 0.00 0.09]
+14:02:55.384042 table@compaction committed F-2 S-2MiB Ke·0 D·28379 T·226.116918ms
+14:02:55.396499 table@remove removed @45907
+14:02:55.396967 table@remove removed @45901
+14:02:55.397513 table@remove removed @45902
+14:02:55.397913 table@remove removed @45903
+14:02:55.398378 table@remove removed @45904
+14:02:55.398757 table@remove removed @45905
+14:02:55.398792 table@remove removed @45906
+20:44:43.646735 memdb@flush N·30267 S·3MiB
+20:44:43.682030 memdb@flush created L0@45916 N·30267 S·2MiB "\x00\x00\x00..ups,v43058102":"\v\x00\x00..\x00\x00],d43031818"
+20:44:43.682085 version@stat F·[1 0 44] S·94MiB[2MiB 0B 91MiB] Sc·[0.25 0.00 0.09]
+20:44:43.737250 memdb@flush committed F·1 T·90.443593ms
+20:44:43.738437 journal@remove removed @45908
+20:44:43.744593 table@move L0@45916 -> L1
+20:44:43.744673 version@stat F·[0 1 44] S·94MiB[0B 2MiB 91MiB] Sc·[0.00 0.03 0.09]
+20:44:43.807124 table@compaction L1·1 -> L2·5 S·12MiB Q·43057528
+20:44:43.853502 table@build created L2@45917 N·10314 S·2MiB "\x00\x00\x00..ies,v40699172":"\x00\x00\x00..mp3,v42902969"
+20:44:43.896296 table@build created L2@45918 N·3028 S·2MiB "\x00\x00\x00..mp3,v40638882":"\x00\x00\x00..mp3,v42911938"
+20:44:43.936809 table@build created L2@45919 N·722 S·2MiB "\x00\x00\x00..les,v43061676":"\x00\x00\x00...gz,v43000256"
+20:44:43.980810 table@build created L2@45920 N·33903 S·2MiB "\x00\x00\x00..tem,v43058756":"\x02\x00\x00..mp3,v42970099"
+20:44:44.038763 table@build created L2@45921 N·32197 S·2MiB "\x02\x00\x00..mp3,v42918809":"\x02\x00\x00...gz,v43051546"
+20:44:44.074530 table@build created L2@45922 N·8794 S·299KiB "\x02\x00\x00...gz,v43048144":"\v\x00\x00..\x00\x00\t,v42865972"
+20:44:44.074633 version@stat F·[0 0 45] S·92MiB[0B 0B 92MiB] Sc·[0.00 0.00 0.09]
+20:44:44.126534 table@compaction committed F~ S-1MiB Ke·0 D·25753 T·319.361904ms
+20:44:44.127185 table@remove removed @45916
+20:44:45.020271 memdb@flush N·18250 S·3MiB
+20:44:45.049964 memdb@flush created L0@45924 N·18250 S·1MiB "\x00\x00\x00..ies,v43070790":"\t\x00\x00\x00X,v43072755"
+20:44:45.050051 version@stat F·[1 0 45] S·94MiB[1MiB 0B 92MiB] Sc·[0.25 0.00 0.09]
+20:44:45.092130 memdb@flush committed F·1 T·71.79634ms
+20:44:45.093169 journal@remove removed @45915
+20:44:45.965838 table@move L0@45924 -> L1
+20:44:45.965966 version@stat F·[0 1 45] S·94MiB[0B 1MiB 92MiB] Sc·[0.00 0.02 0.09]
+20:44:46.433813 table@compaction L1·1 -> L2·6 S·12MiB Q·43057528
+20:44:46.468781 table@build created L2@45925 N·18438 S·2MiB "\x00\x00\x00..ies,v40699172":"\x00\x00\x00..kup,v43029214"
+20:44:46.512790 table@build created L2@45926 N·2110 S·2MiB "\x00\x00\x00..kup,v43058340":"\x00\x00\x00..mp3,v42880817"
+20:44:46.560251 table@build created L2@45927 N·2614 S·2MiB "\x00\x00\x00..Hay,v43061120":"\x00\x00\x00...gz,v43044705"
+20:44:46.614789 table@build created L2@45928 N·26106 S·2MiB "\x00\x00\x00...gz,v40744957":"\x02\x00\x00...gz,v42891142"
+20:44:46.670474 table@build created L2@45929 N·27229 S·2MiB "\x02\x00\x00...gz,v43009464":"\x02\x00\x00..mp3,v42918422"
+20:44:46.712403 table@build created L2@45930 N·30711 S·1MiB "\x02\x00\x00..mp3,v42932110":"\v\x00\x00..\x00\x00\t,v42865972"
+20:44:46.712490 version@stat F·[0 0 45] S·94MiB[0B 0B 94MiB] Sc·[0.00 0.00 0.09]
+20:44:46.783482 table@compaction committed F-1 S-615KiB Ke·0 D·0 T·349.623142ms
+20:44:46.784133 table@remove removed @45924
+20:44:46.784898 table@remove removed @45917
+20:44:46.785844 table@remove removed @45918
+20:44:46.786850 table@remove removed @45919
+20:44:46.787589 table@remove removed @45920
+20:44:46.788311 table@remove removed @45921
+20:44:46.788474 table@remove removed @45922
+20:44:51.619855 table@remove removed @45910
+20:44:51.620318 table@remove removed @45911
+20:44:51.620747 table@remove removed @45912
+20:44:51.621144 table@remove removed @45913
+20:44:51.621478 table@remove removed @45914
+=============== Nov 17, 2018 (EST) ===============
+09:16:19.097825 memdb@flush N·22556 S·3MiB
+09:16:19.136060 memdb@flush created L0@45932 N·22556 S·2MiB "\x00\x00\x00..ies,v43088166":"\f\x00\x00..jpg,v43084873"
+09:16:19.136142 version@stat F·[1 0 45] S·96MiB[2MiB 0B 94MiB] Sc·[0.25 0.00 0.09]
+09:16:19.155807 memdb@flush committed F·1 T·57.919614ms
+09:16:19.156812 journal@remove removed @45923
+09:18:01.843380 table@move L0@45932 -> L1
+09:18:01.843493 version@stat F·[0 1 45] S·96MiB[0B 2MiB 94MiB] Sc·[0.00 0.02 0.09]
+09:18:01.865951 table@compaction L1·1 -> L2·6 S·14MiB Q·43103953
+09:18:01.913338 table@build created L2@45933 N·10402 S·2MiB "\x00\x00\x00..ies,v40699172":"\x00\x00\x00..mp3,v42952133"
+09:18:01.948052 table@build created L2@45934 N·1745 S·2MiB "\x00\x00\x00..mp3,v42963653":"\x00\x00\x00..mp3,v43062048"
+09:18:01.988409 table@build created L2@45935 N·9552 S·2MiB "\x00\x00\x00..mp3,v43062046":"\x02\x00\x00...gz,v42923069"
+09:18:02.040871 table@build created L2@45936 N·28456 S·2MiB "\x02\x00\x00...gz,v43012907":"\x02\x00\x00..mp3,v42899839"
+09:18:02.085625 table@build created L2@45937 N·37327 S·2MiB "\x02\x00\x00..mp3,v42943016":"\f\x00\x00..kup,v43100755"
+09:18:02.085726 version@stat F·[0 0 44] S·92MiB[0B 0B 92MiB] Sc·[0.00 0.00 0.09]
+09:18:02.103911 table@compaction committed F-2 S-4MiB Ke·0 D·42282 T·237.915951ms
+09:18:02.104785 table@remove removed @45932
+09:18:02.105774 table@remove removed @45925
+09:18:02.106502 table@remove removed @45926
+09:18:02.107299 table@remove removed @45927
+09:18:02.107952 table@remove removed @45928
+09:18:02.108668 table@remove removed @45929
+09:18:02.109293 table@remove removed @45930
+=============== Nov 18, 2018 (EST) ===============
+19:09:09.644974 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+19:09:09.651416 version@stat F·[0 0 44] S·92MiB[0B 0B 92MiB] Sc·[0.00 0.00 0.09]
+19:09:09.651441 db@open opening
+19:09:09.651554 journal@recovery F·1
+19:09:09.653884 journal@recovery recovering @45931
+19:09:09.734936 memdb@flush created L0@45938 N·21047 S·1MiB "\x00\x00\x00..ies,v43112636":"\f\x00\x00..zip,v43122521"
+19:09:09.735612 version@stat F·[1 0 44] S·93MiB[1MiB 0B 92MiB] Sc·[0.25 0.00 0.09]
+19:09:09.745000 db@janitor F·47 G·0
+19:09:09.745042 db@open done T·93.589793ms
+19:09:09.771021 table@move L0@45938 -> L1
+19:09:09.771097 version@stat F·[0 1 44] S·93MiB[0B 1MiB 92MiB] Sc·[0.00 0.02 0.09]
+19:09:09.789815 table@compaction L1·1 -> L2·5 S·11MiB Q·43123895
+19:09:09.834749 table@build created L2@45941 N·10619 S·2MiB "\x00\x00\x00..ies,v40699172":"\x00\x00\x00..mp3,v42955860"
+19:09:09.866910 table@build created L2@45942 N·1746 S·2MiB "\x00\x00\x00..mp3,v42973287":"\x00\x00\x00..mp3,v43061992"
+19:09:09.907581 table@build created L2@45943 N·9054 S·2MiB "\x00\x00\x00..ve_,v43061604":"\x02\x00\x00...gz,v43114142"
+19:09:10.034941 table@build created L2@45944 N·28063 S·2MiB "\x02\x00\x00...gz,v42901717":"\x02\x00\x00..mp3,v42973390"
+19:09:10.106809 table@build created L2@45945 N·34990 S·2MiB "\x02\x00\x00..mp3,v42946243":"\v\x00\x00..\x00\x14\xa2,v42002089"
+19:09:10.115206 table@build created L2@45946 N·3654 S·107KiB "\v\x00\x00..\x00\x14\xa3,v42004332":"\v\x00\x00..\x00\x00\t,v42865972"
+19:09:10.115290 version@stat F·[0 0 45] S·92MiB[0B 0B 92MiB] Sc·[0.00 0.00 0.09]
+19:09:10.128870 table@compaction committed F~ S-1MiB Ke·0 D·20403 T·339.011896ms
+19:09:10.129440 table@remove removed @45938
+19:09:10.130122 table@remove removed @45933
+19:09:10.130865 table@remove removed @45934
+19:09:10.131602 table@remove removed @45935
+19:09:10.132323 table@remove removed @45936
+19:09:10.132910 table@remove removed @45937
+19:10:26.225560 memdb@flush N·9300 S·3MiB
+19:10:26.253662 memdb@flush created L0@45948 N·9300 S·2MiB "\x00\x00\x00..ies,v43133120":"\f\x00\x00..kup,v43125922"
+19:10:26.253728 version@stat F·[1 0 45] S·94MiB[2MiB 0B 92MiB] Sc·[0.25 0.00 0.09]
+19:10:26.264200 memdb@flush committed F·1 T·38.58725ms
+19:10:26.265181 journal@remove removed @45939
+19:10:42.397789 table@move L0@45948 -> L1
+19:10:42.397872 version@stat F·[0 1 45] S·94MiB[0B 2MiB 92MiB] Sc·[0.00 0.02 0.09]
+19:11:15.723439 table@compaction L1·1 -> L2·6 S·12MiB Q·43157553
+19:11:15.780971 table@build created L2@45949 N·9476 S·2MiB "\x00\x00\x00..ies,v40699172":"\x00\x00\x00...gz,v43073999"
+19:11:15.818998 table@build created L2@45950 N·3251 S·2MiB "\x00\x00\x00...gz,v43072188":"\x00\x00\x00..zip,v42884465"
+19:11:15.859013 table@build created L2@45951 N·15587 S·2MiB "\x00\x00\x00...gz,v42900886":"\x02\x00\x00...gz,v43012957"
+19:11:15.907459 table@build created L2@45952 N·26956 S·2MiB "\x02\x00\x00...gz,v43120630":"\x02\x00\x00..mp3,v42895916"
+19:11:15.951164 table@build created L2@45953 N·33136 S·1MiB "\x02\x00\x00..mp3,v42951272":"\f\x00\x00..kup,v43125922"
+19:11:15.951266 version@stat F·[0 0 44] S·91MiB[0B 0B 91MiB] Sc·[0.00 0.00 0.09]
+19:11:15.960436 table@compaction committed F-2 S-2MiB Ke·0 D·9020 T·236.94048ms
+19:11:15.960945 table@remove removed @45948
+19:11:15.961501 table@remove removed @45941
+19:11:15.961979 table@remove removed @45942
+19:11:15.962483 table@remove removed @45943
+19:11:15.962982 table@remove removed @45944
+19:11:15.963595 table@remove removed @45945
+19:11:15.963850 table@remove removed @45946
+19:13:42.492516 memdb@flush N·29989 S·3MiB
+19:13:42.625796 memdb@flush created L0@45955 N·29989 S·2MiB "\x00\x00\x00..ies,v43162219":"\f\x00\x00..kup,d43157986"
+19:13:42.625949 version@stat F·[1 0 44] S·94MiB[2MiB 0B 91MiB] Sc·[0.25 0.00 0.09]
+19:13:42.650148 memdb@flush committed F·1 T·157.566199ms
+19:13:42.652057 journal@remove removed @45947
+19:13:49.327290 table@move L0@45955 -> L1
+19:13:49.327426 version@stat F·[0 1 44] S·94MiB[0B 2MiB 91MiB] Sc·[0.00 0.03 0.09]
+19:13:57.607508 table@compaction L1·1 -> L2·5 S·12MiB Q·43163355
+19:13:57.717855 table@build created L2@45956 N·10518 S·2MiB "\x00\x00\x00..ies,v40699172":"\x00\x00\x00...gz,v43132782"
+19:13:57.837480 table@build created L2@45957 N·2005 S·2MiB "\x00\x00\x00...gz,v43072202":"\x00\x00\x00..mp3,v43157456"
+19:13:57.963659 table@build created L2@45958 N·792 S·2MiB "\x00\x00\x00..mp3,v43157454":"\x00\x00\x00...gz,v43127948"
+19:13:58.109431 table@build created L2@45959 N·31725 S·2MiB "\x00\x00\x00..tem,v43127936":"\x02\x00\x00..mp3,v42974144"
+19:13:58.234263 table@build created L2@45960 N·31344 S·2MiB "\x02\x00\x00..mp3,v42946514":"\x02\x00\x00...gz,v43150457"
+19:13:58.287497 table@build created L2@45961 N·11486 S·410KiB "\x02\x00\x00...gz,v43153505":"\f\x00\x00...gz,v43132819"
+19:13:58.287715 version@stat F·[0 0 45] S·92MiB[0B 0B 92MiB] Sc·[0.00 0.00 0.09]
+19:13:58.301124 table@compaction committed F~ S-1MiB Ke·0 D·30525 T·693.550682ms
+19:13:58.302080 table@remove removed @45955
+19:13:58.303083 table@remove removed @45949
+19:13:58.303731 table@remove removed @45950
+19:13:58.304219 table@remove removed @45951
+19:13:58.304931 table@remove removed @45952
+19:13:58.305660 table@remove removed @45953
+=============== Nov 18, 2018 (EST) ===============
+19:16:54.569153 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+19:16:54.569406 version@stat F·[0 0 45] S·92MiB[0B 0B 92MiB] Sc·[0.00 0.00 0.09]
+19:16:54.569425 db@open opening
+19:16:54.569524 journal@recovery F·1
+19:16:54.570272 journal@recovery recovering @45954
+19:16:54.576121 memdb@flush created L0@45962 N·841 S·97KiB "\x00\x00\x00...gz,v43163967":"\f\x00\x00..ies,d43163986"
+19:16:54.576959 version@stat F·[1 0 45] S·92MiB[97KiB 0B 92MiB] Sc·[0.25 0.00 0.09]
+19:16:54.588134 db@janitor F·48 G·0
+19:16:54.588181 db@open done T·18.742333ms
+19:16:54.605917 table@move L0@45962 -> L1
+19:16:54.606121 version@stat F·[0 1 45] S·92MiB[0B 97KiB 92MiB] Sc·[0.00 0.00 0.09]
+19:16:54.615207 table@compaction L1·1 -> L2·6 S·10MiB Q·43164026
+19:16:54.655805 table@build created L2@45965 N·10369 S·2MiB "\x00\x00\x00..ies,v40699172":"\x00\x00\x00..ies,v43075834"
+19:16:54.716787 table@build created L2@45966 N·2128 S·2MiB "\x00\x00\x00...gz,v43075836":"\x00\x00\x00..mp3,v43158579"
+19:16:54.746166 table@build created L2@45967 N·840 S·2MiB "\x00\x00\x00..e 6,v43130402":"\x00\x00\x00...gz,v43127948"
+19:16:54.835123 table@build created L2@45968 N·31773 S·2MiB "\x00\x00\x00..tem,v43127936":"\x02\x00\x00..mp3,v42903568"
+19:16:54.899405 table@build created L2@45969 N·30933 S·2MiB "\x02\x00\x00..mp3,v42936186":"\x02\x00\x00...gz,v43150232"
+19:16:54.931123 table@build created L2@45970 N·12504 S·457KiB "\x02\x00\x00...gz,v43156560":"\f\x00\x00...gz,v43132819"
+19:16:54.931253 version@stat F·[0 0 45] S·92MiB[0B 0B 92MiB] Sc·[0.00 0.00 0.09]
+19:16:55.050334 table@compaction committed F-1 S-23KiB Ke·0 D·164 T·435.06725ms
+19:16:55.056453 table@remove removed @45962
+19:16:55.057147 table@remove removed @45956
+19:16:55.057973 table@remove removed @45957
+19:16:55.058943 table@remove removed @45958
+19:16:55.059648 table@remove removed @45959
+19:16:55.060390 table@remove removed @45960
+19:16:55.060537 table@remove removed @45961
+=============== Nov 18, 2018 (EST) ===============
+21:43:46.402665 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+21:43:46.402886 version@stat F·[0 0 45] S·92MiB[0B 0B 92MiB] Sc·[0.00 0.00 0.09]
+21:43:46.402906 db@open opening
+21:43:46.403006 journal@recovery F·1
+21:43:46.403598 journal@recovery recovering @45963
+21:43:46.464166 memdb@flush created L0@45971 N·18810 S·1MiB "\x00\x00\x00..ies,v43171201":"\f\x00\x00...gz,d43171346"
+21:43:46.465021 version@stat F·[1 0 45] S·94MiB[1MiB 0B 92MiB] Sc·[0.25 0.00 0.09]
+21:43:46.491165 db@janitor F·48 G·0
+21:43:46.491206 db@open done T·88.287979ms
+21:43:46.529390 table@move L0@45971 -> L1
+21:43:46.529473 version@stat F·[0 1 45] S·94MiB[0B 1MiB 92MiB] Sc·[0.00 0.02 0.09]
+21:43:46.574712 table@compaction L1·1 -> L2·6 S·12MiB Q·43182846
+21:43:46.625725 table@build created L2@45974 N·9879 S·2MiB "\x00\x00\x00..ies,v40699172":"\x00\x00\x00..ies,v43072224"
+21:43:46.654930 table@build created L2@45975 N·2888 S·2MiB "\x00\x00\x00...gz,v43072226":"\x00\x00\x00..mp3,v43132551"
+21:43:46.679386 table@build created L2@45976 N·878 S·2MiB "\x00\x00\x00..Dio,v43130430":"\x00\x00\x00...gz,v43172850"
+21:43:46.733248 table@build created L2@45977 N·31755 S·2MiB "\x00\x00\x00..tem,v43172844":"\x02\x00\x00..mp3,v42896138"
+21:43:46.767089 table@build created L2@45978 N·30475 S·2MiB "\x02\x00\x00..mp3,v42898122":"\x02\x00\x00...gz,v43148121"
+21:43:46.790739 table@build created L2@45979 N·13309 S·505KiB "\x02\x00\x00...gz,v43150114":"\f\x00\x00...gz,v43180097"
+21:43:46.790819 version@stat F·[0 0 45] S·92MiB[0B 0B 92MiB] Sc·[0.00 0.00 0.09]
+21:43:46.818413 table@compaction committed F-1 S-1MiB Ke·0 D·18173 T·243.639247ms
+21:43:46.819146 table@remove removed @45971
+21:43:46.820042 table@remove removed @45965
+21:43:46.820907 table@remove removed @45966
+21:43:46.821792 table@remove removed @45967
+21:43:46.822518 table@remove removed @45968
+21:43:46.823213 table@remove removed @45969
+21:43:46.823404 table@remove removed @45970

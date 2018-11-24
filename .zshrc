@@ -102,7 +102,7 @@ alias sysfail="systemctl --failed"
 alias updsh="source $HOME/.zshrc"
 alias updx="xrdb -merge $HOME/git/dotfiles/.Xresources"
 alias wttr="cat /tmp/forecast | head -n 7 | tail -n 6"
-alias wup="sudo wifi-menu; sleep 10; web-connect-extras"
+alias wup="sudo wifi-menu; sleep 20; sudo web-connect-extras"
 
 # pacman
 alias pacloc="pacman -Qi"				# Query locally installed package and display info
