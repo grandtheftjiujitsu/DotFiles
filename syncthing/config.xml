@@ -278,6 +278,7 @@
         <autoAcceptFolders>false</autoAcceptFolders>
         <maxSendKbps>0</maxSendKbps>
         <maxRecvKbps>0</maxRecvKbps>
+        <maxRequestKiB>0</maxRequestKiB>
     </device>
     <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" name="T530" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
@@ -285,6 +286,7 @@
         <autoAcceptFolders>false</autoAcceptFolders>
         <maxSendKbps>0</maxSendKbps>
         <maxRecvKbps>0</maxRecvKbps>
+        <maxRequestKiB>0</maxRequestKiB>
     </device>
     <gui enabled="true" tls="false" debugging="false">
         <address>127.0.0.1:8384</address>
@@ -329,6 +331,7 @@
         <trafficClass>0</trafficClass>
         <defaultFolderPath>~</defaultFolderPath>
         <setLowPriority>true</setLowPriority>
+        <maxConcurrentScans>0</maxConcurrentScans>
         <minHomeDiskFreePct>0</minHomeDiskFreePct>
     </options>
 </configuration>

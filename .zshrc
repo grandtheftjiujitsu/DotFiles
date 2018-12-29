@@ -173,9 +173,12 @@ kernel-prep ()
   DEFCON=savagezen_defconfig
 
   cd $KERNEL_DIR
+
   export ARCH=arm64
   export SUBARCH=arm64
   export CROSS_COMPILE=$HOME/git/linaro-prebuilts/bin/aarch64-linux-android-
+  export CC=$HOME/git/copperhead-clang-host-linux-x86/clang-copperhead/bin/clang
+
   make clean
   make mrproper
   make $DEFCON
