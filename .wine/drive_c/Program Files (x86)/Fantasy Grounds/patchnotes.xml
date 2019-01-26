@@ -1,0 +1,27 @@
+<root>
+	<linklist>
+		<link class="url" recordname="http://www.fantasygrounds.com/filelibrary/patchnotes.html">Latest Release Notes</link>
+		<link class="url" recordname="http://www.fantasygrounds.com/forums/forumdisplay.php?37-City-Hall">Release Announcements</link>
+	</linklist>
+
+	<h>Getting Started</h>
+	<linklist>
+		<link class="url" recordname="https://www.fantasygrounds.com/filelibrary/FantasyGroundsUserManual.pdf">Read User Manual</link>
+		<link class="url" recordname="http://www.fantasygrounds.com/wiki/index.php/User_Guides?utm_source=FG&amp;utm_medium=launchScreen&amp;utm_content=WikiUserGuides&amp;utm_campaign=SelfPromote">Read User Guides</link>
+		<link class="url" recordname="http://www.fantasygrounds.com/wiki/index.php/Videos?utm_source=FG&amp;utm_medium=launchScreen&amp;utm_content=WikiVideos&amp;utm_campaign=SelfPromote">Watch Videos</link>
+	</linklist>
+
+	<h>Getting Content (games, settings, adventures, maps, tokens, ...)</h>
+	<linklist>
+		<link class="url" recordname="https://www.fantasygrounds.com/store?utm_source=FG&amp;utm_medium=launchScreen&amp;utm_content=Store&amp;utm_campaign=SelfPromote">Visit Fantasy Grounds Store on the Web</link>
+		<link class="url" recordname="http://store.steampowered.com/app/252690/Fantasy_Grounds/">Visit Fantasy Grounds Store on Steam</link>
+		<link class="url" recordname="https://www.fantasygrounds.com/wiki/index.php/Setup_Tutorial">Enter FG account and link Steam to access purchases</link>
+	</linklist>
+
+	<h>Getting Help</h>
+	<linklist>
+		<link class="url" recordname="http://www.fantasygrounds.com/forums?utm_source=FG&amp;utm_medium=launchScreen&amp;utm_content=Forum&amp;utm_campaign=SelfPromote">Ask Questions on the Forums</link>
+		<link class="url" recordname="mailto:support@fantasygrounds.com">Send e-mail to Fantasy Grounds support (support@fantasygrounds.com)</link>
+		<link class="url" recordname="https://www.fantasygrounds.com/wiki/index.php/How_to_Port_Forward_and_Host_a_Game">How to Port Forward and Host a Game</link>
+	</linklist>
+</root>

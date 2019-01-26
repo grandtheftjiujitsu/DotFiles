@@ -52,6 +52,7 @@ alias dwnspd="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/t
 alias electrum="electrum -w $HOME/.electrum/wallets/electrum_wallet"
 alias eup="sudo systemctl start dhcpcd@enp0s25; sudo web-connect-extras"
 alias eq="qpaeq"
+alias fantasygrounds="wine $HOME/.wine/drive_c/Program\ Files\ \(x86)/Fantasy\ Grounds/FantasyGrounds.exe"
 alias geth="geth --datadir $HOME/documents/vault/ethereum"
 alias git-clear="git reset --hard HEAD; git clean -fdx"
 alias grep="grep --color=auto"

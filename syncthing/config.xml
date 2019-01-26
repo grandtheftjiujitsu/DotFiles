@@ -41,6 +41,27 @@
         <markerName>.stfolder</markerName>
         <useLargeBlocks>false</useLargeBlocks>
     </folder>
+    <folder id="7qksb-12f1w" label="Titanium Backup" path="/home/austin/mega/phone_backup/sdcard/TitaniumBackup/" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+        <filesystemType>basic</filesystemType>
+        <device id="I6GZFI7-ZOWFMH4-NAGYVQW-YC6EJM6-NB6ZXTC-IA2VOFF-JYPJPMI-2VE6BAE" introducedBy=""></device>
+        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
+        <minDiskFree unit="%">1</minDiskFree>
+        <versioning></versioning>
+        <copiers>0</copiers>
+        <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+        <markerName>.stfolder</markerName>
+        <useLargeBlocks>false</useLargeBlocks>
+    </folder>
     <folder id="eewmw-pwrj9" label="MagiskManager" path="/home/austin/mega/phone_backup/sdcard/MagiskManager/" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="I6GZFI7-ZOWFMH4-NAGYVQW-YC6EJM6-NB6ZXTC-IA2VOFF-JYPJPMI-2VE6BAE" introducedBy=""></device>
@@ -127,7 +148,6 @@
     </folder>
     <folder id="hdww7-xjmeh" label="PC Backup" path="/home/austin/mega/pc_backup" type="sendonly" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
-        <device id="I6GZFI7-ZOWFMH4-NAGYVQW-YC6EJM6-NB6ZXTC-IA2VOFF-JYPJPMI-2VE6BAE" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
         <minDiskFree unit="%">1</minDiskFree>
         <versioning></versioning>
@@ -231,27 +251,6 @@
         <useLargeBlocks>false</useLargeBlocks>
     </folder>
     <folder id="sgc2x-au7zu" label="Playlists" path="/home/austin/mega/phone_backup/sdcard/Playlists/" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
-        <filesystemType>basic</filesystemType>
-        <device id="I6GZFI7-ZOWFMH4-NAGYVQW-YC6EJM6-NB6ZXTC-IA2VOFF-JYPJPMI-2VE6BAE" introducedBy=""></device>
-        <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>
-        <minDiskFree unit="%">1</minDiskFree>
-        <versioning></versioning>
-        <copiers>0</copiers>
-        <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
-        <hashers>0</hashers>
-        <order>random</order>
-        <ignoreDelete>false</ignoreDelete>
-        <scanProgressIntervalS>0</scanProgressIntervalS>
-        <pullerPauseS>0</pullerPauseS>
-        <maxConflicts>10</maxConflicts>
-        <disableSparseFiles>false</disableSparseFiles>
-        <disableTempIndexes>false</disableTempIndexes>
-        <paused>false</paused>
-        <weakHashThresholdPct>25</weakHashThresholdPct>
-        <markerName>.stfolder</markerName>
-        <useLargeBlocks>false</useLargeBlocks>
-    </folder>
-    <folder id="zaerv-jjaji" label="TitaniumBackup" path="/home/austin/mega/phone_backup/sdcard/TitaniumBackup" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="I6GZFI7-ZOWFMH4-NAGYVQW-YC6EJM6-NB6ZXTC-IA2VOFF-JYPJPMI-2VE6BAE" introducedBy=""></device>
         <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" introducedBy=""></device>

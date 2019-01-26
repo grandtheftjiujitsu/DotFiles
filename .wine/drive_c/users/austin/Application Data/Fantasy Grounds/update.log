@@ -1,0 +1,23 @@
+Getting packages from FG server
+Starting update check
+Getting examples from FG server
+Getting purchases from FG server
+Checking package FantasyGroundsUpdater for updates
+Checking package 3.5E for updates
+   updating modules/3.5E-basicrules.mod
+   updating modules/ks01_ogl_well_met_in_kithtakharos.mod
+   updating rulesets/3.5E.pak
+Checking package 4E for updates
+Checking package 5E for updates
+Checking package 5E-data for updates
+Checking package CoreRPG for updates
+Checking package Cypher for updates
+Checking package FATECore for updates
+Checking package PFRPG for updates
+Checking package PFRPG2 for updates
+Checking package PFRPG2-data for updates
+Checking package SWK02 for updates
+Checking package Utilities for updates
+Checking package general-addons for updates
+Validating packages
+Update check complete

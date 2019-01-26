@@ -15,7 +15,7 @@ htmlbar_thumbnailwidth: 300
 view_left_panel: 1
 bookmarks_default_store: 1
 image_thumbnail_refresh_quality: 1
-opendir: file:///home/austin/git/savagezen.github.io/_posts
+opendir: file:///home/austin/git/savagezen.github.io/_drafts
 c2e.convert_iso: 0
 wrap_text_default: 1
 htmlbar_in_sidepanel: 1
@@ -57,7 +57,6 @@ ssearch_casesens: 0
 htmlbar_transient: 0
 main_window_height: 747
 lowercase_tags: 1
-recent_files: file:///home/austin/git/anykernel/ramdisk/init.spectrum.rc
 recent_files: file:///home/austin/git/anykernel/ramdisk/init.special_power.sh
 recent_files: file:///home/austin/git/savagezen.github.io/_posts/2018-08-05-DND5E-Heart-of-Darkness-2.md
 recent_files: file:///home/austin/git/savagezen.github.io/_posts/2018-08-05-DND5E-Heart-of-Darkness-1.md
@@ -77,6 +76,7 @@ recent_files: file:///home/austin/git/savagezen.github.io/index.html
 recent_files: file:///home/austin/git/savagezen.github.io/_includes/default.html
 recent_files: file:///home/austin/git/savagezen.github.io/_includes/page.html
 recent_files: file:///home/austin/git/savagezen.github.io/_posts/2018-12-24-Paleo-and-Keto.md
+recent_files: file:///home/austin/git/savagezen.github.io/_drafts/BJJ-heath-experiments.md
 snr_replacetype: 0
 savedir: file:///home/austin/git/savagezen.github.io/_drafts
 image_thumnailformatstring: <a href="%r"><img src="%t" width="%x" height="%y" border="0"></a>
