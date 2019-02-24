@@ -277,6 +277,7 @@
         <autoAcceptFolders>false</autoAcceptFolders>
         <maxSendKbps>0</maxSendKbps>
         <maxRecvKbps>0</maxRecvKbps>
+        <ignoredFolder time="2019-01-26T22:24:26.552Z" id="hdww7-xjmeh" label="PC Backup"></ignoredFolder>
         <maxRequestKiB>0</maxRequestKiB>
     </device>
     <device id="X56APUI-FEDFH4N-RU5I4EF-EOSWOF6-XFNUD66-K2DMQHD-KK2BZ46-2XCE2Q5" name="T530" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">

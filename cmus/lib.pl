@@ -523,9 +523,9 @@
 /home/austin/mega/phone_backup/sdcard/Music/Stereophonics/Language Sex Violence Other_/04 Devil.mp3
 /home/austin/mega/phone_backup/sdcard/Music/Stevie Nicks/Bella Donna/00 Stop Draggin My Heart Around.mp3
 /home/austin/mega/phone_backup/sdcard/Music/Stevie Nicks/School of Rock/00 Edge of Seventeen.mp3
+/home/austin/mega/phone_backup/sdcard/Music/Stone Sour/Stone Sour/00 Bother.mp3
 /home/austin/mega/phone_backup/sdcard/Music/Stonesour/Come What(ever) May/08 Through Glass.mp3
 /home/austin/mega/phone_backup/sdcard/Music/Stonesour/Audio Secrecy/08 Hesitate.mp3
-/home/austin/mega/phone_backup/sdcard/Music/Stone Sour/Stone Sour/00 Bother.mp3
 /home/austin/mega/phone_backup/sdcard/Music/Stone Temple Pilots/00 sex type thing (acoustic).mp3
 /home/austin/mega/phone_backup/sdcard/Music/Stone Temple Pilots/Core/00 Dead and Bloated.mp3
 /home/austin/mega/phone_backup/sdcard/Music/Stone Temple Pilots/Thank You/00 Wicked Garden.mp3
@@ -573,8 +573,8 @@
 /home/austin/mega/phone_backup/sdcard/Music/Three Days Grace/Chalk Outline/01 Chalk Outline.mp3
 /home/austin/mega/phone_backup/sdcard/Music/Three Days Grace/Transit Of Venus/03 The High Road.mp3
 /home/austin/mega/phone_backup/sdcard/Music/Tim McGraw/A Place In The Sun/00 My Next Thirty Years.mp3
-/home/austin/mega/phone_backup/sdcard/Music/Tim McGraw/Tim McGraw And The Dancehall D/00 Red RagTop.sync-conflict-20180323-093505-XGYM2VE.mp3
 /home/austin/mega/phone_backup/sdcard/Music/Tim McGraw/Tim McGraw And The Dancehall D/00 Red RagTop.mp3
+/home/austin/mega/phone_backup/sdcard/Music/Tim McGraw/Tim McGraw And The Dancehall D/00 Red RagTop.sync-conflict-20180323-093505-XGYM2VE.mp3
 /home/austin/mega/phone_backup/sdcard/Music/Tim McGraw/Everywhere/08 Everywhere.mp3
 /home/austin/mega/phone_backup/sdcard/Music/Tim McGraw/set this circus down/01 The cowboy in me.mp3
 /home/austin/mega/phone_backup/sdcard/Music/Tim McGraw/Live Like You Were Dying/02 My Old Friend.mp3
