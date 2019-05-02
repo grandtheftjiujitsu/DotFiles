@@ -11581,3 +11581,29 @@
 09:43:09.668147 table@remove removed @46249
 09:43:09.668672 table@remove removed @46250
 09:43:09.668909 table@remove removed @46251
+=============== Apr 7, 2019 (EDT) ===============
+21:44:18.973632 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+21:44:18.976503 version@stat F·[0 0 45] S·92MiB[0B 0B 92MiB] Sc·[0.00 0.00 0.09]
+21:44:18.976547 db@open opening
+21:44:18.976769 journal@recovery F·1
+21:44:18.983008 journal@recovery recovering @46253
+21:44:19.096669 memdb@flush created L0@46260 N·26311 S·1MiB "\x00\x00\x00...gz,v44169144":"\v\x00\x00..\x00\x02.,v44156241"
+21:44:19.110816 version@stat F·[1 0 45] S·94MiB[1MiB 0B 92MiB] Sc·[0.25 0.00 0.09]
+21:44:19.137527 db@janitor F·48 G·0
+21:44:19.137591 db@open done T·161.022754ms
+21:44:19.170340 table@move L0@46260 -> L1
+21:44:19.170410 version@stat F·[0 1 45] S·94MiB[0B 1MiB 92MiB] Sc·[0.00 0.02 0.09]
+21:44:19.225293 table@compaction L1·1 -> L2·5 S·10MiB Q·44182456
+21:44:19.366049 table@build created L2@46263 N·1419 S·2MiB "\x00\x00\x00..ing,v43774228":"\x00\x00\x00...gz,v43999853"
+21:44:19.578889 table@build created L2@46264 N·6798 S·2MiB "\x00\x00\x00...gz,v43919779":"\x01\x00\x00..ies,v44000517"
+21:44:19.785649 table@build created L2@46265 N·28598 S·2MiB "\x01\x00\x00...gz,v44000514":"\x02\x00\x00..mp3,v42898114"
+21:44:19.999611 table@build created L2@46266 N·35072 S·2MiB "\x02\x00\x00..mp3,v42921013":"\x02\x00\x00...gz,v43996084"
+21:44:20.105264 table@build created L2@46267 N·13969 S·803KiB "\x02\x00\x00...gz,v44014827":"\v\x00\x00..\x00\x13\x97,v44014862"
+21:44:20.105336 version@stat F·[0 0 45] S·92MiB[0B 0B 92MiB] Sc·[0.00 0.00 0.09]
+21:44:20.107657 table@compaction committed F-1 S-1MiB Ke·0 D·26310 T·882.333669ms
+21:44:20.108171 table@remove removed @46260
+21:44:20.108741 table@remove removed @46255
+21:44:20.109302 table@remove removed @46256
+21:44:20.109876 table@remove removed @46257
+21:44:20.110426 table@remove removed @46258
+21:44:20.110689 table@remove removed @46259
