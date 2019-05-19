@@ -1,0 +1,41 @@
+# $HOME Directories #
+#####################
+/aosp
+/documents
+/download
+/gdrive_personal
+/gdrive_professional
+/git
+/mega
+/music
+/phone-bk
+/playlists
+/R
+
+# Git Repos #
+#############
+/.conky
+/.rakudobrew
+/.zef
+
+# Vault Content #
+#################
+/.bitmonero
+/.electron
+/.electron-gyp
+/.electrum
+/.esd_auth
+/.ethereum
+/.gnupg
+/monero-wallet-cli.log
+/.pwsafe.dat~
+/.shared-ringdb
+/.ssh
+
+# Other #
+#########
+/.cache
+/.cache-bk
+/.ccache
+/.config/chromium
+/.phoronix-test-suite/installed-tests/pts/build-linux-kernel-1.7.0/

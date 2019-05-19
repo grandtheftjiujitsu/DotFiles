@@ -1,0 +1,4 @@
+include/intsizeof.h
+lib/cmake/intsizeof/intsizeofConfig.cmake
+lib/cmake/intsizeof/intsizeofTargets.cmake
+licenses/intsizeof/LICENSE

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=FG Uninstall
+Exec=env WINEPREFIX="/home/austin/.wine" /usr/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/austin/.wine/dosdevices/c:/users/austin/Start\\ Menu/Fantasy\\ Grounds/FG\\ Uninstall.lnk
+Type=Application
+StartupNotify=true
+Comment=FG Uninstall
+Path=/home/austin/.wine/dosdevices/c:/Program Files (x86)/Fantasy Grounds/
+StartupWMClass=fantasygroundsupdater.exe

@@ -1,0 +1,35 @@
+12:39:48.805: INFO: com.android.jack.server.JackHttpServer: Loading config of jack server version: 1.3-a11 '1.3' (402300 704631c4e9bbfb4e8b052365140f79974b9f4cf4 by android-jack-team@google.com)
+12:39:49.073: INFO: com.android.jack.server.JackHttpServer: Jack 1.3-rc6 'Douarn' (441800 22a11d4b264ae70e366aed3025ef47362d1522bb by N/A) available in ./jack/jack-1507338642181-0.jar
+12:39:49.188: INFO: com.android.jack.server.JackHttpServer: Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) available in ./jack/jack-1515261323744-0.jar
+12:39:49.189: INFO: com.android.jack.server.JackHttpServer: Starting service connection server on /127.0.0.1:8076
+12:39:49.202: INFO: com.android.jack.server.JackHttpServer: Starting admin connection on /127.0.0.1:8077
+12:39:49.435: INFO: com.android.jack.server.JackHttpServer: Start timer
+12:39:50.309: INFO: com.android.jack.server.router.RootContainer: Route request for GET /server
+12:39:50.311: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to WORK
+12:39:50.311: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+12:39:50.311: INFO: com.android.jack.server.tasks.GetVersions: Get server version(s)
+12:39:50.318: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+12:39:50.319: INFO: com.android.jack.server.JackHttpServer: Start timer
+12:39:50.482: INFO: com.android.jack.server.router.RootContainer: Route request for HEAD /server
+12:39:50.482: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to WORK
+12:39:50.482: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+12:39:50.487: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+12:39:50.488: INFO: com.android.jack.server.JackHttpServer: Start timer
+12:39:50.553: INFO: com.android.jack.server.router.RootContainer: Route request for HEAD /jack
+12:39:50.553: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to WORK
+12:39:50.553: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+12:39:50.554: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+12:39:50.554: INFO: com.android.jack.server.JackHttpServer: Start timer
+12:42:50.554: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to IDLE
+12:54:50.554: INFO: com.android.jack.server.JackHttpServer: Server mode changing from IDLE to DEEP_IDLE
+14:39:50.554: INFO: com.android.jack.server.JackHttpServer: Server mode changing from DEEP_IDLE to SLEEP
+18:39:50.554: INFO: com.android.jack.server.JackHttpServer: Server mode changing from SLEEP to SHUTDOWN
+18:39:50.554: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+18:39:50.555: INFO: com.android.jack.server.JackHttpServer: Shutdowning service connection
+18:39:50.555: INFO: com.android.jack.server.JackHttpServer: # max of concurrent compilations: 0
+18:39:50.555: INFO: com.android.jack.server.JackHttpServer: # total of compilations: 0
+18:39:50.555: INFO: com.android.jack.server.JackHttpServer: # max of concurrent forward compilations: 0
+18:39:50.555: INFO: com.android.jack.server.JackHttpServer: # total of forward compilations: 0
+18:39:50.557: INFO: com.android.jack.server.JackHttpServer: Done
+18:39:50.557: INFO: com.android.jack.server.JackHttpServer: Shutdowning admin connection
+18:39:50.558: INFO: com.android.jack.server.JackHttpServer: Done

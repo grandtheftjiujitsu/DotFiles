@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=FG Char Converter
+Exec=env WINEPREFIX="/home/austin/.wine" /usr/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/austin/.wine/dosdevices/c:/users/austin/Start\\ Menu/Fantasy\\ Grounds/FG\\ Char\\ Converter.lnk
+Type=Application
+StartupNotify=true
+Comment=FG Char Converter
+Path=/home/austin/.wine/dosdevices/c:/users/austin/Application Data/Fantasy Grounds/utilities
+StartupWMClass=characterconverter.exe

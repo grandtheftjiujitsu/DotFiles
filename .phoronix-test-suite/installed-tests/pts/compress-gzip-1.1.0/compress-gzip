@@ -1,0 +1,2 @@
+#!/bin/sh
+cat compressfile | gzip -c > /dev/null 2>&1

@@ -1,0 +1,4 @@
+lib/cmake/Boost/BoostConfig.cmake
+lib/cmake/Boost/BoostConfigVersion.cmake
+lib/libboost_system-mt-d.a
+lib/libboost_system-mt.a

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Fantasy Grounds
+Exec=env WINEPREFIX="/home/austin/.wine" /usr/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/austin/.wine/dosdevices/c:/users/austin/Start\\ Menu/Fantasy\\ Grounds/Fantasy\\ Grounds.lnk
+Type=Application
+StartupNotify=true
+Comment=Fantasy Grounds
+Path=/home/austin/.wine/dosdevices/c:/Program Files (x86)/Fantasy Grounds/
+StartupWMClass=fantasygrounds.exe

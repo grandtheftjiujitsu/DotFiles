@@ -1,0 +1,13 @@
+prefix=/home/austin/.hunter/_Base/59b2b88/c969b64/c20b399/Build/ZLIB/Install
+exec_prefix=/home/austin/.hunter/_Base/59b2b88/c969b64/c20b399/Build/ZLIB/Install
+libdir=/home/austin/.hunter/_Base/59b2b88/c969b64/c20b399/Build/ZLIB/Install/lib
+sharedlibdir=/home/austin/.hunter/_Base/59b2b88/c969b64/c20b399/Build/ZLIB/Install/lib
+includedir=/home/austin/.hunter/_Base/59b2b88/c969b64/c20b399/Build/ZLIB/Install/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.8
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

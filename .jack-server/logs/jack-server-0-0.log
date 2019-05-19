@@ -1,0 +1,667 @@
+07:51:27.005: INFO: com.android.jack.server.JackHttpServer: Loading config of jack server version: 1.3-a11 '1.3' (402300 704631c4e9bbfb4e8b052365140f79974b9f4cf4 by android-jack-team@google.com)
+07:51:27.505: INFO: com.android.jack.server.JackHttpServer: Jack 1.3-rc6 'Douarn' (441800 22a11d4b264ae70e366aed3025ef47362d1522bb by N/A) available in ./jack/jack-1507338642181-0.jar
+07:51:27.773: INFO: com.android.jack.server.JackHttpServer: Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) available in ./jack/jack-1515261323744-0.jar
+07:51:27.775: INFO: com.android.jack.server.JackHttpServer: Starting service connection server on /127.0.0.1:8076
+07:51:27.808: INFO: com.android.jack.server.JackHttpServer: Starting admin connection on /127.0.0.1:8077
+07:51:28.379: INFO: com.android.jack.server.JackHttpServer: Start timer
+07:51:29.131: INFO: com.android.jack.server.router.RootContainer: Route request for GET /server
+07:51:29.134: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to WORK
+07:51:29.134: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+07:51:29.135: INFO: com.android.jack.server.tasks.GetVersions: Get server version(s)
+07:51:29.145: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+07:51:29.145: INFO: com.android.jack.server.JackHttpServer: Start timer
+07:51:29.491: INFO: com.android.jack.server.router.RootContainer: Route request for HEAD /server
+07:51:29.491: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to WORK
+07:51:29.491: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+07:51:29.499: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+07:51:29.499: INFO: com.android.jack.server.JackHttpServer: Start timer
+07:51:29.602: INFO: com.android.jack.server.router.RootContainer: Route request for HEAD /jack
+07:51:29.602: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to WORK
+07:51:29.602: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+07:51:29.603: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+07:51:29.603: INFO: com.android.jack.server.JackHttpServer: Start timer
+07:51:30.182: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:51:30.183: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to WORK
+07:51:30.183: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+07:51:30.199: INFO: com.android.jack.server.tasks.JackTask: Compilation #0, command '@build/core/jack-default.args -D jack.import.jar.debug-info=false -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=1 --import external/jacoco/asm-debug-all-5.0.1.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/jacoco-asm_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/jacoco-asm_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:51:30.201: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #0 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:51:31.048: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:51:31.055: INFO: com.android.jack.server.tasks.JackTask: Compilation #1, command '@build/core/jack-default.args -g -D jack.java.source.version=1.8 --import-resource out/target/common/obj/JAVA_LIBRARIES/core-all_intermediates/with-local/classes.dex.res.tmp -D jack.android.min-api-level=o-b1 -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first --output-jack out/target/common/obj/JAVA_LIBRARIES/core-all_intermediates/classes.jack --output-dex out/target/common/obj/JAVA_LIBRARIES/core-all_intermediates/jack-rsc @out/target/common/obj/JAVA_LIBRARIES/core-all_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:51:31.063: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #1 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:51:47.577: INFO: com.android.jack.server.tasks.JackTask: Compilation #0 return exit code 0
+07:51:47.577: INFO: com.android.jack.server.tasks.JackTask: Compilation #0 run in 17060 ms
+07:51:47.579: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:51:47.579: INFO: com.android.jack.server.tasks.JackTask: Compilation #2, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=9 --import prebuilts/sdk/9/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v9_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v9_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:51:47.579: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #2 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:52:16.359: INFO: com.android.jack.server.tasks.JackTask: Compilation #2 return exit code 0
+07:52:16.359: INFO: com.android.jack.server.tasks.JackTask: Compilation #2 run in 28772 ms
+07:52:16.361: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:52:16.362: INFO: com.android.jack.server.tasks.JackTask: Compilation #3, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=8 --import prebuilts/sdk/8/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v8_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v8_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:52:16.362: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #3 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:52:45.229: INFO: com.android.jack.server.tasks.JackTask: Compilation #3 return exit code 0
+07:52:45.229: INFO: com.android.jack.server.tasks.JackTask: Compilation #3 run in 28865 ms
+07:52:45.250: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:52:45.251: INFO: com.android.jack.server.tasks.JackTask: Compilation #4, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=21 --import prebuilts/sdk/21/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v21_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v21_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:52:45.251: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #4 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:53:19.605: INFO: com.android.jack.server.tasks.JackTask: Compilation #1 return exit code 0
+07:53:19.605: INFO: com.android.jack.server.tasks.JackTask: Compilation #1 run in 108402 ms
+07:53:19.619: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:53:19.619: INFO: com.android.jack.server.tasks.JackTask: Compilation #5, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=1 --import prebuilts/maven_repo/android/android/arch/core/common/1.0.0/common-1.0.0.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/apptoolkit-arch-core-common_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/apptoolkit-arch-core-common_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:53:19.620: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #5 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:53:20.424: INFO: com.android.jack.server.tasks.JackTask: Compilation #5 return exit code 0
+07:53:20.425: INFO: com.android.jack.server.tasks.JackTask: Compilation #5 run in 802 ms
+07:53:20.431: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:53:20.431: INFO: com.android.jack.server.tasks.JackTask: Compilation #6, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=1 --import prebuilts/maven_repo/android/android/arch/lifecycle/common/1.0.0/common-1.0.0.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/apptoolkit-lifecycle-common_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/apptoolkit-lifecycle-common_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:53:20.431: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #6 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:53:21.253: INFO: com.android.jack.server.tasks.JackTask: Compilation #6 return exit code 0
+07:53:21.253: INFO: com.android.jack.server.tasks.JackTask: Compilation #6 run in 820 ms
+07:53:21.257: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:53:21.257: INFO: com.android.jack.server.tasks.JackTask: Compilation #7, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v9_intermediates/classes.jack --import out/target/common/obj/JAVA_LIBRARIES/jacoco-asm_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=9 --output-jack out/target/common/obj/JAVA_LIBRARIES/jacocoagent_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/jacocoagent_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:53:21.257: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #7 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:53:26.487: INFO: com.android.jack.server.tasks.JackTask: Compilation #7 return exit code 0
+07:53:26.487: INFO: com.android.jack.server.tasks.JackTask: Compilation #7 run in 5220 ms
+07:53:26.497: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:53:26.497: INFO: com.android.jack.server.tasks.JackTask: Compilation #8, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v9_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=9 --output-jack out/target/common/obj/JAVA_LIBRARIES/libprotobuf-java-nano_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/libprotobuf-java-nano_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:53:26.498: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #8 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:53:27.288: INFO: com.android.jack.server.tasks.JackTask: Compilation #8 return exit code 0
+07:53:27.288: INFO: com.android.jack.server.tasks.JackTask: Compilation #8 run in 789 ms
+07:53:27.294: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:53:27.295: INFO: com.android.jack.server.tasks.JackTask: Compilation #9, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v9_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=9 --output-jack out/target/common/obj/JAVA_LIBRARIES/com.android.vcard_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/com.android.vcard_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:53:27.295: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #9 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:53:28.916: INFO: com.android.jack.server.tasks.JackTask: Compilation #9 return exit code 0
+07:53:28.916: INFO: com.android.jack.server.tasks.JackTask: Compilation #9 run in 1619 ms
+07:53:28.918: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:53:28.918: INFO: com.android.jack.server.tasks.JackTask: Compilation #10, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v8_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=8 --output-jack out/target/common/obj/JAVA_LIBRARIES/libprotobuf-java-micro_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/libprotobuf-java-micro_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:53:28.918: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #10 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:53:30.686: INFO: com.android.jack.server.tasks.JackTask: Compilation #10 return exit code 0
+07:53:30.686: INFO: com.android.jack.server.tasks.JackTask: Compilation #10 run in 1766 ms
+07:53:30.688: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:53:30.690: INFO: com.android.jack.server.tasks.JackTask: Compilation #11, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=1 --import out/target/common/obj/JAVA_LIBRARIES/apptoolkit-lifecycle-runtime_intermediates/aar/classes.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/apptoolkit-lifecycle-runtime_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/apptoolkit-lifecycle-runtime_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:53:30.690: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #11 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:53:31.004: INFO: com.android.jack.server.tasks.JackTask: Compilation #11 return exit code 0
+07:53:31.004: INFO: com.android.jack.server.tasks.JackTask: Compilation #11 run in 313 ms
+07:53:31.175: INFO: com.android.jack.server.tasks.JackTask: Compilation #4 return exit code 0
+07:53:31.175: INFO: com.android.jack.server.tasks.JackTask: Compilation #4 run in 45918 ms
+07:53:31.178: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+07:53:31.178: INFO: com.android.jack.server.JackHttpServer: Start timer
+07:53:32.152: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:53:32.152: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to WORK
+07:53:32.152: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+07:53:32.152: INFO: com.android.jack.server.tasks.JackTask: Compilation #12, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v8_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=8 --output-jack out/target/common/obj/JAVA_LIBRARIES/android-common_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/android-common_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:53:32.153: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #12 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:53:32.807: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:53:32.808: INFO: com.android.jack.server.tasks.JackTask: Compilation #13, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v8_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=8 --output-jack out/target/common/obj/JAVA_LIBRARIES/jsr305_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/jsr305_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:53:32.808: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #13 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:53:33.430: INFO: com.android.jack.server.tasks.JackTask: Compilation #13 return exit code 0
+07:53:33.431: INFO: com.android.jack.server.tasks.JackTask: Compilation #13 run in 621 ms
+07:53:33.446: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:53:33.466: INFO: com.android.jack.server.tasks.JackTask: Compilation #14, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v8_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=8 --output-jack out/target/common/obj/JAVA_LIBRARIES/xmp_toolkit_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/xmp_toolkit_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:53:33.466: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #14 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:53:34.149: INFO: com.android.jack.server.tasks.JackTask: Compilation #12 return exit code 0
+07:53:34.150: INFO: com.android.jack.server.tasks.JackTask: Compilation #12 run in 1995 ms
+07:53:34.151: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:53:34.151: INFO: com.android.jack.server.tasks.JackTask: Compilation #15, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v9_intermediates/classes.jack --import out/target/common/obj/JAVA_LIBRARIES/jsr305_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=9 --output-jack out/target/common/obj/JAVA_LIBRARIES/guava_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/guava_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:53:34.151: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #15 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:53:35.907: INFO: com.android.jack.server.tasks.JackTask: Compilation #14 return exit code 0
+07:53:35.907: INFO: com.android.jack.server.tasks.JackTask: Compilation #14 run in 2439 ms
+07:53:36.229: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:53:36.229: INFO: com.android.jack.server.tasks.JackTask: Compilation #16, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=15 --import prebuilts/sdk/15/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v15_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v15_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:53:36.230: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #16 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:53:46.366: INFO: com.android.jack.server.tasks.JackTask: Compilation #15 return exit code 0
+07:53:46.367: INFO: com.android.jack.server.tasks.JackTask: Compilation #15 run in 12210 ms
+07:53:46.368: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:53:46.368: INFO: com.android.jack.server.tasks.JackTask: Compilation #17, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=17 --import prebuilts/sdk/17/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v17_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v17_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:53:46.369: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #17 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:53:57.159: INFO: com.android.jack.server.tasks.JackTask: Compilation #16 return exit code 0
+07:53:57.159: INFO: com.android.jack.server.tasks.JackTask: Compilation #16 run in 20928 ms
+07:53:57.176: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:53:57.177: INFO: com.android.jack.server.tasks.JackTask: Compilation #18, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=25 --import prebuilts/sdk/25/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v25_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v25_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:53:57.177: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #18 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:54:07.102: INFO: com.android.jack.server.tasks.JackTask: Compilation #17 return exit code 0
+07:54:07.103: INFO: com.android.jack.server.tasks.JackTask: Compilation #17 run in 20723 ms
+07:54:07.110: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:54:07.111: INFO: com.android.jack.server.tasks.JackTask: Compilation #19, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=19 --import prebuilts/sdk/19/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v19_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v19_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:54:07.111: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #19 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:54:29.839: INFO: com.android.jack.server.tasks.JackTask: Compilation #18 return exit code 0
+07:54:29.839: INFO: com.android.jack.server.tasks.JackTask: Compilation #18 run in 32661 ms
+07:54:29.841: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:54:29.841: INFO: com.android.jack.server.tasks.JackTask: Compilation #20, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=14 --import prebuilts/sdk/14/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v14_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v14_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:54:29.841: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #20 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:54:31.800: INFO: com.android.jack.server.tasks.JackTask: Compilation #19 return exit code 0
+07:54:31.800: INFO: com.android.jack.server.tasks.JackTask: Compilation #19 run in 24688 ms
+07:54:31.801: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:54:31.801: INFO: com.android.jack.server.tasks.JackTask: Compilation #21, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=18 --import prebuilts/sdk/18/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v18_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v18_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:54:31.802: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #21 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:54:48.744: INFO: com.android.jack.server.tasks.JackTask: Compilation #20 return exit code 0
+07:54:48.744: INFO: com.android.jack.server.tasks.JackTask: Compilation #20 run in 18902 ms
+07:54:48.754: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:54:48.754: INFO: com.android.jack.server.tasks.JackTask: Compilation #22, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v15_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=15 --output-jack out/target/common/obj/JAVA_LIBRARIES/calendar-common_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/calendar-common_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:54:48.754: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #22 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:54:49.804: INFO: com.android.jack.server.tasks.JackTask: Compilation #22 return exit code 0
+07:54:49.804: INFO: com.android.jack.server.tasks.JackTask: Compilation #22 run in 1042 ms
+07:54:49.805: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:54:49.805: INFO: com.android.jack.server.tasks.JackTask: Compilation #23, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v17_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=17 --output-jack out/target/common/obj/JAVA_LIBRARIES/volley_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/volley_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:54:49.805: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #23 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:54:51.338: INFO: com.android.jack.server.tasks.JackTask: Compilation #23 return exit code 0
+07:54:51.338: INFO: com.android.jack.server.tasks.JackTask: Compilation #23 run in 1531 ms
+07:54:51.340: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:54:51.340: INFO: com.android.jack.server.tasks.JackTask: Compilation #24, command '@build/core/jack-default.args -g -D jack.java.source.version=1.8 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v25_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=25 --output-jack out/target/common/obj/JAVA_LIBRARIES/hamcrest_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/hamcrest_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:54:51.340: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #24 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:54:51.989: INFO: com.android.jack.server.tasks.JackTask: Compilation #24 return exit code 0
+07:54:51.989: INFO: com.android.jack.server.tasks.JackTask: Compilation #24 run in 642 ms
+07:54:51.990: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:54:51.991: INFO: com.android.jack.server.tasks.JackTask: Compilation #25, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v19_intermediates/classes.jack --import out/target/common/obj/JAVA_LIBRARIES/guava_intermediates/classes.jack --import out/target/common/obj/JAVA_LIBRARIES/jsr305_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=19 --output-jack out/target/common/obj/JAVA_LIBRARIES/owasp-html-sanitizer_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/owasp-html-sanitizer_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:54:51.991: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #25 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:54:55.521: INFO: com.android.jack.server.tasks.JackTask: Compilation #21 return exit code 0
+07:54:55.523: INFO: com.android.jack.server.tasks.JackTask: Compilation #21 run in 23719 ms
+07:54:55.536: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:54:55.536: INFO: com.android.jack.server.tasks.JackTask: Compilation #26, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v8_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=8 --output-jack out/target/common/obj/JAVA_LIBRARIES/cr_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/cr_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:54:55.537: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #26 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:54:56.021: INFO: com.android.jack.server.tasks.JackTask: Compilation #26 return exit code 0
+07:54:56.021: INFO: com.android.jack.server.tasks.JackTask: Compilation #26 run in 483 ms
+07:54:56.032: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:54:56.032: INFO: com.android.jack.server.tasks.JackTask: Compilation #27, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=16 --import prebuilts/sdk/16/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v16_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v16_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:54:56.033: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #27 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:54:56.136: INFO: com.android.jack.server.tasks.JackTask: Compilation #25 return exit code 0
+07:54:56.137: INFO: com.android.jack.server.tasks.JackTask: Compilation #25 run in 4144 ms
+07:54:56.138: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:54:56.138: INFO: com.android.jack.server.tasks.JackTask: Compilation #28, command '@build/core/jack-default.args -g -D jack.java.source.version=1.8 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v25_intermediates/classes.jack --import out/target/common/obj/JAVA_LIBRARIES/hamcrest_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=25 --output-jack out/target/common/obj/JAVA_LIBRARIES/junit_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/junit_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:54:56.138: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #28 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:54:58.214: INFO: com.android.jack.server.tasks.JackTask: Compilation #28 return exit code 0
+07:54:58.214: INFO: com.android.jack.server.tasks.JackTask: Compilation #28 run in 2073 ms
+07:54:58.215: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:54:58.215: INFO: com.android.jack.server.tasks.JackTask: Compilation #29, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v9_intermediates/classes.jack --import-resource out/target/common/obj/JAVA_LIBRARIES/mp4parser_intermediates/classes.jack.res.tmp -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=9 --output-jack out/target/common/obj/JAVA_LIBRARIES/mp4parser_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/mp4parser_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:54:58.215: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #29 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:55:02.598: INFO: com.android.jack.server.tasks.JackTask: Compilation #29 return exit code 0
+07:55:02.599: INFO: com.android.jack.server.tasks.JackTask: Compilation #29 run in 4381 ms
+07:55:02.599: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:55:02.600: INFO: com.android.jack.server.tasks.JackTask: Compilation #30, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v21_intermediates/classes.jack --import out/target/common/obj/JAVA_LIBRARIES/jsr305_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=21 --output-jack out/target/common/obj/JAVA_LIBRARIES/latinime-common_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/latinime-common_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:55:02.600: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #30 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:55:03.316: INFO: com.android.jack.server.tasks.JackTask: Compilation #30 return exit code 0
+07:55:03.316: INFO: com.android.jack.server.tasks.JackTask: Compilation #30 run in 715 ms
+07:55:03.317: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:55:03.318: INFO: com.android.jack.server.tasks.JackTask: Compilation #31, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v14_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=14 --output-jack out/target/common/obj/JAVA_LIBRARIES/inputmethod-common_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/inputmethod-common_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:55:03.318: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #31 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:55:04.052: INFO: com.android.jack.server.tasks.JackTask: Compilation #31 return exit code 0
+07:55:04.052: INFO: com.android.jack.server.tasks.JackTask: Compilation #31 run in 733 ms
+07:55:25.534: INFO: com.android.jack.server.tasks.JackTask: Compilation #27 return exit code 0
+07:55:25.534: INFO: com.android.jack.server.tasks.JackTask: Compilation #27 run in 29500 ms
+07:55:25.535: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+07:55:25.535: INFO: com.android.jack.server.JackHttpServer: Start timer
+07:55:26.638: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+07:55:26.638: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to WORK
+07:55:26.638: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+07:55:26.639: INFO: com.android.jack.server.tasks.JackTask: Compilation #32, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v16_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=16 --output-jack out/target/common/obj/JAVA_LIBRARIES/com.android.gallery3d.common2_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/com.android.gallery3d.common2_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+07:55:26.639: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #32 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+07:55:28.820: INFO: com.android.jack.server.tasks.JackTask: Compilation #32 return exit code 0
+07:55:28.820: INFO: com.android.jack.server.tasks.JackTask: Compilation #32 run in 2180 ms
+07:55:28.821: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+07:55:28.821: INFO: com.android.jack.server.JackHttpServer: Start timer
+07:58:28.830: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to IDLE
+08:06:13.159: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:06:13.159: INFO: com.android.jack.server.JackHttpServer: Server mode changing from IDLE to WORK
+08:06:13.159: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+08:06:13.162: INFO: com.android.jack.server.tasks.JackTask: Compilation #33, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v8_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=8 --output-jack out/target/common/obj/JAVA_LIBRARIES/android-common-framesequence_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/android-common-framesequence_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:06:13.163: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #33 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:06:14.983: INFO: com.android.jack.server.tasks.JackTask: Compilation #33 return exit code 0
+08:06:14.983: INFO: com.android.jack.server.tasks.JackTask: Compilation #33 run in 1813 ms
+08:06:14.984: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+08:06:14.984: INFO: com.android.jack.server.JackHttpServer: Start timer
+08:06:21.784: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:06:21.784: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to WORK
+08:06:21.784: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+08:06:21.785: INFO: com.android.jack.server.tasks.JackTask: Compilation #34, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v9_intermediates/classes.jack --import-resource out/target/common/obj/JAVA_LIBRARIES/libphonenumber_intermediates/classes.jack.res.tmp -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=9 --output-jack out/target/common/obj/JAVA_LIBRARIES/libphonenumber_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/libphonenumber_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:06:21.785: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #34 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:06:25.032: INFO: com.android.jack.server.tasks.JackTask: Compilation #34 return exit code 0
+08:06:25.033: INFO: com.android.jack.server.tasks.JackTask: Compilation #34 run in 3246 ms
+08:06:25.037: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+08:06:25.037: INFO: com.android.jack.server.JackHttpServer: Start timer
+08:09:25.037: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to IDLE
+08:21:25.037: INFO: com.android.jack.server.JackHttpServer: Server mode changing from IDLE to DEEP_IDLE
+08:49:18.309: INFO: com.android.jack.server.router.RootContainer: Route request for GET /server
+08:49:18.312: INFO: com.android.jack.server.JackHttpServer: Server mode changing from DEEP_IDLE to WORK
+08:49:18.312: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+08:49:18.312: INFO: com.android.jack.server.tasks.GetVersions: Get server version(s)
+08:49:18.316: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+08:49:18.316: INFO: com.android.jack.server.JackHttpServer: Start timer
+08:49:18.369: INFO: com.android.jack.server.router.RootContainer: Route request for GET /server
+08:49:18.369: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to WORK
+08:49:18.369: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+08:49:18.369: INFO: com.android.jack.server.tasks.GetVersions: Get server version(s)
+08:49:18.370: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+08:49:18.370: INFO: com.android.jack.server.JackHttpServer: Start timer
+08:49:18.449: INFO: com.android.jack.server.router.RootContainer: Route request for HEAD /server
+08:49:18.449: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to WORK
+08:49:18.449: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+08:49:18.454: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+08:49:18.455: INFO: com.android.jack.server.JackHttpServer: Start timer
+08:49:18.578: INFO: com.android.jack.server.router.RootContainer: Route request for HEAD /jack
+08:49:18.579: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to WORK
+08:49:18.579: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+08:49:18.579: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+08:49:18.579: INFO: com.android.jack.server.JackHttpServer: Start timer
+08:49:19.238: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:49:19.238: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to WORK
+08:49:19.238: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+08:49:19.238: INFO: com.android.jack.server.tasks.JackTask: Compilation #35, command '@build/core/jack-default.args -D jack.import.jar.debug-info=false -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=1 --import external/jacoco/asm-debug-all-5.0.1.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/jacoco-asm_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/jacoco-asm_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:49:19.238: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #35 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:49:20.167: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:49:20.167: INFO: com.android.jack.server.tasks.JackTask: Compilation #36, command '@build/core/jack-default.args -g -D jack.java.source.version=1.8 --import-resource out/target/common/obj/JAVA_LIBRARIES/core-all_intermediates/with-local/classes.dex.res.tmp -D jack.android.min-api-level=o-b1 -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first --output-jack out/target/common/obj/JAVA_LIBRARIES/core-all_intermediates/classes.jack --output-dex out/target/common/obj/JAVA_LIBRARIES/core-all_intermediates/jack-rsc @out/target/common/obj/JAVA_LIBRARIES/core-all_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:49:20.168: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #36 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:49:24.462: INFO: com.android.jack.server.tasks.JackTask: Compilation #35 return exit code 0
+08:49:24.462: INFO: com.android.jack.server.tasks.JackTask: Compilation #35 run in 5223 ms
+08:49:24.486: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:49:24.486: INFO: com.android.jack.server.tasks.JackTask: Compilation #37, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=9 --import prebuilts/sdk/9/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v9_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v9_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:49:24.486: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #37 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:49:44.153: INFO: com.android.jack.server.tasks.JackTask: Compilation #37 return exit code 0
+08:49:44.153: INFO: com.android.jack.server.tasks.JackTask: Compilation #37 run in 19665 ms
+08:49:44.162: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:49:44.162: INFO: com.android.jack.server.tasks.JackTask: Compilation #38, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=8 --import prebuilts/sdk/8/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v8_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v8_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:49:44.162: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #38 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:49:57.823: INFO: com.android.jack.server.tasks.JackTask: Compilation #38 return exit code 0
+08:49:57.823: INFO: com.android.jack.server.tasks.JackTask: Compilation #38 run in 13657 ms
+08:49:57.827: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:49:57.827: INFO: com.android.jack.server.tasks.JackTask: Compilation #39, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=21 --import prebuilts/sdk/21/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v21_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v21_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:49:57.827: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #39 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:50:24.238: INFO: com.android.jack.server.tasks.JackTask: Compilation #36 return exit code 0
+08:50:24.238: INFO: com.android.jack.server.tasks.JackTask: Compilation #36 run in 64031 ms
+08:50:24.240: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:50:24.241: INFO: com.android.jack.server.tasks.JackTask: Compilation #40, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=1 --import prebuilts/maven_repo/android/android/arch/core/common/1.0.0/common-1.0.0.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/apptoolkit-arch-core-common_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/apptoolkit-arch-core-common_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:50:24.241: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #40 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:50:24.354: INFO: com.android.jack.server.tasks.JackTask: Compilation #40 return exit code 0
+08:50:24.354: INFO: com.android.jack.server.tasks.JackTask: Compilation #40 run in 112 ms
+08:50:24.355: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:50:24.355: INFO: com.android.jack.server.tasks.JackTask: Compilation #41, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=1 --import prebuilts/maven_repo/android/android/arch/lifecycle/common/1.0.0/common-1.0.0.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/apptoolkit-lifecycle-common_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/apptoolkit-lifecycle-common_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:50:24.355: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #41 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:50:24.561: INFO: com.android.jack.server.tasks.JackTask: Compilation #41 return exit code 0
+08:50:24.561: INFO: com.android.jack.server.tasks.JackTask: Compilation #41 run in 205 ms
+08:50:24.568: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:50:24.569: INFO: com.android.jack.server.tasks.JackTask: Compilation #42, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v9_intermediates/classes.jack --import out/target/common/obj/JAVA_LIBRARIES/jacoco-asm_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=9 --output-jack out/target/common/obj/JAVA_LIBRARIES/jacocoagent_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/jacocoagent_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:50:24.569: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #42 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:50:27.450: INFO: com.android.jack.server.tasks.JackTask: Compilation #42 return exit code 0
+08:50:27.450: INFO: com.android.jack.server.tasks.JackTask: Compilation #42 run in 2880 ms
+08:50:27.451: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:50:27.451: INFO: com.android.jack.server.tasks.JackTask: Compilation #43, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v9_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=9 --output-jack out/target/common/obj/JAVA_LIBRARIES/libprotobuf-java-nano_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/libprotobuf-java-nano_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:50:27.451: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #43 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:50:27.812: INFO: com.android.jack.server.tasks.JackTask: Compilation #39 return exit code 0
+08:50:27.812: INFO: com.android.jack.server.tasks.JackTask: Compilation #39 run in 29982 ms
+08:50:27.813: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:50:27.814: INFO: com.android.jack.server.tasks.JackTask: Compilation #44, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v9_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=9 --output-jack out/target/common/obj/JAVA_LIBRARIES/com.android.vcard_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/com.android.vcard_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:50:27.814: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #44 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:50:28.299: INFO: com.android.jack.server.tasks.JackTask: Compilation #43 return exit code 0
+08:50:28.299: INFO: com.android.jack.server.tasks.JackTask: Compilation #43 run in 847 ms
+08:50:28.300: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:50:28.300: INFO: com.android.jack.server.tasks.JackTask: Compilation #45, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v8_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=8 --output-jack out/target/common/obj/JAVA_LIBRARIES/libprotobuf-java-micro_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/libprotobuf-java-micro_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:50:28.300: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #45 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:50:28.882: INFO: com.android.jack.server.tasks.JackTask: Compilation #45 return exit code 0
+08:50:28.882: INFO: com.android.jack.server.tasks.JackTask: Compilation #45 run in 581 ms
+08:50:28.886: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:50:28.886: INFO: com.android.jack.server.tasks.JackTask: Compilation #46, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=1 --import out/target/common/obj/JAVA_LIBRARIES/apptoolkit-lifecycle-runtime_intermediates/aar/classes.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/apptoolkit-lifecycle-runtime_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/apptoolkit-lifecycle-runtime_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:50:28.886: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #46 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:50:29.306: INFO: com.android.jack.server.tasks.JackTask: Compilation #46 return exit code 0
+08:50:29.306: INFO: com.android.jack.server.tasks.JackTask: Compilation #46 run in 419 ms
+08:50:29.504: INFO: com.android.jack.server.tasks.JackTask: Compilation #44 return exit code 0
+08:50:29.504: INFO: com.android.jack.server.tasks.JackTask: Compilation #44 run in 1688 ms
+08:50:29.510: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+08:50:29.511: INFO: com.android.jack.server.JackHttpServer: Start timer
+08:50:32.100: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:50:32.100: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to WORK
+08:50:32.100: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+08:50:32.100: INFO: com.android.jack.server.tasks.JackTask: Compilation #47, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v8_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=8 --output-jack out/target/common/obj/JAVA_LIBRARIES/android-common_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/android-common_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:50:32.100: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #47 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:50:33.229: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:50:33.230: INFO: com.android.jack.server.tasks.JackTask: Compilation #48, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v8_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=8 --output-jack out/target/common/obj/JAVA_LIBRARIES/jsr305_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/jsr305_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:50:33.230: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #48 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:50:33.855: INFO: com.android.jack.server.tasks.JackTask: Compilation #48 return exit code 0
+08:50:33.855: INFO: com.android.jack.server.tasks.JackTask: Compilation #48 run in 623 ms
+08:50:33.869: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:50:33.870: INFO: com.android.jack.server.tasks.JackTask: Compilation #49, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v8_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=8 --output-jack out/target/common/obj/JAVA_LIBRARIES/xmp_toolkit_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/xmp_toolkit_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:50:33.871: INFO: com.android.jack.server.tasks.JackTask: Compilation #47 return exit code 0
+08:50:33.871: INFO: com.android.jack.server.tasks.JackTask: Compilation #47 run in 1769 ms
+08:50:33.874: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #49 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:50:34.001: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:50:34.001: INFO: com.android.jack.server.tasks.JackTask: Compilation #50, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v9_intermediates/classes.jack --import out/target/common/obj/JAVA_LIBRARIES/jsr305_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=9 --output-jack out/target/common/obj/JAVA_LIBRARIES/guava_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/guava_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:50:34.001: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #50 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:50:36.525: INFO: com.android.jack.server.tasks.JackTask: Compilation #49 return exit code 0
+08:50:36.526: INFO: com.android.jack.server.tasks.JackTask: Compilation #49 run in 2649 ms
+08:50:37.650: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:50:37.651: INFO: com.android.jack.server.tasks.JackTask: Compilation #51, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=15 --import prebuilts/sdk/15/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v15_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v15_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:50:37.652: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #51 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:50:44.124: INFO: com.android.jack.server.tasks.JackTask: Compilation #50 return exit code 0
+08:50:44.124: INFO: com.android.jack.server.tasks.JackTask: Compilation #50 run in 10121 ms
+08:50:44.125: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:50:44.126: INFO: com.android.jack.server.tasks.JackTask: Compilation #52, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=17 --import prebuilts/sdk/17/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v17_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v17_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:50:44.126: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #52 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:50:55.917: INFO: com.android.jack.server.tasks.JackTask: Compilation #51 return exit code 0
+08:50:55.918: INFO: com.android.jack.server.tasks.JackTask: Compilation #51 run in 18264 ms
+08:50:55.920: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:50:55.920: INFO: com.android.jack.server.tasks.JackTask: Compilation #53, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=25 --import prebuilts/sdk/25/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v25_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v25_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:50:55.920: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #53 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:51:03.259: INFO: com.android.jack.server.tasks.JackTask: Compilation #52 return exit code 0
+08:51:03.259: INFO: com.android.jack.server.tasks.JackTask: Compilation #52 run in 19132 ms
+08:51:03.261: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:51:03.265: INFO: com.android.jack.server.tasks.JackTask: Compilation #54, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=19 --import prebuilts/sdk/19/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v19_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v19_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:51:03.265: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #54 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:51:25.957: INFO: com.android.jack.server.tasks.JackTask: Compilation #53 return exit code 0
+08:51:25.957: INFO: com.android.jack.server.tasks.JackTask: Compilation #53 run in 30036 ms
+08:51:25.958: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:51:25.958: INFO: com.android.jack.server.tasks.JackTask: Compilation #55, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=14 --import prebuilts/sdk/14/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v14_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v14_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:51:25.958: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #55 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:51:28.447: INFO: com.android.jack.server.tasks.JackTask: Compilation #54 return exit code 0
+08:51:28.448: INFO: com.android.jack.server.tasks.JackTask: Compilation #54 run in 25181 ms
+08:51:28.448: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:51:28.449: INFO: com.android.jack.server.tasks.JackTask: Compilation #56, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=18 --import prebuilts/sdk/18/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v18_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v18_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:51:28.449: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #56 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:51:48.040: INFO: com.android.jack.server.tasks.JackTask: Compilation #55 return exit code 0
+08:51:48.040: INFO: com.android.jack.server.tasks.JackTask: Compilation #55 run in 22081 ms
+08:51:48.041: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:51:48.041: INFO: com.android.jack.server.tasks.JackTask: Compilation #57, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v15_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=15 --output-jack out/target/common/obj/JAVA_LIBRARIES/calendar-common_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/calendar-common_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:51:48.041: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #57 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:51:48.849: INFO: com.android.jack.server.tasks.JackTask: Compilation #57 return exit code 0
+08:51:48.849: INFO: com.android.jack.server.tasks.JackTask: Compilation #57 run in 807 ms
+08:51:48.852: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:51:48.853: INFO: com.android.jack.server.tasks.JackTask: Compilation #58, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v17_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=17 --output-jack out/target/common/obj/JAVA_LIBRARIES/volley_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/volley_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:51:48.854: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #58 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:51:50.036: INFO: com.android.jack.server.tasks.JackTask: Compilation #58 return exit code 0
+08:51:50.036: INFO: com.android.jack.server.tasks.JackTask: Compilation #58 run in 1181 ms
+08:51:50.037: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:51:50.037: INFO: com.android.jack.server.tasks.JackTask: Compilation #59, command '@build/core/jack-default.args -g -D jack.java.source.version=1.8 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v25_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=25 --output-jack out/target/common/obj/JAVA_LIBRARIES/hamcrest_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/hamcrest_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:51:50.037: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #59 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:51:50.644: INFO: com.android.jack.server.tasks.JackTask: Compilation #59 return exit code 0
+08:51:50.644: INFO: com.android.jack.server.tasks.JackTask: Compilation #59 run in 604 ms
+08:51:50.644: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:51:50.644: INFO: com.android.jack.server.tasks.JackTask: Compilation #60, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v19_intermediates/classes.jack --import out/target/common/obj/JAVA_LIBRARIES/guava_intermediates/classes.jack --import out/target/common/obj/JAVA_LIBRARIES/jsr305_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=19 --output-jack out/target/common/obj/JAVA_LIBRARIES/owasp-html-sanitizer_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/owasp-html-sanitizer_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:51:50.649: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #60 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:51:53.756: INFO: com.android.jack.server.tasks.JackTask: Compilation #56 return exit code 0
+08:51:53.756: INFO: com.android.jack.server.tasks.JackTask: Compilation #56 run in 25306 ms
+08:51:53.757: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:51:53.757: INFO: com.android.jack.server.tasks.JackTask: Compilation #61, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v8_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=8 --output-jack out/target/common/obj/JAVA_LIBRARIES/cr_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/cr_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:51:53.757: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #61 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:51:54.128: INFO: com.android.jack.server.tasks.JackTask: Compilation #61 return exit code 0
+08:51:54.129: INFO: com.android.jack.server.tasks.JackTask: Compilation #61 run in 369 ms
+08:51:54.129: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:51:54.130: INFO: com.android.jack.server.tasks.JackTask: Compilation #62, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v9_intermediates/classes.jack --import-resource out/target/common/obj/JAVA_LIBRARIES/mp4parser_intermediates/classes.jack.res.tmp -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=9 --output-jack out/target/common/obj/JAVA_LIBRARIES/mp4parser_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/mp4parser_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:51:54.130: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #62 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:51:54.182: INFO: com.android.jack.server.tasks.JackTask: Compilation #60 return exit code 0
+08:51:54.182: INFO: com.android.jack.server.tasks.JackTask: Compilation #60 run in 3525 ms
+08:51:54.182: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:51:54.201: INFO: com.android.jack.server.tasks.JackTask: Compilation #63, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=16 --import prebuilts/sdk/16/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v16_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v16_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:51:54.201: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #63 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:51:57.010: INFO: com.android.jack.server.tasks.JackTask: Compilation #62 return exit code 0
+08:51:57.010: INFO: com.android.jack.server.tasks.JackTask: Compilation #62 run in 2877 ms
+08:51:57.010: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:51:57.012: INFO: com.android.jack.server.tasks.JackTask: Compilation #64, command '@build/core/jack-default.args -g -D jack.java.source.version=1.8 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v25_intermediates/classes.jack --import out/target/common/obj/JAVA_LIBRARIES/hamcrest_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=25 --output-jack out/target/common/obj/JAVA_LIBRARIES/junit_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/junit_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:51:57.012: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #64 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:51:59.275: INFO: com.android.jack.server.tasks.JackTask: Compilation #64 return exit code 0
+08:51:59.275: INFO: com.android.jack.server.tasks.JackTask: Compilation #64 run in 2261 ms
+08:51:59.276: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:51:59.276: INFO: com.android.jack.server.tasks.JackTask: Compilation #65, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v21_intermediates/classes.jack --import out/target/common/obj/JAVA_LIBRARIES/jsr305_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=21 --output-jack out/target/common/obj/JAVA_LIBRARIES/latinime-common_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/latinime-common_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:51:59.276: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #65 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:52:00.035: INFO: com.android.jack.server.tasks.JackTask: Compilation #65 return exit code 0
+08:52:00.035: INFO: com.android.jack.server.tasks.JackTask: Compilation #65 run in 758 ms
+08:52:00.045: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:52:00.046: INFO: com.android.jack.server.tasks.JackTask: Compilation #66, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v14_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=14 --output-jack out/target/common/obj/JAVA_LIBRARIES/inputmethod-common_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/inputmethod-common_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:52:00.046: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #66 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:52:00.598: INFO: com.android.jack.server.tasks.JackTask: Compilation #66 return exit code 0
+08:52:00.598: INFO: com.android.jack.server.tasks.JackTask: Compilation #66 run in 551 ms
+08:52:23.429: INFO: com.android.jack.server.tasks.JackTask: Compilation #63 return exit code 0
+08:52:23.430: INFO: com.android.jack.server.tasks.JackTask: Compilation #63 run in 29222 ms
+08:52:23.436: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+08:52:23.436: INFO: com.android.jack.server.JackHttpServer: Start timer
+08:52:23.950: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+08:52:23.950: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to WORK
+08:52:23.950: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+08:52:23.950: INFO: com.android.jack.server.tasks.JackTask: Compilation #67, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v16_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=16 --output-jack out/target/common/obj/JAVA_LIBRARIES/com.android.gallery3d.common2_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/com.android.gallery3d.common2_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+08:52:23.950: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #67 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+08:52:25.617: INFO: com.android.jack.server.tasks.JackTask: Compilation #67 return exit code 0
+08:52:25.617: INFO: com.android.jack.server.tasks.JackTask: Compilation #67 run in 1665 ms
+08:52:25.618: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+08:52:25.618: INFO: com.android.jack.server.JackHttpServer: Start timer
+08:55:25.626: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to IDLE
+09:04:16.146: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+09:04:16.146: INFO: com.android.jack.server.JackHttpServer: Server mode changing from IDLE to WORK
+09:04:16.146: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+09:04:16.146: INFO: com.android.jack.server.tasks.JackTask: Compilation #68, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v8_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=8 --output-jack out/target/common/obj/JAVA_LIBRARIES/android-common-framesequence_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/android-common-framesequence_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+09:04:16.146: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #68 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+09:04:18.169: INFO: com.android.jack.server.tasks.JackTask: Compilation #68 return exit code 0
+09:04:18.170: INFO: com.android.jack.server.tasks.JackTask: Compilation #68 run in 2022 ms
+09:04:18.170: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+09:04:18.170: INFO: com.android.jack.server.JackHttpServer: Start timer
+09:04:24.191: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+09:04:24.192: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to WORK
+09:04:24.192: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+09:04:24.192: INFO: com.android.jack.server.tasks.JackTask: Compilation #69, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v9_intermediates/classes.jack --import-resource out/target/common/obj/JAVA_LIBRARIES/libphonenumber_intermediates/classes.jack.res.tmp -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=9 --output-jack out/target/common/obj/JAVA_LIBRARIES/libphonenumber_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/libphonenumber_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+09:04:24.192: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #69 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+09:04:26.881: INFO: com.android.jack.server.tasks.JackTask: Compilation #69 return exit code 0
+09:04:26.881: INFO: com.android.jack.server.tasks.JackTask: Compilation #69 run in 2688 ms
+09:04:26.881: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+09:04:26.881: INFO: com.android.jack.server.JackHttpServer: Start timer
+09:07:26.881: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to IDLE
+09:19:26.881: INFO: com.android.jack.server.JackHttpServer: Server mode changing from IDLE to DEEP_IDLE
+10:01:23.980: INFO: com.android.jack.server.router.RootContainer: Route request for GET /server
+10:01:23.983: INFO: com.android.jack.server.JackHttpServer: Server mode changing from DEEP_IDLE to WORK
+10:01:23.983: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+10:01:23.983: INFO: com.android.jack.server.tasks.GetVersions: Get server version(s)
+10:01:23.990: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+10:01:23.990: INFO: com.android.jack.server.JackHttpServer: Start timer
+10:01:24.063: INFO: com.android.jack.server.router.RootContainer: Route request for GET /server
+10:01:24.064: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to WORK
+10:01:24.064: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+10:01:24.064: INFO: com.android.jack.server.tasks.GetVersions: Get server version(s)
+10:01:24.064: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+10:01:24.065: INFO: com.android.jack.server.JackHttpServer: Start timer
+10:01:24.193: INFO: com.android.jack.server.router.RootContainer: Route request for HEAD /server
+10:01:24.193: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to WORK
+10:01:24.193: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+10:01:24.194: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+10:01:24.194: INFO: com.android.jack.server.JackHttpServer: Start timer
+10:01:24.339: INFO: com.android.jack.server.router.RootContainer: Route request for HEAD /jack
+10:01:24.339: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to WORK
+10:01:24.339: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+10:01:24.339: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+10:01:24.339: INFO: com.android.jack.server.JackHttpServer: Start timer
+10:01:26.273: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:01:26.275: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to WORK
+10:01:26.275: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+10:01:26.276: INFO: com.android.jack.server.tasks.JackTask: Compilation #70, command '@build/core/jack-default.args -D jack.import.jar.debug-info=false -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=1 --import external/jacoco/asm-debug-all-5.0.1.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/jacoco-asm_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/jacoco-asm_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:01:26.276: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #70 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:01:27.544: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:01:27.544: INFO: com.android.jack.server.tasks.JackTask: Compilation #71, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=9 --import prebuilts/sdk/9/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v9_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v9_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:01:27.544: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #71 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:01:29.601: INFO: com.android.jack.server.tasks.JackTask: Compilation #70 return exit code 0
+10:01:29.601: INFO: com.android.jack.server.tasks.JackTask: Compilation #70 run in 3324 ms
+10:01:29.602: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:01:29.602: INFO: com.android.jack.server.tasks.JackTask: Compilation #72, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=21 --import prebuilts/sdk/21/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v21_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v21_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:01:29.603: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #72 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:01:38.839: INFO: com.android.jack.server.tasks.JackTask: Compilation #71 return exit code 0
+10:01:38.840: INFO: com.android.jack.server.tasks.JackTask: Compilation #71 run in 11294 ms
+10:01:38.851: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:01:38.851: INFO: com.android.jack.server.tasks.JackTask: Compilation #73, command '@build/core/jack-default.args -g -D jack.java.source.version=1.8 --import-resource out/target/common/obj/JAVA_LIBRARIES/core-all_intermediates/with-local/classes.dex.res.tmp -D jack.android.min-api-level=o-b1 -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first --output-jack out/target/common/obj/JAVA_LIBRARIES/core-all_intermediates/classes.jack --output-dex out/target/common/obj/JAVA_LIBRARIES/core-all_intermediates/jack-rsc @out/target/common/obj/JAVA_LIBRARIES/core-all_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:01:38.851: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #73 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:01:58.107: INFO: com.android.jack.server.tasks.JackTask: Compilation #72 return exit code 0
+10:01:58.107: INFO: com.android.jack.server.tasks.JackTask: Compilation #72 run in 28504 ms
+10:01:58.109: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:01:58.110: INFO: com.android.jack.server.tasks.JackTask: Compilation #74, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=8 --import prebuilts/sdk/8/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v8_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v8_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:01:58.110: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #74 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:02:11.229: INFO: com.android.jack.server.tasks.JackTask: Compilation #74 return exit code 0
+10:02:11.229: INFO: com.android.jack.server.tasks.JackTask: Compilation #74 run in 13118 ms
+10:02:11.229: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:02:11.230: INFO: com.android.jack.server.tasks.JackTask: Compilation #75, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=1 --import out/target/common/obj/JAVA_LIBRARIES/apptoolkit-lifecycle-runtime_intermediates/aar/classes.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/apptoolkit-lifecycle-runtime_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/apptoolkit-lifecycle-runtime_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:02:11.230: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #75 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:02:11.435: INFO: com.android.jack.server.tasks.JackTask: Compilation #75 return exit code 0
+10:02:11.435: INFO: com.android.jack.server.tasks.JackTask: Compilation #75 run in 200 ms
+10:02:11.435: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:02:11.435: INFO: com.android.jack.server.tasks.JackTask: Compilation #76, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=1 --import prebuilts/maven_repo/android/android/arch/core/common/1.0.0/common-1.0.0.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/apptoolkit-arch-core-common_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/apptoolkit-arch-core-common_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:02:11.436: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #76 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:02:11.585: INFO: com.android.jack.server.tasks.JackTask: Compilation #76 return exit code 0
+10:02:11.585: INFO: com.android.jack.server.tasks.JackTask: Compilation #76 run in 149 ms
+10:02:11.586: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:02:11.586: INFO: com.android.jack.server.tasks.JackTask: Compilation #77, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v9_intermediates/classes.jack --import out/target/common/obj/JAVA_LIBRARIES/jacoco-asm_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=9 --output-jack out/target/common/obj/JAVA_LIBRARIES/jacocoagent_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/jacocoagent_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:02:11.586: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #77 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:02:15.434: INFO: com.android.jack.server.tasks.JackTask: Compilation #77 return exit code 0
+10:02:15.434: INFO: com.android.jack.server.tasks.JackTask: Compilation #77 run in 3846 ms
+10:02:15.437: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:02:15.437: INFO: com.android.jack.server.tasks.JackTask: Compilation #78, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v9_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=9 --output-jack out/target/common/obj/JAVA_LIBRARIES/libprotobuf-java-nano_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/libprotobuf-java-nano_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:02:15.437: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #78 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:02:15.959: INFO: com.android.jack.server.tasks.JackTask: Compilation #78 return exit code 0
+10:02:15.960: INFO: com.android.jack.server.tasks.JackTask: Compilation #78 run in 517 ms
+10:02:15.960: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:02:15.960: INFO: com.android.jack.server.tasks.JackTask: Compilation #79, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v8_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=8 --output-jack out/target/common/obj/JAVA_LIBRARIES/libprotobuf-java-micro_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/libprotobuf-java-micro_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:02:15.960: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #79 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:02:16.347: INFO: com.android.jack.server.tasks.JackTask: Compilation #79 return exit code 0
+10:02:16.347: INFO: com.android.jack.server.tasks.JackTask: Compilation #79 run in 386 ms
+10:02:16.348: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:02:16.348: INFO: com.android.jack.server.tasks.JackTask: Compilation #80, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v9_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=9 --output-jack out/target/common/obj/JAVA_LIBRARIES/com.android.vcard_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/com.android.vcard_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:02:16.348: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #80 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:02:22.566: INFO: com.android.jack.server.tasks.JackTask: Compilation #80 return exit code 0
+10:02:22.573: INFO: com.android.jack.server.tasks.JackTask: Compilation #80 run in 6204 ms
+10:02:22.574: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:02:22.574: INFO: com.android.jack.server.tasks.JackTask: Compilation #81, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=1 --import prebuilts/maven_repo/android/android/arch/lifecycle/common/1.0.0/common-1.0.0.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/apptoolkit-lifecycle-common_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/apptoolkit-lifecycle-common_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:02:22.574: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #81 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:02:22.927: INFO: com.android.jack.server.tasks.JackTask: Compilation #81 return exit code 0
+10:02:22.927: INFO: com.android.jack.server.tasks.JackTask: Compilation #81 run in 352 ms
+10:02:24.290: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:02:24.290: INFO: com.android.jack.server.tasks.JackTask: Compilation #82, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v8_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=8 --output-jack out/target/common/obj/JAVA_LIBRARIES/android-common_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/android-common_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:02:24.290: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #82 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:02:26.294: INFO: com.android.jack.server.tasks.JackTask: Compilation #82 return exit code 0
+10:02:26.300: INFO: com.android.jack.server.tasks.JackTask: Compilation #82 run in 2003 ms
+10:02:26.591: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:02:26.591: INFO: com.android.jack.server.tasks.JackTask: Compilation #83, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v8_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=8 --output-jack out/target/common/obj/JAVA_LIBRARIES/xmp_toolkit_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/xmp_toolkit_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:02:26.591: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #83 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:02:28.640: INFO: com.android.jack.server.tasks.JackTask: Compilation #83 return exit code 0
+10:02:28.640: INFO: com.android.jack.server.tasks.JackTask: Compilation #83 run in 2043 ms
+10:02:28.645: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:02:28.645: INFO: com.android.jack.server.tasks.JackTask: Compilation #84, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v8_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=8 --output-jack out/target/common/obj/JAVA_LIBRARIES/jsr305_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/jsr305_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:02:28.645: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #84 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:02:29.308: INFO: com.android.jack.server.tasks.JackTask: Compilation #84 return exit code 0
+10:02:29.309: INFO: com.android.jack.server.tasks.JackTask: Compilation #84 run in 662 ms
+10:02:29.309: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:02:29.309: INFO: com.android.jack.server.tasks.JackTask: Compilation #85, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=17 --import prebuilts/sdk/17/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v17_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v17_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:02:29.309: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #85 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:02:33.375: INFO: com.android.jack.server.tasks.JackTask: Compilation #73 return exit code 0
+10:02:33.375: INFO: com.android.jack.server.tasks.JackTask: Compilation #73 run in 54512 ms
+10:02:33.375: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:02:33.376: INFO: com.android.jack.server.tasks.JackTask: Compilation #86, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=15 --import prebuilts/sdk/15/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v15_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v15_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:02:33.376: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #86 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:02:50.980: INFO: com.android.jack.server.tasks.JackTask: Compilation #85 return exit code 0
+10:02:50.980: INFO: com.android.jack.server.tasks.JackTask: Compilation #85 run in 21670 ms
+10:02:50.982: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:02:50.986: INFO: com.android.jack.server.tasks.JackTask: Compilation #87, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=25 --import prebuilts/sdk/25/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v25_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v25_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:02:50.986: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #87 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:02:55.714: INFO: com.android.jack.server.tasks.JackTask: Compilation #86 return exit code 0
+10:02:55.714: INFO: com.android.jack.server.tasks.JackTask: Compilation #86 run in 22337 ms
+10:02:55.714: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:02:55.715: INFO: com.android.jack.server.tasks.JackTask: Compilation #88, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v9_intermediates/classes.jack --import out/target/common/obj/JAVA_LIBRARIES/jsr305_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=9 --output-jack out/target/common/obj/JAVA_LIBRARIES/guava_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/guava_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:02:55.715: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #88 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:03:05.068: INFO: com.android.jack.server.tasks.JackTask: Compilation #88 return exit code 0
+10:03:05.068: INFO: com.android.jack.server.tasks.JackTask: Compilation #88 run in 9350 ms
+10:03:05.069: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:03:05.069: INFO: com.android.jack.server.tasks.JackTask: Compilation #89, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=19 --import prebuilts/sdk/19/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v19_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v19_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:03:05.069: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #89 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:03:16.320: INFO: com.android.jack.server.tasks.JackTask: Compilation #87 return exit code 0
+10:03:16.320: INFO: com.android.jack.server.tasks.JackTask: Compilation #87 run in 25333 ms
+10:03:16.320: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:03:16.321: INFO: com.android.jack.server.tasks.JackTask: Compilation #90, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=14 --import prebuilts/sdk/14/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v14_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v14_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:03:16.321: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #90 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:03:28.700: INFO: com.android.jack.server.tasks.JackTask: Compilation #89 return exit code 0
+10:03:28.700: INFO: com.android.jack.server.tasks.JackTask: Compilation #89 run in 23630 ms
+10:03:28.700: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:03:28.701: INFO: com.android.jack.server.tasks.JackTask: Compilation #91, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v17_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=17 --output-jack out/target/common/obj/JAVA_LIBRARIES/volley_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/volley_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:03:28.701: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #91 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:03:29.967: INFO: com.android.jack.server.tasks.JackTask: Compilation #91 return exit code 0
+10:03:29.967: INFO: com.android.jack.server.tasks.JackTask: Compilation #91 run in 1265 ms
+10:03:29.967: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:03:29.968: INFO: com.android.jack.server.tasks.JackTask: Compilation #92, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v15_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=15 --output-jack out/target/common/obj/JAVA_LIBRARIES/calendar-common_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/calendar-common_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:03:29.968: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #92 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:03:31.140: INFO: com.android.jack.server.tasks.JackTask: Compilation #92 return exit code 0
+10:03:31.140: INFO: com.android.jack.server.tasks.JackTask: Compilation #92 run in 1169 ms
+10:03:31.142: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:03:31.142: INFO: com.android.jack.server.tasks.JackTask: Compilation #93, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=18 --import prebuilts/sdk/18/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v18_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v18_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:03:31.142: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #93 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:03:37.331: INFO: com.android.jack.server.tasks.JackTask: Compilation #90 return exit code 0
+10:03:37.331: INFO: com.android.jack.server.tasks.JackTask: Compilation #90 run in 21009 ms
+10:03:37.332: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:03:37.332: INFO: com.android.jack.server.tasks.JackTask: Compilation #94, command '@build/core/jack-default.args -g -D jack.java.source.version=1.8 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v25_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=25 --output-jack out/target/common/obj/JAVA_LIBRARIES/hamcrest_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/hamcrest_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:03:37.332: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #94 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:03:37.770: INFO: com.android.jack.server.tasks.JackTask: Compilation #94 return exit code 0
+10:03:37.770: INFO: com.android.jack.server.tasks.JackTask: Compilation #94 run in 437 ms
+10:03:37.771: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:03:37.772: INFO: com.android.jack.server.tasks.JackTask: Compilation #95, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v19_intermediates/classes.jack --import out/target/common/obj/JAVA_LIBRARIES/guava_intermediates/classes.jack --import out/target/common/obj/JAVA_LIBRARIES/jsr305_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=19 --output-jack out/target/common/obj/JAVA_LIBRARIES/owasp-html-sanitizer_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/owasp-html-sanitizer_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:03:37.772: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #95 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:03:41.533: INFO: com.android.jack.server.tasks.JackTask: Compilation #95 return exit code 0
+10:03:41.533: INFO: com.android.jack.server.tasks.JackTask: Compilation #95 run in 3760 ms
+10:03:41.533: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:03:41.533: INFO: com.android.jack.server.tasks.JackTask: Compilation #96, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v8_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=8 --output-jack out/target/common/obj/JAVA_LIBRARIES/cr_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/cr_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:03:41.534: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #96 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:03:43.086: INFO: com.android.jack.server.tasks.JackTask: Compilation #96 return exit code 0
+10:03:43.086: INFO: com.android.jack.server.tasks.JackTask: Compilation #96 run in 1552 ms
+10:03:43.088: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:03:43.088: INFO: com.android.jack.server.tasks.JackTask: Compilation #97, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v9_intermediates/classes.jack --import-resource out/target/common/obj/JAVA_LIBRARIES/mp4parser_intermediates/classes.jack.res.tmp -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=9 --output-jack out/target/common/obj/JAVA_LIBRARIES/mp4parser_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/mp4parser_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:03:43.089: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #97 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:03:46.718: INFO: com.android.jack.server.tasks.JackTask: Compilation #97 return exit code 0
+10:03:46.718: INFO: com.android.jack.server.tasks.JackTask: Compilation #97 run in 3609 ms
+10:03:46.719: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:03:46.719: INFO: com.android.jack.server.tasks.JackTask: Compilation #98, command '@build/core/jack-default.args -g -D jack.java.source.version=1.8 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v25_intermediates/classes.jack --import out/target/common/obj/JAVA_LIBRARIES/hamcrest_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=25 --output-jack out/target/common/obj/JAVA_LIBRARIES/junit_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/junit_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:03:46.719: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #98 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:03:49.267: INFO: com.android.jack.server.tasks.JackTask: Compilation #98 return exit code 0
+10:03:49.267: INFO: com.android.jack.server.tasks.JackTask: Compilation #98 run in 2546 ms
+10:03:49.268: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:03:49.268: INFO: com.android.jack.server.tasks.JackTask: Compilation #99, command '@build/core/jack-default.args -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=16 --import prebuilts/sdk/16/android.jar --import-resource out/target/common/obj/JAVA_LIBRARIES/sdk_v16_intermediates/classes.jack.tmpjill.res --output-jack out/target/common/obj/JAVA_LIBRARIES/sdk_v16_intermediates/classes.jack', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:03:49.268: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #99 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:03:54.704: INFO: com.android.jack.server.tasks.JackTask: Compilation #93 return exit code 0
+10:03:54.704: INFO: com.android.jack.server.tasks.JackTask: Compilation #93 run in 23561 ms
+10:03:54.705: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:03:54.705: INFO: com.android.jack.server.tasks.JackTask: Compilation #100, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v21_intermediates/classes.jack --import out/target/common/obj/JAVA_LIBRARIES/jsr305_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=21 --output-jack out/target/common/obj/JAVA_LIBRARIES/latinime-common_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/latinime-common_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:03:54.706: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #100 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:03:55.233: INFO: com.android.jack.server.tasks.JackTask: Compilation #100 return exit code 0
+10:03:55.234: INFO: com.android.jack.server.tasks.JackTask: Compilation #100 run in 526 ms
+10:03:55.258: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:03:55.261: INFO: com.android.jack.server.tasks.JackTask: Compilation #101, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v14_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=14 --output-jack out/target/common/obj/JAVA_LIBRARIES/inputmethod-common_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/inputmethod-common_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:03:55.262: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #101 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:03:55.807: INFO: com.android.jack.server.tasks.JackTask: Compilation #101 return exit code 0
+10:03:55.807: INFO: com.android.jack.server.tasks.JackTask: Compilation #101 run in 544 ms
+10:04:16.641: INFO: com.android.jack.server.tasks.JackTask: Compilation #99 return exit code 0
+10:04:16.641: INFO: com.android.jack.server.tasks.JackTask: Compilation #99 run in 27372 ms
+10:04:16.642: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+10:04:16.642: INFO: com.android.jack.server.JackHttpServer: Start timer
+10:04:17.909: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:04:17.909: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to WORK
+10:04:17.909: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+10:04:17.910: INFO: com.android.jack.server.tasks.JackTask: Compilation #102, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v16_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=16 --output-jack out/target/common/obj/JAVA_LIBRARIES/com.android.gallery3d.common2_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/com.android.gallery3d.common2_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:04:17.910: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #102 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:04:19.859: INFO: com.android.jack.server.tasks.JackTask: Compilation #102 return exit code 0
+10:04:19.859: INFO: com.android.jack.server.tasks.JackTask: Compilation #102 run in 1948 ms
+10:04:19.861: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+10:04:19.861: INFO: com.android.jack.server.JackHttpServer: Start timer
+10:07:19.861: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to IDLE
+10:15:49.845: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:15:49.845: INFO: com.android.jack.server.JackHttpServer: Server mode changing from IDLE to WORK
+10:15:49.845: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+10:15:49.845: INFO: com.android.jack.server.tasks.JackTask: Compilation #103, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v8_intermediates/classes.jack -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=8 --output-jack out/target/common/obj/JAVA_LIBRARIES/android-common-framesequence_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/android-common-framesequence_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:15:49.845: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #103 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:15:51.402: INFO: com.android.jack.server.tasks.JackTask: Compilation #103 return exit code 0
+10:15:51.402: INFO: com.android.jack.server.tasks.JackTask: Compilation #103 run in 1552 ms
+10:15:51.402: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+10:15:51.403: INFO: com.android.jack.server.JackHttpServer: Start timer
+10:16:01.721: INFO: com.android.jack.server.router.RootContainer: Route request for POST /jack
+10:16:01.721: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to WORK
+10:16:01.721: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+10:16:01.721: INFO: com.android.jack.server.tasks.JackTask: Compilation #104, command '@build/core/jack-default.args -g -D jack.java.source.version=1.7 --classpath out/target/common/obj/JAVA_LIBRARIES/sdk_v9_intermediates/classes.jack --import-resource out/target/common/obj/JAVA_LIBRARIES/libphonenumber_intermediates/classes.jack.res.tmp -D jack.import.resource.policy=keep-first -D jack.import.type.policy=keep-first -D jack.android.min-api-level=9 --output-jack out/target/common/obj/JAVA_LIBRARIES/libphonenumber_intermediates/classes.jack @out/target/common/obj/JAVA_LIBRARIES/libphonenumber_intermediates/jack-rsc/java-source-list-uniq', pwd: '/home/austin/aosp', required Jack: Exact version 4.32.CANDIDATE
+10:16:01.721: INFO: com.android.jack.server.tasks.JackTask: Run Compilation #104 with Jack 1.3-rc7 'Douarn' (445000 d7be3910514558d6715ce455ce0861ae2f56925a by N/A) (4.32)
+10:16:07.503: INFO: com.android.jack.server.tasks.JackTask: Compilation #104 return exit code 0
+10:16:07.503: INFO: com.android.jack.server.tasks.JackTask: Compilation #104 run in 5781 ms
+10:16:07.503: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WORK to WAIT
+10:16:07.503: INFO: com.android.jack.server.JackHttpServer: Start timer
+10:19:07.504: INFO: com.android.jack.server.JackHttpServer: Server mode changing from WAIT to IDLE
+10:31:07.503: INFO: com.android.jack.server.JackHttpServer: Server mode changing from IDLE to DEEP_IDLE
+12:16:07.504: INFO: com.android.jack.server.JackHttpServer: Server mode changing from DEEP_IDLE to SLEEP
+22:00:43.836: INFO: com.android.jack.server.JackHttpServer: Server mode changing from SLEEP to SHUTDOWN
+22:00:43.837: INFO: com.android.jack.server.JackHttpServer: Cancel timer
+22:00:43.837: INFO: com.android.jack.server.JackHttpServer: Shutdowning service connection
+22:00:43.837: INFO: com.android.jack.server.JackHttpServer: # max of concurrent compilations: 2
+22:00:43.837: INFO: com.android.jack.server.JackHttpServer: # total of compilations: 105
+22:00:43.837: INFO: com.android.jack.server.JackHttpServer: # max of concurrent forward compilations: 0
+22:00:43.837: INFO: com.android.jack.server.JackHttpServer: # total of forward compilations: 0
+22:00:43.855: INFO: com.android.jack.server.JackHttpServer: Done
+22:00:43.855: INFO: com.android.jack.server.JackHttpServer: Shutdowning admin connection
+22:00:43.857: INFO: com.android.jack.server.JackHttpServer: Done

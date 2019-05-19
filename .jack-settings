@@ -1,0 +1,7 @@
+# Server settings
+SERVER_HOST=127.0.0.1
+SERVER_PORT_SERVICE=8076
+SERVER_PORT_ADMIN=8077
+
+# Internal, do not touch
+SETTING_VERSION=4
