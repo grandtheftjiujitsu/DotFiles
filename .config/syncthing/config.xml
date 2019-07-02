@@ -1,4 +1,4 @@
-<configuration version="28">
+<configuration version="29">
     <folder id="1e8gk-2xp9k" label="MusicFXPresets" path="/home/austin/mega/phone_backup/sdcard/MusicFXPresets" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="I6GZFI7-ZOWFMH4-NAGYVQW-YC6EJM6-NB6ZXTC-IA2VOFF-JYPJPMI-2VE6BAE" introducedBy=""></device>
@@ -18,7 +18,7 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
         <markerName>.stfolder</markerName>
-        <useLargeBlocks>false</useLargeBlocks>
+        <copyOwnershipFromParent>false</copyOwnershipFromParent>
     </folder>
     <folder id="4atjz-diqe9" label="Documents - Vault" path="/home/austin/documents/vault" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -39,7 +39,7 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
         <markerName>.stfolder</markerName>
-        <useLargeBlocks>false</useLargeBlocks>
+        <copyOwnershipFromParent>false</copyOwnershipFromParent>
     </folder>
     <folder id="7qksb-12f1w" label="Titanium Backup" path="/home/austin/mega/phone_backup/sdcard/TitaniumBackup/" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -60,7 +60,7 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
         <markerName>.stfolder</markerName>
-        <useLargeBlocks>false</useLargeBlocks>
+        <copyOwnershipFromParent>false</copyOwnershipFromParent>
     </folder>
     <folder id="eewmw-pwrj9" label="MagiskManager" path="/home/austin/mega/phone_backup/sdcard/MagiskManager/" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -81,7 +81,7 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
         <markerName>.stfolder</markerName>
-        <useLargeBlocks>false</useLargeBlocks>
+        <copyOwnershipFromParent>false</copyOwnershipFromParent>
     </folder>
     <folder id="gdarx-4afgz" label="Music" path="/home/austin/mega/phone_backup/sdcard/Music" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -102,7 +102,7 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
         <markerName>.stfolder</markerName>
-        <useLargeBlocks>false</useLargeBlocks>
+        <copyOwnershipFromParent>false</copyOwnershipFromParent>
     </folder>
     <folder id="gz53i-nerc4" label="Recordings" path="/home/austin/mega/phone_backup/sdcard/Recordings/" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -123,7 +123,7 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
         <markerName>.stfolder</markerName>
-        <useLargeBlocks>false</useLargeBlocks>
+        <copyOwnershipFromParent>false</copyOwnershipFromParent>
     </folder>
     <folder id="hd665-9xdcx" label="Notifications" path="/home/austin/mega/phone_backup/sdcard/Notifications" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -144,7 +144,7 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
         <markerName>.stfolder</markerName>
-        <useLargeBlocks>false</useLargeBlocks>
+        <copyOwnershipFromParent>false</copyOwnershipFromParent>
     </folder>
     <folder id="hdww7-xjmeh" label="PC Backup" path="/home/austin/mega/pc_backup" type="sendonly" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -164,7 +164,7 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
         <markerName>.stfolder</markerName>
-        <useLargeBlocks>false</useLargeBlocks>
+        <copyOwnershipFromParent>false</copyOwnershipFromParent>
     </folder>
     <folder id="jkh3j-acngb" label="Signal" path="/home/austin/mega/phone_backup/sdcard/Signal" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -185,7 +185,7 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
         <markerName>.stfolder</markerName>
-        <useLargeBlocks>false</useLargeBlocks>
+        <copyOwnershipFromParent>false</copyOwnershipFromParent>
     </folder>
     <folder id="knp5e-uwg5q" label="Download" path="/home/austin/mega/phone_backup/sdcard/Download/" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -206,7 +206,7 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
         <markerName>.stfolder</markerName>
-        <useLargeBlocks>false</useLargeBlocks>
+        <copyOwnershipFromParent>false</copyOwnershipFromParent>
     </folder>
     <folder id="kt3ng-9jr4v" label="Documents - Keys" path="/home/austin/documents/keys" type="sendonly" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -227,7 +227,7 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
         <markerName>.stfolder</markerName>
-        <useLargeBlocks>false</useLargeBlocks>
+        <copyOwnershipFromParent>false</copyOwnershipFromParent>
     </folder>
     <folder id="mqtg6-fa4dq" label="Ringtones" path="/home/austin/mega/phone_backup/sdcard/Ringtones/" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -248,7 +248,7 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
         <markerName>.stfolder</markerName>
-        <useLargeBlocks>false</useLargeBlocks>
+        <copyOwnershipFromParent>false</copyOwnershipFromParent>
     </folder>
     <folder id="sgc2x-au7zu" label="Playlists" path="/home/austin/mega/phone_backup/sdcard/Playlists/" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -269,7 +269,7 @@
         <paused>false</paused>
         <weakHashThresholdPct>25</weakHashThresholdPct>
         <markerName>.stfolder</markerName>
-        <useLargeBlocks>false</useLargeBlocks>
+        <copyOwnershipFromParent>false</copyOwnershipFromParent>
     </folder>
     <device id="I6GZFI7-ZOWFMH4-NAGYVQW-YC6EJM6-NB6ZXTC-IA2VOFF-JYPJPMI-2VE6BAE" name="Nexus 6P" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
@@ -328,10 +328,15 @@
         <releasesURL>https://upgrades.syncthing.net/meta.json</releasesURL>
         <overwriteRemoteDeviceNamesOnConnect>false</overwriteRemoteDeviceNamesOnConnect>
         <tempIndexMinBlocks>10</tempIndexMinBlocks>
+        <unackedNotificationID>crAutoEnabled</unackedNotificationID>
         <trafficClass>0</trafficClass>
         <defaultFolderPath>~</defaultFolderPath>
         <setLowPriority>true</setLowPriority>
         <maxConcurrentScans>0</maxConcurrentScans>
-        <minHomeDiskFreePct>0</minHomeDiskFreePct>
+        <crashReportingURL>https://crash.syncthing.net/newcrash</crashReportingURL>
+        <crashReportingEnabled>true</crashReportingEnabled>
+        <stunKeepaliveStartS>180</stunKeepaliveStartS>
+        <stunKeepaliveMinS>20</stunKeepaliveMinS>
+        <stunServer>default</stunServer>
     </options>
 </configuration>

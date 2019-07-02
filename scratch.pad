@@ -4,3 +4,5 @@ aosip - branch build
 - removed merge notes:  Makefile, block/Kconfig.iosched, 
 drivers/video/msm/mdss/Makefile
 - reverted drivers/platform/msm/qpnp-haptic.c
+
+

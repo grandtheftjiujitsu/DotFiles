@@ -1,318 +1,77 @@
-delay_full_scan: 1
-autocomp_accel_string: <Control>space
-num_undo_levels: 100
-autosave_file_prefix: 
-external_outputbox: 1:pylint:(C|R|E|F|W)\:[ ]*([0-9]+),[0-9]+\:(.*):-1:2:0:pylint '%f'|:
-external_outputbox: 1:php codesniffer:\:([0-9\:]+)\:(.*):-1:1:2:phpcs --report=emacs '%f'|:
-external_outputbox: 1:perl syntax check:(.*) at (/[a-zA-Z0-9/_.-]+) line ([0-9]+):2:3:1:perl -c '%f'|:
-external_outputbox: 1:php syntax check:(.*) in (/[a-zA-Z0-9/_.-]+) on line ([0-9]+):2:3:1:php -l -q -f '%f'|:
-external_outputbox: 1:php:(.*) in (/[a-zA-Z0-9/_.-]+) on line ([0-9]+):2:3:1:php '%f'|:
-external_outputbox: 1:xmllint XML checker:([a-zA-Z0-9/_.-]+)\\\:([0-9]+)\\\: (.*):1:2:3:xmllint --noout --valid '%f'|:
-external_outputbox: 1:javac:([a-zA-Z0-9/_.-]+)\:([0-9]+)\:(.*):1:2:3:javac '%f'|:
-external_outputbox: 1:tidy HTML validator:line ([0-9]+) column [0-9]+ - (.*):-1:1:2:tidy -qe '%i'|:
-external_outputbox: 1:weblint HTML checker:([a-zA-Z0-9/_.-]+) \\(([0-9\:]+)\\) (.*):1:2:3:weblint '%f'|:
-external_outputbox: 1:make:([a-zA-Z0-9/_.-]+)\:([0-9]+)\:(.*):1:2:3:cd %c && make|:
-editor_auto_close_brackets: 2
-cursor_highlight_color: #FFFF33
-load_reference: 1
+show_autocomp_reference: 1
+format_by_context: 1
+right_margin_pos: 80
 allow_the_use_of_font: 0
-block_folding_mode: 1
-tab_color_modified: #729FCF
+auto_update_meta_generator: 1
+editor_fg: #EEEEEC
+editor_font_string: monospace 10
+tab_color_loading: #555753
+tab_color_error: #EF2929
+editor_tab_indent_sel: 1
+clear_undo_on_save: 0
+encoding_search_Nbytes: 2048
+register_recent_mode: 2
+adv_textview_left_margin: 1
+autosave_file_prefix: 
+textstyles3: none:::::
+textstyles3: foldheader::#99FF99:0:0:0:
+textstyles3: searchresult:#000000:#FFFF57:0:0:0:
+textstyles3: blockmatch:#FFFFFF:#FF0000:0:0:0:
+textstyles3: preprocessor:#aaaa00::0:0:0:
+textstyles3: comment:#88888a8a8585::0:1:1:
+textstyles3: string:#009900::0:0:1:
+textstyles3: string-no-spell-check:#009900::0:0:0:
+textstyles3: special-string:#005400::0:0:1:
+textstyles3: special-string2:#00D000::0:0:1:
+textstyles3: special-string3:#999900::0:0:1:
+textstyles3: type:::1:0:0:
+textstyles3: special-type:#757550507b7b::1::0:
+textstyles3: function:#72729f9fcfcf::0:0:0:
+textstyles3: special-function:#e9cf67a767a7::::0:
+textstyles3: keyword:#ffff9a73fd40::1:0:0:
+textstyles3: special-keyword:#30ec8e8eb776::1::0:
+textstyles3: value:#72729f9fcfcf::0:0:1:
+textstyles3: special-value:#0000ffffffff::1::0:
+textstyles3: variable:#efef29292929::1:0:0:
+textstyles3: operator:#C86400::0:0:0:
+textstyles3: tag:#adad7f7fa8a8::1::0:
+textstyles3: special-tag:#fcfcafaf3e3e::1::0:
+textstyles3: special-tag2:#7373d2d21616::1::0:
+textstyles3: special-tag3:#FF9900::1::0:
+textstyles3: attribute:#4cfa5b20ee13::::0:
+textstyles3: special-attribute:#FF0000::::0:
+textstyles3: brackets:#ffff9a73fd40::1:0:0:
+textstyles3: warning:#FF0000::1:0:0:
+textstyles3: special-warning::#FF0000:::0:
+textstyles3: context-background::#dcf1ff:0:0:0:
+highlight_cursor: 0
+autosave_file_suffix: #
+auto_update_meta_date: 1
+leave_to_window_manager: 1
+right_margin: #990000
+visible_ws_mode: 0
+save_accelmap: 1
+strip_trailing_spaces_on_save: 0
+left_panel_left: 0
+smartindent: 0
 plugin_config: /usr/lib/bluefish/about.so:1:About Dialog:
+plugin_config: /usr/lib/bluefish/charmap.so:1:error loading plugin:
 plugin_config: /usr/lib/bluefish/entities.so:1:Convert Entities:
 plugin_config: /usr/lib/bluefish/htmlbar.so:1:HTML Features:
 plugin_config: /usr/lib/bluefish/infbrowser.so:0:Info Browser:
 plugin_config: /usr/lib/bluefish/snippets.so:1:Code Snippets:
-plugin_config: /usr/lib/bluefish/charmap.so:1:error loading plugin:
 plugin_config: /usr/lib/bluefish/zencoding.so:1:zencoding:
-encoding_search_Nbytes: 2048
-auto_update_meta_author: 1
-editor_smart_cursor: 1
-tab_color_error: #EF2929
-tab_color_loading: #555753
-textstyles3: none:::::
-textstyles3: context-background::#dcf1ff:0:0:0:
-textstyles3: special-warning::#FF0000:::0:
-textstyles3: warning:#FF0000::1:0:0:
-textstyles3: brackets:#ffff9a73fd40::1:0:0:
-textstyles3: special-attribute:#FF0000::::0:
-textstyles3: attribute:#4cfa5b20ee13::::0:
-textstyles3: special-tag3:#FF9900::1::0:
-textstyles3: special-tag2:#7373d2d21616::1::0:
-textstyles3: special-tag:#fcfcafaf3e3e::1::0:
-textstyles3: tag:#adad7f7fa8a8::1::0:
-textstyles3: operator:#C86400::0:0:0:
-textstyles3: variable:#efef29292929::1:0:0:
-textstyles3: special-value:#0000ffffffff::1::0:
-textstyles3: value:#72729f9fcfcf::0:0:1:
-textstyles3: special-keyword:#30ec8e8eb776::1::0:
-textstyles3: keyword:#ffff9a73fd40::1:0:0:
-textstyles3: special-function:#e9cf67a767a7::::0:
-textstyles3: function:#72729f9fcfcf::0:0:0:
-textstyles3: special-type:#757550507b7b::1::0:
-textstyles3: type:::1:0:0:
-textstyles3: special-string3:#999900::0:0:1:
-textstyles3: special-string2:#00D000::0:0:1:
-textstyles3: special-string:#005400::0:0:1:
-textstyles3: string-no-spell-check:#009900::0:0:0:
-textstyles3: string:#009900::0:0:1:
-textstyles3: comment:#88888a8a8585::0:1:1:
-textstyles3: preprocessor:#aaaa00::0:0:0:
-textstyles3: blockmatch:#FFFFFF:#FF0000:0:0:0:
-textstyles3: searchresult:#000000:#FFFF57:0:0:0:
-textstyles3: foldheader::#99FF99:0:0:0:
-newfile_default_encoding: UTF-8
-bflang_options: ASP:load_completion:1:
-bflang_options: ASP:load_reference:1:
-bflang_options: ASP:show_in_menu:1:
-bflang_options: ASP-VBS:JQuery:0:
-bflang_options: ASP-VBS:autocomplete-html-entities:0:
-bflang_options: ASP-VBS:autocomplete_tags:1:
-bflang_options: ASP-VBS:javascript_css_properties:1:
-bflang_options: ASP-VBS:javascript_object_methods:1:
-bflang_options: ASP-VBS:load_completion:1:
-bflang_options: ASP-VBS:load_reference:1:
-bflang_options: ASP-VBS:show_in_menu:1:
-bflang_options: Ada:Parentheses block_foldable:0:
-bflang_options: Ada:show_in_menu:1:
-bflang_options: Bflang2:load_completion:1:
-bflang_options: Bflang2:load_reference:1:
-bflang_options: Bflang2:show_in_menu:0:
-bflang_options: C:Curly brackets block_foldable:1:
-bflang_options: C:Parentheses block_foldable:0:
-bflang_options: C:Square brackets block_foldable:0:
-bflang_options: C:autocompl_with_semicolon:0:
-bflang_options: C:load_completion:1:
-bflang_options: C:load_glib_functions:0:
-bflang_options: C:load_gobject_functions:0:
-bflang_options: C:load_gtk_functions:0:
-bflang_options: C:load_libc_functions:1:
-bflang_options: C:load_reference:1:
-bflang_options: C:show_in_menu:1:
-bflang_options: C:string_is_block:0:
-bflang_options: C++:Parentheses block_foldable:0:
-bflang_options: C++:load_completion:1:
-bflang_options: C++:load_reference:1:
-bflang_options: C++:show_in_menu:1:
-bflang_options: CFML:JQuery:0:
-bflang_options: CFML:attribute_string_is_block:0:
-bflang_options: CFML:autocomplete-html-entities:0:
-bflang_options: CFML:javascript_css_properties:1:
-bflang_options: CFML:javascript_object_methods:1:
-bflang_options: CFML:load_completion:1:
-bflang_options: CFML:load_reference:1:
-bflang_options: CFML:show_in_menu:0:
-bflang_options: CSS:load_completion:1:
-bflang_options: CSS:load_reference:1:
-bflang_options: CSS:show_in_menu:1:
-bflang_options: Chuck:Parentheses block_foldable:0:
-bflang_options: Chuck:load_completion:1:
-bflang_options: Chuck:load_reference:1:
-bflang_options: Chuck:show_in_menu:0:
-bflang_options: Clojure:Parentheses block_foldable:0:
-bflang_options: Clojure:show_in_menu:0:
-bflang_options: D:Parentheses block_foldable:0:
-bflang_options: D:show_in_menu:1:
-bflang_options: Diff/Patch:show_in_menu:0:
-bflang_options: Generic HTML:JQuery:0:
-bflang_options: Generic HTML:Javascript Curly brackets block_foldable:1:
-bflang_options: Generic HTML:Javascript Parentheses block_foldable:0:
-bflang_options: Generic HTML:Javascript Square brackets block_foldable:0:
-bflang_options: Generic HTML:attribute_string_is_block:0:
-bflang_options: Generic HTML:autocomplete-html-entities:0:
-bflang_options: Generic HTML:autocomplete_javascript_var:1:
-bflang_options: Generic HTML:autocomplete_tags:1:
-bflang_options: Generic HTML:html-block_foldable:0:
-bflang_options: Generic HTML:javascript_css_properties:1:
-bflang_options: Generic HTML:javascript_object_methods:1:
-bflang_options: Generic HTML:load_completion:1:
-bflang_options: Generic HTML:load_reference:1:
-bflang_options: Generic HTML:self_close_singleton_tags:0:
-bflang_options: Generic HTML:show_in_menu:1:
-bflang_options: Generic HTML:stretch_tag_block:1:
-bflang_options: Google Go:Parentheses block_foldable:0:
-bflang_options: Google Go:load_completion:1:
-bflang_options: Google Go:load_reference:1:
-bflang_options: Google Go:show_in_menu:1:
-bflang_options: HTML5:JQuery:0:
-bflang_options: HTML5:Javascript Curly brackets block_foldable:1:
-bflang_options: HTML5:Javascript Parentheses block_foldable:0:
-bflang_options: HTML5:Javascript Square brackets block_foldable:0:
-bflang_options: HTML5:attribute_string_is_block:0:
-bflang_options: HTML5:autocomplete_javascript_var:1:
-bflang_options: HTML5:autocomplete_tags:1:
-bflang_options: HTML5:html-block_foldable:0:
-bflang_options: HTML5:javascript_css_properties:1:
-bflang_options: HTML5:javascript_object_methods:1:
-bflang_options: HTML5:load_completion:1:
-bflang_options: HTML5:load_reference:1:
-bflang_options: HTML5:show_in_menu:1:
-bflang_options: HTML5:stretch_tag_block:1:
-bflang_options: Highlighter:load_completion:1:
-bflang_options: Highlighter:show_in_menu:0:
-bflang_options: JSON:load_reference:1:
-bflang_options: JSON:show_in_menu:1:
-bflang_options: JSP:Parentheses block_foldable:0:
-bflang_options: JSP:autocomplete_tags:1:
-bflang_options: JSP:load_completion:1:
-bflang_options: JSP:load_reference:1:
-bflang_options: JSP:show_in_menu:1:
-bflang_options: Java:Parentheses block_foldable:0:
-bflang_options: Java:load_completion:1:
-bflang_options: Java:load_reference:1:
-bflang_options: Java:show_in_menu:1:
-bflang_options: Javascript:JQuery:0:
-bflang_options: Javascript:autocomplete_javascript_var:1:
-bflang_options: Javascript:autocomplete_with_newlines:0:
-bflang_options: Javascript:javascript_css_properties:1:
-bflang_options: Javascript:javascript_object_methods:1:
-bflang_options: Javascript:load_completion:1:
-bflang_options: Javascript:load_reference:1:
-bflang_options: Javascript:show_in_menu:1:
-bflang_options: Latex:show_in_menu:0:
-bflang_options: Lua:Parentheses block_foldable:0:
-bflang_options: Lua:load_completion:1:
-bflang_options: Lua:load_reference:1:
-bflang_options: Lua:show_in_menu:1:
-bflang_options: Mediawiki:attribute_string_is_block:0:
-bflang_options: Mediawiki:autocomplete_tags:1:
-bflang_options: Mediawiki:load_completion:1:
-bflang_options: Mediawiki:load_reference:1:
-bflang_options: Mediawiki:show_in_menu:0:
-bflang_options: NSIS:load_completion:1:
-bflang_options: NSIS:show_in_menu:0:
-bflang_options: Octave:Parentheses block_foldable:0:
-bflang_options: Octave:load_completion:1:
-bflang_options: Octave:load_reference:1:
-bflang_options: Octave:show_in_menu:0:
-bflang_options: PHP:C style comment_foldable:1:
-bflang_options: PHP:Curly brackets block_foldable:1:
-bflang_options: PHP:JQuery:0:
-bflang_options: PHP:Javascript Curly brackets block_foldable:1:
-bflang_options: PHP:Javascript Parentheses block_foldable:0:
-bflang_options: PHP:Javascript Square brackets block_foldable:0:
-bflang_options: PHP:PHP block_foldable:1:
-bflang_options: PHP:Parentheses block_foldable:0:
-bflang_options: PHP:Square brackets block_foldable:0:
-bflang_options: PHP:attribute_string_is_block:0:
-bflang_options: PHP:autocomplete-html-entities:0:
-bflang_options: PHP:autocomplete_PHP_function:1:
-bflang_options: PHP:autocomplete_PHP_variable:1:
-bflang_options: PHP:autocomplete_javascript_var:1:
-bflang_options: PHP:html-block_foldable:0:
-bflang_options: PHP:javascript_css_properties:1:
-bflang_options: PHP:javascript_object_methods:1:
-bflang_options: PHP:load_completion:1:
-bflang_options: PHP:load_php_functions:1:
-bflang_options: PHP:load_reference:1:
-bflang_options: PHP:php_short_open_tag:1:
-bflang_options: PHP:self_close_singleton_tags:0:
-bflang_options: PHP:show_in_menu:1:
-bflang_options: PHP:sql-in-php-string:1:
-bflang_options: PHP:stretch_tag_block:1:
-bflang_options: Pascal and Delpi:show_in_menu:0:
-bflang_options: Perl:Parentheses block_foldable:0:
-bflang_options: Perl:show_in_menu:1:
-bflang_options: Po:show_in_menu:0:
-bflang_options: Processing:load_completion:1:
-bflang_options: Processing:load_reference:1:
-bflang_options: Processing:show_in_menu:0:
-bflang_options: Processing:undescribed_methods:1:
-bflang_options: Python:Parentheses block_foldable:0:
-bflang_options: Python:show_in_menu:1:
-bflang_options: Python:string_is_block:0:
-bflang_options: R:Parentheses block_foldable:0:
-bflang_options: R:show_in_menu:1:
-bflang_options: Ruby:Parentheses block_foldable:0:
-bflang_options: Ruby:show_in_menu:1:
-bflang_options: SQL:Parentheses block_foldable:0:
-bflang_options: SQL:show_in_menu:0:
-bflang_options: SVG:autocomplete_tags:1:
-bflang_options: SVG:load_completion:1:
-bflang_options: SVG:load_reference:1:
-bflang_options: SVG:show_in_menu:0:
-bflang_options: Sass:load_completion:1:
-bflang_options: Sass:load_reference:1:
-bflang_options: Sass:show_in_menu:0:
-bflang_options: Scheme:Parentheses block_foldable:0:
-bflang_options: Scheme:show_in_menu:0:
-bflang_options: Shell:Coreutils:1:
-bflang_options: Shell:Parentheses block_foldable:0:
-bflang_options: Shell:show_in_menu:1:
-bflang_options: Smarty template:JQuery:0:
-bflang_options: Smarty template:Parentheses block_foldable:0:
-bflang_options: Smarty template:attribute_string_is_block:0:
-bflang_options: Smarty template:autocomplete-html-entities:0:
-bflang_options: Smarty template:autocomplete_PHP_function:1:
-bflang_options: Smarty template:autocomplete_PHP_variable:1:
-bflang_options: Smarty template:autocomplete_tags:1:
-bflang_options: Smarty template:javascript_css_properties:1:
-bflang_options: Smarty template:javascript_object_methods:1:
-bflang_options: Smarty template:load_completion:1:
-bflang_options: Smarty template:load_php_functions:1:
-bflang_options: Smarty template:load_reference:1:
-bflang_options: Smarty template:show_in_menu:0:
-bflang_options: Smarty template:sql-in-php-string:1:
-bflang_options: Text:show_in_menu:1:
-bflang_options: VBScript:load_completion:1:
-bflang_options: VBScript:load_reference:1:
-bflang_options: VBScript:show_in_menu:1:
-bflang_options: Vala:Parentheses block_foldable:0:
-bflang_options: Vala:load_completion:1:
-bflang_options: Vala:load_reference:1:
-bflang_options: Vala:show_in_menu:0:
-bflang_options: Wordpress:JQuery:0:
-bflang_options: Wordpress:Parentheses block_foldable:0:
-bflang_options: Wordpress:attribute_string_is_block:0:
-bflang_options: Wordpress:autocomplete-html-entities:0:
-bflang_options: Wordpress:autocomplete_PHP_function:1:
-bflang_options: Wordpress:autocomplete_PHP_variable:1:
-bflang_options: Wordpress:autocomplete_tags:1:
-bflang_options: Wordpress:javascript_css_properties:1:
-bflang_options: Wordpress:javascript_object_methods:1:
-bflang_options: Wordpress:load_completion:1:
-bflang_options: Wordpress:load_php_functions:1:
-bflang_options: Wordpress:load_reference:1:
-bflang_options: Wordpress:load_wordpress_functions:1:
-bflang_options: Wordpress:php_short_open_tag:0:
-bflang_options: Wordpress:show_in_menu:0:
-bflang_options: Wordpress:sql-in-php-string:1:
-bflang_options: XHTML:attribute_string_is_block:0:
-bflang_options: XHTML:autocomplete_javascript_var:1:
-bflang_options: XHTML:autocomplete_tags:1:
-bflang_options: XHTML:javascript_css_properties:1:
-bflang_options: XHTML:javascript_object_methods:1:
-bflang_options: XHTML:load_completion:1:
-bflang_options: XHTML:load_reference:1:
-bflang_options: XHTML:self_close_singleton_tags:1:
-bflang_options: XHTML:show_in_menu:1:
-bflang_options: XHTML:stretch_tag_block:1:
-bflang_options: XML:show_in_menu:1:
-bflang_options: XSLT:show_in_menu:1:
-bflang_options: XSLT:xslt_2:0:
-auto_update_meta_date: 1
-format_by_context: 1
-strip_trailing_spaces_on_save: 0
-external_filter: 1:CSS tidy:|csstidy --preserve_css=true -|:
-external_filter: 1:Compress CSS:|/usr/share/bluefish/cssmin.py|:
-external_filter: 1:Decompress CSS:|/usr/share/bluefish/css_decompressor|:
-external_filter: 1:Javascript Minify with jsmin:|/usr/share/bluefish/jsmin.py|:
-external_filter: 1:PHP Beautifier:|php_beautifier -t|:
-external_filter: 1:Render HTML to text:lynx -force_html -dump %i |:
-external_filter: 1:Strip empty lines:|egrep -v '^[ \t]*$'|:
-external_filter: 1:Tidy HTML (perltidy):|perltidy -b|:
-external_filter: 1:Tidy convert to XHTML:|tidy -utf8 -i -w 80 -c -q -asxhtml|:
-external_filter: 1:Tidy HTML:|tidy -utf8|:
-external_filter: 1:Dos2unix:|dos2unix|:
-external_filter: 1:Reverse lines:|tac|:
-external_filter: 1:Sort / Uniq:|sort|uniq|:
-external_filter: 1:Sort:|sort|:
-cursor_color: #EEEEEC
+document_tabposition: 2
+tab_font_string: Normal
+auto_set_encoding_meta: 1
+block_folding_mode: 1
 selection_color: #729FCF
-right_margin: #990000
-max_dir_history: 10
-cline_bg: #5C3566
-smartindent: 0
+image_thumbnailstring: _thumbnail
+recent_means_recently_closed: 0
+hide_bars_on_fullscreen: 1
+backup_file: 0
+tab_color_modified: #729FCF
+editor_bg: #2E3436
 highlight_styles: ASP:attribute:attribute:
 highlight_styles: ASP:attribute-string:string-no-spell-check:
 highlight_styles: ASP:brackets:brackets:
@@ -971,49 +730,286 @@ highlight_styles: XSLT:tag-text:string:
 highlight_styles: XSLT:tag-value:value:
 highlight_styles: XSLT:xml-comment:comment:
 highlight_styles: XSLT:xml-declaration:preprocessor:
-open_in_running_bluefish: 1
-left_panel_left: 0
-show_autocomp_reference: 1
-visible_ws: #A40000
-editor_fg: #EEEEEC
-register_recent_mode: 2
-visible_ws_mode: 0
-show_long_line_warning: 1
-editor_tab_indent_sel: 1
-autosave_time: 60
-reduce_scan_triggers: 0
-show_tooltip_reference: 1
-adv_textview_right_margin: 1
-recent_means_recently_closed: 0
-image_thumbnailstring: _thumbnail
-autosave_location_mode: 0
-use_system_colors: 1
-max_shown_filename_len: 10
-right_margin_pos: 80
-highlight_cursor: 0
-auto_update_meta_generator: 1
-use_system_tab_font: 1
-wrap_on_right_margin: 1
-hide_bars_on_fullscreen: 1
-image_thumbnailtype: jpeg
-open_in_new_window: 1
-autosave_file_suffix: #
-clear_undo_on_save: 0
-max_recent_files: 10
-leave_to_window_manager: 1
-editor_bg: #2E3436
+editor_smart_cursor: 1
+cline_bg: #5C3566
+cursor_color: #EEEEEC
+autocomp_accel_string: <Control>space
 editor_replace_unicode_quotes: 0
-modified_check_type: 1
-backup_cleanuponclose: 0
-leftpanel_tabposition: 1
-autocomp_min_prefix_len: 1
-tab_font_string: Normal
+editor_auto_close_brackets: 2
+open_in_running_bluefish: 1
+wrap_on_right_margin: 1
+show_long_line_warning: 1
+use_system_colors: 1
+max_dir_history: 10
+adv_smart_indent_mode: 1
+check_for_modified_on_disk: 1
+num_undo_levels: 100
+max_window_title: 0
+newfile_default_encoding: UTF-8
 autocomp_popup_mode: 1
-backup_file: 0
-document_tabposition: 2
-save_accelmap: 1
-project_suffix: .bfproject
-config_version: 2.2.10
+autosave_location_mode: 0
+external_filter: 1:CSS tidy:|csstidy --preserve_css=true -|:
+external_filter: 1:Compress CSS:|/usr/share/bluefish/cssmin.py|:
+external_filter: 1:Decompress CSS:|/usr/share/bluefish/css_decompressor|:
+external_filter: 1:Javascript Minify with jsmin:|/usr/share/bluefish/jsmin.py|:
+external_filter: 1:PHP Beautifier:|php_beautifier -t|:
+external_filter: 1:Render HTML to text:lynx -force_html -dump %i |:
+external_filter: 1:Strip empty lines:|egrep -v '^[ \t]*$'|:
+external_filter: 1:Tidy HTML (perltidy):|perltidy -b|:
+external_filter: 1:Tidy convert to XHTML:|tidy -utf8 -i -w 80 -c -q -asxhtml|:
+external_filter: 1:Tidy HTML:|tidy -utf8|:
+external_filter: 1:Dos2unix:|dos2unix|:
+external_filter: 1:Reverse lines:|tac|:
+external_filter: 1:Sort / Uniq:|sort|uniq|:
+external_filter: 1:Sort:|sort|:
+bflang_options: ASP:load_completion:1:
+bflang_options: ASP:load_reference:1:
+bflang_options: ASP:show_in_menu:1:
+bflang_options: ASP-VBS:JQuery:0:
+bflang_options: ASP-VBS:autocomplete-html-entities:0:
+bflang_options: ASP-VBS:autocomplete_tags:1:
+bflang_options: ASP-VBS:javascript_css_properties:1:
+bflang_options: ASP-VBS:javascript_object_methods:1:
+bflang_options: ASP-VBS:load_completion:1:
+bflang_options: ASP-VBS:load_reference:1:
+bflang_options: ASP-VBS:show_in_menu:1:
+bflang_options: Ada:Parentheses block_foldable:0:
+bflang_options: Ada:show_in_menu:1:
+bflang_options: Bflang2:load_completion:1:
+bflang_options: Bflang2:load_reference:1:
+bflang_options: Bflang2:show_in_menu:0:
+bflang_options: C:Curly brackets block_foldable:1:
+bflang_options: C:Parentheses block_foldable:0:
+bflang_options: C:Square brackets block_foldable:0:
+bflang_options: C:autocompl_with_semicolon:0:
+bflang_options: C:load_completion:1:
+bflang_options: C:load_glib_functions:0:
+bflang_options: C:load_gobject_functions:0:
+bflang_options: C:load_gtk_functions:0:
+bflang_options: C:load_libc_functions:1:
+bflang_options: C:load_reference:1:
+bflang_options: C:show_in_menu:1:
+bflang_options: C:string_is_block:0:
+bflang_options: C++:Parentheses block_foldable:0:
+bflang_options: C++:load_completion:1:
+bflang_options: C++:load_reference:1:
+bflang_options: C++:show_in_menu:1:
+bflang_options: CFML:JQuery:0:
+bflang_options: CFML:attribute_string_is_block:0:
+bflang_options: CFML:autocomplete-html-entities:0:
+bflang_options: CFML:javascript_css_properties:1:
+bflang_options: CFML:javascript_object_methods:1:
+bflang_options: CFML:load_completion:1:
+bflang_options: CFML:load_reference:1:
+bflang_options: CFML:show_in_menu:0:
+bflang_options: CSS:load_completion:1:
+bflang_options: CSS:load_reference:1:
+bflang_options: CSS:show_in_menu:1:
+bflang_options: Chuck:Parentheses block_foldable:0:
+bflang_options: Chuck:load_completion:1:
+bflang_options: Chuck:load_reference:1:
+bflang_options: Chuck:show_in_menu:0:
+bflang_options: Clojure:Parentheses block_foldable:0:
+bflang_options: Clojure:show_in_menu:0:
+bflang_options: D:Parentheses block_foldable:0:
+bflang_options: D:show_in_menu:1:
+bflang_options: Diff/Patch:show_in_menu:0:
+bflang_options: Generic HTML:JQuery:0:
+bflang_options: Generic HTML:Javascript Curly brackets block_foldable:1:
+bflang_options: Generic HTML:Javascript Parentheses block_foldable:0:
+bflang_options: Generic HTML:Javascript Square brackets block_foldable:0:
+bflang_options: Generic HTML:attribute_string_is_block:0:
+bflang_options: Generic HTML:autocomplete-html-entities:0:
+bflang_options: Generic HTML:autocomplete_javascript_var:1:
+bflang_options: Generic HTML:autocomplete_tags:1:
+bflang_options: Generic HTML:html-block_foldable:0:
+bflang_options: Generic HTML:javascript_css_properties:1:
+bflang_options: Generic HTML:javascript_object_methods:1:
+bflang_options: Generic HTML:load_completion:1:
+bflang_options: Generic HTML:load_reference:1:
+bflang_options: Generic HTML:self_close_singleton_tags:0:
+bflang_options: Generic HTML:show_in_menu:1:
+bflang_options: Generic HTML:stretch_tag_block:1:
+bflang_options: Google Go:Parentheses block_foldable:0:
+bflang_options: Google Go:load_completion:1:
+bflang_options: Google Go:load_reference:1:
+bflang_options: Google Go:show_in_menu:1:
+bflang_options: HTML5:JQuery:0:
+bflang_options: HTML5:Javascript Curly brackets block_foldable:1:
+bflang_options: HTML5:Javascript Parentheses block_foldable:0:
+bflang_options: HTML5:Javascript Square brackets block_foldable:0:
+bflang_options: HTML5:attribute_string_is_block:0:
+bflang_options: HTML5:autocomplete_javascript_var:1:
+bflang_options: HTML5:autocomplete_tags:1:
+bflang_options: HTML5:html-block_foldable:0:
+bflang_options: HTML5:javascript_css_properties:1:
+bflang_options: HTML5:javascript_object_methods:1:
+bflang_options: HTML5:load_completion:1:
+bflang_options: HTML5:load_reference:1:
+bflang_options: HTML5:show_in_menu:1:
+bflang_options: HTML5:stretch_tag_block:1:
+bflang_options: Highlighter:load_completion:1:
+bflang_options: Highlighter:show_in_menu:0:
+bflang_options: JSON:load_reference:1:
+bflang_options: JSON:show_in_menu:1:
+bflang_options: JSP:Parentheses block_foldable:0:
+bflang_options: JSP:autocomplete_tags:1:
+bflang_options: JSP:load_completion:1:
+bflang_options: JSP:load_reference:1:
+bflang_options: JSP:show_in_menu:1:
+bflang_options: Java:Parentheses block_foldable:0:
+bflang_options: Java:load_completion:1:
+bflang_options: Java:load_reference:1:
+bflang_options: Java:show_in_menu:1:
+bflang_options: Javascript:JQuery:0:
+bflang_options: Javascript:autocomplete_javascript_var:1:
+bflang_options: Javascript:autocomplete_with_newlines:0:
+bflang_options: Javascript:javascript_css_properties:1:
+bflang_options: Javascript:javascript_object_methods:1:
+bflang_options: Javascript:load_completion:1:
+bflang_options: Javascript:load_reference:1:
+bflang_options: Javascript:show_in_menu:1:
+bflang_options: Latex:show_in_menu:0:
+bflang_options: Lua:Parentheses block_foldable:0:
+bflang_options: Lua:load_completion:1:
+bflang_options: Lua:load_reference:1:
+bflang_options: Lua:show_in_menu:1:
+bflang_options: Mediawiki:attribute_string_is_block:0:
+bflang_options: Mediawiki:autocomplete_tags:1:
+bflang_options: Mediawiki:load_completion:1:
+bflang_options: Mediawiki:load_reference:1:
+bflang_options: Mediawiki:show_in_menu:0:
+bflang_options: NSIS:load_completion:1:
+bflang_options: NSIS:show_in_menu:0:
+bflang_options: Octave:Parentheses block_foldable:0:
+bflang_options: Octave:load_completion:1:
+bflang_options: Octave:load_reference:1:
+bflang_options: Octave:show_in_menu:0:
+bflang_options: PHP:C style comment_foldable:1:
+bflang_options: PHP:Curly brackets block_foldable:1:
+bflang_options: PHP:JQuery:0:
+bflang_options: PHP:Javascript Curly brackets block_foldable:1:
+bflang_options: PHP:Javascript Parentheses block_foldable:0:
+bflang_options: PHP:Javascript Square brackets block_foldable:0:
+bflang_options: PHP:PHP block_foldable:1:
+bflang_options: PHP:Parentheses block_foldable:0:
+bflang_options: PHP:Square brackets block_foldable:0:
+bflang_options: PHP:attribute_string_is_block:0:
+bflang_options: PHP:autocomplete-html-entities:0:
+bflang_options: PHP:autocomplete_PHP_function:1:
+bflang_options: PHP:autocomplete_PHP_variable:1:
+bflang_options: PHP:autocomplete_javascript_var:1:
+bflang_options: PHP:html-block_foldable:0:
+bflang_options: PHP:javascript_css_properties:1:
+bflang_options: PHP:javascript_object_methods:1:
+bflang_options: PHP:load_completion:1:
+bflang_options: PHP:load_php_functions:1:
+bflang_options: PHP:load_reference:1:
+bflang_options: PHP:php_short_open_tag:1:
+bflang_options: PHP:self_close_singleton_tags:0:
+bflang_options: PHP:show_in_menu:1:
+bflang_options: PHP:sql-in-php-string:1:
+bflang_options: PHP:stretch_tag_block:1:
+bflang_options: Pascal and Delpi:show_in_menu:0:
+bflang_options: Perl:Parentheses block_foldable:0:
+bflang_options: Perl:show_in_menu:1:
+bflang_options: Po:show_in_menu:0:
+bflang_options: Processing:load_completion:1:
+bflang_options: Processing:load_reference:1:
+bflang_options: Processing:show_in_menu:0:
+bflang_options: Processing:undescribed_methods:1:
+bflang_options: Python:Parentheses block_foldable:0:
+bflang_options: Python:show_in_menu:1:
+bflang_options: Python:string_is_block:0:
+bflang_options: R:Parentheses block_foldable:0:
+bflang_options: R:show_in_menu:1:
+bflang_options: Ruby:Parentheses block_foldable:0:
+bflang_options: Ruby:show_in_menu:1:
+bflang_options: SQL:Parentheses block_foldable:0:
+bflang_options: SQL:show_in_menu:0:
+bflang_options: SVG:autocomplete_tags:1:
+bflang_options: SVG:load_completion:1:
+bflang_options: SVG:load_reference:1:
+bflang_options: SVG:show_in_menu:0:
+bflang_options: Sass:load_completion:1:
+bflang_options: Sass:load_reference:1:
+bflang_options: Sass:show_in_menu:0:
+bflang_options: Scheme:Parentheses block_foldable:0:
+bflang_options: Scheme:show_in_menu:0:
+bflang_options: Shell:Coreutils:1:
+bflang_options: Shell:Parentheses block_foldable:0:
+bflang_options: Shell:show_in_menu:1:
+bflang_options: Smarty template:JQuery:0:
+bflang_options: Smarty template:Parentheses block_foldable:0:
+bflang_options: Smarty template:attribute_string_is_block:0:
+bflang_options: Smarty template:autocomplete-html-entities:0:
+bflang_options: Smarty template:autocomplete_PHP_function:1:
+bflang_options: Smarty template:autocomplete_PHP_variable:1:
+bflang_options: Smarty template:autocomplete_tags:1:
+bflang_options: Smarty template:javascript_css_properties:1:
+bflang_options: Smarty template:javascript_object_methods:1:
+bflang_options: Smarty template:load_completion:1:
+bflang_options: Smarty template:load_php_functions:1:
+bflang_options: Smarty template:load_reference:1:
+bflang_options: Smarty template:show_in_menu:0:
+bflang_options: Smarty template:sql-in-php-string:1:
+bflang_options: Text:show_in_menu:1:
+bflang_options: VBScript:load_completion:1:
+bflang_options: VBScript:load_reference:1:
+bflang_options: VBScript:show_in_menu:1:
+bflang_options: Vala:Parentheses block_foldable:0:
+bflang_options: Vala:load_completion:1:
+bflang_options: Vala:load_reference:1:
+bflang_options: Vala:show_in_menu:0:
+bflang_options: Wordpress:JQuery:0:
+bflang_options: Wordpress:Parentheses block_foldable:0:
+bflang_options: Wordpress:attribute_string_is_block:0:
+bflang_options: Wordpress:autocomplete-html-entities:0:
+bflang_options: Wordpress:autocomplete_PHP_function:1:
+bflang_options: Wordpress:autocomplete_PHP_variable:1:
+bflang_options: Wordpress:autocomplete_tags:1:
+bflang_options: Wordpress:javascript_css_properties:1:
+bflang_options: Wordpress:javascript_object_methods:1:
+bflang_options: Wordpress:load_completion:1:
+bflang_options: Wordpress:load_php_functions:1:
+bflang_options: Wordpress:load_reference:1:
+bflang_options: Wordpress:load_wordpress_functions:1:
+bflang_options: Wordpress:php_short_open_tag:0:
+bflang_options: Wordpress:show_in_menu:0:
+bflang_options: Wordpress:sql-in-php-string:1:
+bflang_options: XHTML:attribute_string_is_block:0:
+bflang_options: XHTML:autocomplete_javascript_var:1:
+bflang_options: XHTML:autocomplete_tags:1:
+bflang_options: XHTML:javascript_css_properties:1:
+bflang_options: XHTML:javascript_object_methods:1:
+bflang_options: XHTML:load_completion:1:
+bflang_options: XHTML:load_reference:1:
+bflang_options: XHTML:self_close_singleton_tags:1:
+bflang_options: XHTML:show_in_menu:1:
+bflang_options: XHTML:stretch_tag_block:1:
+bflang_options: XML:show_in_menu:1:
+bflang_options: XSLT:show_in_menu:1:
+bflang_options: XSLT:xslt_2:0:
+use_system_tab_font: 1
+backup_cleanuponclose: 0
+autocomp_min_prefix_len: 1
+delay_full_scan: 1
+max_recent_files: 10
+external_outputbox: 1:pylint:(C|R|E|F|W)\:[ ]*([0-9]+),[0-9]+\:(.*):-1:2:0:pylint '%f'|:
+external_outputbox: 1:php codesniffer:\:([0-9\:]+)\:(.*):-1:1:2:phpcs --report=emacs '%f'|:
+external_outputbox: 1:perl syntax check:(.*) at (/[a-zA-Z0-9/_.-]+) line ([0-9]+):2:3:1:perl -c '%f'|:
+external_outputbox: 1:php syntax check:(.*) in (/[a-zA-Z0-9/_.-]+) on line ([0-9]+):2:3:1:php -l -q -f '%f'|:
+external_outputbox: 1:php:(.*) in (/[a-zA-Z0-9/_.-]+) on line ([0-9]+):2:3:1:php '%f'|:
+external_outputbox: 1:xmllint XML checker:([a-zA-Z0-9/_.-]+)\\\:([0-9]+)\\\: (.*):1:2:3:xmllint --noout --valid '%f'|:
+external_outputbox: 1:javac:([a-zA-Z0-9/_.-]+)\:([0-9]+)\:(.*):1:2:3:javac '%f'|:
+external_outputbox: 1:tidy HTML validator:line ([0-9]+) column [0-9]+ - (.*):-1:1:2:tidy -qe '%i'|:
+external_outputbox: 1:weblint HTML checker:([a-zA-Z0-9/_.-]+) \\(([0-9\:]+)\\) (.*):1:2:3:weblint '%f'|:
+external_outputbox: 1:make:([a-zA-Z0-9/_.-]+)\:([0-9]+)\:(.*):1:2:3:cd %c && make|:
+reduce_scan_triggers: 0
+adv_textview_right_margin: 1
+switch_tabs_by_altx: 1
+show_tooltip_reference: 1
+backup_abort_action: 2
 external_command: 1:Firefox:firefox '%p'&:1:
 external_command: 1:Opera:opera -remote 'openURL(%p)' || opera '%p'&:0:
 external_command: 1:Chromium:chromium '%p' || chromium-browser '%p' &:0:
@@ -1022,15 +1018,19 @@ external_command: 1:Epiphany:epiphany-browser -n '%p'&:0:
 external_command: 1:Kazehakase:kazehakase '%p'&:0:
 external_command: 1:Links2 (graphics):links2 -g '%p'&:0:
 external_command: 1:chmod a+x:chmod a+x %f:0:
-switch_tabs_by_altx: 1
-delay_scan_time: 900
-adv_textview_left_margin: 1
-editor_font_string: monospace 10
-max_window_title: 0
-adv_smart_indent_mode: 1
-autosave: 0
-backup_abort_action: 2
-check_for_modified_on_disk: 1
-cursor_size: 4
-auto_set_encoding_meta: 1
+open_in_new_window: 1
+autosave_time: 60
+project_suffix: .bfproject
+leftpanel_tabposition: 1
+config_version: 2.2.10
+max_shown_filename_len: 10
+cursor_highlight_color: #FFFF33
 restore_dimensions: 0
+modified_check_type: 1
+auto_update_meta_author: 1
+visible_ws: #A40000
+autosave: 0
+delay_scan_time: 900
+load_reference: 1
+image_thumbnailtype: jpeg
+cursor_size: 4

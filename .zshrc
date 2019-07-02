@@ -70,6 +70,7 @@ alias pwsafe="pwsafe -f $HOME/documents/vault/.pwsafe.dat"
 alias py="python -q"
 #alias reboot="sudo reboot"
 alias umount="sudo umount"
+alias upgrade="sudo rm /boot/*fallback.img; sudo pacman -Syu; sudo rm /boot/*fallback.img"
 alias wifi-menu="sudo wifi-menu"
 alias zef="/usr/share/perl6/vendor/bin/zef"
 

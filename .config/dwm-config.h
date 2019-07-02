@@ -19,7 +19,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5" };
+static const char *tags[] = { "Term", "Web", "Editor", "Term2", "Term3" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -60,7 +60,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "urxvt", NULL };
 
 /* custom commands */
-static const char *abiword[]  = { "abiword", NULL };
+/*static const char *abiword[]  = { "abiword", NULL };*/
 static const char *brave[]    = { "brave-nightly", NULL };
 static const char *brt[]      = { "xbacklight", "-inc", "10", NULL };
 /*static const char *chrome[]   = { "chromium --single-process", NULL };*/
