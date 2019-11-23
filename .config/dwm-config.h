@@ -61,14 +61,15 @@ static const char *termcmd[]  = { "urxvt", NULL };
 
 /* custom commands */
 /*static const char *abiword[]  = { "abiword", NULL };*/
-static const char *brave[]    = { "brave-nightly", NULL };
+static const char *brave[]    = { "brave-dev", NULL };
 static const char *brt[]      = { "xbacklight", "-inc", "10", NULL };
 /*static const char *chrome[]   = { "chromium --single-process", NULL };*/
-static const char *chrome[]   = { "chromium", NULL };
-/*static const char *cmus[]     = { "urxvt", "-e", "cmus", NULL };*/
+/*static const char *chrome[]   = { "chromium", NULL };*/
+static const char *cmus[]     = { "urxvt", "-e", "cmus", NULL };
 static const char *cmusnxt[]  = { "cmus-remote", "-n", NULL };
 static const char *cmusply[]  = { "cmus-remote", "-u", NULL };
 static const char *cmusprv[]  = { "cmus-remote", "-r", NULL };
+static const char *diablo[]   = { "WINEARCH=32", "WINEPREFIX=$HOME/games/diablo3", "wine", "$HOME/games/Diablo-III-Setup.exe", "-launch", NULL };
 static const char *dim[]      = { "xbacklight", "-dec", "10", NULL };
 static const char *bluefish[] = { "bluefish", NULL };
 /*static const char *libreofc[] = { "libreoffice", NULL };*/
@@ -76,15 +77,19 @@ static const char *logout[]   = { "killall", "dwm", NULL };
 /*static const char *mnext[]    = { "mpc", "next", NULL };*/
 /*static const char *mprev[]    = { "mpc", "prev", NULL };*/
 /*static const char *mtoggle[]  = { "mpc", "toggle", NULL };*/
-static const char *prtsc[]    = { "scrot", "'%Y-%m-%d-%H%M%S.jpg'", "-e", "'mv $f ~/gdrive_personal/'Google Photos'/2018/'", NULL };
+static const char *openshot[] = { "openshot-qt", NULL };
+static const char *prtsc[]    = { "scrot", "-d", "3", "'%Y-%m-%d-%H%M%S.jpg'", NULL };
 static const char *reboot[]   = { "sudo", "reboot", NULL };
+static const char *scrncap[]  = { "recordmydesktop", "--stop-shortcut", "Mod1+s", "-o", "$HOME/videos/$(date +%Y%m%d-%H%M).ogv", NULL };
 static const char *scrnlck[]  = { "sflock", "-f", "10x20", NULL };
 static const char *shutdown[] = { "sleep", "1", "&&", "sudo", "shutdown", "now", "|", "sudo", "systemctl", "stop", "slim", NULL };
+/*static const char *signal[]   = { "signal-desktop" , NULL };*/
 static const char *suspend[]  = { "systemctl", "suspend", NULL };
 static const char *voldwn[]   = { "amixer", "sset", "Master", "10%-", NULL };
 static const char *volmute[]  = { "amixer", "sset", "Master", "toggle", NULL };
 static const char *volup[]    = { "amixer", "sset", "Master", "10%+", NULL };
 /*static const char *wifi[]     = { "sudo", "wifi-menu", NULL };*/
+/*static const char *win7[]     = { "VBoxManage", "startvm", "'Windows\ 7'", NULL };*/
 
 //	Tag Cycling From //
 //	ap0calypse.agitatio.org/articles/2012/08/17/cycle-through-your-tags-in-dwm.html //
@@ -176,8 +181,7 @@ static Key keys[] = {
 	
   /* custom keys */
 /*	{ MODKEY,             XK_a,         spawn,     {.v = abiword} },*/
-	{ MODKEY,             XK_c,         spawn,     {.v = brave} },
-	{ MODKEY,             XK_g,         spawn,     {.v = bluefish} },
+/*      { MODKEY,             XK_s,         spawn,     {.v = signal} },*/
 /*	{ MODKEY,             XK_l,         spawn,     {.v = libreofc} },*/
 	{ MODKEY,             XK_Print,     spawn,     {.v = prtsc} },
 	{ MODKEY|ControlMask, XK_Delete,    spawn,     {.v = logout} },
@@ -190,6 +194,13 @@ static Key keys[] = {
 /*	{ MODKEY|ControlMask, XK_Left,      spawn,     {.v = mprev} },*/
 	{ MODKEY,             XK_Up,        x_nexttag, {0} },
 	{ MODKEY,             XK_Down,      x_prevtag, {0} },
+	{ MODKEY,             XK_F1,        spawn,     {.v = bluefish} },
+	{ MODKEY,             XK_F2,        spawn,     {.v = brave} },
+        { MODKEY,             XK_F3,        spawn,     {.v = diablo} },
+/*        { MODKEY,             XK_F4,        spawn,     {.v = } },-- */
+/*        { MODKEY,             XK_F5,        spawn,     {.v = } },*/
+        { MODKEY,             XK_F6,        spawn,     {.v = scrncap} },
+        { MODKEY,             XK_F7,        spawn,     {.v = openshot} },
 	{ MODKEY,             XK_F8,        spawn,     {.v = dim} },
 	{ MODKEY,             XK_F9,        spawn,     {.v = brt} },
         { MODKEY,             XK_F10,       spawn,     {.v = cmusprv} },
@@ -198,7 +209,7 @@ static Key keys[] = {
         { 0,                  0x1008ff12,   spawn,     {.v = volmute} },     
         { 0,                  0x1008ff11,   spawn,     {.v = voldwn} },
         { 0,                  0x1008ff13,   spawn,     {.v = volup} },
-/*        { 0,                  0x1008ffb2,   spawn,      {.v = cmus} },*/
+/*      { 0,                  0x1008ffb2,   spawn,      {.v = cmus} },*/
 };
 
 /* button definitions */

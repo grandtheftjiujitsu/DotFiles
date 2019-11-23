@@ -1,16 +1,22 @@
 # $HOME Directories #
 #####################
 /aosp
+/Battle.net.desktop
+/Diablo\ III.desktop
+/Diablo\ III
 /documents
 /download
+/games
 /gdrive_personal
-/gdrive_professional
+/gdrive_counseling
+/gdrive_k9
 /git
 /mega
 /music
 /phone-bk
 /playlists
 /R
+/videos
 
 # Git Repos #
 #############
@@ -20,6 +26,7 @@
 
 # Vault Content #
 #################
+/.rclone.conf
 /.bitmonero
 /.electron
 /.electron-gyp

@@ -39,3 +39,4 @@
 0.15.1 docile:~> 1.1.0,json:< 3&>= 1.8,simplecov-html:~> 0.10.0|checksum:b201d2c89a33b5478b138b7df0f771a395ec3da7cf9b60b3063abf3bfd3cf47f,ruby:>= 1.8.7
 0.16.0 docile:~> 1.1,json:< 3&>= 1.8,simplecov-html:~> 0.10.0|checksum:a40f11032a7f9c064761968e5e6ca2c18671b99246de0af5daabdb24f137dc7f,ruby:>= 1.8.7
 0.16.1 docile:~> 1.1,json:< 3&>= 1.8,simplecov-html:~> 0.10.0|checksum:8724f0911bbb2b7a3c11155e6d57987cad311f9e5ce7b305b1e2e67fdc73dee9,ruby:>= 1.8.7
+0.17.0 docile:~> 1.1,json:< 3&>= 1.8,simplecov-html:~> 0.10.0|checksum:bbecd7a1381dbfbdfe5df668d2e91ada494f5e19bec609c1a156afddd5b40037,ruby:>= 1.8.7

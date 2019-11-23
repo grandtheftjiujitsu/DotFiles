@@ -99,3 +99,5 @@
 3.8.0 diff-lcs:< 2.0&>= 1.2.0,rspec-support:~> 3.8.0|checksum:0f27452a60ed58e97b12c59624021c79bfdc940b160a91619a2ea2a1abd59eea,ruby:>= 1.8.7
 3.8.1 diff-lcs:< 2.0&>= 1.2.0,rspec-support:~> 3.8.0|checksum:94be3cac535dcc6500bcc56ceb833e2d766449b7a765c4b22c02375825c3d86d,ruby:>= 1.8.7
 3.8.2 diff-lcs:< 2.0&>= 1.2.0,rspec-support:~> 3.8.0|checksum:753620b7f9511454a98cd77c90dd85335025ec98272c2fd8bb82b51f3c0c82a2,ruby:>= 1.8.7
+3.8.3 diff-lcs:< 2.0&>= 1.2.0,rspec-support:~> 3.8.0|checksum:de192f5c3f9f2916857eaee42964b062bcfdd1b822d5063506751eb77cd18fb0,ruby:>= 1.8.7
+3.8.4 diff-lcs:< 2.0&>= 1.2.0,rspec-support:~> 3.8.0|checksum:3991e95f6cedb322f65fa9acb2788a4f2a2c6e3a2c94e5c1c2556525656b7174,ruby:>= 1.8.7

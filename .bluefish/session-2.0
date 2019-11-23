@@ -1,4 +1,4 @@
-opendir: file:///home/austin/git/savagezen.github.io/_posts
+opendir: file:///home/austin/git/savagezen.github.io/_drafts
 filegloblist: *.txt
 filegloblist: *.shtml
 filegloblist: *.py
@@ -24,21 +24,21 @@ autocomplete: 1
 autoindent: 1
 view_line_numbers: 1
 lowercase_tags: 1
-searchlist: class
-searchlist: ability
-searchlist: flash
-searchlist: def modifiers_fn
-searchlist: def saves_fn
-searchlist: sleight
-searchlist: def start_fn
-searchlist: thermal
-searchlist: btn
 searchlist: button
 searchlist: nv
 searchlist: navbar
 searchlist: nav-header
 searchlist: header
 searchlist: brand
+searchlist: header
+searchlist: lead
+searchlist: p
+searchlist: color
+searchlist: follow-me
+searchlist: widget-body
+searchlist: body
+searchlist: follow-me
+searchlist: font
 sync_include_hidden: 0
 htmlbar_notebooktab: 0
 snr_replacetype: 0
@@ -51,13 +51,6 @@ view_blockstack: 1
 leftpanel_active_tab: 0
 last_filefilter: 
 c2e.IE_apos_workaround: 0
-recent_files: file:///home/austin/git/savagezen.github.io/_drafts/android/release-notes-201810.md
-recent_files: file:///home/austin/git/savagezen.github.io/_drafts/canine-anniversary.md
-recent_files: file:///home/austin/git/savagezen.github.io/_posts/2018-11-24-Release-Notes-2018-11-24.md
-recent_files: file:///home/austin/git/savagezen.github.io/_posts/2015-01-01-suggestions.md
-recent_files: file:///home/austin/git/dbyll/_posts/2018-12-21-Release-Notes-2018-12-21.md
-recent_files: file:///home/austin/git/savagezen.github.io/_posts/2018-12-21-Release-Notes-2018-12-21.md
-recent_files: file:///home/austin/git/savagezen.github.io/assets/css/style.css
 recent_files: file:///home/austin/git/savagezen.github.io/_includes/sidebar.html
 recent_files: file:///home/austin/git/savagezen.github.io/index.html
 recent_files: file:///home/austin/git/savagezen.github.io/_includes/default.html
@@ -71,85 +64,92 @@ recent_files: file:///home/austin/git/savagezen.github.io/_drafts/BJJ-40-Day-Cha
 recent_files: file:///home/austin/git/savagezen.github.io/_drafts/BJJ-blood-pressure-02.md
 recent_files: file:///home/austin/git/savagezen.github.io/_drafts/BJJ-returning-to-bjj.md
 recent_files: file:///home/austin/git/savagezen.github.io/_posts/2019-05-31-Returning-to-BJJ.md
+recent_files: file:///home/austin/git/initio/index.html
+recent_files: file:///home/austin/git/diligentk9/assets/css/styles.css
+recent_files: file:///home/austin/git/diligentk9/index.html
+recent_files: file:///home/austin/git/diligentk9.github.io/index.html
+recent_files: file:///home/austin/git/savagezen.github.io/_drafts/BJJ-what-i-learned-in-2019.md
+recent_files: file:///home/austin/git/savagezen.github.io/_drafts/BJJ-measuring-progress.md
+recent_files: file:///home/austin/git/savagezen.github.io/_drafts/NUTRITION-paleo-vs-keto.md
 default_mime_type: text/plain
 two_pane_filebrowser_height: 195
 adv_open_matchname: 0
 editor_tab_width: 4
 fb_show_backup_f: 1
 main_window_width: 1364
-encodings: Western:WINDOWS-1252:0:
-encodings: Western:ISO-8859-15:1:
-encodings: Western:ISO-8859-1:1:
-encodings: Western:IBM850:0:
-encodings: Vietnamese:WINDOWS-1258:0:
-encodings: Vietnamese:VISCII:0:
-encodings: Vietnamese:TCVN:0:
-encodings: UTF-16 Big Endian:UTF-16BE:0:
-encodings: UTF-16 Little Endian:UTF-16LE:0:
-encodings: UTF-16:UTF-16:0:
-encodings: UTF-8:UTF-8:1:
-encodings: Turkish:WINDOWS-1254:0:
-encodings: Turkish:ISO-8859-9:0:
-encodings: Turkish:IBM857:0:
-encodings: Thai:TIS-620:0:
-encodings: South European:ISO-8859-3:0:
-encodings: Romanian:ISO-8859-16:0:
-encodings: Nordic:ISO-8859-10:0:
-encodings: Korean:UHC:0:
-encodings: Korean:JOHAB:0:
-encodings: Korean:ISO-2022-KR:0:
-encodings: Korean:EUC-KR:0:
-encodings: Japanese:SHIFT_JIS:0:
-encodings: Japanese:ISO-2022-JP:0:
-encodings: Japanese:EUC-JP:0:
-encodings: Hebrew Visual:ISO-8859-8:0:
-encodings: Hebrew:WINDOWS-1255:0:
-encodings: Hebrew:ISO-8859-8-I:0:
-encodings: Hebrew:IBM862:0:
-encodings: Greek:WINDOWS-1253:0:
-encodings: Greek:ISO-8859-7:0:
-encodings: Georgian:GEORGIAN-ACADEMY:0:
-encodings: Cyrillic/Ukrainian:KOI8U:0:
-encodings: Cyrillic/Russian:CP866:0:
-encodings: Cyrillic:WINDOWS-1251:0:
-encodings: Cyrillic:KOI8R:0:
-encodings: Cyrillic:ISO-IR-111:0:
-encodings: Cyrillic:ISO-8859-5:0:
-encodings: Cyrillic:IBM855:0:
-encodings: Chinese Traditional:EUC-TW:0:
-encodings: Chinese Traditional:BIG5-HKSCS:0:
-encodings: Chinese Traditional:BIG5:0:
-encodings: Chinese Simplified:HZ:0:
-encodings: Chinese Simplified:GBK:0:
-encodings: Chinese Simplified:GB2312:0:
-encodings: Chinese Simplified:GB18030:0:
-encodings: Central European:WINDOWS-1250:0:
-encodings: Central European:ISO-8859-2:0:
-encodings: Central European:IBM852:0:
-encodings: Celtic:ISO-8859-14:0:
-encodings: Baltic:WINDOWS-1257:0:
-encodings: Baltic:ISO-8859-13:0:
-encodings: Baltic:ISO-8859-4:0:
-encodings: Armenian:ARMSCII-8:0:
-encodings: Arabic:WINDOWS-1256:0:
-encodings: Arabic:ISO-8859-6:0:
 encodings: Arabic:IBM864:0:
+encodings: Arabic:ISO-8859-6:0:
+encodings: Arabic:WINDOWS-1256:0:
+encodings: Armenian:ARMSCII-8:0:
+encodings: Baltic:ISO-8859-4:0:
+encodings: Baltic:ISO-8859-13:0:
+encodings: Baltic:WINDOWS-1257:0:
+encodings: Celtic:ISO-8859-14:0:
+encodings: Central European:IBM852:0:
+encodings: Central European:ISO-8859-2:0:
+encodings: Central European:WINDOWS-1250:0:
+encodings: Chinese Simplified:GB18030:0:
+encodings: Chinese Simplified:GB2312:0:
+encodings: Chinese Simplified:GBK:0:
+encodings: Chinese Simplified:HZ:0:
+encodings: Chinese Traditional:BIG5:0:
+encodings: Chinese Traditional:BIG5-HKSCS:0:
+encodings: Chinese Traditional:EUC-TW:0:
+encodings: Cyrillic:IBM855:0:
+encodings: Cyrillic:ISO-8859-5:0:
+encodings: Cyrillic:ISO-IR-111:0:
+encodings: Cyrillic:KOI8R:0:
+encodings: Cyrillic:WINDOWS-1251:0:
+encodings: Cyrillic/Russian:CP866:0:
+encodings: Cyrillic/Ukrainian:KOI8U:0:
+encodings: Georgian:GEORGIAN-ACADEMY:0:
+encodings: Greek:ISO-8859-7:0:
+encodings: Greek:WINDOWS-1253:0:
+encodings: Hebrew:IBM862:0:
+encodings: Hebrew:ISO-8859-8-I:0:
+encodings: Hebrew:WINDOWS-1255:0:
+encodings: Hebrew Visual:ISO-8859-8:0:
+encodings: Japanese:EUC-JP:0:
+encodings: Japanese:ISO-2022-JP:0:
+encodings: Japanese:SHIFT_JIS:0:
+encodings: Korean:EUC-KR:0:
+encodings: Korean:ISO-2022-KR:0:
+encodings: Korean:JOHAB:0:
+encodings: Korean:UHC:0:
+encodings: Nordic:ISO-8859-10:0:
+encodings: Romanian:ISO-8859-16:0:
+encodings: South European:ISO-8859-3:0:
+encodings: Thai:TIS-620:0:
+encodings: Turkish:IBM857:0:
+encodings: Turkish:ISO-8859-9:0:
+encodings: Turkish:WINDOWS-1254:0:
+encodings: UTF-8:UTF-8:1:
+encodings: UTF-16:UTF-16:0:
+encodings: UTF-16 Little Endian:UTF-16LE:0:
+encodings: UTF-16 Big Endian:UTF-16BE:0:
+encodings: Vietnamese:TCVN:0:
+encodings: Vietnamese:VISCII:0:
+encodings: Vietnamese:WINDOWS-1258:0:
+encodings: Western:IBM850:0:
+encodings: Western:ISO-8859-1:1:
+encodings: Western:ISO-8859-15:1:
+encodings: Western:WINDOWS-1252:0:
 outputb_scroll_mode: 0
 spell_insert_entities: 0
 htmlbar_thumbnailwidth: 300
 sync_delete_deprecated: 0
 fb_viewmode: 2
 image_thumbnailsizing_type: 0
-ssearch_text: brand
-recent_dirs: file:///home/austin/aosip/manifest/manifests
-recent_dirs: file:///home/austin/git/aosip
-recent_dirs: file:///home/austin/git/scripts/android
+ssearch_text: font
 recent_dirs: file:///home/austin/git/gtbjj.github.io/_drafts
 recent_dirs: file:///home/austin/git/gtbjj.github.io/_drafts/linux
 recent_dirs: file:///home/austin/git/dnd-tools/scripts
 recent_dirs: file:///home/austin/git/savagezen.github.io/_posts
 recent_dirs: file:///home/austin/git/dbyll/_posts
+recent_dirs: file:///home/austin/git/diligentk9/assets
+recent_dirs: file:///home/austin/git/diligentk9/assets/css
 recent_dirs: file:///home/austin
+recent_dirs: file:///home/austin/git
 recent_dirs: file:///home/austin/git/savagezen.github.io/_drafts
 view_blocks: 1
 editor_indent_wspaces: 1
@@ -201,10 +201,10 @@ snr_casesens: 1
 htmlbar_in_sidepanel: 1
 image_thumbnailsizing_val1: 100
 main_window_height: 747
-filefilters: C programming:1:image/jpeg\:text/x-install\:text/x-readme\:text/x-chdr\:text/x-csrc\:image/png\:text/x-authors\:text/x-copying\:text/x-makefile::
-filefilters: Web files:1:text/html\:text/css\:image/png\:image/jpeg::
-filefilters: Images:1:image/png\:image/jpeg\:image/gif\:image/tiff::
 filefilters: Hide objectfiles:0::*.o:
+filefilters: Images:1:image/png\:image/jpeg\:image/gif\:image/tiff::
+filefilters: Web files:1:text/html\:text/css\:image/png\:image/jpeg::
+filefilters: C programming:1:image/jpeg\:text/x-install\:text/x-readme\:text/x-chdr\:text/x-csrc\:image/png\:text/x-authors\:text/x-copying\:text/x-makefile::
 c2e.convert_iso: 0
 view_cline: 1
 snr_scope: 0

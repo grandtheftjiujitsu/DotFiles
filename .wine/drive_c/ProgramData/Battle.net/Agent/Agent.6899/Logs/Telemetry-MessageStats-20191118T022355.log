@@ -1,0 +1,12 @@
+[I 2019-11-18 02:24:50.0874] [47]: BEGIN DUMP Message[Verb] COUNTS
+[I 2019-11-18 02:24:50.0874] [47]: Blizzard.Telemetry.Distribution.Agent/LocalCertificate      [Enqueued] = 1
+[I 2019-11-18 02:24:50.0874] [47]: Blizzard.Telemetry.Distribution.Agent/PatchServiceStatistics[Enqueued] = 1
+[I 2019-11-18 02:24:50.0874] [47]: Blizzard.Telemetry.Distribution.Agent/StartAgent            [Enqueued] = 1
+[I 2019-11-18 02:24:50.0875] [47]: Blizzard.Telemetry.Distribution.Agent/Update                [Enqueued] = 1
+[I 2019-11-18 02:24:50.0875] [47]: Blizzard.Telemetry.Distribution.Tact/ContainerlessUpdate    [Enqueued] = 1
+[I 2019-11-18 02:24:50.0875] [47]: Blizzard.Telemetry.Distribution.Tact/DownloadPerformance    [Enqueued] = 8
+[I 2019-11-18 02:24:50.0875] [47]: Blizzard.Telemetry.Standard.Process/Start                   [Enqueued] = 1
+[I 2019-11-18 02:24:50.0875] [47]: END DUMP Message[Verb] COUNTS
+[I 2019-11-18 02:24:50.0875] [47]: BEGIN DUMP Verb COUNTS
+[I 2019-11-18 02:24:50.0875] [47]: [Enqueued] = 14
+[I 2019-11-18 02:24:50.0875] [47]: END DUMP Verb COUNTS

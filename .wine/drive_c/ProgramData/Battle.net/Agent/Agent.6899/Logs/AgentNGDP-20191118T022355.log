@@ -1,0 +1,36 @@
+[I 2019-11-18 02:23:57.0139] Start Containerless Update of agent[us, us] w/ tags (Volatile Windows US?)
+[W 2019-11-18 02:23:57.0292] NGDP: The old build config is empty
+[I 2019-11-18 02:23:57.0301] {3f} INF: build 22c4af58eb0a5524dc1ed50b908bd10a, cdn fe319f35e1512e1574efd1dd66f6bb6a
+[I 2019-11-18 02:23:57.0302] {3f} INF: path C:/ProgramData/Battle.net/Agent
+[I 2019-11-18 02:23:57.0400] {48} INF: adding network address 8.248.17.254:80 for server http://level3.blizzard.com/
+[I 2019-11-18 02:23:57.0400] {48} INF: adding network address 67.26.203.254:80 for server http://level3.blizzard.com/
+[I 2019-11-18 02:23:57.0400] {48} INF: adding network address 8.253.146.248:80 for server http://level3.blizzard.com/
+[I 2019-11-18 02:23:57.0401] {48} INF: adding network address 67.26.201.254:80 for server http://level3.blizzard.com/
+[I 2019-11-18 02:23:57.0401] {48} INF: adding network address 8.249.69.254:80 for server http://level3.blizzard.com/
+[I 2019-11-18 02:23:57.0415] {48} INF: adding network address 137.221.64.7:80 for server http://us.cdn.blizzard.com/
+[I 2019-11-18 02:23:57.0415] {48} INF: adding network address 137.221.64.8:80 for server http://us.cdn.blizzard.com/
+[I 2019-11-18 02:23:57.0415] {48} INF: adding network address 137.221.64.4:80 for server http://us.cdn.blizzard.com/
+[I 2019-11-18 02:23:57.0415] {48} INF: adding network address 137.221.64.5:80 for server http://us.cdn.blizzard.com/
+[I 2019-11-18 02:23:57.0415] {48} INF: adding network address 137.221.64.3:80 for server http://us.cdn.blizzard.com/
+[I 2019-11-18 02:23:57.0416] {48} INF: adding network address 137.221.64.1:80 for server http://us.cdn.blizzard.com/
+[I 2019-11-18 02:23:57.0416] {48} INF: adding network address 137.221.64.2:80 for server http://us.cdn.blizzard.com/
+[I 2019-11-18 02:23:57.0416] {48} INF: adding network address 137.221.64.6:80 for server http://us.cdn.blizzard.com/
+[I 2019-11-18 02:23:57.0430] {48} INF: adding network address 23.67.243.187:443 for server https://blzddist1-a.akamaihd.net/
+[I 2019-11-18 02:23:57.0430] {48} INF: adding network address 23.67.243.146:443 for server https://blzddist1-a.akamaihd.net/
+[I 2019-11-18 02:23:57.0452] {48} INF: adding network address 8.252.252.11:443 for server https://level3.ssl.blizzard.com/
+[I 2019-11-18 02:23:57.0452] {48} INF: adding network address 8.240.71.139:443 for server https://level3.ssl.blizzard.com/
+[I 2019-11-18 02:23:57.0453] {48} INF: adding network address 8.252.137.11:443 for server https://level3.ssl.blizzard.com/
+[I 2019-11-18 02:23:57.0470] {48} INF: adding network address 137.221.64.7:443 for server https://us.cdn.blizzard.com/
+[I 2019-11-18 02:23:57.0470] {48} INF: adding network address 137.221.64.3:443 for server https://us.cdn.blizzard.com/
+[I 2019-11-18 02:23:57.0470] {48} INF: adding network address 137.221.64.8:443 for server https://us.cdn.blizzard.com/
+[I 2019-11-18 02:23:57.0470] {48} INF: adding network address 137.221.64.5:443 for server https://us.cdn.blizzard.com/
+[I 2019-11-18 02:23:57.0471] {48} INF: adding network address 137.221.64.6:443 for server https://us.cdn.blizzard.com/
+[I 2019-11-18 02:23:57.0471] {48} INF: adding network address 137.221.64.1:443 for server https://us.cdn.blizzard.com/
+[I 2019-11-18 02:23:57.0471] {48} INF: adding network address 137.221.64.4:443 for server https://us.cdn.blizzard.com/
+[I 2019-11-18 02:23:57.0471] {48} INF: adding network address 137.221.64.2:443 for server https://us.cdn.blizzard.com/
+[I 2019-11-18 02:23:59.0783] {4e} INF: failed to load group index '7c681439855d3c8f69aa741e2969442f': E_NOT_AVAILABLE
+[I 2019-11-18 02:23:59.0784] {4e} INF: failed to load group index '7c681439855d3c8f69aa741e2969442f', re-merging indices
+[I 2019-11-18 02:23:59.0792] {4e} INF: Succeeded to make the CDN Archives group
+[I 2019-11-18 02:23:59.0867] {4e} INF: Update Start: old build config(4e6f6e6500), old IM(None)
+[I 2019-11-18 02:23:59.0903] Expected download bytes 0, Required bytes 0
+[I 2019-11-18 02:23:59.0904] {4e} INF: Cleanup

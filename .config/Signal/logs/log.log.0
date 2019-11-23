@@ -1,0 +1,656 @@
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"app ready","time":"2019-09-07T21:31:20.313Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"starting version 1.27.2","time":"2019-09-07T21:31:20.320Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"key/initialize: Generating new encryption key, since we did not find it on disk","time":"2019-09-07T21:31:20.328Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving user config to disk","time":"2019-09-07T21:31:20.328Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"migrateSchemaVersion: Migrating from schema_version 0 to user_version 0","time":"2019-09-07T21:31:20.332Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateSchema:\n  Current user_version: 0;\n  Most recent db schema: 18;\n  SQLite version: 3.28.0;\n  SQLCipher version: 4.2.0 community;\n  (deprecated) schema_version: 0;\n","time":"2019-09-07T21:31:20.342Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion1: starting...","time":"2019-09-07T21:31:20.342Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion1: success!","time":"2019-09-07T21:31:20.354Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion2: starting...","time":"2019-09-07T21:31:20.355Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion2: success!","time":"2019-09-07T21:31:20.365Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion3: starting...","time":"2019-09-07T21:31:20.365Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion3: success!","time":"2019-09-07T21:31:20.376Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion4: starting...","time":"2019-09-07T21:31:20.376Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion4: success!","time":"2019-09-07T21:31:20.389Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion6: starting...","time":"2019-09-07T21:31:20.389Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion6: success!","time":"2019-09-07T21:31:20.405Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion7: starting...","time":"2019-09-07T21:31:20.406Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion7: success!","time":"2019-09-07T21:31:20.422Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion8: starting...","time":"2019-09-07T21:31:20.422Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion8: success!","time":"2019-09-07T21:31:20.439Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion9: starting...","time":"2019-09-07T21:31:20.440Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion9: success!","time":"2019-09-07T21:31:20.454Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion10: starting...","time":"2019-09-07T21:31:20.455Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion10: success!","time":"2019-09-07T21:31:20.478Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion11: starting...","time":"2019-09-07T21:31:20.479Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion11: success!","time":"2019-09-07T21:31:20.485Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion12: starting...","time":"2019-09-07T21:31:20.485Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion12: success!","time":"2019-09-07T21:31:20.497Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion13: starting...","time":"2019-09-07T21:31:20.498Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion13: success!","time":"2019-09-07T21:31:20.505Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion14: starting...","time":"2019-09-07T21:31:20.506Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion14: success!","time":"2019-09-07T21:31:20.515Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion15: starting...","time":"2019-09-07T21:31:20.515Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion15: success!","time":"2019-09-07T21:31:20.538Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion16: starting...","time":"2019-09-07T21:31:20.538Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion16: success!","time":"2019-09-07T21:31:20.558Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion17: starting...","time":"2019-09-07T21:31:20.559Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion17: Index messages_view_once did not already exist","time":"2019-09-07T21:31:20.564Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion17: success!","time":"2019-09-07T21:31:20.577Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion18: starting...","time":"2019-09-07T21:31:20.577Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updateToSchemaVersion18: success!","time":"2019-09-07T21:31:20.585Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Location reset needed","time":"2019-09-07T21:31:20.591Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Initializing BrowserWindow config: {\"show\":true,\"width\":800,\"height\":610,\"minWidth\":640,\"minHeight\":550,\"autoHideMenuBar\":false,\"backgroundColor\":\"#2090EA\",\"vibrancy\":\"appearance-based\",\"webPreferences\":{\"nodeIntegration\":false,\"nodeIntegrationInWorker\":false,\"contextIsolation\":false,\"preload\":\"/usr/lib/signal/resources/app.asar/preload.js\",\"nativeWindowOpen\":true},\"icon\":\"/usr/lib/signal/resources/app.asar/images/icon_256.png\"}","time":"2019-09-07T21:31:20.591Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":640,\"height\":747,\"x\":1,\"y\":20}","time":"2019-09-07T21:31:21.203Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-07T21:31:21.204Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Detected Linux. Using default en_US spell check dictionary","time":"2019-09-07T21:31:21.871Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"pre-main prep time: 3 ms","time":"2019-09-07T21:31:22.040Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Build expires:  2019-12-05T22:09:34.000Z","time":"2019-09-07T21:31:22.110Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Preloading emoji images","time":"2019-09-07T21:31:22.127Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"background page reloaded","time":"2019-09-07T21:31:22.134Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"environment: production","time":"2019-09-07T21:31:22.135Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 1 (getItemById) succeeded in 126ms","time":"2019-09-07T21:31:22.262Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Checking for the existence of IndexedDB data...","time":"2019-09-07T21:31:22.262Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Storage fetch","time":"2019-09-07T21:31:22.398Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 3 (createOrUpdateItem) succeeded in 29ms","time":"2019-09-07T21:31:22.433Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"removeKnownAttachments: About to iterate through 0 messages","time":"2019-09-07T21:31:22.440Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"removeKnownAttachments: Done processing 0 messages","time":"2019-09-07T21:31:22.441Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"removeKnownAttachments: About to iterate through 0 conversations","time":"2019-09-07T21:31:22.442Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"removeKnownAttachments: Done processing 0 conversations","time":"2019-09-07T21:31:22.444Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"deleteAll: deleted 0 files","time":"2019-09-07T21:31:22.444Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"removeKnownStickers: About to iterate through 0 stickers","time":"2019-09-07T21:31:22.447Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"removeKnownStickers: Done processing 0 stickers","time":"2019-09-07T21:31:22.448Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"deleteAllStickers: deleted 0 files","time":"2019-09-07T21:31:22.448Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"removeKnownDraftAttachments: About to iterate through 0 conversations","time":"2019-09-07T21:31:22.449Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"removeKnownDraftAttachments: Done processing 0 conversations","time":"2019-09-07T21:31:22.450Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"deleteAllDraftAttachments: deleted 0 files","time":"2019-09-07T21:31:22.450Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Starting background data migration. Target version: 10","time":"2019-09-07T21:31:22.454Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"ConversationController: starting initial fetch","time":"2019-09-07T21:31:22.454Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"ConversationController: done with initial fetch","time":"2019-09-07T21:31:22.460Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SignalProtocolStore: Finished caching identityKeys data","time":"2019-09-07T21:31:22.463Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SignalProtocolStore: Finished caching sessions data","time":"2019-09-07T21:31:22.468Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SignalProtocolStore: Finished caching preKeys data","time":"2019-09-07T21:31:22.472Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SignalProtocolStore: Finished caching signedPreKeys data","time":"2019-09-07T21:31:22.478Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Cleanup: starting...","time":"2019-09-07T21:31:22.479Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Cleanup: Found 0 messages for cleanup","time":"2019-09-07T21:31:22.483Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Cleanup: complete","time":"2019-09-07T21:31:22.484Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"listening for registration events","time":"2019-09-07T21:31:22.484Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"opening provisioning socket https://textsecure-service.whispersystems.org","time":"2019-09-07T21:31:22.497Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 14 (getNextExpiringMessage) succeeded in 25ms","time":"2019-09-07T21:31:22.512Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 15 (getNextTapToViewMessageToAgeOut) succeeded in 25ms","time":"2019-09-07T21:31:22.512Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"provisioning socket open","time":"2019-09-07T21:31:22.662Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":40,"msg":"doesDatabaseExist: Timed out attempting to check IndexedDB status","time":"2019-09-07T21:31:23.265Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Done preloading emoji images in 2501ms","time":"2019-09-07T21:31:24.634Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":640,\"height\":747,\"x\":-1283,\"y\":20}","time":"2019-09-07T21:31:25.062Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-07T21:31:25.062Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:32:17.805Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:33:12.833Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:34:07.866Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:35:02.893Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:35:57.944Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:36:52.976Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:37:48.003Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:38:43.046Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:39:38.073Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:40:33.101Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:41:28.134Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:42:23.168Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:43:18.195Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:44:13.224Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:45:08.260Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:46:03.321Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:46:58.362Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:47:53.406Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:48:48.434Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:49:43.468Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:50:38.497Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:51:33.532Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:52:28.561Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:53:23.594Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:54:18.624Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:55:13.652Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:56:08.680Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:57:03.729Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:57:58.875Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:58:53.904Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Remove all notifications","time":"2019-09-07T21:59:28.313Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":640,\"height\":747,\"x\":1,\"y\":20}","time":"2019-09-07T21:59:28.813Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-07T21:59:28.814Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":640,\"height\":747,\"x\":-1283,\"y\":20}","time":"2019-09-07T21:59:31.391Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-07T21:59:31.391Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T21:59:48.932Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:00:43.959Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:01:38.990Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:02:34.018Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Remove all notifications","time":"2019-09-07T22:02:34.539Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":640,\"height\":747,\"x\":1,\"y\":20}","time":"2019-09-07T22:02:35.038Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-07T22:02:35.039Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Remove all notifications","time":"2019-09-07T22:02:35.339Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":640,\"height\":747,\"x\":-1283,\"y\":20}","time":"2019-09-07T22:02:37.028Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-07T22:02:37.029Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Remove all notifications","time":"2019-09-07T22:02:39.977Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":640,\"height\":747,\"x\":1,\"y\":20}","time":"2019-09-07T22:02:40.074Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-07T22:02:40.074Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Remove all notifications","time":"2019-09-07T22:02:43.175Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":1364,\"height\":747,\"x\":1,\"y\":20}","time":"2019-09-07T22:02:43.675Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-07T22:02:43.676Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"WebSocketResource.close()","time":"2019-09-07T22:03:20.200Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"provisioning socket closed. Code: 3000","time":"2019-09-07T22:03:20.222Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 16 (removeAll) succeeded in 15ms","time":"2019-09-07T22:03:26.030Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SignalProtocolStore: Finished caching identityKeys data","time":"2019-09-07T22:03:26.032Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SignalProtocolStore: Finished caching sessions data","time":"2019-09-07T22:03:26.035Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SignalProtocolStore: Finished caching preKeys data","time":"2019-09-07T22:03:26.037Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SignalProtocolStore: Finished caching signedPreKeys data","time":"2019-09-07T22:03:26.039Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"ConversationController: starting initial fetch","time":"2019-09-07T22:03:26.041Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"ConversationController: done with initial fetch","time":"2019-09-07T22:03:26.042Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"PUT https://textsecure-service.whispersystems.org/v1/devices/876017","time":"2019-09-07T22:03:26.065Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"PUT https://textsecure-service.whispersystems.org/v1/devices/876017 200 Success","time":"2019-09-07T22:03:26.210Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 39 (createOrUpdateItem) succeeded in 11ms","time":"2019-09-07T22:03:26.262Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 40 (createOrUpdateItem) succeeded in 11ms","time":"2019-09-07T22:03:26.262Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"clearing all sessions, prekeys, and signed prekeys","time":"2019-09-07T22:03:26.266Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 44 (removeAllSessions) succeeded in 11ms","time":"2019-09-07T22:03:26.278Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Most recent signed key: 1","time":"2019-09-07T22:03:26.347Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Most recent confirmed signed key: none","time":"2019-09-07T22:03:26.347Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Total signed key count: 1 - 0 confirmed","time":"2019-09-07T22:03:26.347Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"PUT https://textsecure-service.whispersystems.org/v2/keys","time":"2019-09-07T22:03:26.347Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 46 (createOrUpdateItem) succeeded in 26ms","time":"2019-09-07T22:03:26.365Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 47 (createOrUpdateItem) succeeded in 26ms","time":"2019-09-07T22:03:26.365Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 51 (createOrUpdatePreKey) succeeded in 25ms","time":"2019-09-07T22:03:26.366Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 49 (createOrUpdatePreKey) succeeded in 26ms","time":"2019-09-07T22:03:26.366Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 53 (createOrUpdatePreKey) succeeded in 25ms","time":"2019-09-07T22:03:26.366Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 54 (createOrUpdatePreKey) succeeded in 26ms","time":"2019-09-07T22:03:26.366Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 55 (createOrUpdatePreKey) succeeded in 26ms","time":"2019-09-07T22:03:26.366Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 48 (createOrUpdatePreKey) succeeded in 29ms","time":"2019-09-07T22:03:26.366Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 52 (createOrUpdatePreKey) succeeded in 38ms","time":"2019-09-07T22:03:26.367Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 50 (createOrUpdatePreKey) succeeded in 40ms","time":"2019-09-07T22:03:26.380Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 56 (createOrUpdatePreKey) succeeded in 38ms","time":"2019-09-07T22:03:26.380Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 57 (createOrUpdatePreKey) succeeded in 48ms","time":"2019-09-07T22:03:26.380Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 58 (createOrUpdatePreKey) succeeded in 58ms","time":"2019-09-07T22:03:26.380Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 62 (createOrUpdatePreKey) succeeded in 63ms","time":"2019-09-07T22:03:26.391Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 61 (createOrUpdatePreKey) succeeded in 64ms","time":"2019-09-07T22:03:26.391Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 59 (createOrUpdatePreKey) succeeded in 67ms","time":"2019-09-07T22:03:26.392Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 60 (createOrUpdatePreKey) succeeded in 68ms","time":"2019-09-07T22:03:26.392Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 63 (createOrUpdatePreKey) succeeded in 69ms","time":"2019-09-07T22:03:26.392Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 64 (createOrUpdatePreKey) succeeded in 71ms","time":"2019-09-07T22:03:26.410Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 65 (createOrUpdatePreKey) succeeded in 72ms","time":"2019-09-07T22:03:26.410Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 66 (createOrUpdatePreKey) succeeded in 73ms","time":"2019-09-07T22:03:26.410Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 67 (createOrUpdatePreKey) succeeded in 80ms","time":"2019-09-07T22:03:26.411Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"PUT https://textsecure-service.whispersystems.org/v2/keys 204 Success","time":"2019-09-07T22:03:26.421Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"confirmKeys: confirming key 1","time":"2019-09-07T22:03:26.421Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 68 (createOrUpdatePreKey) succeeded in 89ms","time":"2019-09-07T22:03:26.422Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 69 (createOrUpdatePreKey) succeeded in 96ms","time":"2019-09-07T22:03:26.422Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 70 (createOrUpdatePreKey) succeeded in 98ms","time":"2019-09-07T22:03:26.422Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 71 (createOrUpdatePreKey) succeeded in 99ms","time":"2019-09-07T22:03:26.437Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 72 (createOrUpdatePreKey) succeeded in 100ms","time":"2019-09-07T22:03:26.438Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 73 (createOrUpdatePreKey) succeeded in 100ms","time":"2019-09-07T22:03:26.438Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 74 (createOrUpdatePreKey) succeeded in 106ms","time":"2019-09-07T22:03:26.439Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 75 (createOrUpdatePreKey) succeeded in 106ms","time":"2019-09-07T22:03:26.439Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 76 (createOrUpdatePreKey) succeeded in 108ms","time":"2019-09-07T22:03:26.439Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 77 (createOrUpdatePreKey) succeeded in 113ms","time":"2019-09-07T22:03:26.456Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 78 (createOrUpdatePreKey) succeeded in 125ms","time":"2019-09-07T22:03:26.457Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 79 (createOrUpdatePreKey) succeeded in 136ms","time":"2019-09-07T22:03:26.467Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 80 (createOrUpdatePreKey) succeeded in 137ms","time":"2019-09-07T22:03:26.467Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 81 (createOrUpdatePreKey) succeeded in 139ms","time":"2019-09-07T22:03:26.468Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 82 (createOrUpdatePreKey) succeeded in 139ms","time":"2019-09-07T22:03:26.468Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 83 (createOrUpdatePreKey) succeeded in 142ms","time":"2019-09-07T22:03:26.468Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 84 (createOrUpdatePreKey) succeeded in 144ms","time":"2019-09-07T22:03:26.489Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 85 (createOrUpdatePreKey) succeeded in 143ms","time":"2019-09-07T22:03:26.489Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 86 (createOrUpdatePreKey) succeeded in 144ms","time":"2019-09-07T22:03:26.489Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 87 (createOrUpdatePreKey) succeeded in 152ms","time":"2019-09-07T22:03:26.490Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 88 (createOrUpdatePreKey) succeeded in 162ms","time":"2019-09-07T22:03:26.498Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 89 (createOrUpdatePreKey) succeeded in 172ms","time":"2019-09-07T22:03:26.498Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 90 (createOrUpdatePreKey) succeeded in 174ms","time":"2019-09-07T22:03:26.498Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 91 (createOrUpdatePreKey) succeeded in 175ms","time":"2019-09-07T22:03:26.513Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 92 (createOrUpdatePreKey) succeeded in 175ms","time":"2019-09-07T22:03:26.513Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 93 (createOrUpdatePreKey) succeeded in 175ms","time":"2019-09-07T22:03:26.513Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 94 (createOrUpdatePreKey) succeeded in 178ms","time":"2019-09-07T22:03:26.513Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 95 (createOrUpdatePreKey) succeeded in 179ms","time":"2019-09-07T22:03:26.514Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 96 (createOrUpdatePreKey) succeeded in 180ms","time":"2019-09-07T22:03:26.514Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 97 (createOrUpdatePreKey) succeeded in 185ms","time":"2019-09-07T22:03:26.528Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 98 (createOrUpdatePreKey) succeeded in 195ms","time":"2019-09-07T22:03:26.529Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 99 (createOrUpdatePreKey) succeeded in 203ms","time":"2019-09-07T22:03:26.542Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 100 (createOrUpdatePreKey) succeeded in 202ms","time":"2019-09-07T22:03:26.542Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 101 (createOrUpdatePreKey) succeeded in 207ms","time":"2019-09-07T22:03:26.543Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 102 (createOrUpdatePreKey) succeeded in 207ms","time":"2019-09-07T22:03:26.543Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 103 (createOrUpdatePreKey) succeeded in 209ms","time":"2019-09-07T22:03:26.543Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 104 (createOrUpdatePreKey) succeeded in 211ms","time":"2019-09-07T22:03:26.562Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 105 (createOrUpdatePreKey) succeeded in 210ms","time":"2019-09-07T22:03:26.562Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 106 (createOrUpdatePreKey) succeeded in 212ms","time":"2019-09-07T22:03:26.562Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 107 (createOrUpdatePreKey) succeeded in 222ms","time":"2019-09-07T22:03:26.562Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 108 (createOrUpdatePreKey) succeeded in 230ms","time":"2019-09-07T22:03:26.574Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 109 (createOrUpdatePreKey) succeeded in 241ms","time":"2019-09-07T22:03:26.574Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 110 (createOrUpdatePreKey) succeeded in 241ms","time":"2019-09-07T22:03:26.593Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 111 (createOrUpdatePreKey) succeeded in 245ms","time":"2019-09-07T22:03:26.593Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 112 (createOrUpdatePreKey) succeeded in 245ms","time":"2019-09-07T22:03:26.593Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 113 (createOrUpdatePreKey) succeeded in 246ms","time":"2019-09-07T22:03:26.593Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 114 (createOrUpdatePreKey) succeeded in 250ms","time":"2019-09-07T22:03:26.593Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 115 (createOrUpdatePreKey) succeeded in 250ms","time":"2019-09-07T22:03:26.594Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 116 (createOrUpdatePreKey) succeeded in 252ms","time":"2019-09-07T22:03:26.594Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 117 (createOrUpdatePreKey) succeeded in 260ms","time":"2019-09-07T22:03:26.609Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 118 (createOrUpdatePreKey) succeeded in 271ms","time":"2019-09-07T22:03:26.609Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 119 (createOrUpdatePreKey) succeeded in 281ms","time":"2019-09-07T22:03:26.621Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 120 (createOrUpdatePreKey) succeeded in 281ms","time":"2019-09-07T22:03:26.621Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 121 (createOrUpdatePreKey) succeeded in 284ms","time":"2019-09-07T22:03:26.621Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 122 (createOrUpdatePreKey) succeeded in 285ms","time":"2019-09-07T22:03:26.622Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 123 (createOrUpdatePreKey) succeeded in 285ms","time":"2019-09-07T22:03:26.622Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 124 (createOrUpdatePreKey) succeeded in 289ms","time":"2019-09-07T22:03:26.646Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 125 (createOrUpdatePreKey) succeeded in 289ms","time":"2019-09-07T22:03:26.646Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 126 (createOrUpdatePreKey) succeeded in 290ms","time":"2019-09-07T22:03:26.646Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 127 (createOrUpdatePreKey) succeeded in 298ms","time":"2019-09-07T22:03:26.647Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 128 (createOrUpdatePreKey) succeeded in 309ms","time":"2019-09-07T22:03:26.658Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 129 (createOrUpdatePreKey) succeeded in 322ms","time":"2019-09-07T22:03:26.658Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 130 (createOrUpdatePreKey) succeeded in 322ms","time":"2019-09-07T22:03:26.658Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 131 (createOrUpdatePreKey) succeeded in 327ms","time":"2019-09-07T22:03:26.682Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 132 (createOrUpdatePreKey) succeeded in 327ms","time":"2019-09-07T22:03:26.683Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 133 (createOrUpdatePreKey) succeeded in 328ms","time":"2019-09-07T22:03:26.683Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 134 (createOrUpdatePreKey) succeeded in 331ms","time":"2019-09-07T22:03:26.683Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 135 (createOrUpdatePreKey) succeeded in 332ms","time":"2019-09-07T22:03:26.683Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 136 (createOrUpdatePreKey) succeeded in 333ms","time":"2019-09-07T22:03:26.684Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 137 (createOrUpdatePreKey) succeeded in 340ms","time":"2019-09-07T22:03:26.698Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 138 (createOrUpdatePreKey) succeeded in 359ms","time":"2019-09-07T22:03:26.698Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 139 (createOrUpdatePreKey) succeeded in 367ms","time":"2019-09-07T22:03:26.706Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 140 (createOrUpdatePreKey) succeeded in 368ms","time":"2019-09-07T22:03:26.707Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 141 (createOrUpdatePreKey) succeeded in 371ms","time":"2019-09-07T22:03:26.707Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 142 (createOrUpdatePreKey) succeeded in 371ms","time":"2019-09-07T22:03:26.707Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 143 (createOrUpdatePreKey) succeeded in 371ms","time":"2019-09-07T22:03:26.707Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 144 (createOrUpdatePreKey) succeeded in 375ms","time":"2019-09-07T22:03:26.712Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 145 (createOrUpdatePreKey) succeeded in 375ms","time":"2019-09-07T22:03:26.712Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 146 (createOrUpdatePreKey) succeeded in 376ms","time":"2019-09-07T22:03:26.712Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 147 (createOrUpdatePreKey) succeeded in 380ms","time":"2019-09-07T22:03:26.712Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 148 (createOrUpdateSignedPreKey) succeeded in 382ms","time":"2019-09-07T22:03:26.712Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 149 (createOrUpdateSignedPreKey) succeeded in 316ms","time":"2019-09-07T22:03:26.713Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"registration done","time":"2019-09-07T22:03:26.713Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"dispatching registration event","time":"2019-09-07T22:03:26.730Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"handling registration event","time":"2019-09-07T22:03:26.730Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Next signed key rotation scheduled for 2019-09-07T22:03:26.730Z","time":"2019-09-07T22:03:26.731Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"refreshSenderCertificate: Getting new certificate...","time":"2019-09-07T22:03:26.731Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://textsecure-service.whispersystems.org/v1/certificate/delivery","time":"2019-09-07T22:03:26.731Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"connect","time":"2019-09-07T22:03:26.733Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"getAllFromCache","time":"2019-09-07T22:03:26.734Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"opening message socket https://textsecure-service.whispersystems.org","time":"2019-09-07T22:03:26.735Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"PUT https://textsecure-service.whispersystems.org/v1/devices/unauthenticated_delivery","time":"2019-09-07T22:03:26.738Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 151 (createOrUpdateItem) succeeded in 13ms","time":"2019-09-07T22:03:26.744Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Rotating signed prekey...","time":"2019-09-07T22:03:26.745Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 152 (createOrUpdateItem) succeeded in 14ms","time":"2019-09-07T22:03:26.745Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 153 (createOrUpdateItem) succeeded in 15ms","time":"2019-09-07T22:03:26.745Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 154 (getUnprocessedCount) succeeded in 11ms","time":"2019-09-07T22:03:26.746Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Saving new signed prekey 2","time":"2019-09-07T22:03:26.748Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"PUT https://textsecure-service.whispersystems.org/v2/keys/signed","time":"2019-09-07T22:03:26.749Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"getAllFromCache loaded 0 saved envelopes","time":"2019-09-07T22:03:26.752Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://textsecure-service.whispersystems.org/v1/certificate/delivery 200 Success","time":"2019-09-07T22:03:26.771Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Next sender certificate refresh scheduled for 2019-09-08T22:03:26.772Z","time":"2019-09-07T22:03:26.773Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://textsecure-service.whispersystems.org/v1/profile/+[REDACTED]453 (unauth)","time":"2019-09-07T22:03:26.776Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"websocket open","time":"2019-09-07T22:03:26.935Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"got request PUT /api/v1/queue/empty","time":"2019-09-07T22:03:26.939Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"MessageReceiver: finished processing messages after 'empty', now waiting for application","time":"2019-09-07T22:03:26.941Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"MessageReceiver: emitting 'empty' event","time":"2019-09-07T22:03:26.941Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"updater/start: Updates disabled - not starting new version checks","time":"2019-09-07T22:03:26.942Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"PUT https://textsecure-service.whispersystems.org/v2/keys/signed 204 Success","time":"2019-09-07T22:03:26.971Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Confirming new signed prekey 2","time":"2019-09-07T22:03:26.972Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Most recent signed key: 2","time":"2019-09-07T22:03:26.980Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Most recent confirmed signed key: 2","time":"2019-09-07T22:03:26.980Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Total signed key count: 2 - 2 confirmed","time":"2019-09-07T22:03:26.981Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Next signed key rotation scheduled for 2019-09-09T22:03:26.980Z","time":"2019-09-07T22:03:26.981Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://textsecure-service.whispersystems.org/v1/profile/+[REDACTED]453 200 Success","time":"2019-09-07T22:03:26.989Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Setting sealedSender to DISABLED for conversation +[REDACTED]453","time":"2019-09-07T22:03:26.990Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://cdn.signal.org/profiles/sha4HZSnw55Z13y_7vqzNA","time":"2019-09-07T22:03:26.992Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"PUT https://textsecure-service.whispersystems.org/v1/devices/unauthenticated_delivery 204 Success","time":"2019-09-07T22:03:26.995Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SyncRequest created. Sending config sync request...","time":"2019-09-07T22:03:26.996Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SyncRequest now sending contact sync message...","time":"2019-09-07T22:03:26.998Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Start idle detector","time":"2019-09-07T22:03:26.999Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://textsecure-service.whispersystems.org/v2/keys/+[REDACTED]453/1","time":"2019-09-07T22:03:27.000Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://textsecure-service.whispersystems.org/v2/keys/+[REDACTED]453/1 200 Success","time":"2019-09-07T22:03:27.043Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"PUT https://textsecure-service.whispersystems.org/v1/messages/+[REDACTED]453","time":"2019-09-07T22:03:27.069Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"PUT https://textsecure-service.whispersystems.org/v1/messages/+[REDACTED]453 200 Success","time":"2019-09-07T22:03:27.103Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"PUT https://textsecure-service.whispersystems.org/v1/messages/+[REDACTED]453","time":"2019-09-07T22:03:27.118Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"PUT https://textsecure-service.whispersystems.org/v1/messages/+[REDACTED]453 200 Success","time":"2019-09-07T22:03:27.147Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SyncRequest now sending group sync messsage...","time":"2019-09-07T22:03:27.148Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"PUT https://textsecure-service.whispersystems.org/v1/messages/+[REDACTED]453","time":"2019-09-07T22:03:27.161Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"PUT https://textsecure-service.whispersystems.org/v1/messages/+[REDACTED]453 200 Success","time":"2019-09-07T22:03:27.194Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://cdn.signal.org/profiles/sha4HZSnw55Z13y_7vqzNA 200 Success","time":"2019-09-07T22:03:27.288Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Worker job 1 (arrayBufferToStringBase64) succeeded in 5ms","time":"2019-09-07T22:03:27.764Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"queueing envelope +[REDACTED]453.1 1567893806980 (cd706fe7-2a3d-40d6-9502-7bb13a93f0ec)","time":"2019-09-07T22:03:27.773Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"message from +[REDACTED]453.1 1567893806980 (cd706fe7-2a3d-40d6-9502-7bb13a93f0ec)","time":"2019-09-07T22:03:27.775Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"New remote ephemeral key","time":"2019-09-07T22:03:27.776Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":50,"msg":"queueEnvelope error handling envelope +[REDACTED]453.1 1567893806980 (cd706fe7-2a3d-40d6-9502-7bb13a93f0ec) : Error: Got empty SyncMessage\n    at MessageReceiver.handleSyncMessage (file://[REDACTED]/app.asar/js/libtextsecure.js:39342:11)\n    at MessageReceiver.innerHandleContentMessage (file://[REDACTED]/app.asar/js/libtextsecure.js:39202:19)\n    at file://[REDACTED]/app.asar/js/libtextsecure.js:39196:19","time":"2019-09-07T22:03:27.792Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Worker job 2 (arrayBufferToStringBase64) succeeded in 1ms","time":"2019-09-07T22:03:27.793Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Worker job 3 (arrayBufferToStringBase64) succeeded in 1ms","time":"2019-09-07T22:03:27.838Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"queueing envelope +[REDACTED]453.1 1567893806981 (da1b5f32-6b14-41d4-b276-a6711ea06175)","time":"2019-09-07T22:03:27.844Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"message from +[REDACTED]453.1 1567893806981 (da1b5f32-6b14-41d4-b276-a6711ea06175)","time":"2019-09-07T22:03:27.845Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"got configuration sync message","time":"2019-09-07T22:03:27.855Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Worker job 4 (arrayBufferToStringBase64) succeeded in 1ms","time":"2019-09-07T22:03:27.859Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 190 (createOrUpdateItem) succeeded in 18ms","time":"2019-09-07T22:03:27.875Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 191 (createOrUpdateItem) succeeded in 19ms","time":"2019-09-07T22:03:27.875Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 192 (removeUnprocessed) succeeded in 19ms","time":"2019-09-07T22:03:27.876Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 193 (updateUnprocessedWithData) succeeded in 19ms","time":"2019-09-07T22:03:27.876Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Worker job 5 (arrayBufferToStringBase64) succeeded in 2ms","time":"2019-09-07T22:03:28.671Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"queueing envelope +[REDACTED]453.1 1567893808116 (132257d4-6a0c-4d80-9644-d54e8292ab7a)","time":"2019-09-07T22:03:28.679Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"message from +[REDACTED]453.1 1567893808116 (132257d4-6a0c-4d80-9644-d54e8292ab7a)","time":"2019-09-07T22:03:28.680Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"contact sync","time":"2019-09-07T22:03:28.691Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://cdn.signal.org/attachments/4166991073009174796","time":"2019-09-07T22:03:28.692Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Worker job 6 (arrayBufferToStringBase64) succeeded in 1ms","time":"2019-09-07T22:03:28.694Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://cdn.signal.org/attachments/4166991073009174796 200 Success","time":"2019-09-07T22:03:28.862Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"handleContacts: finished","time":"2019-09-07T22:03:28.876Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Setting sealedSender to UNKNOWN for conversation +[REDACTED]521","time":"2019-09-07T22:03:28.953Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://textsecure-service.whispersystems.org/v1/profile/+[REDACTED]521 (unauth)","time":"2019-09-07T22:03:28.955Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"got verified sync for +[REDACTED]521 DEFAULT via contact sync","time":"2019-09-07T22:03:28.966Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"No existing record for default status","time":"2019-09-07T22:03:28.968Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://textsecure-service.whispersystems.org/v1/profile/+[REDACTED]521 200 Success","time":"2019-09-07T22:03:28.984Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Saving new identity...","time":"2019-09-07T22:03:28.984Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Setting sealedSender to ENABLED for conversation +[REDACTED]521","time":"2019-09-07T22:03:28.990Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://cdn.signal.org/profiles/qKLMWMlgTOU-5ViY2xPb9A","time":"2019-09-07T22:03:28.993Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 222 (updateConversation) succeeded in 11ms","time":"2019-09-07T22:03:28.996Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"got verified sync for +[REDACTED]453 VERIFIED via contact sync","time":"2019-09-07T22:03:29.008Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"refusing to add verified change advisory for our own number","time":"2019-09-07T22:03:29.021Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Setting sealedSender to UNKNOWN for conversation +[REDACTED]997","time":"2019-09-07T22:03:29.096Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://textsecure-service.whispersystems.org/v1/profile/+[REDACTED]997 (unauth)","time":"2019-09-07T22:03:29.099Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"got verified sync for +[REDACTED]997 DEFAULT via contact sync","time":"2019-09-07T22:03:29.112Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"No existing record for default status","time":"2019-09-07T22:03:29.113Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Setting sealedSender to UNKNOWN for conversation +[REDACTED]035","time":"2019-09-07T22:03:29.126Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://textsecure-service.whispersystems.org/v1/profile/+[REDACTED]035 (unauth)","time":"2019-09-07T22:03:29.130Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://textsecure-service.whispersystems.org/v1/profile/+[REDACTED]997 200 Success","time":"2019-09-07T22:03:29.131Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Saving new identity...","time":"2019-09-07T22:03:29.131Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Setting sealedSender to DISABLED for conversation +[REDACTED]997","time":"2019-09-07T22:03:29.140Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 249 (updateConversation) succeeded in 12ms","time":"2019-09-07T22:03:29.146Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"got verified sync for +[REDACTED]035 DEFAULT via contact sync","time":"2019-09-07T22:03:29.152Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"No existing record for default status","time":"2019-09-07T22:03:29.153Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 253 (updateConversation) succeeded in 13ms","time":"2019-09-07T22:03:29.159Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://textsecure-service.whispersystems.org/v1/profile/+[REDACTED]035 200 Success","time":"2019-09-07T22:03:29.162Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Saving new identity...","time":"2019-09-07T22:03:29.162Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Setting sealedSender to DISABLED for conversation +[REDACTED]035","time":"2019-09-07T22:03:29.170Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Setting sealedSender to UNKNOWN for conversation +[REDACTED]710","time":"2019-09-07T22:03:29.192Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://cdn.signal.org/profiles/qKLMWMlgTOU-5ViY2xPb9A 200 Success","time":"2019-09-07T22:03:29.194Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://textsecure-service.whispersystems.org/v1/profile/+[REDACTED]710 (unauth)","time":"2019-09-07T22:03:29.195Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"got verified sync for +[REDACTED]710 DEFAULT via contact sync","time":"2019-09-07T22:03:29.207Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"No existing record for default status","time":"2019-09-07T22:03:29.208Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 266 (updateConversation) succeeded in 13ms","time":"2019-09-07T22:03:29.211Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://textsecure-service.whispersystems.org/v1/profile/+[REDACTED]710 200 Success","time":"2019-09-07T22:03:29.226Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Saving new identity...","time":"2019-09-07T22:03:29.226Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Setting sealedSender to UNKNOWN for conversation +[REDACTED]527","time":"2019-09-07T22:03:29.230Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://textsecure-service.whispersystems.org/v1/profile/+[REDACTED]527 (unauth)","time":"2019-09-07T22:03:29.234Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 272 (createOrUpdateIdentityKey) succeeded in 11ms","time":"2019-09-07T22:03:29.238Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Setting sealedSender to ENABLED for conversation +[REDACTED]710","time":"2019-09-07T22:03:29.239Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://cdn.signal.org/profiles/g3chYeViotY_3w_Zbg3mDA","time":"2019-09-07T22:03:29.241Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"got verified sync for +[REDACTED]527 DEFAULT via contact sync","time":"2019-09-07T22:03:29.251Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"No existing record for default status","time":"2019-09-07T22:03:29.252Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://textsecure-service.whispersystems.org/v1/profile/+[REDACTED]527 200 Success","time":"2019-09-07T22:03:29.267Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Saving new identity...","time":"2019-09-07T22:03:29.267Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Setting sealedSender to DISABLED for conversation +[REDACTED]527","time":"2019-09-07T22:03:29.277Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://cdn.signal.org/profiles/9o69DqUIM_XAAUjebGmIYw","time":"2019-09-07T22:03:29.277Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"got verified sync for +[REDACTED]615 DEFAULT via contact sync","time":"2019-09-07T22:03:29.310Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"No existing record for default status","time":"2019-09-07T22:03:29.311Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":50,"msg":"GET https://cdn.signal.org/profiles/g3chYeViotY_3w_Zbg3mDA 403 Error","time":"2019-09-07T22:03:29.352Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"got verified sync for +[REDACTED]274 DEFAULT via contact sync","time":"2019-09-07T22:03:29.397Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"No existing record for default status","time":"2019-09-07T22:03:29.397Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Setting sealedSender to UNKNOWN for conversation +[REDACTED]607","time":"2019-09-07T22:03:29.410Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://textsecure-service.whispersystems.org/v1/profile/+[REDACTED]607 (unauth)","time":"2019-09-07T22:03:29.413Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"got verified sync for +[REDACTED]607 DEFAULT via contact sync","time":"2019-09-07T22:03:29.421Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"No existing record for default status","time":"2019-09-07T22:03:29.421Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Got sync message with our own profile key","time":"2019-09-07T22:03:29.430Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Setting sealedSender to UNKNOWN for conversation +[REDACTED]453","time":"2019-09-07T22:03:29.432Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://textsecure-service.whispersystems.org/v1/profile/+[REDACTED]453 (unauth)","time":"2019-09-07T22:03:29.439Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://textsecure-service.whispersystems.org/v1/profile/+[REDACTED]607 200 Success","time":"2019-09-07T22:03:29.442Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Saving new identity...","time":"2019-09-07T22:03:29.443Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Setting sealedSender to ENABLED for conversation +[REDACTED]607","time":"2019-09-07T22:03:29.447Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://textsecure-service.whispersystems.org/v1/profile/+[REDACTED]453 200 Success","time":"2019-09-07T22:03:29.578Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Setting sealedSender to UNRESTRICTED for conversation +[REDACTED]453","time":"2019-09-07T22:03:29.578Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://cdn.signal.org/profiles/sha4HZSnw55Z13y_7vqzNA","time":"2019-09-07T22:03:29.581Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://cdn.signal.org/profiles/9o69DqUIM_XAAUjebGmIYw 200 Success","time":"2019-09-07T22:03:29.586Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://cdn.signal.org/profiles/sha4HZSnw55Z13y_7vqzNA 200 Success","time":"2019-09-07T22:03:29.607Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":1364,\"height\":747,\"x\":-2731,\"y\":20}","time":"2019-09-07T22:03:34.615Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-07T22:03:34.616Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Remove all notifications","time":"2019-09-07T22:03:36.817Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":1364,\"height\":747,\"x\":1,\"y\":20}","time":"2019-09-07T22:03:37.316Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-07T22:03:37.316Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":750,\"height\":747,\"x\":614,\"y\":19}","time":"2019-09-07T22:03:45.100Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-07T22:03:45.100Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:04:23.671Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"sync successful","time":"2019-09-07T22:04:27.016Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"open inbox","time":"2019-09-07T22:04:27.017Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 329 (createOrUpdateItem) succeeded in 69ms","time":"2019-09-07T22:04:27.085Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Upgrade message schema (with index): {\"done\":true,\"numProcessed\":0,\"fetchDuration\":4,\"upgradeDuration\":0,\"saveDuration\":0,\"totalDuration\":4}","time":"2019-09-07T22:04:32.280Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Background migration complete. Stopping idle detector.","time":"2019-09-07T22:04:32.281Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Stop idle detector","time":"2019-09-07T22:04:32.281Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:05:18.702Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"getAllFromCache","time":"2019-09-07T22:05:28.696Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"getAllFromCache loaded 1 saved envelopes","time":"2019-09-07T22:05:28.700Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Worker job 7 (stringToArrayBufferBase64) succeeded in 2ms","time":"2019-09-07T22:05:28.711Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Worker job 8 (stringToArrayBufferBase64) succeeded in 1ms","time":"2019-09-07T22:05:28.712Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"queueing decrypted envelope +[REDACTED]453.1 1567893806980 (cd706fe7-2a3d-40d6-9502-7bb13a93f0ec)","time":"2019-09-07T22:05:28.713Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":50,"msg":"queueDecryptedEnvelope error handling envelope +[REDACTED]453.1 1567893806980 (cd706fe7-2a3d-40d6-9502-7bb13a93f0ec): Error: Got empty SyncMessage\n    at MessageReceiver.handleSyncMessage (file://[REDACTED]/app.asar/js/libtextsecure.js:39342:11)\n    at MessageReceiver.innerHandleContentMessage (file://[REDACTED]/app.asar/js/libtextsecure.js:39202:19)\n    at MessageReceiver.handleDecryptedEnvelope (file://[REDACTED]/app.asar/js/libtextsecure.js:38845:19)\n    at file://[REDACTED]/app.asar/js/libtextsecure.js:41784:21\n    at new Promise (<anonymous>)\n    at file://[REDACTED]/app.asar/js/libtextsecure.js:41740:7\n    at run ([REDACTED]/app.asar/node_modules/p-queue/index.js:211:20)\n    at PQueue._tryToStartAnother ([REDACTED]/app.asar/node_modules/p-queue/index.js:173:25)\n    at PQueue._next ([REDACTED]/app.asar/node_modules/p-queue/index.js:113:8)\n    at run ([REDACTED]/app.asar/node_modules/p-queue/index.js:216:10)","time":"2019-09-07T22:05:28.713Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Remove all notifications","time":"2019-09-07T22:06:01.852Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Remove all notifications","time":"2019-09-07T22:06:04.250Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"open inbox","time":"2019-09-07T22:06:09.808Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://textsecure-service.whispersystems.org/v1/profile/+[REDACTED]453 (unauth)","time":"2019-09-07T22:06:09.922Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 335 (getMessageMetricsForConversation) succeeded in 94ms","time":"2019-09-07T22:06:09.944Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 336 (getOlderMessagesByConversation) succeeded in 40ms","time":"2019-09-07T22:06:09.953Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 337 (getOlderMessagesByConversation) succeeded in 37ms","time":"2019-09-07T22:06:09.982Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://textsecure-service.whispersystems.org/v1/profile/+[REDACTED]453 200 Success","time":"2019-09-07T22:06:10.416Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Setting sealedSender to UNRESTRICTED for conversation +[REDACTED]453","time":"2019-09-07T22:06:10.417Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://cdn.signal.org/profiles/sha4HZSnw55Z13y_7vqzNA","time":"2019-09-07T22:06:10.418Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://cdn.signal.org/profiles/sha4HZSnw55Z13y_7vqzNA 200 Success","time":"2019-09-07T22:06:10.497Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:06:13.730Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":50,"msg":"i18n: Attempted to get translation for nonexistent key 'sendLinkPreviews'","time":"2019-09-07T22:06:21.940Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":50,"msg":"i18n: Attempted to get translation for nonexistent key 'linkPreviewsDescription'","time":"2019-09-07T22:06:21.940Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":750,\"height\":747,\"x\":615,\"y\":20}","time":"2019-09-07T22:06:22.439Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-07T22:06:22.440Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"theme-setting changed to dark","time":"2019-09-07T22:06:23.796Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 344 (createOrUpdateItem) succeeded in 16ms","time":"2019-09-07T22:06:23.813Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Remove all notifications","time":"2019-09-07T22:06:37.007Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Remove all notifications","time":"2019-09-07T22:06:37.009Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":50,"msg":"i18n: Attempted to get translation for nonexistent key 'sendLinkPreviews'","time":"2019-09-07T22:07:02.033Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":50,"msg":"i18n: Attempted to get translation for nonexistent key 'linkPreviewsDescription'","time":"2019-09-07T22:07:02.033Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:07:08.793Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Remove all notifications","time":"2019-09-07T22:07:09.460Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Remove all notifications","time":"2019-09-07T22:07:10.184Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Remove all notifications","time":"2019-09-07T22:07:12.575Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Remove all notifications","time":"2019-09-07T22:07:12.575Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Remove all notifications","time":"2019-09-07T22:07:14.071Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":1364,\"height\":747,\"x\":0,\"y\":19}","time":"2019-09-07T22:07:14.570Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-07T22:07:14.570Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:08:03.820Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:08:58.848Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:09:53.879Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:10:48.907Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:11:43.941Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:12:38.969Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:13:34.005Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:14:29.036Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:15:24.068Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:16:19.112Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:17:14.153Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:18:09.183Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:19:04.212Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:19:59.245Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:20:54.296Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:21:49.325Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:22:44.371Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:23:39.401Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:24:34.434Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:25:29.462Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:26:24.584Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:27:19.613Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:28:14.639Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:29:09.673Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:30:04.704Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:30:59.730Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:31:54.758Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:32:49.785Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:33:44.820Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:34:39.854Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:35:34.886Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:36:29.922Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:37:24.963Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:38:19.993Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:39:15.028Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:40:10.058Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:41:05.086Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:42:00.115Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:42:55.157Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:43:50.188Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:44:45.216Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:45:40.246Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:46:35.278Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-07T22:47:30.322Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Next signed key rotation scheduled for 2019-09-09T22:03:26.980Z","time":"2019-09-08T00:32:25.959Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Next sender certificate refresh scheduled for 2019-09-09T00:32:25.959Z","time":"2019-09-08T00:32:25.960Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"offline","time":"2019-09-08T00:32:25.961Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"disconnect","time":"2019-09-08T00:32:26.962Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"MessageReceiver.close()","time":"2019-09-08T00:32:26.979Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"WebSocketResource.close()","time":"2019-09-08T00:32:26.979Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"drained","time":"2019-09-08T00:32:26.980Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":40,"msg":"Dispatching our own socket close event","time":"2019-09-08T00:32:27.980Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"websocket closed 3000 called close calledClose: true","time":"2019-09-08T00:32:27.981Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"online","time":"2019-09-08T00:32:28.942Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"connect","time":"2019-09-08T00:32:28.943Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"MessageReceiver.close()","time":"2019-09-08T00:32:28.943Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"drained","time":"2019-09-08T00:32:28.943Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"opening message socket https://textsecure-service.whispersystems.org","time":"2019-09-08T00:32:28.944Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Start idle detector","time":"2019-09-08T00:32:28.949Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":50,"msg":"websocket error","time":"2019-09-08T00:32:28.954Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"websocket closed 1006 connection failed calledClose: ","time":"2019-09-08T00:32:28.955Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://textsecure-service.whispersystems.org/v1/devices","time":"2019-09-08T00:32:28.955Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Cycling agent for type -auth","time":"2019-09-08T00:32:28.955Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 389 (resetAttachmentDownloadPending) succeeded in 13ms","time":"2019-09-08T00:32:28.960Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":50,"msg":"GET https://textsecure-service.whispersystems.org/v1/devices 0 Error","time":"2019-09-08T00:32:28.961Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://textsecure-service.whispersystems.org/v1/devices","time":"2019-09-08T00:32:29.962Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":50,"msg":"GET https://textsecure-service.whispersystems.org/v1/devices 0 Error","time":"2019-09-08T00:32:29.965Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"GET https://textsecure-service.whispersystems.org/v1/devices","time":"2019-09-08T00:32:30.966Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":50,"msg":"GET https://textsecure-service.whispersystems.org/v1/devices 0 Error","time":"2019-09-08T00:32:30.971Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":50,"msg":"background onError: HTTPError: promiseAjax catch; code: -1\n    at HTTPError ([REDACTED]/app.asar/js/modules/web_api.js:379:13)\n    at [REDACTED]/app.asar/js/modules/web_api.js:351:16\n    at processTicksAndRejections (internal/process/task_queues.js:89:5)\nOriginal stack:\nFetchError: request to https://textsecure-service.whispersystems.org/v1/devices failed, reason: getaddrinfo EAI_AGAIN textsecure-service.whispersystems.org\n    at ClientRequest.<anonymous> ([REDACTED]/app.asar/node_modules/node-fetch/index.js:133:11)\n    at ClientRequest.emit (events.js:200:13)\n    at TLSSocket.socketErrorListener (_http_client.js:402:9)\n    at TLSSocket.emit (events.js:200:13)\n    at emitErrorNT (internal/streams/destroy.js:91:8)\n    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)\n    at processTicksAndRejections (internal/process/task_queues.js:84:9)\nInitial stack:\nError\n    at _outerAjax ([REDACTED]/app.asar/js/modules/web_api.js:373:19)\n    at _ajax ([REDACTED]/app.asar/js/modules/web_api.js:476:14)\n    at Object.getDevices ([REDACTED]/app.asar/js/modules/web_api.js:667:14)\n    at MessageReceiver.onclose (file://[REDACTED]/app.asar/js/libtextsecure.js:38484:8)\n    at W3CWebSocket._dispatchEvent [as dispatchEvent] ([REDACTED]/app.asar/node_modules/yaeti/lib/EventTarget.js:107:17)\n    at W3CWebSocket.onConnectFailed ([REDACTED]/app.asar/node_modules/websocket/lib/W3CWebSocket.js:219:14)\n    at WebSocketClient.<anonymous> ([REDACTED]/app.asar/node_modules/websocket/lib/W3CWebSocket.js:59:25)\n    at WebSocketClient.emit (events.js:200:13)\n    at ClientRequest.handleRequestError ([REDACTED]/app.asar/node_modules/websocket/lib/WebSocketClient.js:227:14)\n    at ClientRequest.emit (events.js:200:13)","time":"2019-09-08T00:32:30.974Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"retrying in 1 minute","time":"2019-09-08T00:32:30.974Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Background migration complete. Stopping idle detector.","time":"2019-09-08T00:32:33.963Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Stop idle detector","time":"2019-09-08T00:32:33.963Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":1364,\"height\":747,\"x\":-2731,\"y\":20}","time":"2019-09-08T00:32:42.030Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-08T00:32:42.030Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Remove all notifications","time":"2019-09-08T00:33:08.937Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":1364,\"height\":747,\"x\":1,\"y\":20}","time":"2019-09-08T00:33:09.438Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-08T00:33:09.439Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":750,\"height\":747,\"x\":614,\"y\":19}","time":"2019-09-08T00:33:22.560Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-08T00:33:22.561Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"connect","time":"2019-09-08T00:33:30.974Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"MessageReceiver.close()","time":"2019-09-08T00:33:30.975Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"drained","time":"2019-09-08T00:33:30.975Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"opening message socket https://textsecure-service.whispersystems.org","time":"2019-09-08T00:33:30.975Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Start idle detector","time":"2019-09-08T00:33:30.977Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Background migration complete. Stopping idle detector.","time":"2019-09-08T00:33:30.978Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Stop idle detector","time":"2019-09-08T00:33:30.978Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"websocket open","time":"2019-09-08T00:33:31.107Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"got request PUT /api/v1/queue/empty","time":"2019-09-08T00:33:31.110Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"MessageReceiver: finished processing messages after 'empty', now waiting for application","time":"2019-09-08T00:33:31.111Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"MessageReceiver: emitting 'empty' event","time":"2019-09-08T00:33:31.111Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:34:26.112Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":750,\"height\":747,\"x\":-1503,\"y\":20}","time":"2019-09-08T00:34:37.524Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-08T00:34:37.525Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:35:21.139Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"getAllFromCache","time":"2019-09-08T00:35:31.112Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"getAllFromCache loaded 1 saved envelopes","time":"2019-09-08T00:35:31.116Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":40,"msg":"getAllFromCache final attempt for envelope cd706fe7-2a3d-40d6-9502-7bb13a93f0ec","time":"2019-09-08T00:35:31.117Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"SQL channel job 398 (removeUnprocessed) succeeded in 12ms","time":"2019-09-08T00:35:31.128Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Worker job 9 (stringToArrayBufferBase64) succeeded in 1ms","time":"2019-09-08T00:35:31.130Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Worker job 10 (stringToArrayBufferBase64) succeeded in 1ms","time":"2019-09-08T00:35:31.131Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"queueing decrypted envelope +[REDACTED]453.1 1567893806980 (cd706fe7-2a3d-40d6-9502-7bb13a93f0ec)","time":"2019-09-08T00:35:31.132Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":50,"msg":"queueDecryptedEnvelope error handling envelope +[REDACTED]453.1 1567893806980 (cd706fe7-2a3d-40d6-9502-7bb13a93f0ec): Error: Got empty SyncMessage\n    at MessageReceiver.handleSyncMessage (file://[REDACTED]/app.asar/js/libtextsecure.js:39342:11)\n    at MessageReceiver.innerHandleContentMessage (file://[REDACTED]/app.asar/js/libtextsecure.js:39202:19)\n    at MessageReceiver.handleDecryptedEnvelope (file://[REDACTED]/app.asar/js/libtextsecure.js:38845:19)\n    at file://[REDACTED]/app.asar/js/libtextsecure.js:41784:21\n    at new Promise (<anonymous>)\n    at file://[REDACTED]/app.asar/js/libtextsecure.js:41740:7\n    at run ([REDACTED]/app.asar/node_modules/p-queue/index.js:211:20)\n    at PQueue._tryToStartAnother ([REDACTED]/app.asar/node_modules/p-queue/index.js:173:25)\n    at PQueue._next ([REDACTED]/app.asar/node_modules/p-queue/index.js:113:8)\n    at run ([REDACTED]/app.asar/node_modules/p-queue/index.js:216:10)","time":"2019-09-08T00:35:31.147Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:36:16.169Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":750,\"height\":747,\"x\":615,\"y\":20}","time":"2019-09-08T00:36:20.554Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-08T00:36:20.555Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Remove all notifications","time":"2019-09-08T00:36:20.685Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:37:11.198Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":750,\"height\":747,\"x\":-1503,\"y\":20}","time":"2019-09-08T00:37:11.564Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-08T00:37:11.565Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:38:06.228Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:39:01.261Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:39:56.290Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:40:51.318Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:41:46.351Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:42:41.381Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:43:36.410Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:44:31.440Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:45:26.481Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:46:21.508Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:47:16.543Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:48:11.573Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:49:06.599Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:50:01.627Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:50:56.654Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:51:51.681Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:52:46.724Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:53:41.751Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:54:36.780Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:55:31.807Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:56:26.834Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:57:21.880Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:58:16.911Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T00:59:11.962Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:00:06.990Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:01:02.021Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:01:57.050Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:02:52.080Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:03:47.108Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:04:42.140Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:05:37.168Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:06:32.268Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:07:27.379Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:08:22.440Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:09:17.535Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:10:12.637Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:11:07.713Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:12:02.751Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:12:57.799Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:13:52.834Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:14:47.931Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:15:42.994Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":1364,\"height\":747,\"x\":1,\"y\":20}","time":"2019-09-08T01:15:57.568Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-08T01:15:57.568Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":750,\"height\":747,\"x\":614,\"y\":19}","time":"2019-09-08T01:16:01.141Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-08T01:16:01.141Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Remove all notifications","time":"2019-09-08T01:16:01.592Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:16:38.021Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Remove all notifications","time":"2019-09-08T01:17:17.837Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":1364,\"height\":747,\"x\":-2731,\"y\":20}","time":"2019-09-08T01:17:18.715Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-08T01:17:18.715Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:17:33.046Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:18:28.133Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:19:23.168Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:20:18.212Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:21:13.239Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:22:08.268Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:23:03.296Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:23:58.326Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:24:53.373Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:25:48.401Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:26:43.431Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:27:38.467Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:28:33.497Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:29:28.586Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:30:23.637Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Remove all notifications","time":"2019-09-08T01:31:17.010Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":1364,\"height\":747,\"x\":1,\"y\":20}","time":"2019-09-08T01:31:17.500Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-08T01:31:17.500Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":1364,\"height\":747,\"x\":-2731,\"y\":20}","time":"2019-09-08T01:31:18.128Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-08T01:31:18.128Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Remove all notifications","time":"2019-09-08T01:31:18.226Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:31:18.663Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":1364,\"height\":747,\"x\":1,\"y\":20}","time":"2019-09-08T01:31:18.725Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-08T01:31:18.725Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":1364,\"height\":747,\"x\":-2731,\"y\":20}","time":"2019-09-08T01:31:23.314Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-08T01:31:23.315Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Remove all notifications","time":"2019-09-08T01:31:49.704Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":1364,\"height\":747,\"x\":1,\"y\":20}","time":"2019-09-08T01:31:50.204Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-08T01:31:50.204Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"width\":1364,\"height\":747,\"x\":-2731,\"y\":20}","time":"2019-09-08T01:31:50.897Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2019-09-08T01:31:50.897Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:32:13.700Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:33:08.729Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:34:03.759Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:34:58.801Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:35:53.836Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:36:48.885Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:37:43.945Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:38:39.033Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:39:34.161Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:40:29.190Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:41:24.221Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:42:19.352Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:43:14.679Z","v":0}
+{"name":"log","hostname":"T530","pid":19845,"level":30,"msg":"Sending a keepalive message","time":"2019-09-08T01:44:09.708Z","v":0}

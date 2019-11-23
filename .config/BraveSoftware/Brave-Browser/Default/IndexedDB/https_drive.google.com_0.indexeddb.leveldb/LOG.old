@@ -1,9 +1,0 @@
-2019/06/30-17:58:10.529 760f Reusing MANIFEST /home/austin/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/MANIFEST-000001
-2019/06/30-17:58:10.530 760f Recovering log #96
-2019/06/30-17:58:10.547 760f Reusing old log /home/austin/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/000096.log 
-2019/06/30-17:58:17.328 33ea Level-0 table #101: started
-2019/06/30-17:58:17.348 33ea Level-0 table #101: 673441 bytes OK
-2019/06/30-17:58:17.352 33ea Delete type=0 #96
-2019/06/30-18:17:43.330 33ea Level-0 table #103: started
-2019/06/30-18:17:43.373 33ea Level-0 table #103: 662234 bytes OK
-2019/06/30-18:17:43.379 33ea Delete type=0 #100

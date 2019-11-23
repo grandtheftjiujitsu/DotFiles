@@ -1,0 +1,7 @@
+; File generated automatically from /home/ubuntu/buildbot/runners/wine/wine-src/dlls/vdmdbg/vdmdbg.spec; do not edit!
+
+LIBRARY vdmdbg.dll
+
+EXPORTS
+  VDMEnumProcessWOW @3
+  VDMEnumTaskWOW @4

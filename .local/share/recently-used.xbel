@@ -3,392 +3,245 @@
       xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
       xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
 >
-  <bookmark href="file:///home/austin/git/savagezen.github.io/_posts/2019-05-31-Returning-to-BJJ.md" added="2019-05-31T23:19:29Z" modified="2019-05-31T23:19:29Z" visited="2019-05-31T23:19:29Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="text/markdown"/>
-        <bookmark:applications>
-          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2019-05-31T23:19:29Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/Rockyard%20-%20Rolling%20in%20the%20Deep.mp3" added="2019-06-08T21:00:56Z" modified="2019-06-08T21:00:56Z" visited="2019-06-08T21:00:56Z">
+  <bookmark href="file:///home/austin/mega/phone_backup/sdcard/Ringtones/dial_up_modem.mp3" added="2019-10-19T19:39:33Z" modified="2019-10-19T19:39:33Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="audio/mpeg"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-08T21:00:56Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-19T19:39:33Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///tmp/9DCyGBh.jpg" added="2019-06-09T02:41:40Z" modified="2019-06-29T20:36:23Z" visited="2019-06-09T02:41:40Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/jpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-29T20:36:23Z" count="4"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/Garth%20Brooks%20-%20Thunder%20Rolls.mp3" added="2019-06-09T12:19:53Z" modified="2019-06-09T12:19:53Z" visited="2019-06-09T12:19:53Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="audio/mpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-09T12:19:53Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/barbarian.jpg" added="2019-06-09T17:37:23Z" modified="2019-06-09T17:37:28Z" visited="2019-06-09T17:37:23Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/jpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-09T17:37:28Z" count="2"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/monk.png" added="2019-06-09T17:38:09Z" modified="2019-06-09T17:38:41Z" visited="2019-06-09T17:38:10Z">
+  <bookmark href="file:///tmp/Thumbnail%20-%20Reflection%20-%20Alpha2.png" added="2019-10-24T13:27:53Z" modified="2019-10-24T13:27:53Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="image/png"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-09T17:38:41Z" count="2"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-24T13:27:53Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///tmp/rogue.jpg" added="2019-06-09T17:38:23Z" modified="2019-06-09T17:38:48Z" visited="2019-06-09T17:38:24Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/jpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-09T17:38:48Z" count="2"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/warlock.jpeg" added="2019-06-09T17:39:22Z" modified="2019-06-09T17:39:26Z" visited="2019-06-09T17:39:22Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/jpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-09T17:39:26Z" count="2"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/ranger.jpg" added="2019-06-09T17:40:03Z" modified="2019-06-09T17:40:07Z" visited="2019-06-09T17:40:03Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/jpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-09T17:40:07Z" count="2"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/sorcerer.png" added="2019-06-09T17:53:54Z" modified="2019-06-09T17:54:03Z" visited="2019-06-09T17:53:54Z">
+  <bookmark href="file:///tmp/Thumbnail%20-%20Q&amp;A%20-%20crate%20follow%20up.png" added="2019-10-24T13:31:07Z" modified="2019-10-24T13:38:49Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="image/png"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-09T17:54:03Z" count="2"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-24T13:38:49Z" count="2"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///tmp/wizard.jpg" added="2019-06-09T17:54:45Z" modified="2019-06-09T17:54:49Z" visited="2019-06-09T17:54:46Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/jpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-09T17:54:49Z" count="2"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/paladin.jpg" added="2019-06-09T17:56:14Z" modified="2019-06-09T17:56:19Z" visited="2019-06-09T17:56:15Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/jpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-09T17:56:19Z" count="2"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/dnd-bjj.png" added="2019-06-09T18:09:05Z" modified="2019-06-09T18:09:22Z" visited="2019-06-09T18:09:05Z">
+  <bookmark href="file:///tmp/Thumbnail%20-%20MGNT%20-%20crates%202.png" added="2019-10-24T13:34:56Z" modified="2019-10-24T13:35:21Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="image/png"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-09T18:09:22Z" count="2"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-24T13:35:21Z" count="2"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///home/austin/git/savagezen.github.io/_drafts/BJJ-blood-pressure-03.md" added="2019-06-12T13:07:32Z" modified="2019-06-12T14:21:53Z" visited="2019-06-12T13:07:33Z">
+  <bookmark href="file:///tmp/Thumbnail%20-%20Detection%20Vlog%20-%20008.png" added="2019-10-24T13:40:30Z" modified="2019-10-24T13:41:12Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="text/markdown"/>
+        <mime:mime-type type="image/png"/>
         <bookmark:applications>
-          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2019-06-12T14:21:53Z" count="3"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-24T13:41:12Z" count="2"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///home/austin/git/savagezen.github.io/_drafts/BJJ-blood-pressure-02.md" added="2019-06-12T13:07:56Z" modified="2019-06-12T14:07:13Z" visited="2019-06-12T13:07:56Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="text/markdown"/>
-        <bookmark:applications>
-          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2019-06-12T14:07:13Z" count="3"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/austin/git/savagezen.github.io/_posts/2019-03-08-blood-pressure-01.md" added="2019-06-12T13:45:04Z" modified="2019-06-12T14:07:36Z" visited="2019-06-12T13:45:05Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="text/markdown"/>
-        <bookmark:applications>
-          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2019-06-12T14:07:36Z" count="2"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/austin/git/savagezen.github.io/_drafts/BJJ-blood-pressure-00.md" added="2019-06-12T13:45:37Z" modified="2019-06-12T13:45:37Z" visited="2019-06-12T13:45:37Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="text/markdown"/>
-        <bookmark:applications>
-          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2019-06-12T13:45:37Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/sports-05-00054.pdf" added="2019-06-12T15:58:59Z" modified="2019-06-12T15:58:59Z" visited="2019-06-12T15:58:59Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/pdf"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-12T15:58:59Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/881809.pdf" added="2019-06-12T16:00:15Z" modified="2019-06-12T16:00:15Z" visited="2019-06-12T16:00:15Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/pdf"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-12T16:00:15Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/eBay-Dogtra.pdf" added="2019-06-14T12:33:43Z" modified="2019-06-14T12:36:03Z" visited="2019-06-14T12:33:43Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/pdf"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-14T12:36:03Z" count="4"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/austin/documents/vault/austin_supervision.zip" added="2019-06-14T18:16:02Z" modified="2019-06-14T18:16:02Z" visited="2019-06-14T18:16:02Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/zip"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-14T18:16:02Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/kingsport-butcher2.jpg" added="2019-06-15T13:14:03Z" modified="2019-06-15T13:19:26Z" visited="2019-06-15T13:14:03Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/jpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-15T13:19:26Z" count="3"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/kingsport-butcher1.jpg" added="2019-06-15T13:14:13Z" modified="2019-06-15T13:19:24Z" visited="2019-06-15T13:14:13Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/jpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-15T13:19:24Z" count="3"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/kingsport-wraftons_inn.jpg" added="2019-06-15T13:14:54Z" modified="2019-06-15T13:18:59Z" visited="2019-06-15T13:14:54Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/jpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-15T13:18:59Z" count="3"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/austin/git/savagezen.github.io/_drafts/NUTRITION-sodium-and-recovery.md" added="2019-06-18T00:56:28Z" modified="2019-06-18T00:56:28Z" visited="2019-06-18T00:56:28Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="text/markdown"/>
-        <bookmark:applications>
-          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2019-06-18T00:56:28Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/austin/git/savagezen.github.io/_drafts/BJJ-fighting-yourself.md" added="2019-06-18T01:25:48Z" modified="2019-06-18T01:25:48Z" visited="2019-06-18T01:25:48Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="text/markdown"/>
-        <bookmark:applications>
-          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2019-06-18T01:25:48Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/austin/git/savagezen.github.io/_drafts/CANINE-training-resources.md" added="2019-06-18T01:27:26Z" modified="2019-06-18T01:27:26Z" visited="2019-06-18T01:27:27Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="text/markdown"/>
-        <bookmark:applications>
-          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2019-06-18T01:27:26Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/outkast-atliens.mp3" added="2019-06-26T20:50:32Z" modified="2019-06-26T20:50:32Z" visited="2019-06-26T20:50:32Z">
+  <bookmark href="file:///tmp/reflections%20-%20alpha%20roles.mp3" added="2019-10-24T13:40:45Z" modified="2019-10-24T13:43:12Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="audio/mpeg"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-26T20:50:32Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-24T13:40:45Z" count="1"/>
+          <bookmark:application name="chromium" exec="&apos;chromium %u&apos;" modified="2019-10-24T13:43:12Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///tmp/outkast-the_way_you_move.mp3" added="2019-06-26T20:52:09Z" modified="2019-06-26T20:52:09Z" visited="2019-06-26T20:52:10Z">
+  <bookmark href="file:///tmp/Chris%20Cornell%20-%20Higher%20Truth.mp3" added="2019-10-27T13:51:54Z" modified="2019-10-27T13:51:54Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="audio/mpeg"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-26T20:52:09Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-27T13:51:54Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///tmp/seven_mary_three-time_like_these.mp3" added="2019-06-26T20:57:36Z" modified="2019-06-26T20:57:36Z" visited="2019-06-26T20:57:36Z">
+  <bookmark href="file:///tmp/Chris%20Cornell%20-%20Dead%20Wishes.mp3" added="2019-10-27T13:55:08Z" modified="2019-10-27T13:55:08Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="audio/mpeg"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-26T20:57:36Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-27T13:55:08Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///tmp/IMG_20190629_160005.jpg" added="2019-06-29T20:06:12Z" modified="2019-06-29T20:52:48Z" visited="2019-06-29T20:06:12Z">
+  <bookmark href="file:///tmp/Chris%20Cornell%20-%20Before%20We%20Disappear.mp3" added="2019-10-27T13:57:38Z" modified="2019-10-27T13:57:38Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-27T13:57:38Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/WG-BJJ.jpg" added="2019-10-29T13:10:07Z" modified="2019-10-29T13:10:07Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="image/jpeg"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-29T20:52:48Z" count="4"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-29T13:10:07Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///tmp/hoosier_bjj_2011.jpg" added="2019-06-29T20:31:15Z" modified="2019-06-29T20:31:29Z" visited="2019-06-29T20:31:15Z">
+  <bookmark href="file:///tmp/Thumbnail%20-%20Reflection%20-%20Stimulation.png" added="2019-10-30T14:02:04Z" modified="2019-10-30T14:02:29Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/jpeg"/>
+        <mime:mime-type type="image/png"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-29T20:31:29Z" count="2"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-30T14:02:29Z" count="2"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///tmp/promotion_blue-belt.jpg" added="2019-06-29T20:32:35Z" modified="2019-06-29T20:33:09Z" visited="2019-06-29T20:32:35Z">
+  <bookmark href="file:///tmp/Thumbnail%20-%20OB%20%20-%20Heeling%201.png" added="2019-10-30T14:08:34Z" modified="2019-10-30T14:08:40Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/jpeg"/>
+        <mime:mime-type type="image/png"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-29T20:33:09Z" count="2"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-30T14:08:40Z" count="2"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///tmp/2017-02-27.jpg" added="2019-06-29T20:33:33Z" modified="2019-06-29T20:33:46Z" visited="2019-06-29T20:33:34Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/jpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-29T20:33:46Z" count="2"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/IMG_20190627_215524.jpg" added="2019-06-29T20:34:45Z" modified="2019-06-29T20:35:18Z" visited="2019-06-29T20:34:46Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/jpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-29T20:35:18Z" count="2"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/IMG_20190629_133747.jpg" added="2019-06-29T20:37:29Z" modified="2019-06-29T20:37:48Z" visited="2019-06-29T20:37:29Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/jpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-29T20:37:48Z" count="2"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/IMG_20190616_111356_1.jpg" added="2019-06-29T20:39:53Z" modified="2019-06-29T20:40:05Z" visited="2019-06-29T20:39:53Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/jpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-29T20:40:05Z" count="2"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/VID_20190607_202258_3.mp4" added="2019-06-29T20:41:12Z" modified="2019-06-29T20:41:20Z" visited="2019-06-29T20:41:13Z">
+  <bookmark href="file:///tmp/K9%20Q&amp;A-%20Flexi%20Leads.mp4" added="2019-10-30T14:11:38Z" modified="2019-10-30T14:11:38Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="video/mp4"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-29T20:41:20Z" count="2"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-30T14:11:38Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///home/austin/documents/vault/brave_wallet_recovery.txt" added="2019-06-30T14:19:46Z" modified="2019-06-30T14:19:46Z" visited="2019-06-30T14:19:46.302156Z">
+  <bookmark href="file:///tmp/k9-qa-flexi-leads.mp3" added="2019-10-30T14:12:06Z" modified="2019-10-30T14:14:26Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="text/plain"/>
+        <mime:mime-type type="audio/mpeg"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-06-30T14:19:46Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-30T14:12:06Z" count="1"/>
+          <bookmark:application name="chromium" exec="&apos;chromium %u&apos;" modified="2019-10-30T14:14:26Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/k9-qa-dogs-chasing-atvs.mp3" added="2019-10-30T14:13:50Z" modified="2019-10-30T14:17:01Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-30T14:13:50Z" count="1"/>
+          <bookmark:application name="chromium" exec="&apos;chromium %u&apos;" modified="2019-10-30T14:17:01Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/Thumbnail%20-%20MGNT%20-%20Rain.png" added="2019-11-11T00:08:40Z" modified="2019-11-11T00:08:53Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-11-11T00:08:53Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/Thumbnail%20-%20Reflection%20-%20Public%20Stress.png" added="2019-11-11T00:12:46Z" modified="2019-11-11T00:15:28Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-11-11T00:15:28Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/Thumbnail%20-%20OB%20-%20Follow%20Left.png" added="2019-11-11T00:17:01Z" modified="2019-11-11T00:17:13Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-11-11T00:17:13Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/download/Diablo-III-Setup.exe" added="2019-11-17T22:33:06Z" modified="2019-11-17T22:33:06Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-ms-dos-executable"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-11-17T22:33:06Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/games" added="2019-11-17T22:42:36Z" modified="2019-11-17T22:42:36Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Lutris" exec="&apos;lutris %u&apos;" modified="2019-11-17T22:42:36Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/download/Battle.net-Setup.exe" added="2019-11-17T23:17:04Z" modified="2019-11-17T23:17:04Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-ms-dos-executable"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-11-17T23:17:04Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/download/en_windows_7_AIO_sp1_x64_x86_dvd.ISO" added="2019-11-18T01:27:03Z" modified="2019-11-18T01:27:03Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-cd-image"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-11-18T01:27:03Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/games/Diablo-III-Setup.exe" added="2019-11-18T02:34:43Z" modified="2019-11-18T02:34:43Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-ms-dos-executable"/>
+        <bookmark:applications>
+          <bookmark:application name="mainwindow.py" exec="&apos;mainwindow.py %u&apos;" modified="2019-11-18T02:34:43Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/git/savagezen.github.io/_drafts/LINUX-Diablo3.md" added="2019-11-18T16:04:28Z" modified="2019-11-18T16:04:28Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2019-11-18T16:04:28Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>

@@ -41,3 +41,4 @@
 0.12.1 faraday:< 1.0&>= 0.7.4|checksum:06764c0b5e7f10a5efeae501da2c825f0e479969c8ca9b585583fd6546ba63df
 0.12.2 faraday:< 1.0&>= 0.7.4|checksum:2d90093c18c23e7f5a6f602ed3114d2c62abc3f7f959dd3046745b24a863f1dc
 0.13.0 faraday:< 1.0&>= 0.7.4|checksum:14d8e147fffa4d26cf3b1fae4938e5c8b033628a0c6b69dcd781273f14cf9aaf
+0.13.1 faraday:< 1.0&>= 0.7.4|checksum:b94e3e7845f78db0eacdfc7e0185f0310765ccd70a46b6ce6478aa858ace23a9

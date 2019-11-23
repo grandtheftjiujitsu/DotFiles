@@ -1,9 +1,0 @@
-2019/06/15-09:49:46.126 361b Reusing MANIFEST /home/austin/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_wego.here.com_0.indexeddb.leveldb/MANIFEST-000001
-2019/06/15-09:49:46.921 1a05 Current memtable full; waiting...
-2019/06/15-09:49:46.921 2713 Level-0 table #5: started
-2019/06/15-09:49:46.924 2713 Level-0 table #5: 583 bytes OK
-2019/06/15-09:49:46.929 2713 Delete type=0 #3
-2019/06/15-09:49:46.929 2713 Level-0 table #7: started
-2019/06/15-09:49:46.929 2713 Level-0 table #7: 0 bytes OK
-2019/06/15-09:49:46.933 2713 Delete type=0 #4
-2019/06/15-09:49:46.933 2713 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)

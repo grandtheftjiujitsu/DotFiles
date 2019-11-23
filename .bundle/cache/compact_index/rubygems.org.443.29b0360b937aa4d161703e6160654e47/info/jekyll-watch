@@ -16,3 +16,4 @@
 2.1.0 listen:~> 3.0|checksum:5662db0d107ca01df73fee0a45dbe7b105c80ab7054a0c950d2fc0993bd44946,ruby:>= 2.3.0
 2.1.1 listen:~> 3.0|checksum:8a2dee19a7b4f896bdf8b49f7b45d3a5cf5acf3ae259f06dcf320409f6433eae,ruby:>= 2.3.0
 2.1.2 listen:~> 3.0|checksum:fbb72f0bbadb8b593f255039f14da5a8750285ef2238d7de5e54a1ab07f234e9,ruby:>= 2.3.0
+2.2.1 listen:~> 3.0|checksum:bc44ed43f5e0a552836245a54dbff3ea7421ecc2856707e8a1ee203a8387a7e1,ruby:>= 2.3.0

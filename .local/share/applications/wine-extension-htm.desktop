@@ -2,7 +2,7 @@
 Type=Application
 Name=winebrowser
 MimeType=text/html;
-Exec=env WINEPREFIX="/home/austin/.wine" /usr/bin/wine start /ProgIDOpen htmlfile %f
+Exec=env WINEPREFIX="/home/austin/games/diablo3" /usr/bin/wine start /ProgIDOpen htmlfile %f
 NoDisplay=true
 StartupNotify=true
 Icon=7765_winebrowser.0

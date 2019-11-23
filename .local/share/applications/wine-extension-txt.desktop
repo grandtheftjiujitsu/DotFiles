@@ -2,7 +2,7 @@
 Type=Application
 Name=notepad
 MimeType=text/plain;
-Exec=env WINEPREFIX="/home/austin/.wine" /usr/bin/wine start /ProgIDOpen txtfile %f
+Exec=env WINEPREFIX="/home/austin/games/diablo3" /usr/bin/wine start /ProgIDOpen txtfile %f
 NoDisplay=true
 StartupNotify=true
 Icon=1E64_notepad.0

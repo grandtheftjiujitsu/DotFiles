@@ -30,3 +30,6 @@
 5.0.18 |checksum:c81b0ed461debc5625d4a542bb3a554a2cb1d56ff9f76effedf5989e250779e6,ruby:>= 1.9.3
 6.0.0 |checksum:bb0d875fe95c71ce138a157edc443777241499000de9352fa32d599369a55353,ruby:>= 1.9.3
 6.0.1 |checksum:bcdde980879bd2edd557dea3b9ea16bd439932e3b01517d0dce97bfba1d9957f,ruby:>= 1.9.3
+6.6.2 |checksum:38caf653ac145ceba3dd39990600bcf3e5b923b965e745d28c5a572a46309507,ruby:>= 1.9.3
+7.0.0 |checksum:b1daf0fd71c9dd853cef0cd433946acddafc325b6a3bb8f52d0c6f9fc0025c4d,ruby:>= 1.9.3
+8.0.0 |checksum:26381f9270b85ef900daa6c4c2795ecaf3f3ae5840d9ea34a2defc53acf56bab,ruby:>= 2.3

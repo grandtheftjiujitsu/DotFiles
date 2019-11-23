@@ -1,23 +1,39 @@
-May 26 09:08:52.000 [notice] Tor 0.3.5.8 opening new log file.
-May 26 09:08:52.022 [notice] Tor 0.3.5.8 running on Linux with Libevent 2.1.9-beta, OpenSSL 1.0.2q, Zlib 1.2.11, Liblzma N/A, and Libzstd N/A.
-May 26 09:08:52.022 [notice] Tor can't help you if you use it wrong! Learn how to be safe at https://www.torproject.org/download/download#warning
-May 26 09:08:52.022 [notice] Configuration file "/nonexistent" not present, using reasonable defaults.
-May 26 09:08:52.034 [notice] Opening Socks listener on 127.0.0.1:9390
-May 26 09:08:52.034 [notice] Opened Socks listener on 127.0.0.1:9390
-May 26 09:08:52.034 [notice] Opening Control listener on 127.0.0.1:0
-May 26 09:08:52.034 [notice] Control listener listening on port 34979.
-May 26 09:08:52.034 [notice] Opened Control listener on 127.0.0.1:0
-May 26 09:08:52.000 [notice] Bootstrapped 0%: Starting
-May 26 09:08:52.000 [notice] Starting with guard context "default"
-May 26 09:08:52.000 [notice] Bootstrapped 5%: Connecting to directory server
-May 26 09:08:52.000 [notice] Bootstrapped 10%: Finishing handshake with directory server
-May 26 09:08:53.000 [notice] Bootstrapped 15%: Establishing an encrypted directory connection
-May 26 09:08:53.000 [notice] Bootstrapped 20%: Asking for networkstatus consensus
-May 26 09:08:53.000 [notice] Bootstrapped 50%: Loading relay descriptors
-May 26 09:08:53.000 [notice] Bootstrapped 80%: Connecting to the Tor network
-May 26 09:08:54.000 [notice] Bootstrapped 85%: Finishing handshake with first hop
-May 26 09:08:54.000 [notice] Bootstrapped 90%: Establishing a Tor circuit
-May 26 09:08:55.000 [notice] Bootstrapped 100%: Done
-May 26 14:55:05.000 [notice] Your system clock just jumped 20199 seconds forward; assuming established circuits no longer work.
-May 26 20:45:31.000 [notice] Heartbeat: Tor's uptime is 6:00 hours, with 4 circuits open. I've sent 3.39 MB and received 27.00 MB.
-May 26 20:45:31.000 [notice] Average packaged cell fullness: 32.595%. TLS write overhead: 5%
+Sep 22 13:48:58.000 [notice] Tor 0.3.5.8 opening new log file.
+Sep 22 13:48:58.219 [notice] Tor 0.3.5.8 running on Linux with Libevent 2.1.9-beta, OpenSSL 1.0.2q, Zlib 1.2.11, Liblzma N/A, and Libzstd N/A.
+Sep 22 13:48:58.220 [notice] Tor can't help you if you use it wrong! Learn how to be safe at https://www.torproject.org/download/download#warning
+Sep 22 13:48:58.220 [notice] Configuration file "/nonexistent" not present, using reasonable defaults.
+Sep 22 13:48:58.227 [notice] Opening Socks listener on 127.0.0.1:9390
+Sep 22 13:48:58.227 [notice] Opened Socks listener on 127.0.0.1:9390
+Sep 22 13:48:58.227 [notice] Opening Control listener on 127.0.0.1:0
+Sep 22 13:48:58.227 [notice] Control listener listening on port 38013.
+Sep 22 13:48:58.227 [notice] Opened Control listener on 127.0.0.1:0
+Sep 22 13:48:58.000 [notice] Bootstrapped 0%: Starting
+Sep 22 13:48:58.000 [notice] Starting with guard context "default"
+Sep 22 13:48:59.000 [notice] Application request when we haven't used client functionality lately. Optimistically trying directory fetches again.
+Sep 22 13:48:59.000 [notice] Bootstrapped 5%: Connecting to directory server
+Sep 22 13:48:59.000 [notice] Bootstrapped 10%: Finishing handshake with directory server
+Sep 22 13:48:59.000 [notice] Bootstrapped 15%: Establishing an encrypted directory connection
+Sep 22 13:48:59.000 [notice] Bootstrapped 20%: Asking for networkstatus consensus
+Sep 22 13:48:59.000 [notice] Bootstrapped 25%: Loading networkstatus consensus
+Sep 22 13:49:00.000 [notice] Bootstrapped 45%: Asking for relay descriptors
+Sep 22 13:49:00.000 [notice] I learned some more directory information, but not enough to build a circuit: We need more microdescriptors: we have 8/6507, and can only build 0% of likely paths. (We have 0% of guards bw, 0% of midpoint bw, and 0% of exit bw = 0% of path bw.)
+Sep 22 13:49:01.000 [notice] I learned some more directory information, but not enough to build a circuit: We need more microdescriptors: we have 8/6507, and can only build 0% of likely paths. (We have 0% of guards bw, 0% of midpoint bw, and 0% of exit bw = 0% of path bw.)
+Sep 22 13:49:01.000 [notice] I learned some more directory information, but not enough to build a circuit: We need more microdescriptors: we have 8/6507, and can only build 0% of likely paths. (We have 0% of guards bw, 0% of midpoint bw, and 0% of exit bw = 0% of path bw.)
+Sep 22 13:49:01.000 [notice] Bootstrapped 50%: Loading relay descriptors
+Sep 22 13:49:02.000 [notice] Bootstrapped 55%: Loading relay descriptors
+Sep 22 13:49:02.000 [notice] Bootstrapped 61%: Loading relay descriptors
+Sep 22 13:49:03.000 [notice] Bootstrapped 72%: Loading relay descriptors
+Sep 22 13:49:03.000 [notice] Bootstrapped 80%: Connecting to the Tor network
+Sep 22 13:49:03.000 [notice] Bootstrapped 85%: Finishing handshake with first hop
+Sep 22 13:49:03.000 [notice] Bootstrapped 90%: Establishing a Tor circuit
+Sep 22 13:49:04.000 [notice] Bootstrapped 100%: Done
+Sep 22 13:49:07.000 [notice] Have tried resolving or connecting to address '[scrubbed]' at 3 different places. Giving up.
+Sep 22 13:49:20.000 [notice] Have tried resolving or connecting to address '[scrubbed]' at 3 different places. Giving up.
+Sep 22 13:49:29.000 [notice] Have tried resolving or connecting to address '[scrubbed]' at 3 different places. Giving up.
+Sep 22 13:49:56.000 [notice] Have tried resolving or connecting to address '[scrubbed]' at 3 different places. Giving up.
+Sep 22 13:51:06.000 [notice] Have tried resolving or connecting to address '[scrubbed]' at 3 different places. Giving up.
+Sep 22 13:54:25.000 [notice] Have tried resolving or connecting to address '[scrubbed]' at 3 different places. Giving up.
+Sep 22 14:05:39.000 [notice] Have tried resolving or connecting to address '[scrubbed]' at 3 different places. Giving up.
+Sep 22 19:48:59.000 [notice] Heartbeat: Tor's uptime is 6:00 hours, with 0 circuits open. I've sent 1.01 MB and received 6.16 MB.
+Sep 22 19:48:59.000 [notice] Average packaged cell fullness: 72.166%. TLS write overhead: 4%
+Sep 22 22:59:44.000 [notice] Catching signal TERM, exiting cleanly.

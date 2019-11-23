@@ -325,3 +325,4 @@
 3.7.1 sass-listen:~> 4.0.0|checksum:3a46b9c077f247cf10b09d07b3bdf207a8850993c5a79d1d5d1089809aa7d2ba,ruby:>= 2.0.0
 3.7.2 sass-listen:~> 4.0.0|checksum:0ab3ba1ac56e8923ab4bfc51ac43934af14a995e052e5eeca9252dd42c341ade,ruby:>= 2.0.0
 3.7.3 sass-listen:~> 4.0.0|checksum:160bdac592443cf672d7febe7b2914e16aa786b46918d9bbc490d216ea1a946e,ruby:>= 2.0.0
+3.7.4 sass-listen:~> 4.0.0|checksum:808b0d39053aa69068df939e24671fe84fd5a9d3314486e1a1457d0934a4255d,ruby:>= 2.0.0

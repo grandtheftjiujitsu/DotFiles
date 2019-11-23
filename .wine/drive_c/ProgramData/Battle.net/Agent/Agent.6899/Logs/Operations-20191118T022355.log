@@ -1,0 +1,6 @@
+[I 2019-11-18 02:23:57.0121] Queue operation - OP_UPDATE for 'agent'
+[I 2019-11-18 02:23:57.0121] Active operation nullptr replaced by OP_UPDATE for 'agent'
+[I 2019-11-18 02:24:02.0233] Process finished OP_UPDATE for 'agent'
+[I 2019-11-18 02:24:02.0233] OP_UPDATE for 'agent' completed
+[I 2019-11-18 02:24:45.0776] Active operation nullptr replaced by nullptr
+[I 2019-11-18 02:24:45.0870] Active operation nullptr replaced by nullptr

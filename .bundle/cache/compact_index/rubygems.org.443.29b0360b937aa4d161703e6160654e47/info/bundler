@@ -272,3 +272,6 @@
 2.0.0.pre.3 |checksum:9dc9549eafc4cd2d1d202f2f30088056c0ea631361c3a756894b488c6e22c06f,ruby:>= 2.3.0,rubygems:>= 3.0.0
 2.0.0 |checksum:e21aaa1aff1414df064a627e7fcdb31c43e4a72820082f0153fdf8d6ba288f73,ruby:>= 2.3.0,rubygems:>= 3.0.0
 2.0.1 |checksum:c7e38039993c9c2edc27397aef4a3370a4b35c7fae3d93e434e501c4bd7656ea,ruby:>= 2.3.0,rubygems:>= 2.5.0
+2.0.2 |checksum:4c2ae1fce8a072b832ac7188f1e530a7cff8f0a69d8a9621b32d1407db00a2d0,ruby:>= 2.3.0,rubygems:>= 2.5.0
+2.1.0.pre.1 |checksum:36635c1da65bea5e452c75c748aacc01cc7af59b2c3924b1d4e62f42f6460a6f,ruby:>= 2.3.0,rubygems:>= 2.5.2
+2.1.0.pre.2 |checksum:d91bb1f328d90313a2e37079afe51cc3a4a0027198e88ef94a1e7576b330be2b,ruby:>= 2.3.0,rubygems:>= 2.5.2

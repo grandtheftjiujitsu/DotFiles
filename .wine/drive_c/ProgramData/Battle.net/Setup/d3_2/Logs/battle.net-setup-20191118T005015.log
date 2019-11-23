@@ -1,0 +1,69 @@
+I 2019-11-18 00:50:15.554406 [Main] {2b} Battle.net Setup 1.16.3.2988 started. 
+I 2019-11-18 00:50:15.554448 [Main] {2b} Running from: Z:\home\austin\games\Diablo-III-Setup.exe
+I 2019-11-18 00:50:15.554477 [Main] {2b} Configuration: locale=enUS uid=diablo3_enus
+I 2019-11-18 00:50:15.554570 [Main] {2b} Running as admin
+I 2019-11-18 00:50:15.554704 [Main] {2b} Embedded data found in binary: eyJzZXNzaW9uIjoiIiwiZXhwaXJlc19hdCI6IjE1NzQwNDQzODE4OTkiLCJjbGllbnRfaWQiOiIiLCJ1c2VyX2FnZW50X292ZXJyaWRlIjoiTW96aWxsYSUyRjUuMCslMjhYMTElM0IrTGludXgreDg2XzY0JTI5K0FwcGxlV2ViS2l0JTJGNTM3LjM2KyUyOEtIVE1MJTJDK2xpa2UrR2Vja28lMjkrQ2hyb21lJTJGNzguMC4zOTA0Ljk3K1NhZmFyaSUyRjUzNy4zNiJ9
+I 2019-11-18 00:50:15.554764 [Main] {2b} Session hash generated. hash=7298908521836539507
+D 2019-11-18 00:50:15.555035 [Analytics] {2b} Analytics request sent. type=BNET.BI.SessionGenerate
+D 2019-11-18 00:50:15.555255 [Analytics] {2b} Analytics request sent. type=BNET.BI.BootstrapperSession
+D 2019-11-18 00:50:15.555286 [Main] {2b} Entering main loop.
+I 2019-11-18 00:50:15.555313 [Main] {2b} Bootstrapper State: STATE_CHECK_ENVIRONMENT
+I 2019-11-18 00:50:15.557783 [Main] {9} UI State changed to: UISTATE_RUNNING_BOOTSTRAP
+D 2019-11-18 00:50:15.558723 [Main] {2b} Checking permissions on path: C:\ProgramData\Battle.net depth=-1
+I 2019-11-18 00:50:15.560891 [Main] {9} Active screen changed: bootstrap
+D 2019-11-18 00:50:15.562914 [Main] {2b} Elevation is unnecessary. The current user is an administrator.
+I 2019-11-18 00:50:15.562950 [Main] {2b} Bootstrapper State: STATE_UPDATE_BOOTSTRAPPER
+D 2019-11-18 00:50:15.562996 [Main] {2b} Checking for bootstrapper updates.
+I 2019-11-18 00:50:15.563023 [Main] {2b} Progress zone changed to: ZONE_REPLACESETUP
+I 2019-11-18 00:50:15.563051 [TactProduct] {2b} Fetching remote version info for bts
+I 2019-11-18 00:50:15.578187 [Main] {2b} Downloader - {2b} INF: adding network address 137.221.106.19:1119 for server http://us.patch.battle.net:1119
+I 2019-11-18 00:50:15.702639 [Main] {2b} We are currently up to date.
+I 2019-11-18 00:50:15.702685 [Main] {2b} Bootstrapper State: STATE_EXTRACT_AGENT
+I 2019-11-18 00:50:15.705655 [TactProduct] {2b} Fetching remote version info for agent
+I 2019-11-18 00:50:15.726205 [Main] {2b} Downloader - {2b} INF: adding network address 137.221.106.19:1119 for server http://us.patch.battle.net:1119
+I 2019-11-18 00:50:15.845881 [Main] {2b} Agent is currently up to date.
+I 2019-11-18 00:50:15.845953 [Main] {2b} Bootstrapper State: STATE_START_AGENT
+D 2019-11-18 00:50:15.845982 [BSAgentManager] {2b} Starting agent
+E 2019-11-18 00:50:15.849039 [Main] {2b} Code sign verification failed for Agent, err=5 OS err details1=0 OS err details2=0
+E 2019-11-18 00:50:15.849081 [Main] {2b} Failed to start Agent
+E 2019-11-18 00:50:15.849368 [Main] {2b} Agent launch exception, path='C:\ProgramData\Battle.net\Agent\Agent.exe' error=3
+E 2019-11-18 00:50:15.849419 [BSAgentManager] {2b} Error reported by agent: target=agent code=3 message=
+I 2019-11-18 00:50:15.849486 [Main] {2b} Bootstrapper State: STATE_CHECK_AGENT
+I 2019-11-18 00:50:15.849607 [Main] {2b} Bootstrapper State: STATE_UPDATE_AGENT
+D 2019-11-18 00:50:15.849656 [BSAgentManager] {2b} Tracking agent progress for zone: ZONE_UPDATEAGENT
+I 2019-11-18 00:50:15.849698 [Main] {2b} Progress zone changed to: ZONE_UPDATEAGENT
+E 2019-11-18 00:50:15.852459 [Main] {33} Code sign verification failed for Agent, err=5 OS err details1=0 OS err details2=0
+E 2019-11-18 00:50:15.852500 [Main] {33} Failed to start Agent
+E 2019-11-18 00:50:15.853091 [Main] {33} Agent launch exception, path='C:\ProgramData\Battle.net\Agent\Agent.exe' error=3
+E 2019-11-18 00:50:15.853154 [BSAgentManager] {33} Error reported by agent: target=agent code=3 message=
+E 2019-11-18 00:50:15.853238 [BSAgentManager] {2b} Fatal error occurred while updating: 3
+E 2019-11-18 00:50:15.853289 [Main] {2b} Handling exception in state STATE_UPDATE_AGENT: AgentException(code=BLZBNTAGT00000003, details={filename=C:\ProgramData\Battle.net\Agent\Agent.exe}
+W 2019-11-18 00:50:15.853575 [Main] {2b} Exception converted to: BootstrapperException(code=BLZBNTBTS00000011, details={}
+W 2019-11-18 00:50:15.853621 [Main] {2b} Failed to update agent. Continuing on.
+I 2019-11-18 00:50:15.853653 [Main] {2b} Bootstrapper State: STATE_CHECK_CLIENT
+E 2019-11-18 00:50:15.853745 [BSAgentManager] {2b} Fatal error occurred while updating: 3
+E 2019-11-18 00:50:15.853778 [Main] {2b} Handling exception in state STATE_CHECK_CLIENT: AgentException(code=BLZBNTAGT00000003, details={filename=C:\ProgramData\Battle.net\Agent\Agent.exe}
+W 2019-11-18 00:50:15.854024 [Main] {2b} Exception converted to: BootstrapperException(code=BLZBNTBTS00000011, details={}
+E 2019-11-18 00:50:15.854069 [Main] {2b} Posting exception to controller: BootstrapperException(code=BLZBNTBTS00000011, details={}
+D 2019-11-18 00:50:15.854103 [Main] {2b} Bootstrapper thread completed
+E 2019-11-18 00:50:15.856351 [Main] {33} Code sign verification failed for Agent, err=5 OS err details1=0 OS err details2=0
+E 2019-11-18 00:50:15.856378 [Main] {33} Failed to start Agent
+E 2019-11-18 00:50:15.856609 [Main] {33} Agent launch exception, path='C:\ProgramData\Battle.net\Agent\Agent.exe' error=3
+E 2019-11-18 00:50:15.856636 [BSAgentManager] {33} Error reported by agent: target=agent code=3 message=
+I 2019-11-18 00:50:15.857772 [Main] {9} UI State changed to: UISTATE_RUNNING_ERROR
+E 2019-11-18 00:50:15.859018 [Main] {33} Code sign verification failed for Agent, err=5 OS err details1=0 OS err details2=0
+E 2019-11-18 00:50:15.859041 [Main] {33} Failed to start Agent
+E 2019-11-18 00:50:15.859265 [Main] {33} Agent launch exception, path='C:\ProgramData\Battle.net\Agent\Agent.exe' error=3
+E 2019-11-18 00:50:15.859288 [BSAgentManager] {33} Error reported by agent: target=agent code=3 message=
+E 2019-11-18 00:50:15.862348 [Main] {33} Code sign verification failed for Agent, err=5 OS err details1=0 OS err details2=0
+E 2019-11-18 00:50:15.862374 [Main] {33} Failed to start Agent
+E 2019-11-18 00:50:15.862604 [Main] {33} Agent launch exception, path='C:\ProgramData\Battle.net\Agent\Agent.exe' error=3
+E 2019-11-18 00:50:15.862629 [BSAgentManager] {33} Error reported by agent: target=agent code=3 message=
+I 2019-11-18 00:50:15.874109 [Main] {9} Active screen changed: error
+E 2019-11-18 00:50:15.874668 [Main] {9} Reporting error string: BLZBNTBTS00000011 additionalInfo: 
+D 2019-11-18 00:50:15.874774 [Analytics] {9} Analytics request sent. type=BNET.BI.BootstrapperError
+D 2019-11-18 00:50:19.208662 [Main] {9} The user has asked bootstrapper to quit
+I 2019-11-18 00:50:19.208829 [Main] {9} UI State changed to: UISTATE_SHUTDOWN
+D 2019-11-18 00:50:19.209002 [Analytics] {9} Analytics request sent. type=BNET.BI.BootstrapperSession
+D 2019-11-18 00:50:19.219625 [Main] {9} Bootstrapper is now ready to shutdown
+I 2019-11-18 00:50:19.226691 [Main] {9} Bootstrapper work completed. Shutting down.

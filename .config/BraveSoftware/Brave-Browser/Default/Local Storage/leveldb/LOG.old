@@ -1,63 +1,7 @@
-2019/06/29-08:02:12.606 1f71 Reusing MANIFEST leveldb/MANIFEST-000001
-2019/06/29-08:02:12.608 1f71 Recovering log #1201
-2019/06/29-08:02:12.609 1f71 Reusing old log leveldb/001201.log 
-2019/06/29-08:03:14.008 1eb8 Level-0 table #1205: started
-2019/06/29-08:03:14.013 1eb8 Level-0 table #1205: 17231 bytes OK
-2019/06/29-08:03:14.021 1eb8 Delete type=0 #1201
-2019/06/29-08:03:14.021 1bb3 Compacting 4@0 + 1@1 files
-2019/06/29-08:03:14.060 1bb3 Generated table #1206@0: 1567 keys, 1187743 bytes
-2019/06/29-08:03:14.060 1bb3 Compacted 4@0 + 1@1 files => 1187743 bytes
-2019/06/29-08:03:14.065 1bb3 compacted to: files[ 0 1 1 0 0 0 0 ]
-2019/06/29-08:03:14.065 1bb3 Delete type=2 #1196
-2019/06/29-08:03:14.066 1bb3 Delete type=2 #1198
-2019/06/29-08:03:14.066 1bb3 Delete type=2 #1200
-2019/06/29-08:03:14.066 1bb3 Delete type=2 #1202
-2019/06/29-08:03:14.067 1bb3 Delete type=2 #1205
-2019/06/29-08:12:06.494 4a69 Level-0 table #1208: started
-2019/06/29-08:12:06.507 4a69 Level-0 table #1208: 90304 bytes OK
-2019/06/29-08:12:06.513 4a69 Delete type=0 #1204
-2019/06/29-08:26:14.078 148d Level-0 table #1210: started
-2019/06/29-08:26:14.083 148d Level-0 table #1210: 32692 bytes OK
-2019/06/29-08:26:14.102 148d Delete type=0 #1207
-2019/06/29-08:26:37.348 13db Level-0 table #1212: started
-2019/06/29-08:26:37.354 13db Level-0 table #1212: 22704 bytes OK
-2019/06/29-08:26:37.372 13db Delete type=0 #1209
-2019/06/29-08:47:45.543 18c7 Level-0 table #1214: started
-2019/06/29-08:47:45.548 18c7 Level-0 table #1214: 19171 bytes OK
-2019/06/29-08:47:45.552 18c7 Delete type=0 #1211
-2019/06/29-08:47:45.553 1596 Compacting 4@0 + 1@1 files
-2019/06/29-08:47:45.580 1596 Generated table #1215@0: 1614 keys, 1221224 bytes
-2019/06/29-08:47:45.580 1596 Compacted 4@0 + 1@1 files => 1221224 bytes
-2019/06/29-08:47:45.584 1596 compacted to: files[ 0 1 1 0 0 0 0 ]
-2019/06/29-08:47:45.585 1596 Delete type=2 #1206
-2019/06/29-08:47:45.585 1596 Delete type=2 #1208
-2019/06/29-08:47:45.585 1596 Delete type=2 #1210
-2019/06/29-08:47:45.585 1596 Delete type=2 #1212
-2019/06/29-08:47:45.585 1596 Delete type=2 #1214
-2019/06/29-09:00:26.880 5317 Level-0 table #1217: started
-2019/06/29-09:00:26.896 5317 Level-0 table #1217: 17912 bytes OK
-2019/06/29-09:00:26.903 5317 Delete type=0 #1213
-2019/06/29-09:08:58.373 488a Level-0 table #1219: started
-2019/06/29-09:08:58.383 488a Level-0 table #1219: 17040 bytes OK
-2019/06/29-09:08:58.397 488a Delete type=0 #1216
-2019/06/29-09:12:06.405 67cc Level-0 table #1221: started
-2019/06/29-09:12:06.411 67cc Level-0 table #1221: 16244 bytes OK
-2019/06/29-09:12:06.425 67cc Delete type=0 #1218
-2019/06/29-09:27:37.395 49d3 Level-0 table #1223: started
-2019/06/29-09:27:37.400 49d3 Level-0 table #1223: 19803 bytes OK
-2019/06/29-09:27:37.407 49d3 Delete type=0 #1220
-2019/06/29-09:27:37.407 3eb2 Compacting 4@0 + 1@1 files
-2019/06/29-09:27:37.435 3eb2 Generated table #1224@0: 1641 keys, 1219444 bytes
-2019/06/29-09:27:37.435 3eb2 Compacted 4@0 + 1@1 files => 1219444 bytes
-2019/06/29-09:27:37.440 3eb2 compacted to: files[ 0 1 1 0 0 0 0 ]
-2019/06/29-09:27:37.441 3eb2 Delete type=2 #1215
-2019/06/29-09:27:37.442 3eb2 Delete type=2 #1217
-2019/06/29-09:27:37.442 3eb2 Delete type=2 #1219
-2019/06/29-09:27:37.442 3eb2 Delete type=2 #1221
-2019/06/29-09:27:37.442 3eb2 Delete type=2 #1223
-2019/06/29-09:29:31.312 65ae Level-0 table #1226: started
-2019/06/29-09:29:31.317 65ae Level-0 table #1226: 22728 bytes OK
-2019/06/29-09:29:31.323 65ae Delete type=0 #1222
-2019/06/29-14:39:17.189 725e Level-0 table #1228: started
-2019/06/29-14:39:17.193 725e Level-0 table #1228: 18659 bytes OK
-2019/06/29-14:39:17.195 725e Delete type=0 #1225
+2019/11/22-22:02:54.754 c54ae Reusing MANIFEST leveldb/MANIFEST-000001
+2019/11/22-22:02:54.754 c54ae Recovering log #6
+2019/11/22-22:02:54.754 c54ae Level-0 table #9: started
+2019/11/22-22:02:54.758 c54ae Level-0 table #9: 27947 bytes OK
+2019/11/22-22:02:54.759 c54ae Recovering log #8
+2019/11/22-22:02:54.759 c54ae Reusing old log leveldb/000008.log 
+2019/11/22-22:02:54.764 c54ae Delete type=0 #6

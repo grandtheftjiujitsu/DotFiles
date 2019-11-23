@@ -1,0 +1,40 @@
+[I 2019-11-18 02:23:55.0106] Agent started as Administrator
+[I 2019-11-18 02:23:55.0106] Argument[0]: '--locale=enUS'
+[I 2019-11-18 02:23:55.0279] Initialize HttpProtocol Server Called
+[I 2019-11-18 02:23:55.0318] Agent started on port #1120
+[W 2019-11-18 02:23:55.0442] Authorizing client 'Diablo III.exe' (8) for communication
+[I 2019-11-18 02:23:55.0522] Handle Event: "update agent event"
+[I 2019-11-18 02:23:55.0522] Checking Network Connection status to http://us.patch.battle.net:1119/agent
+[I 2019-11-18 02:23:55.0522] Request GET /agent 
+Response 200 (110.1780 ms): {
+  "authorization": "E86BC54502809074D820ABE186F0A982",
+  "opt_in_feedback": true,
+  "pid": 46,
+  "region": "us",
+  "session": "10048083383926417832",
+  "state": 1007,
+  "type": "retail",
+  "user_id": "S-1-5-21-0-0-0-1000",
+  "user_name": "S-1-5-21-0-0-0-1000",
+  "version": "2.19.1.6899"
+}
+[I 2019-11-18 02:23:55.0532] Request GET /agent/download 
+Response 200 (7.2230 ms): {
+  "backfill_down_limit": 20000,
+  "down_limit": 0,
+  "p2penabled": false
+}
+[I 2019-11-18 02:23:55.0543] Request GET /game/diablo3_enus 
+Response 404 (7.9320 ms): {}
+[I 2019-11-18 02:23:55.0833] Network Connection Response to http://us.patch.battle.net:1119/agent - CURL error: 0, Status Code: 404
+[W 2019-11-18 02:23:57.0120] Build config out of date, setting playable to false - agent
+[I 2019-11-18 02:23:57.0138] Executing operation: create_folder folderPath="C:/ProgramData/Battle.net/Agent"
+[I 2019-11-18 02:23:59.0912] Executing operation: local_certificate for Blizzard Battle.net Local Cert
+[I 2019-11-18 02:24:02.0222] Registry Entry Created: HKEY_LOCAL_MACHINE\Software\Blizzard Entertainment\Battle.net
+[I 2019-11-18 02:24:03.0516] Request POST /game/diablo3_enus {
+  "region": "us"
+}
+Response 405 (0.0110 ms): {}
+[I 2019-11-18 02:24:35.0295] No Connected Clients detected: Initiating Shutdown Timer
+[I 2019-11-18 02:24:45.0297] No Connected Clients detected: Shutting Down
+[I 2019-11-18 02:24:45.0872] Agent is shutting down

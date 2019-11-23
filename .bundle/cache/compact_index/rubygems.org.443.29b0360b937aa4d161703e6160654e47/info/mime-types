@@ -34,3 +34,4 @@
 3.2 mime-types-data:~> 3.2015|checksum:2c240b6a71f95742c2ab98f75292bf2af6294e5984bb4b48a8615768ebd4f55b,ruby:>= 2.0
 3.2.1 mime-types-data:~> 3.2015|checksum:bdfdb9b3aea095e63a16ac1ba9ca4bf4e4b7a6d4c8e67e106117ace50f9e81fc,ruby:>= 2.0
 3.2.2 mime-types-data:~> 3.2015|checksum:93f308f0b6754b0ca50dd1982b817f65b8946f6a34bd3db6bd3d8a5265f05d3a,ruby:>= 2.0
+3.3 mime-types-data:~> 3.2015|checksum:933ef7ba38c3e4d5561cbff4aaf92d9d76b97df77b7ab1083e3f2df9220af43c,ruby:>= 2.0
