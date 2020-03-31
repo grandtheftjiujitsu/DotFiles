@@ -1,9 +1,1 @@
-2019/11/23-08:40:17.083 188627 Reusing MANIFEST leveldb/MANIFEST-000001
-2019/11/23-08:40:17.084 188627 Recovering log #8
-2019/11/23-08:40:17.085 188627 Reusing old log leveldb/000008.log 
-2019/11/23-08:40:33.787 18859a Level-0 table #12: started
-2019/11/23-08:40:33.806 18859a Level-0 table #12: 40150 bytes OK
-2019/11/23-08:40:33.823 18859a Delete type=0 #8
-2019/11/23-14:30:21.621 1a61c9 Level-0 table #14: started
-2019/11/23-14:30:21.626 1a61c9 Level-0 table #14: 34233 bytes OK
-2019/11/23-14:30:21.636 1a61c9 Delete type=0 #11
+2020/03/31-09:51:58.960 3b5f66 Reusing MANIFEST /home/austin/.config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb/MANIFEST-000001

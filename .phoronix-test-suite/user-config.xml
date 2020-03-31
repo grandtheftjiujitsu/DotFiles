@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<!--Phoronix Test Suite v6.8.0m1-->
+<!--Phoronix Test Suite v9.6.0m1-->
 <?xml-stylesheet type="text/xsl" href="xsl/pts-user-config-viewer.xsl"?>
 <PhoronixTestSuite>
   <Options>
@@ -7,6 +7,7 @@
       <AnonymousUsageReporting>TRUE</AnonymousUsageReporting>
       <IndexCacheTTL>3</IndexCacheTTL>
       <AlwaysUploadSystemLogs>FALSE</AlwaysUploadSystemLogs>
+      <AllowResultUploadsToOpenBenchmarking>TRUE</AllowResultUploadsToOpenBenchmarking>
     </OpenBenchmarking>
     <General>
       <DefaultBrowser></DefaultBrowser>
@@ -14,9 +15,10 @@
       <DefaultDisplayMode>DEFAULT</DefaultDisplayMode>
       <PhoromaticServers></PhoromaticServers>
       <FullOutput>FALSE</FullOutput>
+      <ColoredConsole>AUTO</ColoredConsole>
     </General>
     <Modules>
-      <LoadModules>toggle_screensaver, update_checker, graphics_event_checker</LoadModules>
+      <AutoLoadModules>toggle_screensaver, update_checker, perf_tips, ob_auto_compare, load_dynamic_result_viewer</AutoLoadModules>
     </Modules>
     <Installation>
       <RemoveDownloadFiles>FALSE</RemoveDownloadFiles>
@@ -34,6 +36,7 @@
       <ResultsDirectory>~/.phoronix-test-suite/test-results/</ResultsDirectory>
       <AlwaysUploadResultsToOpenBenchmarking>FALSE</AlwaysUploadResultsToOpenBenchmarking>
       <AutoSortRunQueue>TRUE</AutoSortRunQueue>
+      <ShowPostRunStatistics>TRUE</ShowPostRunStatistics>
     </Testing>
     <TestResultValidation>
       <DynamicRunCount>TRUE</DynamicRunCount>
@@ -41,7 +44,15 @@
       <StandardDeviationThreshold>3.50</StandardDeviationThreshold>
       <ExportResultsTo></ExportResultsTo>
       <MinimalTestTime>3</MinimalTestTime>
+      <DropNoisyResults>FALSE</DropNoisyResults>
     </TestResultValidation>
+    <ResultViewer>
+      <WebPort>RANDOM</WebPort>
+      <LimitAccessToLocalHost>TRUE</LimitAccessToLocalHost>
+      <AccessKey></AccessKey>
+      <AllowSavingResultChanges>TRUE</AllowSavingResultChanges>
+      <AllowDeletingResults>TRUE</AllowDeletingResults>
+    </ResultViewer>
     <BatchMode>
       <SaveResults>TRUE</SaveResults>
       <OpenBrowser>FALSE</OpenBrowser>
@@ -58,12 +69,15 @@
       <Timeout>20</Timeout>
       <ProxyAddress></ProxyAddress>
       <ProxyPort></ProxyPort>
+      <ProxyUser></ProxyUser>
+      <ProxyPassword></ProxyPassword>
     </Networking>
     <Server>
       <RemoteAccessPort>RANDOM</RemoteAccessPort>
       <Password></Password>
       <WebSocketPort>RANDOM</WebSocketPort>
       <AdvertiseServiceZeroConf>TRUE</AdvertiseServiceZeroConf>
+      <AdvertiseServiceOpenBenchmarkRelay>TRUE</AdvertiseServiceOpenBenchmarkRelay>
       <PhoromaticStorage>~/.phoronix-test-suite/phoromatic/</PhoromaticStorage>
     </Server>
   </Options>

@@ -60,5 +60,9 @@
 	"text": {
 	"watermark":"PHORONIX-TEST-SUITE.COM",
 	"watermark_url":"http:\/\/www.phoronix-test-suite.com\/"
+},
+	"style": {
+	"allow_box_plots":true,
+	"bar_graphs_horizontal":true
 }
 }

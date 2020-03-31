@@ -3,4 +3,12 @@
 */15		*	*		*	*		curl -o /tmp/forecast wttr.in/$(cat /tmp/zip)
 *		*/4	*		*	*		aur-update-check > /tmp/aur.updates
 *		*/4	*		*	*		checkupdates > /tmp/off.updates
-0		0	*		*	*		web-connect-extras
+*		10	*		*	*		pacman -Qqe > $HOME/mega/backup-pc/system/aur.pkglist
+0		10	*		*	*		pacman -Qqm > $HOME/mega/backup-pc/system/off.pkglist
+0		11	*		*	1		tar -czf $HOME/documents $HOME/mega/backup-pc/home/austin/documents.tar.gz
+0		11	*		*	2		rclone sync --ignore-times $HOME/mega/backup-pc/ mega:/backup-pc/; rclone cleanup mega:/
+0		11	*		*	3		rclone sycn --ignore-times $HOME/mega/backup-phone/ mega:/backup-phone/; rclone cleanup mega:/
+0		11	*		*	4		rclone sync --ignore-times $HOME/videos/ mega:/videos/; rclone cleanup mega:/
+0		11	*		*	5		rclone sync gdrive_personal:/ $HOME/gdrive_personal/
+0		11	*		*	6		rclone sync gdrive_k9:/ $HOME/gdrive_k9/
+0		11	*		*	7		rclone sync gdrive_counseling:/ $HOME/grdrive_counseling/

@@ -13,8 +13,8 @@
 /git
 /mega
 /music
-/phone-bk
-/playlists
+/playlists_android
+/playlists_linux
 /R
 /videos
 
@@ -44,5 +44,7 @@
 /.cache
 /.cache-bk
 /.ccache
+/.config/BraveSoftware
 /.config/chromium
+/.config/rclone
 /.phoronix-test-suite/installed-tests/pts/build-linux-kernel-1.7.0/

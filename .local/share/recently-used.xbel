@@ -3,245 +3,353 @@
       xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
       xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
 >
-  <bookmark href="file:///home/austin/mega/phone_backup/sdcard/Ringtones/dial_up_modem.mp3" added="2019-10-19T19:39:33Z" modified="2019-10-19T19:39:33Z" visited="1969-12-31T23:59:59Z">
+  <bookmark href="file:///tmp/Statement-Chase.pdf" added="2020-02-29T15:16:54Z" modified="2020-02-29T15:23:28Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="audio/mpeg"/>
+        <mime:mime-type type="application/pdf"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-19T19:39:33Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-02-29T15:23:28Z" count="3"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///tmp/Thumbnail%20-%20Reflection%20-%20Alpha2.png" added="2019-10-24T13:27:53Z" modified="2019-10-24T13:27:53Z" visited="1969-12-31T23:59:59Z">
+  <bookmark href="file:///tmp/Statement-CIT.pdf" added="2020-02-29T15:20:58Z" modified="2020-02-29T15:23:11Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/png"/>
+        <mime:mime-type type="application/pdf"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-24T13:27:53Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-02-29T15:23:11Z" count="2"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///tmp/Thumbnail%20-%20Q&amp;A%20-%20crate%20follow%20up.png" added="2019-10-24T13:31:07Z" modified="2019-10-24T13:38:49Z" visited="1969-12-31T23:59:59Z">
+  <bookmark href="file:///tmp/F201%20Purchase%20and%20Sale%20Agreement%20(version%2010).pdf" added="2020-02-29T15:25:44Z" modified="2020-02-29T15:27:39Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/png"/>
+        <mime:mime-type type="application/pdf"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-24T13:38:49Z" count="2"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-02-29T15:27:39Z" count="3"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///tmp/Thumbnail%20-%20MGNT%20-%20crates%202.png" added="2019-10-24T13:34:56Z" modified="2019-10-24T13:35:21Z" visited="1969-12-31T23:59:59Z">
+  <bookmark href="file:///home/austin/documents/scorecard_boulder_2019.pdf" added="2020-03-01T22:57:58Z" modified="2020-03-01T22:57:58Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/png"/>
+        <mime:mime-type type="application/pdf"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-24T13:35:21Z" count="2"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-01T22:57:58Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///tmp/Thumbnail%20-%20Detection%20Vlog%20-%20008.png" added="2019-10-24T13:40:30Z" modified="2019-10-24T13:41:12Z" visited="1969-12-31T23:59:59Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/png"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-24T13:41:12Z" count="2"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/reflections%20-%20alpha%20roles.mp3" added="2019-10-24T13:40:45Z" modified="2019-10-24T13:43:12Z" visited="1969-12-31T23:59:59Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="audio/mpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-24T13:40:45Z" count="1"/>
-          <bookmark:application name="chromium" exec="&apos;chromium %u&apos;" modified="2019-10-24T13:43:12Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/Chris%20Cornell%20-%20Higher%20Truth.mp3" added="2019-10-27T13:51:54Z" modified="2019-10-27T13:51:54Z" visited="1969-12-31T23:59:59Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="audio/mpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-27T13:51:54Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/Chris%20Cornell%20-%20Dead%20Wishes.mp3" added="2019-10-27T13:55:08Z" modified="2019-10-27T13:55:08Z" visited="1969-12-31T23:59:59Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="audio/mpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-27T13:55:08Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/Chris%20Cornell%20-%20Before%20We%20Disappear.mp3" added="2019-10-27T13:57:38Z" modified="2019-10-27T13:57:38Z" visited="1969-12-31T23:59:59Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="audio/mpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-27T13:57:38Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/WG-BJJ.jpg" added="2019-10-29T13:10:07Z" modified="2019-10-29T13:10:07Z" visited="1969-12-31T23:59:59Z">
+  <bookmark href="file:///tmp/IMG_20200215_152357_763_2.jpg" added="2020-03-06T15:13:23Z" modified="2020-03-13T18:50:08Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="image/jpeg"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-29T13:10:07Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-13T18:50:08Z" count="3"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///tmp/Thumbnail%20-%20Reflection%20-%20Stimulation.png" added="2019-10-30T14:02:04Z" modified="2019-10-30T14:02:29Z" visited="1969-12-31T23:59:59Z">
+  <bookmark href="file:///tmp/IMG_20190421_180430.jpg" added="2020-03-06T15:14:25Z" modified="2020-03-06T15:14:36Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-06T15:14:36Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/BeFunky-collage.png" added="2020-03-06T15:15:48Z" modified="2020-03-06T15:15:55Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="image/png"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-30T14:02:29Z" count="2"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-06T15:15:55Z" count="2"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///tmp/Thumbnail%20-%20OB%20%20-%20Heeling%201.png" added="2019-10-30T14:08:34Z" modified="2019-10-30T14:08:40Z" visited="1969-12-31T23:59:59Z">
+  <bookmark href="file:///tmp/IMG_20200215_152357_763_2%20(1).jpg" added="2020-03-13T18:49:58Z" modified="2020-03-13T18:49:58Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/png"/>
+        <mime:mime-type type="image/jpeg"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-30T14:08:40Z" count="2"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-13T18:49:58Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///tmp/K9%20Q&amp;A-%20Flexi%20Leads.mp4" added="2019-10-30T14:11:38Z" modified="2019-10-30T14:11:38Z" visited="1969-12-31T23:59:59Z">
+  <bookmark href="file:///home/austin/videos/The%20Russian%20Tie%20Formula%20by%20Dan%20Vallimont%20Vol%201.mp4" added="2020-03-15T16:48:46Z" modified="2020-03-15T16:48:46Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="video/mp4"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-30T14:11:38Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-15T16:48:46Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///tmp/k9-qa-flexi-leads.mp3" added="2019-10-30T14:12:06Z" modified="2019-10-30T14:14:26Z" visited="1969-12-31T23:59:59Z">
+  <bookmark href="file:///home/austin/videos/The%20Russian%20Tie%20Formula%20by%20Dan%20Vallimont%20Vol%202.mp4" added="2020-03-15T16:49:12Z" modified="2020-03-15T16:49:12Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="audio/mpeg"/>
+        <mime:mime-type type="video/mp4"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-30T14:12:06Z" count="1"/>
-          <bookmark:application name="chromium" exec="&apos;chromium %u&apos;" modified="2019-10-30T14:14:26Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-15T16:49:12Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///tmp/k9-qa-dogs-chasing-atvs.mp3" added="2019-10-30T14:13:50Z" modified="2019-10-30T14:17:01Z" visited="1969-12-31T23:59:59Z">
+  <bookmark href="file:///home/austin/videos/The%20Russian%20Tie%20Formula%20by%20Dan%20Vallimont%20Vol%203.mp4.mp4" added="2020-03-15T16:49:22Z" modified="2020-03-15T16:49:22Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="audio/mpeg"/>
+        <mime:mime-type type="video/mp4"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-10-30T14:13:50Z" count="1"/>
-          <bookmark:application name="chromium" exec="&apos;chromium %u&apos;" modified="2019-10-30T14:17:01Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-15T16:49:22Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///tmp/Thumbnail%20-%20MGNT%20-%20Rain.png" added="2019-11-11T00:08:40Z" modified="2019-11-11T00:08:53Z" visited="1969-12-31T23:59:59Z">
+  <bookmark href="file:///home/austin/videos/The%20Russian%20Tie%20Formula%20by%20Dan%20Vallimont%20Vol%204.mp4" added="2020-03-15T16:49:31Z" modified="2020-03-15T16:49:31Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-15T16:49:31Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/videos/Escapes%20From%20Everywhere%20by%20Bernardo%20Faria%20Vol.%201.mp4" added="2020-03-16T01:47:16Z" modified="2020-03-16T01:47:16Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-16T01:47:16Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/videos/Escapes%20From%20Everywhere%20by%20Bernardo%20Faria%20Vol.%202.mp4" added="2020-03-16T01:48:07Z" modified="2020-03-16T01:48:07Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-16T01:48:07Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/videos/Escapes%20From%20Everywhere%20by%20Bernardo%20Faria%20Vol.%203.mp4" added="2020-03-16T01:48:19Z" modified="2020-03-16T01:48:19Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-16T01:48:19Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/videos/Escapes%20From%20Everywhere%20by%20Bernardo%20Faria%20Vol.%204.mp4" added="2020-03-16T01:48:29Z" modified="2020-03-16T01:48:29Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-16T01:48:29Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/videos/ADCC-2017/Judo%20at%20Home%20Workout%20with%20Travis%20Stevens.mp4" added="2020-03-21T15:40:52Z" modified="2020-03-21T15:40:52Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-21T15:40:52Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/Thumbnail%20-%20Reflection.png" added="2020-03-21T15:43:30Z" modified="2020-03-21T15:44:35Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="image/png"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-11-11T00:08:53Z" count="2"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-21T15:44:35Z" count="2"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///tmp/Thumbnail%20-%20Reflection%20-%20Public%20Stress.png" added="2019-11-11T00:12:46Z" modified="2019-11-11T00:15:28Z" visited="1969-12-31T23:59:59Z">
+  <bookmark href="file:///tmp/Scanned-20200321.pdf" added="2020-03-21T16:16:41Z" modified="2020-03-21T16:17:36Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/png"/>
+        <mime:mime-type type="application/pdf"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-11-11T00:15:28Z" count="2"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-21T16:17:36Z" count="2"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///tmp/Thumbnail%20-%20OB%20-%20Follow%20Left.png" added="2019-11-11T00:17:01Z" modified="2019-11-11T00:17:13Z" visited="1969-12-31T23:59:59Z">
+  <bookmark href="file:///tmp/archlinux-2020.03.01-x86_64.iso.torrent" added="2020-03-21T16:35:44Z" modified="2020-03-21T16:35:44Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/png"/>
+        <mime:mime-type type="application/x-bittorrent"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-11-11T00:17:13Z" count="2"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-21T16:35:44Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///home/austin/download/Diablo-III-Setup.exe" added="2019-11-17T22:33:06Z" modified="2019-11-17T22:33:06Z" visited="1969-12-31T23:59:59Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/x-ms-dos-executable"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-11-17T22:33:06Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/austin/games" added="2019-11-17T22:42:36Z" modified="2019-11-17T22:42:36Z" visited="1969-12-31T23:59:59Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="inode/directory"/>
-        <bookmark:applications>
-          <bookmark:application name="Lutris" exec="&apos;lutris %u&apos;" modified="2019-11-17T22:42:36Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/austin/download/Battle.net-Setup.exe" added="2019-11-17T23:17:04Z" modified="2019-11-17T23:17:04Z" visited="1969-12-31T23:59:59Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/x-ms-dos-executable"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-11-17T23:17:04Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/austin/download/en_windows_7_AIO_sp1_x64_x86_dvd.ISO" added="2019-11-18T01:27:03Z" modified="2019-11-18T01:27:03Z" visited="1969-12-31T23:59:59Z">
+  <bookmark href="file:///tmp/archlinux-2020.03.01-x86_64.iso" added="2020-03-21T16:46:07Z" modified="2020-03-24T18:24:24Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="application/x-cd-image"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2019-11-18T01:27:03Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-24T18:24:24Z" count="4"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///home/austin/games/Diablo-III-Setup.exe" added="2019-11-18T02:34:43Z" modified="2019-11-18T02:34:43Z" visited="1969-12-31T23:59:59Z">
+  <bookmark href="file:///home/austin/videos/Free%20Instructionals/Judo%20at%20Home%20Workout%20with%20Travis%20Stevens.mp4" added="2020-03-22T01:41:52Z" modified="2020-03-22T01:41:52Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/x-ms-dos-executable"/>
+        <mime:mime-type type="video/mp4"/>
         <bookmark:applications>
-          <bookmark:application name="mainwindow.py" exec="&apos;mainwindow.py %u&apos;" modified="2019-11-18T02:34:43Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-22T01:41:52Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///home/austin/git/savagezen.github.io/_drafts/LINUX-Diablo3.md" added="2019-11-18T16:04:28Z" modified="2019-11-18T16:04:28Z" visited="1969-12-31T23:59:59Z">
+  <bookmark href="file:///home/austin/videos/Free%20Instructionals/Self%20Mastery%20Solo%20BJJ%20Training%20Drills%20John%20Danaher%20Vol%202.mp4" added="2020-03-23T01:24:06Z" modified="2020-03-23T01:24:06Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-23T01:24:06Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/videos/Free%20Instructionals/Self%20Mastery%20Solo%20BJJ%20Training%20Drills%20John%20Danaher%20Vol%201.mp4" added="2020-03-23T01:24:17Z" modified="2020-03-23T01:24:17Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-23T01:24:17Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/videos/Free%20Instructionals/Self%20Mastery%20Solo%20BJJ%20Training%20Drills%20John%20Danaher%20Vol%203.mp4" added="2020-03-23T01:24:27Z" modified="2020-03-23T01:24:27Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-23T01:24:27Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/videos/Free%20Instructionals/Self%20Mastery%20Solo%20BJJ%20Training%20Drills%20John%20Danaher%20Vol%204.mp4" added="2020-03-23T01:24:38Z" modified="2020-03-23T01:24:38Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-23T01:24:38Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/git/servconfig/README.md" added="2020-03-23T03:46:31Z" modified="2020-03-24T18:22:27Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="text/markdown"/>
         <bookmark:applications>
-          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2019-11-18T16:04:28Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-23T03:46:46Z" count="2"/>
+          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2020-03-24T18:22:27Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/bootia32.efi" added="2020-03-23T04:25:36Z" modified="2020-03-23T04:25:36Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-23T04:25:36Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/bathroom-door%5C.jpg" added="2020-03-27T17:07:16Z" modified="2020-03-27T17:07:28Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-27T17:07:28Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/Time%20Sheet.doc" added="2020-03-28T15:16:08Z" modified="2020-03-28T15:16:52Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/msword"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-28T15:16:52Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/Time%20Sheet%20-%20Austin%20Haedicke%20-%203.27.docx" added="2020-03-28T15:19:02Z" modified="2020-03-28T15:21:51Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.openxmlformats-officedocument.wordprocessingml.document"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-28T15:21:51Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/videos/Free%20Instructionals/Leg%20Attack%20Domination%20by%20Tom%20DeBlass%20Vol%201.mp4" added="2020-03-31T02:03:32Z" modified="2020-03-31T02:03:32Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-31T02:03:32Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/videos/Free%20Instructionals/Leg%20Attack%20Domination%20by%20Tom%20DeBlass%20Vol%202.mp4" added="2020-03-31T02:03:53Z" modified="2020-03-31T02:03:53Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-31T02:03:53Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/videos/Free%20Instructionals/Leg%20Attack%20Domination%20by%20Tom%20DeBlass%20Vol%203.mp4" added="2020-03-31T02:04:01Z" modified="2020-03-31T02:04:01Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-31T02:04:01Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/videos/Free%20Instructionals/Leg%20Attack%20Domination%20by%20Tom%20DeBlass%20Vol%204.mp4" added="2020-03-31T02:04:15Z" modified="2020-03-31T02:04:15Z" visited="1969-12-31T23:59:59Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-03-31T02:04:15Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
