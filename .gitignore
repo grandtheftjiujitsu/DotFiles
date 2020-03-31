@@ -46,5 +46,7 @@
 /.ccache
 /.config/BraveSoftware
 /.config/chromium
+/.gem
 /.config/rclone
+/Gemfile.lock
 /.phoronix-test-suite/installed-tests/pts/build-linux-kernel-1.7.0/
