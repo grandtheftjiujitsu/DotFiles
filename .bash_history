@@ -1,451 +1,3 @@
-ls /root
-sudo ls /root
-cd /home
-ls
-lsa
-ls -a
-cd austin
-ls
-ls scripts
-cd /tmp/aur
-git clone https://aur.archlinux.org/rtl8822bu-dkms-git
-cd rtl8822bu-
-ls
-cd rtl8822bu-dkms-git/
-makepkg -si
-cd /root
-su
-pts info network
-pts info
-pts list-tests
-pts info os
-pts info OS
-pts info system
-pts info network
-pts info processor
-pts info Processor
-pts list Processor
-pts list-recommended-tests
-pts info blender
-pts info luxmark
-pts install luxmark
-pts benchmark luxmark
-sudo pts benchmark luxmark
-pts uninstall luxmark
-pts list recommended-tests
-pts list recommended-tests
-pts list-recommended-tests
-pts info xplane11
-pts info glmark
-pts info glmark2
-pts install glmark2
-pts benchmark glmark2
-cd git/dotfiles/
-ls
-ls -a
-cd .config
-clear
-ls
-nano dwm-config.h 
-cd /tmp
-ls
-lsblk
-sudo dd if=archlinux-2020.12.01-x86_64.iso of=/dev/sdc status=progress && sync
-cd /tmp/aur
-ls
-git clone https://aur.archlinux.org/audacity-git
-cd audacity-git/; makepkg -si
-sudo pacman -S audaacity
-sudo pacman -S audacity
-sudo pacman -Rns scrot
-cat /etc/hostname
-clear
-pts info redis
-pts info caffe
-pts info stress-ng
-pts install stress-ng
-pts benchmark stress-ng
-pts info osbench
-pts info perf-bench
-pts install osbench
-pts benchmark osbench
-pts info john-the-ripper
-pts info compress-xz
-pts list-recommended-tests
-pts install ramspeed
-pts benchmark ramspeed
-pts info postmark
-pts info fio
-pts remove-installed-test iozone
-pts install fio
-pts benchmark fio
-pts benchmark fio
-exit
-pts benchmark compress-xz
-pts build-linux-kernel
-pts benchmark build-linux-kernel
-cd ~
-nano scratch.pad
-nano scr
-nano scratch.pad 
-exit
-cd savagezen.github.io/
-gem install
-sudo pacman -S ruby
-gem install all
-jekyll-serve
-jekyll serve
-gem install jekyll
-jekyll serve
-clear
-syncthing-git
-syncthing
-cat /etc/hostname
-cd /mnt
-ls
-lsblk
-sudo umount /mnt
-sudo mount /dev/sda1 /mnt; cd /mnt
-ls
-cd /
-sudo umount /mnt; sudo mount /dev/sdd1 /mnt; cd /mnt
-ls
-cd home/austin/podcast/
-ls
-cd pending/
-ls
-clear
-pacman -Ss android-tools
-sudo pacman -S android-tools
-cat ~/.zshrc | grep ad
-cat ~/.zshrc | grep adb
-adb devices
-adb shell
-adb devices
-adb devices
-adb shell
-sudo adb shell
-adb shell
-adb pull /storage/emulated/0/Recordings/2020-12-21\ 20.58.31.mp3 /tmp/preamble.mp3
-adb pull /storage/emulated/0/Recordings/2020-12-21\ 20.58.31.mp3 /tmp/preamble.mp3
-adb kill-server
-sudo adb start-server
-sudo adb shell
-whoami
-ls
-updsh
-exit
-cd /mnt/home/austin
-ls
-rsync -aAXv playlists_android/ ~/playlists_android/
-rsync -aAXv playlists_linux/ ~/playlists_linux/
-rsync -aAXv videos/ ~/videos/
-cd /mnt/homem/austin
-cd /mnt/home/austin
-rsync -aAXv music/ ~/music/
-cd /mnt/home/austin
-rsync -aAXv R/ ~/R/
-ls
-nano ~/scratch.pad 
-sudo pacman -S transmission-cli
-updzh
-updsh
-zsh
-cd ~/git
-ls
-cd ~
-ls -a
-pwd
-nano hello.sh
-chmod +x hello.sh
-lsblk
-sudo umount /mnt; cryptsetup close backup
-sudo cryptsetup close backup
-lsblk
-sudo mount /dev/sdd1 /mnt
-ls /mnt
-cd /mnt/home/austin
-ls
-clear
-ls
-cd pod
-cd podcast
-ls
-ls previews/
-cd ~
-nano .xinitrc
-nano ~/.xinitrc
-ls -a
-rm hello.sh 
-cd .identity 
-cat .identity 
-clear
-ls
-ls -a
-nano scratch.pad 
-cp git/dotfiles/.xinitrc .
-nano .xinitrc 
-zsh
-ls -a
-sudo pacman -Rns scrot
-sudo pacman -Rns scrot
-cd /tmp/aur
-ls
-cd audacity-git/
-ls
-cd ..
-sudo rm -r audacity-git/
-cd linux-ck/
-nano PKGBUILD 
-ls
-nano PKGBUILD 
-makepkg -si
-bash ~/scripts/shell/gpg-keysearch 38DBBDC86092693E
-bash ~/scripts/shell/gpg-keyadd 38DBBDC86092693E
-makepkg -sfi
-nano PKGBUILD 
-cd /tmp/aur
-git clone https://aur.archlinux.org/linxu-pf-git
-sudo rm -r linxu-pf-git/
-git clone https://aur.archlinux.org/linux-pf-git
-cat /sys/block/sda/queue/scheduler 
-archey
-cd ~
-ls
-cd scripts
-ls
-chmod -R +x *
-ls
-sudo chmod -x README.md 
-chmod -x README.md 
-ls
-ls shell/
-bash shell/unixness 
-ls /var/cache/pacman/pkg | grep color
-sudo pacman -Rns colord
-clear
-cd ~/git/dotfiles/
-ls -a
-git branch -a
-cd ..
-sudo rm -r dotfiles
-ls
-git clone https://github.com/savagezen/github.io
-git clone https://github.com/savagezen/dotfiles
-cd dotfiles/
-git branch a88x
-git checkout a88x
-ls
-pwd
-ls -a
-nano .xinitrc
-nano ~/scratch.pad 
-pulseaudio --start
-which pactl
-pactl load-module module-equalizer-sink
-cd ~
-pactl load-module module-dbus-protocol
-sound-test
-cd ~/git/dotfiles/
-ls
-nano ~/scratch.pad 
-ls -a
-mkdir completed
-rm -r completed/
-rm .xinitrc 
-rm .zshrc.save
-mv .zshrc ~/
-sudo rm -r .yarnrc .zcompdump
-rm -r .yarnrc .zcompdump 
-rm .Xauthority .zprofile 
-mv .nano ~/
-ls .local/
-ls .local/share
-ls .local/share/icons
-mv .local/share/icons/hicolor/ .icons/
-ls .icons
-rm -r .jack-server .jack-settings .gitconfig 
-mv .gtkrc ~/
-mv .gtkrc-2.0 ~/
-clear
-ls -a
-mv .icons ~/.local/share/
-clear
-ls
-ls -a
-rm -r .android .arch-simple.png .fehbg .avidemux6 .babel.json battery.test .hunter .local .vnc .wine .x11vnc/
-ls -a
-rm arch-simple.png 
-nano ~/.xinitrc 
-ls -a
-cp .aspell.en.p* ~/
-rm .bash_history .bash_profile .bash_logout 
-clear; ls -a
-cd /mnt
-cd ~/git/dotfiles/
-cd .config
-ls
-cd ..
-clear; ls -a
-mv .aspell* ~/
-cat .bashrc
-rm .bashrc
-which bluefish
-mv .bluefish/ ~/
-mv .bluefish/* ~/.bluefish//
-mv .bluefish/* ~/.bluefish/
-ls ~/.bluefish/
-ls -a ~/.bluefish/
-ls .bluefish/
-ls -a
-ls .bluefish/
-ls -a .bluefish/
-rm -r .bluefish/
-clear; ls -a
-mv .bundle ~/
-rm chrome_apps.tar.gz 
-rm .configs.unused
-rm .configs.unused
-rm -r .configs.unused/
-clear
-ls -a
-rm -r .cups
-ls .dbus
-mv .dbus ~/
-mv .nanorc ~/
-rm -r .node-gyp/ .npm .openshot_qt/ .perl6/ .phoronix-test-suite/
-clear; ls -a
-rm .pki
-rm -r .pki .ssr .subcersion .v8flags.6.2.414.75.229979fce5174c17d4645bf8752dae1e.json .zlogin 
-clear; ls -a
-cat .profile 
-mv .toprc ~/
-rm .Xresources .subversion/
-rm -r .subversion
-mv .Rhistory ~/
-nano .rnd
-rm .rnd
-rm .stignore .profile 
-ls ~/
-ls -a ~/
-ls ~/.local/share
-ls ~/.config
-clear
-ls -a
-ls .repoconfig
-ls .repoconfig/gnupg/
-which gpg
-rm -r .repoconfig
-trm -r .terminfo
-rm -r .terminfo
-ls -a ~/.local/share
-mv ~/.local/share/.icons/ ~/.local/share/icons
-mv .thumbnails/ ~/.local/share/thumbnails
-rm scratch.pad 
-ls -a
-rm .repo_.gitconfig.json 
-cd .config
-clear; ls -a
-ls dconf
-sudo rm -r dconf
-rm -r dconf
-rm -r syncthing
-mv rclone ~/.config/
-mv nano ~/.config/
-mv gtk-2.0 ~/.config/
-which enchant
-ls enchant/
-rm -r enchang
-rm -r enchant
-rm -r configstore
-mv cmus ~/.config/
-ls libfm
-rm -r libfm lutris Meltytech/ menus pulse pitivi
-mv QtProject.conf ~/.config/
-mv root.crontab ~/.config/
-mv user.crontab ~/.config/
-mv themes ~/.local/share/
-mv transmissi* ~/.config/
-rm -r VirtualBox/
-rm -r user-dir*
-clear; ls -a
-rm -r gtk-3.0/ dwm-config.h 
-mv Signal/ ~/.config/
-ls -a
-cd ..
-ls -a
-rm -r .config
-nano ~/scratch.pad 
-nano ~/scratch.pad 
-cd ~/podcast/
-ls
-cd raw-recordings/
-ls
-rm KK013-liam1.mp3 
-sudo pacman -S pulseaudio-equalizer
-clear
-qpaeq
-lspci
-lspci | grep blue
-lsusb | grep blue
-clear
-lsusb
-lsusb | grep blue
-lspci | grep blue
-cd /tmp/aur/
-ls
-git clone https://aur.archlinux.org/pulseaudio-ctl
-cd pulseaudio-ctl/
-makepkg -si
-clear
-cd ..
-sudo rm -r pulseaudio-ctl/
-git clone https://aur.archlinux.org/mpd-git
-cd mpd-git/
-makepkg -si
-audacity
-reboot
-lsblk
-sudo cryptsetup open /dev/sdb1 backup
-mount /dev/mapper/backup /mnt
-sudo mount /dev/mapper/backup /mnt
-pwd
-rsync -aAXv /mnt/weekly/home-austin/ .
-sudo sytemctl reboot
-sudo sytemctl restart
-which reboot
-sudo reboot
-cd /root
-ls
-cd /tmp
-ls
-su
-ls
-sudo chown austin rtl8822bu-dkms-git/
-cd rtl8822bu-dkms-git/
-makepkg -s
-./scripts/shell/android-tether
-bash ~/scripts/shell/android-tether
-ping google.com
-ping google.com
-bash ~/scripts/shell/android-tether
-ping google.com
-makepkg -s
-sudo pacman -U *.zst
-sudo pacman -S nvidia-dkms
-clear
-nano /etc/pacman.conf
-sudo nano /etc/pacman.conf
-pacman -Syy
-sudo pacman -Syy
-pacman -Ss pacman-mirrorlist
-sudo pacman -S pacman-contrib
-rankmirrors
-nano ~/scratch.pad
-sudo pacman -Ss xorg-server
-sudo pacman -S nvidia-utils
-xorg
-xinit
 startx
 xorg-server
 sudo pacman -S xfce4 xfce4-goodies
@@ -498,3 +50,451 @@ ls
 cd onboot
 ls
 su
+cd ~/scripts
+ls
+gstat
+git status
+git branch
+cd ~/git
+ls
+cd ~
+nano scratch.pad
+cd /tmp
+ls
+git clone https://aur.archlinux.org/archey4
+wifi-menu
+ip link
+ip link wlp0s18f2u1 up
+ip link se wlp0s18f2u1 up
+sudo ip link set wlp0s18f2u1 up
+wifi-menu
+ip link
+sudo pacman -S netctl
+bash ~/scripts/shell/android-tether 
+ping google.com
+ping google.com
+sudo pacman -S netctl
+wilfi-menu
+sudo pacman -S wpa_supplicant dhcpcd dialog
+wifi-menu
+sudo wifi-menu
+sudo wifi-menu
+sudo wifi-menu
+ip link
+dhcpcd
+sudo dhcpcd
+dhcpcd
+sudo wifi-menu
+ip link
+sudo systemctl enable netctl-auto@wlp0s18f2u1
+sudo systemctl start netctl-auto@wlp0s18f2u1
+ping google.com
+nano scratch-pad
+nano ~/scratch.pad
+ls ~/scripts/genmon
+cd ~/scripts
+ls
+cd ~/scripts/shell/genmon
+ls
+nano ~/scratch.pad
+lsblk
+sudo cryptsetup open /dev/sdb1 backup
+sudo mount /dev/mapper/backup /mnt
+cd ~/scripts/shell
+nano backup-boot
+clear
+cd /mnt
+ls
+cd weekly
+ls
+rm last-sync.2020-12-26 
+sudo rm last-sync.2020-12-26 
+ls
+clear
+ls
+rm off.pkglist 
+sudo rm off.pkglist 
+clear
+ls
+cat aur.pkglist 
+nano 
+nano ~/scratch.pad
+modprobe rtl88bu
+su
+cd ~/git/pkgbuild/
+ls
+cd rtl8822bu-dkms-git/
+ls
+cd /tmp
+cp -r ~/git/pkgbuild/rtl8822bu-dkms-git/ .
+cd rtl8822bu-dkms-git/
+makepkg -si
+makepkg -si
+bash ~/scripts/shell/android-tether 
+makepkg -si
+sudo modprobe rtl88bu
+sudo modprobe rtl8822bu
+sudo modprobe rtl88x2bu
+which dkms
+which depmod
+sudo mkinitcpio -P
+sudo wifi-menu
+cd ~
+nano scratch.pad 
+nano scratch.pad 
+ping google.com
+gstat
+git status
+git branch
+gadd *
+git add *
+git status
+ls
+ls BraveSoftware/
+git add simple.png fontconfig vault BraveSoftware/ 
+ls asp
+clear
+ls
+gadd asp
+git add asp
+git status
+sudo pacman -S lm-sensors
+sudo pacman -S lm_sensors
+git aedd .local .nv .psensors asp atomicwallet.AppImage 
+git add .local .nv .psensors asp atomicwallet.AppImage 
+git add .local .nv .psensor asp atomicwallet.AppImage 
+git status
+git add .nv .psensor .xsession-errors atomicwallet.AppImage .local event-sound-cache.tdb.1bdab32c34324c0bb63b403e88eee94d.x86_64-pc-linux-gnu 
+git status
+git add .config .bundle .gnupg .identity .lesshst .ecryptfs
+ls
+git status
+git add .ICEauthority .Private .audacity-data/ .xinitrc .zcompdump .zshrc .zshrc.save .scratch.pad
+git add .ICEauthority .Private .audacity-data/ .xinitrc .zcompdump .zshrc .zshrc.save scratch.pad
+git remove .wine
+git rm .wine
+git rm -r wine
+git rm chrome_apps.tar.gz arch-simple.png .zprofile .zlogin .yarnrc .X11vnc
+git rm chrome_apps.tar.gz arch-simple.png .zprofile .zlogin .yarnrc .x11vnc
+git rm -r chrome_apps.tar.gz arch-simple.png .zprofile .zlogin .yarnrc .x11vnc
+git status
+git rm -r .wine
+git status
+git rm -r battery.test .vnc .v8flags*.json
+git rm -r .thumbnails
+git status
+git rm .terminfo .repoconfig .phoronix-test-suite/xsl
+git rm -r .terminfo .repoconfig .phoronix-test-suite/xsl
+git status
+git rm -r .subversion .stignore .repo_.giconfig.json .phoronix-test-suite-test-suites/*
+git rm -r .subversion *.json .phoronix-test-suite-test-suites/*
+git rm -r .subversion *.json .phoronix-test-suite/test-suites/*
+git rm -r .subversion *.json .phoronix-test-suite/*
+git rm -r .subversion *.json .phoronix-test-suite/test-suites/*
+git rm -r .subversion *.json .phoronix-test-suite/test-suites/*
+git rm -r .subversion *.json
+git status
+git rm -r .phoronix-test-suite
+git status
+git rm -r .phoronix-test-suite
+git rm -r -f .phoronix-test-suite
+git status
+git rm -r .perl6
+git status
+git rm -r .npm .subversion .stignore
+git status
+git rm -r .hunter .openshot_qt .node-gyp
+git status
+git rm -r .icons .jack-server
+git statu
+git status
+git ad .Xauthority .android .bash* .bluefish .gitconfig .gitignore .pki .ssr
+git add .Xauthority .android .bash* .bluefish .gitconfig .gitignore .pki .ssr
+git status
+git rm -r .Xresources .avidemux6 .bable.json .configs.unused .cups .jack-settings .profile .repo_.gitconfig.json
+git rm -r .Xresources .avidemux6 .babel.json .configs.unused .cups .jack-settings .profile .repo_.gitconfig.json
+git status
+git add asp
+nano gitignore
+nano .gitignore
+git status
+gadd .gitignore
+lsblk
+ls vault
+nano .gitignore
+git rm -r vault
+git status
+gadd .gitignore
+git rm -r vault
+git rm -r -f vault
+git status
+gadd .gitignore
+git add .gitignore
+git status
+gcom -m "a88x: initial install: boot, video, xorg, display manager, encryption"
+git commit -m "a88x: initial install: boot, video, xorg, display manager, encryption"
+nano scratch.pad 
+cd /mnt
+ls
+cd boot
+ls
+clear
+ls
+cd ..
+mv onboot
+sudo mv boot onboot
+clear
+ls
+cd onboot
+ls
+cd ..
+ls
+nano install.notes 
+sudo nano install.notes 
+clear
+ls
+cd onboot
+ls
+du -sh *
+rm -r mnt
+sudo rm mnt
+sudo rm -r mnt
+ls
+clear
+ls
+ls home-austin/
+clear
+ls
+tar -cf - /root | xz -c -9 - > root.tar.xz
+sudo tar -cf - /root | xz -c -9 - > root.tar.xz
+su
+clear
+ls
+tar -cf - /boot | xz -c -9 - > boot.tar.xz
+sudo tar -cf - /boot | xz -c -9 - > boot.tar.xz
+su
+nano ~/.zshrc
+zsh
+cd ~
+mv .zshrc .zshrc-bk
+zsh
+nano .zshrc
+cd ~
+mv .zshrc-bk .zshrc
+zsh
+nano .zshrc 
+zsh
+cd /tmp
+git clone https://github.com/savagezen/dotfiles-system
+cd dotfiles-system/
+git branch
+git branch -a 
+git checkout a88x
+git checkout -b a88x
+git branch
+git push -u origin
+git push --set-upstream origin a88x
+sudo cp -r .git /etc/
+cd /etc
+gstat
+git status
+git add *
+sudo git add *
+sudo git status
+sudo git add .updated
+sudo git rm cifs-utils/idmap-plugin gemrc mpd.conf mand_db.conf pam_cryptsetup.sh 
+sudo git rm cifs-utils/idmap-plugin gemrc mpd.conf man_db.conf pam_cryptsetup.sh 
+git status
+sudo git rm phoronix-test-suite.xml ts.conf zsh/zprofile
+git status
+sudo git commit -m "backup: boot, encryption, dm, de, wifi, video"
+git config --global user.email "austin.haedicke@gmail.com"
+git config --global user.name "savagezen"
+sudo git commit -m "backup: boot, encryption, dm, de, wifi, video"
+sudo git config --global user.name "savagezen"
+sudo git config --global user.name "savagezen"
+sudo git commit -m "backup: boot, encryption, dm, de, wifi, video"
+sudo git config user.email "austin.haedicke@gmail.com"
+sudo git config user.name "savagezen"
+sudo git commit -m "backup: boot, encryption, dm, de, wifi, video"
+zsh-newuser-install -f
+zsh
+/bin/zsh
+nano ~/.zshrac
+cd ~
+nano .zshrc
+zsh
+exit
+sudo modprobe ecryptfds
+sudo  modprobe ecryptfs
+which cmus
+cmus
+git clone https://aur.archlinux.org/brave-dev-bin
+cd brave-dev-bin/
+makepkg -si
+cd ..
+which brave
+which brave-dev-bin
+cd brave-dev-bin/
+sudo pacman -U *.zst
+sudo pacman -U *.zst
+brave-dev-bin
+ls /bin | grep brave
+cd ..
+git clone https://aur.archlinux.org/linux-ck
+cd linux-ck/
+ls
+nano PKGBUILD 
+makepkg -si
+sudo pacman -U *.zst
+chsh --help
+chsh -s /bin/zsh austin
+sudo chsh -s /bin/zsh austin
+chsh -s /bin/zsh austin
+celar
+clear
+chsh --help
+chsh -s /usr/bin/zsh austin
+su
+su
+su
+chsh -l
+chsh -s /bin/zsh
+sudo homectl update --shell=/bin/zsh austin
+sudo pacman -S noto-fonts-emoji
+zsh
+sudo wifi-menu
+ping google.com
+ping google.com
+ping google.com
+ls
+nano scratch.pad 
+sudo cryptsetup open /dev/sdb1 backup
+sudo  mount /dev/mapper/backup /mnt
+cd /mnt
+ls
+cd onboot/
+ls
+cd ../weekly/
+ls
+at aur.pkglist 
+cat aur.pkglist 
+cd /mnt
+ls
+cd opn
+cd onboot/
+ls
+sudo rm -r usr.tar.xz 
+sudo  mkdir usr
+sudo rsync -aAXv /usr/ usr/
+cd ..
+ls
+mv onboot/ .
+mv onboot/* .
+sudo mv onboot/* .
+ls
+rm -r onboot
+sudo rm -r onboot weekly
+l;s
+clear
+ls
+sudo rsync -aAXv /usr/ usr/
+cd ..
+ls
+cd mnt
+ls
+ls /bin | grep xfce4
+ls /bin | grep xfce4 | grep treminal
+ls /bin | grep terminal
+which xfce4-terminal
+cd git/pkgbuild/
+gstat
+git status
+cd /tmp
+ls
+git clone https://aur.archlinux.org/archey4
+cd archey4/
+makepkg -si
+cd ..
+git clone https://aur.archlinux.org/{cmus-git,dnd-tools,linux-ck}
+git clone https://aur.archlinux.org/cmus-git
+cd cmus-git/
+makepkg -si
+cd ..
+git clone https://aur.archlinux.org/dnd-tools
+cd dnd-tools/
+makepkg -si
+cd ..
+git clone https://aur.archlinux.org/modprobed-db
+cd modprobed-db/
+makepkg -si
+cd ..
+git clone https://archlinux.org/nano-syntax-highlighting-git
+git clone https://archlinux.org/nano-syntax-highlighting-git
+git clone https://aur.archlinux.org/nano-syntax-highlighting-git
+cd nano-syntax-highlighting-git/
+makepkg -si
+cd ..
+git clone https://aur.archlinux.org/phoronix-test-suite-git
+cd phoronix-test-suite-git/
+makepkg -s
+sudo pacman -U *.zst
+cd ..
+git clone https://aur.archlinux.org/pulseaudio-ctl
+cd pulseaudio-ctl/
+makepkg -si
+cd ..
+git clone https://aur.archlinux.org/pwsafe
+cd pwsafe/
+makepkg -sfi
+cd ..
+git clone https://aur.archlinux.org/redshfit-git
+git clone https://aur.archlinux.org/redshift-gtk-git
+clear
+ls
+rm -r red*
+git clone https://aur.archlinux.org/redshift-gtk-git
+git clone https://aur.archlinux.org/signal-desktop-beta-bin
+cd signal-desktop-beta-bin/
+makepkg -si
+cd ..
+git clone https://aur.archlinux.org syncthing-git
+git clone https://aur.archlinux.org/syncthing-git
+rm -r syncthing-git/
+git clone https://aur.archlinux.org/syncthing-git
+cd syncthing-git/
+makepkg -si
+cd ..
+git clone zsh-git
+git clone https://aur.archlinux.org/zsh-git
+cd zsh-git/
+makepkg -si
+sudo pacman -U *.zst
+zsh
+nano ~/.zshrc
+zsh
+nano ~/.zshrc
+zsh
+nano ~/.zshrc
+zsh
+nano .zshrc
+clear
+nano ~/.zshrc
+zsh
+ecryptfs-ssetup private --noautomount
+sduo  modprove ecryptfs
+sudo modprobe ecryptfs
+which ecryptfs-tools
+sudo pacman -S ecryptfs-tools
+which ecryptfs-utils
+sudo pacman -S ecryptfs-utils
+sudo  modprobe ecryptfs
+sudo  pacman -S dm-crypt
+pacman -Ss dm-crypt
+su
+cd ~/.config
+ls
+ls -a
+mkinitpcio -P
+sudo mkinitcpio -P
+reboot

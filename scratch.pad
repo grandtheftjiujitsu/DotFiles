@@ -1,15 +1,22 @@
 # To Do
-- network driver?
-- rankmirror
-- aur packages
-- zsh
+Setting commit:
+	- wifi driver (confirmed)
+	- xfce settings
+	- zsh
+	- emoji fonts
+	- ranked mirrors
+
+- ecryptfs vault
+- pwsafe > uphold wallet
 - clean up panel
 - security wiki
 - performance wiki
 - sound
 - clean up backup scripts
+	- private repos: /root, /etc
 - clean up syncthing
 - update script / config repos
+- redshift
 
 - linux-ck patches to linux-hardened
 - filecoin (packages fail to build)

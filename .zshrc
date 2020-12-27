@@ -1,5 +1,5 @@
 # $HOME/.zshrc
-TERM="rxvt-unicode"
+TERM=xterm-256color
 
 # Settings #
 ############

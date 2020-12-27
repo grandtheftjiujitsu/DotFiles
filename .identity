@@ -1,15 +1,16 @@
 {
 	"disposition" : "regular",
-	"lastChangeUSec" : 1609026777279885,
+	"lastChangeUSec" : 1609039637665179,
 	"lastPasswordChangeUSec" : 1609026777279885,
 	"privileged" : {
 		"hashedPassword" : [
 			"$y$j9T$fC794gs.Jtnr8N3JuZsB40$TXi4Rtwpl0wTvZl.oxQgcv9uzyAnjUFIYj7pyYsBzY7"
 		]
 	},
+	"shell" : "/bin/zsh",
 	"signature" : [
 		{
-			"data" : "+Le3fHhatQ5d8sQVHeYAKwtmp6bSiDHKX994CzFHFZxhIt3ylhHI6N1CIR7RRjNXltkq20nLHmKKHgJqFfZGCg==",
+			"data" : "ID3dYIe7+VxIdBA2RVvreN2md1CO3eTpgbcNL+1lM6oMse8tx+KVBJ10GCI5H6apb0NOB8M6S8dH7Ju1fJ7PAQ==",
 			"key" : "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAVsze51yRR5eBtcZSgnMOI1gmVwWm3blDtaj7P14uLek=\n-----END PUBLIC KEY-----\n"
 		}
 	],
