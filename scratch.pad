@@ -1,13 +1,18 @@
 Setting commit:
-- uphold wallet verified
-- basic tools and zsh added to root
-- pulse and alsa for sound
-- eq and audio shortcuts
+- man pages
+- terminal copy/paste keyaboard shortcuts
+- ecryptfs vault
+- xfce save session
+- login attempt delay
+- limit login attempt
+- login lockout time
+- login fail interval time
+- login fail attempts before lock
+- change EDITOR to rnano
+- linux-hardened
 
 # To Do
-- ecryptfs vault (logout / in to continue)
 - clean up panel
-- security wiki
 - clean up syncthing
 - performance wiki
 - clean up backup scripts / repo

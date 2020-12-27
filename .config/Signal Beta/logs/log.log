@@ -689,3 +689,19 @@
 {"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T16:03:19.505Z","msg":"Sending a keepalive message","v":0}
 {"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T16:04:14.529Z","msg":"Sending a keepalive message","v":0}
 {"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T16:05:09.558Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T16:06:04.589Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T16:06:59.635Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T16:07:54.658Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T16:08:49.785Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T16:09:44.905Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T16:10:40.003Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T16:11:35.030Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T16:12:30.052Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T16:13:25.077Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T16:14:20.111Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T16:15:15.136Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T16:16:10.160Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T16:17:05.188Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"msg":"before-quit event {\"shouldQuit\":false}","time":"2020-12-27T16:17:08.626Z","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"msg":"close event {\"shouldQuit\":true}","time":"2020-12-27T16:17:08.626Z","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"msg":"requestShutdown: Requesting close of mainWindow...","time":"2020-12-27T16:17:08.627Z","v":0}
