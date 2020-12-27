@@ -1,21 +1,17 @@
-# To Do
 Setting commit:
-	- wifi driver (confirmed)
-	- xfce settings
-	- zsh
-	- emoji fonts
-	- ranked mirrors
+- uphold wallet verified
+- basic tools and zsh added to root
+- pulse and alsa for sound
+- eq and audio shortcuts
 
-- ecryptfs vault
-- pwsafe > uphold wallet
+# To Do
+- ecryptfs vault (logout / in to continue)
 - clean up panel
 - security wiki
-- performance wiki
-- sound
-- clean up backup scripts
-	- private repos: /root, /etc
 - clean up syncthing
-- update script / config repos
+- performance wiki
+- clean up backup scripts / repo
+- update config repo
 - redshift
 
 - linux-ck patches to linux-hardened

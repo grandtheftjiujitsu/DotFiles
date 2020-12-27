@@ -56,11 +56,14 @@
       <property name="AudioRaiseVolume" type="string" value="amixer sset Master 10%+"/>
       <property name="&lt;Alt&gt;KP_2" type="string" value="bluefish"/>
       <property name="&lt;Alt&gt;KP_3" type="string" value="xfce4-terminal -x zsh -c &quot;cmus&quot;"/>
-      <property name="&lt;Alt&gt;KP_5" type="string" value="signal-desktop-beta"/>
       <property name="&lt;Alt&gt;End" type="string" value="cmus-remote --next"/>
       <property name="&lt;Alt&gt;Home" type="string" value="cmus-remote --prev"/>
       <property name="&lt;Alt&gt;KP_1" type="string" value="brave-dev"/>
       <property name="Mail" type="string" value="brave-dev"/>
+      <property name="&lt;Alt&gt;KP_4" type="string" value="signal-desktop-beta"/>
+      <property name="&lt;Alt&gt;Page_Down" type="string" value="amixer sset Master 10%-"/>
+      <property name="&lt;Alt&gt;Page_Up" type="string" value="amixer sset Master 10%+"/>
+      <property name="&lt;Alt&gt;Pause" type="string" value="cmus-remote --pause"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

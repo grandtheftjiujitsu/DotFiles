@@ -459,3 +459,233 @@
 {"name":"log","hostname":"A88X","pid":315162,"level":30,"msg":"before-quit event {\"shouldQuit\":false}","time":"2020-12-27T04:01:25.839Z","v":0}
 {"name":"log","hostname":"A88X","pid":315162,"level":30,"msg":"close event {\"shouldQuit\":true}","time":"2020-12-27T04:01:25.840Z","v":0}
 {"name":"log","hostname":"A88X","pid":315162,"level":30,"msg":"requestShutdown: Requesting close of mainWindow...","time":"2020-12-27T04:01:25.847Z","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"msg":"app ready","time":"2020-12-27T15:29:09.925Z","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"msg":"starting version 1.39.4-beta.1","time":"2020-12-27T15:29:09.925Z","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"msg":"media access status undefined undefined","time":"2020-12-27T15:29:09.925Z","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"msg":"updateSchema:\n  Current user_version: 21;\n  Most recent db schema: 21;\n  SQLite version: 3.30.1;\n  SQLCipher version: 4.3.0 community;\n  (deprecated) schema_version: 109;\n","time":"2020-12-27T15:29:09.962Z","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"msg":"Initializing BrowserWindow config: {\"show\":true,\"width\":680,\"height\":1027,\"minWidth\":680,\"minHeight\":550,\"autoHideMenuBar\":false,\"backgroundColor\":\"#3a76f0\",\"webPreferences\":{\"nodeIntegration\":false,\"nodeIntegrationInWorker\":false,\"contextIsolation\":false,\"preload\":\"/opt/Signal Beta/resources/app.asar/preload.js\",\"nativeWindowOpen\":true,\"spellcheck\":true,\"backgroundThrottling\":false},\"icon\":\"/opt/Signal Beta/resources/app.asar/images/signal-logo-desktop-linux.png\",\"x\":1218,\"y\":61}","time":"2020-12-27T15:29:09.975Z","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"msg":"spellcheck: user locale: en-US","time":"2020-12-27T15:29:10.075Z","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"msg":"spellcheck: available spellchecker languages:  [\"af\",\"bg\",\"ca\",\"cs\",\"cy\",\"da\",\"de\",\"el\",\"en-AU\",\"en-CA\",\"en-GB\",\"en-US\",\"es\",\"es-419\",\"es-AR\",\"es-ES\",\"es-MX\",\"es-US\",\"et\",\"fa\",\"fo\",\"fr\",\"he\",\"hi\",\"hr\",\"hu\",\"hy\",\"id\",\"it\",\"ko\",\"lt\",\"lv\",\"nb\",\"nl\",\"pl\",\"pt-BR\",\"pt-PT\",\"ro\",\"ru\",\"sh\",\"sk\",\"sl\",\"sq\",\"sr\",\"sv\",\"ta\",\"tg\",\"tr\",\"uk\",\"vi\"]","time":"2020-12-27T15:29:10.076Z","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"msg":"spellcheck: setting languages to:  [\"en-US\"]","time":"2020-12-27T15:29:10.076Z","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"msg":"Begin ensuring permissions","time":"2020-12-27T15:29:10.150Z","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"msg":"Ensuring file permissions for 2 files","time":"2020-12-27T15:29:10.189Z","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"msg":"Finish ensuring permissions in 52ms","time":"2020-12-27T15:29:10.203Z","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"fullscreen\":false,\"width\":680,\"height\":1027,\"x\":1224,\"y\":47}","time":"2020-12-27T15:29:10.659Z","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2020-12-27T15:29:10.660Z","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:11.744Z","msg":"x-attr dependency did not load successfully","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:11.789Z","msg":"preload complete","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.146Z","msg":"pre-main prep time: 1 ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.265Z","msg":"background page reloaded","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.265Z","msg":"environment: production","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.389Z","msg":"SQL channel job 1 (getItemById) succeeded in 123ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.389Z","msg":"Storage fetch","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.514Z","msg":"SQL channel job 2 (getAllItems) succeeded in 124ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.541Z","msg":"SQL channel job 3 (createOrUpdateItem) succeeded in 24ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.557Z","msg":"SQL channel job 5 (createOrUpdateItem) succeeded in 15ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.557Z","msg":"Starting background data migration. Target version: 10","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.562Z","msg":"GET https://textsecure-service.whispersystems.org/v1/config","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.573Z","msg":"ConversationController: starting initial fetch","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.602Z","msg":"SQL channel job 7 (getAllStickerPacks) succeeded in 29ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.603Z","msg":"SQL channel job 8 (getAllStickers) succeeded in 29ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.604Z","msg":"SQL channel job 9 (getRecentStickers) succeeded in 30ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.604Z","msg":"SQL channel job 10 (getRecentEmojis) succeeded in 30ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.605Z","msg":"SQL channel job 12 (getItemById) succeeded in 31ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.605Z","msg":"SQL channel job 13 (getAllIdentityKeys) succeeded in 31ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.606Z","msg":"SignalProtocolStore: Finished caching identityKeys data","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.606Z","msg":"SQL channel job 14 (getAllSessions) succeeded in 31ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.607Z","msg":"SignalProtocolStore: Finished caching sessions data","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.607Z","msg":"SQL channel job 11 (getItemById) succeeded in 33ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.608Z","msg":"SQL channel job 17 (getLastConversationPreview) succeeded in 11ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.608Z","msg":"SQL channel job 21 (getLastConversationPreview) succeeded in 11ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.608Z","msg":"SQL channel job 22 (getLastConversationActivity) succeeded in 11ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.608Z","msg":"SQL channel job 20 (getLastConversationActivity) succeeded in 11ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.608Z","msg":"SQL channel job 24 (getLastConversationActivity) succeeded in 11ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.609Z","msg":"SQL channel job 18 (getLastConversationActivity) succeeded in 12ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.609Z","msg":"SQL channel job 19 (getLastConversationPreview) succeeded in 12ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.609Z","msg":"SQL channel job 23 (getLastConversationPreview) succeeded in 12ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.609Z","msg":"SQL channel job 26 (getLastConversationActivity) succeeded in 12ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.609Z","msg":"SQL channel job 27 (getLastConversationPreview) succeeded in 12ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.610Z","msg":"SQL channel job 25 (getLastConversationPreview) succeeded in 13ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.610Z","msg":"SQL channel job 28 (getLastConversationActivity) succeeded in 13ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.610Z","msg":"SQL channel job 29 (getLastConversationPreview) succeeded in 13ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.610Z","msg":"SQL channel job 30 (getLastConversationActivity) succeeded in 12ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.610Z","msg":"SQL channel job 31 (getLastConversationPreview) succeeded in 12ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.611Z","msg":"SQL channel job 32 (getLastConversationActivity) succeeded in 13ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.611Z","msg":"SQL channel job 33 (getLastConversationPreview) succeeded in 13ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.611Z","msg":"SQL channel job 34 (getLastConversationActivity) succeeded in 13ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.611Z","msg":"SQL channel job 35 (getLastConversationPreview) succeeded in 12ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.611Z","msg":"SQL channel job 36 (getLastConversationActivity) succeeded in 12ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.611Z","msg":"SQL channel job 37 (getLastConversationPreview) succeeded in 12ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.611Z","msg":"SQL channel job 38 (getLastConversationActivity) succeeded in 12ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.612Z","msg":"SQL channel job 39 (getLastConversationPreview) succeeded in 13ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.613Z","msg":"SQL channel job 40 (getLastConversationActivity) succeeded in 14ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.613Z","msg":"SQL channel job 41 (getLastConversationPreview) succeeded in 14ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.613Z","msg":"SQL channel job 42 (getLastConversationActivity) succeeded in 14ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.613Z","msg":"SQL channel job 43 (getLastConversationPreview) succeeded in 14ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.613Z","msg":"SQL channel job 44 (getLastConversationActivity) succeeded in 14ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.613Z","msg":"SQL channel job 45 (getLastConversationPreview) succeeded in 14ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.613Z","msg":"SQL channel job 46 (getLastConversationActivity) succeeded in 14ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.614Z","msg":"SQL channel job 47 (getLastConversationPreview) succeeded in 15ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.614Z","msg":"SQL channel job 48 (getLastConversationActivity) succeeded in 15ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.614Z","msg":"SQL channel job 49 (getLastConversationPreview) succeeded in 15ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.614Z","msg":"SQL channel job 50 (getLastConversationActivity) succeeded in 15ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.614Z","msg":"SQL channel job 51 (getLastConversationPreview) succeeded in 14ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.614Z","msg":"SQL channel job 52 (getLastConversationActivity) succeeded in 14ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.615Z","msg":"SQL channel job 53 (getLastConversationPreview) succeeded in 15ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.615Z","msg":"SQL channel job 54 (getLastConversationActivity) succeeded in 15ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.617Z","msg":"SQL channel job 55 (getLastConversationPreview) succeeded in 17ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.617Z","msg":"SQL channel job 56 (getLastConversationActivity) succeeded in 17ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.618Z","msg":"SQL channel job 57 (getLastConversationPreview) succeeded in 18ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.619Z","msg":"SQL channel job 58 (getLastConversationActivity) succeeded in 19ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.619Z","msg":"SQL channel job 59 (getLastConversationPreview) succeeded in 19ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.619Z","msg":"SQL channel job 61 (getLastConversationPreview) succeeded in 19ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.620Z","msg":"SQL channel job 60 (getLastConversationActivity) succeeded in 19ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.620Z","msg":"SQL channel job 62 (getLastConversationActivity) succeeded in 20ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.620Z","msg":"SQL channel job 63 (getLastConversationPreview) succeeded in 20ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.621Z","msg":"SQL channel job 64 (getLastConversationActivity) succeeded in 21ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.621Z","msg":"SQL channel job 66 (getLastConversationActivity) succeeded in 21ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.621Z","msg":"SQL channel job 67 (getLastConversationPreview) succeeded in 21ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.622Z","msg":"SQL channel job 68 (getLastConversationActivity) succeeded in 22ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.622Z","msg":"SQL channel job 69 (getLastConversationPreview) succeeded in 22ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.622Z","msg":"SQL channel job 65 (getLastConversationPreview) succeeded in 22ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.623Z","msg":"SQL channel job 70 (getLastConversationActivity) succeeded in 22ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.623Z","msg":"SQL channel job 71 (getLastConversationPreview) succeeded in 22ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.623Z","msg":"SQL channel job 72 (getLastConversationActivity) succeeded in 22ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.624Z","msg":"SQL channel job 73 (getLastConversationPreview) succeeded in 22ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.624Z","msg":"SQL channel job 74 (getLastConversationActivity) succeeded in 23ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.624Z","msg":"SQL channel job 76 (getLastConversationActivity) succeeded in 23ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.625Z","msg":"SQL channel job 78 (getLastConversationActivity) succeeded in 24ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.625Z","msg":"SQL channel job 75 (getLastConversationPreview) succeeded in 24ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.625Z","msg":"SQL channel job 77 (getLastConversationPreview) succeeded in 24ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.625Z","msg":"SQL channel job 79 (getLastConversationPreview) succeeded in 24ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.625Z","msg":"SQL channel job 80 (getLastConversationActivity) succeeded in 24ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.625Z","msg":"SQL channel job 81 (getLastConversationPreview) succeeded in 24ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.626Z","msg":"SQL channel job 82 (getLastConversationActivity) succeeded in 25ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.626Z","msg":"SQL channel job 83 (getLastConversationPreview) succeeded in 25ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.626Z","msg":"SQL channel job 84 (getLastConversationActivity) succeeded in 25ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.626Z","msg":"ConversationController: done with initial fetch","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.626Z","msg":"SQL channel job 86 (getAllSignedPreKeys) succeeded in 20ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.626Z","msg":"SignalProtocolStore: Finished caching signedPreKeys data","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.627Z","msg":"SQL channel job 85 (getAllPreKeys) succeeded in 21ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.633Z","msg":"SignalProtocolStore: Finished caching preKeys data","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.634Z","msg":"checkForConflicts: starting...","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.634Z","msg":"checkForConflicts: complete!","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.653Z","msg":"Cleanup: starting...","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.653Z","msg":"Initializing network observer every 5000ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.654Z","msg":"Build expires:  2021-03-17T17:14:27.000Z","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.654Z","msg":"SQL channel job 87 (updateConversations) succeeded in 38ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.655Z","msg":"Cleanup: Found 0 messages for cleanup","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.655Z","msg":"Cleanup: complete","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.655Z","msg":"listening for registration events","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.661Z","msg":"connect {\"connectCount\":0}","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.662Z","msg":"GET https://textsecure-service.whispersystems.org/v1/config","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:12.664Z","msg":"open inbox","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:13.139Z","msg":"SQL channel job 91 (updateConversations) succeeded in 13ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:13.250Z","msg":"GET https://textsecure-service.whispersystems.org/v1/config 200 Success","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:13.304Z","msg":"GET https://textsecure-service.whispersystems.org/v1/config 200 Success","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:13.305Z","msg":"Initializing socket and listening for messages","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:13.306Z","msg":"getAllFromCache","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:13.306Z","msg":"opening message socket https://textsecure-service.whispersystems.org","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:13.308Z","msg":"initializeGroupCredentialFetcher: starting...","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:13.308Z","msg":"maybeFetchCredentials: no new credentials needed","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:13.309Z","msg":"attachment_downloads/start: enabling","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:13.310Z","msg":"PUT https://textsecure-service.whispersystems.org/v1/devices/capabilities","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:13.314Z","msg":"loadSession {\"encodedAddress\":\"[REDACTED]9fa.1\",\"id\":\"[REDACTED]9fa.1\"}","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:13.314Z","msg":"loadSession {\"encodedAddress\":\"[REDACTED]b19.1\",\"id\":\"[REDACTED]9fa.1\"}","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:13.314Z","msg":"loadSession {\"encodedAddress\":\"[REDACTED]9fa.1\",\"id\":\"[REDACTED]9fa.1\"}","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:13.316Z","msg":"loadSession {\"encodedAddress\":\"[REDACTED]b19.1\",\"id\":\"[REDACTED]9fa.1\"}","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:13.318Z","msg":"SQL channel job 93 (createOrUpdateItem) succeeded in 14ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:13.319Z","msg":"SQL channel job 94 (getUnprocessedCount) succeeded in 13ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:13.321Z","msg":"getAllFromCache loaded 0 saved envelopes","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:13.324Z","msg":"storeSession {\"encodedAddress\":\"[REDACTED]b19.1\",\"id\":\"[REDACTED]9fa.1\"}","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:13.325Z","msg":"PUT https://textsecure-service.whispersystems.org/v1/messages/[REDACTED]b19","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:13.448Z","msg":"PUT https://textsecure-service.whispersystems.org/v1/devices/capabilities 204 Success","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:13.448Z","msg":"Start idle detector","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:13.459Z","msg":"PUT https://textsecure-service.whispersystems.org/v1/messages/[REDACTED]b19 200 Success","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:14.132Z","msg":"websocket open","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:14.178Z","msg":"got request PUT /api/v1/queue/empty","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:14.180Z","msg":"MessageReceiver: finished processing messages after 'empty', now waiting for application","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:14.181Z","msg":"MessageReceiver: emitting 'empty' event","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"msg":"updater/start: Updates disabled - not starting new version checks","time":"2020-12-27T15:29:14.184Z","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:14.182Z","msg":"onEmpty: All outstanding database requests complete","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:14.182Z","msg":"Next signed key rotation scheduled for 2020-12-28T01:27:05.213Z","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:14.182Z","msg":"refreshSenderCertificate: Getting new certificate...","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:14.183Z","msg":"GET https://textsecure-service.whispersystems.org/v1/certificate/delivery?includeUuid=true","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:14.184Z","msg":"GET https://textsecure-service.whispersystems.org/v1/certificate/delivery?includeUuid=true&includeE164=false","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:14.361Z","msg":"GET https://textsecure-service.whispersystems.org/v1/certificate/delivery?includeUuid=true 200 Success","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:14.361Z","msg":"GET https://textsecure-service.whispersystems.org/v1/certificate/delivery?includeUuid=true&includeE164=false 200 Success","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:14.373Z","msg":"SQL channel job 100 (createOrUpdateItem) succeeded in 11ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:14.380Z","msg":"SQL channel job 101 (createOrUpdateItem) succeeded in 17ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:14.381Z","msg":"Next sender certificate refresh scheduled for 2020-12-28T15:29:14.381Z","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:14.381Z","msg":"refreshOurProfile","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:14.386Z","msg":"GET https://textsecure-service.whispersystems.org/v1/profile/[REDACTED]b19/[REDACTED]72b (unauth)","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:15.410Z","msg":"GET https://textsecure-service.whispersystems.org/v1/profile/[REDACTED]b19/[REDACTED]72b 200 Success","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:15.410Z","msg":"Setting sealedSender to UNRESTRICTED for conversation [REDACTED]b19 ([REDACTED]9fa)","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:15.412Z","msg":"GET https://cdn.signal.org/[REDACTED]kdw","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:16.563Z","msg":"GET https://cdn.signal.org/[REDACTED]kdw 200 Success","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:17.076Z","msg":"SQL channel job 103 (updateConversations) succeeded in 11ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:18.451Z","msg":"Upgrade message schema (with index): {\"done\":true,\"numProcessed\":0,\"fetchDuration\":2,\"upgradeDuration\":0,\"saveDuration\":0,\"totalDuration\":2}","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:18.451Z","msg":"Background migration complete. Stopping idle detector.","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:18.451Z","msg":"Stop idle detector","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:20.368Z","msg":"queueing envelope [REDACTED]b19.1 1609082941519 (bd2caf821ee74a7c85cf059d41f443ce)","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:20.368Z","msg":"message from [REDACTED]b19.1 1609082941519 (bd2caf821ee74a7c85cf059d41f443ce)","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:20.368Z","msg":"loadSession {\"encodedAddress\":\"[REDACTED]b19.1\",\"id\":\"[REDACTED]9fa.1\"}","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:20.369Z","msg":"New remote ephemeral key","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:20.373Z","msg":"loadSession {\"encodedAddress\":\"[REDACTED]b19.1\",\"id\":\"[REDACTED]9fa.1\"}","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:20.374Z","msg":"storeSession {\"encodedAddress\":\"[REDACTED]b19.1\",\"id\":\"[REDACTED]9fa.1\"}","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:20.375Z","msg":"got keys sync message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:20.375Z","msg":"onKeysSync: received keys","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:20.875Z","msg":"storageService.sync: starting...","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:20.876Z","msg":"storageService.fetchManifest","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:20.876Z","msg":"GET https://textsecure-service.whispersystems.org/v1/storage/auth","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:20.887Z","msg":"SQL channel job 107 (createOrUpdateSessions) succeeded in 13ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:20.895Z","msg":"SQL channel job 108 (updateUnprocessedsWithData) succeeded in 20ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:20.902Z","msg":"SQL channel job 109 (removeUnprocessed) succeeded in 27ms","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:21.013Z","msg":"GET https://textsecure-service.whispersystems.org/v1/storage/auth 200 Success","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:21.014Z","msg":"GET https://storage.signal.org/v1/storage/manifest/version/47","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:21.516Z","msg":"GET https://storage.signal.org/v1/storage/manifest/version/47 204 Success","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:21.516Z","msg":"storageService.fetchManifest: nothing changed","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:29:21.516Z","msg":"storageService.sync: no new manifest","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:30:15.159Z","msg":"Removing notification","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:30:15.161Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:30:20.161Z","msg":"Removing notification","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:31:10.297Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:31:20.369Z","msg":"getAllFromCache","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:31:20.370Z","msg":"getAllFromCache loaded 0 saved envelopes","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:32:05.444Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:33:00.633Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:33:56.037Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:34:51.173Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:35:46.360Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:36:41.531Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:37:36.762Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:38:31.979Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:39:27.123Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:40:22.277Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:41:17.516Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:42:12.638Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:43:07.762Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:44:02.916Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:44:58.045Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:45:53.256Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:46:48.400Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:47:43.620Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:48:38.745Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:49:33.853Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:50:28.985Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:51:24.125Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:52:19.148Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:53:14.192Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:54:09.218Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:55:04.252Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:55:59.279Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:56:54.312Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:57:49.336Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:58:44.360Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T15:59:39.385Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T16:00:34.410Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T16:01:29.455Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T16:02:24.483Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T16:03:19.505Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T16:04:14.529Z","msg":"Sending a keepalive message","v":0}
+{"name":"log","hostname":"A88X","pid":227294,"level":30,"time":"2020-12-27T16:05:09.558Z","msg":"Sending a keepalive message","v":0}
