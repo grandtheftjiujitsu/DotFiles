@@ -1,7 +1,0 @@
-; File generated automatically from /home/ubuntu/buildbot/runners/wine/wine-src/dlls/rtutils/rtutils.spec; do not edit!
-
-LIBRARY rtutils.dll
-
-EXPORTS
-  TraceRegisterExA@8 @50
-  TraceRegisterExW@8 @51

@@ -1,6 +1,0 @@
-system:
-  disable_compositor: true
-  terminal: false
-  use_us_layout: true
-wine:
-  version: system

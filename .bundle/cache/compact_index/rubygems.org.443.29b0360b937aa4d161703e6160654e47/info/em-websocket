@@ -20,3 +20,4 @@
 0.4.0 eventmachine:>= 0.12.9,http_parser.rb:~> 0.5.3|checksum:21355c3b75f8bb249b359759a3f036be65b83b8ec2097b269e680de75befe4a7
 0.5.0 eventmachine:>= 0.12.9,http_parser.rb:~> 0.5.3|checksum:a950845073aa8d983e1333b54c80b260a8957a3314df251b993a68a7a7f53607
 0.5.1 eventmachine:>= 0.12.9,http_parser.rb:~> 0.6.0|checksum:c39e6d64352eca13aedf4f5d7009666ab7f3ddce75410b883c467cf0e5465caf
+0.5.2 eventmachine:>= 0.12.9,http_parser.rb:~> 0.6.0|checksum:6bae6d8dd9c05c0d1619aef91903c82542de7a15fa92e0110d13a8324eafe1d5

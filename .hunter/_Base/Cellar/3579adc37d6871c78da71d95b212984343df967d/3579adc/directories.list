@@ -1,6 +1,0 @@
-bin
-include/curl
-lib/cmake/CURL
-lib
-lib/pkgconfig
-licenses/CURL

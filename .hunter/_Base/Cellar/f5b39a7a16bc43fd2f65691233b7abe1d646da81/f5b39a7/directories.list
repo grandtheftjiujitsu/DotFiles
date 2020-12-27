@@ -1,4 +1,0 @@
-include/json
-lib64/cmake/jsoncpp
-lib64
-licenses/jsoncpp

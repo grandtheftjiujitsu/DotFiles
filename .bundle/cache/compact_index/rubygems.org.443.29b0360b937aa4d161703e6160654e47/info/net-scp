@@ -12,3 +12,5 @@
 1.2.2.rc2 net-ssh:< 5.0.0&>= 2.6.5|checksum:b2ae35fdbbcc97e1bb3d12b1f5c5d4758daa860da9b624a0387bd5a0faa401ba
 2.0.0.rc1 net-ssh:< 6.0.0&>= 2.6.5|checksum:1717bca2f10557e3be2b562d9cbcd92f51019c55ad15d9f59fc1ee0046e08723
 2.0.0 net-ssh:< 6.0.0&>= 2.6.5|checksum:2f6dc55eadfe410ad64e38f7e213cf960e4604fd8336c0f18fc01d547c1d6e5a
+3.0.0.rc1 net-ssh:< 7.0.0&>= 2.6.5|checksum:291aa4a1be2c738fb26974708e4902de2952750a2b3eb9251909a6894b711e2f
+3.0.0 net-ssh:< 7.0.0&>= 2.6.5|checksum:8fc6c80365b95230c6bfc529dbea3893d2d81724855bfb01cbf385866e1c902c

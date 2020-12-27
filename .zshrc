@@ -43,45 +43,37 @@ PROMPT="%{$fg_bold[cyan]%}%n%{$fg_bold[white]%} @%m %{$fg_no_bold[cyan]%}%~  %{$
 ###########
 
 # shell convenience
-alias abi="abiword"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias addgrp="sudo usermod -aG "$1" $(whoami)"
 alias d3="WINEARCH=win32 WINEPREFIX=$HOME/games/diablo3 wine $HOME/games/Diablo-III-Setup.exe -launch"
 alias dwnspd="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
-alias electrum="electrum -w $HOME/.electrum/wallets/electrum_wallet"
-alias eup="sudo systemctl start dhcpcd@enp0s25; sudo web-connect-extras"
+alias eup="sudo systemctl start dhcpcd@enp4s0; sudo web-connect-extras"
 alias eq="qpaeq"
-alias fantasygrounds="wine $HOME/.wine/drive_c/Program\ Files\ \(x86)/Fantasy\ Grounds/FantasyGrounds.exe"
-alias geth="geth --datadir $HOME/documents/vault/ethereum"
-alias git-clear="git reset --hard HEAD; git clean -fdx"
 alias grep="grep --color=auto"
-alias handbrake="HandBrakeCLI"
 alias ls="ls -1 --color=auto"
 alias lsa="ls -a --color=auto"
 alias lsl="ls -l --color=auto"
 alias lsr="ls -R --color=auto"
-#alias mount="sudo mount"
-#alias off="sleep 1 && sudo shutdown -h now | sudo systemctl stop slim"
-#alias monero="monero-wallet-cli""
+alias mount="sudo mount"
 alias off="shutdown -h now"
 alias openshot="openshot-qt"
-alias p6="perl6"
 alias pl="perl -de 0"
-alias pwsafe="pwsafe -f $HOME/documents/vault/.pwsafe.dat"
+alias pwsafe="ecryptfs-mount-private; pwsafe -f $HOME/vault/.pwsafe.dat"
 alias py="python -q"
-#alias reboot="sudo reboot"
-alias screencap="recordmydesktop -o $HOME/videos/$(date +%Y%m%d-%H%M).ogv"
-alias signal="signal-desktop"
+alias screencap="simplescreenrecorder"
+alias signal="signal-desktop-beta"
 alias umount="sudo umount"
-alias upgrade="sudo rm /boot/*fallback.img; sudo pacman -Syu; sudo rm /boot/*fallback.img"
+#alias upgrade="sudo rm /boot/*fallback.img; sudo pacman -Syu; sudo rm /boot/*fallback.img"
+alias vault-mount="ecryptfs-mount-private"
+alias vault-umount="ecryptfs-umount-private"
 alias wifi-menu="sudo wifi-menu"
-alias win="VBoxManage startvm 'Windows 7'"
-alias zef="/usr/share/perl6/vendor/bin/zef"
+#alias win="VBoxManage startvm 'Windows 7'"
 
 # scripts & utilities
 alias aur-pull="git clone https://aur.archlinux.org/$1.git"
+alias brave="LD_PRELOAD='/usr/lib/libhardened_malloc.so' /usr/bin/brave-dev"
 alias findinfile="grep -rnw -e $1"
 alias forecast="cat /tmp/forecast"
 alias ipinfo="curl ipinfo.io"
@@ -89,22 +81,17 @@ alias isrun="ps -ax | grep $1"
 #alias jekyll="$HOME/.gem/ruby/2.3.0/bin/jekyll"
 alias jekyll-serve="bundle exec jekyll serve"
 alias mictest="arecord -d 5 /tmp/test-mic.wav; aplay /tmp/test-mic.wav"
-alias mtp-dwn="fusermount -u $HOME/phone"
-alias mtp-list="simple-mtpfs --list-devices"
-alias mtp-up="simple-mtpfs $HOME/phone"
-alias pcms="sudo openconnect vpn.pathways.com"
-alias printer-default="sudo lpadmin -d $*"
-alias printer-list="sudo lpinfo -v"
-alias printer-on="sudo systemctl start org.cups.cupsd.service"
-alias printer-off="sudo systemctl stop org.cups.cupsd.service"
-alias printer-status="lpstat -s"
+#alias printer-default="sudo lpadmin -d $*"
+#alias printer-list="sudo lpinfo -v"
+#alias printer-on="sudo systemctl start org.cups.cupsd.service"
+#alias printer-off="sudo systemctl stop org.cups.cupsd.service"
+#alias printer-status="lpstat -s"
 alias pts="phoronix-test-suite"
 alias pts-add="phoronix-test-suite install"
 alias pts-build="phoronix-test-suite benchmark build-linux-kernel"
 alias pts-gcrypt="phoronix-test-suite benchmark gcrypt"
 alias pts-gzip="phoronix-test-suite benchmark compress-gzip"
 alias pts-i="phoronix-test-suite interactive"
-alias scan="sudo scanimage --device-name=epson2:libusb:001:007 --source='Automatic Document Feeder' --format=pdf"
 alias scratch="nano $HOME/scratch.pad"
 alias syserror="sudo journalctl -p 0..3 -xn"
 alias sysfail="systemctl --failed"
@@ -143,6 +130,7 @@ alias gbdel="git branch -d"
 alias gbnew="git checkout -b"
 alias gbrch="git branch"
 alias gcheck="git checkout"
+alias gclear="git reset --hard HEAD; git clean -fdx"
 alias gcom="git commit -a --allow-empty-message -m ''"
 alias gmg="git merge"
 alias gpull="git pull"
@@ -152,6 +140,7 @@ alias grmt="git remote -v"
 alias gstat="git status"
 
 # adb
+# if permission issues: $ adb kill-server; sudo adb start-server
 alias adb-dev="adb devices"
 alias adb-fb="adb fastboot devices"
 alias adb-rb="adb reboot"
@@ -171,11 +160,10 @@ alias fb-flash-vendor="fastboot flash vendor"
 alias fb-rb="fastboot reboot"
 
 # user executables
-export PATH=$HOME/git/scripts/shell:$PATH
-export PATH=$HOME/git/scripts/python:$PATH
-export PATH=$HOME/git/scirpts/r:$PATH
-export PATH=$HOME/git/scripts/android:$PATH
-#export PATH=$HOME/.rakudobrew/bin:$PATH
+export PATH=$HOME/scripts/shell:$PATH
+export PATH=$HOME/scripts/python:$PATH
+export PATH=$HOME/scirpts/r:$PATH
+export PATH=$HOME/scripts/android:$PATH
 kernel-prep ()
   {
   #quick prep to build android kernel

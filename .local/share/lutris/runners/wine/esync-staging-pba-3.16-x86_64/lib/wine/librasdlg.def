@@ -1,6 +1,0 @@
-; File generated automatically from /home/ubuntu/buildbot/runners/wine/wine-src/dlls/rasdlg/rasdlg.spec; do not edit!
-
-LIBRARY rasdlg.dll
-
-EXPORTS
-  RasEntryDlgW@12 @10

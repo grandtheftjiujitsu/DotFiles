@@ -1,6 +1,6 @@
 ---
-1.16 archive-tar-minitar:~> 0.5,hoe:>= 1.8.3,nokogiri:~> 1.2,rcov:~> 0.8|checksum:c393a1cb8d6901e89b2eabc6c1ca2cfd46f3067c78848daf62cfa7ddc53b97ea
-1.15 |checksum:3a86e71044e47117ae69c863bcfcb6b3155359859949aa072846c33f40d56ddb
+1.16 |checksum:c393a1cb8d6901e89b2eabc6c1ca2cfd46f3067c78848daf62cfa7ddc53b97ea
+1.15 |checksum:3a86e71044e47117ae69c863bcfcb6b3155359859949aa072846c33f40d56ddb,ruby:> 0.0.0
 1.17 |checksum:669921467139e034cf2c52c5655db4c8ae33818e82770cd2041fba6266b0927e
 1.17.1 |checksum:7e86967b0cf64e0ba84da198714adefc168ea79cdb43537e46fd39a6b8d955f2
 1.17.2 |checksum:d768170d4fa10e8e0d1346c02df90e6255fa9cb7f6a7ba16ccd4ae6e50af9744
@@ -13,10 +13,10 @@
 1.23 |checksum:fa29671c5f80a5dbafe3111814f1bf289af91f422c1d1fa4c10bda63fab305b2
 1.24 |checksum:2ad18e0ec707cebd9bf5f46283a2524090b407f538e02b988ff0c55d23ab3cbd
 1.25 |checksum:ee2dc47f195959f3b0729e889c3dabfce7ba0cf9e04cfba31eddcb02e885a641
-2.0 |checksum:d3e53ba4162d4ee93ce75e644c7fca5503fad1c512277b9ca80ad43aa8103ae0
+2.0 |checksum:d3e53ba4162d4ee93ce75e644c7fca5503fad1c512277b9ca80ad43aa8103ae0,ruby:>= 1.9.2
 1.25.1 |checksum:88ef3c596481678710ffd4018fa40f1999b02d97babea39682ba7d5badd21f56
-2.1 |checksum:9ab591babcb268cd8ad4a7a6f9ebcfeab5f8c5332b47a587cade7224f921e448
-2.2 |checksum:fb20b5fb6b25c2b8abbf74b21b82c6e14ae1e3ed5146ec23d305333c9c360bc6
+2.1 |checksum:9ab591babcb268cd8ad4a7a6f9ebcfeab5f8c5332b47a587cade7224f921e448,ruby:>= 1.9.2
+2.2 |checksum:fb20b5fb6b25c2b8abbf74b21b82c6e14ae1e3ed5146ec23d305333c9c360bc6,ruby:>= 1.9.2
 2.3 |checksum:6d13658a740d7ce3cbd285a1a60f7f42db56923c37a33cae8ed5252cf2e71548,ruby:>= 1.9.2
 2.4.1 |checksum:8dab4996ba9e5af58f801c0b57c12678bc927c44831d89ee01eaf71eed102a07,ruby:>= 1.9.2
 2.4.2 |checksum:dd2abe5850102ad0033ff43d3772e92a337495e7fc3b3d142b704f5d045502fb,ruby:>= 1.9.2
@@ -35,3 +35,4 @@
 3.2.1 mime-types-data:~> 3.2015|checksum:bdfdb9b3aea095e63a16ac1ba9ca4bf4e4b7a6d4c8e67e106117ace50f9e81fc,ruby:>= 2.0
 3.2.2 mime-types-data:~> 3.2015|checksum:93f308f0b6754b0ca50dd1982b817f65b8946f6a34bd3db6bd3d8a5265f05d3a,ruby:>= 2.0
 3.3 mime-types-data:~> 3.2015|checksum:933ef7ba38c3e4d5561cbff4aaf92d9d76b97df77b7ab1083e3f2df9220af43c,ruby:>= 2.0
+3.3.1 mime-types-data:~> 3.2015|checksum:708f737e28ceef48b9a1bc041aa9eec46fa36eb36acb95e6b64a9889131541fe,ruby:>= 2.0

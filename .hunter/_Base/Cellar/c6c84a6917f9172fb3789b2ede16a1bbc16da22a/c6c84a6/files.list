@@ -1,9 +1,0 @@
-include/zconf.h
-include/zlib.h
-lib/cmake/ZLIB/ZLIBConfig.cmake
-lib/cmake/ZLIB/ZLIBConfigVersion.cmake
-lib/cmake/ZLIB/ZLIBTargets-release.cmake
-lib/cmake/ZLIB/ZLIBTargets.cmake
-lib/libz.a
-share/man/man3/zlib.3
-share/pkgconfig/zlib.pc

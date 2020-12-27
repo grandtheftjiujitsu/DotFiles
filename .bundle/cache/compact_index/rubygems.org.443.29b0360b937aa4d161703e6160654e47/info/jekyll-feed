@@ -26,3 +26,7 @@
 0.11.0 jekyll:~> 3.3|checksum:97c52f737f6ff7c442277c1f2e525c6b1c76b699654bd711f4b6b53a17c6b486,ruby:>= 2.3.0
 0.12.0 jekyll:< 5.0&>= 3.7|checksum:7dd9329269a206aecdef2ef39f76ae7378b49b96927dcf2762f1451a53e5629d,ruby:>= 2.4.0
 0.12.1 jekyll:< 5.0&>= 3.7|checksum:e3514d6fb1529a685f36d3260dcfa2f51f1fd53592229b604b0c8fdce48ec005,ruby:>= 2.3.0
+0.13.0 jekyll:< 5.0&>= 3.7|checksum:3906c7d7365f6a15c42d86caa5d75fb72ece7c36a068b346e581a206e7b6a8d3,ruby:>= 2.3.0
+0.14.0 jekyll:< 5.0&>= 3.7|checksum:acd06883c80273dacc3de71d76b3c265fae7792299e1a57903c631c478f90b3a,ruby:>= 2.4.0
+0.15.0 jekyll:< 5.0&>= 3.7|checksum:1f2c9aaf168ea17e0e0e2d6312450de7f8dfbc8982e2f4cf434f6026660cecd5,ruby:>= 2.4.0
+0.15.1 jekyll:< 5.0&>= 3.7|checksum:49fda707b6e81e43d9863841293afd5026038d7a05865150e2b1831e6d9eb8ff,ruby:>= 2.4.0

@@ -18,18 +18,16 @@ fi
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources &	# merge Xresources
 
-$HOME/git/scripts/shell/vaultcrypt &			# make encrypted copy of vault and gpg keys
-$HOME/git/scripts/tmpfs-cache-restore &			# populate tmpfs cache
-
-$HOME/.conky/dzconky-main &				# dzen2 + conky main
-$HOME/.conky/dzconky-clock &				# dzen2 + conky clock
-$HOME/.conky/dzconky-music &				# dzen2 + conky music
-
-sh $HOME/.fehbg &					# set wallpaper
+# WM Edition
+#exec dwm						# start window manager
+#$HOME/.conky/dzconky-main &				# dzen2 + conky main
+#$HOME/.conky/dzconky-clock &				# dzen2 + conky clock
+#$HOME/.conky/dzconky-music &				# dzen2 + conky music
+#sh $HOME/.fehbg &					# set wallpaper
 
 exec /usr/bin/pulseaudio --start &			# start sound server
 exec /usr/bin/pactl load-module module-equalizer-sink &	# load equalizer
 exec /usr/bin/pactl load-module module-dbus-protocol &	# load equalizer
 #exec /usr/bin/mpd &					# music player daemon
 
-exec dwm						# start window manager
+exec startxfce4						# start desktop environment

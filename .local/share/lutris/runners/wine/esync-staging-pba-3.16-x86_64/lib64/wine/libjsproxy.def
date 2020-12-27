@@ -1,8 +1,0 @@
-; File generated automatically from /home/ubuntu/buildbot/runners/wine/wine-src/dlls/jsproxy/jsproxy.spec; do not edit!
-
-LIBRARY jsproxy.dll
-
-EXPORTS
-  InternetInitializeAutoProxyDll=JSPROXY_InternetInitializeAutoProxyDll @101
-  InternetDeInitializeAutoProxyDll @102
-  InternetGetProxyInfo @103

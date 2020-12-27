@@ -23,3 +23,5 @@
 2.5.0 jekyll:~> 3.3|checksum:54b3d0fd6c01375f9281db3a39c10ebf7c900071bd1bb6b806a53e0262c9cea7,ruby:>= 2.3.0
 2.6.0 jekyll:~> 3.3|checksum:551d2885c7537f384f491bad775165dda5a7c2555c0c3d54f62fbb0377009b80,ruby:>= 2.3.0
 2.6.1 jekyll:< 5.0&>= 3.3|checksum:d5986ff4599f2f2dc8e3e5ab231e245a36aa5820f70f12faa220444bb2a02edd,ruby:>= 2.3.0
+2.7.0 jekyll:< 5.0&>= 3.8|checksum:7f015e1488b7f82e6bf283e866e3b94643f2fc115cc825577493fc6cc563263d,ruby:>= 2.4.0
+2.7.1 jekyll:< 5.0&>= 3.8|checksum:838bcc05d9f0b342f50a1cea19b8fc99f9728910da99203cd75cccea6139513b,ruby:>= 2.4.0

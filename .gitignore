@@ -1,12 +1,10 @@
 # $HOME Directories #
 #####################
 /aosp
-/Battle.net.desktop
-/Diablo\ III.desktop
-/Diablo\ III
+/asp
+/Desktop
 /documents
-/download
-/games
+/downloads
 /gdrive_personal
 /gdrive_counseling
 /gdrive_k9
@@ -15,38 +13,28 @@
 /music
 /playlists_android
 /playlists_linux
+/podcast
 /R
+/recordings
+/scripts
+/vault
 /videos
 
 # Git Repos #
 #############
 /.conky
-/.rakudobrew
-/.zef
-
-# Vault Content #
-#################
-/.rclone.conf
-/.bitmonero
-/.electron
-/.electron-gyp
-/.electrum
-/.esd_auth
-/.ethereum
-/.gnupg
-/monero-wallet-cli.log
-/.pwsafe.dat~
-/.shared-ringdb
-/.ssh
 
 # Other #
 #########
+/.bash_history
 /.cache
-/.cache-bk
 /.ccache
 /.config/BraveSoftware
 /.config/chromium
+/.ecryptfs/Private.sig
+/.ecryptfs/wrapped-passphrase
 /.gem
 /.config/rclone
 /Gemfile.lock
-/.phoronix-test-suite/installed-tests/pts/build-linux-kernel-1.7.0/
+/.phoronix-test-suite
+/.Rhistory

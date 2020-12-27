@@ -1,7 +1,0 @@
-; File generated automatically from /home/ubuntu/buildbot/runners/wine/wine-src/dlls/slc/slc.spec; do not edit!
-
-LIBRARY slc.dll
-
-EXPORTS
-  SLGetWindowsInformation@16 @28
-  SLGetWindowsInformationDWORD@8 @29

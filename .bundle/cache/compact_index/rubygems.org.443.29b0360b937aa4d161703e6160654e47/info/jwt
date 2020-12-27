@@ -28,3 +28,4 @@
 2.2.0.pre.beta.0 |checksum:d5acce8d74e73123f50b940591eca430fe6fcbdb457f4eec7bd090f531276af3,ruby:>= 2.1,rubygems:> 1.3.1
 2.2.0 |checksum:f99a877e5be8c5af75aefd3669cc7abae13239a9a2c24a877ff0a1ef1bf020ce,ruby:>= 2.1
 2.2.1 |checksum:2c899043f87f4287e30a57c0e71e1e0339f846622ccf263d75837a3aee0eef07,ruby:>= 2.1
+2.2.2 |checksum:56a47115e514b9cfba93b8067332462a74ecbcea843a0784bc7a208203f6d693,ruby:>= 2.1

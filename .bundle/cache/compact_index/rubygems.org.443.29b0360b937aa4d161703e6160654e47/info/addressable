@@ -1,12 +1,12 @@
 ---
-2.0.0 launchy:>= 0.3.2,rake:>= 0.7.3,rspec:>= 1.0.8|checksum:04b3c6a7760a387c4688bb3b80e7844ced3f5883a1ec65351cde5f40506d96ac
-2.0.1 launchy:>= 0.3.2,rake:>= 0.7.3,rspec:>= 1.0.8|checksum:bdb81ae7d0cbec0782a82fa98c0e2f7b28719ef40c387caf0090d000fd7d30db
-2.0.2 launchy:>= 0.3.2,rake:>= 0.7.3,rspec:>= 1.0.8|checksum:3b21ba60d1a2c9e3d20a284ce1f374b82f667b273c55b9388ec355853e444f53
-2.1.0 launchy:>= 0.3.2,rake:>= 0.7.3,rspec:>= 1.0.8|checksum:c6c1c93189daf84af6149bb719e0f19a6afff9ba7d6dbc8321da2acb0df5b72a
-0.1.0 rake:>= 0.7.2,rspec:>= 0.7.1|checksum:c5eeb7b926a98d96cd2ba54a05b7e3ba9961b3b3ee50f3930447bcff6842645b
-0.1.1 rake:>= 0.7.2,rspec:>= 0.7.1|checksum:b93280d97a9ffb8022789721df3abc73d29fc5c4f9f25ac67b0a597e616cb50e
-0.1.2 rake:>= 0.7.3,rspec:>= 1.0.8|checksum:e3d541b5e18590c9918ffba654642878ef4316396aa7d6858bb4428ab853099a
-1.0.0 rake:>= 0.7.3,rspec:>= 1.0.8|checksum:61fc58bf3f6b69109b71376c0f4669fb851d7a1a8c535dbbf2c6c6d7d248aff0
+2.0.0 |checksum:04b3c6a7760a387c4688bb3b80e7844ced3f5883a1ec65351cde5f40506d96ac
+2.0.1 |checksum:bdb81ae7d0cbec0782a82fa98c0e2f7b28719ef40c387caf0090d000fd7d30db
+2.0.2 |checksum:3b21ba60d1a2c9e3d20a284ce1f374b82f667b273c55b9388ec355853e444f53
+2.1.0 |checksum:c6c1c93189daf84af6149bb719e0f19a6afff9ba7d6dbc8321da2acb0df5b72a
+0.1.0 rake:>= 0.7.2,rspec:>= 0.7.1|checksum:c5eeb7b926a98d96cd2ba54a05b7e3ba9961b3b3ee50f3930447bcff6842645b,ruby:> 0.0.0
+0.1.1 rake:>= 0.7.2,rspec:>= 0.7.1|checksum:b93280d97a9ffb8022789721df3abc73d29fc5c4f9f25ac67b0a597e616cb50e,ruby:> 0.0.0
+0.1.2 rake:>= 0.7.3,rspec:>= 1.0.8|checksum:e3d541b5e18590c9918ffba654642878ef4316396aa7d6858bb4428ab853099a,ruby:> 0.0.0
+1.0.0 rake:>= 0.7.3,rspec:>= 1.0.8|checksum:61fc58bf3f6b69109b71376c0f4669fb851d7a1a8c535dbbf2c6c6d7d248aff0,ruby:> 0.0.0
 1.0.1 rake:>= 0.7.3,rspec:>= 1.0.8|checksum:5db929d40e9d66e328a35619aced179435c806f767dc1b2863ee69e8a57e0bd2
 1.0.2 rake:>= 0.7.3,rspec:>= 1.0.8|checksum:4f1acc4d7a234d08784d0f271733b1dddce3be12a789ba824688dd640ac50c58
 1.0.3 rake:>= 0.7.3,rspec:>= 1.0.8|checksum:ed888046c0d76db9089b3849161389205ab2ecceb3390823e690278fd92819db

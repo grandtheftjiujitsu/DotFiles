@@ -1,5 +1,0 @@
-include
-lib/cmake/ZLIB
-lib
-share/man/man3
-share/pkgconfig

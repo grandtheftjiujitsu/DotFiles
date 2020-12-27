@@ -1,3 +1,0 @@
-#!/bin/sh
-cd ramsmp-3.5.0/
-./ramsmp $@ > $LOG_FILE 2>&1

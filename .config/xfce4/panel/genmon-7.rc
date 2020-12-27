@@ -1,0 +1,6 @@
+Command=/home/austin/scripts/shell/genmon/network-new.sh
+UseLabel=0
+Text=(genmon)
+UpdatePeriod=5000
+Font=Cantarell Ultra-Bold 12
+

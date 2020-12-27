@@ -21,3 +21,4 @@
 6.0.1 ffi:>= 0|checksum:167e3ade11835ed952ee0809126891fb008e14ac7228aa1b4f804b2167f15d2a,ruby:>= 2.2.6
 7.0.0 ffi:>= 0|checksum:2c7baee304037c785eb9c73954ed50a76802f680a712b58b15a4550e7b4ba5e8,ruby:>= 2.3.0
 7.1.0 ffi:>= 0|checksum:47756d35710ef1fdfada2aaf079bcde57cc10dac9ddcf6cdb7900d2ae60e7f53,ruby:>= 2.3.0
+7.1.1 ffi:>= 0|checksum:f36f58b13307f7e8267532977bbaf1a07a0f28f21179bcb4e1894d6a55fc1e79,ruby:>= 2.3.0

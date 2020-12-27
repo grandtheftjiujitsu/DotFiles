@@ -1,5 +1,0 @@
-Name: libjsonrpccpp-server
-Description: A C++ server implementation of json-rpc.
-Version: 0.7.0
-Libs: -L/home/austin/.hunter/_Base/59b2b88/c969b64/c20b399/Build/libjson-rpc-cpp/Install/lib/ -ljsoncpp -ljsonrpccpp-common -ljsonrpccpp-server -lmicrohttpd
-Cflags: -I/home/austin/.hunter/_Base/59b2b88/c969b64/c20b399/Build/libjson-rpc-cpp/Install/include

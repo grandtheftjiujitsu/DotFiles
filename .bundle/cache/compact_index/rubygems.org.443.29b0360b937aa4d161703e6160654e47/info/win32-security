@@ -1,6 +1,6 @@
 ---
 0.1.0 sys-admin:>= 1.4.4,test-unit:>= 2.0.1,windows-pr:>= 0.9.8|checksum:e00522023b06fd18124e03f91b98729a043949ff8be4e481d68b88658915620a
-0.1.2 sys-admin:>= 1.4.4,test-unit:>= 2.0.1,windows-pr:>= 0.9.8|checksum:9e9991f9a891a850c3576b38b93e4d0c046b2144e097522adb363bf577827b80
+0.1.2 windows-pr:>= 0.9.8|checksum:9e9991f9a891a850c3576b38b93e4d0c046b2144e097522adb363bf577827b80
 0.1.1 sys-admin:>= 1.4.4,test-unit:>= 2.0.1,windows-pr:>= 0.9.8|checksum:f388cf5363e71a146b32616daedbd51c3787c8c4a838726a966d4150a3fdd519
 0.1.3 windows-pr:>= 1.2.2|checksum:82ebe3010bfec58f10de91c450b2172863ec2bf472a497ceb3ee4a6f93976f99
 0.1.4 windows-pr:>= 1.2.2|checksum:9165c1ea7885ecdc0463f6732c389a11322381ead6141f64ca7819fc638b7c2e

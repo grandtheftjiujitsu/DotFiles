@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Diablo III
-Exec=env WINEPREFIX="/home/austin/games/diablo3" /usr/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/austin/games/diablo3/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/Diablo\\ III/Diablo\\ III.lnk
-Type=Application
-StartupNotify=true
-Path=/home/austin/games/diablo3/dosdevices/c:/Program Files/Diablo III
-Icon=380F_Diablo III Launcher.0
-StartupWMClass=diablo iii launcher.exe

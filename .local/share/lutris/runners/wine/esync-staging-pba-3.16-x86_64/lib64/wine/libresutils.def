@@ -1,5 +1,0 @@
-; File generated automatically from /home/ubuntu/buildbot/runners/wine/wine-src/dlls/resutils/resutils.spec; do not edit!
-
-LIBRARY resutils.dll
-
-EXPORTS
