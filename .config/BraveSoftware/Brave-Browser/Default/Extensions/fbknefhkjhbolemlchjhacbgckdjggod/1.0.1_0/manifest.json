@@ -1,0 +1,32 @@
+{
+   "browser_action": {
+      "default_icon": "img/icon16.png",
+      "default_popup": "popup.html"
+   },
+   "chrome_settings_overrides": {
+      "homepage": "https://www.presearch.org/?utm_source=extcr",
+      "startup_pages": [ "https://www.presearch.org/?utm_source=extcr" ]
+   },
+   "chrome_url_overrides": {
+      "newtab": "newtab.html"
+   },
+   "content_scripts": [ {
+      "css": [ "assets/popup-visibility.css" ],
+      "js": [ "assets/popup-visibility.js" ],
+      "matches": [ "*://*.presearch.org/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Set Chrome's Homepage and New Tab page to Presearch.org",
+   "homepage_url": "https://www.presearch.org/?utm_source=extcr",
+   "icons": {
+      "128": "img/icon128.png",
+      "16": "img/icon16.png",
+      "48": "img/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm5eiKBlNj6ZkxREAV3AMCLLWdytmsVdleJT01CsMq1QL/6tpfh0wNT+NEDfvJD0kupcB5Ps2sK1Erhc/JO6FfuDeRyjJ3aQoswRfEMAlEbQvjVISyzHpWh0sq34AdTJXUYn1qH4YJd3Xmnr9p4lKmfZLGD11bb+Fj4uNe2b831q2h0fJWF/IfFA37NZPeew/Luv5KWfbK50LJ0+1KntDfF3S/d+DgM4Rp3AbsGQ8o4QloNjYcb1PBLztUdew+ZTiL65vh5DmWw+4Z6KyglxMLyptfxJXqOdovU9d4uEV8ZA7yj61Gz3uuSYAB5EMa6tdmcI7TMMCuIpX5JSdeNJL6QIDAQAB",
+   "manifest_version": 2,
+   "name": "Presearch.org Start With Us",
+   "permissions": [ "activeTab", "storage", "*://*.presearch.org/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.1"
+}

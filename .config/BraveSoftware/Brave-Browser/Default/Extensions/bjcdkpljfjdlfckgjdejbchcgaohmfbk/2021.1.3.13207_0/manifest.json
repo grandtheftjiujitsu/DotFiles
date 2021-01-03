@@ -1,0 +1,44 @@
+{
+   "app": {
+      "display_mode": "browser",
+      "icon_color": "#F65B22",
+      "launch": {
+         "web_url": "https://castbox.fm/home?pwa=1"
+      },
+      "linked_icons": [ {
+         "size": 128,
+         "url": "https://s3.castbox.fm/46/37/19/5bb5d344b9b147183242c53f35.png"
+      }, {
+         "size": 144,
+         "url": "https://s3.castbox.fm/46/37/19/5bb5d344b9b147183242c53f35.png"
+      }, {
+         "size": 152,
+         "url": "https://s3.castbox.fm/46/37/19/5bb5d344b9b147183242c53f35.png"
+      }, {
+         "size": 192,
+         "url": "https://s3.castbox.fm/46/37/19/5bb5d344b9b147183242c53f35.png"
+      }, {
+         "size": 256,
+         "url": "https://s3.castbox.fm/46/37/19/5bb5d344b9b147183242c53f35.png"
+      } ],
+      "theme_color": "rgba(52,52,52,1)"
+   },
+   "description": "Millions of podcasts for all topics. Listen to the best free podcast on Android, Apple iOS, Amazon Alexa, Google Home, Carplay, Android Auto, PC. Create...",
+   "icons": {
+      "128": "icons/128.png",
+      "256": "icons/256.png",
+      "32": "icons/32.png",
+      "48": "icons/48.png",
+      "64": "icons/64.png",
+      "96": "icons/96.png"
+   },
+   "key": "VtlkTDx7B41IY79DRXmv/9bgfKPQ9Uze8iwnpvASQAc=",
+   "name": "Castbox",
+   "url_handlers": {
+      "scope": {
+         "matches": [ "https://castbox.fm/*" ],
+         "title": "Castbox"
+      }
+   },
+   "version": "2021.1.3.13207"
+}

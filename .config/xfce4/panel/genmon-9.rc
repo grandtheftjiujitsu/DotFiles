@@ -1,6 +1,0 @@
-Command=/home/austin/scripts/shell/genmon/cpu-panel.sh
-UseLabel=0
-Text=CPU
-UpdatePeriod=1000
-Font=Cantarell Ultra-Bold 12
-

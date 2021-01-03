@@ -1,0 +1,66 @@
+{
+   "author": "Arif Widi Nugroho",
+   "background": {
+      "persistent": false,
+      "scripts": [ "js/core.js" ]
+   },
+   "browser_action": {
+      "default_icon": "img/icon-64.png",
+      "default_popup": "popup.html",
+      "default_title": "Tiny Suspender"
+   },
+   "commands": {
+      "restore-active-tab": {
+         "description": "Restore active tab",
+         "suggested_key": {
+            "default": "Ctrl+Shift+U",
+            "mac": "Command+Shift+U"
+         }
+      },
+      "restore-other-tabs": {
+         "description": "Restore background tabs",
+         "suggested_key": {
+            "default": "Ctrl+Shift+Y",
+            "mac": "Command+Shift+Y"
+         }
+      },
+      "suspend-active-tab": {
+         "description": "Suspend active tab",
+         "suggested_key": {
+            "default": "Ctrl+Shift+S",
+            "mac": "Command+Shift+S"
+         }
+      },
+      "suspend-all-tabs": {
+         "description": "Suspend all tabs"
+      },
+      "suspend-other-tabs": {
+         "description": "Suspend background tabs",
+         "suggested_key": {
+            "default": "Ctrl+Shift+O",
+            "mac": "Command+Shift+O"
+         }
+      }
+   },
+   "content_scripts": [ {
+      "js": [ "js/content.js" ],
+      "matches": [ "*://*/*" ]
+   } ],
+   "description": "Unload / suspend / hibernate idle tabs to reduce memory and cpu usage.",
+   "icons": {
+      "128": "img/icon-128.png",
+      "16": "img/icon-16.png",
+      "256": "img/icon-256.png",
+      "48": "img/icon-48.png",
+      "64": "img/icon-64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmAEAo6ApPq6eDn2l2VCH0voruDY7mwbzoP22ixaQLqmvoGHhHJoSzzU88fFrFAIMB9I7JEtpPnQmkKQ7sJwjDlrRKFzln2tss+UPCQ8lVgMEVzKy0CO3k8nes18rdroJFKuhGnkpPt9ZLQgvUjswtOf/nuJWkq4tPoKs41taShYVJ9TnweqgOIVVzH/fQVPjUK8T34u2pN9KHG1QGTwmXkfZaORzO+Xzi4V3TK7G3GhC79Mo9wCx/VDhGczqzKoSZgp8k7yUAjMiWhXQ84M6TWWlRECl1YXvzm5lcTqy+ojtRzI0HrA70hkqfgaTimrPWSQskxZMBVHDwe5ccR6WJQIDAQAB",
+   "manifest_version": 2,
+   "name": "Tiny Suspender",
+   "options_page": "settings.html",
+   "permissions": [ "activeTab", "tabs", "contextMenus", "storage", "alarms", "chrome://favicon/*" ],
+   "short_name": "Tiny Suspender",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.3.0",
+   "web_accessible_resources": [ "suspend.html", "popup.html", "settings.html", "css/*", "js/*", "img/*" ]
+}
