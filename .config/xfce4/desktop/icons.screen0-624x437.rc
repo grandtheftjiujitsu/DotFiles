@@ -1,0 +1,23 @@
+[xfdesktop-version-4.10.3+-rcfile_format]
+4.10.3+=true
+
+[Filesystem root]
+row=0
+col=1
+
+[0575-E124]
+row=1
+col=0
+
+[5f7cebf1-c2a8-4864-b737-de5bdd76c294]
+row=2
+col=0
+
+[/]
+row=3
+col=0
+
+[/home/austin]
+row=0
+col=0
+

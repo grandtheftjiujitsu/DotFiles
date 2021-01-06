@@ -1,0 +1,11 @@
+#!/bin/sh
+#run brave browser with hardened malloc
+#requires hardened-malloc/git and firejail
+
+BRAVE=brave
+#brave version (e.g. nightly, dev, beta, etc.)
+
+#export LD_PRELOAD="/usr/lib/libhardened_malloc.so"
+#/usr/bin/$BRAVE
+
+firejail --apparmor --env=LD_PRELOAD='/usr/lib/libhardened_malloc.so' /usr/bin/$BRAVE

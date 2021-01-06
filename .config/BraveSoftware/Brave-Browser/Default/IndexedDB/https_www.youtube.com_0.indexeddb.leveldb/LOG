@@ -1,0 +1,5 @@
+2021/01/05-18:10:18.192 fc Reusing MANIFEST /home/austin/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/01/05-18:57:53.012 3ab Level-0 table #5: started
+2021/01/05-18:57:53.022 3ab Level-0 table #5: 5461 bytes OK
+2021/01/05-18:57:53.035 3ab Delete type=0 #3
+2021/01/05-18:57:53.035 3ab Manual compaction at level-0 from (begin) .. (end); will stop at (end)

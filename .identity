@@ -1,0 +1,17 @@
+{
+	"disposition" : "regular",
+	"lastChangeUSec" : 1609687468427931,
+	"lastPasswordChangeUSec" : 1609687468427931,
+	"privileged" : {
+		"hashedPassword" : [
+			"$y$j9T$OESwWmv2/0xjH2/nzXaJv1$5YxQlcTGSrDrX/9PdP5iPQmLH0BH6VmAvdZ562uIL8/"
+		]
+	},
+	"signature" : [
+		{
+			"data" : "wvifbaTuY2pfp3E0BB8jNDP6MucF0crkcub6Pw1TUBbfsOXKN6elXJRqROyVB2mTYoeM3oyDNxP09ahC1MF0Aw==",
+			"key" : "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEASC/4o9xVuYtr39+Tgtxy44Dmu+k+4C3SVkyMq8iJtAA=\n-----END PUBLIC KEY-----\n"
+		}
+	],
+	"userName" : "austin"
+}
