@@ -1,0 +1,5 @@
+2021/01/12-14:51:09.395 b0eb Recovering log #3
+2021/01/12-14:51:09.540 b0eb Level-0 table #5: started
+2021/01/12-14:51:09.606 b0eb Level-0 table #5: 2785958 bytes OK
+2021/01/12-14:51:09.630 b0eb Delete type=3 #2
+2021/01/12-14:51:09.630 b0eb Delete type=0 #3

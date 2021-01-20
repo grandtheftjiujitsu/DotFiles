@@ -1,0 +1,8 @@
+2021/01/19-14:58:12.539 13e01 Reusing MANIFEST /home/austin/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_docs.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/01/19-14:58:12.539 13e01 Recovering log #39
+2021/01/19-14:58:12.539 13e01 Reusing old log /home/austin/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_docs.google.com_0.indexeddb.leveldb/000039.log 
+2021/01/19-16:08:50.624 1400c Level-0 table #43: started
+2021/01/19-16:08:50.624 1400c Level-0 table #43: 0 bytes OK
+2021/01/19-16:08:50.633 1400c Delete type=0 #39
+2021/01/19-16:08:50.634 1400c Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/01/19-16:08:50.634 1400c Manual compaction at level-1 from (begin) .. (end); will stop at (end)

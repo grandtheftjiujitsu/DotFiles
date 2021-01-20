@@ -1,3 +1,6 @@
 2021/01/05-14:51:37.567 38 Reusing MANIFEST /home/austin/.config/BraveSoftware/Brave-Browser/Default/Session Storage/MANIFEST-000001
 2021/01/05-14:51:37.567 38 Recovering log #3
 2021/01/05-14:51:37.568 38 Reusing old log /home/austin/.config/BraveSoftware/Brave-Browser/Default/Session Storage/000003.log 
+2021/01/08-13:04:16.936 3587 Level-0 table #5: started
+2021/01/08-13:04:16.946 3587 Level-0 table #5: 47892 bytes OK
+2021/01/08-13:04:16.960 3587 Delete type=0 #3
