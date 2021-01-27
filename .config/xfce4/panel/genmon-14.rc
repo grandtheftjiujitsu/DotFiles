@@ -1,0 +1,6 @@
+Command=/home/austin/scripts/shell/cmus-panel.sh
+UseLabel=0
+Text=Music
+UpdatePeriod=5000
+Font=Cantarell Ultra-Bold 12
+

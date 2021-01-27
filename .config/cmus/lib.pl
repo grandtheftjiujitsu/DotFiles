@@ -1,13 +1,3 @@
-/home/austin/music/Jay Z/99 Problems.mp3
-/home/austin/music/Jay Z/Numb Encore ft. Linkin Park.mp3
-/home/austin/music/LL Cool J/Mama Said Knock You Out.mp3
-/home/austin/music/Macklemore/thrift shop - macklemore.mp3
-/home/austin/music/Neli/E.I..mp3
-/home/austin/music/Neli/Over And Over ft. Tim McGraw.mp3
-/home/austin/music/Neli/Ride Wit Me.mp3
-/home/austin/music/Rod Stewart/Maggie May.mp3
-/home/austin/music/Rod Stewart/The First Cut Is the Deepest.mp3
-/home/austin/music/T.I./Bring 'Em Out.mp3
 /home/austin/music/Fck That A Guided Meditation.mp3
 /home/austin/music/10 Years/Feeding The Wolves/05 Fix Me.mp3
 /home/austin/music/2Pac/2Pac ft Outlawz - Killuminati.mp3
@@ -342,6 +332,9 @@
 /home/austin/music/Incubus/Morning View/03 Wish You Were Here.mp3
 /home/austin/music/Jadakiss/Jadakiss - The Champ Is Here.mp3
 /home/austin/music/Jake Owen/Startin' With Me/03 starting with me.mp3
+/home/austin/music/Jay Z/99 Problems.mp3
+/home/austin/music/Jay Z/Numb Encore ft. Linkin Park.mp3
+/home/austin/music/Jeff Healey/The Jeff Healey Band - When the Night Comes Falling from the Sky.mp3
 /home/austin/music/Jimi Hendrix/Hendrix in the West/00 Voodoo child.mp3
 /home/austin/music/Jimi Hendrix/Isle of Wight/00 All Along the Watchtower.mp3
 /home/austin/music/Jimmy Eat World/Futures/01 Futures.mp3
@@ -387,10 +380,12 @@
 /home/austin/music/Live/Awake_ The Best Of Live/00 Heaven.mp3
 /home/austin/music/Live/Throwing Copper/00 Selling The Drama.mp3
 /home/austin/music/Live/Throwing Copper/07 All Over You.mp3
+/home/austin/music/LL Cool J/Mama Said Knock You Out.mp3
 /home/austin/music/Lucinda Williams/Essence/00 Broken Butterfly.mp3
 /home/austin/music/Lucinda Williams/West/00 Unsuffer Me.mp3
 /home/austin/music/Lynyrd Skynyrd/Gold and Platinum/00 Simple Man.mp3
 /home/austin/music/Lynyrd Skynyrd/Street Survivors/00 That Smell.mp3
+/home/austin/music/Macklemore/thrift shop - macklemore.mp3
 /home/austin/music/Matchbox 20/Matchbox 20 - 3 a m.mp3
 /home/austin/music/Matchbox 20/Matchbox 20 - Push.mp3
 /home/austin/music/Mavis Staples/You Are Not Alone/02 You're Not Alone.mp3
@@ -401,6 +396,9 @@
 /home/austin/music/Mudvayne/Lost And Found/08 Forget To Remember.mp3
 /home/austin/music/Mudvayne/Mudvayne/03 Scream With Me.mp3
 /home/austin/music/MURS/SmackDown! vs Raw 2009/00 SWC.mp3
+/home/austin/music/Neli/E.I..mp3
+/home/austin/music/Neli/Over And Over ft. Tim McGraw.mp3
+/home/austin/music/Neli/Ride Wit Me.mp3
 /home/austin/music/Night Ranger/Greatest Hits/05 Sister Christian.mp3
 /home/austin/music/Nine Inch Nails/The Downward Spiral/00 Closer.mp3
 /home/austin/music/Nirvana/All apologies - Rape me SINGEL/00 Rape Me.mp3
@@ -475,6 +473,9 @@
 /home/austin/music/Rise Against/Appeal To Reason/10 Hero Of War.mp3
 /home/austin/music/Rise Against/Appeal To Reason/11 Savior.mp3
 /home/austin/music/Rockyard/Rolling in the Deep - Rockyard (Adele cover).mp3
+/home/austin/music/Rod Stewart/Maggie May.mp3
+/home/austin/music/Rod Stewart/The First Cut Is the Deepest.mp3
+/home/austin/music/Roxette/listen to your heart - roxette.mp3
 /home/austin/music/Scorpions/Blackout/00 No One Like You.mp3
 /home/austin/music/Scorpions/Gold Disc 1/09 Rock You Like a Hurricane.mp3
 /home/austin/music/Seether/Disclaimer/00 Fine Again.mp3
@@ -603,6 +604,7 @@
 /home/austin/music/Three Days Grace/Life Starts Now/12 Life Starts Now.mp3
 /home/austin/music/Three Days Grace/Chalk Outline/01 Chalk Outline.mp3
 /home/austin/music/Three Days Grace/Transit Of Venus/03 The High Road.mp3
+/home/austin/music/T.I./Bring 'Em Out.mp3
 /home/austin/music/Tim McGraw/A Place In The Sun/00 My Next Thirty Years.mp3
 /home/austin/music/Tim McGraw/Tim McGraw And The Dancehall D/00 Red RagTop.mp3
 /home/austin/music/Tim McGraw/Everywhere/08 Everywhere.mp3

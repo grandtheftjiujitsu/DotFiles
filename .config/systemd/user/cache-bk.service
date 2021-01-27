@@ -1,0 +1,9 @@
+[Unit]
+Description=Make backup of tmpfs mounte $USER/.cache
+
+[Install]
+WantedBy=default.target
+
+[Service]
+Type=oneshot
+Execstart=/bin/sh /home/austin/scripts/shell/cache-bk

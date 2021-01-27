@@ -1,0 +1,6 @@
+Command=/home/austin/scripts/shell/memory-panel.sh
+UseLabel=0
+Text=Mem
+UpdatePeriod=2000
+Font=Cantarell Ultra-Bold 12
+

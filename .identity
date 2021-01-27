@@ -1,7 +1,13 @@
 {
 	"disposition" : "regular",
-	"lastChangeUSec" : 1609039637665179,
+	"lastChangeUSec" : 1609222943899114,
 	"lastPasswordChangeUSec" : 1609026777279885,
+	"perMachine" : [
+		{
+			"diskSize" : 214748364800,
+			"matchMachineId" : "01c2fca6c2294aec95451bc94177d25f"
+		}
+	],
 	"privileged" : {
 		"hashedPassword" : [
 			"$y$j9T$fC794gs.Jtnr8N3JuZsB40$TXi4Rtwpl0wTvZl.oxQgcv9uzyAnjUFIYj7pyYsBzY7"
@@ -10,7 +16,7 @@
 	"shell" : "/bin/zsh",
 	"signature" : [
 		{
-			"data" : "ID3dYIe7+VxIdBA2RVvreN2md1CO3eTpgbcNL+1lM6oMse8tx+KVBJ10GCI5H6apb0NOB8M6S8dH7Ju1fJ7PAQ==",
+			"data" : "6dn2pR8fcJ4+XAgSUIEUG3D7G7ZDwAOhjOz+9AbUMZ3TuQm0Rqd5W47DiqT89vhl0yIPo2dtP7qsjKubKnRyCA==",
 			"key" : "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAVsze51yRR5eBtcZSgnMOI1gmVwWm3blDtaj7P14uLek=\n-----END PUBLIC KEY-----\n"
 		}
 	],

@@ -44,7 +44,7 @@
       <property name="HomePage" type="string" value="xfce4-settings-manager">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
-      <property name="&lt;Alt&gt;F3" type="string" value="xfce4-terminal -x zsh -c &quot;cmus&quot;">
+      <property name="&lt;Alt&gt;F3" type="empty">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
       <property name="AudioPlay" type="string" value="cmus-remote --pause">
@@ -55,15 +55,15 @@
       <property name="Calculator" type="string" value="bluefish"/>
       <property name="AudioRaiseVolume" type="string" value="amixer sset Master 10%+"/>
       <property name="&lt;Alt&gt;KP_2" type="string" value="bluefish"/>
-      <property name="&lt;Alt&gt;KP_3" type="string" value="xfce4-terminal -x zsh -c &quot;cmus&quot;"/>
       <property name="&lt;Alt&gt;End" type="string" value="cmus-remote --next"/>
       <property name="&lt;Alt&gt;Home" type="string" value="cmus-remote --prev"/>
-      <property name="&lt;Alt&gt;KP_1" type="string" value="brave-dev"/>
-      <property name="Mail" type="string" value="brave-dev"/>
       <property name="&lt;Alt&gt;KP_4" type="string" value="signal-desktop-beta"/>
       <property name="&lt;Alt&gt;Page_Down" type="string" value="amixer sset Master 10%-"/>
       <property name="&lt;Alt&gt;Page_Up" type="string" value="amixer sset Master 10%+"/>
       <property name="&lt;Alt&gt;Pause" type="string" value="cmus-remote --pause"/>
+      <property name="&lt;Alt&gt;KP_1" type="string" value="/home/austin/scripts/shell/brave-hardened-malloc"/>
+      <property name="Mail" type="string" value="/home/austin/scripts/shell/brave-hardened-malloc"/>
+      <property name="&lt;Alt&gt;KP_3" type="string" value="/home/austin/scripts/shell/updcmuslib"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

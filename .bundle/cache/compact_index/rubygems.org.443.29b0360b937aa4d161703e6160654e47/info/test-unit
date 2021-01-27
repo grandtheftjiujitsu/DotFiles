@@ -72,3 +72,4 @@
 3.3.6 power_assert:>= 0|checksum:c75551c52e8356a74d943d7d9f86321e58ec5cf0fcbb3798a725d06222b4a946
 3.3.7 power_assert:>= 0|checksum:e5c83c87e8cc8b08e3bdb52cf45af9ed2fb9427b6481f5921c384569dafa7bd9
 3.3.8 power_assert:>= 0|checksum:803c714ccea88ea7ec2d0c96fa16a643065b0d2350c9c48ce8f4ffefc34c4a8f
+3.3.9 power_assert:>= 0|checksum:d5a87ff380df69418912d175695ad34fbd4708ab01526a526e8c0b9c0a2c3ccd

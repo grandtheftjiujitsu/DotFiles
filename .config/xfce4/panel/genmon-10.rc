@@ -1,6 +1,0 @@
-Command=/home/austin/scripts/shell/genmon/memory-panel.sh
-UseLabel=0
-Text=MEM
-UpdatePeriod=5000
-Font=Cantarell Ultra-Bold 12
-

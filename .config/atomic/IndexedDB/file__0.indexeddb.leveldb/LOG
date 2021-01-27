@@ -1,12 +1,3 @@
-2020/12/22-00:03:32.479 174240 Reusing MANIFEST /home/austin/.config/atomic/IndexedDB/file__0.indexeddb.leveldb/MANIFEST-000001
-2020/12/22-00:05:41.298 1742a0 Level-0 table #5: started
-2020/12/22-00:05:41.326 1742a0 Level-0 table #5: 1569864 bytes OK
-2020/12/22-00:05:41.329 1742a0 Delete type=0 #3
-2020/12/22-00:12:20.335 1742a0 Level-0 table #7: started
-2020/12/22-00:12:20.413 1742a0 Level-0 table #7: 3742497 bytes OK
-2020/12/22-00:12:20.418 1742a0 Delete type=0 #4
-2020/12/22-00:12:32.930 1742a0 Compacting 1@1 + 1@2 files
-2020/12/22-00:12:33.004 1742a0 Generated table #8@1: 1498 keys, 2118275 bytes
-2020/12/22-00:12:33.040 1742a0 Generated table #9@1: 2170 keys, 1565993 bytes
-2020/12/22-00:12:33.040 1742a0 Compacted 1@1 + 1@2 files => 3684268 bytes
-2020/12/22-00:12:33.042 1742a0 compacted to: files[ 0 0 2 0 0 0 0 ]
+2020/12/31-10:37:55.609 246898 Reusing MANIFEST /home/austin/.config/atomic/IndexedDB/file__0.indexeddb.leveldb/MANIFEST-000001
+2020/12/31-10:37:55.609 246898 Recovering log #6
+2020/12/31-10:37:55.611 246898 Reusing old log /home/austin/.config/atomic/IndexedDB/file__0.indexeddb.leveldb/000006.log 

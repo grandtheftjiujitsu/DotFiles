@@ -1,0 +1,6 @@
+Command=/home/austin/scripts/shell/pacman-panel.sh
+UseLabel=0
+Text=Pacman
+UpdatePeriod=14400000
+Font=Cantarell Ultra-Bold 12
+

@@ -1,5 +1,39 @@
-<configuration version="33">
+<configuration version="32">
     <folder id="5xact-jtzcb" label="downloads" path="/home/austin/downloads" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+        <filesystemType>basic</filesystemType>
+        <device id="XZ7I24W-HEPBTJ5-FTICJ7P-JPR5MYA-VHCX3XU-ZA6FCPG-MIWLVMA-TC555Q7" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
+        <device id="7MRD7CA-O23IORN-OBV7ABU-CL2XCN2-3TYIBXC-EXIVKFH-F4E26KO-FZMT6A6" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
+        <minDiskFree unit="%">1</minDiskFree>
+        <versioning>
+            <cleanupIntervalS>0</cleanupIntervalS>
+        </versioning>
+        <copiers>0</copiers>
+        <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+        <markerName>.stfolder</markerName>
+        <copyOwnershipFromParent>false</copyOwnershipFromParent>
+        <modTimeWindowS>0</modTimeWindowS>
+        <maxConcurrentWrites>2</maxConcurrentWrites>
+        <disableFsync>false</disableFsync>
+        <blockPullOrder>standard</blockPullOrder>
+        <copyRangeMethod>standard</copyRangeMethod>
+        <caseSensitiveFS>false</caseSensitiveFS>
+        <junctionsAsDirs>false</junctionsAsDirs>
+    </folder>
+    <folder id="9ce1o-vw9wu" label="android" path="/home/austin/mega/backup-phone/Android/" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="XZ7I24W-HEPBTJ5-FTICJ7P-JPR5MYA-VHCX3XU-ZA6FCPG-MIWLVMA-TC555Q7" introducedBy="">
             <encryptionPassword></encryptionPassword>
@@ -101,7 +135,7 @@
         <caseSensitiveFS>false</caseSensitiveFS>
         <junctionsAsDirs>false</junctionsAsDirs>
     </folder>
-    <folder id="vexdi-sabfm" label="vault" path="/home/austin/vault" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="e7oqx-i42zy" label="vault" path="/home/austin/vault" type="sendonly" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="XZ7I24W-HEPBTJ5-FTICJ7P-JPR5MYA-VHCX3XU-ZA6FCPG-MIWLVMA-TC555Q7" introducedBy="">
             <encryptionPassword></encryptionPassword>
@@ -135,7 +169,109 @@
         <caseSensitiveFS>false</caseSensitiveFS>
         <junctionsAsDirs>false</junctionsAsDirs>
     </folder>
-    <folder id="w4qco-sfvqw" label="music" path="/home/austin/music" type="sendonly" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="mgce7-mmhzg" label="notifications" path="/home/austin/mega/backup-phone/Notifications/" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+        <filesystemType>basic</filesystemType>
+        <device id="XZ7I24W-HEPBTJ5-FTICJ7P-JPR5MYA-VHCX3XU-ZA6FCPG-MIWLVMA-TC555Q7" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
+        <device id="7MRD7CA-O23IORN-OBV7ABU-CL2XCN2-3TYIBXC-EXIVKFH-F4E26KO-FZMT6A6" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
+        <minDiskFree unit="%">1</minDiskFree>
+        <versioning>
+            <cleanupIntervalS>0</cleanupIntervalS>
+        </versioning>
+        <copiers>0</copiers>
+        <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+        <markerName>.stfolder</markerName>
+        <copyOwnershipFromParent>false</copyOwnershipFromParent>
+        <modTimeWindowS>0</modTimeWindowS>
+        <maxConcurrentWrites>2</maxConcurrentWrites>
+        <disableFsync>false</disableFsync>
+        <blockPullOrder>standard</blockPullOrder>
+        <copyRangeMethod>standard</copyRangeMethod>
+        <caseSensitiveFS>false</caseSensitiveFS>
+        <junctionsAsDirs>false</junctionsAsDirs>
+    </folder>
+    <folder id="oclca-l5ja7" label="signal" path="/home/austin/mega/backup-phone/Signal/" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+        <filesystemType>basic</filesystemType>
+        <device id="XZ7I24W-HEPBTJ5-FTICJ7P-JPR5MYA-VHCX3XU-ZA6FCPG-MIWLVMA-TC555Q7" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
+        <device id="7MRD7CA-O23IORN-OBV7ABU-CL2XCN2-3TYIBXC-EXIVKFH-F4E26KO-FZMT6A6" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
+        <minDiskFree unit="%">1</minDiskFree>
+        <versioning>
+            <cleanupIntervalS>0</cleanupIntervalS>
+        </versioning>
+        <copiers>0</copiers>
+        <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+        <markerName>.stfolder</markerName>
+        <copyOwnershipFromParent>false</copyOwnershipFromParent>
+        <modTimeWindowS>0</modTimeWindowS>
+        <maxConcurrentWrites>2</maxConcurrentWrites>
+        <disableFsync>false</disableFsync>
+        <blockPullOrder>standard</blockPullOrder>
+        <copyRangeMethod>standard</copyRangeMethod>
+        <caseSensitiveFS>false</caseSensitiveFS>
+        <junctionsAsDirs>false</junctionsAsDirs>
+    </folder>
+    <folder id="pttzu-ysidw" label="ringtones" path="/home/austin/mega/backup-phone/Ringtones/" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+        <filesystemType>basic</filesystemType>
+        <device id="XZ7I24W-HEPBTJ5-FTICJ7P-JPR5MYA-VHCX3XU-ZA6FCPG-MIWLVMA-TC555Q7" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
+        <device id="7MRD7CA-O23IORN-OBV7ABU-CL2XCN2-3TYIBXC-EXIVKFH-F4E26KO-FZMT6A6" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
+        <minDiskFree unit="%">1</minDiskFree>
+        <versioning>
+            <cleanupIntervalS>0</cleanupIntervalS>
+        </versioning>
+        <copiers>0</copiers>
+        <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+        <markerName>.stfolder</markerName>
+        <copyOwnershipFromParent>false</copyOwnershipFromParent>
+        <modTimeWindowS>0</modTimeWindowS>
+        <maxConcurrentWrites>2</maxConcurrentWrites>
+        <disableFsync>false</disableFsync>
+        <blockPullOrder>standard</blockPullOrder>
+        <copyRangeMethod>standard</copyRangeMethod>
+        <caseSensitiveFS>false</caseSensitiveFS>
+        <junctionsAsDirs>false</junctionsAsDirs>
+    </folder>
+    <folder id="w4qco-sfvqw" label="music" path="/home/austin/music" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="XZ7I24W-HEPBTJ5-FTICJ7P-JPR5MYA-VHCX3XU-ZA6FCPG-MIWLVMA-TC555Q7" introducedBy="">
             <encryptionPassword></encryptionPassword>
@@ -175,11 +311,13 @@
         <autoAcceptFolders>false</autoAcceptFolders>
         <maxSendKbps>0</maxSendKbps>
         <maxRecvKbps>0</maxRecvKbps>
+        <ignoredFolder time="2020-12-27T20:27:02.697Z" id="vexdi-sabfm" label="vault"></ignoredFolder>
+        <ignoredFolder time="2020-12-27T20:58:56.626Z" id="fbyz9-ykdfk" label="vault"></ignoredFolder>
         <maxRequestKiB>0</maxRequestKiB>
         <untrusted>false</untrusted>
         <remoteGUIPort>0</remoteGUIPort>
     </device>
-    <device id="7MRD7CA-O23IORN-OBV7ABU-CL2XCN2-3TYIBXC-EXIVKFH-F4E26KO-FZMT6A6" name="ASU-A88X" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+    <device id="7MRD7CA-O23IORN-OBV7ABU-CL2XCN2-3TYIBXC-EXIVKFH-F4E26KO-FZMT6A6" name="A88X" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
         <paused>false</paused>
         <autoAcceptFolders>false</autoAcceptFolders>

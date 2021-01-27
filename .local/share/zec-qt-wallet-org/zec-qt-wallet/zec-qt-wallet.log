@@ -1,0 +1,151 @@
+30.12.2020 12:13:22 =========Startup==========
+30.12.2020 12:13:22 Found Zcash params directory at /home/austin/.zcash-params
+30.12.2020 12:13:22 Found zcashconf at /home/austin/.zcash/zcash.conf
+30.12.2020 12:13:22 Attempting autoconnect
+30.12.2020 12:13:22 Authentication failed
+30.12.2020 12:17:19 =========Startup==========
+30.12.2020 12:17:19 Found Zcash params directory at /home/austin/.zcash-params
+30.12.2020 12:17:19 Found zcashconf at /home/austin/.zcash/zcash.conf
+30.12.2020 12:17:19 Attempting autoconnect
+30.12.2020 12:17:19 Your zcashd is starting up. Please wait.:Loading block index
+30.12.2020 12:17:19 Waiting for zcashd to come online.
+30.12.2020 12:17:20 Your zcashd is starting up. Please wait.:Loading block index.
+30.12.2020 12:17:20 Waiting for zcashd to come online.
+30.12.2020 12:17:21 Your zcashd is starting up. Please wait.:Loading block index..
+30.12.2020 12:17:21 Waiting for zcashd to come online.
+30.12.2020 12:17:22 Your zcashd is starting up. Please wait.:Loading block index...
+30.12.2020 12:17:22 Waiting for zcashd to come online.
+30.12.2020 12:17:23 Your zcashd is starting up. Please wait.:Loading block index
+30.12.2020 12:17:23 Waiting for zcashd to come online.
+30.12.2020 12:17:24 Your zcashd is starting up. Please wait.:Loading block index.
+30.12.2020 12:17:24 Waiting for zcashd to come online.
+30.12.2020 12:17:25 Your zcashd is starting up. Please wait.:Loading block index..
+30.12.2020 12:17:25 Waiting for zcashd to come online.
+30.12.2020 12:17:26 Your zcashd is starting up. Please wait.:Loading block index...
+30.12.2020 12:17:26 Waiting for zcashd to come online.
+30.12.2020 12:17:27 Your zcashd is starting up. Please wait.:Loading block index
+30.12.2020 12:17:27 Waiting for zcashd to come online.
+30.12.2020 12:17:28 Your zcashd is starting up. Please wait.:Loading block index.
+30.12.2020 12:17:28 Waiting for zcashd to come online.
+30.12.2020 12:17:29 Your zcashd is starting up. Please wait.:Loading block index..
+30.12.2020 12:17:29 Waiting for zcashd to come online.
+30.12.2020 12:17:30 Your zcashd is starting up. Please wait.:Loading block index...
+30.12.2020 12:17:30 Waiting for zcashd to come online.
+30.12.2020 12:17:31 Your zcashd is starting up. Please wait.:Loading block index
+30.12.2020 12:17:31 Waiting for zcashd to come online.
+30.12.2020 12:17:32 Your zcashd is starting up. Please wait.:Loading block index.
+30.12.2020 12:17:32 Waiting for zcashd to come online.
+30.12.2020 12:17:33 Your zcashd is starting up. Please wait.:Loading block index..
+30.12.2020 12:17:33 Waiting for zcashd to come online.
+30.12.2020 12:17:34 Your zcashd is starting up. Please wait.:Loading block index...
+30.12.2020 12:17:34 Waiting for zcashd to come online.
+30.12.2020 12:17:35 Your zcashd is starting up. Please wait.:Loading block index
+30.12.2020 12:17:35 Waiting for zcashd to come online.
+30.12.2020 12:17:36 Your zcashd is starting up. Please wait.:Loading block index.
+30.12.2020 12:17:36 Waiting for zcashd to come online.
+30.12.2020 12:17:38 Your zcashd is starting up. Please wait.:Loading block index..
+30.12.2020 12:17:38 Waiting for zcashd to come online.
+30.12.2020 12:17:39 Your zcashd is starting up. Please wait.:Rewinding blocks if needed...
+30.12.2020 12:17:39 Waiting for zcashd to come online.
+30.12.2020 12:17:40 Starting embedded zcashd:
+30.12.2020 12:17:40 Trying to start embedded zcashd
+30.12.2020 12:17:40 Embedded zcashd started up, trying autoconnect in 1 sec
+30.12.2020 12:17:41 Found Zcash params directory at /home/austin/.zcash-params
+30.12.2020 12:17:41 Attempting autoconnect
+30.12.2020 12:17:41 Starting embedded zcashd:
+30.12.2020 12:17:41 Trying to start embedded zcashd
+30.12.2020 12:17:41 Embedded zcashd started up, trying autoconnect in 1 sec
+30.12.2020 12:17:42 Found Zcash params directory at /home/austin/.zcash-params
+30.12.2020 12:17:42 Attempting autoconnect
+30.12.2020 12:17:42 Your zcashd is starting up. Please wait.:Loading block index
+30.12.2020 12:17:42 Waiting for zcashd to come online.
+30.12.2020 12:17:43 Your zcashd is starting up. Please wait.:Loading block index.
+30.12.2020 12:17:43 Waiting for zcashd to come online.
+30.12.2020 12:17:44 Your zcashd is starting up. Please wait.:Loading block index..
+30.12.2020 12:17:44 Waiting for zcashd to come online.
+30.12.2020 12:17:45 Your zcashd is starting up. Please wait.:Loading block index...
+30.12.2020 12:17:45 Waiting for zcashd to come online.
+30.12.2020 12:17:46 Your zcashd is starting up. Please wait.:Loading block index
+30.12.2020 12:17:46 Waiting for zcashd to come online.
+30.12.2020 12:17:47 Your zcashd is starting up. Please wait.:Loading block index.
+30.12.2020 12:17:47 Waiting for zcashd to come online.
+30.12.2020 12:17:48 Your zcashd is starting up. Please wait.:Loading block index..
+30.12.2020 12:17:48 Waiting for zcashd to come online.
+30.12.2020 12:17:49 Your zcashd is starting up. Please wait.:Loading block index...
+30.12.2020 12:17:49 Waiting for zcashd to come online.
+30.12.2020 12:17:50 Your zcashd is starting up. Please wait.:Loading block index
+30.12.2020 12:17:50 Waiting for zcashd to come online.
+30.12.2020 12:17:51 Your zcashd is starting up. Please wait.:Loading block index.
+30.12.2020 12:17:51 Waiting for zcashd to come online.
+30.12.2020 12:17:52 Your zcashd is starting up. Please wait.:Loading block index..
+30.12.2020 12:17:52 Waiting for zcashd to come online.
+30.12.2020 12:17:53 Your zcashd is starting up. Please wait.:Loading block index...
+30.12.2020 12:17:53 Waiting for zcashd to come online.
+30.12.2020 12:17:54 Your zcashd is starting up. Please wait.:Loading block index
+30.12.2020 12:17:54 Waiting for zcashd to come online.
+30.12.2020 12:17:55 Your zcashd is starting up. Please wait.:Loading block index.
+30.12.2020 12:17:55 Waiting for zcashd to come online.
+30.12.2020 12:17:56 Your zcashd is starting up. Please wait.:Loading block index..
+30.12.2020 12:17:56 Waiting for zcashd to come online.
+30.12.2020 12:17:57 Your zcashd is starting up. Please wait.:Loading block index...
+30.12.2020 12:17:57 Waiting for zcashd to come online.
+30.12.2020 12:17:58 Your zcashd is starting up. Please wait.:Loading block index
+30.12.2020 12:17:58 Waiting for zcashd to come online.
+30.12.2020 12:17:59 Your zcashd is starting up. Please wait.:Loading block index.
+30.12.2020 12:17:59 Waiting for zcashd to come online.
+30.12.2020 12:18:00 Your zcashd is starting up. Please wait.:Loading block index..
+30.12.2020 12:18:00 Waiting for zcashd to come online.
+30.12.2020 12:18:01 Your zcashd is starting up. Please wait.:Loading block index...
+30.12.2020 12:18:01 Waiting for zcashd to come online.
+30.12.2020 12:18:02 Your zcashd is starting up. Please wait.:Loading block index
+30.12.2020 12:18:02 Waiting for zcashd to come online.
+30.12.2020 12:18:03 Your zcashd is starting up. Please wait.:Loading block index.
+30.12.2020 12:18:03 Waiting for zcashd to come online.
+30.12.2020 12:18:04 Your zcashd is starting up. Please wait.:Loading block index..
+30.12.2020 12:18:04 Waiting for zcashd to come online.
+30.12.2020 12:18:05 Your zcashd is starting up. Please wait.:Loading block index...
+30.12.2020 12:18:05 Waiting for zcashd to come online.
+30.12.2020 12:18:06 Your zcashd is starting up. Please wait.:Loading block index
+30.12.2020 12:18:06 Waiting for zcashd to come online.
+30.12.2020 12:18:07 Your zcashd is starting up. Please wait.:Loading block index.
+30.12.2020 12:18:07 Waiting for zcashd to come online.
+30.12.2020 12:18:08 Your zcashd is starting up. Please wait.:Loading block index..
+30.12.2020 12:18:08 Waiting for zcashd to come online.
+30.12.2020 12:18:09 Your zcashd is starting up. Please wait.:Loading block index...
+30.12.2020 12:18:09 Waiting for zcashd to come online.
+30.12.2020 12:18:10 Your zcashd is starting up. Please wait.:Loading block index
+30.12.2020 12:18:10 Waiting for zcashd to come online.
+30.12.2020 12:18:11 Your zcashd is starting up. Please wait.:Loading block index.
+30.12.2020 12:18:11 Waiting for zcashd to come online.
+30.12.2020 12:18:12 Your zcashd is starting up. Please wait.:Loading block index..
+30.12.2020 12:18:12 Waiting for zcashd to come online.
+30.12.2020 12:18:13 Your zcashd is starting up. Please wait.:Loading block index...
+30.12.2020 12:18:13 Waiting for zcashd to come online.
+30.12.2020 12:18:13 zcashd stderr:Error: This version has been deprecated as of block height 734240. You should upgrade to the latest version of Zcash.
+
+30.12.2020 12:18:13 zcashd stderr:Error: A block chain rewind has been detected that would roll back 191738 blocks! This is larger than the maximum of 99 blocks, and so the node is shutting down for your safety.
+
+Rewind details:
+- Current tip:   000000000079f40d3d3662232428d1f679f57301762963e55f38dd259b9644dc, height 1094738
+- Rewinding to:  00000000023b1b2318f463f4bc402935002e94621d92bbc8773a748af4f80d5e, height 902999
+
+Please help, human!
+: Unable to rewind the database to a pre-upgrade state. You will need to redownload the blockchain.
+Please restart with -reindex to recover.
+
+30.12.2020 12:18:14 Starting embedded zcashd:
+30.12.2020 12:18:14 Trying to start embedded zcashd
+30.12.2020 12:18:14 Embedded zcashd started up, trying autoconnect in 1 sec
+30.12.2020 12:18:15 Found Zcash params directory at /home/austin/.zcash-params
+30.12.2020 12:18:15 Attempting autoconnect
+30.12.2020 12:18:15 Starting embedded zcashd:
+30.12.2020 12:18:15 Trying to start embedded zcashd
+30.12.2020 12:18:15 Embedded zcashd started up, trying autoconnect in 1 sec
+30.12.2020 12:18:16 Found Zcash params directory at /home/austin/.zcash-params
+30.12.2020 12:18:16 Attempting autoconnect
+30.12.2020 12:18:16 Starting embedded zcashd:
+30.12.2020 12:18:16 Trying to start embedded zcashd
+30.12.2020 12:36:14 Unknown problem while trying to start zcashd
+30.12.2020 12:36:17 Found Zcash params directory at /home/austin/.zcash-params
+30.12.2020 12:36:17 Attempting autoconnect
+30.12.2020 12:36:17 Couldn't start embedded zcashd for unknown reason

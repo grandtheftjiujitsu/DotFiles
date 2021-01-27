@@ -1,0 +1,9 @@
+[Unit]
+Description=Timer for backing up tmpfs mounted $USER/.cache
+
+[Timer]
+OnUnitActiveSec=900
+OnBootSec=900
+
+[Install]
+WantedBy=timers.target

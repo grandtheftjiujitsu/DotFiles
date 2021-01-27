@@ -1,3 +1,5 @@
 # minute	hour	day_of_month	month	day_of_week	command
 0		0	1		*	*		/home/austin/scripts/shell/mkarchusb
-
+0		12	15		*	*		/home/ausitn/scripts/maintenance
+0		*/4	*		*	*		/home/austin/scripts/aur-checkupdate
+0		*	*		*	*		rm -r /tmp/aur

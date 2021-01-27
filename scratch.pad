@@ -1,27 +1,9 @@
-Setting commit:
-- man pages
-- terminal copy/paste keyaboard shortcuts
-- ecryptfs vault
-- xfce save session
-- login attempt delay
-- limit login attempt
-- login lockout time
-- login fail interval time
-- login fail attempts before lock
-- change EDITOR to rnano
-- linux-hardened
-
 # To Do
-- clean up panel
-- clean up syncthing
-- performance wiki
-- clean up backup scripts / repo
-- update config repo
-- redshift
-
-- linux-ck patches to linux-hardened
-- filecoin (packages fail to build)
-- build sentinel vpn
+- disk speed w/ various mount options
+- filecoin wallet for linux
+	- systemd doesn't meet min req for lotus node
+	- have wallet for android, would be nice to sync
+	- current wallet on KuCoin
 
 ===========
 Benchmarks

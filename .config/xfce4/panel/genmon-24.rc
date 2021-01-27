@@ -1,0 +1,6 @@
+Command=/home/austin/scripts/shell/cpu-panel.sh
+UseLabel=0
+Text=CPU
+UpdatePeriod=2500
+Font=Cantarell Ultra-Bold 12
+

@@ -3,317 +3,1469 @@
       xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
       xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
 >
-  <bookmark href="file:///usr/bin/brave-browser-dev" added="2020-12-20T01:41:40.851326Z" modified="2020-12-20T01:41:40.851336Z" visited="2020-12-20T01:41:40.851328Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/octet-stream"/>
-        <bookmark:applications>
-          <bookmark:application name="exo-helper-2" exec="&apos;exo-helper-2 %u&apos;" modified="2020-12-20T01:41:40.851330Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/austin/arch-linux-1920x1200.jpg" added="2020-12-20T03:41:12.053643Z" modified="2020-12-20T03:41:12.053653Z" visited="2020-12-20T03:41:12.053644Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/jpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-20T03:41:12.053648Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/austin/simple.png" added="2020-12-20T03:42:08.160329Z" modified="2020-12-20T03:42:08.160341Z" visited="2020-12-20T03:42:08.160331Z">
+  <bookmark href="file:///tmp/podcast%20-%20castbox.png" added="2020-12-22T04:17:04.556908Z" modified="2021-01-26T14:17:36.151310Z" visited="2020-12-22T04:17:04.556910Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="image/png"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-20T03:42:08.160335Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-26T14:17:36.151306Z" count="18"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///tmp/archlinux-2020.12.01-x86_64.iso" added="2020-12-20T11:02:48.713200Z" modified="2020-12-20T11:02:48.713211Z" visited="2020-12-20T11:02:48.713202Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/x-cd-image"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-20T11:02:48.713206Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///mnt/home/austin/podcast/raw-recordings/KK013-liam1.mp3" added="2020-12-22T01:37:18.416143Z" modified="2020-12-22T01:37:18.416153Z" visited="2020-12-22T01:37:18.416145Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="audio/mpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2020-12-22T01:37:18.416147Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///mnt/home/austin/podcast/Intro%20-%20Full.mp3" added="2020-12-22T01:53:12.768999Z" modified="2020-12-22T01:53:12.769011Z" visited="2020-12-22T01:53:12.769000Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="audio/mpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2020-12-22T01:53:12.769002Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///mnt/home/austin/podcast/Tendinite_-_01_-_InhaleExhale.mp3" added="2020-12-22T01:53:12.769026Z" modified="2020-12-22T01:53:12.769030Z" visited="2020-12-22T01:53:12.769026Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="audio/mpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2020-12-22T01:53:12.769028Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/postamble.mp3" added="2020-12-22T02:29:59.630070Z" modified="2020-12-22T02:29:59.630077Z" visited="2020-12-22T02:29:59.630071Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="audio/mpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2020-12-22T02:29:59.630073Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/preamble.mp3" added="2020-12-22T02:29:59.630089Z" modified="2020-12-22T02:29:59.630094Z" visited="2020-12-22T02:29:59.630089Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="audio/mpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2020-12-22T02:29:59.630090Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/austin/.config/Josh%20Meyer&apos;s%20Male%20EQ.txt" added="2020-12-22T02:41:30.445686Z" modified="2020-12-22T02:43:36.230426Z" visited="2020-12-22T02:41:30.445688Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="text/plain"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-22T02:41:30.445693Z" count="1"/>
-          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2020-12-22T02:43:36.230421Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/austin/podcast/release/KK014-Liam_Part_1.mp3" added="2020-12-22T03:37:54.271594Z" modified="2020-12-22T03:47:06.912795Z" visited="2020-12-22T03:37:54.271596Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="audio/mpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2020-12-22T03:37:54.271600Z" count="1"/>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-22T03:47:06.912791Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/austin/podcast/previews/preview-014.mp3" added="2020-12-22T03:44:45.883060Z" modified="2020-12-22T04:09:55.055570Z" visited="2020-12-22T03:44:45.883061Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="audio/mpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2020-12-22T03:44:45.883065Z" count="1"/>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-22T04:09:55.055566Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/liam.jpg" added="2020-12-22T04:05:24.193660Z" modified="2020-12-22T04:16:26.326223Z" visited="2020-12-22T04:05:24.193661Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/jpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-22T04:16:26.326216Z" count="3"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/Specterr_720p_preview-014.mp4" added="2020-12-22T04:15:49.062866Z" modified="2020-12-22T04:15:56.880082Z" visited="2020-12-22T04:15:49.062867Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="video/mp4"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-22T04:15:56.880078Z" count="2"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/podcast%20-%20castbox.png" added="2020-12-22T04:17:04.556908Z" modified="2020-12-22T05:38:21.532756Z" visited="2020-12-22T04:17:04.556910Z">
+  <bookmark href="file:///tmp/podcast%20-%20castbox%20(1).png" added="2020-12-22T04:24:18.842711Z" modified="2021-01-08T15:49:36.900005Z" visited="2020-12-22T04:24:18.842712Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="image/png"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-22T05:38:21.532753Z" count="4"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-08T15:49:36.900002Z" count="3"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///tmp/podcast%20-%20castbox%20(1).png" added="2020-12-22T04:24:18.842711Z" modified="2020-12-22T04:24:18.842720Z" visited="2020-12-22T04:24:18.842712Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/png"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-22T04:24:18.842715Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/liam2.jpg" added="2020-12-22T04:28:51.475452Z" modified="2020-12-22T05:37:39.754859Z" visited="2020-12-22T04:28:51.475453Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/jpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-22T05:37:39.754855Z" count="3"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/austin/podcast/Tendinite_-_01_-_InhaleExhale.mp3" added="2020-12-22T04:31:14.120447Z" modified="2020-12-22T04:31:14.120455Z" visited="2020-12-22T04:31:14.120448Z">
+  <bookmark href="file:///home/austin/podcast/Tendinite_-_01_-_InhaleExhale.mp3" added="2020-12-22T04:31:14.120447Z" modified="2021-01-25T16:25:52.800393Z" visited="2020-12-22T04:31:14.120448Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="audio/mpeg"/>
         <bookmark:applications>
-          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2020-12-22T04:31:14.120451Z" count="1"/>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-25T16:25:52.800386Z" count="12"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///home/austin/podcast/Intro%20-%20Full.mp3" added="2020-12-22T04:31:14.120470Z" modified="2020-12-22T04:31:14.120473Z" visited="2020-12-22T04:31:14.120471Z">
+  <bookmark href="file:///home/austin/podcast/Intro%20-%20Full.mp3" added="2020-12-22T04:31:14.120470Z" modified="2021-01-25T16:10:17.981148Z" visited="2020-12-22T04:31:14.120471Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="audio/mpeg"/>
         <bookmark:applications>
-          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2020-12-22T04:31:14.120472Z" count="1"/>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-25T16:10:17.981142Z" count="7"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-18T03:14:56.898181Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///home/austin/podcast/raw-recordings/KK014-liam2.mp3" added="2020-12-22T04:31:36.510019Z" modified="2020-12-22T04:48:48.566859Z" visited="2020-12-22T04:31:36.510020Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="audio/mpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2020-12-22T04:48:48.566855Z" count="2"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/pod-in.mp3" added="2020-12-22T04:49:59.982545Z" modified="2020-12-22T04:49:59.982554Z" visited="2020-12-22T04:49:59.982546Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="audio/mpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2020-12-22T04:49:59.982549Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/pod-out.mp3" added="2020-12-22T04:49:59.982568Z" modified="2020-12-22T04:49:59.982570Z" visited="2020-12-22T04:49:59.982568Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="audio/mpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2020-12-22T04:49:59.982569Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/austin/atomicwallet.AppImage" added="2020-12-22T04:59:26.695514Z" modified="2020-12-22T04:59:26.695524Z" visited="2020-12-22T04:59:26.695515Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/vnd.appimage"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-22T04:59:26.695519Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/austin/podcast/release/KK015-Liam_Part_2.mp3" added="2020-12-22T05:25:46.358339Z" modified="2020-12-22T05:35:36.756752Z" visited="2020-12-22T05:25:46.358340Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="audio/mpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2020-12-22T05:25:46.358343Z" count="1"/>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-22T05:35:36.756747Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/austin/podcast/previews/preview-015.mp3" added="2020-12-22T05:34:38.369970Z" modified="2020-12-22T05:40:25.118069Z" visited="2020-12-22T05:34:38.369971Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="audio/mpeg"/>
-        <bookmark:applications>
-          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2020-12-22T05:34:38.369975Z" count="1"/>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-22T05:40:25.118065Z" count="5"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/Specterr_720p_preview-015.mp4" added="2020-12-22T05:51:40.892967Z" modified="2020-12-22T05:52:59.669745Z" visited="2020-12-22T05:51:40.892968Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="video/mp4"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-22T05:52:59.669740Z" count="2"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/austin.png" added="2020-12-22T15:01:30.277105Z" modified="2020-12-22T15:12:28.710610Z" visited="2020-12-22T15:01:30.277107Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/png"/>
-        <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-22T15:12:28.710604Z" count="2"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///tmp/Sentinel_0.1.3_amd64.deb" added="2020-12-24T05:48:52.330299Z" modified="2020-12-24T05:48:52.330306Z" visited="2020-12-24T05:48:52.330300Z">
+  <bookmark href="file:///tmp/Sentinel_0.1.3_amd64.deb" added="2020-12-24T05:48:52.330299Z" modified="2020-12-29T05:30:45.708721Z" visited="2020-12-24T05:48:52.330300Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="application/vnd.debian.binary-package"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-24T05:48:52.330302Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-29T05:30:45.708716Z" count="2"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///tmp/vault.tar.gz.gpg" added="2020-12-24T23:25:07.201251Z" modified="2020-12-24T23:25:07.201258Z" visited="2020-12-24T23:25:07.201252Z">
+  <bookmark href="file:///tmp/pavement.jpg" added="2020-12-28T01:52:11.134733Z" modified="2020-12-28T01:52:54.433484Z" visited="2020-12-28T01:52:11.134734Z">
     <info>
       <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/pgp-encrypted"/>
+        <mime:mime-type type="image/jpeg"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-24T23:25:07.201255Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-28T01:52:54.433481Z" count="2"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///tmp/imagemagick-7.0.10.53-1-x86_64.pkg.tar.zst" added="2020-12-25T00:44:00.406868Z" modified="2020-12-25T00:44:00.406876Z" visited="2020-12-25T00:44:00.406869Z">
+  <bookmark href="file:///home/austin/podcast/raw-recordings/Reputation.mp3" added="2020-12-28T02:13:10.071970Z" modified="2020-12-28T02:14:58.222820Z" visited="2020-12-28T02:13:10.071972Z">
     <info>
       <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/x-zstd-compressed-tar"/>
+        <mime:mime-type type="audio/mpeg"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-25T00:44:00.406871Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-28T02:13:10.071975Z" count="1"/>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2020-12-28T02:14:58.222816Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///home/austin/scripts/shell/genmon/icons/animation-play.svg" added="2020-12-25T02:08:26.976381Z" modified="2020-12-25T02:08:26.976387Z" visited="2020-12-25T02:08:26.976382Z">
+  <bookmark href="file:///tmp/PXL_20201104_173857884_exported_95280_1604514152325.jpg" added="2020-12-28T02:18:36.055380Z" modified="2020-12-28T03:27:32.144680Z" visited="2020-12-28T02:18:36.055381Z">
     <info>
       <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="image/svg+xml"/>
+        <mime:mime-type type="image/jpeg"/>
         <bookmark:applications>
-          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-25T02:08:26.976384Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-28T03:27:32.144676Z" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/podcast%20-%20ig%20Copy.png" added="2020-12-28T02:22:58.690802Z" modified="2021-01-04T00:11:23.547669Z" visited="2020-12-28T02:22:58.690803Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-04T00:11:23.547666Z" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/recordings/2020-12-27%2021.24.12.mp3" added="2020-12-28T02:51:33.975126Z" modified="2020-12-28T02:51:33.975142Z" visited="2020-12-28T02:51:33.975127Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2020-12-28T02:51:33.975130Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/recordings/2020-12-27%2022.01.38.mp3" added="2020-12-28T03:11:07.721308Z" modified="2020-12-28T03:11:07.721317Z" visited="2020-12-28T03:11:07.721309Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2020-12-28T03:11:07.721312Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/podcast/release/KK016-Reputation.mp3" added="2020-12-28T03:13:53.344996Z" modified="2020-12-28T03:17:23.566312Z" visited="2020-12-28T03:13:53.344997Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2020-12-28T03:13:53.345018Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-28T03:17:23.566307Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/podcast/previews/preview-016.mp3" added="2020-12-28T03:26:36.250133Z" modified="2020-12-28T03:27:03.903152Z" visited="2020-12-28T03:26:36.250134Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2020-12-28T03:26:36.250137Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-28T03:27:03.903148Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/Specterr_720p_preview-016.mp4" added="2020-12-28T03:30:57.817255Z" modified="2020-12-28T03:31:07.624937Z" visited="2020-12-28T03:30:57.817256Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-28T03:31:07.624933Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/git/savagezen.github.io/_includes/header.html" added="2020-12-29T02:23:42.639778Z" modified="2021-01-18T14:21:42.227789Z" visited="2020-12-29T02:23:42.639779Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2021-01-18T14:21:42.227784Z" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/git/savagezen.github.io/_config.yml" added="2020-12-29T02:26:43.800494Z" modified="2021-01-18T14:21:56.137061Z" visited="2020-12-29T02:26:43.800495Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-yaml"/>
+        <bookmark:applications>
+          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2021-01-18T14:21:56.137057Z" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/git/savagezen.github.io/_posts/2020-10-07-change-maker-hopeful-future.md" added="2020-12-29T02:38:20.749833Z" modified="2020-12-29T02:38:20.749843Z" visited="2020-12-29T02:38:20.749835Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2020-12-29T02:38:20.749838Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/git/savagezen.github.io/_posts/2020-12-22-instinctive-movement.md" added="2020-12-29T02:41:26.875259Z" modified="2020-12-29T02:41:26.875268Z" visited="2020-12-29T02:41:26.875260Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2020-12-29T02:41:26.875263Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/git/savagezen.github.io/images/haiti-skoll.webp" added="2020-12-29T13:26:24.061401Z" modified="2020-12-29T13:26:24.061407Z" visited="2020-12-29T13:26:24.061402Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/webp"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-29T13:26:24.061404Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/7515918.jpeg" added="2020-12-29T13:27:09.281708Z" modified="2020-12-29T13:28:22.286026Z" visited="2020-12-29T13:27:09.281709Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-29T13:28:22.286022Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/7515918%20(1).jpeg" added="2020-12-29T13:27:51.457997Z" modified="2020-12-29T13:27:51.458007Z" visited="2020-12-29T13:27:51.457999Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-29T13:27:51.458002Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/7515918_80x80.jpeg" added="2020-12-29T13:28:38.360675Z" modified="2020-12-29T13:28:45.257233Z" visited="2020-12-29T13:28:38.360676Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-29T13:28:45.257229Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/patch-5.9-ck1.xz" added="2020-12-30T03:26:48.463513Z" modified="2020-12-30T03:26:48.463523Z" visited="2020-12-30T03:26:48.463515Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-xz"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-30T03:26:48.463519Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/patrick-orig.jpeg" added="2020-12-31T14:39:25.026512Z" modified="2020-12-31T14:39:46.733552Z" visited="2020-12-31T14:39:25.026514Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-31T14:39:46.733548Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/patrick-meme.jpg" added="2020-12-31T14:40:21.653610Z" modified="2020-12-31T14:40:45.341811Z" visited="2020-12-31T14:40:21.653612Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2020-12-31T14:40:45.341806Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/recordings/2020-12-31%2014.19.13.mp3" added="2021-01-01T00:15:06.583441Z" modified="2021-01-01T00:15:06.583449Z" visited="2021-01-01T00:15:06.583442Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-01T00:15:06.583445Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/recordings/2020-12-31%2014.21.31.mp3" added="2021-01-01T00:15:06.583463Z" modified="2021-01-01T00:15:06.583466Z" visited="2021-01-01T00:15:06.583463Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-01T00:15:06.583465Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/podcast/Punk_Rock_Opera_-_13_-_I_Wanna_be_a_Machine.mp3" added="2021-01-01T00:29:53.846015Z" modified="2021-01-25T20:25:08.703594Z" visited="2021-01-01T00:29:53.846017Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-01T00:29:53.846020Z" count="1"/>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-25T20:25:08.703588Z" count="8"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/podcast/King_Elizabeth_-_02_-_The_American.mp3" added="2021-01-01T00:51:25.138924Z" modified="2021-01-01T00:58:56.957060Z" visited="2021-01-01T00:51:25.138926Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-01T00:51:25.138931Z" count="1"/>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-01T00:58:56.957056Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/podcast/dppiAXiQn5dSQNohLmS3xtpJuBvwe4NgVnNLk1MZ.mp3" added="2021-01-01T00:57:44.962029Z" modified="2021-01-01T00:57:44.962039Z" visited="2021-01-01T00:57:44.962030Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-01T00:57:44.962033Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/podcast/The_Wrong_Sister_-_03_-_To_say_goodbye.mp3" added="2021-01-01T01:07:29.563559Z" modified="2021-01-03T23:31:33.372902Z" visited="2021-01-01T01:07:29.563561Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-01T01:07:29.563563Z" count="1"/>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-03T23:31:33.372898Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/podcast/release/KK017-2020-Reflection.mp3" added="2021-01-01T01:38:20.873907Z" modified="2021-01-01T01:40:24.701876Z" visited="2021-01-01T01:38:20.873909Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-01T01:39:40.526308Z" count="2"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-01T01:40:24.701873Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/IMG_20200705_064556.jpg" added="2021-01-01T01:50:51.345640Z" modified="2021-01-01T01:54:37.352709Z" visited="2021-01-01T01:50:51.345641Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-01T01:54:37.352705Z" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/podcast/previews/preview-017.mp3" added="2021-01-01T01:59:11.207366Z" modified="2021-01-01T02:00:47.891773Z" visited="2021-01-01T01:59:11.207367Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-01T01:59:11.207369Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-01T02:00:47.891766Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/Specterr_720p_preview-017.mp4" added="2021-01-01T02:07:00.516288Z" modified="2021-01-01T02:12:58.772790Z" visited="2021-01-01T02:07:00.516290Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-01T02:12:58.772787Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/5.10-ck1-broken-out.tar.xz" added="2021-01-01T17:30:37.607776Z" modified="2021-01-01T17:30:37.607788Z" visited="2021-01-01T17:30:37.607778Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-xz-compressed-tar"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-01T17:30:37.607782Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/music/The%20Jeff%20Healey%20Band%20-%20When%20the%20Night%20Comes%20Falling%20from%20the%20Sky.mp3" added="2021-01-03T14:22:48.676766Z" modified="2021-01-03T14:22:48.676777Z" visited="2021-01-03T14:22:48.676768Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-03T14:22:48.676771Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/music/Macklemore/thrift%20shop%20-%20macklemore.mp3" added="2021-01-03T16:30:32.780822Z" modified="2021-01-03T16:30:32.780834Z" visited="2021-01-03T16:30:32.780824Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-03T16:30:32.780829Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/music/Roxette/listen%20to%20your%20heart%20-%20roxette.mp3" added="2021-01-03T16:56:03.862477Z" modified="2021-01-03T16:56:03.862486Z" visited="2021-01-03T16:56:03.862479Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-03T16:56:03.862482Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/podcast/raw-recordings/KK015-rick1.mp3" added="2021-01-03T22:15:27.430445Z" modified="2021-01-03T23:12:59.653962Z" visited="2021-01-03T22:15:27.430446Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-03T23:12:59.653956Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/InShot_20200627_152003467.jpg" added="2021-01-03T22:25:51.699444Z" modified="2021-01-04T00:10:21.299203Z" visited="2021-01-03T22:25:51.699446Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-04T00:10:21.299197Z" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/recordings/2021-01-03%2017.57.12.mp3" added="2021-01-03T23:09:07.252032Z" modified="2021-01-03T23:09:07.252047Z" visited="2021-01-03T23:09:07.252034Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-03T23:09:07.252038Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/recordings/2021-01-03%2018.33.09.mp3" added="2021-01-03T23:39:22.865480Z" modified="2021-01-03T23:39:22.865492Z" visited="2021-01-03T23:39:22.865481Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-03T23:39:22.865484Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/podcast/release/KK018-Rick_Part_1.mp3" added="2021-01-03T23:41:22.946339Z" modified="2021-01-03T23:46:37.110727Z" visited="2021-01-03T23:41:22.946340Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-03T23:41:22.946344Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-03T23:46:37.110721Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/podcast/previews/preview-018.mp3" added="2021-01-04T00:05:13.994647Z" modified="2021-01-04T00:05:51.018730Z" visited="2021-01-04T00:05:13.994648Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-04T00:05:13.994651Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-04T00:05:51.018726Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/Specterr_720p_preview-018.mp4" added="2021-01-04T00:12:43.016023Z" modified="2021-01-04T00:13:14.979396Z" visited="2021-01-04T00:12:43.016024Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-04T00:13:14.979392Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/downloads/trubeef-review" added="2021-01-04T21:05:17.216209Z" modified="2021-01-04T21:05:17.216223Z" visited="2021-01-04T21:05:17.216211Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="simplescreenrecorder" exec="&apos;simplescreenrecorder %u&apos;" modified="2021-01-04T21:05:17.216216Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/downloads/trubeef-review-2021-01-04_16.38.40.mp4" added="2021-01-04T21:54:00.006666Z" modified="2021-01-04T21:56:23.946501Z" visited="2021-01-04T21:54:00.006668Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="parole" exec="&apos;parole %u&apos;" modified="2021-01-04T21:56:23.946496Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/reg.agriculture_GRAPHIC_1.jpg" added="2021-01-08T04:34:32.309722Z" modified="2021-01-08T04:35:04.838300Z" visited="2021-01-08T04:34:32.309723Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-08T04:35:04.838294Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/podcast/raw-recordings/KK016-rick2.mp3" added="2021-01-08T09:42:46.613020Z" modified="2021-01-08T09:42:46.613027Z" visited="2021-01-08T09:42:46.613021Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-08T09:42:46.613023Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/podcast/raw-recordings/KK017-rick3.mp3" added="2021-01-08T09:45:55.153485Z" modified="2021-01-08T09:45:55.153493Z" visited="2021-01-08T09:45:55.153486Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-08T09:45:55.153488Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/71xM2NmBy9L.jpg" added="2021-01-08T09:50:25.006298Z" modified="2021-01-08T09:50:31.827749Z" visited="2021-01-08T09:50:25.006299Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-08T09:50:31.827746Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/515zm5gijGL.jpg" added="2021-01-08T09:52:19.182458Z" modified="2021-01-08T09:53:22.827329Z" visited="2021-01-08T09:52:19.182460Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-08T09:53:22.827323Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/LovesExecutioner_cvr_web.jpg" added="2021-01-08T09:52:49.499655Z" modified="2021-01-08T09:53:35.081183Z" visited="2021-01-08T09:52:49.499657Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-08T09:53:35.081177Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/91NCc8Lw9QL.jpg" added="2021-01-08T09:54:21.932236Z" modified="2021-01-08T11:12:46.703353Z" visited="2021-01-08T09:54:21.932238Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-08T11:12:46.703345Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/git/savagezen.github.io/_drafts/BJJ-principles-to-roll-by.md" added="2021-01-08T09:56:18.048602Z" modified="2021-01-08T09:56:18.048612Z" visited="2021-01-08T09:56:18.048603Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2021-01-08T09:56:18.048606Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/git/savagezen.github.io/_drafts/change-maker-education.md" added="2021-01-08T09:56:40.803582Z" modified="2021-01-08T09:56:40.803589Z" visited="2021-01-08T09:56:40.803583Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2021-01-08T09:56:40.803585Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/git/savagezen.github.io/_drafts/MP-introduction.md" added="2021-01-08T09:58:04.156029Z" modified="2021-01-08T09:58:04.156036Z" visited="2021-01-08T09:58:04.156030Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2021-01-08T09:58:04.156032Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/git/savagezen.github.io/_drafts/mere-psychotherapy-introduction-part2.md" added="2021-01-08T10:52:03.303648Z" modified="2021-01-08T11:18:24.589718Z" visited="2021-01-08T10:52:03.303649Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2021-01-08T11:18:24.589714Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/th.jpeg" added="2021-01-08T11:14:29.673952Z" modified="2021-01-08T11:14:39.025527Z" visited="2021-01-08T11:14:29.673954Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-08T11:14:39.025523Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/Screenshot_20210108-100408.png" added="2021-01-08T15:16:04.068336Z" modified="2021-01-08T15:37:21.899300Z" visited="2021-01-08T15:16:04.068338Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-08T15:37:21.899293Z" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/podcast%20-%20ig%20Copy%20(1).png" added="2021-01-08T15:17:52.884592Z" modified="2021-01-08T15:18:43.738572Z" visited="2021-01-08T15:17:52.884593Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-08T15:18:43.738567Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/recordings/2021-01-08%2010.12.22.mp3" added="2021-01-08T15:26:33.377127Z" modified="2021-01-08T15:26:33.377135Z" visited="2021-01-08T15:26:33.377128Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-08T15:26:33.377130Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/recordings/2021-01-08%2010.32.35.mp3" added="2021-01-08T15:42:49.514563Z" modified="2021-01-08T15:42:49.514571Z" visited="2021-01-08T15:42:49.514564Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-08T15:42:49.514567Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/recordings/2021-01-08%2010.38.23.mp3" added="2021-01-08T15:42:49.514585Z" modified="2021-01-08T15:42:49.514588Z" visited="2021-01-08T15:42:49.514585Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-08T15:42:49.514586Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/podcast/release/KK019-Rick_Part_2.mp3" added="2021-01-08T15:48:36.027039Z" modified="2021-01-08T15:49:23.404384Z" visited="2021-01-08T15:48:36.027040Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-08T15:48:36.027042Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-08T15:49:23.404381Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/podcast/previews/preview-019.mp3" added="2021-01-08T15:51:04.386270Z" modified="2021-01-08T15:58:50.920371Z" visited="2021-01-08T15:51:04.386271Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-08T15:51:04.386273Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-08T15:58:50.920365Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/Specterr_720p_preview-019.mp4" added="2021-01-08T16:06:34.644790Z" modified="2021-01-08T16:06:52.848248Z" visited="2021-01-08T16:06:34.644791Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-08T16:06:52.848243Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/witch.jpeg" added="2021-01-12T15:46:05.271684Z" modified="2021-01-12T15:50:11.120561Z" visited="2021-01-12T15:46:05.271686Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-12T15:50:11.120557Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/meme.jpg" added="2021-01-12T15:51:05.638993Z" modified="2021-01-12T15:51:18.309866Z" visited="2021-01-12T15:51:05.638994Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-12T15:51:18.309861Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/podcast.jpg" added="2021-01-12T16:26:11.857107Z" modified="2021-01-18T14:10:17.901302Z" visited="2021-01-12T16:26:11.857108Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-18T14:10:17.901298Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/git/savagezen.github.io/_drafts/mere-psychotherapy-its-you-i-like.md" added="2021-01-13T04:57:39.810687Z" modified="2021-01-18T03:13:47.372306Z" visited="2021-01-13T04:57:39.810688Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2021-01-18T03:13:47.372301Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/git/savagezen.github.io/_drafts/mere-psychotherapy-mother-knows-best.md" added="2021-01-13T05:22:36.730215Z" modified="2021-01-13T05:22:36.730227Z" visited="2021-01-13T05:22:36.730217Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2021-01-13T05:22:36.730220Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/git/savagezen.github.io/_drafts/mere-psychotherapy-rainbow-in-the-dark.md" added="2021-01-13T05:43:44.108890Z" modified="2021-01-24T11:10:20.049546Z" visited="2021-01-13T05:43:44.108891Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2021-01-24T11:10:20.049541Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/InShot_20210105_235331097.mp4" added="2021-01-13T13:22:30.238146Z" modified="2021-01-13T13:23:06.956204Z" visited="2021-01-13T13:22:30.238147Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-13T13:23:06.956199Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/InShot_20210105_235331097_exported_24102_1610548656143.jpg" added="2021-01-13T14:41:29.861538Z" modified="2021-01-13T14:41:48.911420Z" visited="2021-01-13T14:41:29.861540Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-13T14:41:48.911414Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/git/savagezen.github.io/_posts/2020-05-14-carnivore-90-day-review-04.md" added="2021-01-15T03:22:07.428003Z" modified="2021-01-15T03:22:07.428010Z" visited="2021-01-15T03:22:07.428004Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2021-01-15T03:22:07.428006Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/git/savagezen.github.io/_posts/2020-05-14-carnivore-90-day-review-05.md" added="2021-01-15T03:22:07.428024Z" modified="2021-01-15T03:22:07.428027Z" visited="2021-01-15T03:22:07.428024Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2021-01-15T03:22:07.428025Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/git/savagezen.github.io/_posts/2020-05-14-carnivore-90-day-review-06.md" added="2021-01-15T03:22:07.428036Z" modified="2021-01-15T03:22:07.428039Z" visited="2021-01-15T03:22:07.428036Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2021-01-15T03:22:07.428037Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/original-1546218601-4669897ca92c97ed69947919bba48c43.jpeg" added="2021-01-15T03:29:40.061181Z" modified="2021-01-15T03:29:52.608468Z" visited="2021-01-15T03:29:40.061183Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-15T03:29:52.608465Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/download.jpeg" added="2021-01-15T03:39:07.185673Z" modified="2021-01-15T03:39:16.265045Z" visited="2021-01-15T03:39:07.185675Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-15T03:39:16.265041Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/plot-carnivore-90-0500.png" added="2021-01-15T03:40:39.586988Z" modified="2021-01-15T03:40:48.708796Z" visited="2021-01-15T03:40:39.586990Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-15T03:40:48.708791Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/plot-carnivore-90-0100.png" added="2021-01-15T03:41:09.828719Z" modified="2021-01-15T03:41:20.684564Z" visited="2021-01-15T03:41:09.828721Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-15T03:41:20.684559Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/plot-carnivore-90-0010.png" added="2021-01-15T03:41:33.966810Z" modified="2021-01-15T03:41:42.311015Z" visited="2021-01-15T03:41:33.966811Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-15T03:41:42.311011Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/plot-carnivore-90-0001.png" added="2021-01-15T03:42:01.720271Z" modified="2021-01-15T03:42:10.462785Z" visited="2021-01-15T03:42:01.720272Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-15T03:42:10.462782Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/git/savagezen.github.io/_drafts/ecr-attachment-security-and-diagnosis.md" added="2021-01-15T04:03:54.474659Z" modified="2021-01-15T04:03:54.474666Z" visited="2021-01-15T04:03:54.474660Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2021-01-15T04:03:54.474662Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/Attachment-anxiety-and-avoidance-scales-rotated-45-degrees-to-form-a-secure-fearful.png" added="2021-01-15T04:14:40.475291Z" modified="2021-01-15T04:14:52.630629Z" visited="2021-01-15T04:14:40.475292Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-15T04:14:52.630625Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/git/savagezen.github.io/_posts/2021-01-14-ecr-attachment-security-and-diagnosis.md" added="2021-01-15T04:20:09.139072Z" modified="2021-01-15T04:20:09.139079Z" visited="2021-01-15T04:20:09.139073Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2021-01-15T04:20:09.139075Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/git/savagezen.github.io/podcast.md" added="2021-01-18T02:48:24.008500Z" modified="2021-01-18T02:48:24.008507Z" visited="2021-01-18T02:48:24.008501Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2021-01-18T02:48:24.008503Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/recordings/MP-intro-2.mp3" added="2021-01-18T03:39:26.270213Z" modified="2021-01-18T03:39:26.270221Z" visited="2021-01-18T03:39:26.270215Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-18T03:39:26.270217Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/recordings/Jonathan-1.mp3" added="2021-01-18T03:39:26.270235Z" modified="2021-01-18T03:39:26.270239Z" visited="2021-01-18T03:39:26.270235Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-18T03:39:26.270236Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/recordings/MP-intro-1.mp3" added="2021-01-18T03:39:26.270248Z" modified="2021-01-18T03:39:26.270251Z" visited="2021-01-18T03:39:26.270249Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-18T03:39:26.270250Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/recordings/Advertisement.mp3" added="2021-01-18T03:45:05.059556Z" modified="2021-01-18T03:46:07.119775Z" visited="2021-01-18T03:45:05.059558Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-18T03:46:07.119771Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/podcast/release/PENDING-mere-psychotherapy-introduction.mp3" added="2021-01-18T03:57:19.749226Z" modified="2021-01-18T15:55:33.891104Z" visited="2021-01-18T03:57:19.749227Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-18T15:32:06.183095Z" count="2"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-18T15:55:33.891100Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/podcast%20-%20banner%20YT.png" added="2021-01-18T14:16:29.405610Z" modified="2021-01-18T14:18:57.122577Z" visited="2021-01-18T14:16:29.405611Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-18T14:18:57.122574Z" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/recordings/Jonathan-discussion.mp3" added="2021-01-18T15:26:28.901387Z" modified="2021-01-18T15:26:28.901395Z" visited="2021-01-18T15:26:28.901388Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-18T15:26:28.901390Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/hootsuite/mon-5.jpeg" added="2021-01-18T15:58:35.413907Z" modified="2021-01-18T16:28:11.995116Z" visited="2021-01-18T15:58:35.413909Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-18T16:28:11.995111Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/hootsuite/mon-6.mp4" added="2021-01-18T21:08:02.200646Z" modified="2021-01-18T21:08:31.772225Z" visited="2021-01-18T21:08:02.200648Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-18T21:08:31.772220Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/hootsuite/too-much-meat.jpeg" added="2021-01-18T21:11:50.660861Z" modified="2021-01-18T21:12:08.974726Z" visited="2021-01-18T21:11:50.660862Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-18T21:12:08.974722Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/hootsuite/camus.jpeg" added="2021-01-18T21:12:56.571283Z" modified="2021-01-18T21:13:18.917680Z" visited="2021-01-18T21:12:56.571284Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-18T21:13:18.917675Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/hootsuite/nenet.png" added="2021-01-18T21:15:50.411721Z" modified="2021-01-18T21:17:36.413876Z" visited="2021-01-18T21:15:50.411722Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-18T21:17:36.413872Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/hootsuite/dyslexia-3014152_1280.jpg" added="2021-01-18T21:29:50.116424Z" modified="2021-01-18T21:29:50.116430Z" visited="2021-01-18T21:29:50.116425Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-18T21:29:50.116427Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/hootsuite/autism.jpeg" added="2021-01-18T21:32:07.026933Z" modified="2021-01-18T21:52:47.825862Z" visited="2021-01-18T21:32:07.026934Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-18T21:52:47.825859Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/podcast/previews/preview-020.mp3" added="2021-01-18T21:51:43.771089Z" modified="2021-01-18T21:53:14.896588Z" visited="2021-01-18T21:51:43.771091Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-18T21:51:43.771094Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-18T21:53:14.896584Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/Specterr_720p_preview-020.mp4" added="2021-01-18T21:58:15.298432Z" modified="2021-01-18T22:19:49.600900Z" visited="2021-01-18T21:58:15.298433Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-18T22:19:49.600894Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/relyte-black-flavored_480x480.jpg" added="2021-01-18T22:05:29.478966Z" modified="2021-01-18T22:06:24.260665Z" visited="2021-01-18T22:05:29.478968Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-18T22:06:24.260659Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/robertdeglebjj_+_CKAfdIaps9r.mp4" added="2021-01-18T22:19:10.901709Z" modified="2021-01-18T22:22:41.949228Z" visited="2021-01-18T22:19:10.901711Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-18T22:22:41.949222Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/InShot_20201015_171445171_2.jpg" added="2021-01-20T02:47:13.803268Z" modified="2021-01-20T02:47:22.791595Z" visited="2021-01-20T02:47:13.803269Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-20T02:47:22.791591Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/MVIMG_20200801_054531.jpg" added="2021-01-20T02:56:12.069163Z" modified="2021-01-20T02:56:28.931882Z" visited="2021-01-20T02:56:12.069165Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-20T02:56:28.931879Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/15056823-YEs9IQfX.jpeg" added="2021-01-20T04:47:30.946818Z" modified="2021-01-26T14:17:42.744072Z" visited="2021-01-20T04:47:30.946819Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-26T14:17:42.744067Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/1200px-Telegram_2019_Logo.svg.png" added="2021-01-21T15:52:42.800415Z" modified="2021-01-21T16:03:10.925511Z" visited="2021-01-21T15:52:42.800417Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-21T16:03:10.925507Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/Spotify-Logo.png" added="2021-01-21T16:05:12.363535Z" modified="2021-01-21T16:05:57.443804Z" visited="2021-01-21T16:05:12.363537Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-21T16:05:57.443799Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/git/savagezen.github.io/_drafts/carnivore-macros-and-calories.md" added="2021-01-22T05:12:19.625596Z" modified="2021-01-22T05:12:19.625609Z" visited="2021-01-22T05:12:19.625598Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2021-01-22T05:12:19.625602Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/screen.mp4" added="2021-01-24T11:38:30.932243Z" modified="2021-01-24T11:38:30.932252Z" visited="2021-01-24T11:38:30.932244Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="simplescreenrecorder" exec="&apos;simplescreenrecorder %u&apos;" modified="2021-01-24T11:38:30.932247Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/screen-2021-01-24_06.38.36.mp4" added="2021-01-24T11:38:55.027146Z" modified="2021-01-24T11:39:09.217774Z" visited="2021-01-24T11:38:55.027147Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="parole" exec="&apos;parole %u&apos;" modified="2021-01-24T11:39:09.217771Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/git/savagezen.github.io/_posts/2021-01-23-sunday-news-adhd-and-nutrition.md" added="2021-01-24T18:39:33.713282Z" modified="2021-01-24T18:39:33.713295Z" visited="2021-01-24T18:39:33.713283Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2021-01-24T18:39:33.713288Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/git/savagezen.github.io/_posts/2021-01-25-mere-psychotherapy-rainbow-in-the-dark.md" added="2021-01-25T15:10:14.562131Z" modified="2021-01-25T20:44:33.102412Z" visited="2021-01-25T15:10:14.562133Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/markdown"/>
+        <bookmark:applications>
+          <bookmark:application name="bluefish" exec="&apos;bluefish %u&apos;" modified="2021-01-25T20:44:33.102406Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/recordings/2021-01-25%2010.41.18.mp3" added="2021-01-25T16:15:54.755574Z" modified="2021-01-25T16:15:54.755590Z" visited="2021-01-25T16:15:54.755576Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-25T16:15:54.755580Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/recordings/2021-01-25%2010.56.12.mp3" added="2021-01-25T16:15:54.755622Z" modified="2021-01-25T16:15:54.755630Z" visited="2021-01-25T16:15:54.755623Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-25T16:15:54.755626Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/recordings/2021-01-25%2010.45.30.mp3" added="2021-01-25T16:15:54.755650Z" modified="2021-01-25T16:15:54.755659Z" visited="2021-01-25T16:15:54.755651Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-25T16:15:54.755653Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/recordings/2021-01-25%2010.50.39.mp3" added="2021-01-25T16:15:54.755699Z" modified="2021-01-25T16:15:54.755705Z" visited="2021-01-25T16:15:54.755699Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-25T16:15:54.755701Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/podcast/release/KK021-mere-psychotherapy-rainbow-in-the-dark.mp3" added="2021-01-25T16:28:15.453071Z" modified="2021-01-25T16:31:12.861197Z" visited="2021-01-25T16:28:15.453072Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-25T16:28:15.453076Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-25T16:31:12.861191Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/photo-1477295642034-731bf6bd37e2.jpeg" added="2021-01-25T16:30:17.481114Z" modified="2021-01-25T20:34:11.466605Z" visited="2021-01-25T16:30:17.481116Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-25T20:34:11.466599Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/austin/podcast/previews/preview-021.mp3" added="2021-01-25T20:27:07.274100Z" modified="2021-01-25T20:30:29.047471Z" visited="2021-01-25T20:27:07.274102Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="audio/mpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="audacity" exec="&apos;audacity %u&apos;" modified="2021-01-25T20:27:07.274105Z" count="1"/>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-25T20:30:29.047462Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/Specterr_720p_preview-021.mp4" added="2021-01-25T20:45:34.221593Z" modified="2021-01-25T20:57:54.269353Z" visited="2021-01-25T20:45:34.221595Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-25T20:57:54.269348Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/PXL_20210122_125813487_exported_15684_1611359500424.jpg" added="2021-01-26T14:37:54.076032Z" modified="2021-01-26T14:38:09.021408Z" visited="2021-01-26T14:37:54.076034Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-26T14:38:09.021404Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/Monthly%20Challenge.jpg" added="2021-01-26T14:39:21.885614Z" modified="2021-01-26T14:39:38.633691Z" visited="2021-01-26T14:39:21.885617Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-26T14:39:38.633687Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/PXL_20210122_125813487_exported_205123_1611358158218.jpg" added="2021-01-26T14:42:27.986998Z" modified="2021-01-26T14:42:42.676685Z" visited="2021-01-26T14:42:27.986999Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-26T14:42:42.676658Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/jordan_jitsu_+_CKO_4YNpD1c.mp4" added="2021-01-26T14:43:24.810092Z" modified="2021-01-26T14:43:48.233744Z" visited="2021-01-26T14:43:24.810094Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-26T14:43:48.233739Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/footlockfire_+_CKIv-b3JOHg.mp4" added="2021-01-26T14:45:04.668748Z" modified="2021-01-26T14:45:21.384627Z" visited="2021-01-26T14:45:04.668749Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-26T14:45:21.384623Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/outlawpoets_+_CKPiI6ZMdir.jpg" added="2021-01-26T14:45:38.682429Z" modified="2021-01-26T14:45:59.137770Z" visited="2021-01-26T14:45:38.682430Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-26T14:45:59.137766Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/PXL_20210120_175426328.jpg" added="2021-01-26T14:46:23.269557Z" modified="2021-01-26T14:46:33.492411Z" visited="2021-01-26T14:46:23.269559Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-26T14:46:33.492407Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/bjj.wiki_+_CKVRIR-JNLN.jpg" added="2021-01-26T14:47:08.954126Z" modified="2021-01-26T14:47:22.357024Z" visited="2021-01-26T14:47:08.954127Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-26T14:47:22.357017Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/grappleroyale_+_CKRTIeZp4KM.mp4" added="2021-01-26T14:47:51.172583Z" modified="2021-01-26T14:48:02.127589Z" visited="2021-01-26T14:47:51.172584Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-26T14:48:02.127586Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/realdealjiujitsu_+_CKY1iLgpvlP.mp4" added="2021-01-26T14:48:23.368179Z" modified="2021-01-26T14:48:36.884137Z" visited="2021-01-26T14:48:23.368180Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-26T14:48:36.884133Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/bigfishboxing_+_CKcDSzWpfXj.mp4" added="2021-01-26T14:49:06.891143Z" modified="2021-01-26T14:49:18.228371Z" visited="2021-01-26T14:49:06.891144Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-26T14:49:18.228367Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/doc_amen_+_CKcaowyA4-f.jpg" added="2021-01-26T14:49:33.985472Z" modified="2021-01-26T14:49:47.508154Z" visited="2021-01-26T14:49:33.985473Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-26T14:49:47.508150Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/lifeafterptsdpodcast_+_CKf6aZsjPE7.jpg" added="2021-01-26T14:50:13.285942Z" modified="2021-01-26T14:50:22.724877Z" visited="2021-01-26T14:50:13.285944Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-26T14:50:22.724873Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/trubeef_+_CKbZZJQgQ7z.mp4" added="2021-01-26T14:50:53.811588Z" modified="2021-01-26T14:51:03.857012Z" visited="2021-01-26T14:50:53.811590Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-26T14:51:03.857008Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/thekentpeters_+_CKY8ruigNzV.mp4" added="2021-01-26T14:51:52.619166Z" modified="2021-01-26T14:52:03.930779Z" visited="2021-01-26T14:51:52.619167Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-26T14:52:03.930775Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/PXL_20210122_131225388_exported_293539_1611358773970.jpg" added="2021-01-26T14:55:05.828881Z" modified="2021-01-26T14:55:17.506475Z" visited="2021-01-26T14:55:05.828882Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-26T14:55:17.506469Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/InShot_20210120_153111674.mp4" added="2021-01-26T14:56:11.756061Z" modified="2021-01-26T14:59:15.337003Z" visited="2021-01-26T14:56:11.756063Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-26T14:59:15.336999Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/InShot_20210120_153853253.mp4" added="2021-01-26T14:56:16.178678Z" modified="2021-01-26T15:04:54.224011Z" visited="2021-01-26T14:56:16.178679Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-26T15:04:54.224006Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/InShot_20210120_154512099.mp4" added="2021-01-26T14:56:22.803650Z" modified="2021-01-26T14:56:22.803656Z" visited="2021-01-26T14:56:22.803651Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="video/mp4"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-26T14:56:22.803653Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///tmp/Screenshot_20210116-122603.png" added="2021-01-26T14:57:57.013164Z" modified="2021-01-26T14:58:09.891076Z" visited="2021-01-26T14:57:57.013165Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-01-26T14:58:09.891072Z" count="2"/>
         </bookmark:applications>
       </metadata>
     </info>
