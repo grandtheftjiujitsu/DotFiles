@@ -750,3 +750,432 @@
 21:18:00.762225 table@remove removed @203
 21:18:00.763654 table@remove removed @204
 21:18:00.764178 table@remove removed @205
+=============== Jan 27, 2021 (EST) ===============
+10:18:00.057219 memdb@flush N·2146 S·185KiB
+10:18:00.063499 memdb@flush created L0@213 N·2146 S·83KiB "\x00\x00\x00..gif,v581910":"\x0e\x00\x00..kup,v581544"
+10:18:00.063605 version@stat F·[1 4] S·6MiB[83KiB 6MiB] Sc·[0.25 0.06]
+10:18:00.065930 memdb@flush committed F·1 T·8.584184ms
+10:18:00.066168 journal@remove removed @206
+10:18:00.066210 table@compaction range L-1 "":""
+10:18:00.066254 table@compaction L0·1 -> L1·4 S·6MiB Q·582005
+10:18:00.176066 table@build created L1@214 N·49136 S·2MiB "\x00\x00\x00..dmc,v96890":"\x02\x00\x00..mp3,v90295"
+10:18:00.226124 table@build created L1@215 N·25986 S·2MiB "\x02\x00\x00..mp3,v62365":"\x02\x00\x00..mp3,v94220"
+10:18:00.264957 table@build created L1@216 N·9814 S·2MiB "\x02\x00\x00..mp3,v57729":"\x0e\x00\x00..mp3,v5269"
+10:18:00.269196 table@build created L1@217 N·1054 S·68KiB "\x0e\x00\x00..mp3,v18743":"\x0e\x00\x00..mp3,v154449"
+10:18:00.269275 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+10:18:00.271531 table@compaction committed F-1 S-144KiB Ke·0 D·463 T·205.23769ms
+10:18:00.271765 table@remove removed @213
+10:18:00.272793 table@remove removed @208
+10:18:00.273886 table@remove removed @209
+10:18:00.274980 table@remove removed @210
+10:18:00.275178 table@remove removed @211
+23:18:00.062537 memdb@flush N·3849 S·412KiB
+23:18:00.075847 memdb@flush created L0@219 N·3849 S·233KiB "\x00\x00\x00..kup,v583874":"\x0e\x00\x00..kup,v585651"
+23:18:00.075982 version@stat F·[1 4] S·6MiB[233KiB 6MiB] Sc·[0.25 0.06]
+23:18:00.078658 memdb@flush committed F·1 T·16.00203ms
+23:18:00.079218 journal@remove removed @212
+23:18:00.079300 table@compaction range L-1 "":""
+23:18:00.079380 table@compaction L0·1 -> L1·4 S·6MiB Q·585854
+23:18:00.194080 table@build created L1@220 N·49139 S·2MiB "\x00\x00\x00..dmc,v96890":"\x02\x00\x00..mp3,v90295"
+23:18:00.251357 table@build created L1@221 N·25986 S·2MiB "\x02\x00\x00..mp3,v62365":"\x02\x00\x00..mp3,v94220"
+23:18:00.291129 table@build created L1@222 N·9815 S·2MiB "\x02\x00\x00..mp3,v57729":"\x0e\x00\x00..mp3,v5269"
+23:18:00.295973 table@build created L1@223 N·1054 S·68KiB "\x0e\x00\x00..mp3,v18743":"\x0e\x00\x00..mp3,v154449"
+23:18:00.296049 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+23:18:00.299525 table@compaction committed F-1 S-233KiB Ke·0 D·3845 T·220.093362ms
+23:18:00.300088 table@remove removed @219
+23:18:00.302030 table@remove removed @214
+23:18:00.304127 table@remove removed @215
+23:18:00.306076 table@remove removed @216
+23:18:00.306270 table@remove removed @217
+=============== Jan 28, 2021 (EST) ===============
+12:18:00.043675 memdb@flush N·258 S·17KiB
+12:18:00.049213 memdb@flush created L0@225 N·258 S·4KiB "\x03XZ..een,v586107":"\nla..ime,v585855"
+12:18:00.049334 version@stat F·[1 4] S·6MiB[4KiB 6MiB] Sc·[0.25 0.06]
+12:18:00.051983 memdb@flush committed F·1 T·8.202675ms
+12:18:00.052182 journal@remove removed @218
+12:18:00.052255 table@compaction range L-1 "":""
+12:18:00.052328 table@compaction L0·1 -> L1·1 S·2MiB Q·586112
+12:18:00.121332 table@build created L1@226 N·9815 S·2MiB "\x02\x00\x00..mp3,v57729":"\x0e\x00\x00..mp3,v5269"
+12:18:00.121509 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+12:18:00.124108 table@compaction committed F-1 S-4KiB Ke·0 D·258 T·71.71204ms
+12:18:00.124419 table@remove removed @225
+12:18:00.125687 table@remove removed @222
+=============== Jan 29, 2021 (EST) ===============
+08:25:50.057152 memdb@flush N·3940 S·422KiB
+08:25:50.070025 memdb@flush created L0@228 N·3940 S·237KiB "\x00\x00\x00..lla,v586474":"\x0e\x00\x00..kup,d589905"
+08:25:50.070126 version@stat F·[1 4] S·6MiB[237KiB 6MiB] Sc·[0.25 0.06]
+08:25:50.073039 memdb@flush committed F·1 T·15.75257ms
+08:25:50.073562 journal@remove removed @224
+08:25:50.073649 table@compaction range L-1 "":""
+08:25:50.073724 table@compaction L0·1 -> L1·4 S·6MiB Q·590052
+08:25:50.194114 table@build created L1@229 N·49127 S·2MiB "\x00\x00\x00..dmc,v96890":"\x02\x00\x00..mp3,v37876"
+08:25:50.242162 table@build created L1@230 N·25980 S·2MiB "\x02\x00\x00..mp3,v88724":"\x02\x00\x00..mp3,v40370"
+08:25:50.281635 table@build created L1@231 N·9828 S·2MiB "\x02\x00\x00..mp3,v42432":"\r\xff\x1a..\xf8ȳ,v3255"
+08:25:50.286057 table@build created L1@232 N·1084 S·72KiB "\r\xffW..}L\xb9,v11943":"\x0e\x00\x00..mp3,v154449"
+08:25:50.286136 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+08:25:50.288019 table@compaction committed F-1 S-235KiB Ke·0 D·3915 T·214.248325ms
+08:25:50.288341 table@remove removed @228
+08:25:50.289659 table@remove removed @220
+08:25:50.291066 table@remove removed @221
+08:25:50.292327 table@remove removed @226
+08:25:50.292461 table@remove removed @223
+21:25:50.043761 memdb@flush N·739 S·62KiB
+21:25:50.049819 memdb@flush created L0@234 N·739 S·10KiB "\x03XZ..een,v590767":"\nla..ime,v590053"
+21:25:50.049903 version@stat F·[1 4] S·6MiB[10KiB 6MiB] Sc·[0.25 0.06]
+21:25:50.052381 memdb@flush committed F·1 T·8.523309ms
+21:25:50.052672 journal@remove removed @227
+21:25:50.052706 table@compaction range L-1 "":""
+21:25:50.052728 table@compaction L0·1 -> L1·1 S·2MiB Q·590791
+21:25:50.089527 table@build created L1@235 N·9828 S·2MiB "\x02\x00\x00..mp3,v42432":"\r\xff\x1a..\xf8ȳ,v3255"
+21:25:50.089619 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+21:25:50.092232 table@compaction committed F-1 S-10KiB Ke·0 D·739 T·39.462172ms
+21:25:50.092513 table@remove removed @234
+21:25:50.094026 table@remove removed @231
+=============== Jan 30, 2021 (EST) ===============
+10:25:50.058754 memdb@flush N·3730 S·403KiB
+10:25:50.072913 memdb@flush created L0@237 N·3730 S·233KiB "\x00\x00\x00..tmp,v592546":"\x0e\x00\x00..kup,d594226"
+10:25:50.073042 version@stat F·[1 4] S·6MiB[233KiB 6MiB] Sc·[0.25 0.06]
+10:25:50.075938 memdb@flush committed F·1 T·17.037062ms
+10:25:50.076387 journal@remove removed @233
+10:25:50.076448 table@compaction range L-1 "":""
+10:25:50.076497 table@compaction L0·1 -> L1·4 S·6MiB Q·594521
+10:25:50.161281 table@build created L1@238 N·49125 S·2MiB "\x00\x00\x00..dmc,v96890":"\x02\x00\x00..mp3,v93624"
+10:25:50.210804 table@build created L1@239 N·25984 S·2MiB "\x02\x00\x00..mp3,v77262":"\x02\x00\x00..mp3,v85806"
+10:25:50.248023 table@build created L1@240 N·9855 S·2MiB "\x02\x00\x00..mp3,v58895":"\r\xff\x1a..\xf8ȳ,v3255"
+10:25:50.252649 table@build created L1@241 N·1084 S·72KiB "\r\xffW..}L\xb9,v11943":"\x0e\x00\x00..mp3,v154449"
+10:25:50.252740 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+10:25:50.254863 table@compaction committed F-1 S-230KiB Ke·0 D·3701 T·178.319416ms
+10:25:50.255137 table@remove removed @237
+10:25:50.256316 table@remove removed @229
+10:25:50.257534 table@remove removed @230
+10:25:50.258816 table@remove removed @235
+10:25:50.258947 table@remove removed @232
+23:25:50.057570 memdb@flush N·4051 S·433KiB
+23:25:50.072195 memdb@flush created L0@243 N·4051 S·240KiB "\x00\x00\x00..pdf,v594688":"\x0e\x00\x00..kup,v596616"
+23:25:50.072290 version@stat F·[1 4] S·6MiB[240KiB 6MiB] Sc·[0.25 0.06]
+23:25:50.074783 memdb@flush committed F·1 T·17.099375ms
+23:25:50.075462 journal@remove removed @236
+23:25:50.075560 table@compaction range L-1 "":""
+23:25:50.075621 table@compaction L0·1 -> L1·4 S·6MiB Q·598572
+23:25:50.155180 table@build created L1@244 N·49131 S·2MiB "\x00\x00\x00..dmc,v96890":"\x02\x00\x00..mp3,v93624"
+23:25:50.199298 table@build created L1@245 N·25984 S·2MiB "\x02\x00\x00..mp3,v77262":"\x02\x00\x00..mp3,v85806"
+23:25:50.237692 table@build created L1@246 N·9870 S·2MiB "\x02\x00\x00..mp3,v58895":"\r\xfe\xee..\xf3\xf8\xb1,v21234"
+23:25:50.242166 table@build created L1@247 N·1087 S·76KiB "\r\xff\b..\xc8\x1d\xaf,v30539":"\x0e\x00\x00..mp3,v154449"
+23:25:50.242234 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+23:25:50.244449 table@compaction committed F-1 S-239KiB Ke·0 D·4027 T·168.786207ms
+23:25:50.244839 table@remove removed @243
+23:25:50.246059 table@remove removed @238
+23:25:50.247373 table@remove removed @239
+23:25:50.248721 table@remove removed @240
+23:25:50.248879 table@remove removed @241
+=============== Jan 31, 2021 (EST) ===============
+12:25:50.055735 memdb@flush N·777 S·66KiB
+12:25:50.061949 memdb@flush created L0@249 N·777 S·11KiB "\x03XZ..een,v599349":"\nla..ime,v598573"
+12:25:50.062083 version@stat F·[1 4] S·6MiB[11KiB 6MiB] Sc·[0.25 0.06]
+12:25:50.065251 memdb@flush committed F·1 T·9.370963ms
+12:25:50.065732 journal@remove removed @242
+12:25:50.065825 table@compaction range L-1 "":""
+12:25:50.065865 table@compaction L0·1 -> L1·1 S·2MiB Q·599349
+12:25:50.139433 table@build created L1@250 N·9870 S·2MiB "\x02\x00\x00..mp3,v58895":"\r\xfe\xee..\xf3\xf8\xb1,v21234"
+12:25:50.139589 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+12:25:50.141891 table@compaction committed F-1 S-11KiB Ke·0 D·777 T·75.978858ms
+12:25:50.142210 table@remove removed @249
+12:25:50.144304 table@remove removed @246
+=============== Feb 1, 2021 (EST) ===============
+09:43:56.058467 memdb@flush N·1447 S·117KiB
+09:43:56.063263 memdb@flush created L0@252 N·1447 S·37KiB "\x00\x00\x00..mp3,v599686":"\x0e\x00\x00..mp3,d599792"
+09:43:56.063347 version@stat F·[1 4] S·6MiB[37KiB 6MiB] Sc·[0.25 0.06]
+09:43:56.065548 memdb@flush committed F·1 T·6.980311ms
+09:43:56.065809 journal@remove removed @248
+09:43:56.065862 table@compaction range L-1 "":""
+09:43:56.065934 table@compaction L0·1 -> L1·4 S·6MiB Q·600796
+09:43:56.154520 table@build created L1@253 N·49137 S·2MiB "\x00\x00\x00..dmc,v96890":"\x02\x00\x00..mp3,v93624"
+09:43:56.197984 table@build created L1@254 N·25984 S·2MiB "\x02\x00\x00..mp3,v77262":"\x02\x00\x00..mp3,v85806"
+09:43:56.232574 table@build created L1@255 N·9942 S·2MiB "\x02\x00\x00..mp3,v58895":"\x0e\x00\x00..jpg,v564304"
+09:43:56.236428 table@build created L1@256 N·657 S·42KiB "\x0e\x00\x00..mp3,v13604":"\x0e\x00\x00..mp3,v154449"
+09:43:56.236522 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+09:43:56.238709 table@compaction committed F-1 S-70KiB Ke·0 D·1799 T·172.72131ms
+09:43:56.238939 table@remove removed @252
+09:43:56.240288 table@remove removed @244
+09:43:56.241566 table@remove removed @245
+09:43:56.242865 table@remove removed @250
+09:43:56.243004 table@remove removed @247
+=============== Feb 2, 2021 (EST) ===============
+20:44:11.330439 memdb@flush N·7850 S·850KiB
+20:44:11.353183 memdb@flush created L0@258 N·7850 S·493KiB "\x00\x00\x00..mp3,v604284":"\x0e\x00\x00..kup,d607912"
+20:44:11.353281 version@stat F·[1 4] S·6MiB[493KiB 6MiB] Sc·[0.25 0.06]
+20:44:11.355383 memdb@flush committed F·1 T·24.814255ms
+20:44:11.356077 journal@remove removed @251
+20:44:11.356148 table@compaction range L-1 "":""
+20:44:11.356185 table@compaction L0·1 -> L1·4 S·6MiB Q·608646
+20:44:11.452705 table@build created L1@259 N·49147 S·2MiB "\x00\x00\x00..dmc,v96890":"\x02\x00\x00..mp3,v89222"
+20:44:11.496165 table@build created L1@260 N·25988 S·2MiB "\x02\x00\x00..mp3,v44797":"\x02\x00\x00..mp3,v85806"
+20:44:11.534493 table@build created L1@261 N·9918 S·2MiB "\x02\x00\x00..mp3,v58895":"\x0e\x00\x00..mp3,v3561"
+20:44:11.538431 table@build created L1@262 N·758 S·49KiB "\x0e\x00\x00..mp3,v29653":"\x0e\x00\x00..mp3,v154449"
+20:44:11.538534 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+20:44:11.540386 table@compaction committed F-1 S-487KiB Ke·0 D·7759 T·184.155516ms
+20:44:11.540842 table@remove removed @258
+20:44:11.542086 table@remove removed @253
+20:44:11.543432 table@remove removed @254
+20:44:11.544706 table@remove removed @255
+20:44:11.544828 table@remove removed @256
+=============== Feb 3, 2021 (EST) ===============
+09:44:11.030287 memdb@flush N·4041 S·432KiB
+09:44:11.039474 memdb@flush created L0@264 N·4041 S·242KiB "\x00\x00\x00..pcm,v608673":"\x0e\x00\x00..kup,d612155"
+09:44:11.039556 version@stat F·[1 4] S·6MiB[242KiB 6MiB] Sc·[0.25 0.06]
+09:44:11.041391 memdb@flush committed F·1 T·11.009558ms
+09:44:11.041692 journal@remove removed @257
+09:44:11.041724 table@compaction range L-1 "":""
+09:44:11.041758 table@compaction L0·1 -> L1·4 S·6MiB Q·612687
+09:44:11.107873 table@build created L1@265 N·49147 S·2MiB "\x00\x00\x00..dmc,v96890":"\x02\x00\x00..mp3,v93313"
+09:44:11.152404 table@build created L1@266 N·25991 S·2MiB "\x02\x00\x00..mp3,v96447":"\x02\x00\x00..mp3,v85806"
+09:44:11.187505 table@build created L1@267 N·9931 S·2MiB "\x02\x00\x00..mp3,v58895":"\x0e\x00\x00..mp3,v3561"
+09:44:11.191277 table@build created L1@268 N·758 S·49KiB "\x0e\x00\x00..mp3,v29653":"\x0e\x00\x00..mp3,v154449"
+09:44:11.191337 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+09:44:11.193618 table@compaction committed F-1 S-242KiB Ke·0 D·4025 T·151.820606ms
+09:44:11.193906 table@remove removed @264
+09:44:11.195151 table@remove removed @259
+09:44:11.196421 table@remove removed @260
+09:44:11.197731 table@remove removed @261
+09:44:11.197882 table@remove removed @262
+22:44:11.057337 memdb@flush N·4254 S·453KiB
+22:44:11.071921 memdb@flush created L0@270 N·4254 S·245KiB "\x00\x00\x00..pcm,v613020":"\x0e\x00\x00..kup,d614916"
+22:44:11.072045 version@stat F·[1 4] S·6MiB[245KiB 6MiB] Sc·[0.25 0.06]
+22:44:11.074294 memdb@flush committed F·1 T·16.845772ms
+22:44:11.074828 journal@remove removed @263
+22:44:11.074880 table@compaction range L-1 "":""
+22:44:11.074930 table@compaction L0·1 -> L1·4 S·6MiB Q·616941
+22:44:11.163269 table@build created L1@271 N·49130 S·2MiB "\x00\x00\x00..dmc,v96890":"\x02\x00\x00..mp3,v96991"
+22:44:11.210743 table@build created L1@272 N·26018 S·2MiB "\x02\x00\x00..mp3,v71194":"\x02\x00\x00..mp3,v40370"
+22:44:11.249837 table@build created L1@273 N·9929 S·2MiB "\x02\x00\x00..mp3,v42432":"\x0e\x00\x00..mp3,v3561"
+22:44:11.253411 table@build created L1@274 N·758 S·49KiB "\x0e\x00\x00..mp3,v29653":"\x0e\x00\x00..mp3,v154449"
+22:44:11.253501 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+22:44:11.255876 table@compaction committed F-1 S-242KiB Ke·0 D·4246 T·180.904241ms
+22:44:11.256210 table@remove removed @270
+22:44:11.257467 table@remove removed @265
+22:44:11.258730 table@remove removed @266
+22:44:11.260015 table@remove removed @267
+22:44:11.260141 table@remove removed @268
+=============== Feb 4, 2021 (EST) ===============
+11:44:11.049773 memdb@flush N·331 S·25KiB
+11:44:11.052764 memdb@flush created L0@276 N·331 S·5KiB "\x00\x00\x00..ree,v617261":"\f\x00\x00..ree,v617259"
+11:44:11.052833 version@stat F·[1 4] S·6MiB[5KiB 6MiB] Sc·[0.25 0.06]
+11:44:11.054734 memdb@flush committed F·1 T·4.579966ms
+11:44:11.054919 journal@remove removed @269
+11:44:11.054962 table@compaction range L-1 "":""
+11:44:11.054997 table@compaction L0·1 -> L1·3 S·6MiB Q·617272
+11:44:11.128914 table@build created L1@277 N·49133 S·2MiB "\x00\x00\x00..dmc,v96890":"\x02\x00\x00..mp3,v96991"
+11:44:11.178600 table@build created L1@278 N·26018 S·2MiB "\x02\x00\x00..mp3,v71194":"\x02\x00\x00..mp3,v40370"
+11:44:11.213528 table@build created L1@279 N·9930 S·2MiB "\x02\x00\x00..mp3,v42432":"\x0e\x00\x00..mp3,v3561"
+11:44:11.213660 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+11:44:11.215518 table@compaction committed F-1 S-5KiB Ke·0 D·327 T·160.480764ms
+11:44:11.215741 table@remove removed @276
+11:44:11.217043 table@remove removed @271
+11:44:11.218286 table@remove removed @272
+11:44:11.219603 table@remove removed @273
+=============== Feb 5, 2021 (EST) ===============
+00:44:11.029200 memdb@flush N·4726 S·522KiB
+00:44:11.037779 memdb@flush created L0@281 N·4726 S·273KiB "\x00\x00\x00..JPG,v617496":"\x0e\x00\x00..kup,v621599"
+00:44:11.037867 version@stat F·[1 4] S·6MiB[273KiB 6MiB] Sc·[0.25 0.06]
+00:44:11.039834 memdb@flush committed F·1 T·10.523093ms
+00:44:11.040259 journal@remove removed @275
+00:44:11.040292 table@compaction range L-1 "":""
+00:44:11.040325 table@compaction L0·1 -> L1·4 S·6MiB Q·621998
+00:44:11.110233 table@build created L1@282 N·49136 S·2MiB "\x00\x00\x00..dmc,v96890":"\x02\x00\x00..mp3,v96991"
+00:44:11.154009 table@build created L1@283 N·26018 S·2MiB "\x02\x00\x00..mp3,v71194":"\x02\x00\x00..mp3,v40370"
+00:44:11.189401 table@build created L1@284 N·9952 S·2MiB "\x02\x00\x00..mp3,v42432":"\x0e\x00\x00..mp3,v15655"
+00:44:11.192170 table@build created L1@285 N·158 S·10KiB "\x0e\x00\x00..jpg,v565090":"\x0e\x00\x00..mp3,v154449"
+00:44:11.192256 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+00:44:11.194020 table@compaction committed F-1 S-315KiB Ke·0 D·5301 T·153.660446ms
+00:44:11.194299 table@remove removed @281
+00:44:11.195739 table@remove removed @277
+00:44:11.197011 table@remove removed @278
+00:44:11.198476 table@remove removed @279
+00:44:11.198608 table@remove removed @274
+13:45:19.027495 memdb@flush N·344 S·25KiB
+13:45:19.030789 memdb@flush created L0@287 N·344 S·5KiB "\x03XZ..een,v622322":"\nla..ime,v621999"
+13:45:19.030883 version@stat F·[1 4] S·6MiB[5KiB 6MiB] Sc·[0.25 0.06]
+13:45:19.033022 memdb@flush committed F·1 T·5.437576ms
+13:45:19.033226 journal@remove removed @280
+13:45:19.033261 table@compaction range L-1 "":""
+13:45:19.033293 table@compaction L0·1 -> L1·1 S·2MiB Q·622342
+13:45:19.070458 table@build created L1@288 N·9952 S·2MiB "\x02\x00\x00..mp3,v42432":"\x0e\x00\x00..mp3,v15655"
+13:45:19.070565 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+13:45:19.072794 table@compaction committed F-1 S-5KiB Ke·0 D·344 T·39.457064ms
+13:45:19.072959 table@remove removed @287
+13:45:19.074240 table@remove removed @284
+=============== Feb 6, 2021 (EST) ===============
+16:48:41.057522 memdb@flush N·4718 S·494KiB
+16:48:41.070134 memdb@flush created L0@290 N·4718 S·262KiB "\x00\x00\x00..mp3,v626604":"\x0e\x00\x00..kup,v624649"
+16:48:41.070233 version@stat F·[1 4] S·6MiB[262KiB 6MiB] Sc·[0.25 0.06]
+16:48:41.072214 memdb@flush committed F·1 T·14.581326ms
+16:48:41.072693 journal@remove removed @286
+16:48:41.072746 table@compaction range L-1 "":""
+16:48:41.072797 table@compaction L0·1 -> L1·4 S·6MiB Q·627060
+16:48:41.154985 table@build created L1@291 N·49159 S·2MiB "\x00\x00\x00..dmc,v96890":"\x02\x00\x00..mp3,v85693"
+16:48:41.198884 table@build created L1@292 N·25981 S·2MiB "\x02\x00\x00..mp3,v60604":"\x02\x00\x00..mp3,v64736"
+16:48:41.233840 table@build created L1@293 N·9938 S·2MiB "\x02\x00\x00..mp3,v49145":"\x0e\x00\x00..mp3,v26432"
+16:48:41.237056 table@build created L1@294 N·336 S·21KiB "\x0e\x00\x00..mp3,v20940":"\x0e\x00\x00..mp3,v154449"
+16:48:41.237165 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+16:48:41.239222 table@compaction committed F-1 S-250KiB Ke·0 D·4568 T·166.377532ms
+16:48:41.239582 table@remove removed @290
+16:48:41.240807 table@remove removed @282
+16:48:41.242087 table@remove removed @283
+16:48:41.243376 table@remove removed @288
+16:48:41.243482 table@remove removed @285
+=============== Feb 7, 2021 (EST) ===============
+05:48:41.055309 memdb@flush N·330 S·24KiB
+05:48:41.058513 memdb@flush created L0@296 N·330 S·5KiB "\x03XZ..een,v627307":"\nla..ime,v627061"
+05:48:41.058596 version@stat F·[1 4] S·6MiB[5KiB 6MiB] Sc·[0.25 0.06]
+05:48:41.060798 memdb@flush committed F·1 T·5.370724ms
+05:48:41.061058 journal@remove removed @289
+05:48:41.061095 table@compaction range L-1 "":""
+05:48:41.061129 table@compaction L0·1 -> L1·1 S·2MiB Q·627390
+05:48:41.102820 table@build created L1@297 N·9938 S·2MiB "\x02\x00\x00..mp3,v49145":"\x0e\x00\x00..mp3,v26432"
+05:48:41.102915 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+05:48:41.104935 table@compaction committed F-1 S-5KiB Ke·0 D·330 T·43.766726ms
+05:48:41.105172 table@remove removed @296
+05:48:41.106293 table@remove removed @293
+18:48:41.057452 memdb@flush N·4083 S·436KiB
+18:48:41.067177 memdb@flush created L0@299 N·4083 S·243KiB "\x00\x00\x00..kup,v630944":"\x0e\x00\x00..kup,v629204"
+18:48:41.067269 version@stat F·[1 4] S·6MiB[243KiB 6MiB] Sc·[0.25 0.06]
+18:48:41.069294 memdb@flush committed F·1 T·11.7572ms
+18:48:41.069619 journal@remove removed @295
+18:48:41.069654 table@compaction range L-1 "":""
+18:48:41.069684 table@compaction L0·1 -> L1·4 S·6MiB Q·631473
+18:48:41.140202 table@build created L1@300 N·49162 S·2MiB "\x00\x00\x00..dmc,v96890":"\x02\x00\x00..mp3,v85693"
+18:48:41.186588 table@build created L1@301 N·25981 S·2MiB "\x02\x00\x00..mp3,v60604":"\x02\x00\x00..mp3,v64736"
+18:48:41.225822 table@build created L1@302 N·9943 S·2MiB "\x02\x00\x00..mp3,v49145":"\x0e\x00\x00..mp3,v26432"
+18:48:41.228798 table@build created L1@303 N·336 S·21KiB "\x0e\x00\x00..mp3,v20940":"\x0e\x00\x00..mp3,v154449"
+18:48:41.228864 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+18:48:41.231229 table@compaction committed F-1 S-243KiB Ke·0 D·4075 T·161.51595ms
+18:48:41.231487 table@remove removed @299
+18:48:41.232701 table@remove removed @291
+18:48:41.233982 table@remove removed @292
+18:48:41.235298 table@remove removed @297
+18:48:41.235406 table@remove removed @294
+=============== Feb 8, 2021 (EST) ===============
+07:48:41.035877 memdb@flush N·4888 S·502KiB
+07:48:41.046450 memdb@flush created L0@305 N·4888 S·270KiB "\x00\x00\x00..mp3,v631603":"\x0e\x00\x00..kup,d635746"
+07:48:41.046515 version@stat F·[1 4] S·6MiB[270KiB 6MiB] Sc·[0.25 0.06]
+07:48:41.048598 memdb@flush committed F·1 T·12.635774ms
+07:48:41.048976 journal@remove removed @298
+07:48:41.049024 table@compaction range L-1 "":""
+07:48:41.049086 table@compaction L0·1 -> L1·4 S·6MiB Q·636361
+07:48:41.116377 table@build created L1@306 N·49174 S·2MiB "\x00\x00\x00..dmc,v96890":"\x02\x00\x00..mp3,v85693"
+07:48:41.158664 table@build created L1@307 N·25981 S·2MiB "\x02\x00\x00..mp3,v60604":"\x02\x00\x00..mp3,v64736"
+07:48:41.193885 table@build created L1@308 N·9907 S·2MiB "\x02\x00\x00..mp3,v49145":"\x0e\x00\x00..mp3,v6283"
+07:48:41.197170 table@build created L1@309 N·497 S·31KiB "\x0e\x00\x00..mp3,v20892":"\x0e\x00\x00..mp3,v154449"
+07:48:41.197258 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+07:48:41.199633 table@compaction committed F-1 S-259KiB Ke·0 D·4751 T·150.50149ms
+07:48:41.199940 table@remove removed @305
+07:48:41.201202 table@remove removed @300
+07:48:41.202532 table@remove removed @301
+07:48:41.203830 table@remove removed @302
+07:48:41.203941 table@remove removed @303
+=============== Feb 20, 2021 (EST) ===============
+18:12:48.972094 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+18:12:48.974556 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+18:12:48.974581 db@open opening
+18:12:48.974647 journal@recovery F·1
+18:12:48.976054 journal@recovery recovering @304
+18:12:48.982541 memdb@flush created L0@310 N·426 S·6KiB "\x00\x00\x00..pcm,v636610":"\f\x00\x00..pcm,v636606"
+18:12:48.983457 version@stat F·[1 4] S·6MiB[6KiB 6MiB] Sc·[0.25 0.06]
+18:12:48.995592 db@janitor F·8 G·1
+18:12:48.995640 db@janitor removing table-199
+18:12:48.995701 db@open done T·21.112278ms
+18:12:50.422813 table@compaction L0·1 -> L1·3 S·6MiB Q·636788
+18:12:50.531753 table@build created L1@313 N·49174 S·2MiB "\x00\x00\x00..dmc,v96890":"\x02\x00\x00..mp3,v85693"
+18:12:50.586618 table@build created L1@314 N·25981 S·2MiB "\x02\x00\x00..mp3,v60604":"\x02\x00\x00..mp3,v64736"
+18:12:50.623650 table@build created L1@315 N·9907 S·2MiB "\x02\x00\x00..mp3,v49145":"\x0e\x00\x00..mp3,v6283"
+18:12:50.623731 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+18:12:50.625666 table@compaction committed F-1 S-6KiB Ke·0 D·426 T·202.802117ms
+18:12:50.686522 table@remove removed @306
+18:12:50.687373 table@remove removed @307
+18:12:50.688240 table@remove removed @308
+18:13:49.052606 memdb@flush N·25 S·2KiB
+18:13:49.058088 memdb@flush created L0@317 N·25 S·1KiB "\x00\x00\x00..mp3,v636803":"\x0e\x00\x00..mp3,v636811"
+18:13:49.058216 version@stat F·[1 4] S·6MiB[1KiB 6MiB] Sc·[0.25 0.06]
+18:13:49.061048 memdb@flush committed F·1 T·8.353069ms
+18:13:49.061240 journal@remove removed @311
+18:13:49.061311 table@compaction range L-1 "":""
+18:13:49.061432 table@compaction L0·1 -> L1·4 S·6MiB Q·636813
+18:13:49.182216 table@build created L1@318 N·49176 S·2MiB "\x00\x00\x00..dmc,v96890":"\x02\x00\x00..mp3,v85693"
+18:13:49.226963 table@build created L1@319 N·25981 S·2MiB "\x02\x00\x00..mp3,v60604":"\x02\x00\x00..mp3,v64736"
+18:13:49.263532 table@build created L1@320 N·9859 S·2MiB "\x02\x00\x00..mp3,v49145":"\x0e\x00\x00..mp3,v14123"
+18:13:49.268337 table@build created L1@321 N·554 S·35KiB "\x0e\x00\x00..mp3,v27937":"\x0e\x00\x00..mp3,v154449"
+18:13:49.268437 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+18:13:49.270979 table@compaction committed F-1 S-361B Ke·0 D·14 T·209.490318ms
+18:13:49.271214 table@remove removed @317
+18:13:49.272340 table@remove removed @313
+18:13:49.273470 table@remove removed @314
+18:13:49.274486 table@remove removed @315
+18:13:49.274586 table@remove removed @309
+=============== Feb 23, 2021 (EST) ===============
+09:17:09.773155 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:17:09.774180 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+09:17:09.774206 db@open opening
+09:17:09.774273 journal@recovery F·1
+09:17:09.782524 journal@recovery recovering @316
+09:17:09.785964 memdb@flush created L0@322 N·89 S·2KiB "\x00\x00\x00..dat,v636875":"\x0e\x00\x00..at~,d636863"
+09:17:09.786996 version@stat F·[1 4] S·6MiB[2KiB 6MiB] Sc·[0.25 0.06]
+09:17:09.794568 db@janitor F·8 G·1
+09:17:09.794614 db@janitor removing table-310
+09:17:09.794666 db@open done T·20.451026ms
+09:17:11.187740 table@compaction L0·1 -> L1·4 S·6MiB Q·636906
+09:17:11.270187 table@build created L1@325 N·49176 S·2MiB "\x00\x00\x00..dmc,v96890":"\x02\x00\x00..mp3,v85693"
+09:17:11.328170 table@build created L1@326 N·25981 S·2MiB "\x02\x00\x00..mp3,v60604":"\x02\x00\x00..mp3,v64736"
+09:17:11.368099 table@build created L1@327 N·9859 S·2MiB "\x02\x00\x00..mp3,v49145":"\x0e\x00\x00..mp3,v14123"
+09:17:11.371761 table@build created L1@328 N·554 S·35KiB "\x0e\x00\x00..mp3,v27937":"\x0e\x00\x00..mp3,v154449"
+09:17:11.371864 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+09:17:11.373983 table@compaction committed F-1 S-2KiB Ke·0 D·89 T·186.175491ms
+09:17:11.381491 table@remove removed @318
+09:17:11.382548 table@remove removed @319
+09:17:11.383550 table@remove removed @320
+09:17:11.383650 table@remove removed @321
+09:18:09.847088 memdb@flush N·15 S·1KiB
+09:18:09.853874 memdb@flush created L0@330 N·15 S·734B "\x045x..can,v636913":"\npr..ion,v636904"
+09:18:09.853953 version@stat F·[1 4] S·6MiB[734B 6MiB] Sc·[0.25 0.06]
+09:18:09.856301 memdb@flush committed F·1 T·9.138158ms
+09:18:09.856428 journal@remove removed @323
+09:18:09.856487 table@compaction range L-1 "":""
+09:18:09.856567 table@compaction L0·1 -> L1·1 S·2MiB Q·636918
+09:18:09.916479 table@build created L1@331 N·9860 S·2MiB "\x02\x00\x00..mp3,v49145":"\x0e\x00\x00..mp3,v14123"
+09:18:09.916590 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+09:18:09.918693 table@compaction committed F-1 S-747B Ke·0 D·14 T·62.061277ms
+09:18:09.918923 table@remove removed @330
+09:18:09.920194 table@remove removed @327
+=============== Feb 25, 2021 (EST) ===============
+11:19:07.650143 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+11:19:07.650477 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+11:19:07.650505 db@open opening
+11:19:07.650592 journal@recovery F·1
+11:19:07.651647 journal@recovery recovering @329
+11:19:07.658821 memdb@flush created L0@332 N·62 S·1KiB "\x00\x00\x00..dat,v636941":"\x0e\x00\x00..at~,v636935"
+11:19:07.662969 version@stat F·[1 4] S·6MiB[1KiB 6MiB] Sc·[0.25 0.06]
+11:19:07.670516 db@janitor F·8 G·1
+11:19:07.670550 db@janitor removing table-322
+11:19:07.670620 db@open done T·20.107162ms
+11:19:09.078765 table@compaction L0·1 -> L1·4 S·6MiB Q·636981
+11:19:09.165362 table@build created L1@335 N·49176 S·2MiB "\x00\x00\x00..dmc,v96890":"\x02\x00\x00..mp3,v85693"
+11:19:09.213290 table@build created L1@336 N·25981 S·2MiB "\x02\x00\x00..mp3,v60604":"\x02\x00\x00..mp3,v64736"
+11:19:09.249067 table@build created L1@337 N·9860 S·2MiB "\x02\x00\x00..mp3,v49145":"\x0e\x00\x00..mp3,v14123"
+11:19:09.251982 table@build created L1@338 N·554 S·35KiB "\x0e\x00\x00..mp3,v27937":"\x0e\x00\x00..mp3,v154449"
+11:19:09.252049 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+11:19:09.253816 table@compaction committed F-1 S-1KiB Ke·0 D·62 T·175.019268ms
+11:19:09.260173 table@remove removed @325
+11:19:09.260980 table@remove removed @326
+11:19:09.261772 table@remove removed @331
+11:19:09.261878 table@remove removed @328
+11:20:07.706282 memdb@flush N·9 S·387B
+11:20:07.712004 memdb@flush created L0@340 N·9 S·362B "\x045x..can,v636985":"\x04w4..can,v636990"
+11:20:07.712082 version@stat F·[1 4] S·6MiB[362B 6MiB] Sc·[0.25 0.06]
+11:20:07.713800 memdb@flush committed F·1 T·7.462027ms
+11:20:07.713887 journal@remove removed @333
+11:20:07.713910 table@compaction range L-1 "":""
+11:20:07.713931 table@compaction L0·1 -> L1·1 S·2MiB Q·636990
+11:20:07.749030 table@build created L1@341 N·9860 S·2MiB "\x02\x00\x00..mp3,v49145":"\x0e\x00\x00..mp3,v14123"
+11:20:07.749126 version@stat F·[0 4] S·6MiB[0B 6MiB] Sc·[0.00 0.06]
+11:20:07.751088 table@compaction committed F-1 S-381B Ke·0 D·9 T·37.119999ms
+11:20:07.751332 table@remove removed @340
+11:20:07.752620 table@remove removed @337

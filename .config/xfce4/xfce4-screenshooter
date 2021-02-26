@@ -1,8 +1,8 @@
-app=none
+app=/usr/bin/brave-nightly
 last_user=
-screenshot_dir=file:///home/austin
+screenshot_dir=file:/tmp
 action=1
 delay=0
-region=1
+region=3
 show_mouse=1
 

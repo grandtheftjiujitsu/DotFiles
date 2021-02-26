@@ -2,9 +2,10 @@
   "window": {
     "maximized": false,
     "autoHideMenuBar": false,
-    "width": 640,
+    "fullscreen": false,
+    "width": 800,
     "height": 747,
-    "x": 1,
-    "y": 20
+    "x": 7,
+    "y": 47
   }
 }

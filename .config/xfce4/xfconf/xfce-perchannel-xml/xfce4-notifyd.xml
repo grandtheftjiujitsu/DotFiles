@@ -8,6 +8,7 @@
   <property name="applications" type="empty">
     <property name="known_applications" type="array">
       <value type="string" value="brave-browser-dev"/>
+      <value type="string" value="brave-browser-nightly"/>
       <value type="string" value="signalbeta"/>
       <value type="string" value="xfce4-settings-helper"/>
     </property>

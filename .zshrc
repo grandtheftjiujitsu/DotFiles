@@ -67,7 +67,6 @@ alias screencap="simplescreenrecorder"
 alias signal="signal-desktop-beta"
 alias rnano="sudo rnano"
 alias umount="sudo umount"
-#alias upgrade="sudo pacman -Syu; sudo dkms autoinstall"
 alias vault-mount="ecryptfs-mount-private"
 alias vault-umount="ecryptfs-umount-private"
 alias wifi-menu="sudo wifi-menu"
@@ -98,7 +97,6 @@ alias pts-i="phoronix-test-suite interactive"
 alias scratch="nano $HOME/scratch.pad"
 alias syserror="sudo journalctl -p 0..3 -xn"
 alias sysfail="systemctl --failed"
-alias updmirrors="sudo $HOME/scripts/shell/updmirrors"
 alias updpkg="makepkg -s; updpkgsums; makepkg -sfi; makepkg --printsrcinfo; gstat"
 alias updsh="source $HOME/.zshrc"
 alias updx="xrdb -merge $HOME/git/dotfiles/.Xresources"
@@ -170,6 +168,7 @@ export PATH=$HOME/scripts/shell:$PATH
 export PATH=$HOME/scripts/python:$PATH
 export PATH=$HOME/scirpts/r:$PATH
 export PATH=$HOME/scripts/android:$PATH
+
 kernel-prep ()
   {
   #quick prep to build android kernel

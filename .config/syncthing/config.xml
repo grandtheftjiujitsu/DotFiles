@@ -1,4 +1,4 @@
-<configuration version="32">
+<configuration version="33">
     <folder id="5xact-jtzcb" label="downloads" path="/home/austin/downloads" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="XZ7I24W-HEPBTJ5-FTICJ7P-JPR5MYA-VHCX3XU-ZA6FCPG-MIWLVMA-TC555Q7" introducedBy="">
@@ -382,5 +382,7 @@
         <maxConcurrentIncomingRequestKiB>0</maxConcurrentIncomingRequestKiB>
         <announceLANAddresses>true</announceLANAddresses>
         <sendFullIndexOnUpgrade>false</sendFullIndexOnUpgrade>
+        <connectionLimitEnough>0</connectionLimitEnough>
+        <connectionLimitMax>0</connectionLimitMax>
     </options>
 </configuration>

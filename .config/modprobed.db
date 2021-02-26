@@ -12,6 +12,7 @@ bridge
 br_netfilter
 cbc
 ccp
+cdc_ether
 cec
 cfg80211
 crc16
@@ -72,6 +73,7 @@ mac_hid
 mbcache
 mc
 mdio_devres
+mii
 mousedev
 mrp
 mtd
@@ -97,6 +99,7 @@ r8169
 rc_core
 realtek
 rfkill
+rndis_host
 rng_core
 snd
 snd_compress
@@ -111,7 +114,9 @@ snd_intel_dspcfg
 snd_pcm
 snd_pcm_dmaengine
 snd_rawmidi
+snd_seq
 snd_seq_device
+snd_seq_dummy
 snd_soc_core
 snd_timer
 snd_usb_audio
@@ -131,6 +136,7 @@ tpm
 trusted
 uas
 usbhid
+usbnet
 usb_storage
 uvcvideo
 veth
