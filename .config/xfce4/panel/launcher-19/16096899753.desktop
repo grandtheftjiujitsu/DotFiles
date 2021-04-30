@@ -2,7 +2,7 @@
 Version=1.0
 Type=Application
 Exec=/usr/bin/sh /home/austin/scripts/shell/brave-hardened-malloc
-Icon=brave-browser-nightly
+Icon=brave
 StartupNotify=true
 Terminal=false
 Categories=Utility;X-XFCE;X-Xfce-Toplevel;

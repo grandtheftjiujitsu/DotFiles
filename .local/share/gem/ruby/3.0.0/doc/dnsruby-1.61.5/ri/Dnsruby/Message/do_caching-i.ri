@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"do_caching:ETI" Dnsruby::Message#do_caching;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"Mdo_caching is set by default. If you do not wish dnsruby to inspect the ;TI"Mcache before sending the query, nor cache the result of the query, then ;TI"set do_caching to false.;T:
+@fileI"#lib/dnsruby/message/message.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::Message;TcRDoc::NormalClass0

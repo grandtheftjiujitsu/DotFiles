@@ -59,3 +59,4 @@
 2.2.0 rexml:>= 0|checksum:ce24100c836ff4bae05f2d88b6d6022c978d62e6a1c33a0211abcd788e73a441,ruby:>= 2.3
 2.2.1 rexml:>= 0|checksum:c6b22245c496fe26869db2f4cccac30b7b2ffab99768a39450e2b656299a3515,ruby:>= 2.3
 2.3.0 rexml:>= 0|checksum:07e2b0ca843d459c1ad5b65f5a1b24ff71ecd703f65a40b914de1ac14439bcee,ruby:>= 2.3
+2.3.1 rexml:>= 0|checksum:59e938cfa42a3d6169b295727fe09c4c91d742336c8fbd1042529f4db664ab49,ruby:>= 2.3

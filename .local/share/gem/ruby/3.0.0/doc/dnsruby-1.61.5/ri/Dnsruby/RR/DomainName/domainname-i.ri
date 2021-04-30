@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"domainname:ETI"'Dnsruby::RR::DomainName#domainname;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I",The domain name in the RR data section.;T:
+@fileI"(lib/dnsruby/resource/domain_name.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::RR::DomainName;TcRDoc::NormalClass0

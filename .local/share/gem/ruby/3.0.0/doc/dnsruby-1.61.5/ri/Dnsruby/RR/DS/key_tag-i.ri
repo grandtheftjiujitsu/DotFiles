@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"key_tag:ETI"Dnsruby::RR::DS#key_tag;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"IThe Key Tag field lists the key tag of the DNSKEY RR referred to by ;TI"*the DS record, in network byte order.;T:
+@fileI"lib/dnsruby/resource/DS.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::RR::DS;TcRDoc::NormalClass0

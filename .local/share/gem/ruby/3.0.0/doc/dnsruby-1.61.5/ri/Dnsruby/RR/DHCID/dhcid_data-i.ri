@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"dhcid_data:ETI""Dnsruby::RR::DHCID#dhcid_data;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"The opaque rdata for DHCID;T:
+@fileI""lib/dnsruby/resource/DHCID.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::RR::DHCID;TcRDoc::NormalClass0

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"salt_length:ETI"#Dnsruby::RR::NSEC3#salt_length;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"KThe Salt Length field defines the length of the Salt field in octets, ;TI"$ranging in value from 0 to 255.;T:
+@fileI""lib/dnsruby/resource/NSEC3.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::RR::NSEC3;TcRDoc::NormalClass0

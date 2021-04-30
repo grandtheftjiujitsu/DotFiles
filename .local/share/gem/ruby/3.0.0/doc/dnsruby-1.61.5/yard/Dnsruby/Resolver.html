@@ -1,0 +1,4320 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Dnsruby::Resolver
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Dnsruby::Resolver";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (R)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span>
+     &raquo; 
+    <span class="title">Resolver</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Dnsruby::Resolver
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Dnsruby::Resolver</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/dnsruby/resolver.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<h2 id="label-Description">Description</h2>
+
+<pre class="code ruby"><code class="ruby">Dnsruby::Resolver is a DNS stub resolver.
+This class performs queries with retries across multiple nameservers.
+The system configured resolvers are used by default.
+
+The retry policy is a combination of the Net::DNS and dnsjava approach, and has the option of :
+* A total timeout for the query (defaults to 0, meaning &quot;no total timeout&quot;)
+* A retransmission system that targets the namervers concurrently once the first query round is
+ complete, but in which the total time per query round is split between the number of nameservers
+ targetted for the first round. and total time for query round is doubled for each query round
+
+Note that, if a total timeout is specified, then that will apply regardless of the retry policy
+(i.e. it may cut retries short).
+
+Note also that these timeouts are distinct from the SingleResolver&#39;s packet_timeout
+
+Timeouts apply to the initial query and response. If DNSSEC validation is to
+be performed, then additional queries may be required (these are performed automatically
+by Dnsruby). Each additional query will be performed with its own timeouts.
+So, even with a query_timeout of 5 seconds, a response which required extensive
+validation may take several times that long.
+(Future versions of Dnsruby may expose finer-grained events for client tracking of
+responses and validation)
+
+== Methods
+
+=== Synchronous
+These methods raise an exception or return a response message with rcode==NOERROR
+
+*  Dnsruby::Resolver#send_message(msg)
+*  Dnsruby::Resolver#query(name [, type [, klass]])
+
+  There are &quot;!&quot; versions of these two methods that return an array [response, error]
+  instead of raising an error on failure.  They can be called as follows:
+
+  response, error = resolver.send_message!(...)
+  response, error = resolver.query!(...)
+
+  If the request succeeds, response will contain the Dnsruby::Message response
+  and error will be nil.
+
+  If the request fails, response will be nil and error will contain the error raised.
+
+=== Asynchronous
+These methods use a response queue to return the response and the error
+
+*  Dnsruby::Resolver#send_async(msg, response_queue, query_id)
+
+== Event Loop
+Dnsruby runs a pure Ruby event loop to handle I/O in a single thread.
+Support for EventMachine has been deprecated.
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="SingleResolver.html" title="Dnsruby::SingleResolver (class)">SingleResolver</a></span></p>
+</div>
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Resolver/EventType.html" title="Dnsruby::Resolver::EventType (class)">EventType</a></span>
+    
+  
+</p>
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="DefaultQueryTimeout-constant" class="">DefaultQueryTimeout =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>0</span></pre></dd>
+      
+        <dt id="DefaultPacketTimeout-constant" class="">DefaultPacketTimeout =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>5</span></pre></dd>
+      
+        <dt id="DefaultRetryTimes-constant" class="">DefaultRetryTimes =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>1</span></pre></dd>
+      
+        <dt id="DefaultRetryDelay-constant" class="">DefaultRetryDelay =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>5</span></pre></dd>
+      
+        <dt id="DefaultPipeLiningMaxQueries-constant" class="">DefaultPipeLiningMaxQueries =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>5</span></pre></dd>
+      
+        <dt id="DefaultPort-constant" class="">DefaultPort =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>53</span></pre></dd>
+      
+        <dt id="DefaultDnssec-constant" class="">DefaultDnssec =
+          
+        </dt>
+        <dd><pre class="code"><span class='kw'>false</span></pre></dd>
+      
+        <dt id="AbsoluteMinDnssecUdpSize-constant" class="">AbsoluteMinDnssecUdpSize =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>1220</span></pre></dd>
+      
+        <dt id="MinDnssecUdpSize-constant" class="">MinDnssecUdpSize =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>4096</span></pre></dd>
+      
+        <dt id="DefaultUDPSize-constant" class="">DefaultUDPSize =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="#MinDnssecUdpSize-constant" title="Dnsruby::Resolver::MinDnssecUdpSize (constant)">MinDnssecUdpSize</a></span></span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#config-instance_method" title="#config (instance method)">#<strong>config</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The current Config.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dnssec-instance_method" title="#dnssec (instance method)">#<strong>dnssec</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Use DNSSEC for this Resolver.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#do_caching-instance_method" title="#do_caching (instance method)">#<strong>do_caching</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Defines whether we will cache responses, or pass every request to the  upstream resolver.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#do_validation-instance_method" title="#do_validation (instance method)">#<strong>do_validation</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Defines whether validation is performed by default on this Resolver when the  query method is called.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ignore_truncation-instance_method" title="#ignore_truncation (instance method)">#<strong>ignore_truncation</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Should truncation be ignored?  i.e.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#no_tcp-instance_method" title="#no_tcp (instance method)">#<strong>no_tcp</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If no_tcp==true, then ONLY UDP will be used as a transport.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#packet_timeout-instance_method" title="#packet_timeout (instance method)">#<strong>packet_timeout</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The timeout for any individual packet.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#port-instance_method" title="#port (instance method)">#<strong>port</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The port to send queries to on the resolver.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#query_timeout-instance_method" title="#query_timeout (instance method)">#<strong>query_timeout</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Note that this timeout represents the total time a query may run for - multiple packets  can be sent to multiple nameservers in this time.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#recurse-instance_method" title="#recurse (instance method)">#<strong>recurse</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Should the Recursion Desired bit be set?.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#retry_delay-instance_method" title="#retry_delay (instance method)">#<strong>retry_delay</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The query will be tried across nameservers retry_times times, with a delay of retry_delay seconds  between each retry.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#retry_times-instance_method" title="#retry_times (instance method)">#<strong>retry_times</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The query will be tried across nameservers retry_times times, with a delay of retry_delay seconds  between each retry.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#src_address-instance_method" title="#src_address (instance method)">#<strong>src_address</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The source address to send queries from for IPv4.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#src_address6-instance_method" title="#src_address6 (instance method)">#<strong>src_address6</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The source address to send queries from for IPv6.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#tcp_pipelining-instance_method" title="#tcp_pipelining (instance method)">#<strong>tcp_pipelining</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If tcp_pipelining==true, then we reuse the TCP connection.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#tcp_pipelining_max_queries-instance_method" title="#tcp_pipelining_max_queries (instance method)">#<strong>tcp_pipelining_max_queries</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>How many times (number of messages) to reuse the pipelining connection before closing, :infinite for infinite number of requests per connection.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#tsig-instance_method" title="#tsig (instance method)">#<strong>tsig</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute tsig.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#udp_size-instance_method" title="#udp_size (instance method)">#<strong>udp_size</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The maximum UDP size to be used.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#use_tcp-instance_method" title="#use_tcp (instance method)">#<strong>use_tcp</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Should TCP be used as a transport rather than UDP?  If use_tcp==true, then ONLY TCP will be used as a transport.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_port-class_method" title="check_port (class method)">.<strong>check_port</strong>(p, src_port = [])  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_ports_from-class_method" title="get_ports_from (class method)">.<strong>get_ports_from</strong>(p)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_tsig-class_method" title="get_tsig (class method)">.<strong>get_tsig</strong>(args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#port_in_range-class_method" title="port_in_range (class method)">.<strong>port_in_range</strong>(p)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_config_nameservers-instance_method" title="#add_config_nameservers (instance method)">#<strong>add_config_nameservers</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_server-instance_method" title="#add_server (instance method)">#<strong>add_server</strong>(server)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p># Add a new SingleResolver to the list of resolvers this Resolver object will     # query.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_src_port-instance_method" title="#add_src_port (instance method)">#<strong>add_src_port</strong>(p)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Can be a single Integer or a Range or an Array  If an invalid port is selected (one reserved by  IANA), then an ArgumentError will be raised.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#close-instance_method" title="#close (instance method)">#<strong>close</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Close the Resolver.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#generate_timeouts-instance_method" title="#generate_timeouts (instance method)">#<strong>generate_timeouts</strong>(base = 0)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(*args)  &#x21d2; Resolver </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create a new Resolver object.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#nameserver=-instance_method" title="#nameserver= (instance method)">#<strong>nameserver=</strong>(n)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#nameservers=-instance_method" title="#nameservers= (instance method)">#<strong>nameservers=</strong>(ns)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#persistent_tcp=-instance_method" title="#persistent_tcp= (instance method)">#<strong>persistent_tcp=</strong>(on)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#persistent_udp=-instance_method" title="#persistent_udp= (instance method)">#<strong>persistent_udp=</strong>(on)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#query-instance_method" title="#query (instance method)">#<strong>query</strong>(name, type = Types.A, klass = Classes.IN, set_cd = @dnssec)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Query for a name.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#query!-instance_method" title="#query! (instance method)">#<strong>query!</strong>(name, type = Types.A, klass = Classes.IN, set_cd = @dnssec)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Like query, but does not raise an error when an error occurs.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#query_no_validation_or_recursion-instance_method" title="#query_no_validation_or_recursion (instance method)">#<strong>query_no_validation_or_recursion</strong>(name, type = Types.A, klass = Classes.IN)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#query_raw-instance_method" title="#query_raw (instance method)">#<strong>query_raw</strong>(message, error_strategy = :return)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Sends a message with send_plain_message.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reset_attributes-instance_method" title="#reset_attributes (instance method)">#<strong>reset_attributes</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#send_async-instance_method" title="#send_async (instance method)">#<strong>send_async</strong>(msg, client_queue, client_query_id = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Asynchronously send a Message to the server.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#send_message-instance_method" title="#send_message (instance method)">#<strong>send_message</strong>(message)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Send a message, and wait for the response.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#send_message!-instance_method" title="#send_message! (instance method)">#<strong>send_message!</strong>(message)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Like send_message, but does not raise an error when an error occurs.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#send_plain_message-instance_method" title="#send_plain_message (instance method)">#<strong>send_plain_message</strong>(message)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This method takes a Message (supplied by the client), and sends it to  the configured nameservers.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#set_config_nameserver-instance_method" title="#set_config_nameserver (instance method)">#<strong>set_config_nameserver</strong>(n)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#single_res_mutex-instance_method" title="#single_res_mutex (instance method)">#<strong>single_res_mutex</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#single_resolvers-instance_method" title="#single_resolvers (instance method)">#<strong>single_resolvers</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>}.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#single_resolvers=-instance_method" title="#single_resolvers= (instance method)">#<strong>single_resolvers=</strong>(s)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The array of SingleResolvers used for sending query messages     attr_accessor :single_resolvers # :nodoc:.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#src_port-instance_method" title="#src_port (instance method)">#<strong>src_port</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The source port to send queries from  Returns either a single Integer or an Array  e.g.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#src_port=-instance_method" title="#src_port= (instance method)">#<strong>src_port=</strong>(p)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Can be a single Integer or a Range or an Array  If an invalid port is selected (one reserved by  IANA), then an ArgumentError will be raised.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update-instance_method" title="#update (instance method)">#<strong>update</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_internal_res-instance_method" title="#update_internal_res (instance method)">#<strong>update_internal_res</strong>(res)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="" title="Dnsruby::Resolver (class)">Resolver</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create a new Resolver object. If no parameters are passed in, then the default</p>
+
+<pre class="code ruby"><code class="ruby">system configuration will be used. Otherwise, a Hash may be passed in with the
+following optional elements :
+
+* :port
+* :use_tcp
+* :tsig
+* :ignore_truncation
+* :src_address
+* :src_address6
+* :src_port
+* :recurse
+* :udp_size
+* :config_info - see Config
+* :nameserver - can be either a String or an array of Strings
+* :packet_timeout
+* :query_timeout
+* :retry_times
+* :retry_delay
+* :do_caching
+* :tcp_pipelining
+* :tcp_pipelining_max_queries - can be a number or :infinite symbol
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 439</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='comment'>#  @TODO@ Should we allow :namesver to be an RRSet of NS records? Would then need to randomly order them?
+</span>  <span class='ivar'>@resolver_ruby</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@src_address</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@src_address6</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@single_res_mutex</span> <span class='op'>=</span> <span class='const'>Mutex</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='ivar'>@configured</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='ivar'>@do_caching</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='ivar'>@config</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Config.html" title="Dnsruby::Config (class)">Config</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Config.html#initialize-instance_method" title="Dnsruby::Config#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_reset_attributes'>reset_attributes</span>
+
+  <span class='comment'>#  Process args
+</span>  <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>==</span> <span class='int'>1</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span> <span class='op'>==</span> <span class='const'>Hash</span>
+      <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='op'>|</span>
+        <span class='kw'>begin</span>
+          <span class='kw'>if</span> <span class='id identifier rubyid_key'>key</span> <span class='op'>==</span> <span class='symbol'>:config_info</span>
+            <span class='ivar'>@config</span><span class='period'>.</span><span class='id identifier rubyid_set_config_info'>set_config_info</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:config_info</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+          <span class='kw'>elsif</span> <span class='id identifier rubyid_key'>key</span> <span class='op'>==</span> <span class='symbol'>:nameserver</span>
+            <span class='id identifier rubyid_set_config_nameserver'>set_config_nameserver</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:nameserver</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+          <span class='kw'>elsif</span> <span class='id identifier rubyid_key'>key</span> <span class='op'>==</span> <span class='symbol'>:nameservers</span>
+            <span class='id identifier rubyid_set_config_nameserver'>set_config_nameserver</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:nameservers</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+          <span class='kw'>else</span>
+            <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>=</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+          <span class='kw'>end</span>
+        <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+          <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Argument </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='embexpr_end'>}</span><span class='tstring_content'> not valid : </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='embexpr_end'>}</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span>
+        <span class='kw'>end</span>
+      <span class='kw'>end</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span> <span class='op'>==</span> <span class='const'>String</span>
+      <span class='id identifier rubyid_set_config_nameserver'>set_config_nameserver</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Config.html" title="Dnsruby::Config (class)">Config</a></span></span>
+      <span class='comment'>#  also accepts a Config object from Dnsruby::Resolv
+</span>      <span class='ivar'>@config</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+  <span class='kw'>else</span>
+    <span class='comment'>#  Anything to do?
+</span>  <span class='kw'>end</span>
+  <span class='id identifier rubyid_update'>update</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="config-instance_method">
+  
+    #<strong>config</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The current Config</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 129</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_config'>config</span>
+  <span class='ivar'>@config</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="dnssec=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="dnssec-instance_method">
+  
+    #<strong>dnssec</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Use DNSSEC for this Resolver</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+165
+166
+167</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 165</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_dnssec'>dnssec</span>
+  <span class='ivar'>@dnssec</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="do_caching=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="do_caching-instance_method">
+  
+    #<strong>do_caching</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Defines whether we will cache responses, or pass every request to the</p>
+
+<pre class="code ruby"><code class="ruby">upstream resolver.  This is only really useful when querying authoritative
+servers (as the upstream recursive resolver is likely to cache)
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+132
+133
+134</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 132</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_do_caching'>do_caching</span>
+  <span class='ivar'>@do_caching</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="do_validation=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="do_validation-instance_method">
+  
+    #<strong>do_validation</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Defines whether validation is performed by default on this Resolver when the</p>
+
+<pre class="code ruby"><code class="ruby">query method is called.
+Note that send_message and send_async expect a
+Message object to be passed in, which is already configured to the callers
+requirements.
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+172
+173
+174</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 172</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_do_validation'>do_validation</span>
+  <span class='ivar'>@do_validation</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="ignore_truncation=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="ignore_truncation-instance_method">
+  
+    #<strong>ignore_truncation</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Should truncation be ignored?</p>
+
+<pre class="code ruby"><code class="ruby">i.e. the TC bit is ignored and thus the resolver will not requery over TCP if TC is set
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+114
+115
+116</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 114</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ignore_truncation'>ignore_truncation</span>
+  <span class='ivar'>@ignore_truncation</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="no_tcp=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="no_tcp-instance_method">
+  
+    #<strong>no_tcp</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If no_tcp==true, then ONLY UDP will be used as a transport.</p>
+
+<pre class="code ruby"><code class="ruby">This should not generally be used, but is provided as a debugging aid.
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+107
+108
+109</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 107</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_no_tcp'>no_tcp</span>
+  <span class='ivar'>@no_tcp</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="packet_timeout=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="packet_timeout-instance_method">
+  
+    #<strong>packet_timeout</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The timeout for any individual packet. This is the timeout used by SingleResolver</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+150
+151
+152</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 150</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_packet_timeout'>packet_timeout</span>
+  <span class='ivar'>@packet_timeout</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="port=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="port-instance_method">
+  
+    #<strong>port</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The port to send queries to on the resolver</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 92</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_port'>port</span>
+  <span class='ivar'>@port</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="query_timeout=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="query_timeout-instance_method">
+  
+    #<strong>query_timeout</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Note that this timeout represents the total time a query may run for - multiple packets</p>
+
+<pre class="code ruby"><code class="ruby">can be sent to multiple nameservers in this time.
+This is distinct from the SingleResolver per-packet timeout
+The query_timeout is not required - it will default to 0, which means &quot;do not use query_timeout&quot;.
+If this is the case then the timeout will be dictated by the retry_times and retry_delay attributes
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+157
+158
+159</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 157</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_query_timeout'>query_timeout</span>
+  <span class='ivar'>@query_timeout</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="recurse=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="recurse-instance_method">
+  
+    #<strong>recurse</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Should the Recursion Desired bit be set?</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+123
+124
+125</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 123</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_recurse'>recurse</span>
+  <span class='ivar'>@recurse</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="retry_delay=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="retry_delay-instance_method">
+  
+    #<strong>retry_delay</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The query will be tried across nameservers retry_times times, with a delay of retry_delay seconds</p>
+
+<pre class="code ruby"><code class="ruby">between each retry. The first time round, retry_delay will be divided by the number of nameservers
+being targetted, and a new nameserver will be queried with the resultant delay.
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+162
+163
+164</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 162</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_retry_delay'>retry_delay</span>
+  <span class='ivar'>@retry_delay</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="retry_times=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="retry_times-instance_method">
+  
+    #<strong>retry_times</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The query will be tried across nameservers retry_times times, with a delay of retry_delay seconds</p>
+
+<pre class="code ruby"><code class="ruby">between each retry. The first time round, retry_delay will be divided by the number of nameservers
+being targetted, and a new nameserver will be queried with the resultant delay.
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+162
+163
+164</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 162</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_retry_times'>retry_times</span>
+  <span class='ivar'>@retry_times</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="src_address=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="src_address-instance_method">
+  
+    #<strong>src_address</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The source address to send queries from for IPv4</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+117
+118
+119</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 117</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_src_address'>src_address</span>
+  <span class='ivar'>@src_address</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="src_address6=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="src_address6-instance_method">
+  
+    #<strong>src_address6</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The source address to send queries from for IPv6</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+120
+121
+122</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 120</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_src_address6'>src_address6</span>
+  <span class='ivar'>@src_address6</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="tcp_pipelining=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="tcp_pipelining-instance_method">
+  
+    #<strong>tcp_pipelining</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If tcp_pipelining==true, then we reuse the TCP connection</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+99
+100
+101</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 99</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_tcp_pipelining'>tcp_pipelining</span>
+  <span class='ivar'>@tcp_pipelining</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="tcp_pipelining_max_queries=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="tcp_pipelining_max_queries-instance_method">
+  
+    #<strong>tcp_pipelining_max_queries</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>How many times (number of messages) to reuse the pipelining connection before closing, :infinite for infinite number of requests per connection</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+103
+104
+105</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 103</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_tcp_pipelining_max_queries'>tcp_pipelining_max_queries</span>
+  <span class='ivar'>@tcp_pipelining_max_queries</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="tsig=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="tsig-instance_method">
+  
+    #<strong>tsig</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute tsig.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+110
+111
+112</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 110</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_tsig'>tsig</span>
+  <span class='ivar'>@tsig</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="udp_size=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="udp_size-instance_method">
+  
+    #<strong>udp_size</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The maximum UDP size to be used</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+126
+127
+128</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 126</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_udp_size'>udp_size</span>
+  <span class='ivar'>@udp_size</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="use_tcp=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="use_tcp-instance_method">
+  
+    #<strong>use_tcp</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Should TCP be used as a transport rather than UDP?</p>
+
+<pre class="code ruby"><code class="ruby">If use_tcp==true, then ONLY TCP will be used as a transport.
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+96
+97
+98</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 96</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_use_tcp'>use_tcp</span>
+  <span class='ivar'>@use_tcp</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="check_port-class_method">
+  
+    .<strong>check_port</strong>(p, src_port = [])  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+656
+657
+658
+659
+660
+661
+662
+663
+664
+665
+666
+667
+668
+669
+670
+671
+672
+673</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 656</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='period'>.</span><span class='id identifier rubyid_check_port'>check_port</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='comma'>,</span> <span class='id identifier rubyid_src_port'>src_port</span><span class='op'>=</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='id identifier rubyid_p'>p</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Integer</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_tmp_src_ports'>tmp_src_ports</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_src_port'>src_port</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_p'>p</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span>
+      <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='period'>.</span><span class='id identifier rubyid_check_port'>check_port</span><span class='lparen'>(</span><span class='id identifier rubyid_x'>x</span><span class='comma'>,</span> <span class='id identifier rubyid_tmp_src_ports'>tmp_src_ports</span><span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='kw'>false</span>
+      <span class='kw'>end</span>
+      <span class='id identifier rubyid_tmp_src_ports'>tmp_src_ports</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_x'>x</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='kw'>return</span> <span class='kw'>true</span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='period'>.</span><span class='id identifier rubyid_port_in_range'><span class='object_link'><a href="#port_in_range-class_method" title="Dnsruby::Resolver.port_in_range (method)">port_in_range</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='op'>!</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_src_port'>src_port</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Illegal port (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_p'>p</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_log_and_raise'>log_and_raise</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Illegal port </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_p'>p</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'>ArgumentError</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_ports_from-class_method">
+  
+    .<strong>get_ports_from</strong>(p)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+679
+680
+681
+682
+683
+684
+685
+686
+687
+688
+689</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 679</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_ports_from'>get_ports_from</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_a'>a</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_p'>p</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Integer</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_a'>a</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_p'>p</span><span class='rbracket'>]</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_p'>p</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span>
+      <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_x'>x</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_a'>a</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_tsig-class_method">
+  
+    .<strong>get_tsig</strong>(args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+738
+739
+740
+741
+742
+743
+744
+745
+746
+747
+748
+749
+750
+751
+752
+753
+754
+755
+756
+757
+758</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 738</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_tsig'>get_tsig</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_tsig'>tsig</span> <span class='op'>=</span> <span class='kw'>nil</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>==</span> <span class='int'>1</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_instance_of?'>instance_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="RR.html" title="Dnsruby::RR (class)">RR</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="RR/TSIG.html" title="Dnsruby::RR::TSIG (class)">TSIG</a></span></span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_tsig'>tsig</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+      <span class='kw'>elsif</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_instance_of?'>instance_of?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_tsig'>tsig</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="RR.html" title="Dnsruby::RR (class)">RR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new_from_hash'><span class='object_link'><a href="RR.html#new_from_hash-class_method" title="Dnsruby::RR.new_from_hash (method)">new_from_hash</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_create_tsig_options'>create_tsig_options</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>else</span>
+      <span class='comment'>#           Dnsruby.log.debug{&#39;TSIG signing switched off&#39;}
+</span>      <span class='kw'>return</span> <span class='kw'>nil</span>
+    <span class='kw'>end</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_tsig'>tsig</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="RR.html" title="Dnsruby::RR (class)">RR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new_from_hash'><span class='object_link'><a href="RR.html#new_from_hash-class_method" title="Dnsruby::RR.new_from_hash (method)">new_from_hash</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_create_tsig_options'>create_tsig_options</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TSIG signing now using </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tsig'>tsig</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>, key=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tsig'>tsig</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_tsig'>tsig</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="port_in_range-class_method">
+  
+    .<strong>port_in_range</strong>(p)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+675
+676
+677</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 675</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='period'>.</span><span class='id identifier rubyid_port_in_range'>port_in_range</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+  <span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span> <span class='op'>&gt;=</span> <span class='int'>50000</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span> <span class='op'>&lt;=</span> <span class='int'>65535</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add_config_nameservers-instance_method">
+  
+    #<strong>add_config_nameservers</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 480</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_config_nameservers'>add_config_nameservers</span> <span class='comment'># :nodoc: all
+</span>  <span class='kw'>unless</span> <span class='ivar'>@configured</span>
+    <span class='ivar'>@config</span><span class='period'>.</span><span class='id identifier rubyid_get_ready'>get_ready</span>
+  <span class='kw'>end</span>
+  <span class='ivar'>@configured</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='ivar'>@single_res_mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
+    <span class='comment'>#  Add the Config nameservers
+</span>    <span class='ivar'>@config</span><span class='period'>.</span><span class='id identifier rubyid_nameserver'>nameserver</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ns'>ns</span><span class='op'>|</span>
+      <span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="PacketSender.html" title="Dnsruby::PacketSender (class)">PacketSender</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="PacketSender.html#initialize-instance_method" title="Dnsruby::PacketSender#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='lbrace'>{</span>
+          <span class='label'>server:</span>             <span class='id identifier rubyid_ns'>ns</span><span class='comma'>,</span>
+          <span class='label'>port:</span>               <span class='ivar'>@port</span><span class='comma'>,</span>
+          <span class='label'>dnssec:</span>             <span class='ivar'>@dnssec</span><span class='comma'>,</span>
+          <span class='label'>use_tcp:</span>            <span class='ivar'>@use_tcp</span><span class='comma'>,</span>
+          <span class='label'>no_tcp:</span>             <span class='ivar'>@no_tcp</span><span class='comma'>,</span>
+          <span class='label'>tcp_pipelining:</span>     <span class='ivar'>@tcp_pipelining</span><span class='comma'>,</span>
+          <span class='label'>tcp_pipelining_max_queries:</span> <span class='ivar'>@tcp_pipelining_max_queries</span><span class='comma'>,</span>
+          <span class='label'>packet_timeout:</span>     <span class='ivar'>@packet_timeout</span><span class='comma'>,</span>
+          <span class='label'>tsig:</span>               <span class='ivar'>@tsig</span><span class='comma'>,</span>
+          <span class='label'>ignore_truncation:</span>  <span class='ivar'>@ignore_truncation</span><span class='comma'>,</span>
+          <span class='label'>src_address:</span>        <span class='ivar'>@src_address</span><span class='comma'>,</span>
+          <span class='label'>src_address6:</span>       <span class='ivar'>@src_address6</span><span class='comma'>,</span>
+          <span class='label'>src_port:</span>           <span class='ivar'>@src_port</span><span class='comma'>,</span>
+          <span class='label'>recurse:</span>            <span class='ivar'>@recurse</span><span class='comma'>,</span>
+          <span class='label'>udp_size:</span>           <span class='ivar'>@udp_size</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+      <span class='ivar'>@single_resolvers</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_res'>res</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_res'>res</span>
+    <span class='kw'>end</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="add_server-instance_method">
+  
+    #<strong>add_server</strong>(server)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p># Add a new SingleResolver to the list of resolvers this Resolver object will</p>
+
+<pre class="code ruby"><code class="ruby"><span class='comment'># query.
+</span><span class='kw'>def</span> <span class='id identifier rubyid_add_resolver'>add_resolver</span><span class='lparen'>(</span><span class='id identifier rubyid_internal'>internal</span><span class='rparen'>)</span> <span class='comment'># :nodoc:
+</span>  <span class='comment'># @TODO@ Make a new PacketSender from this SingleResolver!!
+</span>  <span class='ivar'>@single_resolvers</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_internal'>internal</span><span class='rparen'>)</span>
+<span class='kw'>end</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+568
+569
+570
+571
+572
+573
+574</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 568</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_server'>add_server</span><span class='lparen'>(</span><span class='id identifier rubyid_server'>server</span><span class='rparen'>)</span><span class='comment'># :nodoc:
+</span>  <span class='ivar'>@configured</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="PacketSender.html" title="Dnsruby::PacketSender (class)">PacketSender</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="PacketSender.html#initialize-instance_method" title="Dnsruby::PacketSender#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_server'>server</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_log_and_raise'>log_and_raise</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Can&#39;t create server </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_server'>server</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'>ArgumentError</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_res'>res</span>
+  <span class='id identifier rubyid_update_internal_res'>update_internal_res</span><span class='lparen'>(</span><span class='id identifier rubyid_res'>res</span><span class='rparen'>)</span>
+  <span class='ivar'>@single_res_mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span> <span class='ivar'>@single_resolvers</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_res'>res</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="add_src_port-instance_method">
+  
+    #<strong>add_src_port</strong>(p)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Can be a single Integer or a Range or an Array</p>
+
+<pre class="code ruby"><code class="ruby">If an invalid port is selected (one reserved by
+IANA), then an ArgumentError will be raised.
+&quot;0&quot; means &quot;any valid port&quot; - this is only a viable
+option if it is the only port in the list.
+An ArgumentError will be raised if &quot;0&quot; is added to
+an existing set of source ports.
+
+       res.add_src_port(60000)
+       res.add_src_port([60001,60005,60010])
+       res.add_src_port(60015..60115)
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+642
+643
+644
+645
+646
+647
+648
+649
+650
+651
+652
+653
+654</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 642</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_src_port'>add_src_port</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='period'>.</span><span class='id identifier rubyid_check_port'><span class='object_link'><a href="#check_port-class_method" title="Dnsruby::Resolver.check_port (method)">check_port</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='comma'>,</span> <span class='ivar'>@src_port</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_a'>a</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_ports_from'><span class='object_link'><a href="#get_ports_from-class_method" title="Dnsruby::Resolver.get_ports_from (method)">get_ports_from</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@src_port</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_x'>x</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_log_and_raise'>log_and_raise</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>src_port of 0 only allowed as only src_port value (currently </span><span class='embexpr_beg'>#{</span><span class='ivar'>@src_port</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='embexpr_end'>}</span><span class='tstring_content'> values</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+            <span class='const'>ArgumentError</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+      <span class='ivar'>@src_port</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_x'>x</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_update'>update</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="close-instance_method">
+  
+    #<strong>close</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Close the Resolver. Unfinished queries are terminated with OtherResolvError.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+412
+413
+414</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 412</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_close'>close</span>
+  <span class='ivar'>@resolver_ruby</span><span class='period'>.</span><span class='id identifier rubyid_close'>close</span> <span class='kw'>if</span> <span class='ivar'>@resolver_ruby</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="generate_timeouts-instance_method">
+  
+    #<strong>generate_timeouts</strong>(base = 0)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+821
+822
+823
+824
+825
+826
+827
+828
+829
+830
+831
+832
+833
+834
+835
+836
+837
+838
+839
+840
+841
+842
+843
+844
+845
+846
+847
+848</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 821</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_generate_timeouts'>generate_timeouts</span><span class='lparen'>(</span><span class='id identifier rubyid_base'>base</span><span class='op'>=</span><span class='int'>0</span><span class='rparen'>)</span> <span class='comment'># :nodoc: all
+</span>  <span class='comment'>#  These should be be pegged to the single_resolver they are targetting :
+</span>  <span class='comment'>#   e.g. timeouts[timeout1]=nameserver
+</span>  <span class='id identifier rubyid_timeouts'>timeouts</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_retry_delay'>retry_delay</span> <span class='op'>=</span> <span class='ivar'>@retry_delay</span>
+  <span class='comment'>#       @single_res_mutex.synchronize {
+</span>  <span class='ivar'>@retry_times</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_retry_count'>retry_count</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_retry_count'>retry_count</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+      <span class='id identifier rubyid_retry_delay'>retry_delay</span> <span class='op'>*=</span> <span class='int'>2</span>
+    <span class='kw'>end</span>
+
+    <span class='ivar'>@single_resolvers</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='rparen'>)</span> <span class='comment'># Just in case...
+</span>    <span class='ivar'>@single_resolvers</span><span class='period'>.</span><span class='id identifier rubyid_each_index'>each_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+      <span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='ivar'>@single_resolvers</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_offset'>offset</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_i'>i</span> <span class='op'>*</span> <span class='ivar'>@retry_delay</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span> <span class='op'>/</span> <span class='ivar'>@single_resolvers</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_retry_count'>retry_count</span> <span class='op'>==</span> <span class='int'>0</span>
+        <span class='id identifier rubyid_timeouts'>timeouts</span><span class='lbracket'>[</span><span class='id identifier rubyid_base'>base</span> <span class='op'>+</span> <span class='id identifier rubyid_offset'>offset</span><span class='rbracket'>]</span><span class='op'>=</span><span class='lbracket'>[</span><span class='id identifier rubyid_res'>res</span><span class='comma'>,</span> <span class='id identifier rubyid_retry_count'>retry_count</span><span class='rbracket'>]</span>
+      <span class='kw'>else</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_timeouts'>timeouts</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='id identifier rubyid_base'>base</span> <span class='op'>+</span> <span class='id identifier rubyid_retry_delay'>retry_delay</span> <span class='op'>+</span> <span class='id identifier rubyid_offset'>offset</span><span class='rparen'>)</span>
+          <span class='id identifier rubyid_log_and_raise'>log_and_raise</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Duplicate timeout key!</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_timeouts'>timeouts</span><span class='lbracket'>[</span><span class='id identifier rubyid_base'>base</span> <span class='op'>+</span> <span class='id identifier rubyid_retry_delay'>retry_delay</span> <span class='op'>+</span> <span class='id identifier rubyid_offset'>offset</span><span class='rbracket'>]</span><span class='op'>=</span><span class='lbracket'>[</span><span class='id identifier rubyid_res'>res</span><span class='comma'>,</span> <span class='id identifier rubyid_retry_count'>retry_count</span><span class='rbracket'>]</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='comment'>#       }
+</span>  <span class='id identifier rubyid_timeouts'>timeouts</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="nameserver=-instance_method">
+  
+    #<strong>nameserver=</strong>(n)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+589
+590
+591
+592
+593
+594</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 589</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_nameserver='>nameserver=</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='rparen'>)</span>
+  <span class='ivar'>@configured</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='ivar'>@single_res_mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span> <span class='ivar'>@single_resolvers</span><span class='op'>=</span><span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_set_config_nameserver'>set_config_nameserver</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_add_config_nameservers'>add_config_nameservers</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="nameservers=-instance_method">
+  
+    #<strong>nameservers=</strong>(ns)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+585
+586
+587</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 585</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_nameservers='>nameservers=</span><span class='lparen'>(</span><span class='id identifier rubyid_ns'>ns</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_nameserver'>nameserver</span><span class='op'>=</span><span class='lparen'>(</span><span class='id identifier rubyid_ns'>ns</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="persistent_tcp=-instance_method">
+  
+    #<strong>persistent_tcp=</strong>(on)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+781
+782
+783
+784</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 781</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_persistent_tcp='>persistent_tcp=</span><span class='lparen'>(</span><span class='id identifier rubyid_on'>on</span><span class='rparen'>)</span>
+  <span class='ivar'>@persistent_tcp</span> <span class='op'>=</span> <span class='id identifier rubyid_on'>on</span>
+  <span class='id identifier rubyid_update'>update</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="persistent_udp=-instance_method">
+  
+    #<strong>persistent_udp=</strong>(on)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+786
+787
+788
+789</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 786</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_persistent_udp='>persistent_udp=</span><span class='lparen'>(</span><span class='id identifier rubyid_on'>on</span><span class='rparen'>)</span>
+  <span class='ivar'>@persistent_udp</span> <span class='op'>=</span> <span class='id identifier rubyid_on'>on</span>
+  <span class='id identifier rubyid_update'>update</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="query-instance_method">
+  
+    #<strong>query</strong>(name, type = Types.A, klass = Classes.IN, set_cd = @dnssec)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Query for a name. If a valid Message is received, then it is returned</p>
+
+<pre class="code ruby"><code class="ruby">to the caller. Otherwise an exception (a Dnsruby::ResolvError or Dnsruby::ResolvTimeout) is raised.
+
+  require &#39;dnsruby&#39;
+  res = Dnsruby::Resolver.new
+  response = res.query(&#39;example.com&#39;) # defaults to Types.A, Classes.IN
+  response = res.query(&#39;example.com&#39;, Types.MX)
+  response = res.query(&#39;208.77.188.166&#39;) # IPv4 address so PTR query will be made
+  response = res.query(&#39;208.77.188.166&#39;, Types.PTR)
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 194</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_query'>query</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='op'>=</span><span class='const'>Types</span><span class='period'>.</span><span class='const'>A</span><span class='comma'>,</span> <span class='id identifier rubyid_klass'>klass</span><span class='op'>=</span><span class='const'>Classes</span><span class='period'>.</span><span class='const'>IN</span><span class='comma'>,</span> <span class='id identifier rubyid_set_cd'>set_cd</span><span class='op'>=</span><span class='ivar'>@dnssec</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Message.html#initialize-instance_method" title="Dnsruby::Message#initialize (method)">new</a></span></span>
+  <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_do_caching'>do_caching</span> <span class='op'>=</span> <span class='ivar'>@do_caching</span>
+  <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_rd'>rd</span> <span class='op'>=</span> <span class='int'>1</span>
+  <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_add_question'>add_question</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_klass'>klass</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_do_validation'>do_validation</span> <span class='op'>=</span> <span class='ivar'>@do_validation</span>
+  <span class='kw'>if</span> <span class='ivar'>@dnssec</span>
+    <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_cd'>cd</span> <span class='op'>=</span> <span class='id identifier rubyid_set_cd'>set_cd</span> <span class='comment'># We do our own validation by default
+</span>  <span class='kw'>end</span>
+  <span class='id identifier rubyid_send_message'>send_message</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="query!-instance_method">
+  
+    #<strong>query!</strong>(name, type = Types.A, klass = Classes.IN, set_cd = @dnssec)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Like query, but does not raise an error when an error occurs.</p>
+
+<pre class="code ruby"><code class="ruby">Instead, it returns it.
+@return a 2 element array: [response, error]
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+209
+210
+211
+212
+213
+214
+215
+216
+217</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 209</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_query!'>query!</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='op'>=</span><span class='const'>Types</span><span class='period'>.</span><span class='const'>A</span><span class='comma'>,</span> <span class='id identifier rubyid_klass'>klass</span><span class='op'>=</span><span class='const'>Classes</span><span class='period'>.</span><span class='const'>IN</span><span class='comma'>,</span> <span class='id identifier rubyid_set_cd'>set_cd</span><span class='op'>=</span><span class='ivar'>@dnssec</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='semicolon'>;</span> <span class='id identifier rubyid_error'>error</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='kw'>begin</span>
+    <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_query'>query</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_klass'>klass</span><span class='comma'>,</span> <span class='id identifier rubyid_set_cd'>set_cd</span><span class='rparen'>)</span>
+  <span class='kw'>rescue</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+    <span class='id identifier rubyid_error'>error</span> <span class='op'>=</span> <span class='id identifier rubyid_e'>e</span>
+  <span class='kw'>end</span>
+  <span class='lbracket'>[</span><span class='id identifier rubyid_response'>response</span><span class='comma'>,</span> <span class='id identifier rubyid_error'>error</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="query_no_validation_or_recursion-instance_method">
+  
+    #<strong>query_no_validation_or_recursion</strong>(name, type = Types.A, klass = Classes.IN)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 219</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_query_no_validation_or_recursion'>query_no_validation_or_recursion</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='op'>=</span><span class='const'>Types</span><span class='period'>.</span><span class='const'>A</span><span class='comma'>,</span> <span class='id identifier rubyid_klass'>klass</span><span class='op'>=</span><span class='const'>Classes</span><span class='period'>.</span><span class='const'>IN</span><span class='rparen'>)</span> <span class='comment'># :nodoc: all
+</span>  <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Message.html#initialize-instance_method" title="Dnsruby::Message#initialize (method)">new</a></span></span>
+  <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_do_caching'>do_caching</span> <span class='op'>=</span> <span class='ivar'>@do_caching</span>
+  <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_rd'>rd</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_do_validation'>do_validation</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_add_question'>add_question</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_klass'>klass</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='ivar'>@dnssec</span>
+    <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_cd'>cd</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='comment'># We do our own validation by default
+</span>  <span class='kw'>end</span>
+  <span class='id identifier rubyid_send_message'>send_message</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="query_raw-instance_method">
+  
+    #<strong>query_raw</strong>(message, error_strategy = :return)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Sends a message with send_plain_message. Effectively a wrapper around send_plain_message, but adds the ability to configure whether an error will be raised or returned if it occurs.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>message</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the message to send to the DNS server</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>error_strategy</span>
+      
+      
+        <span class='type'></span>
+      
+      
+        <em class="default">(defaults to: <tt>:return</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>:return to return [response, error] (default), :raise to return response only, or raise an error if one occurs</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 284</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_query_raw'>query_raw</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='id identifier rubyid_error_strategy'>error_strategy</span> <span class='op'>=</span> <span class='symbol'>:return</span><span class='rparen'>)</span>
+
+  <span class='kw'>unless</span> <span class='lbracket'>[</span><span class='symbol'>:return</span><span class='comma'>,</span> <span class='symbol'>:raise</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_error_strategy'>error_strategy</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>error_strategy should be one of [:return, :raise].</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_response'>response</span><span class='comma'>,</span> <span class='id identifier rubyid_error'>error</span> <span class='op'>=</span> <span class='id identifier rubyid_send_plain_message'>send_plain_message</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_error_strategy'>error_strategy</span> <span class='op'>==</span> <span class='symbol'>:return</span>
+    <span class='lbracket'>[</span><span class='id identifier rubyid_response'>response</span><span class='comma'>,</span> <span class='id identifier rubyid_error'>error</span><span class='rbracket'>]</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='id identifier rubyid_error'>error</span> <span class='kw'>if</span> <span class='id identifier rubyid_error'>error</span>
+    <span class='id identifier rubyid_response'>response</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reset_attributes-instance_method">
+  
+    #<strong>reset_attributes</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 518</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reset_attributes'>reset_attributes</span> <span class='comment'># :nodoc: all
+</span>  <span class='ivar'>@resolver_ruby</span><span class='period'>.</span><span class='id identifier rubyid_reset_attributes'>reset_attributes</span> <span class='kw'>if</span> <span class='ivar'>@resolver_ruby</span>
+
+  <span class='comment'>#  Attributes
+</span>
+  <span class='comment'>#  do_validation tells the Resolver whether to try to validate the response
+</span>  <span class='comment'>#  with DNSSEC. This should work for NSEC-signed domains, but NSEC3
+</span>  <span class='comment'>#  validation is not currently supported. This attribute now defaults to
+</span>  <span class='comment'>#  false. Please let me know if you require NSEC3 validation.
+</span>  <span class='ivar'>@do_validation</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='ivar'>@query_timeout</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#DefaultQueryTimeout-constant" title="Dnsruby::Resolver::DefaultQueryTimeout (constant)">DefaultQueryTimeout</a></span></span>
+  <span class='ivar'>@retry_delay</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#DefaultRetryDelay-constant" title="Dnsruby::Resolver::DefaultRetryDelay (constant)">DefaultRetryDelay</a></span></span>
+  <span class='ivar'>@retry_times</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#DefaultRetryTimes-constant" title="Dnsruby::Resolver::DefaultRetryTimes (constant)">DefaultRetryTimes</a></span></span>
+  <span class='ivar'>@packet_timeout</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#DefaultPacketTimeout-constant" title="Dnsruby::Resolver::DefaultPacketTimeout (constant)">DefaultPacketTimeout</a></span></span>
+  <span class='ivar'>@port</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#DefaultPort-constant" title="Dnsruby::Resolver::DefaultPort (constant)">DefaultPort</a></span></span>
+  <span class='ivar'>@udp_size</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#DefaultUDPSize-constant" title="Dnsruby::Resolver::DefaultUDPSize (constant)">DefaultUDPSize</a></span></span>
+  <span class='ivar'>@dnssec</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#DefaultDnssec-constant" title="Dnsruby::Resolver::DefaultDnssec (constant)">DefaultDnssec</a></span></span>
+  <span class='ivar'>@do_caching</span><span class='op'>=</span> <span class='kw'>true</span>
+  <span class='ivar'>@use_tcp</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='ivar'>@no_tcp</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='ivar'>@tcp_pipelining</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='ivar'>@tcp_pipelining_max_queries</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#DefaultPipeLiningMaxQueries-constant" title="Dnsruby::Resolver::DefaultPipeLiningMaxQueries (constant)">DefaultPipeLiningMaxQueries</a></span></span>
+  <span class='ivar'>@tsig</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@ignore_truncation</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='ivar'>@config</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Config.html" title="Dnsruby::Config (class)">Config</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Config.html#initialize-instance_method" title="Dnsruby::Config#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='ivar'>@src_address</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@src_address6</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@src_port</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+  <span class='ivar'>@recurse</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='ivar'>@single_res_mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
+    <span class='ivar'>@single_resolvers</span><span class='op'>=</span><span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='rbrace'>}</span>
+  <span class='ivar'>@configured</span> <span class='op'>=</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="send_async-instance_method">
+  
+    #<strong>send_async</strong>(msg, client_queue, client_query_id = nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Asynchronously send a Message to the server. The send can be done using just</p>
+
+<pre class="code ruby"><code class="ruby">Dnsruby. Support for EventMachine has been deprecated.
+
+== Dnsruby pure Ruby event loop :
+
+A client_queue is supplied by the client,
+along with an optional client_query_id to identify the response. The client_query_id
+is generated, if not supplied, and returned to the client.
+When the response is known,
+a tuple of (query_id, response_message, exception) will be added to the client_queue.
+
+The query is sent synchronously in the caller&#39;s thread. The select thread is then used to
+listen for and process the response (up to pushing it to the client_queue). The client thread
+is then used to retrieve the response and deal with it.
+
+Takes :
+
+* msg - the message to send
+* client_queue - a Queue to push the response to, when it arrives
+* client_query_id - an optional ID to identify the query to the client
+* use_tcp - whether to use only TCP (defaults to SingleResolver.use_tcp)
+
+Returns :
+
+* client_query_id - to identify the query response to the client. This ID is
+generated if it is not passed in by the client
+
+=== Example invocations :
+
+   id = res.send_async(msg, queue)
+   NOT SUPPORTED : id = res.send_async(msg, queue, use_tcp)
+   id = res.send_async(msg, queue, id)
+   id = res.send_async(msg, queue, id, use_tcp)
+
+=== Example code :
+
+  require &#39;dnsruby&#39;
+  res = Dnsruby::Resolver.newsend
+  query_id = 10 # can be any object you like
+  query_queue = Queue.new
+  res.send_async(Message.new(&#39;example.com&#39;, Types.MX),  query_queue, query_id)
+  query_id_2 = res.send_async(Message.new(&#39;example.com&#39;, Types.A), query_queue)
+  # ...do a load of other stuff here...
+  2.times do
+    response_id, response, exception = query_queue.pop
+    # You can check the ID to see which query has been answered
+    if exception == nil
+        # deal with good response
+    else
+        # deal with problem
+    end
+  end
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 392</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_send_async'>send_async</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_client_query_id'>client_query_id</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='ivar'>@configured</span>
+    <span class='id identifier rubyid_add_config_nameservers'>add_config_nameservers</span>
+  <span class='kw'>end</span>
+  <span class='comment'>#       @single_res_mutex.synchronize {
+</span>  <span class='kw'>unless</span> <span class='ivar'>@resolver_ruby</span> <span class='comment'># @TODO@ Synchronize this?
+</span>    <span class='ivar'>@resolver_ruby</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ResolverRuby.html" title="Dnsruby::ResolverRuby (class)">ResolverRuby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ResolverRuby.html#initialize-instance_method" title="Dnsruby::ResolverRuby#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='comment'>#       }
+</span>  <span class='id identifier rubyid_client_query_id'>client_query_id</span> <span class='op'>=</span> <span class='ivar'>@resolver_ruby</span><span class='period'>.</span><span class='id identifier rubyid_send_async'>send_async</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_client_query_id'>client_query_id</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='ivar'>@single_resolvers</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>==</span> <span class='int'>0</span>
+    <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span> <span class='lbrace'>{</span>
+      <span class='id identifier rubyid_sleep'>sleep</span><span class='lparen'>(</span><span class='ivar'>@query_timeout</span> <span class='op'>==</span> <span class='int'>0</span> <span class='op'>?</span> <span class='int'>1</span> <span class='op'>:</span> <span class='ivar'>@query_timeout</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_client_queue'>client_queue</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_client_query_id'>client_query_id</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="ResolvTimeout.html" title="Dnsruby::ResolvTimeout (class)">ResolvTimeout</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Query timed out - no nameservers configured</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_client_query_id'>client_query_id</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="send_message-instance_method">
+  
+    #<strong>send_message</strong>(message)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Send a message, and wait for the response. If a valid Message is received, then it is returned</p>
+
+<pre class="code ruby"><code class="ruby">to the caller. Otherwise an exception (a Dnsruby::ResolvError or Dnsruby::ResolvTimeout) is raised.
+
+send_async is called internally.
+
+example :
+
+  require &#39;dnsruby&#39;
+  include Dnsruby
+  res = Dnsruby::Resolver.new
+  begin
+  response = res.send_message(Message.new(&#39;example.com&#39;, Types.MX))
+  rescue ResolvError
+    # ...
+  rescue ResolvTimeout
+    # ...
+  end
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 248</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_send_message'>send_message</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Resolver : sending message</span><span class='tstring_end'>&#39;</span></span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_q'>q</span> <span class='op'>=</span> <span class='const'>Queue</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_send_async'>send_async</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='id identifier rubyid_q'>q</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid__id'>_id</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_error'>error</span> <span class='op'>=</span> <span class='id identifier rubyid_q'>q</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_error'>error</span>
+    <span class='id identifier rubyid_error'>error</span><span class='period'>.</span><span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_result'>result</span> <span class='kw'>if</span> <span class='id identifier rubyid_error'>error</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="ResolvError.html" title="Dnsruby::ResolvError (class)">ResolvError</a></span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='id identifier rubyid_error'>error</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_result'>result</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="send_message!-instance_method">
+  
+    #<strong>send_message!</strong>(message)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Like send_message, but does not raise an error when an error occurs.</p>
+
+<pre class="code ruby"><code class="ruby">Instead, it returns it.
+@return a 2 element array: [response, error]
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+266
+267
+268
+269
+270
+271
+272
+273
+274</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 266</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_send_message!'>send_message!</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='semicolon'>;</span> <span class='id identifier rubyid_error'>error</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='kw'>begin</span>
+    <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_send_message'>send_message</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+  <span class='kw'>rescue</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+    <span class='id identifier rubyid_error'>error</span> <span class='op'>=</span> <span class='id identifier rubyid_e'>e</span>
+  <span class='kw'>end</span>
+  <span class='lbracket'>[</span><span class='id identifier rubyid_response'>response</span><span class='comma'>,</span> <span class='id identifier rubyid_error'>error</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="send_plain_message-instance_method">
+  
+    #<strong>send_plain_message</strong>(message)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This method takes a Message (supplied by the client), and sends it to</p>
+
+<pre class="code ruby"><code class="ruby">the configured nameservers. No changes are made to the Message before it
+is sent (TSIG signatures will be applied if configured on the Resolver).
+Retries are handled as the Resolver is configured to do.
+Incoming responses to the query are not cached or validated (although TCP
+fallback will be performed if the TC bit is set and the (Single)Resolver has
+ignore_truncation set to false).
+Note that the Message is left untouched - this means that no OPT records are
+added, even if the UDP transport for the server is specified at more than 512
+bytes. If it is desired to use EDNS for this packet, then you should call
+the Dnsruby::PacketSender#prepare_for_dnssec(msg), or
+Dnsruby::PacketSender#add_opt_rr(msg)
+The return value from this method is the [response, error] tuple. Either of
+these values may be nil - it is up to the client to check.
+
+example :
+
+  require &#39;dnsruby&#39;
+  include Dnsruby
+  res = Dnsruby::Resolver.new
+  response, error = res.send_plain_message(Message.new(&#39;example.com&#39;, Types.MX))
+  if error
+    print &quot;Error returned : #{error}\n&quot;
+  else
+    process_response(response)
+  end
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 326</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_send_plain_message'>send_plain_message</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Resolver : send_plain_message</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_do_caching'>do_caching</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_do_validation'>do_validation</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_send_raw'>send_raw</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='id identifier rubyid_q'>q</span> <span class='op'>=</span> <span class='const'>Queue</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_send_async'>send_async</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='id identifier rubyid_q'>q</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid__id'>_id</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_error'>error</span> <span class='op'>=</span> <span class='id identifier rubyid_q'>q</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
+  <span class='id identifier rubyid_error'>error</span><span class='period'>.</span><span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_result'>result</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_error'>error</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_error'>error</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="ResolvError.html" title="Dnsruby::ResolvError (class)">ResolvError</a></span></span><span class='rparen'>)</span>
+  <span class='lbracket'>[</span><span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_error'>error</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="set_config_nameserver-instance_method">
+  
+    #<strong>set_config_nameserver</strong>(n)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+509
+510
+511
+512
+513
+514
+515
+516</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 509</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_set_config_nameserver'>set_config_nameserver</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='rparen'>)</span>
+  <span class='comment'>#  @TODO@ Should we allow NS RRSet here? If so, then .sort_by {rand}
+</span>  <span class='ivar'>@config</span><span class='period'>.</span><span class='id identifier rubyid_get_ready'>get_ready</span> <span class='kw'>unless</span> <span class='ivar'>@configured</span>
+  <span class='ivar'>@configured</span> <span class='op'>=</span> <span class='kw'>true</span>
+
+  <span class='ivar'>@config</span><span class='period'>.</span><span class='id identifier rubyid_nameserver'>nameserver</span> <span class='op'>=</span> <span class='id identifier rubyid_n'>n</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='lbracket'>[</span><span class='id identifier rubyid_n'>n</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='id identifier rubyid_n'>n</span>
+  <span class='id identifier rubyid_add_config_nameservers'>add_config_nameservers</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="single_res_mutex-instance_method">
+  
+    #<strong>single_res_mutex</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+817
+818
+819</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 817</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_single_res_mutex'>single_res_mutex</span> <span class='comment'># :nodoc: all
+</span>  <span class='ivar'>@single_res_mutex</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="single_resolvers-instance_method">
+  
+    #<strong>single_resolvers</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>}</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+142
+143
+144
+145
+146
+147</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 142</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_single_resolvers'>single_resolvers</span> <span class='comment'># :nodoc:
+</span>  <span class='kw'>unless</span> <span class='ivar'>@configured</span>
+    <span class='id identifier rubyid_add_config_nameservers'>add_config_nameservers</span>
+  <span class='kw'>end</span>
+  <span class='ivar'>@single_resolvers</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="single_resolvers=-instance_method">
+  
+    #<strong>single_resolvers=</strong>(s)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The array of SingleResolvers used for sending query messages</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_attr_accessor'>attr_accessor</span> <span class='symbol'>:single_resolvers</span> <span class='comment'># :nodoc:
+</span></code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+136
+137
+138
+139
+140
+141</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 136</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_single_resolvers='>single_resolvers=</span><span class='lparen'>(</span><span class='id identifier rubyid_s'>s</span><span class='rparen'>)</span> <span class='comment'># :nodoc:
+</span>  <span class='ivar'>@configured</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='comment'>#       @single_res_mutex.synchronize {
+</span>  <span class='ivar'>@single_resolvers</span> <span class='op'>=</span> <span class='id identifier rubyid_s'>s</span>
+  <span class='comment'>#       }
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="src_port-instance_method">
+  
+    #<strong>src_port</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The source port to send queries from</p>
+
+<pre class="code ruby"><code class="ruby">Returns either a single Integer or an Array
+e.g. &#39;0&#39;, or &#39;[60001, 60002, 60007]&#39;
+
+Defaults to 0 - random port
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+611
+612
+613</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 611</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_src_port'>src_port</span>
+  <span class='ivar'>@src_port</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>==</span> <span class='int'>1</span> <span class='op'>?</span> <span class='ivar'>@src_port</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='ivar'>@src_port</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="src_port=-instance_method">
+  
+    #<strong>src_port=</strong>(p)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Can be a single Integer or a Range or an Array</p>
+
+<pre class="code ruby"><code class="ruby">If an invalid port is selected (one reserved by
+IANA), then an ArgumentError will be raised.
+
+       res.src_port=0
+       res.src_port=[60001,60005,60010]
+       res.src_port=60015..60115
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+623
+624
+625
+626
+627
+628</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 623</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_src_port='>src_port=</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='period'>.</span><span class='id identifier rubyid_check_port'><span class='object_link'><a href="#check_port-class_method" title="Dnsruby::Resolver.check_port (method)">check_port</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+    <span class='ivar'>@src_port</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_ports_from'><span class='object_link'><a href="#get_ports_from-class_method" title="Dnsruby::Resolver.get_ports_from (method)">get_ports_from</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_update'>update</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update-instance_method">
+  
+    #<strong>update</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+553
+554
+555
+556
+557
+558
+559</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 553</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span> <span class='comment'># :nodoc: all
+</span>  <span class='comment'>#  Update any resolvers we have with the latest config
+</span>  <span class='ivar'>@single_res_mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='kw'>do</span>
+    <span class='ivar'>@single_resolvers</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='rparen'>)</span> <span class='comment'># Just in case...
+</span>    <span class='ivar'>@single_resolvers</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_res'>res</span><span class='op'>|</span> <span class='id identifier rubyid_update_internal_res'>update_internal_res</span><span class='lparen'>(</span><span class='id identifier rubyid_res'>res</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_internal_res-instance_method">
+  
+    #<strong>update_internal_res</strong>(res)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+576
+577
+578
+579
+580
+581
+582
+583</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resolver.rb', line 576</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_internal_res'>update_internal_res</span><span class='lparen'>(</span><span class='id identifier rubyid_res'>res</span><span class='rparen'>)</span>
+  <span class='lbracket'>[</span><span class='symbol'>:port</span><span class='comma'>,</span> <span class='symbol'>:use_tcp</span><span class='comma'>,</span> <span class='symbol'>:no_tcp</span><span class='comma'>,</span> <span class='symbol'>:tcp_pipelining</span><span class='comma'>,</span> <span class='symbol'>:tcp_pipelining_max_queries</span><span class='comma'>,</span> <span class='symbol'>:tsig</span><span class='comma'>,</span> <span class='symbol'>:ignore_truncation</span><span class='comma'>,</span> <span class='symbol'>:packet_timeout</span><span class='comma'>,</span>
+    <span class='symbol'>:src_address</span><span class='comma'>,</span> <span class='symbol'>:src_address6</span><span class='comma'>,</span> <span class='symbol'>:src_port</span><span class='comma'>,</span> <span class='symbol'>:recurse</span><span class='comma'>,</span>
+    <span class='symbol'>:udp_size</span><span class='comma'>,</span> <span class='symbol'>:dnssec</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_param'>param</span><span class='op'>|</span>
+
+    <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_param'>param</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>=</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_instance_variable_get'>instance_variable_get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>@</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_param'>param</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr  9 10:58:10 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-3.0.0).
+</div>
+
+    </div>
+  </body>
+</html>

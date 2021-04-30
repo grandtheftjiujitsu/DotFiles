@@ -1,0 +1,5 @@
+U:RDoc::Attr[iI"gateway_type:ETI"'Dnsruby::RR::IPSECKEY#gateway_type;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"$Specifies the type of gateway :;To:RDoc::Markup::Verbatim;	[	I"0 - no gateway present
+;TI"%1 - 4 byte IPv4 address present
+;TI"&2 - 16 byte IPv6 address present
+;TI")3 - wire-encoded domain name present;T:@format0:
+@fileI"%lib/dnsruby/resource/IPSECKEY.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::RR::IPSECKEY;TcRDoc::NormalClass0

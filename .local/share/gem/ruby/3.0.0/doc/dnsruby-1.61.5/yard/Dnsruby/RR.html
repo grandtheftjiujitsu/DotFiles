@@ -1,0 +1,2491 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Dnsruby::RR
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Dnsruby::RR";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (R)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span>
+     &raquo; 
+    <span class="title">RR</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Dnsruby::RR
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Dnsruby::RR</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd>Comparable</dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/dnsruby/resource/A.rb<span class="defines">,<br />
+  lib/dnsruby/resource/DS.rb,<br /> lib/dnsruby/resource/IN.rb,<br /> lib/dnsruby/resource/KX.rb,<br /> lib/dnsruby/resource/MX.rb,<br /> lib/dnsruby/resource/PX.rb,<br /> lib/dnsruby/resource/RP.rb,<br /> lib/dnsruby/resource/RR.rb,<br /> lib/dnsruby/resource/RT.rb,<br /> lib/dnsruby/resource/APL.rb,<br /> lib/dnsruby/resource/CAA.rb,<br /> lib/dnsruby/resource/CDS.rb,<br /> lib/dnsruby/resource/DLV.rb,<br /> lib/dnsruby/resource/HIP.rb,<br /> lib/dnsruby/resource/LOC.rb,<br /> lib/dnsruby/resource/NXT.rb,<br /> lib/dnsruby/resource/OPT.rb,<br /> lib/dnsruby/resource/SOA.rb,<br /> lib/dnsruby/resource/SPF.rb,<br /> lib/dnsruby/resource/SRV.rb,<br /> lib/dnsruby/resource/TXT.rb,<br /> lib/dnsruby/resource/URI.rb,<br /> lib/dnsruby/resource/X25.rb,<br /> lib/dnsruby/resource/AAAA.rb,<br /> lib/dnsruby/resource/CERT.rb,<br /> lib/dnsruby/resource/GPOS.rb,<br /> lib/dnsruby/resource/ISDN.rb,<br /> lib/dnsruby/resource/NSAP.rb,<br /> lib/dnsruby/resource/NSEC.rb,<br /> lib/dnsruby/resource/TKEY.rb,<br /> lib/dnsruby/resource/TLSA.rb,<br /> lib/dnsruby/resource/TSIG.rb,<br /> lib/dnsruby/resource/AFSDB.rb,<br /> lib/dnsruby/resource/DHCID.rb,<br /> lib/dnsruby/resource/HINFO.rb,<br /> lib/dnsruby/resource/MINFO.rb,<br /> lib/dnsruby/resource/NAPTR.rb,<br /> lib/dnsruby/resource/NSEC3.rb,<br /> lib/dnsruby/resource/RRSIG.rb,<br /> lib/dnsruby/resource/SSHFP.rb,<br /> lib/dnsruby/resource/DNSKEY.rb,<br /> lib/dnsruby/resource/CDNSKEY.rb,<br /> lib/dnsruby/resource/generic.rb,<br /> lib/dnsruby/resource/IPSECKEY.rb,<br /> lib/dnsruby/resource/NSEC3PARAM.rb,<br /> lib/dnsruby/resource/domain_name.rb</span>
+</dd>
+  </dl>
+  
+</div>
+
+<div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="RR/ANY.html" title="Dnsruby::RR::ANY (class)">ANY</a></span>, <span class='object_link'><a href="RR/CAA.html" title="Dnsruby::RR::CAA (class)">CAA</a></span>, <span class='object_link'><a href="RR/CERT.html" title="Dnsruby::RR::CERT (class)">CERT</a></span>, <span class='object_link'><a href="RR/DHCID.html" title="Dnsruby::RR::DHCID (class)">DHCID</a></span>, <span class='object_link'><a href="RR/DNSKEY.html" title="Dnsruby::RR::DNSKEY (class)">DNSKEY</a></span>, <span class='object_link'><a href="RR/DS.html" title="Dnsruby::RR::DS (class)">DS</a></span>, <span class='object_link'><a href="RR/DomainName.html" title="Dnsruby::RR::DomainName (class)">DomainName</a></span>, <span class='object_link'><a href="RR/GPOS.html" title="Dnsruby::RR::GPOS (class)">GPOS</a></span>, <span class='object_link'><a href="RR/Generic.html" title="Dnsruby::RR::Generic (class)">Generic</a></span>, <span class='object_link'><a href="RR/HINFO.html" title="Dnsruby::RR::HINFO (class)">HINFO</a></span>, <span class='object_link'><a href="RR/HIP.html" title="Dnsruby::RR::HIP (class)">HIP</a></span>, <span class='object_link'><a href="RR/IN/A.html" title="Dnsruby::RR::IN::A (class)">IN::A</a></span>, <span class='object_link'><a href="RR/IN/AAAA.html" title="Dnsruby::RR::IN::AAAA (class)">IN::AAAA</a></span>, <span class='object_link'><a href="RR/IN/AFSDB.html" title="Dnsruby::RR::IN::AFSDB (class)">IN::AFSDB</a></span>, <span class='object_link'><a href="RR/IN/APL.html" title="Dnsruby::RR::IN::APL (class)">IN::APL</a></span>, <span class='object_link'><a href="RR/IN/PX.html" title="Dnsruby::RR::IN::PX (class)">IN::PX</a></span>, <span class='object_link'><a href="RR/IN/SRV.html" title="Dnsruby::RR::IN::SRV (class)">IN::SRV</a></span>, <span class='object_link'><a href="RR/IN/TLSA.html" title="Dnsruby::RR::IN::TLSA (class)">IN::TLSA</a></span>, <span class='object_link'><a href="RR/IN/WKS.html" title="Dnsruby::RR::IN::WKS (class)">IN::WKS</a></span>, <span class='object_link'><a href="RR/IPSECKEY.html" title="Dnsruby::RR::IPSECKEY (class)">IPSECKEY</a></span>, <span class='object_link'><a href="RR/ISDN.html" title="Dnsruby::RR::ISDN (class)">ISDN</a></span>, <span class='object_link'><a href="RR/KX.html" title="Dnsruby::RR::KX (class)">KX</a></span>, <span class='object_link'><a href="RR/LOC.html" title="Dnsruby::RR::LOC (class)">LOC</a></span>, <span class='object_link'><a href="RR/MINFO.html" title="Dnsruby::RR::MINFO (class)">MINFO</a></span>, <span class='object_link'><a href="RR/MX.html" title="Dnsruby::RR::MX (class)">MX</a></span>, <span class='object_link'><a href="RR/NAPTR.html" title="Dnsruby::RR::NAPTR (class)">NAPTR</a></span>, <span class='object_link'><a href="RR/NSAP.html" title="Dnsruby::RR::NSAP (class)">NSAP</a></span>, <span class='object_link'><a href="RR/NSEC.html" title="Dnsruby::RR::NSEC (class)">NSEC</a></span>, <span class='object_link'><a href="RR/NSEC3.html" title="Dnsruby::RR::NSEC3 (class)">NSEC3</a></span>, <span class='object_link'><a href="RR/NSEC3PARAM.html" title="Dnsruby::RR::NSEC3PARAM (class)">NSEC3PARAM</a></span>, <span class='object_link'><a href="RR/NXT.html" title="Dnsruby::RR::NXT (class)">NXT</a></span>, <span class='object_link'><a href="RR/OPT.html" title="Dnsruby::RR::OPT (class)">OPT</a></span>, <span class='object_link'><a href="RR/RP.html" title="Dnsruby::RR::RP (class)">RP</a></span>, <span class='object_link'><a href="RR/RRSIG.html" title="Dnsruby::RR::RRSIG (class)">RRSIG</a></span>, <span class='object_link'><a href="RR/RT.html" title="Dnsruby::RR::RT (class)">RT</a></span>, <span class='object_link'><a href="RR/SOA.html" title="Dnsruby::RR::SOA (class)">SOA</a></span>, <span class='object_link'><a href="RR/SSHFP.html" title="Dnsruby::RR::SSHFP (class)">SSHFP</a></span>, <span class='object_link'><a href="RR/TKEY.html" title="Dnsruby::RR::TKEY (class)">TKEY</a></span>, <span class='object_link'><a href="RR/TSIG.html" title="Dnsruby::RR::TSIG (class)">TSIG</a></span>, <span class='object_link'><a href="RR/TXT.html" title="Dnsruby::RR::TXT (class)">TXT</a></span>, <span class='object_link'><a href="RR/URI.html" title="Dnsruby::RR::URI (class)">URI</a></span>, <span class='object_link'><a href="RR/X25.html" title="Dnsruby::RR::X25 (class)">X25</a></span></p>
+</div>
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="RR/IN.html" title="Dnsruby::RR::IN (module)">IN</a></span>
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="RR/ANY.html" title="Dnsruby::RR::ANY (class)">ANY</a></span>, <span class='object_link'><a href="RR/CAA.html" title="Dnsruby::RR::CAA (class)">CAA</a></span>, <span class='object_link'><a href="RR/CDNSKEY.html" title="Dnsruby::RR::CDNSKEY (class)">CDNSKEY</a></span>, <span class='object_link'><a href="RR/CDS.html" title="Dnsruby::RR::CDS (class)">CDS</a></span>, <span class='object_link'><a href="RR/CERT.html" title="Dnsruby::RR::CERT (class)">CERT</a></span>, <span class='object_link'><a href="RR/CNAME.html" title="Dnsruby::RR::CNAME (class)">CNAME</a></span>, <span class='object_link'><a href="RR/DHCID.html" title="Dnsruby::RR::DHCID (class)">DHCID</a></span>, <span class='object_link'><a href="RR/DLV.html" title="Dnsruby::RR::DLV (class)">DLV</a></span>, <span class='object_link'><a href="RR/DNAME.html" title="Dnsruby::RR::DNAME (class)">DNAME</a></span>, <span class='object_link'><a href="RR/DNSKEY.html" title="Dnsruby::RR::DNSKEY (class)">DNSKEY</a></span>, <span class='object_link'><a href="RR/DS.html" title="Dnsruby::RR::DS (class)">DS</a></span>, <span class='object_link'><a href="RR/DomainName.html" title="Dnsruby::RR::DomainName (class)">DomainName</a></span>, <span class='object_link'><a href="RR/GPOS.html" title="Dnsruby::RR::GPOS (class)">GPOS</a></span>, <span class='object_link'><a href="RR/Generic.html" title="Dnsruby::RR::Generic (class)">Generic</a></span>, <span class='object_link'><a href="RR/HINFO.html" title="Dnsruby::RR::HINFO (class)">HINFO</a></span>, <span class='object_link'><a href="RR/HIP.html" title="Dnsruby::RR::HIP (class)">HIP</a></span>, <span class='object_link'><a href="RR/IPSECKEY.html" title="Dnsruby::RR::IPSECKEY (class)">IPSECKEY</a></span>, <span class='object_link'><a href="RR/ISDN.html" title="Dnsruby::RR::ISDN (class)">ISDN</a></span>, <span class='object_link'><a href="RR/KX.html" title="Dnsruby::RR::KX (class)">KX</a></span>, <span class='object_link'><a href="RR/LOC.html" title="Dnsruby::RR::LOC (class)">LOC</a></span>, <span class='object_link'><a href="RR/MB.html" title="Dnsruby::RR::MB (class)">MB</a></span>, <span class='object_link'><a href="RR/MG.html" title="Dnsruby::RR::MG (class)">MG</a></span>, <span class='object_link'><a href="RR/MINFO.html" title="Dnsruby::RR::MINFO (class)">MINFO</a></span>, <span class='object_link'><a href="RR/MR.html" title="Dnsruby::RR::MR (class)">MR</a></span>, <span class='object_link'><a href="RR/MX.html" title="Dnsruby::RR::MX (class)">MX</a></span>, <span class='object_link'><a href="RR/NAPTR.html" title="Dnsruby::RR::NAPTR (class)">NAPTR</a></span>, <span class='object_link'><a href="RR/NS.html" title="Dnsruby::RR::NS (class)">NS</a></span>, <span class='object_link'><a href="RR/NSAP.html" title="Dnsruby::RR::NSAP (class)">NSAP</a></span>, <span class='object_link'><a href="RR/NSEC.html" title="Dnsruby::RR::NSEC (class)">NSEC</a></span>, <span class='object_link'><a href="RR/NSEC3.html" title="Dnsruby::RR::NSEC3 (class)">NSEC3</a></span>, <span class='object_link'><a href="RR/NSEC3PARAM.html" title="Dnsruby::RR::NSEC3PARAM (class)">NSEC3PARAM</a></span>, <span class='object_link'><a href="RR/NXT.html" title="Dnsruby::RR::NXT (class)">NXT</a></span>, <span class='object_link'><a href="RR/OPT.html" title="Dnsruby::RR::OPT (class)">OPT</a></span>, <span class='object_link'><a href="RR/PTR.html" title="Dnsruby::RR::PTR (class)">PTR</a></span>, <span class='object_link'><a href="RR/RP.html" title="Dnsruby::RR::RP (class)">RP</a></span>, <span class='object_link'><a href="RR/RRSIG.html" title="Dnsruby::RR::RRSIG (class)">RRSIG</a></span>, <span class='object_link'><a href="RR/RT.html" title="Dnsruby::RR::RT (class)">RT</a></span>, <span class='object_link'><a href="RR/SOA.html" title="Dnsruby::RR::SOA (class)">SOA</a></span>, <span class='object_link'><a href="RR/SPF.html" title="Dnsruby::RR::SPF (class)">SPF</a></span>, <span class='object_link'><a href="RR/SSHFP.html" title="Dnsruby::RR::SSHFP (class)">SSHFP</a></span>, <span class='object_link'><a href="RR/TKEY.html" title="Dnsruby::RR::TKEY (class)">TKEY</a></span>, <span class='object_link'><a href="RR/TSIG.html" title="Dnsruby::RR::TSIG (class)">TSIG</a></span>, <span class='object_link'><a href="RR/TXT.html" title="Dnsruby::RR::TXT (class)">TXT</a></span>, <span class='object_link'><a href="RR/URI.html" title="Dnsruby::RR::URI (class)">URI</a></span>, <span class='object_link'><a href="RR/X25.html" title="Dnsruby::RR::X25 (class)">X25</a></span>
+    
+  
+</p>
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="ClassInsensitiveTypes-constant" class="">ClassInsensitiveTypes =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#NS-constant" title="Dnsruby::Types::NS (constant)">NS</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/NS.html" title="Dnsruby::RR::NS (class)">NS</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#CNAME-constant" title="Dnsruby::Types::CNAME (constant)">CNAME</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/CNAME.html" title="Dnsruby::RR::CNAME (class)">CNAME</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#DNAME-constant" title="Dnsruby::Types::DNAME (constant)">DNAME</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/DNAME.html" title="Dnsruby::RR::DNAME (class)">DNAME</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#URI-constant" title="Dnsruby::Types::URI (constant)">URI</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/URI.html" title="Dnsruby::RR::URI (class)">URI</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#DS-constant" title="Dnsruby::Types::DS (constant)">DS</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/DS.html" title="Dnsruby::RR::DS (class)">DS</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#CDS-constant" title="Dnsruby::Types::CDS (constant)">CDS</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/CDS.html" title="Dnsruby::RR::CDS (class)">CDS</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#DNSKEY-constant" title="Dnsruby::Types::DNSKEY (constant)">DNSKEY</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/DNSKEY.html" title="Dnsruby::RR::DNSKEY (class)">DNSKEY</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#CDNSKEY-constant" title="Dnsruby::Types::CDNSKEY (constant)">CDNSKEY</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/CDNSKEY.html" title="Dnsruby::RR::CDNSKEY (class)">CDNSKEY</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#SOA-constant" title="Dnsruby::Types::SOA (constant)">SOA</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/SOA.html" title="Dnsruby::RR::SOA (class)">SOA</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#PTR-constant" title="Dnsruby::Types::PTR (constant)">PTR</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/PTR.html" title="Dnsruby::RR::PTR (class)">PTR</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#HINFO-constant" title="Dnsruby::Types::HINFO (constant)">HINFO</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/HINFO.html" title="Dnsruby::RR::HINFO (class)">HINFO</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#MINFO-constant" title="Dnsruby::Types::MINFO (constant)">MINFO</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/MINFO.html" title="Dnsruby::RR::MINFO (class)">MINFO</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#MX-constant" title="Dnsruby::Types::MX (constant)">MX</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/MX.html" title="Dnsruby::RR::MX (class)">MX</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#TXT-constant" title="Dnsruby::Types::TXT (constant)">TXT</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/TXT.html" title="Dnsruby::RR::TXT (class)">TXT</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#ISDN-constant" title="Dnsruby::Types::ISDN (constant)">ISDN</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/ISDN.html" title="Dnsruby::RR::ISDN (class)">ISDN</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#MB-constant" title="Dnsruby::Types::MB (constant)">MB</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/MB.html" title="Dnsruby::RR::MB (class)">MB</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#MG-constant" title="Dnsruby::Types::MG (constant)">MG</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/MG.html" title="Dnsruby::RR::MG (class)">MG</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#MR-constant" title="Dnsruby::Types::MR (constant)">MR</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/MR.html" title="Dnsruby::RR::MR (class)">MR</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#NAPTR-constant" title="Dnsruby::Types::NAPTR (constant)">NAPTR</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/NAPTR.html" title="Dnsruby::RR::NAPTR (class)">NAPTR</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#NSAP-constant" title="Dnsruby::Types::NSAP (constant)">NSAP</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/NSAP.html" title="Dnsruby::RR::NSAP (class)">NSAP</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#OPT-constant" title="Dnsruby::Types::OPT (constant)">OPT</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/OPT.html" title="Dnsruby::RR::OPT (class)">OPT</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#RP-constant" title="Dnsruby::Types::RP (constant)">RP</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/RP.html" title="Dnsruby::RR::RP (class)">RP</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#RT-constant" title="Dnsruby::Types::RT (constant)">RT</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/RT.html" title="Dnsruby::RR::RT (class)">RT</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#X25-constant" title="Dnsruby::Types::X25 (constant)">X25</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/X25.html" title="Dnsruby::RR::X25 (class)">X25</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#KX-constant" title="Dnsruby::Types::KX (constant)">KX</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/KX.html" title="Dnsruby::RR::KX (class)">KX</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#SPF-constant" title="Dnsruby::Types::SPF (constant)">SPF</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/SPF.html" title="Dnsruby::RR::SPF (class)">SPF</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#CERT-constant" title="Dnsruby::Types::CERT (constant)">CERT</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/CERT.html" title="Dnsruby::RR::CERT (class)">CERT</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#LOC-constant" title="Dnsruby::Types::LOC (constant)">LOC</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/LOC.html" title="Dnsruby::RR::LOC (class)">LOC</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#TSIG-constant" title="Dnsruby::Types::TSIG (constant)">TSIG</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/TSIG.html" title="Dnsruby::RR::TSIG (class)">TSIG</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#TKEY-constant" title="Dnsruby::Types::TKEY (constant)">TKEY</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/TKEY.html" title="Dnsruby::RR::TKEY (class)">TKEY</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#ANY-constant" title="Dnsruby::Types::ANY (constant)">ANY</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/ANY.html" title="Dnsruby::RR::ANY (class)">ANY</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#RRSIG-constant" title="Dnsruby::Types::RRSIG (constant)">RRSIG</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/RRSIG.html" title="Dnsruby::RR::RRSIG (class)">RRSIG</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#NSEC-constant" title="Dnsruby::Types::NSEC (constant)">NSEC</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/NSEC.html" title="Dnsruby::RR::NSEC (class)">NSEC</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#NSEC3-constant" title="Dnsruby::Types::NSEC3 (constant)">NSEC3</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/NSEC3.html" title="Dnsruby::RR::NSEC3 (class)">NSEC3</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#NSEC3PARAM-constant" title="Dnsruby::Types::NSEC3PARAM (constant)">NSEC3PARAM</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/NSEC3PARAM.html" title="Dnsruby::RR::NSEC3PARAM (class)">NSEC3PARAM</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#DLV-constant" title="Dnsruby::Types::DLV (constant)">DLV</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/DLV.html" title="Dnsruby::RR::DLV (class)">DLV</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#SSHFP-constant" title="Dnsruby::Types::SSHFP (constant)">SSHFP</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/SSHFP.html" title="Dnsruby::RR::SSHFP (class)">SSHFP</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#IPSECKEY-constant" title="Dnsruby::Types::IPSECKEY (constant)">IPSECKEY</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/IPSECKEY.html" title="Dnsruby::RR::IPSECKEY (class)">IPSECKEY</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#HIP-constant" title="Dnsruby::Types::HIP (constant)">HIP</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/HIP.html" title="Dnsruby::RR::HIP (class)">HIP</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#DHCID-constant" title="Dnsruby::Types::DHCID (constant)">DHCID</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/DHCID.html" title="Dnsruby::RR::DHCID (class)">DHCID</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#GPOS-constant" title="Dnsruby::Types::GPOS (constant)">GPOS</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/GPOS.html" title="Dnsruby::RR::GPOS (class)">GPOS</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#NXT-constant" title="Dnsruby::Types::NXT (constant)">NXT</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/NXT.html" title="Dnsruby::RR::NXT (class)">NXT</a></span></span><span class='comma'>,</span>
+  <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#CAA-constant" title="Dnsruby::Types::CAA (constant)">CAA</a></span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="RR/CAA.html" title="Dnsruby::RR::CAA (class)">CAA</a></span></span><span class='comma'>,</span>
+<span class='rbrace'>}</span></pre></dd>
+      
+        <dt id="RR_REGEX-classvariable" class="">@@RR_REGEX =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>A regular expression which catches any valid resource record.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>^\\s*(\\S+)\\s*(\\d+)?\\s*(</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Classes.html" title="Dnsruby::Classes (class)">Classes</a></span></span><span class='period'>.</span><span class='id identifier rubyid_regexp'><span class='object_link'><a href="CodeMapper.html#regexp-class_method" title="Dnsruby::CodeMapper.regexp (method)">regexp</a></span></span> <span class='op'>+</span>
+<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>|CLASS\\d+</span><span class='tstring_end'>&quot;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>)?\\s*(</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='id identifier rubyid_regexp'><span class='object_link'><a href="CodeMapper.html#regexp-class_method" title="Dnsruby::CodeMapper.regexp (method)">regexp</a></span></span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>|TYPE\\d+</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>)?\\s*([\\s\\S]*)\$</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></pre></dd>
+      
+        <dt id="implemented_rr_map-classvariable" class="">@@implemented_rr_map =
+          
+        </dt>
+        <dd><pre class="code"><span class='kw'>nil</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#klass-instance_method" title="#klass (instance method)">#<strong>klass</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The Resource class.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#name-instance_method" title="#name (instance method)">#<strong>name</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The Resource&#39;s domain name.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rdata-instance_method" title="#rdata (instance method)">#<strong>rdata</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The Resource data section.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ttl-instance_method" title="#ttl (instance method)">#<strong>ttl</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The Resource Time-To-Live.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#type-instance_method" title="#type (instance method)">#<strong>type</strong>  &#x21d2; Object </a>
+    
+
+    
+      (also: #rr_type)
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The Resource type.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create-class_method" title="create (class method)">.<strong>create</strong>(*args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create a new RR from the arguments, which can be either a String or a Hash.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#decode_rdata-class_method" title="decode_rdata (class method)">.<strong>decode_rdata</strong>(msg)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_class-class_method" title="find_class (class method)">.<strong>find_class</strong>(type_value, class_value)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_class-class_method" title="get_class (class method)">.<strong>get_class</strong>(type_value, class_value)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get an RR of the specified type and class.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_num-class_method" title="get_num (class method)">.<strong>get_num</strong>(bytes)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#implemented_rrs-class_method" title="implemented_rrs (class method)">.<strong>implemented_rrs</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Return an array of all the currently implemented RR types.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new_from_data-class_method" title="new_from_data (class method)">.<strong>new_from_data</strong>(*args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new_from_hash-class_method" title="new_from_hash (class method)">.<strong>new_from_hash</strong>(inhash)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create a new RR from the hash.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new_from_string-class_method" title="new_from_string (class method)">.<strong>new_from_string</strong>(rrstring)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a Dnsruby::RR object of the appropriate type and initialized from the string passed by the user.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#<=>-instance_method" title="#&lt;=&gt; (instance method)">#<strong>&lt;=&gt;</strong>(other)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#==-instance_method" title="#== (instance method)">#<strong>==</strong>(other)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clone-instance_method" title="#clone (instance method)">#<strong>clone</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#encode_rdata-instance_method" title="#encode_rdata (instance method)">#<strong>encode_rdata</strong>(msg, canonical = false)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#eql%3F-instance_method" title="#eql? (instance method)">#<strong>eql?</strong>(other)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc:.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#from_data-instance_method" title="#from_data (instance method)">#<strong>from_data</strong>(data)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#from_hash-instance_method" title="#from_hash (instance method)">#<strong>from_hash</strong>(hash)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#from_string-instance_method" title="#from_string (instance method)">#<strong>from_string</strong>(input)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#hash-instance_method" title="#hash (instance method)">#<strong>hash</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc:.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#init_defaults-instance_method" title="#init_defaults (instance method)">#<strong>init_defaults</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rdata_to_string-instance_method" title="#rdata_to_string (instance method)">#<strong>rdata_to_string</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get a string representation of the data section of the RR (in zone file format).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rdlength-instance_method" title="#rdlength (instance method)">#<strong>rdlength</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sameRRset-instance_method" title="#sameRRset (instance method)">#<strong>sameRRset</strong>(rec)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Determines if two Records could be part of the same RRset.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_s-instance_method" title="#to_s (instance method)">#<strong>to_s</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a string representation of the RR in zone file format.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="klass=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="klass-instance_method">
+  
+    #<strong>klass</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The Resource class</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 46</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_klass'>klass</span>
+  <span class='ivar'>@klass</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="name=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="name-instance_method">
+  
+    #<strong>name</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The Resource&#39;s domain name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41
+42</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 40</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
+  <span class='ivar'>@name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="rdata=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="rdata-instance_method">
+  
+    #<strong>rdata</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The Resource data section</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+52
+53
+54</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 52</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_rdata'>rdata</span>
+  <span class='ivar'>@rdata</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="ttl=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="ttl-instance_method">
+  
+    #<strong>ttl</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The Resource Time-To-Live</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+49
+50
+51</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 49</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ttl'>ttl</span>
+  <span class='ivar'>@ttl</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="type=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="type-instance_method">
+  
+    #<strong>type</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='rr_type-instance_method'>rr_type</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The Resource type</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+43
+44
+45</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 43</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_type'>type</span>
+  <span class='ivar'>@type</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="create-class_method">
+  
+    .<strong>create</strong>(*args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create a new RR from the arguments, which can be either a String or a Hash. See new_from_string and new_from_hash for details</p>
+
+<pre class="code ruby"><code class="ruby">a     = Dnsruby::RR.create(&#39;foo.example.com. 86400 A 10.1.2.3&#39;)
+mx    = Dnsruby::RR.create(&#39;example.com. 7200 MX 10 mailhost.example.com.&#39;)
+cname = Dnsruby::RR.create(&#39;www.example.com 300 IN CNAME www1.example.com&#39;)
+txt   = Dnsruby::RR.create(&#39;baz.example.com 3600 HS TXT &#39;text record&#39;&#39;)
+
+rr = Dnsruby::RR.create({:name =&gt; &#39;example.com&#39;})
+rr = Dnsruby::RR.create({:name =&gt; &#39;example.com&#39;, :type =&gt; &#39;MX&#39;, :ttl =&gt; 10,
+                               :preference =&gt; 5, :exchange =&gt; &#39;mx1.example.com&#39;})
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 399</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::RR (class)">RR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+    <span class='kw'>when</span> <span class='const'>String</span>
+      <span class='id identifier rubyid_new_from_string'>new_from_string</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='const'>Hash</span>
+      <span class='id identifier rubyid_new_from_hash'>new_from_hash</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_new_from_data'>new_from_data</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="decode_rdata-class_method">
+  
+    .<strong>decode_rdata</strong>(msg)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="DecodeError.html" title="Dnsruby::DecodeError (class)">DecodeError</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+317
+318
+319
+320</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 317</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_decode_rdata'>decode_rdata</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span> <span class='comment'>#:nodoc: all
+</span>  <span class='comment'>#  to be implemented by subclasses
+</span>  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="DecodeError.html" title="Dnsruby::DecodeError (class)">DecodeError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> is RR.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_class-class_method">
+  
+    .<strong>find_class</strong>(type_value, class_value)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 359</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_find_class'>find_class</span><span class='lparen'>(</span><span class='id identifier rubyid_type_value'>type_value</span><span class='comma'>,</span> <span class='id identifier rubyid_class_value'>class_value</span><span class='rparen'>)</span> <span class='comment'># :nodoc: all
+</span>  <span class='kw'>if</span> <span class='op'>!</span><span class='op'>!</span> <span class='lparen'>(</span><span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Dnsruby.html#ClassHash-constant" title="Dnsruby::ClassHash (constant)">ClassHash</a></span></span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='id identifier rubyid_type_value'>type_value</span><span class='comma'>,</span> <span class='id identifier rubyid_class_value'>class_value</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_ret'>ret</span>
+  <span class='kw'>elsif</span> <span class='op'>!</span><span class='op'>!</span> <span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#ClassInsensitiveTypes-constant" title="Dnsruby::RR::ClassInsensitiveTypes (constant)">ClassInsensitiveTypes</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_type_value'>type_value</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_klass'>klass</span> <span class='op'>=</span> <span class='const'>Class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_klass'>klass</span><span class='period'>.</span><span class='id identifier rubyid_const_set'>const_set</span><span class='lparen'>(</span><span class='symbol'>:TypeValue</span><span class='comma'>,</span> <span class='id identifier rubyid_type_value'>type_value</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_klass'>klass</span><span class='period'>.</span><span class='id identifier rubyid_const_set'>const_set</span><span class='lparen'>(</span><span class='symbol'>:ClassValue</span><span class='comma'>,</span> <span class='id identifier rubyid_class_value'>class_value</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_klass'>klass</span>
+  <span class='kw'>else</span>
+    <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="RR/Generic.html" title="Dnsruby::RR::Generic (class)">Generic</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="RR/Generic.html#create-class_method" title="Dnsruby::RR::Generic.create (method)">create</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_type_value'>type_value</span><span class='comma'>,</span> <span class='id identifier rubyid_class_value'>class_value</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_class-class_method">
+  
+    .<strong>get_class</strong>(type_value, class_value)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get an RR of the specified type and class</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 373</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_class'>get_class</span><span class='lparen'>(</span><span class='id identifier rubyid_type_value'>type_value</span><span class='comma'>,</span> <span class='id identifier rubyid_class_value'>class_value</span><span class='rparen'>)</span> <span class='comment'>#:nodoc: all
+</span>  <span class='kw'>if</span> <span class='id identifier rubyid_type_value'>type_value</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#OPT-constant" title="Dnsruby::Types::OPT (constant)">OPT</a></span></span>
+    <span class='kw'>return</span> <span class='const'>Class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="RR/OPT.html" title="Dnsruby::RR::OPT (class)">OPT</a></span></span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_type_value'>type_value</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span> <span class='op'>==</span> <span class='const'>Class</span>
+    <span class='id identifier rubyid_type_value'>type_value</span> <span class='op'>=</span> <span class='id identifier rubyid_type_value'>type_value</span><span class='period'>.</span><span class='id identifier rubyid_const_get'>const_get</span><span class='lparen'>(</span><span class='symbol'>:TypeValue</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_find_class'>find_class</span><span class='lparen'>(</span><span class='id identifier rubyid_type_value'>type_value</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Classes.html" title="Dnsruby::Classes (class)">Classes</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_code'><span class='object_link'><a href="CodeMapper.html#to_code-class_method" title="Dnsruby::CodeMapper.to_code (method)">to_code</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_class_value'>class_value</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_type_value'>type_value</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_type_value'>type_value</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_type_value'>type_value</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span> <span class='op'>:</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="CodeMapper.html#initialize-instance_method" title="Dnsruby::CodeMapper#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_type_value'>type_value</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_code'><span class='object_link'><a href="CodeMapper.html#code-instance_method" title="Dnsruby::CodeMapper#code (method)">code</a></span></span>
+    <span class='id identifier rubyid_class_value'>class_value</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_class_value'>class_value</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Classes.html" title="Dnsruby::Classes (class)">Classes</a></span></span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_class_value'>class_value</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span> <span class='op'>:</span> <span class='const'><span class='object_link'><a href="Classes.html" title="Dnsruby::Classes (class)">Classes</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="CodeMapper.html#initialize-instance_method" title="Dnsruby::CodeMapper#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_class_value'>class_value</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_code'><span class='object_link'><a href="CodeMapper.html#code-instance_method" title="Dnsruby::CodeMapper#code (method)">code</a></span></span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_find_class'>find_class</span><span class='lparen'>(</span><span class='id identifier rubyid_type_value'>type_value</span><span class='comma'>,</span> <span class='id identifier rubyid_class_value'>class_value</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_num-class_method">
+  
+    .<strong>get_num</strong>(bytes)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+410
+411
+412
+413
+414
+415
+416
+417
+418</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 410</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_num'>get_num</span><span class='lparen'>(</span><span class='id identifier rubyid_bytes'>bytes</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_shift'>shift</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_bytes'>bytes</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>-</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='int'>8</span>
+  <span class='id identifier rubyid_bytes'>bytes</span><span class='period'>.</span><span class='id identifier rubyid_each_byte'>each_byte</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_byte'>byte</span><span class='op'>|</span>
+    <span class='id identifier rubyid_ret'>ret</span> <span class='op'>+=</span> <span class='id identifier rubyid_byte'>byte</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_shift'>shift</span>
+    <span class='id identifier rubyid_shift'>shift</span> <span class='op'>-=</span> <span class='int'>8</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_ret'>ret</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="implemented_rrs-class_method">
+  
+    .<strong>implemented_rrs</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Return an array of all the currently implemented RR types</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+274
+275
+276</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 274</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::RR (class)">RR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_implemented_rrs'>implemented_rrs</span>
+  <span class='cvar'>@@implemented_rr_map</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="../Dnsruby.html#ClassHash-constant" title="Dnsruby::ClassHash (constant)">ClassHash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_string'><span class='object_link'><a href="CodeMapper.html#to_string-class_method" title="Dnsruby::CodeMapper.to_string (method)">to_string</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="new_from_data-class_method">
+  
+    .<strong>new_from_data</strong>(*args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 261</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::RR (class)">RR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new_from_data'>new_from_data</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span> <span class='comment'>#:nodoc: all
+</span>  <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_rrtype'>rrtype</span><span class='comma'>,</span> <span class='id identifier rubyid_rrclass'>rrclass</span><span class='comma'>,</span> <span class='id identifier rubyid_ttl'>ttl</span><span class='comma'>,</span> <span class='id identifier rubyid_rdlength'>rdlength</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='id identifier rubyid_offset'>offset</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span>
+  <span class='id identifier rubyid_rdata'>rdata</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span> <span class='op'>?</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='id identifier rubyid_rdlength'>rdlength</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_decoder'>decoder</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="MessageDecoder.html" title="Dnsruby::MessageDecoder (class)">MessageDecoder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="MessageDecoder.html#initialize-instance_method" title="Dnsruby::MessageDecoder#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_rdata'>rdata</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_record'>record</span> <span class='op'>=</span> <span class='id identifier rubyid_get_class'>get_class</span><span class='lparen'>(</span><span class='id identifier rubyid_rrtype'>rrtype</span><span class='comma'>,</span> <span class='id identifier rubyid_rrclass'>rrclass</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_decode_rdata'>decode_rdata</span><span class='lparen'>(</span><span class='id identifier rubyid_decoder'>decoder</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Name.html" title="Dnsruby::Name (class)">Name</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="Name.html#create-class_method" title="Dnsruby::Name.create (method)">create</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_ttl'>ttl</span> <span class='op'>=</span> <span class='id identifier rubyid_ttl'>ttl</span>
+  <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='id identifier rubyid_rrtype'>rrtype</span>
+  <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_klass'>klass</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Classes.html" title="Dnsruby::Classes (class)">Classes</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="CodeMapper.html#initialize-instance_method" title="Dnsruby::CodeMapper#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_rrclass'>rrclass</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_record'>record</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="new_from_hash-class_method">
+  
+    .<strong>new_from_hash</strong>(inhash)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create a new RR from the hash. The name is required; all other fields are optional. Type defaults to ANY and the Class defaults to IN. The TTL defaults to 0.</p>
+
+<p>If the type is specified, then it is necessary to provide ALL of the resource record fields which are specific to that record; i.e. for an MX record, you would need to specify the exchange and the preference</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Dnsruby</span><span class='tstring_end'>&#39;</span></span>
+<span class='id identifier rubyid_rr'>rr</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Dnsruby::RR (class)">RR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new_from_hash'>new_from_hash</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>example.com</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_rr'>rr</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Dnsruby::RR (class)">RR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new_from_hash'>new_from_hash</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>example.com</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>MX</span><span class='comma'>,</span> <span class='symbol'>:ttl</span> <span class='op'>=&gt;</span> <span class='int'>10</span><span class='comma'>,</span> <span class='symbol'>:preference</span> <span class='op'>=&gt;</span> <span class='int'>5</span><span class='comma'>,</span> <span class='symbol'>:exchange</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>mx1.example.com</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rparen'>)</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 141</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::RR (class)">RR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new_from_hash'>new_from_hash</span><span class='lparen'>(</span><span class='id identifier rubyid_inhash'>inhash</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_hash'>hash</span> <span class='op'>=</span> <span class='id identifier rubyid_inhash'>inhash</span><span class='period'>.</span><span class='id identifier rubyid_clone'>clone</span>
+  <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='symbol'>:type</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#ANY-constant" title="Dnsruby::Types::ANY (constant)">ANY</a></span></span>
+  <span class='id identifier rubyid_klass'>klass</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Classes.html" title="Dnsruby::Classes (class)">Classes</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="CodeMapper.html#initialize-instance_method" title="Dnsruby::CodeMapper#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='symbol'>:klass</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="Classes.html" title="Dnsruby::Classes (class)">Classes</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Classes.html#IN-constant" title="Dnsruby::Classes::IN (constant)">IN</a></span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_ttl'>ttl</span> <span class='op'>=</span> <span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='symbol'>:ttl</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_record_class'>record_class</span> <span class='op'>=</span> <span class='id identifier rubyid_get_class'>get_class</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_klass'>klass</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_record'>record</span> <span class='op'>=</span> <span class='id identifier rubyid_record_class'>record_class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span>
+  <span class='kw'>unless</span> <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Name.html" title="Dnsruby::Name (class)">Name</a></span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Name.html" title="Dnsruby::Name (class)">Name</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="Name.html#create-class_method" title="Dnsruby::Name.create (method)">create</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_ttl'>ttl</span> <span class='op'>=</span> <span class='id identifier rubyid_ttl'>ttl</span>
+  <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='id identifier rubyid_type'>type</span>
+  <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_klass'>klass</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Classes.html" title="Dnsruby::Classes (class)">Classes</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="CodeMapper.html#initialize-instance_method" title="Dnsruby::CodeMapper#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_klass'>klass</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_hash'>hash</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='symbol'>:name</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_hash'>hash</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='symbol'>:type</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_hash'>hash</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='symbol'>:ttl</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_hash'>hash</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='symbol'>:klass</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_record'>record</span><span class='period'>.</span><span class='id identifier rubyid_from_hash'>from_hash</span><span class='lparen'>(</span><span class='id identifier rubyid_hash'>hash</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_record'>record</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="new_from_string-class_method">
+  
+    .<strong>new_from_string</strong>(rrstring)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a Dnsruby::RR object of the appropriate type and initialized from the string passed by the user.  The format of the string is that used in zone files, and is compatible with the string returned by Net::DNS::RR.inspect</p>
+
+<p>The name and RR type are required; all other information is optional. If omitted, the TTL defaults to 0 and the RR class defaults to IN.</p>
+
+<p>All names must be fully qualified.  The trailing dot (.) is optional.</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_a'>a</span>     <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Dnsruby::RR (class)">RR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new_from_string'>new_from_string</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo.example.com. 86400 A 10.1.2.3</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_mx'>mx</span>    <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Dnsruby::RR (class)">RR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new_from_string'>new_from_string</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>example.com. 7200 MX 10 mailhost.example.com.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_cname'>cname</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Dnsruby::RR (class)">RR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new_from_string'>new_from_string</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>www.example.com 300 IN CNAME www1.example.com</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_txt'>txt</span>   <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Dnsruby::RR (class)">RR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new_from_string'>new_from_string</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>baz.example.com 3600 HS TXT &quot;text record&quot;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 180</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::RR (class)">RR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new_from_string'>new_from_string</span><span class='lparen'>(</span><span class='id identifier rubyid_rrstring'>rrstring</span><span class='rparen'>)</span>
+  <span class='comment'>#  strip out comments
+</span>  <span class='comment'>#  Test for non escaped &quot;;&quot; by means of the look-behind assertion
+</span>  <span class='comment'>#  (the backslash is escaped)
+</span>  <span class='id identifier rubyid_rrstring'>rrstring</span> <span class='op'>=</span> <span class='id identifier rubyid_rrstring'>rrstring</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(\?&lt;!\\);.*</span><span class='regexp_end'>/o</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_matches'>matches</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='cvar'>@@RR_REGEX</span><span class='embexpr_end'>}</span><span class='regexp_end'>/xo</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_rrstring'>rrstring</span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='id identifier rubyid_matches'>matches</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_rrstring'>rrstring</span><span class='embexpr_end'>}</span><span class='tstring_content'> did not match RR pattern. Please report this to the author!</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_name'>name</span>    <span class='op'>=</span> <span class='id identifier rubyid_matches'>matches</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_ttl'>ttl</span>     <span class='op'>=</span> <span class='id identifier rubyid_matches'>matches</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>||</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_rrclass'>rrclass</span> <span class='op'>=</span> <span class='id identifier rubyid_matches'>matches</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_rrtype'>rrtype</span>  <span class='op'>=</span> <span class='id identifier rubyid_matches'>matches</span><span class='lbracket'>[</span><span class='int'>4</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_rdata'>rdata</span>   <span class='op'>=</span> <span class='id identifier rubyid_matches'>matches</span><span class='lbracket'>[</span><span class='int'>5</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+
+  <span class='id identifier rubyid_rdata'>rdata</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\s+$</span><span class='regexp_end'>/o</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_rdata'>rdata</span>
+
+  <span class='comment'>#  RFC3597 tweaks
+</span>  <span class='comment'>#  This converts to known class and type if specified as TYPE###
+</span>  <span class='kw'>if</span> <span class='id identifier rubyid_rrtype'>rrtype</span>  <span class='op'>=~</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^TYPE\d+</span><span class='regexp_end'>/o</span></span>
+    <span class='id identifier rubyid_rrtype'>rrtype</span>  <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='id identifier rubyid_typesbyval'><span class='object_link'><a href="Types.html#typesbyval-class_method" title="Dnsruby::Types.typesbyval (method)">typesbyval</a></span></span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='id identifier rubyid_typesbyname'><span class='object_link'><a href="Types.html#typesbyname-class_method" title="Dnsruby::Types.typesbyname (method)">typesbyname</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_rrtype'>rrtype</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_rrclass'>rrclass</span> <span class='op'>=~</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^CLASS\d+</span><span class='regexp_end'>/o</span></span>
+    <span class='id identifier rubyid_rrclass'>rrclass</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Classes.html" title="Dnsruby::Classes (class)">Classes</a></span></span><span class='period'>.</span><span class='id identifier rubyid_classesbyval'><span class='object_link'><a href="Classes.html#classesbyval-class_method" title="Dnsruby::Classes.classesbyval (method)">classesbyval</a></span></span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Classes.html" title="Dnsruby::Classes (class)">Classes</a></span></span><span class='op'>::</span><span class='id identifier rubyid_classesbyname'><span class='object_link'><a href="Classes.html#classesbyname-class_method" title="Dnsruby::Classes.classesbyname (method)">classesbyname</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_rrclass'>rrclass</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_rrtype'>rrtype</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_rrclass'>rrclass</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ANY</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_rrtype'>rrtype</span>  <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ANY</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_rrclass'>rrclass</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>IN</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_rrclass'>rrclass</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_rrclass'>rrclass</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>IN</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_rrtype'>rrtype</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_rrtype'>rrtype</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ANY</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>unless</span> <span class='qwords_beg'>%w(</span><span class='tstring_content'>NAPTR</span><span class='words_sep'> </span><span class='tstring_content'>TXT</span><span class='tstring_end'>)</span></span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_rrtype'>rrtype</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_rdata'>rdata</span>
+      <span class='id identifier rubyid_rdata'>rdata</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>(</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_rdata'>rdata</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>)</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_test_length'>test_length</span> <span class='op'>=</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_hexdump'>hexdump</span><span class='comma'>,</span> <span class='id identifier rubyid_rdlength'>rdlength</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_hexdump'>hexdump</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>!=</span> <span class='id identifier rubyid_rdlength'>rdlength</span> <span class='op'>*</span> <span class='int'>2</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_rdata'>rdata</span><span class='embexpr_end'>}</span><span class='tstring_content'> is inconsistent; length should be </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_rdlength'>rdlength</span> <span class='op'>*</span> <span class='int'>2</span><span class='embexpr_end'>}</span><span class='tstring_content'> but is </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_hexdump'>hexdump</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='embexpr_end'>}</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_pack_rdata'>pack_rdata</span> <span class='op'>=</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_regex'>regex</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_rdata'>rdata</span> <span class='op'>=~</span> <span class='id identifier rubyid_regex'>regex</span>
+    <span class='id identifier rubyid_matches'>matches</span> <span class='op'>=</span> <span class='id identifier rubyid_regex'>regex</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_rdata'>rdata</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_rdlength'>rdlength</span> <span class='op'>=</span> <span class='id identifier rubyid_matches'>matches</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+    <span class='id identifier rubyid_hexdump'>hexdump</span>  <span class='op'>=</span> <span class='id identifier rubyid_matches'>matches</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\s*</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_test_length'>test_length</span><span class='period'>.</span><span class='lparen'>(</span><span class='id identifier rubyid_hexdump'>hexdump</span><span class='comma'>,</span> <span class='id identifier rubyid_rdlength'>rdlength</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_packed_rdata'>packed_rdata</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_hexdump'>hexdump</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>H*</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+
+    <span class='lbracket'>[</span><span class='id identifier rubyid_packed_rdata'>packed_rdata</span><span class='comma'>,</span> <span class='id identifier rubyid_rdlength'>rdlength</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_implemented_rrs'>implemented_rrs</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_rrtype'>rrtype</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_rdata'>rdata</span> <span class='op'>!~</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^\s*\\#</span><span class='regexp_end'>/o</span></span>
+    <span class='kw'>return</span> <span class='id identifier rubyid__get_subclass'>_get_subclass</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_rrtype'>rrtype</span><span class='comma'>,</span> <span class='id identifier rubyid_rrclass'>rrclass</span><span class='comma'>,</span> <span class='id identifier rubyid_ttl'>ttl</span><span class='comma'>,</span> <span class='id identifier rubyid_rdata'>rdata</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_implemented_rrs'>implemented_rrs</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_rrtype'>rrtype</span><span class='rparen'>)</span>   <span class='comment'># A known RR type starting with \#
+</span>    <span class='id identifier rubyid_packed_rdata'>packed_rdata</span><span class='comma'>,</span> <span class='id identifier rubyid_rdlength'>rdlength</span> <span class='op'>=</span> <span class='id identifier rubyid_pack_rdata'>pack_rdata</span><span class='period'>.</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\\#\s+(\d+)\s+(.*)$</span><span class='regexp_end'>/o</span></span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_new_from_data'>new_from_data</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_rrtype'>rrtype</span><span class='comma'>,</span> <span class='id identifier rubyid_rrclass'>rrclass</span><span class='comma'>,</span> <span class='id identifier rubyid_ttl'>ttl</span><span class='comma'>,</span> <span class='id identifier rubyid_rdlength'>rdlength</span><span class='comma'>,</span> <span class='id identifier rubyid_packed_rdata'>packed_rdata</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span> <span class='comment'># rdata.length() - rdlength);
+</span>  <span class='kw'>elsif</span> <span class='id identifier rubyid_rdata'>rdata</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\s*\\#\s+\d+\s+</span><span class='regexp_end'>/o</span></span>
+    <span class='id identifier rubyid_regex'>regex</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\\#\s+(\d+)\s+(.*)$</span><span class='regexp_end'>/o</span></span>
+    <span class='comment'># We are now dealing with the truly unknown.
+</span>    <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Expected RFC3597 representation of RDATA</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_rdata'>rdata</span> <span class='op'>=~</span> <span class='id identifier rubyid_regex'>regex</span>
+    <span class='id identifier rubyid_packed_rdata'>packed_rdata</span><span class='comma'>,</span> <span class='id identifier rubyid_rdlength'>rdlength</span> <span class='op'>=</span> <span class='id identifier rubyid_pack_rdata'>pack_rdata</span><span class='period'>.</span><span class='lparen'>(</span><span class='id identifier rubyid_regex'>regex</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_new_from_data'>new_from_data</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_rrtype'>rrtype</span><span class='comma'>,</span> <span class='id identifier rubyid_rrclass'>rrclass</span><span class='comma'>,</span> <span class='id identifier rubyid_ttl'>ttl</span><span class='comma'>,</span> <span class='id identifier rubyid_rdlength'>rdlength</span><span class='comma'>,</span> <span class='id identifier rubyid_packed_rdata'>packed_rdata</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span> <span class='comment'># rdata.length() - rdlength);
+</span>  <span class='kw'>else</span>
+    <span class='comment'># God knows how to handle these...
+</span>    <span class='kw'>return</span> <span class='id identifier rubyid__get_subclass'>_get_subclass</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_rrtype'>rrtype</span><span class='comma'>,</span> <span class='id identifier rubyid_rrclass'>rrclass</span><span class='comma'>,</span> <span class='id identifier rubyid_ttl'>ttl</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="<=>-instance_method">
+  
+    #<strong>&lt;=&gt;</strong>(other)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25
+26
+27
+28
+29
+30
+31</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 23</span>
+
+<span class='kw'>def</span> <span class='op'>&lt;=&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+  <span class='comment'>#       return 1 if ((!other) || !(other.name) || !(other.type))
+</span>  <span class='comment'>#       return -1 if (!@name)
+</span>  <span class='kw'>if</span> <span class='ivar'>@name</span><span class='period'>.</span><span class='id identifier rubyid_canonical'>canonical</span> <span class='op'>==</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_canonical'>canonical</span>
+    <span class='ivar'>@type</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span> <span class='op'>!=</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span> <span class='op'>?</span> <span class='lparen'>(</span><span class='ivar'>@type</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span> <span class='op'>&lt;=&gt;</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='lparen'>(</span><span class='ivar'>@rdata</span> <span class='op'>&lt;=&gt;</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_rdata'>rdata</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@name</span> <span class='op'>&lt;=&gt;</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="==-instance_method">
+  
+    #<strong>==</strong>(other)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 322</span>
+
+<span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span> <span class='op'>==</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span>
+
+  <span class='id identifier rubyid_ivars_to_compare'>ivars_to_compare</span> <span class='op'>=</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_ivars'>ivars</span> <span class='op'>=</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_instance_variables'>instance_variables</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_var'>var</span><span class='op'>|</span> <span class='id identifier rubyid_var'>var</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_ivars'>ivars</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>@ttl</span><span class='tstring_end'>&#39;</span></span> <span class='comment'># RFC 2136 section 1.1
+</span>    <span class='id identifier rubyid_ivars'>ivars</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>@rdata</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>if</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>DS</span>
+      <span class='id identifier rubyid_ivars'>ivars</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>@digest</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_ivars'>ivars</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_get_instance_var_values'>get_instance_var_values</span> <span class='op'>=</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='comma'>,</span> <span class='id identifier rubyid_ivar_names'>ivar_names</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_ivar_names'>ivar_names</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_ivar_name'>ivar_name</span><span class='op'>|</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_instance_variable_get'>instance_variable_get</span><span class='lparen'>(</span><span class='id identifier rubyid_ivar_name'>ivar_name</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_self_ivars'>self_ivars</span>  <span class='op'>=</span> <span class='id identifier rubyid_ivars_to_compare'>ivars_to_compare</span><span class='period'>.</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_other_ivars'>other_ivars</span> <span class='op'>=</span> <span class='id identifier rubyid_ivars_to_compare'>ivars_to_compare</span><span class='period'>.</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_self_ivars'>self_ivars</span> <span class='op'>==</span> <span class='id identifier rubyid_other_ivars'>other_ivars</span>
+
+  <span class='id identifier rubyid_self_values'>self_values</span>  <span class='op'>=</span> <span class='id identifier rubyid_get_instance_var_values'>get_instance_var_values</span><span class='period'>.</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_self_ivars'>self_ivars</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_other_values'>other_values</span> <span class='op'>=</span> <span class='id identifier rubyid_get_instance_var_values'>get_instance_var_values</span><span class='period'>.</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='comma'>,</span> <span class='id identifier rubyid_other_ivars'>other_ivars</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_self_values'>self_values</span> <span class='op'>==</span> <span class='id identifier rubyid_other_values'>other_values</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="clone-instance_method">
+  
+    #<strong>clone</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+75
+76
+77
+78</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 75</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_clone'>clone</span>
+  <span class='id identifier rubyid_encoded'>encoded</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="MessageEncoder.html" title="Dnsruby::MessageEncoder (class)">MessageEncoder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="MessageEncoder.html#initialize-instance_method" title="Dnsruby::MessageEncoder#initialize (method)">new</a></span></span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_encoder'>encoder</span><span class='op'>|</span> <span class='id identifier rubyid_encoder'>encoder</span><span class='period'>.</span><span class='id identifier rubyid_put_rr'>put_rr</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='const'><span class='object_link'><a href="MessageDecoder.html" title="Dnsruby::MessageDecoder (class)">MessageDecoder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="MessageDecoder.html#initialize-instance_method" title="Dnsruby::MessageDecoder#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_encoded'>encoded</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_get_rr'><span class='object_link'><a href="MessageDecoder.html#get_rr-instance_method" title="Dnsruby::MessageDecoder#get_rr (method)">get_rr</a></span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="encode_rdata-instance_method">
+  
+    #<strong>encode_rdata</strong>(msg, canonical = false)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="EncodeError.html" title="Dnsruby::EncodeError (class)">EncodeError</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+312
+313
+314
+315</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 312</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_encode_rdata'>encode_rdata</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_canonical'>canonical</span><span class='op'>=</span><span class='kw'>false</span><span class='rparen'>)</span> <span class='comment'>#:nodoc: all
+</span>  <span class='comment'>#  to be implemented by subclasses
+</span>  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="EncodeError.html" title="Dnsruby::EncodeError (class)">EncodeError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> is RR.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="eql?-instance_method">
+  
+    #<strong>eql?</strong>(other)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+348
+349
+350</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 348</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_eql?'>eql?</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span> <span class='comment'>#:nodoc:
+</span>  <span class='kw'>self</span> <span class='op'>==</span> <span class='id identifier rubyid_other'>other</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="from_data-instance_method">
+  
+    #<strong>from_data</strong>(data)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>NotImplementedError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+302
+303
+304
+305</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 302</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_from_data'>from_data</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span> <span class='comment'>#:nodoc: all
+</span>  <span class='comment'>#  to be implemented by subclasses
+</span>  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="from_hash-instance_method">
+  
+    #<strong>from_hash</strong>(hash)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+125
+126
+127
+128
+129</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 125</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_from_hash'>from_hash</span><span class='lparen'>(</span><span class='id identifier rubyid_hash'>hash</span><span class='rparen'>)</span> <span class='comment'>#:nodoc: all
+</span>  <span class='id identifier rubyid_hash'>hash</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_param'>param</span><span class='op'>|</span>
+    <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_param'>param</span><span class='embexpr_end'>}</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_param'>param</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="from_string-instance_method">
+  
+    #<strong>from_string</strong>(input)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+307
+308
+309
+310</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 307</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_from_string'>from_string</span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='rparen'>)</span> <span class='comment'>#:nodoc: all
+</span>  <span class='comment'>#  to be implemented by subclasses
+</span>  <span class='comment'>#       raise NotImplementedError.new
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="hash-instance_method">
+  
+    #<strong>hash</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+352
+353
+354
+355
+356
+357</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 352</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_hash'>hash</span> <span class='comment'># :nodoc:
+</span>  <span class='id identifier rubyid_vars'>vars</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_instance_variables'>instance_variables</span> <span class='op'>-</span> <span class='lbracket'>[</span><span class='symbol'>:@ttl</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span>
+  <span class='id identifier rubyid_vars'>vars</span><span class='period'>.</span><span class='id identifier rubyid_inject'>inject</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_hash_value'>hash_value</span><span class='comma'>,</span> <span class='id identifier rubyid_var_name'>var_name</span><span class='op'>|</span>
+    <span class='id identifier rubyid_hash_value'>hash_value</span> <span class='op'>^</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_instance_variable_get'>instance_variable_get</span><span class='lparen'>(</span><span class='id identifier rubyid_var_name'>var_name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_hash'>hash</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="init_defaults-instance_method">
+  
+    #<strong>init_defaults</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+98
+99
+100</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 98</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_init_defaults'>init_defaults</span>
+  <span class='comment'>#  Default to do nothing
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="rdata_to_string-instance_method">
+  
+    #<strong>rdata_to_string</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get a string representation of the data section of the RR (in zone file format)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+298
+299
+300</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 298</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_rdata_to_string'>rdata_to_string</span>
+  <span class='lparen'>(</span><span class='ivar'>@rdata</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@rdata</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='ivar'>@rdata</span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>no rdata</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="rdlength-instance_method">
+  
+    #<strong>rdlength</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+54
+55
+56</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 54</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_rdlength'>rdlength</span>
+  <span class='id identifier rubyid_rdata'>rdata</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sameRRset-instance_method">
+  
+    #<strong>sameRRset</strong>(rec)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Determines if two Records could be part of the same RRset.</p>
+
+<pre class="code ruby"><code class="ruby">This compares the name, type, and class of the Records; the ttl and
+rdata are not compared.
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 84</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sameRRset'>sameRRset</span><span class='lparen'>(</span><span class='id identifier rubyid_rec'>rec</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='ivar'>@klass</span> <span class='op'>!=</span> <span class='id identifier rubyid_rec'>rec</span><span class='period'>.</span><span class='id identifier rubyid_klass'>klass</span> <span class='op'>||</span> <span class='ivar'>@name</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span> <span class='op'>!=</span> <span class='id identifier rubyid_rec'>rec</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+    <span class='kw'>return</span> <span class='kw'>false</span>
+  <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='id identifier rubyid_rec'>rec</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>RRSIG</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='ivar'>@type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>RRSIG</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_rec'>rec</span><span class='period'>.</span><span class='id identifier rubyid_type_covered'>type_covered</span> <span class='op'>==</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_type_covered'>type_covered</span>
+  <span class='kw'>end</span>
+  <span class='lbracket'>[</span><span class='id identifier rubyid_rec'>rec</span><span class='comma'>,</span> <span class='kw'>self</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_rr'>rr</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#RRSIG-constant" title="Dnsruby::Types::RRSIG (constant)">RRSIG</a></span></span>
+      <span class='kw'>return</span> <span class='lparen'>(</span><span class='ivar'>@type</span> <span class='op'>==</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_type_covered'>type_covered</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='lparen'>(</span><span class='id identifier rubyid_rec'>rec</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_type_covered'>type_covered</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='ivar'>@type</span> <span class='op'>==</span> <span class='id identifier rubyid_rec'>rec</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_s-instance_method">
+  
+    #<strong>to_s</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a string representation of the RR in zone file format</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+292
+293
+294
+295</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RR.rb', line 292</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='id identifier rubyid_s'>s</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>?</span> <span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='lparen'>(</span><span class='kw'>true</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\t</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_s'>s</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='id identifier rubyid_ttl'>ttl</span><span class='comma'>,</span> <span class='id identifier rubyid_klass'>klass</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_rdata_to_string'>rdata_to_string</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_s</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\t</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr  9 10:58:11 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-3.0.0).
+</div>
+
+    </div>
+  </body>
+</html>

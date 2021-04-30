@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Dnsruby::ZoneTransfer
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Dnsruby::ZoneTransfer";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (Z)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span>
+     &raquo; 
+    <span class="title">ZoneTransfer</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Dnsruby::ZoneTransfer
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Dnsruby::ZoneTransfer</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/dnsruby/zone_transfer.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>This class performs zone transfers as per RFC1034 (AXFR) and RFC1995 (IXFR).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="ZoneTransfer/Delta.html" title="Dnsruby::ZoneTransfer::Delta (class)">Delta</a></span>
+    
+  
+</p>
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#connect_timeout-instance_method" title="#connect_timeout (instance method)">#<strong>connect_timeout</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Sets the connect timeout in seconds.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#klass-instance_method" title="#klass (instance method)">#<strong>klass</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The class - defaults to IN.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#last_tsigstate-instance_method" title="#last_tsigstate (instance method)">#<strong>last_tsigstate</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the tsigstate of the last transfer (nil if no TSIG signed transfer has occurred).</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#port-instance_method" title="#port (instance method)">#<strong>port</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The port to connect to - defaults to 53.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#serial-instance_method" title="#serial (instance method)">#<strong>serial</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If using IXFR, this is the SOA serial number to start the incrementals from.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#server-instance_method" title="#server (instance method)">#<strong>server</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The nameserver to use for the zone transfer - defaults to system config.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#src_address-instance_method" title="#src_address (instance method)">#<strong>src_address</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The source address to connect to.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#transfer_type-instance_method" title="#transfer_type (instance method)">#<strong>transfer_type</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>What type of transfer to do (IXFR or AXFR) - defaults to AXFR.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#tsig-instance_method" title="#tsig (instance method)">#<strong>tsig</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The TSIG record used to sign the transfer.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#compare_serial-instance_method" title="#compare_serial (instance method)">#<strong>compare_serial</strong>(s1, s2)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Compare two serials according to RFC 1982.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#do_transfer-instance_method" title="#do_transfer (instance method)">#<strong>do_transfer</strong>(zone, server)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; ZoneTransfer </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of ZoneTransfer.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#parseRR-instance_method" title="#parseRR (instance method)">#<strong>parseRR</strong>(rec)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#receive_message-instance_method" title="#receive_message (instance method)">#<strong>receive_message</strong>(socket)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#send_message-instance_method" title="#send_message (instance method)">#<strong>send_message</strong>(socket, msg)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#tcp_read-instance_method" title="#tcp_read (instance method)">#<strong>tcp_read</strong>(socket, len)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#transfer-instance_method" title="#transfer (instance method)">#<strong>transfer</strong>(zone)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Perform a zone transfer (RFC1995)  If an IXFR query is unsuccessful, then AXFR is tried (and @transfer_type is set  to AXFR)  TCP is used as the only transport.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Dnsruby::ZoneTransfer (class)">ZoneTransfer</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of ZoneTransfer.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/zone_transfer.rb', line 50</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
+  <span class='ivar'>@server</span><span class='op'>=</span><span class='const'><span class='object_link'><a href="Config.html" title="Dnsruby::Config (class)">Config</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Config.html#initialize-instance_method" title="Dnsruby::Config#initialize (method)">new</a></span></span><span class='period'>.</span><span class='id identifier rubyid_nameserver'><span class='object_link'><a href="Config.html#nameserver-instance_method" title="Dnsruby::Config#nameserver (method)">nameserver</a></span></span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+  <span class='ivar'>@transfer_type</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>AXFR</span>
+  <span class='ivar'>@klass</span><span class='op'>=</span><span class='const'><span class='object_link'><a href="Classes.html" title="Dnsruby::Classes (class)">Classes</a></span></span><span class='period'>.</span><span class='const'>IN</span>
+  <span class='ivar'>@port</span><span class='op'>=</span><span class='int'>53</span>
+  <span class='ivar'>@serial</span><span class='op'>=</span><span class='int'>0</span>
+  <span class='ivar'>@tsig</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@axfr</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@src_address</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@connect_timeout</span> <span class='op'>=</span> <span class='int'>5</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="connect_timeout=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="connect_timeout-instance_method">
+  
+    #<strong>connect_timeout</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Sets the connect timeout in seconds</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/zone_transfer.rb', line 37</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_connect_timeout'>connect_timeout</span>
+  <span class='ivar'>@connect_timeout</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="klass=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="klass-instance_method">
+  
+    #<strong>klass</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The class - defaults to IN</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+25
+26
+27</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/zone_transfer.rb', line 25</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_klass'>klass</span>
+  <span class='ivar'>@klass</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="last_tsigstate-instance_method">
+  
+    #<strong>last_tsigstate</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the tsigstate of the last transfer (nil if no TSIG signed transfer has occurred)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/zone_transfer.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_last_tsigstate'>last_tsigstate</span>
+  <span class='ivar'>@last_tsigstate</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="port=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="port-instance_method">
+  
+    #<strong>port</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The port to connect to - defaults to 53</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+27
+28
+29</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/zone_transfer.rb', line 27</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_port'>port</span>
+  <span class='ivar'>@port</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="serial=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="serial-instance_method">
+  
+    #<strong>serial</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If using IXFR, this is the SOA serial number to start the incrementals from</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/zone_transfer.rb', line 29</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_serial'>serial</span>
+  <span class='ivar'>@serial</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="server=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="server-instance_method">
+  
+    #<strong>server</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The nameserver to use for the zone transfer - defaults to system config</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/zone_transfer.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_server'>server</span>
+  <span class='ivar'>@server</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="src_address=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="src_address-instance_method">
+  
+    #<strong>src_address</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The source address to connect to</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/zone_transfer.rb', line 31</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_src_address'>src_address</span>
+  <span class='ivar'>@src_address</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="transfer_type=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="transfer_type-instance_method">
+  
+    #<strong>transfer_type</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>What type of transfer to do (IXFR or AXFR) - defaults to AXFR</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/zone_transfer.rb', line 23</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_transfer_type'>transfer_type</span>
+  <span class='ivar'>@transfer_type</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="tsig=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="tsig-instance_method">
+  
+    #<strong>tsig</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The TSIG record used to sign the transfer</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+33
+34
+35</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/zone_transfer.rb', line 33</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_tsig'>tsig</span>
+  <span class='ivar'>@tsig</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="compare_serial-instance_method">
+  
+    #<strong>compare_serial</strong>(s1, s2)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Compare two serials according to RFC 1982. Return 0 if equal, -1 if s1 is bigger, 1 if s1 is smaller.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/zone_transfer.rb', line 227</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_compare_serial'>compare_serial</span><span class='lparen'>(</span><span class='id identifier rubyid_s1'>s1</span><span class='comma'>,</span> <span class='id identifier rubyid_s2'>s2</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_s1'>s1</span> <span class='op'>==</span> <span class='id identifier rubyid_s2'>s2</span>
+    <span class='kw'>return</span> <span class='int'>0</span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_s1'>s1</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_s2'>s2</span> <span class='kw'>and</span> <span class='lparen'>(</span><span class='id identifier rubyid_s2'>s2</span> <span class='op'>-</span> <span class='id identifier rubyid_s1'>s1</span><span class='rparen'>)</span> <span class='op'>&lt;</span> <span class='lparen'>(</span><span class='int'>2</span><span class='op'>**</span><span class='int'>31</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='int'>1</span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_s1'>s1</span> <span class='op'>&gt;</span> <span class='id identifier rubyid_s2'>s2</span> <span class='kw'>and</span> <span class='lparen'>(</span><span class='id identifier rubyid_s1'>s1</span> <span class='op'>-</span> <span class='id identifier rubyid_s2'>s2</span><span class='rparen'>)</span> <span class='op'>&gt;</span> <span class='lparen'>(</span><span class='int'>2</span><span class='op'>**</span><span class='int'>31</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='int'>1</span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_s1'>s1</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_s2'>s2</span> <span class='kw'>and</span> <span class='lparen'>(</span><span class='id identifier rubyid_s2'>s2</span> <span class='op'>-</span> <span class='id identifier rubyid_s1'>s1</span><span class='rparen'>)</span> <span class='op'>&gt;</span> <span class='lparen'>(</span><span class='int'>2</span><span class='op'>**</span><span class='int'>31</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='op'>-</span><span class='int'>1</span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_s1'>s1</span> <span class='op'>&gt;</span> <span class='id identifier rubyid_s2'>s2</span> <span class='kw'>and</span> <span class='lparen'>(</span><span class='id identifier rubyid_s1'>s1</span> <span class='op'>-</span> <span class='id identifier rubyid_s2'>s2</span><span class='rparen'>)</span> <span class='op'>&lt;</span> <span class='lparen'>(</span><span class='int'>2</span><span class='op'>**</span><span class='int'>31</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='op'>-</span><span class='int'>1</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='int'>0</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="do_transfer-instance_method">
+  
+    #<strong>do_transfer</strong>(zone, server)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/zone_transfer.rb', line 110</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_do_transfer'>do_transfer</span><span class='lparen'>(</span><span class='id identifier rubyid_zone'>zone</span><span class='comma'>,</span> <span class='id identifier rubyid_server'>server</span><span class='rparen'>)</span> <span class='comment'>#:nodoc: all
+</span>  <span class='ivar'>@transfer_type</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="CodeMapper.html#initialize-instance_method" title="Dnsruby::CodeMapper#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='ivar'>@transfer_type</span><span class='rparen'>)</span>
+  <span class='ivar'>@state</span> <span class='op'>=</span> <span class='symbol'>:InitialSoa</span>
+  <span class='id identifier rubyid_socket'>socket</span> <span class='op'>=</span> <span class='const'>Socket</span><span class='period'>.</span><span class='id identifier rubyid_tcp'>tcp</span><span class='lparen'>(</span><span class='id identifier rubyid_server'>server</span><span class='comma'>,</span> <span class='ivar'>@port</span><span class='comma'>,</span> <span class='ivar'>@src_address</span><span class='comma'>,</span> <span class='label'>connect_timeout:</span> <span class='ivar'>@connect_timeout</span><span class='rparen'>)</span>
+  <span class='comment'># socket = TCPSocket.new(server, @port, @src_address)
+</span>  <span class='kw'>begin</span>
+    <span class='comment'>#  Send an initial query
+</span>    <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Message.html#initialize-instance_method" title="Dnsruby::Message#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_zone'>zone</span><span class='comma'>,</span> <span class='ivar'>@transfer_type</span><span class='comma'>,</span> <span class='ivar'>@klass</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='ivar'>@transfer_type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>IXFR</span>
+      <span class='id identifier rubyid_rr'>rr</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="RR.html" title="Dnsruby::RR (class)">RR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="RR.html#create-class_method" title="Dnsruby::RR.create (method)">create</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_zone'>zone</span><span class='embexpr_end'>}</span><span class='tstring_content'> 0 IN SOA</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>0 0 %u 0 0 0 0</span><span class='tstring_end'>&#39;</span></span> <span class='op'>%</span> <span class='ivar'>@serial</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_add_authority'>add_authority</span><span class='lparen'>(</span><span class='id identifier rubyid_rr'>rr</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_send_message'>send_message</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span>
+
+    <span class='kw'>while</span> <span class='lparen'>(</span><span class='ivar'>@state</span> <span class='op'>!=</span> <span class='symbol'>:End</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_receive_message'>receive_message</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span>
+
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@state</span> <span class='op'>==</span> <span class='symbol'>:InitialSoa</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_rcode'>rcode</span> <span class='op'>=</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_rcode'>rcode</span>
+        <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_rcode'>rcode</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="RCode.html" title="Dnsruby::RCode (class)">RCode</a></span></span><span class='period'>.</span><span class='const'>NOERROR</span><span class='rparen'>)</span>
+          <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@transfer_type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>IXFR</span> <span class='op'>&amp;&amp;</span>
+                <span class='id identifier rubyid_rcode'>rcode</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="RCode.html" title="Dnsruby::RCode (class)">RCode</a></span></span><span class='period'>.</span><span class='const'>NOTIMP</span><span class='rparen'>)</span>
+            <span class='comment'>#  IXFR didn&#39;t work - let&#39;s try AXFR
+</span>            <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>IXFR DID NOT WORK (rcode = NOTIMP) - TRYING AXFR!!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+            <span class='ivar'>@state</span> <span class='op'>=</span> <span class='symbol'>:InitialSoa</span>
+            <span class='ivar'>@transfer_type</span><span class='op'>=</span><span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>AXFR</span>
+            <span class='comment'>#  Send an initial AXFR query
+</span>            <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Message.html#initialize-instance_method" title="Dnsruby::Message#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_zone'>zone</span><span class='comma'>,</span> <span class='ivar'>@transfer_type</span><span class='comma'>,</span> <span class='ivar'>@klass</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_send_message'>send_message</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span>
+            <span class='kw'>next</span>
+          <span class='kw'>end</span>
+          <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ResolvError.html" title="Dnsruby::ResolvError (class)">ResolvError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_rcode'>rcode</span><span class='period'>.</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span><span class='semicolon'>;</span>
+        <span class='kw'>end</span>
+
+        <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_question'>question</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_qtype'>qtype</span> <span class='op'>!=</span> <span class='ivar'>@transfer_type</span><span class='rparen'>)</span>
+          <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ResolvError.html" title="Dnsruby::ResolvError (class)">ResolvError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>invalid question section</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+
+        <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_ancount'>ancount</span> <span class='op'>==</span> <span class='int'>0</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@transfer_type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>IXFR</span><span class='rparen'>)</span>
+          <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>IXFR DID NOT WORK (ancount = 0) - TRYING AXFR!!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+          <span class='comment'>#  IXFR didn&#39;t work - let&#39;s try AXFR
+</span>          <span class='ivar'>@transfer_type</span><span class='op'>=</span><span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>AXFR</span>
+          <span class='comment'>#  Send an initial AXFR query
+</span>          <span class='ivar'>@state</span> <span class='op'>=</span> <span class='symbol'>:InitialSoa</span>
+          <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Message.html#initialize-instance_method" title="Dnsruby::Message#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_zone'>zone</span><span class='comma'>,</span> <span class='ivar'>@transfer_type</span><span class='comma'>,</span> <span class='ivar'>@klass</span><span class='rparen'>)</span>
+          <span class='id identifier rubyid_send_message'>send_message</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span>
+          <span class='kw'>next</span>
+        <span class='kw'>end</span>
+      <span class='kw'>end</span>
+
+      <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_each_answer'>each_answer</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_rr'>rr</span><span class='op'>|</span>
+        <span class='id identifier rubyid_parseRR'>parseRR</span><span class='lparen'>(</span><span class='id identifier rubyid_rr'>rr</span><span class='rparen'>)</span>
+      <span class='rbrace'>}</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@state</span> <span class='op'>==</span> <span class='symbol'>:End</span> <span class='op'>&amp;&amp;</span>
+            <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_tsigstate'>tsigstate</span> <span class='op'>==</span> <span class='symbol'>:Intermediate</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ResolvError.html" title="Dnsruby::ResolvError (class)">ResolvError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>last message must be signed</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@state</span> <span class='op'>==</span> <span class='symbol'>:End</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@tsig</span><span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_tsigstate'>tsigstate</span> <span class='op'>!=</span> <span class='symbol'>:Verified</span><span class='rparen'>)</span>
+          <span class='ivar'>@last_tsigstate</span> <span class='op'>=</span> <span class='symbol'>:Failed</span>
+          <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ResolvError.html" title="Dnsruby::ResolvError (class)">ResolvError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Zone transfer not correctly signed</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+        <span class='ivar'>@last_tsigstate</span> <span class='op'>=</span> <span class='symbol'>:Verified</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='comment'>#  This could return with an IXFR response, or an AXFR response.
+</span>    <span class='comment'>#  If it fails completely, then try to send an AXFR query.
+</span>    <span class='comment'>#  Once the query has been sent, then enter the main response loop.
+</span>    <span class='comment'>#  Unless we know we&#39;re definitely AXFR, we should be prepared for either IXFR or AXFR
+</span>    <span class='comment'>#  AXFR response : The first and the last RR of the response is the SOA record of the zone.
+</span>    <span class='comment'>#                  The whole zone is returned inbetween.
+</span>    <span class='comment'>#  IXFR response : one or more difference sequences is returned.  The list of difference
+</span>    <span class='comment'>#                  sequences is preceded and followed by a copy of the server&#39;s current
+</span>    <span class='comment'>#                  version of the SOA.
+</span>    <span class='comment'>#                  Each difference sequence represents one update to the zone (one SOA
+</span>    <span class='comment'>#                  serial change) consisting of deleted RRs and added RRs.  The first RR
+</span>    <span class='comment'>#                  of the deleted RRs is the older SOA RR and the first RR of the added
+</span>    <span class='comment'>#                  RRs is the newer SOA RR.
+</span>    <span class='id identifier rubyid_socket'>socket</span><span class='period'>.</span><span class='id identifier rubyid_close'>close</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@axfr</span><span class='op'>!=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+      <span class='kw'>return</span> <span class='ivar'>@axfr</span>
+    <span class='kw'>end</span>
+    <span class='kw'>return</span> <span class='ivar'>@ixfr</span>
+  <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+    <span class='id identifier rubyid_socket'>socket</span><span class='period'>.</span><span class='id identifier rubyid_close'>close</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='id identifier rubyid_e'>e</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="parseRR-instance_method">
+  
+    #<strong>parseRR</strong>(rec)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/zone_transfer.rb', line 246</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_parseRR'>parseRR</span><span class='lparen'>(</span><span class='id identifier rubyid_rec'>rec</span><span class='rparen'>)</span> <span class='comment'>#:nodoc: all
+</span>  <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_rec'>rec</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+  <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='id identifier rubyid_rec'>rec</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span>
+  <span class='id identifier rubyid_delta'>delta</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ZoneTransfer/Delta.html" title="Dnsruby::ZoneTransfer::Delta (class)">Delta</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ZoneTransfer/Delta.html#initialize-instance_method" title="Dnsruby::ZoneTransfer::Delta#initialize (method)">new</a></span></span>
+
+  <span class='kw'>case</span> <span class='ivar'>@state</span>
+  <span class='kw'>when</span> <span class='symbol'>:InitialSoa</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>SOA</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ResolvError.html" title="Dnsruby::ResolvError (class)">ResolvError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>missing initial SOA</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@initialsoa</span> <span class='op'>=</span> <span class='id identifier rubyid_rec'>rec</span>
+    <span class='comment'>#  Remember the serial number in the initial SOA; we need it
+</span>    <span class='comment'>#  to recognize the end of an IXFR.
+</span>    <span class='ivar'>@end_serial</span> <span class='op'>=</span> <span class='id identifier rubyid_rec'>rec</span><span class='period'>.</span><span class='id identifier rubyid_serial'>serial</span>
+    <span class='comment'>#         if ((@transfer_type == Types.IXFR) &amp;&amp; (@end_serial &lt;= @serial))
+</span>    <span class='kw'>if</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='ivar'>@transfer_type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>IXFR</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_compare_serial'>compare_serial</span><span class='lparen'>(</span><span class='ivar'>@end_serial</span><span class='comma'>,</span> <span class='ivar'>@serial</span><span class='rparen'>)</span> <span class='op'>&gt;=</span> <span class='int'>0</span><span class='rparen'>)</span><span class='rparen'>)</span>
+      <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>zone up to date</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ZoneSerialError.html" title="Dnsruby::ZoneSerialError (class)">ZoneSerialError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>IXFR up to date: expected serial </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
+          <span class='ivar'>@serial</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> , got </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_rec'>rec</span><span class='period'>.</span><span class='id identifier rubyid_serial'>serial</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span><span class='semicolon'>;</span>
+      <span class='ivar'>@state</span> <span class='op'>=</span> <span class='symbol'>:End</span>
+    <span class='kw'>else</span>
+      <span class='ivar'>@state</span> <span class='op'>=</span> <span class='symbol'>:FirstData</span>
+    <span class='kw'>end</span>
+  <span class='kw'>when</span> <span class='symbol'>:FirstData</span>
+    <span class='comment'>#  If the transfer begins with 1 SOA, it&#39;s an AXFR.
+</span>    <span class='comment'>#  If it begins with 2 SOAs, it&#39;s an IXFR.
+</span>    <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@transfer_type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>IXFR</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>SOA</span> <span class='op'>&amp;&amp;</span>
+          <span class='id identifier rubyid_rec'>rec</span><span class='period'>.</span><span class='id identifier rubyid_serial'>serial</span> <span class='op'>==</span> <span class='ivar'>@serial</span><span class='rparen'>)</span>
+      <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>IXFR response - using IXFR</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='ivar'>@rtype</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>IXFR</span>
+      <span class='ivar'>@ixfr</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+      <span class='ivar'>@state</span> <span class='op'>=</span> <span class='symbol'>:Ixfr_DelSoa</span>
+    <span class='kw'>else</span>
+      <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>AXFR response - using AXFR</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='ivar'>@rtype</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>AXFR</span>
+      <span class='ivar'>@transfer_type</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>AXFR</span>
+      <span class='ivar'>@axfr</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+      <span class='ivar'>@axfr</span> <span class='op'>&lt;&lt;</span> <span class='ivar'>@initialsoa</span>
+      <span class='ivar'>@state</span> <span class='op'>=</span> <span class='symbol'>:Axfr</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_parseRR'>parseRR</span><span class='lparen'>(</span><span class='id identifier rubyid_rec'>rec</span><span class='rparen'>)</span> <span class='comment'># Restart...
+</span>    <span class='kw'>return</span>
+
+  <span class='kw'>when</span> <span class='symbol'>:Ixfr_DelSoa</span>
+    <span class='id identifier rubyid_delta'>delta</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ZoneTransfer/Delta.html" title="Dnsruby::ZoneTransfer::Delta (class)">Delta</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ZoneTransfer/Delta.html#initialize-instance_method" title="Dnsruby::ZoneTransfer::Delta#initialize (method)">new</a></span></span>
+    <span class='ivar'>@ixfr</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_delta'>delta</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_delta'>delta</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span> <span class='op'>=</span> <span class='id identifier rubyid_rec'>rec</span><span class='period'>.</span><span class='id identifier rubyid_serial'>serial</span>
+    <span class='id identifier rubyid_delta'>delta</span><span class='period'>.</span><span class='id identifier rubyid_deletes'>deletes</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_rec'>rec</span>
+    <span class='ivar'>@state</span> <span class='op'>=</span> <span class='symbol'>:Ixfr_Del</span>
+
+  <span class='kw'>when</span> <span class='symbol'>:Ixfr_Del</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>SOA</span><span class='rparen'>)</span>
+      <span class='ivar'>@current_serial</span> <span class='op'>=</span> <span class='id identifier rubyid_rec'>rec</span><span class='period'>.</span><span class='id identifier rubyid_serial'>serial</span>
+      <span class='ivar'>@state</span> <span class='op'>=</span> <span class='symbol'>:Ixfr_AddSoa</span>
+      <span class='id identifier rubyid_parseRR'>parseRR</span><span class='lparen'>(</span><span class='id identifier rubyid_rec'>rec</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='comment'># Restart...
+</span>      <span class='kw'>return</span><span class='semicolon'>;</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_delta'>delta</span> <span class='op'>=</span> <span class='ivar'>@ixfr</span><span class='lbracket'>[</span><span class='ivar'>@ixfr</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>-</span> <span class='int'>1</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_delta'>delta</span><span class='period'>.</span><span class='id identifier rubyid_deletes'>deletes</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_rec'>rec</span>
+
+  <span class='kw'>when</span> <span class='symbol'>:Ixfr_AddSoa</span>
+    <span class='id identifier rubyid_delta'>delta</span> <span class='op'>=</span> <span class='ivar'>@ixfr</span><span class='lbracket'>[</span><span class='ivar'>@ixfr</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>-</span> <span class='int'>1</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_delta'>delta</span><span class='period'>.</span><span class='id identifier rubyid_end'>end</span> <span class='op'>=</span> <span class='id identifier rubyid_rec'>rec</span><span class='period'>.</span><span class='id identifier rubyid_serial'>serial</span>
+    <span class='id identifier rubyid_delta'>delta</span><span class='period'>.</span><span class='id identifier rubyid_adds'>adds</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_rec'>rec</span>
+    <span class='ivar'>@state</span> <span class='op'>=</span> <span class='symbol'>:Ixfr_Add</span>
+
+  <span class='kw'>when</span> <span class='symbol'>:Ixfr_Add</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>SOA</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_soa_serial'>soa_serial</span> <span class='op'>=</span> <span class='id identifier rubyid_rec'>rec</span><span class='period'>.</span><span class='id identifier rubyid_serial'>serial</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_soa_serial'>soa_serial</span> <span class='op'>==</span> <span class='ivar'>@end_serial</span><span class='rparen'>)</span>
+        <span class='ivar'>@state</span> <span class='op'>=</span> <span class='symbol'>:End</span>
+        <span class='kw'>return</span>
+      <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='id identifier rubyid_soa_serial'>soa_serial</span> <span class='op'>!=</span> <span class='ivar'>@current_serial</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ZoneSerialError.html" title="Dnsruby::ZoneSerialError (class)">ZoneSerialError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>IXFR out of sync: expected serial </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
+            <span class='ivar'>@current_serial</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> , got </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_soa_serial'>soa_serial</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span><span class='semicolon'>;</span>
+      <span class='kw'>else</span>
+        <span class='ivar'>@state</span> <span class='op'>=</span> <span class='symbol'>:Ixfr_DelSoa</span>
+        <span class='id identifier rubyid_parseRR'>parseRR</span><span class='lparen'>(</span><span class='id identifier rubyid_rec'>rec</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='comment'># Restart...
+</span>        <span class='kw'>return</span><span class='semicolon'>;</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_delta'>delta</span> <span class='op'>=</span> <span class='ivar'>@ixfr</span><span class='lbracket'>[</span><span class='ivar'>@ixfr</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>-</span> <span class='int'>1</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_delta'>delta</span><span class='period'>.</span><span class='id identifier rubyid_adds'>adds</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_rec'>rec</span>
+
+  <span class='kw'>when</span> <span class='symbol'>:Axfr</span>
+    <span class='comment'>#  Old BINDs sent cross class A records for non IN classes.
+</span>    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>A</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_rec'>rec</span><span class='period'>.</span><span class='id identifier rubyid_klass'>klass</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='op'>!=</span> <span class='ivar'>@klass</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>SOA</span><span class='rparen'>)</span>
+        <span class='ivar'>@state</span> <span class='op'>=</span> <span class='symbol'>:End</span>
+      <span class='kw'>else</span>
+        <span class='ivar'>@axfr</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_rec'>rec</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>when</span> <span class='symbol'>:End</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ResolvError.html" title="Dnsruby::ResolvError (class)">ResolvError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>extra data in zone transfer</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ResolvError.html" title="Dnsruby::ResolvError (class)">ResolvError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>invalid state for zone transfer</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="receive_message-instance_method">
+  
+    #<strong>receive_message</strong>(socket)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="ResolvError.html" title="Dnsruby::ResolvError (class)">ResolvError</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/zone_transfer.rb', line 368</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_receive_message'>receive_message</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span> <span class='comment'>#:nodoc: all
+</span>  <span class='id identifier rubyid_buf'>buf</span> <span class='op'>=</span> <span class='id identifier rubyid_tcp_read'>tcp_read</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='comma'>,</span> <span class='int'>2</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_answersize'>answersize</span> <span class='op'>=</span> <span class='id identifier rubyid_buf'>buf</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>n</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+  <span class='comment'>#  Some servers (e.g. dnscache) apparently hang up on some connections.
+</span>  <span class='comment'>#  Thanks to Matt Palmer for the fix.
+</span>  <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ResolvError.html" title="Dnsruby::ResolvError (class)">ResolvError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Server did not send a valid answer</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_answersize'>answersize</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+  <span class='id identifier rubyid_buf'>buf</span> <span class='op'>=</span> <span class='id identifier rubyid_tcp_read'>tcp_read</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='comma'>,</span> <span class='id identifier rubyid_answersize'>answersize</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span><span class='period'>.</span><span class='id identifier rubyid_decode'><span class='object_link'><a href="Message.html#decode-class_method" title="Dnsruby::Message.decode (method)">decode</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_buf'>buf</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@tsig</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@tsig</span><span class='period'>.</span><span class='id identifier rubyid_verify_envelope'>verify_envelope</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_buf'>buf</span><span class='rparen'>)</span>
+      <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bad signature on zone transfer - closing connection</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ResolvError.html" title="Dnsruby::ResolvError (class)">ResolvError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bad signature on zone transfer</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_msg'>msg</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="send_message-instance_method">
+  
+    #<strong>send_message</strong>(socket, msg)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/zone_transfer.rb', line 349</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_send_message'>send_message</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span> <span class='comment'>#:nodoc: all
+</span>  <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@tsig</span><span class='rparen'>)</span>
+    <span class='ivar'>@tsig</span><span class='period'>.</span><span class='id identifier rubyid_apply'>apply</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span>
+    <span class='ivar'>@tsig</span> <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_tsig'>tsig</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_query_packet'>query_packet</span> <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_encode'>encode</span>
+  <span class='id identifier rubyid_lenmsg'>lenmsg</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_query_packet'>query_packet</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>n</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_socket'>socket</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_lenmsg'>lenmsg</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_socket'>socket</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_query_packet'>query_packet</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="tcp_read-instance_method">
+  
+    #<strong>tcp_read</strong>(socket, len)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+360
+361
+362
+363
+364
+365
+366</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/zone_transfer.rb', line 360</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_tcp_read'>tcp_read</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='comma'>,</span> <span class='id identifier rubyid_len'>len</span><span class='rparen'>)</span> <span class='comment'>#:nodoc: all
+</span>  <span class='id identifier rubyid_buf'>buf</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>while</span> <span class='lparen'>(</span><span class='id identifier rubyid_buf'>buf</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_len'>len</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='kw'>not</span> <span class='id identifier rubyid_socket'>socket</span><span class='period'>.</span><span class='id identifier rubyid_eof?'>eof?</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_buf'>buf</span> <span class='op'>+=</span> <span class='id identifier rubyid_socket'>socket</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='id identifier rubyid_len'>len</span><span class='op'>-</span><span class='id identifier rubyid_buf'>buf</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_buf'>buf</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="transfer-instance_method">
+  
+    #<strong>transfer</strong>(zone)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Perform a zone transfer (RFC1995)</p>
+
+<pre class="code ruby"><code class="ruby">If an IXFR query is unsuccessful, then AXFR is tried (and @transfer_type is set
+to AXFR)
+TCP is used as the only transport
+
+If AXFR is performed, then the zone will be returned as a set of records :
+
+      zt = Dnsruby::ZoneTransfer.new
+      zt.transfer_type = Dnsruby::Types.AXFR
+      zt.server = &quot;ns0.validation-test-servers.nominet.org.uk&quot;
+      zone = zt.transfer(&quot;validation-test-servers.nominet.org.uk&quot;)
+      soa = zone[0]
+      rec1 = zone[1]
+      print zone.to_s
+
+If IXFR is performed, then the incrementals will be returned as a set of Deltas.
+Each Delta contains the start and end SOA serial number, as well as an array of
+adds and deletes that occurred between the start and end.
+
+       zt = Dnsruby::ZoneTransfer.new
+       zt.transfer_type = Dnsruby::Types.IXFR
+       zt.server = &quot;ns0.validation-test-servers.nominet.org.uk&quot;
+       zt.serial = 2007090401
+       deltas = zt.transfer(&quot;validation-test-servers.nominet.org.uk&quot;)
+       assert_equal(&quot;Should show up in transfer&quot;, deltas[0].adds[1].data)
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/zone_transfer.rb', line 88</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_transfer'>transfer</span><span class='lparen'>(</span><span class='id identifier rubyid_zone'>zone</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_servers'>servers</span> <span class='op'>=</span> <span class='ivar'>@server</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_servers'>servers</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span> <span class='op'>==</span> <span class='const'>String</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_servers'>servers</span><span class='op'>=</span><span class='lbracket'>[</span><span class='id identifier rubyid_servers'>servers</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_xfr'>xfr</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='id identifier rubyid_exception'>exception</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='id identifier rubyid_servers'>servers</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_server'>server</span><span class='op'>|</span>
+    <span class='kw'>begin</span>
+      <span class='id identifier rubyid_server'>server</span><span class='op'>=</span><span class='const'>Config</span><span class='period'>.</span><span class='id identifier rubyid_resolve_server'>resolve_server</span><span class='lparen'>(</span><span class='id identifier rubyid_server'>server</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_xfr'>xfr</span> <span class='op'>=</span> <span class='id identifier rubyid_do_transfer'>do_transfer</span><span class='lparen'>(</span><span class='id identifier rubyid_zone'>zone</span><span class='comma'>,</span> <span class='id identifier rubyid_server'>server</span><span class='rparen'>)</span>
+      <span class='kw'>break</span>
+    <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+      <span class='id identifier rubyid_exception'>exception</span> <span class='op'>=</span> <span class='id identifier rubyid_e'>e</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_xfr'>xfr</span> <span class='op'>==</span> <span class='kw'>nil</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_exception'>exception</span> <span class='op'>!=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='id identifier rubyid_exception'>exception</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_xfr'>xfr</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr  9 10:58:22 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-3.0.0).
+</div>
+
+    </div>
+  </body>
+</html>

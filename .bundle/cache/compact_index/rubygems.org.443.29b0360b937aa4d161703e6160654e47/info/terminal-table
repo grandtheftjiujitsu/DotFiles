@@ -17,3 +17,4 @@
 1.7.3 unicode-display_width:~> 1.1.1|checksum:f10d5ff88f5596dfeb45d2cdf1ad35b8b8e347f58bcc7307a270af44176885a5
 1.8.0 unicode-display_width:>= 1.1.1&~> 1.1|checksum:13371f069af18e9baa4e44d404a4ada9301899ce0530c237ac1a96c19f652294
 2.0.0 unicode-display_width:>= 1.1.1&~> 1.1|checksum:904b528e60a98fcb0801d24f634a3116eaec500692c751765b587b6208cc2ba3
+3.0.0 unicode-display_width:>= 1.1.1&~> 1.1|checksum:287a95f4853452ea464bc4193debf8ea44ff84bf127d9021455ca16e65538ab6

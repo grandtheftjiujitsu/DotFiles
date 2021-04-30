@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Dnsruby::ValidatorThread
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Dnsruby::ValidatorThread";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (V)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span>
+     &raquo; 
+    <span class="title">ValidatorThread</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Dnsruby::ValidatorThread
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Dnsruby::ValidatorThread</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/dnsruby/validator_thread.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Takes care of the validation for the SelectThread. If queries need to be</p>
+
+<pre class="code ruby"><code class="ruby">made in order to validate the response, then a separate thread is fired up
+to do this.
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#requires_validation%3F-class_method" title="requires_validation? (class method)">.<strong>requires_validation?</strong>(query, response, error, res)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cache_if_valid-instance_method" title="#cache_if_valid (instance method)">#<strong>cache_if_valid</strong>(query, response)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#do_validate-instance_method" title="#do_validate (instance method)">#<strong>do_validate</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>def add_to_queue(item)       print “ADding to validator queuen” #      @@mutex.synchronize{         @@validation_queue.push(item) #      }     end.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(*args)  &#x21d2; ValidatorThread </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>include Singleton.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#run-instance_method" title="#run (instance method)">#<strong>run</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create the validation thread, and a queue to receive validation requests  Actually, need to have a thread per validator, as they make recursive calls.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#should_validate-instance_method" title="#should_validate (instance method)">#<strong>should_validate</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validate-instance_method" title="#validate (instance method)">#<strong>validate</strong>(query, response, res)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="" title="Dnsruby::ValidatorThread (class)">ValidatorThread</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>include Singleton</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/validator_thread.rb', line 23</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='ivar'>@client_id</span><span class='comma'>,</span> <span class='ivar'>@client_queue</span><span class='comma'>,</span> <span class='ivar'>@response</span><span class='comma'>,</span> <span class='ivar'>@error</span><span class='comma'>,</span> <span class='ivar'>@query</span><span class='comma'>,</span> <span class='ivar'>@st</span><span class='comma'>,</span> <span class='ivar'>@res</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span>
+  <span class='comment'>#  Create the validation thread, and a queue to receive validation requests
+</span>  <span class='comment'>#  Actually, need to have a thread per validator, as they make recursive calls.
+</span>  <span class='comment'>#       @@mutex = Mutex.new
+</span>  <span class='comment'>#       @@validation_queue = Queue.new
+</span>  <span class='comment'>#       @@validator_thread = Thread.new{
+</span>  <span class='comment'>#         do_validate
+</span>  <span class='comment'>#       }
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="requires_validation?-class_method">
+  
+    .<strong>requires_validation?</strong>(query, response, error, res)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/validator_thread.rb', line 84</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::ValidatorThread (class)">ValidatorThread</a></span></span><span class='period'>.</span><span class='id identifier rubyid_requires_validation?'>requires_validation?</span><span class='lparen'>(</span><span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_response'>response</span><span class='comma'>,</span> <span class='id identifier rubyid_error'>error</span><span class='comma'>,</span> <span class='id identifier rubyid_res'>res</span><span class='rparen'>)</span>
+  <span class='comment'>#  @error will be nil for DNS RCODE errors - it will be true for TsigError. really?!
+</span>  <span class='kw'>if</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_error'>error</span> <span class='op'>||</span> <span class='lparen'>(</span><span class='id identifier rubyid_error'>error</span><span class='period'>.</span><span class='id identifier rubyid_instance_of?'>instance_of?</span><span class='const'>NXDomain</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_query'>query</span><span class='period'>.</span><span class='id identifier rubyid_do_validation'>do_validation</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_dnssec'>dnssec</span><span class='rparen'>)</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_security_level'>security_level</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Message/SecurityLevel.html" title="Dnsruby::Message::SecurityLevel (class)">SecurityLevel</a></span></span><span class='period'>.</span><span class='const'>SECURE</span><span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='kw'>true</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='kw'>false</span>
+
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="cache_if_valid-instance_method">
+  
+    #<strong>cache_if_valid</strong>(query, response)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+120
+121
+122
+123</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/validator_thread.rb', line 120</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_cache_if_valid'>cache_if_valid</span><span class='lparen'>(</span><span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@error</span>
+  <span class='const'><span class='object_link'><a href="PacketSender.html" title="Dnsruby::PacketSender (class)">PacketSender</a></span></span><span class='period'>.</span><span class='id identifier rubyid_cache'><span class='object_link'><a href="PacketSender.html#cache-class_method" title="Dnsruby::PacketSender.cache (method)">cache</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="do_validate-instance_method">
+  
+    #<strong>do_validate</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>def add_to_queue(item)</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_print'>print</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ADding to validator queue\n</span><span class='tstring_end'>&quot;</span></span>
+</code></pre>
+
+<p>#      @@mutex.synchronize{</p>
+
+<pre class="code ruby"><code class="ruby"><span class='cvar'>@@validation_queue</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
+</code></pre>
+
+<p>#      }</p>
+
+<pre class="code ruby"><code class="ruby">end
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/validator_thread.rb', line 51</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_do_validate'>do_validate</span>
+  <span class='comment'>#       while (true)
+</span>  <span class='comment'>#         item = nil
+</span>  <span class='comment'>#         print &quot;Waiting to pop validation item\n&quot;
+</span>  <span class='comment'># #        @@mutex.synchronize{
+</span>  <span class='comment'>#           item = @@validation_queue.pop
+</span>  <span class='comment'># #        }
+</span>  <span class='comment'>#       print &quot;Popped validation request\n&quot;
+</span>  <span class='comment'>#         client_id, client_queue, response, err, query, st, res = item
+</span>  <span class='id identifier rubyid_validated_ok'>validated_ok</span> <span class='op'>=</span> <span class='id identifier rubyid_validate'>validate</span><span class='lparen'>(</span><span class='ivar'>@query</span><span class='comma'>,</span> <span class='ivar'>@response</span><span class='comma'>,</span> <span class='ivar'>@res</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_validated_ok'>validated_ok</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@error</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="NXDomain.html" title="Dnsruby::NXDomain (class)">NXDomain</a></span></span> <span class='op'>===</span> <span class='ivar'>@error</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_cache_if_valid'>cache_if_valid</span><span class='lparen'>(</span><span class='ivar'>@query</span><span class='comma'>,</span> <span class='ivar'>@response</span><span class='rparen'>)</span>
+
+  <span class='comment'>#  Now send the response back to the client...
+</span>  <span class='comment'>#       print &quot;#{Time.now} : Got result for #{@query.question()[0].qname}, #{@query.question()[0].qtype}\n&quot;
+</span>  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_validated_ok'>validated_ok</span><span class='rparen'>)</span>
+    <span class='ivar'>@st</span><span class='period'>.</span><span class='id identifier rubyid_push_validation_response_to_select'>push_validation_response_to_select</span><span class='lparen'>(</span><span class='ivar'>@client_id</span><span class='comma'>,</span> <span class='ivar'>@client_queue</span><span class='comma'>,</span> <span class='ivar'>@response</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='ivar'>@query</span><span class='comma'>,</span> <span class='ivar'>@res</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@st</span><span class='period'>.</span><span class='id identifier rubyid_push_validation_response_to_select'>push_validation_response_to_select</span><span class='lparen'>(</span><span class='ivar'>@client_id</span><span class='comma'>,</span> <span class='ivar'>@client_queue</span><span class='comma'>,</span> <span class='ivar'>@response</span><span class='comma'>,</span>
+      <span class='ivar'>@response</span><span class='period'>.</span><span class='id identifier rubyid_security_error'>security_error</span><span class='comma'>,</span> <span class='ivar'>@query</span><span class='comma'>,</span> <span class='ivar'>@res</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+
+  <span class='comment'>#       end
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="run-instance_method">
+  
+    #<strong>run</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create the validation thread, and a queue to receive validation requests</p>
+
+<pre class="code ruby"><code class="ruby">Actually, need to have a thread per validator, as they make recursive calls.
+     @@mutex = Mutex.new
+     @@validation_queue = Queue.new
+     @@validator_thread = Thread.new{
+       do_validate
+     }
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/validator_thread.rb', line 33</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_run'>run</span>
+  <span class='comment'>#  ONLY START THE NEW THREAD IF VALIDATION NEED OCCUR!!
+</span>  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_should_validate'>should_validate</span><span class='rparen'>)</span>
+    <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lbrace'>{</span>
+      <span class='id identifier rubyid_do_validate'>do_validate</span>
+    <span class='rbrace'>}</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_do_validate'>do_validate</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="should_validate-instance_method">
+  
+    #<strong>should_validate</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+80
+81
+82</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/validator_thread.rb', line 80</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_should_validate'>should_validate</span>
+  <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::ValidatorThread (class)">ValidatorThread</a></span></span><span class='period'>.</span><span class='id identifier rubyid_requires_validation?'><span class='object_link'><a href="#requires_validation%3F-class_method" title="Dnsruby::ValidatorThread.requires_validation? (method)">requires_validation?</a></span></span><span class='lparen'>(</span><span class='ivar'>@query</span><span class='comma'>,</span> <span class='ivar'>@response</span><span class='comma'>,</span> <span class='ivar'>@error</span><span class='comma'>,</span> <span class='ivar'>@res</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate-instance_method">
+  
+    #<strong>validate</strong>(query, response, res)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/validator_thread.rb', line 97</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_validate'>validate</span><span class='lparen'>(</span><span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_response'>response</span><span class='comma'>,</span> <span class='id identifier rubyid_res'>res</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_should_validate'>should_validate</span><span class='rparen'>)</span>
+    <span class='kw'>begin</span>
+      <span class='comment'>#  So, we really need to be able to take the response out of the select thread, along
+</span>      <span class='comment'>#  with the responsibility for sending the answer to the client.
+</span>      <span class='comment'>#  Should we have a validator thread? Or a thread per validation?
+</span>      <span class='comment'>#  Then, select thread gets response. It performs basic checks here.
+</span>      <span class='comment'>#  After basic checks, the select-thread punts the response (along with queues, etc.)
+</span>      <span class='comment'>#  to the validator thread.
+</span>      <span class='comment'>#  The validator validates it (or just releases it with no validation), and then
+</span>      <span class='comment'>#  sends the request to the client via the client queue.
+</span>      <span class='const'><span class='object_link'><a href="Dnssec.html" title="Dnsruby::Dnssec (class)">Dnssec</a></span></span><span class='period'>.</span><span class='id identifier rubyid_validate_with_query'><span class='object_link'><a href="Dnssec.html#validate_with_query-class_method" title="Dnsruby::Dnssec.validate_with_query (method)">validate_with_query</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_query'>query</span><span class='comma'>,</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
+      <span class='kw'>return</span> <span class='kw'>true</span>
+    <span class='kw'>rescue</span> <span class='const'><span class='object_link'><a href="VerifyError.html" title="Dnsruby::VerifyError (class)">VerifyError</a></span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+      <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_security_error'>security_error</span> <span class='op'>=</span> <span class='id identifier rubyid_e'>e</span>
+      <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_security_level'>security_level</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Message/SecurityLevel.html" title="Dnsruby::Message::SecurityLevel (class)">SecurityLevel</a></span></span><span class='period'>.</span><span class='const'>BOGUS</span>
+      <span class='comment'>#  Response security_level should already be set
+</span>      <span class='kw'>return</span> <span class='kw'>false</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr  9 10:58:28 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-3.0.0).
+</div>
+
+    </div>
+  </body>
+</html>

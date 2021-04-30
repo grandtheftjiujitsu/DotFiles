@@ -1,6 +1,0 @@
-Command=/home/austin/scripts/shell/disk-panel.sh
-UseLabel=0
-Text=Disk
-UpdatePeriod=10000
-Font=Cantarell Ultra-Bold 12
-

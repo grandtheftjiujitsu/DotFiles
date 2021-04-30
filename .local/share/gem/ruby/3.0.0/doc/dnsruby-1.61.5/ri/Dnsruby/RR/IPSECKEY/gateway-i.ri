@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"gateway:ETI""Dnsruby::RR::IPSECKEY#gateway;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"JThe gateway. May either be a 32-bit network order IPv4 address, or a ;TI"C128-bit IPv6 address, or a domain name, or may not be present.;T:
+@fileI"%lib/dnsruby/resource/IPSECKEY.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::RR::IPSECKEY;TcRDoc::NormalClass0

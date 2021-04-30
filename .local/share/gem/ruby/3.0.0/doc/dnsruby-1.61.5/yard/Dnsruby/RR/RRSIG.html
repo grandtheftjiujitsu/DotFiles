@@ -1,0 +1,1668 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Dnsruby::RR::RRSIG
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Dnsruby::RR::RRSIG";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (R)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">RR</a></span></span>
+     &raquo; 
+    <span class="title">RRSIG</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Dnsruby::RR::RRSIG
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">Dnsruby::RR</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">Dnsruby::RR</a></span></li>
+          
+            <li class="next">Dnsruby::RR::RRSIG</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/dnsruby/resource/RRSIG.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>(RFC4034, section 3) DNSSEC uses public key cryptography to sign and authenticate DNS resource record sets (RRsets).  Digital signatures are stored in RRSIG resource records and are used in the DNSSEC authentication process described in [RFC4035].  A validator can use these RRSIG RRs to authenticate RRsets from the zone.  The RRSIG RR MUST only be used to carry verification material (digital signatures) used to secure DNS operations.</p>
+
+<p>An RRSIG record contains the signature for an RRset with a particular name, class, and type.  The RRSIG RR specifies a validity interval for the signature and uses the Algorithm, the Signer&#39;s Name, and the Key Tag to identify the DNSKEY RR containing the public key that a validator can use to verify the signature.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="ClassValue-constant" class="">ClassValue =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='kw'>nil</span></pre></dd>
+      
+        <dt id="TypeValue-constant" class="">TypeValue =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Types.html#RRSIG-constant" title="Dnsruby::Types::RRSIG (constant)">RRSIG</a></span></span></pre></dd>
+      
+    </dl>
+  
+
+
+
+  
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">Dnsruby::RR</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RR.html#ClassInsensitiveTypes-constant" title="Dnsruby::RR::ClassInsensitiveTypes (constant)">ClassInsensitiveTypes</a></span></p>
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#algorithm-instance_method" title="#algorithm (instance method)">#<strong>algorithm</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The algorithm used for this RRSIG See Dnsruby::Algorithms for permitted values.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#expiration-instance_method" title="#expiration (instance method)">#<strong>expiration</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The signature expiration.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#inception-instance_method" title="#inception (instance method)">#<strong>inception</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The signature inception.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#key_tag-instance_method" title="#key_tag (instance method)">#<strong>key_tag</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The key tag value of the DNSKEY RR that validates this signature.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#labels-instance_method" title="#labels (instance method)">#<strong>labels</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The number of labels in the original RRSIG RR owner name Can be used to determine if name was synthesised from a wildcard.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#original_ttl-instance_method" title="#original_ttl (instance method)">#<strong>original_ttl</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The TTL of the covered RRSet as it appears in the authoritative zone.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#signature-instance_method" title="#signature (instance method)">#<strong>signature</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>contains the cryptographic signature that covers the RRSIG RDATA (excluding the Signature field) and the RRset specified by the RRSIG owner name, RRSIG class, and RRSIG Type Covered field.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#signers_name-instance_method" title="#signers_name (instance method)">#<strong>signers_name</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>identifies the owner name of the DNSKEY RR that a validator is supposed to use to validate this signature.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#type_covered-instance_method" title="#type_covered (instance method)">#<strong>type_covered</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The type covered by this RRSIG.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">Dnsruby::RR</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RR.html#klass-instance_method" title="Dnsruby::RR#klass (method)">#klass</a></span>, <span class='object_link'><a href="../RR.html#name-instance_method" title="Dnsruby::RR#name (method)">#name</a></span>, <span class='object_link'><a href="../RR.html#rdata-instance_method" title="Dnsruby::RR#rdata (method)">#rdata</a></span>, <span class='object_link'><a href="../RR.html#ttl-instance_method" title="Dnsruby::RR#ttl (method)">#ttl</a></span>, <span class='object_link'><a href="../RR.html#type-instance_method" title="Dnsruby::RR#type (method)">#type</a></span></p>
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#decode_rdata-class_method" title="decode_rdata (class method)">.<strong>decode_rdata</strong>(msg)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_time-class_method" title="get_time (class method)">.<strong>get_time</strong>(input)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#encode_rdata-instance_method" title="#encode_rdata (instance method)">#<strong>encode_rdata</strong>(msg, canonical = false)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#format_time-instance_method" title="#format_time (instance method)">#<strong>format_time</strong>(time)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#from_data-instance_method" title="#from_data (instance method)">#<strong>from_data</strong>(data)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#from_string-instance_method" title="#from_string (instance method)">#<strong>from_string</strong>(input)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_time-instance_method" title="#get_time (instance method)">#<strong>get_time</strong>(input)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#init_defaults-instance_method" title="#init_defaults (instance method)">#<strong>init_defaults</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rdata_to_string-instance_method" title="#rdata_to_string (instance method)">#<strong>rdata_to_string</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sig_data-instance_method" title="#sig_data (instance method)">#<strong>sig_data</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">Dnsruby::RR</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RR.html#<=>-instance_method" title="Dnsruby::RR#&lt;=&gt; (method)">#<=></a></span>, <span class='object_link'><a href="../RR.html#==-instance_method" title="Dnsruby::RR#== (method)">#==</a></span>, <span class='object_link'><a href="../RR.html#clone-instance_method" title="Dnsruby::RR#clone (method)">#clone</a></span>, <span class='object_link'><a href="../RR.html#create-class_method" title="Dnsruby::RR.create (method)">create</a></span>, <span class='object_link'><a href="../RR.html#eql%3F-instance_method" title="Dnsruby::RR#eql? (method)">#eql?</a></span>, <span class='object_link'><a href="../RR.html#find_class-class_method" title="Dnsruby::RR.find_class (method)">find_class</a></span>, <span class='object_link'><a href="../RR.html#from_hash-instance_method" title="Dnsruby::RR#from_hash (method)">#from_hash</a></span>, <span class='object_link'><a href="../RR.html#get_class-class_method" title="Dnsruby::RR.get_class (method)">get_class</a></span>, <span class='object_link'><a href="../RR.html#get_num-class_method" title="Dnsruby::RR.get_num (method)">get_num</a></span>, <span class='object_link'><a href="../RR.html#hash-instance_method" title="Dnsruby::RR#hash (method)">#hash</a></span>, <span class='object_link'><a href="../RR.html#implemented_rrs-class_method" title="Dnsruby::RR.implemented_rrs (method)">implemented_rrs</a></span>, <span class='object_link'><a href="../RR.html#new_from_data-class_method" title="Dnsruby::RR.new_from_data (method)">new_from_data</a></span>, <span class='object_link'><a href="../RR.html#new_from_hash-class_method" title="Dnsruby::RR.new_from_hash (method)">new_from_hash</a></span>, <span class='object_link'><a href="../RR.html#new_from_string-class_method" title="Dnsruby::RR.new_from_string (method)">new_from_string</a></span>, <span class='object_link'><a href="../RR.html#rdlength-instance_method" title="Dnsruby::RR#rdlength (method)">#rdlength</a></span>, <span class='object_link'><a href="../RR.html#sameRRset-instance_method" title="Dnsruby::RR#sameRRset (method)">#sameRRset</a></span>, <span class='object_link'><a href="../RR.html#to_s-instance_method" title="Dnsruby::RR#to_s (method)">#to_s</a></span></p>
+
+  
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="algorithm=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="algorithm-instance_method">
+  
+    #<strong>algorithm</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The algorithm used for this RRSIG See Dnsruby::Algorithms for permitted values</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+68
+69
+70</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RRSIG.rb', line 68</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_algorithm'>algorithm</span>
+  <span class='ivar'>@algorithm</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="expiration=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="expiration-instance_method">
+  
+    #<strong>expiration</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The signature expiration</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+75
+76
+77</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RRSIG.rb', line 75</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_expiration'>expiration</span>
+  <span class='ivar'>@expiration</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="inception=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="inception-instance_method">
+  
+    #<strong>inception</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The signature inception</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+77
+78
+79</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RRSIG.rb', line 77</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_inception'>inception</span>
+  <span class='ivar'>@inception</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="key_tag=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="key_tag-instance_method">
+  
+    #<strong>key_tag</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The key tag value of the DNSKEY RR that validates this signature</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+79
+80
+81</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RRSIG.rb', line 79</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_key_tag'>key_tag</span>
+  <span class='ivar'>@key_tag</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="labels=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="labels-instance_method">
+  
+    #<strong>labels</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The number of labels in the original RRSIG RR owner name Can be used to determine if name was synthesised from a wildcard.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+71
+72
+73</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RRSIG.rb', line 71</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_labels'>labels</span>
+  <span class='ivar'>@labels</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="original_ttl=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="original_ttl-instance_method">
+  
+    #<strong>original_ttl</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The TTL of the covered RRSet as it appears in the authoritative zone</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+73
+74
+75</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RRSIG.rb', line 73</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_original_ttl'>original_ttl</span>
+  <span class='ivar'>@original_ttl</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="signature=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="signature-instance_method">
+  
+    #<strong>signature</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>contains the cryptographic signature that covers the RRSIG RDATA (excluding the Signature field) and the RRset specified by the RRSIG owner name, RRSIG class, and RRSIG Type Covered field</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+88
+89
+90</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RRSIG.rb', line 88</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_signature'>signature</span>
+  <span class='ivar'>@signature</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="signers_name=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="signers_name-instance_method">
+  
+    #<strong>signers_name</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>identifies the owner name of the DNSKEY RR that a validator is supposed to use to validate this signature</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+82
+83
+84</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RRSIG.rb', line 82</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_signers_name'>signers_name</span>
+  <span class='ivar'>@signers_name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="type_covered=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="type_covered-instance_method">
+  
+    #<strong>type_covered</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The type covered by this RRSIG</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+65
+66
+67</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RRSIG.rb', line 65</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_type_covered'>type_covered</span>
+  <span class='ivar'>@type_covered</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="decode_rdata-class_method">
+  
+    .<strong>decode_rdata</strong>(msg)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RRSIG.rb', line 250</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_decode_rdata'>decode_rdata</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span> <span class='comment'>#:nodoc: all
+</span>  <span class='id identifier rubyid_type_covered'>type_covered</span><span class='comma'>,</span> <span class='id identifier rubyid_algorithm'>algorithm</span><span class='comma'>,</span> <span class='id identifier rubyid_labels'>labels</span> <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_get_unpack'>get_unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ncc</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_original_ttl'>original_ttl</span><span class='comma'>,</span> <span class='id identifier rubyid_expiration'>expiration</span><span class='comma'>,</span> <span class='id identifier rubyid_inception'>inception</span> <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_get_unpack'>get_unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>NNN</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_key_tag'>key_tag</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_get_unpack'>get_unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>n</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_signers_name'>signers_name</span> <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_get_name'>get_name</span>
+  <span class='id identifier rubyid_signature'>signature</span>  <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_get_bytes'>get_bytes</span>
+  <span class='kw'>return</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+    <span class='lbracket'>[</span><span class='id identifier rubyid_type_covered'>type_covered</span><span class='comma'>,</span> <span class='id identifier rubyid_algorithm'>algorithm</span><span class='comma'>,</span> <span class='id identifier rubyid_labels'>labels</span><span class='comma'>,</span> <span class='id identifier rubyid_original_ttl'>original_ttl</span><span class='comma'>,</span> <span class='id identifier rubyid_expiration'>expiration</span><span class='comma'>,</span>
+      <span class='id identifier rubyid_inception'>inception</span><span class='comma'>,</span> <span class='id identifier rubyid_key_tag'>key_tag</span><span class='comma'>,</span> <span class='id identifier rubyid_signers_name'>signers_name</span><span class='comma'>,</span> <span class='id identifier rubyid_signature'>signature</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_time-class_method">
+  
+    .<strong>get_time</strong>(input)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RRSIG.rb', line 183</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::RR::RRSIG (class)">RRSIG</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_time'>get_time</span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_input'>input</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'>Integer</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_input'>input</span>
+  <span class='kw'>end</span>
+  <span class='comment'>#  RFC 4034, section 3.2
+</span>  <span class='comment'># The Signature Expiration Time and Inception Time field values MUST be
+</span>  <span class='comment'>#    represented either as an unsigned decimal integer indicating seconds
+</span>  <span class='comment'>#    since 1 January 1970 00:00:00 UTC, or in the form YYYYMMDDHHmmSS in
+</span>  <span class='comment'>#    UTC, where:
+</span>  <span class='comment'># 
+</span>  <span class='comment'>#       YYYY is the year (0001-9999, but see Section 3.1.5);
+</span>  <span class='comment'>#       MM is the month number (01-12);
+</span>  <span class='comment'>#       DD is the day of the month (01-31);
+</span>  <span class='comment'>#       HH is the hour, in 24 hour notation (00-23);
+</span>  <span class='comment'>#       mm is the minute (00-59); and
+</span>  <span class='comment'>#       SS is the second (00-59).
+</span>  <span class='comment'># 
+</span>  <span class='comment'>#    Note that it is always possible to distinguish between these two
+</span>  <span class='comment'>#    formats because the YYYYMMDDHHmmSS format will always be exactly 14
+</span>  <span class='comment'>#    digits, while the decimal representation of a 32-bit unsigned integer
+</span>  <span class='comment'>#    can never be longer than 10 digits.
+</span>  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>==</span> <span class='int'>10</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_input'>input</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>==</span> <span class='int'>14</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_year'>year</span> <span class='op'>=</span> <span class='id identifier rubyid_input'>input</span><span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span><span class='int'>4</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_mon'>mon</span><span class='op'>=</span><span class='id identifier rubyid_input'>input</span><span class='lbracket'>[</span><span class='int'>4</span><span class='comma'>,</span><span class='int'>2</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_day'>day</span><span class='op'>=</span><span class='id identifier rubyid_input'>input</span><span class='lbracket'>[</span><span class='int'>6</span><span class='comma'>,</span><span class='int'>2</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_hour'>hour</span><span class='op'>=</span><span class='id identifier rubyid_input'>input</span><span class='lbracket'>[</span><span class='int'>8</span><span class='comma'>,</span><span class='int'>2</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_min'>min</span><span class='op'>=</span><span class='id identifier rubyid_input'>input</span><span class='lbracket'>[</span><span class='int'>10</span><span class='comma'>,</span><span class='int'>2</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_sec'>sec</span><span class='op'>=</span><span class='id identifier rubyid_input'>input</span><span class='lbracket'>[</span><span class='int'>12</span><span class='comma'>,</span><span class='int'>2</span><span class='rbracket'>]</span>
+    <span class='comment'>#  @TODO@ REPLACE THIS BY LOCAL CODE - Time.gm DOG SLOW!
+</span>    <span class='kw'>return</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_gm'>gm</span><span class='lparen'>(</span><span class='id identifier rubyid_year'>year</span><span class='comma'>,</span> <span class='id identifier rubyid_mon'>mon</span><span class='comma'>,</span> <span class='id identifier rubyid_day'>day</span><span class='comma'>,</span> <span class='id identifier rubyid_hour'>hour</span><span class='comma'>,</span> <span class='id identifier rubyid_min'>min</span><span class='comma'>,</span> <span class='id identifier rubyid_sec'>sec</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../DecodeError.html" title="Dnsruby::DecodeError (class)">DecodeError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RRSIG : Illegal time value </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_input'>input</span><span class='embexpr_end'>}</span><span class='tstring_content'> - see RFC 4034 section 3.2</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="encode_rdata-instance_method">
+  
+    #<strong>encode_rdata</strong>(msg, canonical = false)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+241
+242
+243
+244
+245
+246
+247
+248</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RRSIG.rb', line 241</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_encode_rdata'>encode_rdata</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_canonical'>canonical</span><span class='op'>=</span><span class='kw'>false</span><span class='rparen'>)</span> <span class='comment'>#:nodoc: all
+</span>  <span class='comment'>#  2 octets, then 2 sets of 1 octet
+</span>  <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_pack'>put_pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ncc</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='ivar'>@type_covered</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='ivar'>@algorithm</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='ivar'>@labels</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_pack'>put_pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NNN</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@original_ttl</span><span class='comma'>,</span> <span class='ivar'>@expiration</span><span class='comma'>,</span> <span class='ivar'>@inception</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_pack'>put_pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@key_tag</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_name'>put_name</span><span class='lparen'>(</span><span class='ivar'>@signers_name</span><span class='comma'>,</span> <span class='id identifier rubyid_canonical'>canonical</span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_bytes'>put_bytes</span><span class='lparen'>(</span><span class='ivar'>@signature</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="format_time-instance_method">
+  
+    #<strong>format_time</strong>(time)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+224
+225
+226</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RRSIG.rb', line 224</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_format_time'>format_time</span><span class='lparen'>(</span><span class='id identifier rubyid_time'>time</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_at'>at</span><span class='lparen'>(</span><span class='id identifier rubyid_time'>time</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_gmtime'>gmtime</span><span class='period'>.</span><span class='id identifier rubyid_strftime'>strftime</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%Y%m%d%H%M%S</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="from_data-instance_method">
+  
+    #<strong>from_data</strong>(data)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+135
+136
+137
+138
+139
+140
+141
+142
+143</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RRSIG.rb', line 135</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_from_data'>from_data</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span> <span class='comment'>#:nodoc: all
+</span>  <span class='id identifier rubyid_type_covered'>type_covered</span><span class='comma'>,</span> <span class='id identifier rubyid_algorithm'>algorithm</span><span class='comma'>,</span> <span class='ivar'>@labels</span><span class='comma'>,</span> <span class='ivar'>@original_ttl</span><span class='comma'>,</span> <span class='id identifier rubyid_expiration'>expiration</span><span class='comma'>,</span> <span class='id identifier rubyid_inception'>inception</span><span class='comma'>,</span>
+    <span class='ivar'>@key_tag</span><span class='comma'>,</span> <span class='id identifier rubyid_signers_name'>signers_name</span><span class='comma'>,</span> <span class='ivar'>@signature</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span>
+  <span class='ivar'>@expiration</span> <span class='op'>=</span> <span class='id identifier rubyid_expiration'>expiration</span>
+  <span class='ivar'>@inception</span> <span class='op'>=</span> <span class='id identifier rubyid_inception'>inception</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_type_covered'>type_covered</span><span class='op'>=</span><span class='lparen'>(</span><span class='id identifier rubyid_type_covered'>type_covered</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_signers_name'>signers_name</span><span class='op'>=</span><span class='lparen'>(</span><span class='id identifier rubyid_signers_name'>signers_name</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_algorithm'>algorithm</span><span class='op'>=</span><span class='lparen'>(</span><span class='id identifier rubyid_algorithm'>algorithm</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="from_string-instance_method">
+  
+    #<strong>from_string</strong>(input)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RRSIG.rb', line 145</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_from_string'>from_string</span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_input'>input</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_type_covered'>type_covered</span><span class='op'>=</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_algorithm'>algorithm</span><span class='op'>=</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_labels'>labels</span><span class='op'>=</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_original_ttl'>original_ttl</span><span class='op'>=</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_expiration'>expiration</span><span class='op'>=</span><span class='id identifier rubyid_get_time'>get_time</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='int'>4</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='comment'>#  Brackets may also be present
+</span>    <span class='id identifier rubyid_index'>index</span> <span class='op'>=</span> <span class='int'>5</span>
+    <span class='id identifier rubyid_end_index'>end_index</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>-</span> <span class='int'>1</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span><span class='rbracket'>]</span><span class='op'>==</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_index'>index</span> <span class='op'>=</span> <span class='int'>6</span>
+      <span class='id identifier rubyid_end_index'>end_index</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>-</span> <span class='int'>2</span>
+    <span class='kw'>end</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_inception'>inception</span><span class='op'>=</span><span class='id identifier rubyid_get_time'>get_time</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_key_tag'>key_tag</span><span class='op'>=</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span><span class='op'>+</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_signers_name'>signers_name</span><span class='op'>=</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span><span class='op'>+</span><span class='int'>2</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='comment'>#  signature can include whitespace - include all text
+</span>    <span class='comment'>#  until we come to &quot; )&quot; at the end, and then gsub
+</span>    <span class='comment'>#  the white space out
+</span>    <span class='id identifier rubyid_buf'>buf</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+    <span class='lparen'>(</span><span class='id identifier rubyid_index'>index</span><span class='op'>+</span><span class='int'>3</span><span class='op'>..</span><span class='id identifier rubyid_end_index'>end_index</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_comment_index'>comment_index</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_buf'>buf</span> <span class='op'>+=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_slice'>slice</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_comment_index'>comment_index</span><span class='rparen'>)</span>
+        <span class='comment'>#  @TODO@ We lose the comments here - we should really keep them for when we write back to string format?
+</span>        <span class='kw'>break</span>
+      <span class='kw'>else</span>
+      <span class='id identifier rubyid_buf'>buf</span> <span class='op'>+=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span>
+      <span class='kw'>end</span>
+    <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_buf'>buf</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\n</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_buf'>buf</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'> </span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='comment'># self.signature=Base64.decode64(buf)
+</span>    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_signature'>signature</span><span class='op'>=</span><span class='id identifier rubyid_buf'>buf</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>m*</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_time-instance_method">
+  
+    #<strong>get_time</strong>(input)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+220
+221
+222</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RRSIG.rb', line 220</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_time'>get_time</span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::RR::RRSIG (class)">RRSIG</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_time'><span class='object_link'><a href="#get_time-class_method" title="Dnsruby::RR::RRSIG.get_time (method)">get_time</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="init_defaults-instance_method">
+  
+    #<strong>init_defaults</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RRSIG.rb', line 90</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_init_defaults'>init_defaults</span>
+  <span class='ivar'>@algorithm</span><span class='op'>=</span><span class='const'><span class='object_link'><a href="../Algorithms.html" title="Dnsruby::Algorithms (class)">Algorithms</a></span></span><span class='period'>.</span><span class='const'>RSASHA1</span>
+  <span class='ivar'>@type_covered</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Types.html#A-constant" title="Dnsruby::Types::A (constant)">A</a></span></span>
+  <span class='ivar'>@original_ttl</span> <span class='op'>=</span> <span class='int'>3600</span>
+  <span class='ivar'>@inception</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='ivar'>@expiration</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='ivar'>@key_tag</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='ivar'>@labels</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_signers_name'>signers_name</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span>
+  <span class='ivar'>@signature</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\0</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="rdata_to_string-instance_method">
+  
+    #<strong>rdata_to_string</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RRSIG.rb', line 228</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_rdata_to_string'>rdata_to_string</span> <span class='comment'>#:nodoc: all
+</span>  <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@type_covered</span><span class='op'>!=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+<span class='comment'>#          signature = Base64.encode64(@signature) # .gsub(/\n/, &quot;&quot;)
+</span>    <span class='id identifier rubyid_signature'>signature</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='ivar'>@signature</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>m*</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\n</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='comment'>#  @TODO@ Display the expiration and inception as
+</span>    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@type_covered</span><span class='period'>.</span><span class='id identifier rubyid_string'>string</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='ivar'>@algorithm</span><span class='period'>.</span><span class='id identifier rubyid_string'>string</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='ivar'>@labels</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='ivar'>@original_ttl</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_format_time'>format_time</span><span class='lparen'>(</span><span class='ivar'>@expiration</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> ( </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_format_time'>format_time</span><span class='lparen'>(</span><span class='ivar'>@inception</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@key_tag</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='ivar'>@signers_name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='lparen'>(</span><span class='kw'>true</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_signature'>signature</span><span class='embexpr_end'>}</span><span class='tstring_content'> )</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>else</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sig_data-instance_method">
+  
+    #<strong>sig_data</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/RRSIG.rb', line 261</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sig_data'>sig_data</span>
+  <span class='comment'># RRSIG_RDATA is the wire format of the RRSIG RDATA fields
+</span>  <span class='comment'># with the Signer&#39;s Name field in canonical form and
+</span>  <span class='comment'># the Signature field excluded;
+</span>  <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../MessageEncoder.html" title="Dnsruby::MessageEncoder (class)">MessageEncoder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../MessageEncoder.html#initialize-instance_method" title="Dnsruby::MessageEncoder#initialize (method)">new</a></span></span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_msg'>msg</span><span class='op'>|</span>
+    <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_pack'>put_pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ncc</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='ivar'>@type_covered</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='ivar'>@algorithm</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='ivar'>@labels</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_pack'>put_pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NNN</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@original_ttl</span><span class='comma'>,</span> <span class='ivar'>@expiration</span><span class='comma'>,</span> <span class='ivar'>@inception</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_pack'>put_pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@key_tag</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_name'>put_name</span><span class='lparen'>(</span><span class='ivar'>@signers_name</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_data'>data</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr  9 10:58:23 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-3.0.0).
+</div>
+
+    </div>
+  </body>
+</html>

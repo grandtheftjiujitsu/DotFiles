@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"hostname:ETI"$Dnsruby::RR::IN::AFSDB#hostname;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I",The RR's hostname field.  See RFC 1183.;T:
+@fileI""lib/dnsruby/resource/AFSDB.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::RR::IN::AFSDB;TcRDoc::NormalClass0

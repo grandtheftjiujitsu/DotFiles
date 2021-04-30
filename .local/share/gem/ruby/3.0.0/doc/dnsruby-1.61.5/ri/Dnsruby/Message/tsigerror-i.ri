@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"tsigerror:ETI"Dnsruby::Message#tsigerror;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"OIf this message has been verified using a TSIG RR then tsigerror contains ;TI"Qthe error code returned by the TSIG verification. The error will be an RCode;T:
+@fileI"#lib/dnsruby/message/message.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::Message;TcRDoc::NormalClass0

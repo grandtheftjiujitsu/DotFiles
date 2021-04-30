@@ -1,0 +1,3 @@
+U:RDoc::Attr[iI"ad:ETI"Dnsruby::Header#ad;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[
+I"!The Authenticated Data flag ;TI"!Relevant in DNSSEC context. ;TI"C(The AD bit is only set on answers where signatures have been ;TI"Lcryptographically verified or the server is authoritative for the data ;TI".and is allowed to set the bit by policy.);T:
+@fileI""lib/dnsruby/message/header.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::Header;TcRDoc::NormalClass0

@@ -1,0 +1,3354 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Dnsruby::SelectThread
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Dnsruby::SelectThread";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span>
+     &raquo; 
+    <span class="title">SelectThread</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Dnsruby::SelectThread
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Dnsruby::SelectThread</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd>Singleton</dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/dnsruby/select_thread.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="SelectThread/QuerySettings.html" title="Dnsruby::SelectThread::QuerySettings (class)">QuerySettings</a></span>, <span class='object_link'><a href="SelectThread/SelectWakeup.html" title="Dnsruby::SelectThread::SelectWakeup (class)">SelectWakeup</a></span>
+    
+  
+</p>
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_observer-instance_method" title="#add_observer (instance method)">#<strong>add_observer</strong>(client_queue, observer)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_to_select-instance_method" title="#add_to_select (instance method)">#<strong>add_to_select</strong>(query_settings)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_select_thread_synchronized-instance_method" title="#check_select_thread_synchronized (instance method)">#<strong>check_select_thread_synchronized</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clean_up_closed_sockets-instance_method" title="#clean_up_closed_sockets (instance method)">#<strong>clean_up_closed_sockets</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Removes closed sockets from @@sockets, and returns an array containing 1 exception for each closed socket contained in @@socket_hash.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#decrement_remaining_queries-instance_method" title="#decrement_remaining_queries (instance method)">#<strong>decrement_remaining_queries</strong>(socket)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#do_select-instance_method" title="#do_select (instance method)">#<strong>do_select</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_active_ids-instance_method" title="#get_active_ids (instance method)">#<strong>get_active_ids</strong>(queries, id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_client_id_from_answerfrom-instance_method" title="#get_client_id_from_answerfrom (instance method)">#<strong>get_client_id_from_answerfrom</strong>(socket, answerip, answerport)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_incoming_data-instance_method" title="#get_incoming_data (instance method)">#<strong>get_incoming_data</strong>(socket, packet_size)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_socket_pair-instance_method" title="#get_socket_pair (instance method)">#<strong>get_socket_pair</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#handle_recvfrom_failure-instance_method" title="#handle_recvfrom_failure (instance method)">#<strong>handle_recvfrom_failure</strong>(socket, exception)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; SelectThread </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This singleton class runs a continuous select loop which  listens for responses on all of the in-use sockets.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#max_attained%3F-instance_method" title="#max_attained? (instance method)">#<strong>max_attained?</strong>(socket)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#notify_queue_observers-instance_method" title="#notify_queue_observers (instance method)">#<strong>notify_queue_observers</strong>(client_queue, client_query_id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#persistent%3F-instance_method" title="#persistent? (instance method)">#<strong>persistent?</strong>(socket)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#process_error-instance_method" title="#process_error (instance method)">#<strong>process_error</strong>(errors)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#process_message-instance_method" title="#process_message (instance method)">#<strong>process_message</strong>(msg, bytes, socket)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#process_ready-instance_method" title="#process_ready (instance method)">#<strong>process_ready</strong>(ready)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>@@<a href="query_settings.client_query_id">query_hash</a>=query_settings.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#process_timeouts-instance_method" title="#process_timeouts (instance method)">#<strong>process_timeouts</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#push_exception_to_select-instance_method" title="#push_exception_to_select (instance method)">#<strong>push_exception_to_select</strong>(client_id, client_queue, err, msg)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#push_response_to_select-instance_method" title="#push_response_to_select (instance method)">#<strong>push_response_to_select</strong>(client_id, client_queue, msg, query, res)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#push_to_client-instance_method" title="#push_to_client (instance method)">#<strong>push_to_client</strong>(client_id, client_queue, msg, err, query, res)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#push_validation_response_to_select-instance_method" title="#push_validation_response_to_select (instance method)">#<strong>push_validation_response_to_select</strong>(client_id, client_queue, msg, err, query, res)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove_id-instance_method" title="#remove_id (instance method)">#<strong>remove_id</strong>(id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove_observer-instance_method" title="#remove_observer (instance method)">#<strong>remove_observer</strong>(client_queue, observer)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#select_thread_alive%3F-instance_method" title="#select_thread_alive? (instance method)">#<strong>select_thread_alive?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#send_exception_to_client-instance_method" title="#send_exception_to_client (instance method)">#<strong>send_exception_to_client</strong>(err, socket, client_id, msg = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#send_queued_exceptions-instance_method" title="#send_queued_exceptions (instance method)">#<strong>send_queued_exceptions</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#send_queued_responses-instance_method" title="#send_queued_responses (instance method)">#<strong>send_queued_responses</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#send_queued_validation_responses-instance_method" title="#send_queued_validation_responses (instance method)">#<strong>send_queued_validation_responses</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#send_response_to_client-instance_method" title="#send_response_to_client (instance method)">#<strong>send_response_to_client</strong>(msg, bytes, socket)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#send_tick_to_observers-instance_method" title="#send_tick_to_observers (instance method)">#<strong>send_tick_to_observers</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#tcp%3F-instance_method" title="#tcp? (instance method)">#<strong>tcp?</strong>(socket)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#tcp_read-instance_method" title="#tcp_read (instance method)">#<strong>tcp_read</strong>(socket)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#udp%3F-instance_method" title="#udp? (instance method)">#<strong>udp?</strong>(socket)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Dnsruby::SelectThread (class)">SelectThread</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This singleton class runs a continuous select loop which</p>
+
+<pre class="code ruby"><code class="ruby">listens for responses on all of the in-use sockets.
+When a new query is sent, the thread is woken up, and
+the socket is added to the select loop (and the new timeout
+calculated).
+Note that a combination of the socket and the packet ID is
+sufficient to uniquely identify the query to the select thread.
+
+But how do we find the response queue for a particular query?
+Hash of client_id-&gt;[query, client_queue, socket]
+and socket-&gt;[client_id]
+
+@todo@ should we implement some of cancel function?
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 44</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
+  <span class='cvar'>@@mutex</span> <span class='op'>=</span> <span class='const'>Mutex</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
+    <span class='cvar'>@@in_select</span><span class='op'>=</span><span class='kw'>false</span>
+    <span class='comment'>#         @@notifier,@@notified=IO.pipe
+</span>    <span class='cvar'>@@sockets</span> <span class='op'>=</span> <span class='const'>Set</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='cvar'>@@timeouts</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='comment'>#     @@mutex.synchronize do
+</span>    <span class='cvar'>@@query_hash</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='cvar'>@@socket_hash</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='cvar'>@@socket_is_persistent</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='cvar'>@@observers</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='cvar'>@@tcp_buffers</span><span class='op'>=</span><span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='cvar'>@@socket_remaining_queries</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='cvar'>@@tick_observers</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='cvar'>@@queued_exceptions</span><span class='op'>=</span><span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='cvar'>@@queued_responses</span><span class='op'>=</span><span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='cvar'>@@queued_validation_responses</span><span class='op'>=</span><span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='cvar'>@@wakeup_sockets</span> <span class='op'>=</span> <span class='id identifier rubyid_get_socket_pair'>get_socket_pair</span>
+    <span class='cvar'>@@sockets</span> <span class='op'>&lt;&lt;</span> <span class='cvar'>@@wakeup_sockets</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
+
+    <span class='comment'>#  Suppress reverse lookups
+</span>    <span class='const'>BasicSocket</span><span class='period'>.</span><span class='id identifier rubyid_do_not_reverse_lookup'>do_not_reverse_lookup</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='comment'>#     end
+</span>    <span class='comment'>#  Now start the select thread
+</span>    <span class='cvar'>@@select_thread</span> <span class='op'>=</span> <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_do_select'>do_select</span> <span class='rbrace'>}</span>
+
+    <span class='comment'>#         # Start the validator thread
+</span>    <span class='comment'>#         @@validator = ValidatorThread.instance
+</span>  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add_observer-instance_method">
+  
+    #<strong>add_observer</strong>(client_queue, observer)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+761
+762
+763
+764
+765
+766
+767
+768
+769</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 761</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_observer'>add_observer</span><span class='lparen'>(</span><span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_observer'>observer</span><span class='rparen'>)</span>
+  <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
+    <span class='cvar'>@@observers</span><span class='lbracket'>[</span><span class='id identifier rubyid_client_queue'>client_queue</span><span class='rbracket'>]</span><span class='op'>=</span><span class='id identifier rubyid_observer'>observer</span>
+    <span class='id identifier rubyid_check_select_thread_synchronized'>check_select_thread_synchronized</span> <span class='comment'># Is this really necessary? The client should start the thread by sending a query, really...
+</span>    <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='cvar'>@@tick_observers</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='id identifier rubyid_observer'>observer</span><span class='rparen'>)</span>
+      <span class='cvar'>@@tick_observers</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_observer'>observer</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="add_to_select-instance_method">
+  
+    #<strong>add_to_select</strong>(query_settings)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 127</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_to_select'>add_to_select</span><span class='lparen'>(</span><span class='id identifier rubyid_query_settings'>query_settings</span><span class='rparen'>)</span>
+  <span class='comment'>#  Add the query to sockets, and then wake the select thread up
+</span>  <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
+    <span class='id identifier rubyid_check_select_thread_synchronized'>check_select_thread_synchronized</span>
+    <span class='comment'>#  @TODO@ This assumes that all client_query_ids are unique!
+</span>    <span class='comment'>#  Would be a good idea at least to check this...
+</span>    <span class='cvar'>@@query_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_query_settings'>query_settings</span><span class='period'>.</span><span class='id identifier rubyid_client_query_id'>client_query_id</span><span class='rbracket'>]</span><span class='op'>=</span><span class='id identifier rubyid_query_settings'>query_settings</span>
+    <span class='cvar'>@@socket_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_query_settings'>query_settings</span><span class='period'>.</span><span class='id identifier rubyid_socket'>socket</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='cvar'>@@socket_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_query_settings'>query_settings</span><span class='period'>.</span><span class='id identifier rubyid_socket'>socket</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_query_settings'>query_settings</span><span class='period'>.</span><span class='id identifier rubyid_client_query_id'>client_query_id</span>
+    <span class='cvar'>@@socket_remaining_queries</span><span class='lbracket'>[</span><span class='id identifier rubyid_query_settings'>query_settings</span><span class='period'>.</span><span class='id identifier rubyid_socket'>socket</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='id identifier rubyid_query_settings'>query_settings</span><span class='period'>.</span><span class='id identifier rubyid_tcp_pipelining_max_queries'>tcp_pipelining_max_queries</span> <span class='kw'>if</span> <span class='id identifier rubyid_query_settings'>query_settings</span><span class='period'>.</span><span class='id identifier rubyid_tcp_pipelining_max_queries'>tcp_pipelining_max_queries</span> <span class='op'>!=</span> <span class='symbol'>:infinite</span>
+    <span class='cvar'>@@timeouts</span><span class='lbracket'>[</span><span class='id identifier rubyid_query_settings'>query_settings</span><span class='period'>.</span><span class='id identifier rubyid_client_query_id'>client_query_id</span><span class='rbracket'>]</span><span class='op'>=</span><span class='id identifier rubyid_query_settings'>query_settings</span><span class='period'>.</span><span class='id identifier rubyid_endtime'>endtime</span>
+    <span class='cvar'>@@sockets</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_query_settings'>query_settings</span><span class='period'>.</span><span class='id identifier rubyid_socket'>socket</span>
+    <span class='cvar'>@@socket_is_persistent</span><span class='lbracket'>[</span><span class='id identifier rubyid_query_settings'>query_settings</span><span class='period'>.</span><span class='id identifier rubyid_socket'>socket</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_query_settings'>query_settings</span><span class='period'>.</span><span class='id identifier rubyid_is_persistent_socket'>is_persistent_socket</span>
+  <span class='rbrace'>}</span>
+  <span class='kw'>begin</span>
+    <span class='cvar'>@@wakeup_sockets</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wakeup!</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span>
+  <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+    <span class='comment'>#          do nothing
+</span>  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="check_select_thread_synchronized-instance_method">
+  
+    #<strong>check_select_thread_synchronized</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+148
+149
+150
+151
+152
+153
+154
+155</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 148</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_check_select_thread_synchronized'>check_select_thread_synchronized</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='cvar'>@@select_thread</span><span class='period'>.</span><span class='id identifier rubyid_alive?'>alive?</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Restarting select thread</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span>
+    <span class='cvar'>@@select_thread</span> <span class='op'>=</span> <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span>
+      <span class='id identifier rubyid_do_select'>do_select</span>
+    <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="clean_up_closed_sockets-instance_method">
+  
+    #<strong>clean_up_closed_sockets</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Removes closed sockets from @@sockets, and returns an array containing 1 exception for each closed socket contained in @@socket_hash.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 250</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_clean_up_closed_sockets'>clean_up_closed_sockets</span>
+  <span class='id identifier rubyid_exceptions'>exceptions</span> <span class='op'>=</span> <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_closed_sockets_in_hash'>closed_sockets_in_hash</span> <span class='op'>=</span> <span class='cvar'>@@sockets</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:closed?</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_s'>s</span><span class='op'>|</span> <span class='cvar'>@@socket_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_s'>s</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+    <span class='cvar'>@@sockets</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='lbrace'>{</span> <span class='op'>|</span> <span class='id identifier rubyid_socket'>socket</span> <span class='op'>|</span> <span class='id identifier rubyid_socket'>socket</span><span class='period'>.</span><span class='id identifier rubyid_closed?'>closed?</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_closed_sockets_in_hash'>closed_sockets_in_hash</span><span class='period'>.</span><span class='id identifier rubyid_each_with_object'>each_with_object</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_socket'>socket</span><span class='comma'>,</span> <span class='id identifier rubyid_exceptions'>exceptions</span><span class='op'>|</span>
+      <span class='cvar'>@@socket_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_socket'>socket</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span> <span class='id identifier rubyid_client_id'>client_id</span> <span class='op'>|</span>
+        <span class='id identifier rubyid_exceptions'>exceptions</span> <span class='op'>&lt;&lt;</span> <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="SocketEofResolvError.html" title="Dnsruby::SocketEofResolvError (class)">SocketEofResolvError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TCP socket closed before all answers received</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_socket'>socket</span><span class='comma'>,</span> <span class='id identifier rubyid_client_id'>client_id</span><span class='rbracket'>]</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="decrement_remaining_queries-instance_method">
+  
+    #<strong>decrement_remaining_queries</strong>(socket)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+390
+391
+392
+393
+394</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 390</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_decrement_remaining_queries'>decrement_remaining_queries</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='cvar'>@@socket_remaining_queries</span><span class='lbracket'>[</span><span class='id identifier rubyid_socket'>socket</span><span class='rbracket'>]</span>
+    <span class='cvar'>@@socket_remaining_queries</span><span class='lbracket'>[</span><span class='id identifier rubyid_socket'>socket</span><span class='rbracket'>]</span> <span class='op'>-=</span> <span class='int'>1</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="do_select-instance_method">
+  
+    #<strong>do_select</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 165</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_do_select'>do_select</span>
+  <span class='id identifier rubyid_unused_loop_count'>unused_loop_count</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_last_tick_time'>last_tick_time</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span> <span class='op'>-</span> <span class='int'>10</span>
+  <span class='kw'>while</span> <span class='kw'>true</span> <span class='kw'>do</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_last_tick_time'>last_tick_time</span> <span class='op'>&lt;</span> <span class='lparen'>(</span><span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span> <span class='op'>-</span> <span class='float'>0.5</span><span class='rparen'>)</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_send_tick_to_observers'>send_tick_to_observers</span> <span class='comment'># ONLY NEED TO SEND THIS TWICE A SECOND - NOT EVERY SELECT!!!
+</span>      <span class='id identifier rubyid_last_tick_time'>last_tick_time</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_send_queued_exceptions'>send_queued_exceptions</span>
+    <span class='id identifier rubyid_send_queued_responses'>send_queued_responses</span>
+    <span class='id identifier rubyid_send_queued_validation_responses'>send_queued_validation_responses</span>
+    <span class='id identifier rubyid_timeout'>timeout</span> <span class='op'>=</span> <span class='id identifier rubyid_tick_time'>tick_time</span> <span class='op'>=</span> <span class='float'>0.1</span> <span class='comment'># We provide a timer service to various Dnsruby classes
+</span>    <span class='id identifier rubyid_sockets'>sockets</span><span class='comma'>,</span> <span class='id identifier rubyid_timeouts'>timeouts</span><span class='comma'>,</span> <span class='id identifier rubyid_has_observer'>has_observer</span> <span class='op'>=</span> <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span> <span class='lbracket'>[</span><span class='cvar'>@@sockets</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span><span class='comma'>,</span> <span class='cvar'>@@timeouts</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='comma'>,</span> <span class='op'>!</span><span class='cvar'>@@observers</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_timeouts'>timeouts</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_timeouts'>timeouts</span><span class='period'>.</span><span class='id identifier rubyid_sort!'>sort!</span>
+      <span class='id identifier rubyid_timeout'>timeout</span> <span class='op'>=</span> <span class='id identifier rubyid_timeouts'>timeouts</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>-</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_timeout'>timeout</span> <span class='op'>&lt;=</span> <span class='int'>0</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_process_timeouts'>process_timeouts</span>
+        <span class='id identifier rubyid_timeout'>timeout</span> <span class='op'>=</span> <span class='int'>0</span>
+        <span class='kw'>next</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_ready'>ready</span><span class='op'>=</span><span class='kw'>nil</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_has_observer'>has_observer</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_timeout'>timeout</span> <span class='op'>&gt;</span> <span class='id identifier rubyid_tick_time'>tick_time</span><span class='rparen'>)</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_timeout'>timeout</span> <span class='op'>=</span> <span class='id identifier rubyid_tick_time'>tick_time</span>
+    <span class='kw'>end</span>
+    <span class='comment'>#         next if (timeout &lt; 0)
+</span>    <span class='kw'>begin</span>
+      <span class='id identifier rubyid_ready'>ready</span><span class='comma'>,</span> <span class='id identifier rubyid_write'>write</span><span class='comma'>,</span> <span class='id identifier rubyid_errors'>errors</span> <span class='op'>=</span> <span class='const'>IO</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span><span class='lparen'>(</span><span class='id identifier rubyid_sockets'>sockets</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_timeout'>timeout</span><span class='rparen'>)</span>
+    <span class='kw'>rescue</span> <span class='const'><span class='object_link'><a href="SelectThread/SelectWakeup.html" title="Dnsruby::SelectThread::SelectWakeup (class)">SelectWakeup</a></span></span>
+      <span class='comment'>#  If SelectWakeup, then just restart this loop - the select call will be made with the new data
+</span>      <span class='kw'>next</span>
+    <span class='kw'>rescue</span> <span class='const'>IOError</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="EncodeError.html" title="Dnsruby::EncodeError (class)">EncodeError</a></span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+      <span class='comment'>#           print &quot;IO Error  =: #{e}\n&quot;
+</span>      <span class='id identifier rubyid_exceptions'>exceptions</span> <span class='op'>=</span> <span class='id identifier rubyid_clean_up_closed_sockets'>clean_up_closed_sockets</span>
+      <span class='id identifier rubyid_exceptions'>exceptions</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_exception'>exception</span><span class='op'>|</span> <span class='id identifier rubyid_send_exception_to_client'>send_exception_to_client</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_exception'>exception</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+
+      <span class='kw'>next</span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_ready'>ready</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_ready'>ready</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='cvar'>@@wakeup_sockets</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_ready'>ready</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='cvar'>@@wakeup_sockets</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_wakeup_msg'>wakeup_msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>loop</span><span class='tstring_end'>&quot;</span></span>
+      <span class='kw'>begin</span>
+        <span class='kw'>while</span> <span class='id identifier rubyid_wakeup_msg'>wakeup_msg</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_wakeup_msg'>wakeup_msg</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+          <span class='id identifier rubyid_wakeup_msg'>wakeup_msg</span> <span class='op'>=</span> <span class='cvar'>@@wakeup_sockets</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_recv_nonblock'>recv_nonblock</span><span class='lparen'>(</span><span class='int'>20</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+      <span class='kw'>rescue</span>
+        <span class='comment'>#  do nothing
+</span>      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_ready'>ready</span> <span class='op'>==</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+      <span class='comment'>#  process the timeouts
+</span>      <span class='id identifier rubyid_process_timeouts'>process_timeouts</span>
+      <span class='id identifier rubyid_unused_loop_count'>unused_loop_count</span><span class='op'>+=</span><span class='int'>1</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_process_ready'>process_ready</span><span class='lparen'>(</span><span class='id identifier rubyid_ready'>ready</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_unused_loop_count'>unused_loop_count</span><span class='op'>=</span><span class='int'>0</span>
+      <span class='comment'># process_error(errors)
+</span>    <span class='kw'>end</span>
+    <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='kw'>do</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_unused_loop_count'>unused_loop_count</span> <span class='op'>&gt;</span> <span class='int'>10</span> <span class='op'>&amp;&amp;</span> <span class='cvar'>@@query_hash</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='op'>&amp;&amp;</span> <span class='cvar'>@@observers</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span><span class='rparen'>)</span>
+        <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Try stop select loop</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+        <span class='id identifier rubyid_non_persistent_sockets'>non_persistent_sockets</span> <span class='op'>=</span> <span class='cvar'>@@sockets</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_s'>s</span><span class='op'>|</span> <span class='op'>!</span> <span class='cvar'>@@socket_is_persistent</span><span class='lbracket'>[</span><span class='id identifier rubyid_s'>s</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+        <span class='id identifier rubyid_non_persistent_sockets'>non_persistent_sockets</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_socket'>socket</span><span class='op'>|</span>
+          <span class='id identifier rubyid_socket'>socket</span><span class='period'>.</span><span class='id identifier rubyid_close'>close</span> <span class='kw'>rescue</span> <span class='kw'>nil</span>
+          <span class='cvar'>@@sockets</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+
+        <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Deleted </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_non_persistent_sockets'>non_persistent_sockets</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='embexpr_end'>}</span><span class='tstring_content'> non-persistent sockets,</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
+                          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='cvar'>@@sockets</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span><span class='embexpr_end'>}</span><span class='tstring_content'> persistent sockets remain.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+        <span class='cvar'>@@socket_hash</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
+
+        <span class='kw'>if</span> <span class='cvar'>@@sockets</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+          <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Stopping select loop</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+          <span class='kw'>return</span>
+        <span class='kw'>end</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='comment'>#               }
+</span>  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_active_ids-instance_method">
+  
+    #<strong>get_active_ids</strong>(queries, id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+267
+268
+269</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 267</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_active_ids'>get_active_ids</span><span class='lparen'>(</span><span class='id identifier rubyid_queries'>queries</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_queries'>queries</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_client_query_id'>client_query_id</span><span class='op'>|</span> <span class='id identifier rubyid_client_query_id'>client_query_id</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='op'>==</span> <span class='id identifier rubyid_id'>id</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_client_id_from_answerfrom-instance_method">
+  
+    #<strong>get_client_id_from_answerfrom</strong>(socket, answerip, answerport)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618
+619
+620</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 603</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_client_id_from_answerfrom'>get_client_id_from_answerfrom</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='comma'>,</span> <span class='id identifier rubyid_answerip'>answerip</span><span class='comma'>,</span> <span class='id identifier rubyid_answerport'>answerport</span><span class='rparen'>)</span>
+  <span class='comment'>#  @TODO@ Can get rid of this, as there is only one query per socket
+</span>  <span class='id identifier rubyid_client_id'>client_id</span><span class='op'>=</span><span class='kw'>nil</span>
+  <span class='comment'>#  Figure out client id from answerfrom
+</span>  <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span><span class='lbrace'>{</span>
+    <span class='id identifier rubyid_ids'>ids</span> <span class='op'>=</span> <span class='cvar'>@@socket_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_socket'>socket</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_ids'>ids</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_id'>id</span><span class='op'>|</span>
+      <span class='comment'>#  Does this id speak to this dest_server?
+</span>      <span class='id identifier rubyid_query_settings'>query_settings</span> <span class='op'>=</span> <span class='cvar'>@@query_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='rbracket'>]</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_answerip'>answerip</span> <span class='op'>==</span> <span class='id identifier rubyid_query_settings'>query_settings</span><span class='period'>.</span><span class='id identifier rubyid_dest_server'>dest_server</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_answerport'>answerport</span> <span class='op'>==</span> <span class='id identifier rubyid_query_settings'>query_settings</span><span class='period'>.</span><span class='id identifier rubyid_dest_port'>dest_port</span><span class='rparen'>)</span>
+        <span class='comment'>#  We have a match
+</span>        <span class='id identifier rubyid_client_id'>client_id</span> <span class='op'>=</span> <span class='id identifier rubyid_id'>id</span>
+        <span class='kw'>break</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_client_id'>client_id</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_incoming_data-instance_method">
+  
+    #<strong>get_incoming_data</strong>(socket, packet_size)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567
+568
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 477</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_incoming_data'>get_incoming_data</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='comma'>,</span> <span class='id identifier rubyid_packet_size'>packet_size</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_answerfrom'>answerfrom</span><span class='comma'>,</span><span class='id identifier rubyid_answerip'>answerip</span><span class='comma'>,</span><span class='id identifier rubyid_answerport'>answerport</span><span class='comma'>,</span><span class='id identifier rubyid_answersize'>answersize</span><span class='op'>=</span><span class='kw'>nil</span>
+  <span class='id identifier rubyid_ans'>ans</span><span class='comma'>,</span><span class='id identifier rubyid_buf'>buf</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='id identifier rubyid_is_tcp'>is_tcp</span> <span class='op'>=</span> <span class='id identifier rubyid_tcp?'>tcp?</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span>
+
+  <span class='kw'>begin</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_is_tcp'>is_tcp</span>
+      <span class='comment'>#  Call TCP read here - that will take care of reading the 2 byte length,
+</span>      <span class='comment'>#  and then the full packet - without blocking select.
+</span>      <span class='id identifier rubyid_buf'>buf</span> <span class='op'>=</span> <span class='id identifier rubyid_tcp_read'>tcp_read</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_buf'>buf</span><span class='rparen'>)</span> <span class='comment'># Wait for the buffer to comletely fill
+</span>        <span class='comment'>#             handle_recvfrom_failure(socket, &quot;&quot;)
+</span>        <span class='kw'>return</span>
+      <span class='kw'>end</span>
+    <span class='kw'>else</span>
+      <span class='comment'>#  @TODO@ Can we get recvfrom to stop issuing PTR queries when we already
+</span>      <span class='comment'>#  know both the FQDN and the IP address?
+</span>      <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='id identifier rubyid_socket'>socket</span><span class='period'>.</span><span class='id identifier rubyid_recvfrom'>recvfrom</span><span class='lparen'>(</span><span class='id identifier rubyid_packet_size'>packet_size</span><span class='rparen'>)</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_buf'>buf</span> <span class='op'>=</span> <span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_answerport'>answerport</span><span class='op'>=</span><span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_answerfrom'>answerfrom</span><span class='op'>=</span><span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_answerip'>answerip</span><span class='op'>=</span><span class='id identifier rubyid_ret'>ret</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_answersize'>answersize</span><span class='op'>=</span><span class='lparen'>(</span><span class='id identifier rubyid_buf'>buf</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span>
+      <span class='kw'>else</span>
+        <span class='comment'>#  recvfrom failed - why?
+</span>        <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Error - recvfrom failed from </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_socket'>socket</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span>
+        <span class='id identifier rubyid_handle_recvfrom_failure'>handle_recvfrom_failure</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+        <span class='kw'>return</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+    <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Error - recvfrom failed from </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_socket'>socket</span><span class='embexpr_end'>}</span><span class='tstring_content'>, exception : </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span>
+    <span class='id identifier rubyid_handle_recvfrom_failure'>handle_recvfrom_failure</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='comma'>,</span> <span class='id identifier rubyid_e'>e</span><span class='rparen'>)</span>
+    <span class='kw'>return</span>
+  <span class='kw'>end</span>
+  <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; answer from </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_answerfrom'>answerfrom</span><span class='embexpr_end'>}</span><span class='tstring_content'> : </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_answersize'>answersize</span><span class='embexpr_end'>}</span><span class='tstring_content'> bytes\n</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span>
+
+  <span class='kw'>begin</span>
+    <span class='id identifier rubyid_ans'>ans</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span><span class='period'>.</span><span class='id identifier rubyid_decode'><span class='object_link'><a href="Message.html#decode-class_method" title="Dnsruby::Message.decode (method)">decode</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_buf'>buf</span><span class='rparen'>)</span>
+
+    <span class='kw'>if</span> <span class='id identifier rubyid_is_tcp'>is_tcp</span>
+      <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_ids'>ids</span> <span class='op'>=</span> <span class='id identifier rubyid_get_active_ids'>get_active_ids</span><span class='lparen'>(</span><span class='cvar'>@@query_hash</span><span class='comma'>,</span> <span class='id identifier rubyid_ans'>ans</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_ids'>ids</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+          <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Decode error from </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_answerip'>answerip</span><span class='embexpr_end'>}</span><span class='tstring_content'> but can&#39;t determine packet id</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+          <span class='comment'>#todo add error event? The problem is we don&#39;t have a valid id so we don&#39;t
+</span>          <span class='comment'>#know which client queue to send the exception to
+</span>        <span class='kw'>end</span>
+        <span class='id identifier rubyid_answerfrom'>answerfrom</span> <span class='op'>=</span> <span class='cvar'>@@query_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_ids'>ids</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_dest_server'>dest_server</span>
+        <span class='id identifier rubyid_answerip'>answerip</span> <span class='op'>=</span> <span class='id identifier rubyid_answerfrom'>answerfrom</span>
+        <span class='id identifier rubyid_answerport'>answerport</span> <span class='op'>=</span> <span class='cvar'>@@query_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_ids'>ids</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_dest_port'>dest_port</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+  <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+    <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Decode error! </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'>, </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='embexpr_end'>}</span><span class='tstring_content'>\nfor msg (length=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_buf'>buf</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='embexpr_end'>}</span><span class='tstring_content'>) : </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_buf'>buf</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_client_id'>client_id</span><span class='op'>=</span><span class='id identifier rubyid_get_client_id_from_answerfrom'>get_client_id_from_answerfrom</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='comma'>,</span> <span class='id identifier rubyid_answerip'>answerip</span><span class='comma'>,</span> <span class='id identifier rubyid_answerport'>answerport</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_client_id'>client_id</span> <span class='op'>==</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+      <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Decode error from </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_answerip'>answerip</span><span class='embexpr_end'>}</span><span class='tstring_content'> but can&#39;t determine packet id</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+    <span class='comment'>#  We should check if the TC bit is set (if we can get that far)
+</span>    <span class='kw'>if</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="DecodeError.html" title="Dnsruby::DecodeError (class)">DecodeError</a></span></span> <span class='op'>===</span> <span class='id identifier rubyid_e'>e</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_partial_message'>partial_message</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_tc'>tc</span><span class='rparen'>)</span><span class='rparen'>)</span>
+      <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Decode error (from {answerip})! Header shows truncation, so trying again over TCP</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span>
+      <span class='comment'>#  If it is, then we should retry over TCP
+</span>      <span class='id identifier rubyid_sent'>sent</span> <span class='op'>=</span> <span class='kw'>false</span>
+      <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span><span class='lbrace'>{</span>
+        <span class='id identifier rubyid_client_ids'>client_ids</span> <span class='op'>=</span> <span class='cvar'>@@socket_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_socket'>socket</span><span class='rbracket'>]</span>
+        <span class='comment'>#  get the queries associated with them
+</span>        <span class='id identifier rubyid_client_ids'>client_ids</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_id'>id</span><span class='op'>|</span>
+          <span class='id identifier rubyid_query_header_id'>query_header_id</span><span class='op'>=</span><span class='kw'>nil</span>
+          <span class='id identifier rubyid_query_header_id'>query_header_id</span> <span class='op'>=</span> <span class='cvar'>@@query_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_query'>query</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span>
+          <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_query_header_id'>query_header_id</span> <span class='op'>==</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_partial_message'>partial_message</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+            <span class='comment'>#  process the response
+</span>            <span class='id identifier rubyid_client_queue'>client_queue</span> <span class='op'>=</span> <span class='kw'>nil</span>
+            <span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='kw'>nil</span>
+            <span class='id identifier rubyid_query'>query</span><span class='op'>=</span><span class='kw'>nil</span>
+            <span class='id identifier rubyid_client_queue'>client_queue</span> <span class='op'>=</span> <span class='cvar'>@@query_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_client_queue'>client_queue</span>
+            <span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='cvar'>@@query_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_single_resolver'>single_resolver</span>
+            <span class='id identifier rubyid_query'>query</span> <span class='op'>=</span> <span class='cvar'>@@query_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_query'>query</span>
+
+            <span class='comment'>#  NOW RESEND OVER TCP!
+</span>            <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span>
+              <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_send_async'>send_async</span><span class='lparen'>(</span><span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
+            <span class='rbrace'>}</span>
+            <span class='id identifier rubyid_sent'>sent</span> <span class='op'>=</span> <span class='kw'>true</span>
+          <span class='kw'>end</span>
+        <span class='kw'>end</span>
+      <span class='rbrace'>}</span>
+      <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_sent'>sent</span>
+        <span class='id identifier rubyid_send_exception_to_client'>send_exception_to_client</span><span class='lparen'>(</span><span class='id identifier rubyid_e'>e</span><span class='comma'>,</span> <span class='id identifier rubyid_socket'>socket</span><span class='comma'>,</span> <span class='id identifier rubyid_client_id'>client_id</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_send_exception_to_client'>send_exception_to_client</span><span class='lparen'>(</span><span class='id identifier rubyid_e'>e</span><span class='comma'>,</span> <span class='id identifier rubyid_socket'>socket</span><span class='comma'>,</span> <span class='id identifier rubyid_client_id'>client_id</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='kw'>return</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_ans'>ans</span><span class='op'>!=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_ans'>ans</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span>
+    <span class='id identifier rubyid_ans'>ans</span><span class='period'>.</span><span class='id identifier rubyid_answerfrom'>answerfrom</span><span class='op'>=</span><span class='lparen'>(</span><span class='id identifier rubyid_answerfrom'>answerfrom</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_ans'>ans</span><span class='period'>.</span><span class='id identifier rubyid_answersize'>answersize</span><span class='op'>=</span><span class='lparen'>(</span><span class='id identifier rubyid_answersize'>answersize</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_ans'>ans</span><span class='period'>.</span><span class='id identifier rubyid_answerip'>answerip</span> <span class='op'>=</span><span class='lparen'>(</span><span class='id identifier rubyid_answerip'>answerip</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_ans'>ans</span><span class='comma'>,</span> <span class='id identifier rubyid_buf'>buf</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_socket_pair-instance_method">
+  
+    #<strong>get_socket_pair</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 76</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_socket_pair'>get_socket_pair</span>
+  <span class='comment'>#  Emulate socketpair on platforms which don&#39;t support it
+</span>  <span class='id identifier rubyid_srv'>srv</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='kw'>begin</span>
+    <span class='id identifier rubyid_srv'>srv</span> <span class='op'>=</span> <span class='const'>TCPServer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>localhost</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span>
+  <span class='kw'>rescue</span> <span class='const'>Errno</span><span class='op'>::</span><span class='const'>EADDRNOTAVAIL</span><span class='comma'>,</span> <span class='const'>SocketError</span> <span class='comment'># OSX Snow Leopard issue - need to use explicit IP
+</span>    <span class='kw'>begin</span>
+      <span class='id identifier rubyid_srv'>srv</span> <span class='op'>=</span> <span class='const'>TCPServer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>127.0.0.1</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span>
+    <span class='kw'>rescue</span> <span class='const'>Error</span> <span class='comment'># Try IPv6
+</span>      <span class='id identifier rubyid_srv'>srv</span> <span class='op'>=</span> <span class='const'>TCPServer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>::1</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_rsock'>rsock</span> <span class='op'>=</span> <span class='const'>TCPSocket</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_srv'>srv</span><span class='period'>.</span><span class='id identifier rubyid_addr'>addr</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_srv'>srv</span><span class='period'>.</span><span class='id identifier rubyid_addr'>addr</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_lsock'>lsock</span> <span class='op'>=</span> <span class='id identifier rubyid_srv'>srv</span><span class='period'>.</span><span class='id identifier rubyid_accept'>accept</span>
+  <span class='id identifier rubyid_srv'>srv</span><span class='period'>.</span><span class='id identifier rubyid_close'>close</span>
+  <span class='kw'>return</span> <span class='lbracket'>[</span><span class='id identifier rubyid_lsock'>lsock</span><span class='comma'>,</span> <span class='id identifier rubyid_rsock'>rsock</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="handle_recvfrom_failure-instance_method">
+  
+    #<strong>handle_recvfrom_failure</strong>(socket, exception)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597
+598
+599
+600
+601</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 584</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_handle_recvfrom_failure'>handle_recvfrom_failure</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='comma'>,</span> <span class='id identifier rubyid_exception'>exception</span><span class='rparen'>)</span>
+  <span class='comment'>#   No way to notify the client about this error, unless there was only one connection on the socket
+</span>  <span class='comment'>#  Not a problem, as there only will ever be one connection on the socket (Kaminsky attack mitigation)
+</span>  <span class='id identifier rubyid_ids_for_socket'>ids_for_socket</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span><span class='lbrace'>{</span>
+    <span class='id identifier rubyid_ids_for_socket'>ids_for_socket</span> <span class='op'>=</span> <span class='cvar'>@@socket_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_socket'>socket</span><span class='rbracket'>]</span>
+  <span class='rbrace'>}</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_ids_for_socket'>ids_for_socket</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>==</span> <span class='int'>1</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_answerfrom'>answerfrom</span><span class='op'>=</span><span class='kw'>nil</span>
+    <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span><span class='lbrace'>{</span>
+      <span class='id identifier rubyid_query_settings'>query_settings</span> <span class='op'>=</span> <span class='cvar'>@@query_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_ids_for_socket'>ids_for_socket</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_answerfrom'>answerfrom</span><span class='op'>=</span><span class='id identifier rubyid_query_settings'>query_settings</span><span class='period'>.</span><span class='id identifier rubyid_dest_server'>dest_server</span>
+    <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_send_exception_to_client'>send_exception_to_client</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="OtherResolvError.html" title="Dnsruby::OtherResolvError (class)">OtherResolvError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>recvfrom failed from </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_answerfrom'>answerfrom</span><span class='embexpr_end'>}</span><span class='tstring_content'>; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_exception'>exception</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_socket'>socket</span><span class='comma'>,</span> <span class='id identifier rubyid_ids_for_socket'>ids_for_socket</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_fatal'>fatal</span><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Recvfrom failed from </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_socket'>socket</span><span class='embexpr_end'>}</span><span class='tstring_content'>, no way to tell query id</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="max_attained?-instance_method">
+  
+    #<strong>max_attained?</strong>(socket)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+396
+397
+398
+399
+400
+401</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 396</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_max_attained?'>max_attained?</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_remaining'>remaining</span> <span class='op'>=</span> <span class='cvar'>@@socket_remaining_queries</span><span class='lbracket'>[</span><span class='id identifier rubyid_socket'>socket</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_attained'>attained</span> <span class='op'>=</span> <span class='id identifier rubyid_persistent?'>persistent?</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_remaining'>remaining</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_remaining'>remaining</span> <span class='op'>&lt;=</span> <span class='int'>0</span>
+  <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Max queries per conn attained</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_attained'>attained</span>
+  <span class='id identifier rubyid_attained'>attained</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="notify_queue_observers-instance_method">
+  
+    #<strong>notify_queue_observers</strong>(client_queue, client_query_id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+788
+789
+790
+791
+792
+793
+794
+795
+796
+797</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 788</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_notify_queue_observers'>notify_queue_observers</span><span class='lparen'>(</span><span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_client_query_id'>client_query_id</span><span class='rparen'>)</span>
+  <span class='comment'>#  If any observers are known for this query queue then notify them
+</span>  <span class='id identifier rubyid_observer'>observer</span><span class='op'>=</span><span class='kw'>nil</span>
+  <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
+    <span class='id identifier rubyid_observer'>observer</span> <span class='op'>=</span> <span class='cvar'>@@observers</span><span class='lbracket'>[</span><span class='id identifier rubyid_client_queue'>client_queue</span><span class='rbracket'>]</span>
+  <span class='rbrace'>}</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_observer'>observer</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_observer'>observer</span><span class='period'>.</span><span class='id identifier rubyid_handle_queue_event'>handle_queue_event</span><span class='lparen'>(</span><span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_client_query_id'>client_query_id</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="persistent?-instance_method">
+  
+    #<strong>persistent?</strong>(socket)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+367
+368
+369</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 367</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_persistent?'>persistent?</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span>
+  <span class='cvar'>@@socket_is_persistent</span><span class='lbracket'>[</span><span class='id identifier rubyid_socket'>socket</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="process_error-instance_method">
+  
+    #<strong>process_error</strong>(errors)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+262
+263
+264
+265</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 262</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_process_error'>process_error</span><span class='lparen'>(</span><span class='id identifier rubyid_errors'>errors</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Error! </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span>
+  <span class='comment'>#  @todo@ Process errors [can we do this in single socket environment?]
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="process_message-instance_method">
+  
+    #<strong>process_message</strong>(msg, bytes, socket)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 294</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_process_message'>process_message</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_bytes'>bytes</span><span class='comma'>,</span> <span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span>
+  <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_ids'>ids</span> <span class='op'>=</span> <span class='id identifier rubyid_get_active_ids'>get_active_ids</span><span class='lparen'>(</span><span class='cvar'>@@query_hash</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_ids'>ids</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='comment'># should be only one
+</span>    <span class='id identifier rubyid_query_settings'>query_settings</span> <span class='op'>=</span> <span class='cvar'>@@query_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_ids'>ids</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_clone'>clone</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_answerip'>answerip</span> <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_answerip'>answerip</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+  <span class='id identifier rubyid_answerfrom'>answerfrom</span> <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_answerfrom'>answerfrom</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+  <span class='id identifier rubyid_answeripaddr'>answeripaddr</span> <span class='op'>=</span> <span class='const'>IPAddr</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_answerip'>answerip</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_dest_server'>dest_server</span> <span class='op'>=</span> <span class='const'>IPAddr</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>0.0.0.0</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+  <span class='kw'>begin</span>
+    <span class='id identifier rubyid_destserveripaddr'>destserveripaddr</span> <span class='op'>=</span> <span class='const'>IPAddr</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_dest_server'>dest_server</span><span class='rparen'>)</span>
+  <span class='kw'>rescue</span> <span class='const'>ArgumentError</span>
+    <span class='comment'>#  Host name not IP address
+</span>  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_dest_server'>dest_server</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_dest_server'>dest_server</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>0.0.0.0</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+      <span class='lparen'>(</span><span class='id identifier rubyid_answeripaddr'>answeripaddr</span> <span class='op'>!=</span> <span class='id identifier rubyid_destserveripaddr'>destserveripaddr</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+      <span class='lparen'>(</span><span class='id identifier rubyid_answerfrom'>answerfrom</span> <span class='op'>!=</span> <span class='id identifier rubyid_dest_server'>dest_server</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Unsolicited response received from </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_answerip'>answerip</span><span class='embexpr_end'>}</span><span class='tstring_content'> instead of </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_query_settings'>query_settings</span><span class='period'>.</span><span class='id identifier rubyid_dest_server'>dest_server</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_send_response_to_client'>send_response_to_client</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_bytes'>bytes</span><span class='comma'>,</span> <span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="process_ready-instance_method">
+  
+    #<strong>process_ready</strong>(ready)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>@@<a href="query_settings.client_query_id">query_hash</a>=query_settings</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 272</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_process_ready'>process_ready</span><span class='lparen'>(</span><span class='id identifier rubyid_ready'>ready</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_persistent_sockets'>persistent_sockets</span><span class='comma'>,</span> <span class='id identifier rubyid_nonpersistent_sockets'>nonpersistent_sockets</span> <span class='op'>=</span> <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_ready'>ready</span><span class='period'>.</span><span class='id identifier rubyid_partition'>partition</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_socket'>socket</span><span class='op'>|</span> <span class='id identifier rubyid_persistent?'>persistent?</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_nonpersistent_sockets'>nonpersistent_sockets</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_socket'>socket</span><span class='op'>|</span>
+    <span class='id identifier rubyid_query_settings'>query_settings</span> <span class='op'>=</span>  <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span> <span class='cvar'>@@query_hash</span><span class='lbracket'>[</span><span class='cvar'>@@socket_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_socket'>socket</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+    <span class='kw'>next</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_query_settings'>query_settings</span>
+
+    <span class='id identifier rubyid_udp_packet_size'>udp_packet_size</span> <span class='op'>=</span> <span class='id identifier rubyid_query_settings'>query_settings</span><span class='period'>.</span><span class='id identifier rubyid_udp_packet_size'>udp_packet_size</span>
+    <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_bytes'>bytes</span> <span class='op'>=</span> <span class='id identifier rubyid_get_incoming_data'>get_incoming_data</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='comma'>,</span> <span class='id identifier rubyid_udp_packet_size'>udp_packet_size</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_process_message'>process_message</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_bytes'>bytes</span><span class='comma'>,</span> <span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_msg'>msg</span>
+
+    <span class='id identifier rubyid_ready'>ready</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_persistent_sockets'>persistent_sockets</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_socket'>socket</span><span class='op'>|</span>
+    <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_bytes'>bytes</span> <span class='op'>=</span> <span class='id identifier rubyid_get_incoming_data'>get_incoming_data</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_process_message'>process_message</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_bytes'>bytes</span><span class='comma'>,</span> <span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_msg'>msg</span>
+    <span class='id identifier rubyid_ready'>ready</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="process_timeouts-instance_method">
+  
+    #<strong>process_timeouts</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 403</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_process_timeouts'>process_timeouts</span>
+  <span class='comment'># NOTE: It&#39;s @@timeouts we need to protect; after the clone we&#39;re ok
+</span>  <span class='id identifier rubyid_timeouts'>timeouts</span> <span class='op'>=</span> <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span> <span class='cvar'>@@timeouts</span><span class='period'>.</span><span class='id identifier rubyid_clone'>clone</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_time_now'>time_now</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
+  <span class='id identifier rubyid_timeouts'>timeouts</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_client_id'>client_id</span><span class='comma'>,</span> <span class='id identifier rubyid_timeout'>timeout</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_timeout'>timeout</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_time_now'>time_now</span>
+      <span class='id identifier rubyid_send_exception_to_client'>send_exception_to_client</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="ResolvTimeout.html" title="Dnsruby::ResolvTimeout (class)">ResolvTimeout</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Query timed out</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_client_id'>client_id</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="push_exception_to_select-instance_method">
+  
+    #<strong>push_exception_to_select</strong>(client_id, client_queue, err, msg)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+634
+635
+636
+637
+638
+639
+640
+641
+642
+643
+644
+645</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 634</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_push_exception_to_select'>push_exception_to_select</span><span class='lparen'>(</span><span class='id identifier rubyid_client_id'>client_id</span><span class='comma'>,</span> <span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_err'>err</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span>
+  <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span><span class='lbrace'>{</span>
+    <span class='cvar'>@@queued_exceptions</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_client_id'>client_id</span><span class='comma'>,</span> <span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_err'>err</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='rbrace'>}</span>
+  <span class='comment'>#  Make sure select loop is running!
+</span>  <span class='kw'>if</span> <span class='lparen'>(</span><span class='cvar'>@@select_thread</span> <span class='op'>&amp;&amp;</span> <span class='cvar'>@@select_thread</span><span class='period'>.</span><span class='id identifier rubyid_alive?'>alive?</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='cvar'>@@select_thread</span> <span class='op'>=</span> <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span>
+      <span class='id identifier rubyid_do_select'>do_select</span>
+    <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="push_response_to_select-instance_method">
+  
+    #<strong>push_response_to_select</strong>(client_id, client_queue, msg, query, res)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+647
+648
+649
+650
+651
+652
+653
+654
+655
+656
+657
+658
+659
+660
+661
+662
+663
+664
+665</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 647</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_push_response_to_select'>push_response_to_select</span><span class='lparen'>(</span><span class='id identifier rubyid_client_id'>client_id</span><span class='comma'>,</span> <span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_res'>res</span><span class='rparen'>)</span>
+  <span class='comment'>#  This needs to queue the response TO THE SELECT THREAD, which then needs
+</span>  <span class='comment'>#  to send it out from its normal loop.
+</span>  <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Pushing response to client queue direct from resolver or validator</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span>
+  <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span><span class='lbrace'>{</span>
+    <span class='id identifier rubyid_err'>err</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_rcode'>rcode</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="RCode.html" title="Dnsruby::RCode (class)">RCode</a></span></span><span class='period'>.</span><span class='const'>NXDOMAIN</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_err'>err</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="NXDomain.html" title="Dnsruby::NXDomain (class)">NXDomain</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='kw'>end</span>
+    <span class='cvar'>@@queued_responses</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_client_id'>client_id</span><span class='comma'>,</span> <span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_err'>err</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_res'>res</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='rbrace'>}</span>
+  <span class='comment'>#  Make sure select loop is running!
+</span>  <span class='kw'>if</span> <span class='lparen'>(</span><span class='cvar'>@@select_thread</span> <span class='op'>&amp;&amp;</span> <span class='cvar'>@@select_thread</span><span class='period'>.</span><span class='id identifier rubyid_alive?'>alive?</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='cvar'>@@select_thread</span> <span class='op'>=</span> <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span>
+      <span class='id identifier rubyid_do_select'>do_select</span>
+    <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="push_to_client-instance_method">
+  
+    #<strong>push_to_client</strong>(client_id, client_queue, msg, err, query, res)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+742
+743
+744
+745
+746
+747
+748
+749
+750
+751
+752
+753
+754
+755
+756
+757
+758
+759</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 742</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_push_to_client'>push_to_client</span><span class='lparen'>(</span><span class='id identifier rubyid_client_id'>client_id</span><span class='comma'>,</span> <span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_err'>err</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_res'>res</span><span class='rparen'>)</span>
+  <span class='comment'>#  @TODO@ Really need to let the client know that we have received a valid response!
+</span>  <span class='comment'>#  Can do that by calling notify_observers here, but with an identifier which
+</span>  <span class='comment'>#  defines the response to be a &quot;Response received - validating. Please stop sending&quot;
+</span>  <span class='comment'>#  type of response.
+</span>  <span class='id identifier rubyid_client_queue'>client_queue</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_client_id'>client_id</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Resolver.html" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Resolver/EventType.html" title="Dnsruby::Resolver::EventType (class)">EventType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Resolver/EventType.html#RECEIVED-constant" title="Dnsruby::Resolver::EventType::RECEIVED (constant)">RECEIVED</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_err'>err</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_notify_queue_observers'>notify_queue_observers</span><span class='lparen'>(</span><span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_client_id'>client_id</span><span class='rparen'>)</span>
+
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_err'>err</span> <span class='op'>||</span> <span class='lparen'>(</span><span class='id identifier rubyid_err'>err</span><span class='period'>.</span><span class='id identifier rubyid_instance_of?'>instance_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="NXDomain.html" title="Dnsruby::NXDomain (class)">NXDomain</a></span></span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='comment'># 
+</span>    <span class='comment'>#  This method now needs to push the response to the validator,
+</span>    <span class='comment'>#  which will then take responsibility for delivering it to the client.
+</span>    <span class='comment'>#  The validator will need access to the queue observers -
+</span>    <span class='id identifier rubyid_validator'>validator</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ValidatorThread.html" title="Dnsruby::ValidatorThread (class)">ValidatorThread</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ValidatorThread.html#initialize-instance_method" title="Dnsruby::ValidatorThread#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_client_id'>client_id</span><span class='comma'>,</span> <span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_err'>err</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span> <span class='comma'>,</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_res'>res</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_validator'>validator</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span>
+    <span class='comment'>#       @@validator.add_to_queue([client_id, client_queue, msg, err, query, self, res])
+</span>  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="push_validation_response_to_select-instance_method">
+  
+    #<strong>push_validation_response_to_select</strong>(client_id, client_queue, msg, err, query, res)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+667
+668
+669
+670
+671
+672
+673
+674
+675
+676
+677
+678
+679
+680
+681</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 667</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_push_validation_response_to_select'>push_validation_response_to_select</span><span class='lparen'>(</span><span class='id identifier rubyid_client_id'>client_id</span><span class='comma'>,</span> <span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_err'>err</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_res'>res</span><span class='rparen'>)</span>
+  <span class='comment'>#  This needs to queue the response TO THE SELECT THREAD, which then needs
+</span>  <span class='comment'>#  to send it out from its normal loop.
+</span>  <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Pushing response to client queue direct from resolver or validator</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span>
+  <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span><span class='lbrace'>{</span>
+    <span class='cvar'>@@queued_validation_responses</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_client_id'>client_id</span><span class='comma'>,</span> <span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_err'>err</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_res'>res</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='rbrace'>}</span>
+  <span class='comment'>#  Make sure select loop is running!
+</span>  <span class='kw'>if</span> <span class='lparen'>(</span><span class='cvar'>@@select_thread</span> <span class='op'>&amp;&amp;</span> <span class='cvar'>@@select_thread</span><span class='period'>.</span><span class='id identifier rubyid_alive?'>alive?</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='cvar'>@@select_thread</span> <span class='op'>=</span> <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span>
+      <span class='id identifier rubyid_do_select'>do_select</span>
+    <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="remove_id-instance_method">
+  
+    #<strong>remove_id</strong>(id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 371</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_remove_id'>remove_id</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+
+  <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_socket'>socket</span> <span class='op'>=</span> <span class='cvar'>@@query_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_socket'>socket</span>
+    <span class='cvar'>@@timeouts</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+    <span class='cvar'>@@query_hash</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+    <span class='cvar'>@@socket_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_socket'>socket</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_decrement_remaining_queries'>decrement_remaining_queries</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_persistent?'>persistent?</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span>
+
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_persistent?'>persistent?</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_max_attained?'>max_attained?</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span>
+      <span class='cvar'>@@sockets</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span>
+      <span class='cvar'>@@socket_hash</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span>
+      <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Closing socket </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_socket'>socket</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_socket'>socket</span><span class='period'>.</span><span class='id identifier rubyid_close'>close</span> <span class='kw'>rescue</span> <span class='kw'>nil</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="remove_observer-instance_method">
+  
+    #<strong>remove_observer</strong>(client_queue, observer)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+771
+772
+773
+774
+775
+776
+777
+778
+779
+780
+781
+782
+783
+784
+785
+786</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 771</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_remove_observer'>remove_observer</span><span class='lparen'>(</span><span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_observer'>observer</span><span class='rparen'>)</span>
+  <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='cvar'>@@observers</span><span class='lbracket'>[</span><span class='id identifier rubyid_client_queue'>client_queue</span><span class='rbracket'>]</span><span class='op'>==</span><span class='id identifier rubyid_observer'>observer</span><span class='rparen'>)</span>
+      <span class='comment'>#           @@observers.delete(observer)
+</span>      <span class='cvar'>@@observers</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_client_queue'>client_queue</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='cvar'>@@observers</span><span class='lbracket'>[</span><span class='id identifier rubyid_client_queue'>client_queue</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+      <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>remove_observer called with wrong observer for queue</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>remove_observer called with wrong observer for queue</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='cvar'>@@observers</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='id identifier rubyid_observer'>observer</span><span class='rparen'>)</span>
+      <span class='cvar'>@@tick_observers</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_observer'>observer</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="select_thread_alive?-instance_method">
+  
+    #<strong>select_thread_alive?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+157
+158
+159
+160
+161
+162
+163</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 157</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_select_thread_alive?'>select_thread_alive?</span>
+  <span class='id identifier rubyid_ret'>ret</span><span class='op'>=</span><span class='kw'>true</span>
+  <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span><span class='lbrace'>{</span>
+    <span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='cvar'>@@select_thread</span><span class='period'>.</span><span class='id identifier rubyid_alive?'>alive?</span>
+  <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_ret'>ret</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="send_exception_to_client-instance_method">
+  
+    #<strong>send_exception_to_client</strong>(err, socket, client_id, msg = nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+622
+623
+624
+625
+626
+627
+628
+629
+630
+631
+632</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 622</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_send_exception_to_client'>send_exception_to_client</span><span class='lparen'>(</span><span class='id identifier rubyid_err'>err</span><span class='comma'>,</span> <span class='id identifier rubyid_socket'>socket</span><span class='comma'>,</span> <span class='id identifier rubyid_client_id'>client_id</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='comment'>#  find the client response queue
+</span>  <span class='id identifier rubyid_client_queue'>client_queue</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
+    <span class='id identifier rubyid_client_queue'>client_queue</span> <span class='op'>=</span> <span class='cvar'>@@query_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_client_id'>client_id</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_client_queue'>client_queue</span>
+  <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_remove_id'>remove_id</span><span class='lparen'>(</span><span class='id identifier rubyid_client_id'>client_id</span><span class='rparen'>)</span>
+  <span class='comment'>#       push_to_client(client_id, client_queue, msg, err)
+</span>  <span class='id identifier rubyid_client_queue'>client_queue</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_client_id'>client_id</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Resolver.html" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Resolver/EventType.html" title="Dnsruby::Resolver::EventType (class)">EventType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Resolver/EventType.html#ERROR-constant" title="Dnsruby::Resolver::EventType::ERROR (constant)">ERROR</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_err'>err</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_notify_queue_observers'>notify_queue_observers</span><span class='lparen'>(</span><span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_client_id'>client_id</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="send_queued_exceptions-instance_method">
+  
+    #<strong>send_queued_exceptions</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+683
+684
+685
+686
+687
+688
+689
+690
+691
+692
+693
+694
+695
+696</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 683</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_send_queued_exceptions'>send_queued_exceptions</span>
+  <span class='id identifier rubyid_exceptions'>exceptions</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span><span class='lbrace'>{</span>
+    <span class='id identifier rubyid_exceptions'>exceptions</span> <span class='op'>=</span> <span class='cvar'>@@queued_exceptions</span>
+    <span class='cvar'>@@queued_exceptions</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_exceptions'>exceptions</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span>
+    <span class='id identifier rubyid_client_id'>client_id</span><span class='comma'>,</span> <span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_err'>err</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='id identifier rubyid_item'>item</span>
+    <span class='comment'>#         push_to_client(client_id, client_queue, msg, err)
+</span>    <span class='id identifier rubyid_client_queue'>client_queue</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_client_id'>client_id</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Resolver.html" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Resolver/EventType.html" title="Dnsruby::Resolver::EventType (class)">EventType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Resolver/EventType.html#ERROR-constant" title="Dnsruby::Resolver::EventType::ERROR (constant)">ERROR</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_err'>err</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_notify_queue_observers'>notify_queue_observers</span><span class='lparen'>(</span><span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_client_id'>client_id</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="send_queued_responses-instance_method">
+  
+    #<strong>send_queued_responses</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+698
+699
+700
+701
+702
+703
+704
+705
+706
+707
+708
+709
+710
+711
+712
+713
+714
+715
+716
+717
+718
+719
+720
+721
+722
+723
+724
+725</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 698</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_send_queued_responses'>send_queued_responses</span>
+  <span class='id identifier rubyid_responses'>responses</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span><span class='lbrace'>{</span>
+    <span class='id identifier rubyid_responses'>responses</span> <span class='op'>=</span> <span class='cvar'>@@queued_responses</span>
+    <span class='cvar'>@@queued_responses</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_responses'>responses</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span>
+    <span class='id identifier rubyid_client_id'>client_id</span><span class='comma'>,</span> <span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_err'>err</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='id identifier rubyid_item'>item</span>
+    <span class='comment'>#         push_to_client(client_id, client_queue, msg, err)
+</span>    <span class='id identifier rubyid_client_queue'>client_queue</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_client_id'>client_id</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Resolver.html" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Resolver/EventType.html" title="Dnsruby::Resolver::EventType (class)">EventType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Resolver/EventType.html#RECEIVED-constant" title="Dnsruby::Resolver::EventType::RECEIVED (constant)">RECEIVED</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_err'>err</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_notify_queue_observers'>notify_queue_observers</span><span class='lparen'>(</span><span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_client_id'>client_id</span><span class='rparen'>)</span>
+    <span class='comment'>#  Do we need to validate this? The response has come from the cache -
+</span>    <span class='comment'>#  validate it only if it has not been validated already
+</span>    <span class='comment'>#  So, if we need to validate it, send it to the validation thread
+</span>    <span class='comment'>#  Otherwise, send VALIDATED to the requester.
+</span>    <span class='kw'>if</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_security_level'>security_level</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Message/SecurityLevel.html" title="Dnsruby::Message::SecurityLevel (class)">SecurityLevel</a></span></span><span class='period'>.</span><span class='const'>UNCHECKED</span><span class='rparen'>)</span> <span class='op'>||</span>
+            <span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_security_level'>security_level</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Message/SecurityLevel.html" title="Dnsruby::Message::SecurityLevel (class)">SecurityLevel</a></span></span><span class='period'>.</span><span class='const'>INDETERMINATE</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+          <span class='lparen'>(</span><span class='const'><span class='object_link'><a href="ValidatorThread.html" title="Dnsruby::ValidatorThread (class)">ValidatorThread</a></span></span><span class='period'>.</span><span class='id identifier rubyid_requires_validation?'><span class='object_link'><a href="ValidatorThread.html#requires_validation%3F-class_method" title="Dnsruby::ValidatorThread.requires_validation? (method)">requires_validation?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_err'>err</span><span class='comma'>,</span> <span class='id identifier rubyid_res'>res</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_validator'>validator</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ValidatorThread.html" title="Dnsruby::ValidatorThread (class)">ValidatorThread</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ValidatorThread.html#initialize-instance_method" title="Dnsruby::ValidatorThread#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_client_id'>client_id</span><span class='comma'>,</span> <span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_err'>err</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span> <span class='comma'>,</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_res'>res</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_validator'>validator</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span>
+    <span class='kw'>else</span>
+      <span class='const'><span class='object_link'><a href="PacketSender.html" title="Dnsruby::PacketSender (class)">PacketSender</a></span></span><span class='period'>.</span><span class='id identifier rubyid_cache'><span class='object_link'><a href="PacketSender.html#cache-class_method" title="Dnsruby::PacketSender.cache (method)">cache</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span> <span class='comment'># The validator won&#39;t cache it, so we&#39;d better do it now
+</span>      <span class='id identifier rubyid_client_queue'>client_queue</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_client_id'>client_id</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Resolver.html" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Resolver/EventType.html" title="Dnsruby::Resolver::EventType (class)">EventType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Resolver/EventType.html#VALIDATED-constant" title="Dnsruby::Resolver::EventType::VALIDATED (constant)">VALIDATED</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_err'>err</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_notify_queue_observers'>notify_queue_observers</span><span class='lparen'>(</span><span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_client_id'>client_id</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="send_queued_validation_responses-instance_method">
+  
+    #<strong>send_queued_validation_responses</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+727
+728
+729
+730
+731
+732
+733
+734
+735
+736
+737
+738
+739
+740</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 727</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_send_queued_validation_responses'>send_queued_validation_responses</span>
+  <span class='id identifier rubyid_responses'>responses</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span><span class='lbrace'>{</span>
+    <span class='id identifier rubyid_responses'>responses</span> <span class='op'>=</span> <span class='cvar'>@@queued_validation_responses</span>
+    <span class='cvar'>@@queued_validation_responses</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_responses'>responses</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span>
+    <span class='id identifier rubyid_client_id'>client_id</span><span class='comma'>,</span> <span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_err'>err</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='id identifier rubyid_item'>item</span>
+    <span class='comment'>#         push_to_client(client_id, client_queue, msg, err)
+</span>    <span class='id identifier rubyid_client_queue'>client_queue</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_client_id'>client_id</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Resolver.html" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Resolver/EventType.html" title="Dnsruby::Resolver::EventType (class)">EventType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Resolver/EventType.html#VALIDATED-constant" title="Dnsruby::Resolver::EventType::VALIDATED (constant)">VALIDATED</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_err'>err</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_notify_queue_observers'>notify_queue_observers</span><span class='lparen'>(</span><span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_client_id'>client_id</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="send_response_to_client-instance_method">
+  
+    #<strong>send_response_to_client</strong>(msg, bytes, socket)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 321</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_send_response_to_client'>send_response_to_client</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_bytes'>bytes</span><span class='comma'>,</span> <span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span>
+  <span class='comment'>#  Figure out which client_ids we were expecting on this socket, then see if any header ids match up
+</span>  <span class='comment'>#  @TODO@ Can get rid of this, as we only have one query per socket.
+</span>  <span class='id identifier rubyid_client_ids'>client_ids</span><span class='op'>=</span><span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span><span class='lbrace'>{</span>
+    <span class='id identifier rubyid_client_ids'>client_ids</span> <span class='op'>=</span> <span class='cvar'>@@socket_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_socket'>socket</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_clone'>clone</span>
+  <span class='rbrace'>}</span>
+  <span class='comment'>#  get the queries associated with them
+</span>  <span class='id identifier rubyid_client_ids'>client_ids</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_id'>id</span><span class='op'>|</span>
+    <span class='id identifier rubyid_query_header_id'>query_header_id</span><span class='op'>=</span><span class='kw'>nil</span>
+    <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span><span class='lbrace'>{</span>
+      <span class='id identifier rubyid_query_header_id'>query_header_id</span> <span class='op'>=</span> <span class='cvar'>@@query_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_query'>query</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span>
+    <span class='rbrace'>}</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_query_header_id'>query_header_id</span> <span class='op'>==</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+      <span class='comment'>#  process the response
+</span>      <span class='id identifier rubyid_client_queue'>client_queue</span> <span class='op'>=</span> <span class='kw'>nil</span>
+      <span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='kw'>nil</span>
+      <span class='id identifier rubyid_query'>query</span><span class='op'>=</span><span class='kw'>nil</span>
+      <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span><span class='lbrace'>{</span>
+        <span class='id identifier rubyid_client_queue'>client_queue</span> <span class='op'>=</span> <span class='cvar'>@@query_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_client_queue'>client_queue</span>
+        <span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='cvar'>@@query_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_single_resolver'>single_resolver</span>
+        <span class='id identifier rubyid_query'>query</span> <span class='op'>=</span> <span class='cvar'>@@query_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_query'>query</span>
+      <span class='rbrace'>}</span>
+      <span class='id identifier rubyid_tcp'>tcp</span> <span class='op'>=</span> <span class='id identifier rubyid_tcp?'>tcp?</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span>
+      <span class='comment'>#  At this point, we should check if the response is OK
+</span>      <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_check_response'>check_response</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_bytes'>bytes</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='id identifier rubyid_tcp'>tcp</span><span class='rparen'>)</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_remove_id'>remove_id</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_exception'>exception</span> <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_get_exception'>get_exception</span>
+        <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='const'>TsigError</span><span class='rparen'>)</span>
+          <span class='id identifier rubyid_exception'>exception</span> <span class='op'>=</span> <span class='id identifier rubyid_ret'>ret</span>
+        <span class='kw'>end</span>
+        <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Pushing response to client queue</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span>
+        <span class='id identifier rubyid_push_to_client'>push_to_client</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='id identifier rubyid_client_queue'>client_queue</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_exception'>exception</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_res'>res</span><span class='rparen'>)</span>
+        <span class='comment'>#             client_queue.push([id, msg, exception])
+</span>        <span class='comment'>#             notify_queue_observers(client_queue, id)
+</span>      <span class='kw'>else</span>
+        <span class='comment'>#  Sending query again - don&#39;t return response
+</span>      <span class='kw'>end</span>
+      <span class='kw'>return</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='comment'>#  If not, then we have an error
+</span>  <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Stray packet - </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n from </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_socket'>socket</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_print'>print</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Stray packet - </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_question'>question</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_qname'>qname</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> from </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_answerip'>answerip</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_client_ids'>client_ids</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='embexpr_end'>}</span><span class='tstring_content'> client_ids\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="send_tick_to_observers-instance_method">
+  
+    #<strong>send_tick_to_observers</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+799
+800
+801
+802
+803
+804
+805
+806
+807
+808</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 799</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_send_tick_to_observers'>send_tick_to_observers</span>
+  <span class='comment'>#  If any observers are known then send them a tick
+</span>  <span class='id identifier rubyid_tick_observers'>tick_observers</span><span class='op'>=</span><span class='kw'>nil</span>
+  <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
+    <span class='id identifier rubyid_tick_observers'>tick_observers</span> <span class='op'>=</span> <span class='cvar'>@@tick_observers</span>
+  <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_tick_observers'>tick_observers</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_observer'>observer</span><span class='op'>|</span>
+    <span class='id identifier rubyid_observer'>observer</span><span class='period'>.</span><span class='id identifier rubyid_tick'>tick</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="tcp?-instance_method">
+  
+    #<strong>tcp?</strong>(socket)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+117
+118
+119
+120</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 117</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_tcp?'>tcp?</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='id identifier rubyid_socket'>socket</span><span class='period'>.</span><span class='id identifier rubyid_getsockopt'>getsockopt</span><span class='lparen'>(</span><span class='const'>Socket</span><span class='op'>::</span><span class='const'>SOL_SOCKET</span><span class='comma'>,</span> <span class='const'>Socket</span><span class='op'>::</span><span class='const'>SO_TYPE</span><span class='rparen'>)</span>
+  <span class='lbracket'>[</span><span class='const'>Socket</span><span class='op'>::</span><span class='const'>SOCK_STREAM</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>i</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>==</span> <span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="tcp_read-instance_method">
+  
+    #<strong>tcp_read</strong>(socket)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 414</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_tcp_read'>tcp_read</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span>
+  <span class='comment'>#  Keep buffer for all TCP sockets, and return
+</span>  <span class='comment'>#  to select after reading available data. Once all data has been received,
+</span>  <span class='comment'>#  then process message.
+</span>  <span class='id identifier rubyid_buf'>buf</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_expected_length'>expected_length</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
+    <span class='id identifier rubyid_buf'>buf</span><span class='comma'>,</span> <span class='id identifier rubyid_expected_length'>expected_length</span> <span class='op'>=</span> <span class='cvar'>@@tcp_buffers</span><span class='lbracket'>[</span><span class='id identifier rubyid_socket'>socket</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_buf'>buf</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_buf'>buf</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+      <span class='id identifier rubyid_expected_length'>expected_length</span> <span class='op'>=</span> <span class='int'>2</span>
+      <span class='cvar'>@@tcp_buffers</span><span class='lbracket'>[</span><span class='id identifier rubyid_socket'>socket</span><span class='rbracket'>]</span><span class='op'>=</span><span class='lbracket'>[</span><span class='id identifier rubyid_buf'>buf</span><span class='comma'>,</span> <span class='id identifier rubyid_expected_length'>expected_length</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+  <span class='rbrace'>}</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_buf'>buf</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_expected_length'>expected_length</span><span class='rparen'>)</span>
+    <span class='kw'>begin</span>
+      <span class='id identifier rubyid_input'>input</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_socket'>socket</span><span class='period'>.</span><span class='id identifier rubyid_recv_nonblock'>recv_nonblock</span><span class='lparen'>(</span><span class='id identifier rubyid_expected_length'>expected_length</span><span class='op'>-</span><span class='id identifier rubyid_buf'>buf</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='op'>==</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+        <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>EOF from server - no bytes read - closing socket</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_socket'>socket</span><span class='period'>.</span><span class='id identifier rubyid_close'>close</span> <span class='comment'>#EOF closed by server, if we were interrupted we need to resend
+</span>
+        <span class='id identifier rubyid_exceptions'>exceptions</span> <span class='op'>=</span> <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='kw'>do</span>
+          <span class='cvar'>@@sockets</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span> <span class='comment'>#remove ourselves from select, app will have to retry
+</span>          <span class='comment'>#maybe fire an event
+</span>          <span class='cvar'>@@socket_hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_socket'>socket</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span> <span class='id identifier rubyid_client_id'>client_id</span> <span class='op'>|</span>
+            <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="SocketEofResolvError.html" title="Dnsruby::SocketEofResolvError (class)">SocketEofResolvError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TCP socket closed before all answers received</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_socket'>socket</span><span class='comma'>,</span> <span class='id identifier rubyid_client_id'>client_id</span><span class='rbracket'>]</span>
+          <span class='kw'>end</span>
+        <span class='kw'>end</span>
+
+        <span class='id identifier rubyid_exceptions'>exceptions</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_exception'>exception</span><span class='op'>|</span> <span class='id identifier rubyid_send_exception_to_client'>send_exception_to_client</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_exception'>exception</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+
+        <span class='kw'>return</span> <span class='kw'>false</span>
+      <span class='kw'>end</span>
+      <span class='id identifier rubyid_buf'>buf</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_input'>input</span>
+    <span class='kw'>rescue</span>
+      <span class='comment'>#  Oh well - better luck next time!
+</span>      <span class='kw'>return</span> <span class='kw'>false</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='comment'>#  If data is complete, then return it.
+</span>  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_buf'>buf</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>==</span> <span class='id identifier rubyid_expected_length'>expected_length</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_expected_length'>expected_length</span> <span class='op'>==</span> <span class='int'>2</span><span class='rparen'>)</span>
+      <span class='comment'>#  We just read the data_length field. Now we need to start reading that many bytes.
+</span>      <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
+        <span class='id identifier rubyid_answersize'>answersize</span> <span class='op'>=</span> <span class='id identifier rubyid_buf'>buf</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>n</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+        <span class='cvar'>@@tcp_buffers</span><span class='lbracket'>[</span><span class='id identifier rubyid_socket'>socket</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_answersize'>answersize</span><span class='rbracket'>]</span>
+      <span class='rbrace'>}</span>
+      <span class='kw'>return</span> <span class='id identifier rubyid_tcp_read'>tcp_read</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='comment'>#  We just read the data - now return it
+</span>      <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
+        <span class='cvar'>@@tcp_buffers</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span>
+      <span class='rbrace'>}</span>
+      <span class='kw'>return</span> <span class='id identifier rubyid_buf'>buf</span>
+    <span class='kw'>end</span>
+  <span class='kw'>else</span>
+    <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
+      <span class='cvar'>@@tcp_buffers</span><span class='lbracket'>[</span><span class='id identifier rubyid_socket'>socket</span><span class='rbracket'>]</span><span class='op'>=</span><span class='lbracket'>[</span><span class='id identifier rubyid_buf'>buf</span><span class='comma'>,</span> <span class='id identifier rubyid_expected_length'>expected_length</span><span class='rbracket'>]</span>
+    <span class='rbrace'>}</span>
+    <span class='kw'>return</span> <span class='kw'>false</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="udp?-instance_method">
+  
+    #<strong>udp?</strong>(socket)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+122
+123
+124
+125</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/select_thread.rb', line 122</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_udp?'>udp?</span><span class='lparen'>(</span><span class='id identifier rubyid_socket'>socket</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='id identifier rubyid_socket'>socket</span><span class='period'>.</span><span class='id identifier rubyid_getsockopt'>getsockopt</span><span class='lparen'>(</span><span class='const'>Socket</span><span class='op'>::</span><span class='const'>SOL_SOCKET</span><span class='comma'>,</span> <span class='const'>Socket</span><span class='op'>::</span><span class='const'>SO_TYPE</span><span class='rparen'>)</span>
+  <span class='lbracket'>[</span><span class='const'>Socket</span><span class='op'>::</span><span class='const'>SOCK_DGRAM</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>i</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>==</span> <span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr  9 10:58:21 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-3.0.0).
+</div>
+
+    </div>
+  </body>
+</html>

@@ -49,3 +49,4 @@
 2.0.2 nokogiri:>= 1.8.4&~> 1.8|checksum:3acd625616ec8505fe9c1b22e100f834180419acb109ee6a7b20d8bce5b5b26b,ruby:>= 2.1
 2.0.3 nokogiri:>= 1.8.4&~> 1.8|checksum:ef93f7b86594f0e3056ff45048468dedeafd8a458b183235733fd27fec4a2eda,ruby:>= 2.1
 2.0.4 nokogiri:>= 1.8.4&~> 1.8|checksum:864158969b9947a9254afd87a1009d829c20834ba3493a51b5aa422a3a3cb55f,ruby:>= 2.1
+2.0.5 nokogiri:>= 1.8.4&~> 1.8|checksum:5c48053cc021d742aa3fcf7015f785f406a49245c1cfcd1b639e644341b6fa59,ruby:>= 2.1

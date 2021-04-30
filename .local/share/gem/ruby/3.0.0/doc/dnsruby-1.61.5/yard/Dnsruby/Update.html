@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Dnsruby::Update
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Dnsruby::Update";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (U)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span>
+     &raquo; 
+    <span class="title">Update</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Dnsruby::Update
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></li>
+          
+            <li class="next">Dnsruby::Update</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/dnsruby/update.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>The first example below shows a complete program; subsequent examples show only the creation of the update packet.</p>
+
+<h2 id="label-Add+a+new+host">Add a new host</h2>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Dnsruby</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='comment'># Create the update packet.
+</span><span class='id identifier rubyid_update'>update</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='op'>::</span><span class='const'>Update</span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Dnsruby::Update#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>example.com</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+
+<span class='comment'># Prerequisite is that no A records exist for the name.
+</span><span class='id identifier rubyid_update'>update</span><span class='period'>.</span><span class='id identifier rubyid_absent'>absent</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>foo.example.com.</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>A</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+
+<span class='comment'># Add two A records for the name.
+</span><span class='id identifier rubyid_update'>update</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>foo.example.com.</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>A</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>86400</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>192.168.1.2</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_update'>update</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>foo.example.com.</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>A</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>86400</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>172.16.3.4</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+
+<span class='comment'># Send the update to the zone&#39;s primary master.
+</span><span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Resolver.html" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Resolver.html#initialize-instance_method" title="Dnsruby::Resolver#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='symbol'>:nameserver</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>primary-master.example.com</span><span class='tstring_end'>&#39;</span></span><span class='rbrace'>}</span><span class='rparen'>)</span>
+
+<span class='kw'>begin</span>
+    <span class='id identifier rubyid_reply'>reply</span> <span class='op'>=</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_send_message'>send_message</span><span class='lparen'>(</span><span class='id identifier rubyid_update'>update</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_print'>print</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Update succeeded\n</span><span class='tstring_end'>&quot;</span></span>
+ <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+    <span class='id identifier rubyid_print'>print</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Update failed: #{e}\n</span><span class='tstring_end'>&#39;</span></span>
+ <span class='kw'>end</span>
+</code></pre>
+
+<h2 id="label-Add+an+MX+record+for+a+name+that+already+exists">Add an MX record for a name that already exists</h2>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_update'>update</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='op'>::</span><span class='const'>Update</span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Dnsruby::Update#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>example.com</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_update'>update</span><span class='period'>.</span><span class='id identifier rubyid_present'>present</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>example.com</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_update'>update</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>example.com</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>MX</span><span class='comma'>,</span> <span class='int'>86400</span><span class='comma'>,</span> <span class='int'>10</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mailhost.example.com</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+</code></pre>
+
+<h2 id="label-Add+a+TXT+record+for+a+name+that+doesn-27t+exist">Add a TXT record for a name that doesn&#39;t exist</h2>
+
+<pre class="code ruby"><code class="ruby">update = Dnsruby::Update.new(&#39;example.com&#39;)
+update.absent(&#39;info.example.com&#39;)
+update.add(&#39;info.example.com&#39;, Types.TXT, 86400, &quot;yabba dabba doo&quot;&#39;)
+</code></pre>
+
+<h2 id="label-Delete+all+A+records+for+a+name">Delete all A records for a name</h2>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_update'>update</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='op'>::</span><span class='const'>Update</span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Dnsruby::Update#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>example.com</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_update'>update</span><span class='period'>.</span><span class='id identifier rubyid_present'>present</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>foo.example.com</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>A</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_update'>update</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>foo.example.com</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>A</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+</code></pre>
+
+<h2 id="label-Delete+all+RRs+for+a+name">Delete all RRs for a name</h2>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_update'>update</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='op'>::</span><span class='const'>Update</span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Dnsruby::Update#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>example.com</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_update'>update</span><span class='period'>.</span><span class='id identifier rubyid_present'>present</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>byebye.example.com</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_update'>update</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>byebye.example.com</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+</code></pre>
+
+<h2 id="label-Perform+a+signed+update">Perform a signed update</h2>
+
+<pre class="code ruby"><code class="ruby">key_name = &#39;tsig-key&#39;
+key      = &#39;awwLOtRfpGE+rRKF2+DEiw==&#39;
+
+update = Dnsruby::Update.new(&#39;example.com&#39;)
+update.add(&#39;foo.example.com&#39;, &#39;A&#39;, 86400, &#39;10.1.2.3&#39;))
+update.add(&#39;bar.example.com&#39;, &#39;A&#39;, 86400, &#39;10.4.5.6&#39;))
+res.tsig=(key_name,key)
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Message.html#additional-instance_method" title="Dnsruby::Message#additional (method)">#additional</a></span>, <span class='object_link'><a href="Message.html#answer-instance_method" title="Dnsruby::Message#answer (method)">#answer</a></span>, <span class='object_link'><a href="Message.html#answerfrom-instance_method" title="Dnsruby::Message#answerfrom (method)">#answerfrom</a></span>, <span class='object_link'><a href="Message.html#answerip-instance_method" title="Dnsruby::Message#answerip (method)">#answerip</a></span>, <span class='object_link'><a href="Message.html#answersize-instance_method" title="Dnsruby::Message#answersize (method)">#answersize</a></span>, <span class='object_link'><a href="Message.html#authority-instance_method" title="Dnsruby::Message#authority (method)">#authority</a></span>, <span class='object_link'><a href="Message.html#cached-instance_method" title="Dnsruby::Message#cached (method)">#cached</a></span>, <span class='object_link'><a href="Message.html#do_caching-instance_method" title="Dnsruby::Message#do_caching (method)">#do_caching</a></span>, <span class='object_link'><a href="Message.html#do_validation-instance_method" title="Dnsruby::Message#do_validation (method)">#do_validation</a></span>, <span class='object_link'><a href="Message.html#header-instance_method" title="Dnsruby::Message#header (method)">#header</a></span>, <span class='object_link'><a href="Message.html#question-instance_method" title="Dnsruby::Message#question (method)">#question</a></span>, <span class='object_link'><a href="Message.html#security_error-instance_method" title="Dnsruby::Message#security_error (method)">#security_error</a></span>, <span class='object_link'><a href="Message.html#security_level-instance_method" title="Dnsruby::Message#security_level (method)">#security_level</a></span>, <span class='object_link'><a href="Message.html#send_raw-instance_method" title="Dnsruby::Message#send_raw (method)">#send_raw</a></span>, <span class='object_link'><a href="Message.html#tsigerror-instance_method" title="Dnsruby::Message#tsigerror (method)">#tsigerror</a></span>, <span class='object_link'><a href="Message.html#tsigstart-instance_method" title="Dnsruby::Message#tsigstart (method)">#tsigstart</a></span>, <span class='object_link'><a href="Message.html#tsigstate-instance_method" title="Dnsruby::Message#tsigstate (method)">#tsigstate</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#absent-instance_method" title="#absent (instance method)">#<strong>absent</strong>(*args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Ways to create the prerequisite records (exists, notexists, inuse, etc. - RFC2136, section 2.4) Can be called with one arg :.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add-instance_method" title="#add (instance method)">#<strong>add</strong>(*args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Ways to create the update records (add, delete, RFC2136, section 2.5)   “ 2.5.1 - Add To An RRset.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete-instance_method" title="#delete (instance method)">#<strong>delete</strong>(*args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Ways to create the update records (add, delete, RFC2136, section 2.5).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(zone = nil, klass = nil)  &#x21d2; Update </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a Dnsruby::Update object suitable for performing a DNS dynamic update.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#present-instance_method" title="#present (instance method)">#<strong>present</strong>(*args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Ways to create the prerequisite records (exists, notexists, inuse, etc. - RFC2136, section 2.4).</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Message.html#==-instance_method" title="Dnsruby::Message#== (method)">#==</a></span>, <span class='object_link'><a href="Message.html#add_additional-instance_method" title="Dnsruby::Message#add_additional (method)">#add_additional</a></span>, <span class='object_link'><a href="Message.html#add_answer-instance_method" title="Dnsruby::Message#add_answer (method)">#add_answer</a></span>, <span class='object_link'><a href="Message.html#add_answer!-instance_method" title="Dnsruby::Message#add_answer! (method)">#add_answer!</a></span>, <span class='object_link'><a href="Message.html#add_authority-instance_method" title="Dnsruby::Message#add_authority (method)">#add_authority</a></span>, <span class='object_link'><a href="Message.html#add_question-instance_method" title="Dnsruby::Message#add_question (method)">#add_question</a></span>, <span class='object_link'><a href="Message.html#clone-instance_method" title="Dnsruby::Message#clone (method)">#clone</a></span>, <span class='object_link'><a href="Message.html#decode-class_method" title="Dnsruby::Message.decode (method)">decode</a></span>, <span class='object_link'><a href="Message.html#each_additional-instance_method" title="Dnsruby::Message#each_additional (method)">#each_additional</a></span>, <span class='object_link'><a href="Message.html#each_answer-instance_method" title="Dnsruby::Message#each_answer (method)">#each_answer</a></span>, <span class='object_link'><a href="Message.html#each_authority-instance_method" title="Dnsruby::Message#each_authority (method)">#each_authority</a></span>, <span class='object_link'><a href="Message.html#each_question-instance_method" title="Dnsruby::Message#each_question (method)">#each_question</a></span>, <span class='object_link'><a href="Message.html#each_resource-instance_method" title="Dnsruby::Message#each_resource (method)">#each_resource</a></span>, <span class='object_link'><a href="Message.html#each_section-instance_method" title="Dnsruby::Message#each_section (method)">#each_section</a></span>, <span class='object_link'><a href="Message.html#encode-instance_method" title="Dnsruby::Message#encode (method)">#encode</a></span>, <span class='object_link'><a href="Message.html#get_exception-instance_method" title="Dnsruby::Message#get_exception (method)">#get_exception</a></span>, <span class='object_link'><a href="Message.html#get_opt-instance_method" title="Dnsruby::Message#get_opt (method)">#get_opt</a></span>, <span class='object_link'><a href="Message.html#old_to_s-instance_method" title="Dnsruby::Message#old_to_s (method)">#old_to_s</a></span>, <span class='object_link'><a href="Message.html#rcode-instance_method" title="Dnsruby::Message#rcode (method)">#rcode</a></span>, <span class='object_link'><a href="Message.html#remove_additional-instance_method" title="Dnsruby::Message#remove_additional (method)">#remove_additional</a></span>, <span class='object_link'><a href="Message.html#rrset-instance_method" title="Dnsruby::Message#rrset (method)">#rrset</a></span>, <span class='object_link'><a href="Message.html#rrsets-instance_method" title="Dnsruby::Message#rrsets (method)">#rrsets</a></span>, <span class='object_link'><a href="Message.html#section_rrsets-instance_method" title="Dnsruby::Message#section_rrsets (method)">#section_rrsets</a></span>, <span class='object_link'><a href="Message.html#set_tsig-instance_method" title="Dnsruby::Message#set_tsig (method)">#set_tsig</a></span>, <span class='object_link'><a href="Message.html#sign!-instance_method" title="Dnsruby::Message#sign! (method)">#sign!</a></span>, <span class='object_link'><a href="Message.html#signed%3F-instance_method" title="Dnsruby::Message#signed? (method)">#signed?</a></span>, <span class='object_link'><a href="Message.html#to_s-instance_method" title="Dnsruby::Message#to_s (method)">#to_s</a></span>, <span class='object_link'><a href="Message.html#tsig-instance_method" title="Dnsruby::Message#tsig (method)">#tsig</a></span>, <span class='object_link'><a href="Message.html#update_counts-instance_method" title="Dnsruby::Message#update_counts (method)">#update_counts</a></span>, <span class='object_link'><a href="Message.html#verified%3F-instance_method" title="Dnsruby::Message#verified? (method)">#verified?</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(zone = nil, klass = nil)  &#x21d2; <tt><span class='object_link'><a href="" title="Dnsruby::Update (class)">Update</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a Dnsruby::Update object suitable for performing a DNS dynamic update.  Specifically, it creates a message with the header opcode set to UPDATE and the zone record type to SOA (per RFC 2136, Section 2.3).</p>
+
+<p>Programs must use the push method to add RRs to the prerequisite, update, and additional sections before performing the update.</p>
+
+<p>Arguments are the zone name and the class.  If the zone is omitted, the default domain will be taken from the resolver configuration. If the class is omitted, it defaults to IN.</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_packet'>packet</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Dnsruby::Update (class)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='id identifier rubyid_packet'>packet</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Dnsruby::Update (class)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>example.com</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_packet'>packet</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Dnsruby::Update (class)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>example.com</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>HS</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/update.rb', line 98</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_zone'>zone</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_klass'>klass</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+
+  <span class='comment'>#  sort out the zone section (RFC2136, section 2.3)
+</span>  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_zone'>zone</span><span class='op'>==</span><span class='kw'>nil</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_config'>config</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Config.html" title="Dnsruby::Config (class)">Config</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Config.html#initialize-instance_method" title="Dnsruby::Config#initialize (method)">new</a></span></span>
+    <span class='id identifier rubyid_zone'>zone</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_config'>config</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+    <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_zone'>zone</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_type'>type</span>  <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SOA</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_klass'>klass</span>  <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>IN</span><span class='tstring_end'>&#39;</span></span>
+
+  <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_zone'>zone</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_klass'>klass</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='kw'>return</span>
+
+  <span class='ivar'>@header</span><span class='period'>.</span><span class='id identifier rubyid_opcode'>opcode</span><span class='op'>=</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>UPDATE</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@header</span><span class='period'>.</span><span class='id identifier rubyid_rd'>rd</span><span class='op'>=</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span>
+  <span class='ivar'>@do_validation</span> <span class='op'>=</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="absent-instance_method">
+  
+    #<strong>absent</strong>(*args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Ways to create the prerequisite records (exists, notexists, inuse, etc. - RFC2136, section 2.4) Can be called with one arg :</p>
+
+<pre class="code ruby"><code class="ruby">update.absent(name)
+   (5)  Name is not in use.  No RR of any type is owned by a
+        specified NAME.  Note that this prerequisite IS satisfied by
+        empty nonterminals.
+</code></pre>
+
+<p>Or with two :</p>
+
+<pre class="code ruby"><code class="ruby">update.absent(name, type)
+   (3)  RRset does not exist.  No RRs with a specified NAME and TYPE
+       (in the zone and class denoted by the Zone Section) can exist.
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/update.rb', line 174</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_absent'>absent</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_ttl'>ttl</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_rdata'>rdata</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_klass'>klass</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Classes.html" title="Dnsruby::Classes (class)">Classes</a></span></span><span class='period'>.</span><span class='const'>NONE</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='op'>&gt;=</span><span class='int'>1</span><span class='rparen'>)</span> <span class='comment'># domain (RFC2136, Section 2.4.5)
+</span>    <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>ANY</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='op'>==</span><span class='int'>2</span><span class='rparen'>)</span> <span class='comment'># RRSET (RFC2136, Section 2.4.3)
+</span>      <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_rec'>rec</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="RR.html" title="Dnsruby::RR (class)">RR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="RR.html#create-class_method" title="Dnsruby::RR.create (method)">create</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_ttl'>ttl</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_klass'>klass</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_type'>type</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_rdata'>rdata</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_add_pre'>add_pre</span><span class='lparen'>(</span><span class='id identifier rubyid_rec'>rec</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_rec'>rec</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Wrong number of arguments (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='embexpr_end'>}</span><span class='tstring_content'> for 1 or 2) for Update#absent</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="add-instance_method">
+  
+    #<strong>add</strong>(*args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Ways to create the update records (add, delete, RFC2136, section 2.5)</p>
+
+<pre class="code ruby"><code class="ruby"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> 2.5.1 - Add To An RRset
+
+ RRs are added to the Update Section whose NAME, TYPE, TTL, RDLENGTH
+ and RDATA are those being added, and CLASS is the same as the zone
+ class.  Any duplicate RRs will be silently ignored by the primary
+ master.</span><span class='tstring_end'>&quot;</span></span>
+
+ <span class='id identifier rubyid_update'>update</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_rr'>rr</span><span class='rparen'>)</span>
+ <span class='id identifier rubyid_update'>update</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_rr1'>rr1</span><span class='comma'>,</span> <span class='id identifier rubyid_rr2'>rr2</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+ <span class='id identifier rubyid_update'>update</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_ttl'>ttl</span><span class='comma'>,</span> <span class='id identifier rubyid_rdata'>rdata</span><span class='rparen'>)</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/update.rb', line 204</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_zoneclass'>zoneclass</span><span class='op'>=</span><span class='id identifier rubyid_zone'>zone</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_zclass'>zclass</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+  <span class='kw'>when</span> <span class='const'>Array</span>
+    <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_resource'>resource</span><span class='op'>|</span>
+      <span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_resource'>resource</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="RR.html" title="Dnsruby::RR (class)">RR</a></span></span>
+    <span class='comment'>#  Make sure that the Class is the same as the zone
+</span>    <span class='id identifier rubyid_resource'>resource</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_resource'>resource</span><span class='period'>.</span><span class='id identifier rubyid_klass'>klass</span> <span class='op'>!=</span> <span class='id identifier rubyid_zoneclass'>zoneclass</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Wrong class </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_resource'>resource</span><span class='period'>.</span><span class='id identifier rubyid_klass'>klass</span><span class='embexpr_end'>}</span><span class='tstring_content'> for update (should be </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_zoneclass'>zoneclass</span><span class='embexpr_end'>}</span><span class='tstring_content'>)!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_add_update'>add_update</span><span class='lparen'>(</span><span class='id identifier rubyid_resource'>resource</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_resource'>resource</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_name'>name</span><span class='op'>=</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_type'>type</span><span class='op'>=</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_ttl'>ttl</span><span class='op'>=</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_rdata'>rdata</span><span class='op'>=</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_resource'>resource</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="CodeMapper.html#initialize-instance_method" title="Dnsruby::CodeMapper#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>TXT</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_instring'>instring</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_ttl'>ttl</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_zoneclass'>zoneclass</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_type'>type</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span><span class='semicolon'>;</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='const'>String</span> <span class='op'>===</span> <span class='id identifier rubyid_rdata'>rdata</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_instring'>instring</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_rdata'>rdata</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39;</span><span class='tstring_end'>&quot;</span></span>
+      <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Array</span> <span class='op'>===</span> <span class='id identifier rubyid_rdata'>rdata</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_rdata'>rdata</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_rcounter'>rcounter</span><span class='op'>|</span>
+        <span class='id identifier rubyid_instring'>instring</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_rdata'>rdata</span><span class='lbracket'>[</span><span class='id identifier rubyid_rcounter'>rcounter</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39; </span><span class='tstring_end'>&quot;</span></span>
+        <span class='rbrace'>}</span>
+      <span class='kw'>else</span>
+        <span class='id identifier rubyid_instring'>instring</span> <span class='op'>+=</span> <span class='id identifier rubyid_rdata'>rdata</span>
+      <span class='kw'>end</span>
+      <span class='id identifier rubyid_resource'>resource</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="RR.html" title="Dnsruby::RR (class)">RR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="RR.html#create-class_method" title="Dnsruby::RR.create (method)">create</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_instring'>instring</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_resource'>resource</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="RR.html" title="Dnsruby::RR (class)">RR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="RR.html#create-class_method" title="Dnsruby::RR.create (method)">create</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_ttl'>ttl</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_zoneclass'>zoneclass</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_type'>type</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_rdata'>rdata</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_add_update'>add_update</span><span class='lparen'>(</span><span class='id identifier rubyid_resource'>resource</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_resource'>resource</span>
+  <span class='kw'>end</span>
+  <span class='comment'>#  @TODO@ Should be able to take RRSet!
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete-instance_method">
+  
+    #<strong>delete</strong>(*args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Ways to create the update records (add, delete, RFC2136, section 2.5)</p>
+
+<p>2.5.2 - Delete An RRset</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_update'>update</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
+</code></pre>
+
+<p>2.5.3 - Delete All RRsets From A Name</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_update'>update</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+</code></pre>
+
+<p>2.5.4 - Delete An RR From An RRset</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_update'>update</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_rdata'>rdata</span><span class='rparen'>)</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/update.rb', line 258</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_ttl'>ttl</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_klass'>klass</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Classes.html" title="Dnsruby::Classes (class)">Classes</a></span></span><span class='period'>.</span><span class='const'>ANY</span>
+  <span class='id identifier rubyid_rdata'>rdata</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_resource'>resource</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
+  <span class='kw'>when</span> <span class='int'>1</span> <span class='comment'># name
+</span>    <span class='id identifier rubyid_resource'>resource</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="RR.html" title="Dnsruby::RR (class)">RR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="RR.html#create-class_method" title="Dnsruby::RR.create (method)">create</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_ttl'>ttl</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_klass'>klass</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>ANY</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_rdata'>rdata</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_add_update'>add_update</span><span class='lparen'>(</span><span class='id identifier rubyid_resource'>resource</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='int'>2</span> <span class='comment'># name, type
+</span>    <span class='id identifier rubyid_resource'>resource</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="RR.html" title="Dnsruby::RR (class)">RR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="RR.html#create-class_method" title="Dnsruby::RR.create (method)">create</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_ttl'>ttl</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_klass'>klass</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_rdata'>rdata</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_add_update'>add_update</span><span class='lparen'>(</span><span class='id identifier rubyid_resource'>resource</span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='int'>3</span> <span class='comment'># name, type, rdata
+</span>    <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_rdata'>rdata</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="CodeMapper.html#initialize-instance_method" title="Dnsruby::CodeMapper#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>TXT</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_instring'>instring</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_ttl'>ttl</span><span class='embexpr_end'>}</span><span class='tstring_content'> IN </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_type'>type</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span><span class='semicolon'>;</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='const'>String</span> <span class='op'>===</span> <span class='id identifier rubyid_rdata'>rdata</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_instring'>instring</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_rdata'>rdata</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39;</span><span class='tstring_end'>&quot;</span></span>
+      <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='const'>Array</span> <span class='op'>===</span> <span class='id identifier rubyid_rdata'>rdata</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_rdata'>rdata</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_rcounter'>rcounter</span><span class='op'>|</span>
+        <span class='id identifier rubyid_instring'>instring</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_rdata'>rdata</span><span class='lbracket'>[</span><span class='id identifier rubyid_rcounter'>rcounter</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39; </span><span class='tstring_end'>&quot;</span></span>
+        <span class='rbrace'>}</span>
+      <span class='kw'>else</span>
+        <span class='id identifier rubyid_instring'>instring</span> <span class='op'>+=</span> <span class='id identifier rubyid_rdata'>rdata</span>
+      <span class='kw'>end</span>
+      <span class='id identifier rubyid_resource'>resource</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="RR.html" title="Dnsruby::RR (class)">RR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="RR.html#create-class_method" title="Dnsruby::RR.create (method)">create</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_instring'>instring</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_resource'>resource</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="RR.html" title="Dnsruby::RR (class)">RR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="RR.html#create-class_method" title="Dnsruby::RR.create (method)">create</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_ttl'>ttl</span><span class='embexpr_end'>}</span><span class='tstring_content'> IN </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_type'>type</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_rdata'>rdata</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_resource'>resource</span><span class='period'>.</span><span class='id identifier rubyid_klass'>klass</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Classes.html" title="Dnsruby::Classes (class)">Classes</a></span></span><span class='period'>.</span><span class='const'>NONE</span>
+    <span class='id identifier rubyid_add_update'>add_update</span><span class='lparen'>(</span><span class='id identifier rubyid_resource'>resource</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_resource'>resource</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="present-instance_method">
+  
+    #<strong>present</strong>(*args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Ways to create the prerequisite records (exists, notexists, inuse, etc. - RFC2136, section 2.4)</p>
+
+<pre class="code ruby"><code class="ruby">(1)  RRset exists (value independent).  At least one RR with a
+     specified NAME and TYPE (in the zone and class specified by
+     the Zone Section) must exist.
+
+     update.present(name, type)
+
+(2)  RRset exists (value dependent).  A set of RRs with a
+     specified NAME and TYPE exists and has the same members
+     with the same RDATAs as the RRset specified here in this
+     Section.
+
+     update.present(name, type, rdata)
+
+(4)  Name is in use.  At least one RR with a specified NAME (in
+     the zone and class specified by the Zone Section) must exist.
+     Note that this prerequisite is NOT satisfied by empty
+     nonterminals.
+
+     update.present(name)
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/update.rb', line 138</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_present'>present</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_ttl'>ttl</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_rdata'>rdata</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_klass'>klass</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Classes.html" title="Dnsruby::Classes (class)">Classes</a></span></span><span class='period'>.</span><span class='const'>ANY</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='op'>&gt;=</span><span class='int'>1</span><span class='rparen'>)</span> <span class='comment'># domain (RFC2136, Section 2.4.4)
+</span>    <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>ANY</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='op'>&gt;=</span><span class='int'>2</span><span class='rparen'>)</span> <span class='comment'># RRSET (RFC2136, Section 2.4.1)
+</span>      <span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>2</span><span class='rparen'>)</span> <span class='comment'># RRSET (RFC2136, Section 2.4.2)
+</span>      <span class='id identifier rubyid_klass'>klass</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Classes.html" title="Dnsruby::Classes (class)">Classes</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="CodeMapper.html#initialize-instance_method" title="Dnsruby::CodeMapper#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_zone'>zone</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_zclass'>zclass</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_rdata'>rdata</span><span class='op'>=</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_rec'>rec</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="RR.html" title="Dnsruby::RR (class)">RR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="RR.html#create-class_method" title="Dnsruby::RR.create (method)">create</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_ttl'>ttl</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_klass'>klass</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_type'>type</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_rdata'>rdata</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_add_pre'>add_pre</span><span class='lparen'>(</span><span class='id identifier rubyid_rec'>rec</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_rec'>rec</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Wrong number of arguments (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='embexpr_end'>}</span><span class='tstring_content'> for 1 or 2) for Update#present</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr  9 10:58:09 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-3.0.0).
+</div>
+
+    </div>
+  </body>
+</html>

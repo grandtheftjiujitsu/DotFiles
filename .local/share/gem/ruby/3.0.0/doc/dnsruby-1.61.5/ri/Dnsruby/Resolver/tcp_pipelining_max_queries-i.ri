@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"tcp_pipelining_max_queries:ETI"1Dnsruby::Resolver#tcp_pipelining_max_queries;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"LHow many times (number of messages) to reuse the pipelining connection ;TI"Mbefore closing, :infinite for infinite number of requests per connection;T:
+@fileI"lib/dnsruby/resolver.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::Resolver;TcRDoc::NormalClass0

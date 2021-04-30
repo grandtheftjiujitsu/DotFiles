@@ -1,0 +1,39 @@
+2021-03-14 18:23:47.162 (I) ==================== SSR started ====================
+2021-03-14 18:23:47.162 (I) SimpleScreenRecorder 0.4.3
+Compiled with GCC 10.2.0
+Qt: header 5.15.2, lib 5.15.2
+libavformat: header 58.45.100, lib 58.45.100
+libavcodec: header 58.91.100, lib 58.91.100
+libavutil: header 56.51.100, lib 56.51.100
+libswscale: header 5.7.100, lib 5.7.100
+2021-03-14 18:23:47.162 (I) [CPUFeatures::Detect] CPU features: mmx sse sse2 sse3 ssse3 sse4_1 sse4_2 avx bmi1
+2021-03-14 18:23:47.203 (I) [ALSAInput::GetSourceList] Generating source list ...
+2021-03-14 18:23:47.204 (I) [ALSAInput::GetSourceList] Found card: [hw:0] HD-Audio Generic
+2021-03-14 18:23:47.204 (I) [ALSAInput::GetSourceList] Found device: [hw:0,0] HD-Audio Generic: ALC887-VD Analog
+2021-03-14 18:23:47.204 (I) [ALSAInput::GetSourceList] Found device: [hw:0,2] HD-Audio Generic: ALC887-VD Alt Analog
+2021-03-14 18:23:47.204 (I) [ALSAInput::GetSourceList] Found card: [hw:1] HDA NVidia
+2021-03-14 18:23:47.207 (I) [PulseAudioInput::GetSourceList] Generating source list ...
+2021-03-14 18:23:47.210 (I) [SourceNamesCallback] Found source: [alsa_output.pci-0000_00_14.2.analog-stereo.monitor] Monitor of Built-in Audio Analog Stereo
+2021-03-14 18:23:47.211 (I) [SourceNamesCallback] Found source: [ladspa_output.mbeq_1197.mbeq.monitor] Monitor of LADSPA Plugin Multiband EQ on Built-in Audio Analog Stereo
+2021-03-14 18:23:47.673 (E) [PageRecord::OnStdin] Standard input read error (ioctl).
+2021-03-14 18:24:19.602 (I) [ALSAInput::GetSourceList] Generating source list ...
+2021-03-14 18:24:19.604 (I) [ALSAInput::GetSourceList] Found card: [hw:0] HD-Audio Generic
+2021-03-14 18:24:19.604 (I) [ALSAInput::GetSourceList] Found device: [hw:0,0] HD-Audio Generic: ALC887-VD Analog
+2021-03-14 18:24:19.604 (I) [ALSAInput::GetSourceList] Found device: [hw:0,2] HD-Audio Generic: ALC887-VD Alt Analog
+2021-03-14 18:24:19.604 (I) [ALSAInput::GetSourceList] Found card: [hw:1] HDA NVidia
+2021-03-14 18:24:20.342 (I) [ALSAInput::GetSourceList] Generating source list ...
+2021-03-14 18:24:20.345 (I) [ALSAInput::GetSourceList] Found card: [hw:0] HD-Audio Generic
+2021-03-14 18:24:20.345 (I) [ALSAInput::GetSourceList] Found device: [hw:0,0] HD-Audio Generic: ALC887-VD Analog
+2021-03-14 18:24:20.345 (I) [ALSAInput::GetSourceList] Found device: [hw:0,2] HD-Audio Generic: ALC887-VD Alt Analog
+2021-03-14 18:24:20.345 (I) [ALSAInput::GetSourceList] Found card: [hw:1] HDA NVidia
+2021-03-14 18:24:20.568 (I) [ALSAInput::GetSourceList] Generating source list ...
+2021-03-14 18:24:20.571 (I) [ALSAInput::GetSourceList] Found card: [hw:0] HD-Audio Generic
+2021-03-14 18:24:20.571 (I) [ALSAInput::GetSourceList] Found device: [hw:0,0] HD-Audio Generic: ALC887-VD Analog
+2021-03-14 18:24:20.571 (I) [ALSAInput::GetSourceList] Found device: [hw:0,2] HD-Audio Generic: ALC887-VD Alt Analog
+2021-03-14 18:24:20.571 (I) [ALSAInput::GetSourceList] Found card: [hw:1] HDA NVidia
+2021-03-14 18:24:20.741 (I) [ALSAInput::GetSourceList] Generating source list ...
+2021-03-14 18:24:20.743 (I) [ALSAInput::GetSourceList] Found card: [hw:0] HD-Audio Generic
+2021-03-14 18:24:20.743 (I) [ALSAInput::GetSourceList] Found device: [hw:0,0] HD-Audio Generic: ALC887-VD Analog
+2021-03-14 18:24:20.743 (I) [ALSAInput::GetSourceList] Found device: [hw:0,2] HD-Audio Generic: ALC887-VD Alt Analog
+2021-03-14 18:24:20.743 (I) [ALSAInput::GetSourceList] Found card: [hw:1] HDA NVidia
+2021-03-14 18:26:45.379 (I) ==================== SSR stopped ====================

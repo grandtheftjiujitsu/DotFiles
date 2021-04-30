@@ -36,3 +36,4 @@
 4.5.0 highline:~> 2.0.0|checksum:4bd30abd60d5b7008ed6a1f5d9e0afedf9e4fbff9329d253f41f93cc06a7b7f4
 4.5.1 highline:~> 2.0.0|checksum:10074c3848308a98261a0c3d3baa75343bbb7d8dc3715cd0e8590db968c34786
 4.5.2 highline:~> 2.0.0|checksum:2c0746b01be9cfbbbf929d154a9bae0a224954c98b8e2b2f35b51984a6258f8c
+4.6.0 highline:~> 2.0.0|checksum:7d1ddc3fccae60cc906b4131b916107e2ef0108858f485fdda30610c0f2913d9,ruby:>= 2.4

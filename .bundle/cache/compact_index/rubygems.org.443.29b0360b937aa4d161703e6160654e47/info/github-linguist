@@ -175,3 +175,5 @@
 7.12.0 charlock_holmes:~> 0.7.7,escape_utils:~> 1.2.0,mini_mime:~> 1.0,rugged:>= 0.25.1|checksum:7efcbfc3a114e01dc35fed78de012431c2fdaa0266783bcae224f69a8431eb73
 7.12.1 charlock_holmes:~> 0.7.7,escape_utils:~> 1.2.0,mini_mime:~> 1.0,rugged:>= 0.25.1|checksum:084d3c598bad61c1362ed98100ac67336434818a23dba16956e4d38a09589622
 7.12.2 charlock_holmes:~> 0.7.7,escape_utils:~> 1.2.0,mini_mime:~> 1.0,rugged:>= 0.25.1|checksum:2f991aa1a6b64281fe98f6571a57aebd9d63e11dd270bb77ffe1b564f782f899
+7.13.0 charlock_holmes:~> 0.7.7,escape_utils:~> 1.2.0,mini_mime:~> 1.0,rugged:>= 0.25.1|checksum:9274d90096ae62e8130f9c02f707ce5a2313ba8c9cbc96c7b9dbc9f08e7c1089
+7.14.0 charlock_holmes:~> 0.7.7,escape_utils:~> 1.2.0,mini_mime:~> 1.0,rugged:>= 0.25.1|checksum:4dcc480641cc01ed06cd47224593c955be3e30d21eceedf4bfb97d33fd3e0b2a

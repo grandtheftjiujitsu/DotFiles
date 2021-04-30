@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"cached:ETI"Dnsruby::Message#cached;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"MIf the Message was returned from the cache, the cached flag will be set ;TI"&true. It will be false otherwise.;T:
+@fileI"#lib/dnsruby/message/message.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::Message;TcRDoc::NormalClass0

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"no_tcp:ETI"Dnsruby::Resolver#no_tcp;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"AIf no_tcp==true, then ONLY UDP will be used as a transport. ;TI"KThis should not generally be used, but is provided as a debugging aid.;T:
+@fileI"lib/dnsruby/resolver.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::Resolver;TcRDoc::NormalClass0

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"security_level:ETI"$Dnsruby::Message#security_level;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"MIf dnssec is set on, then each message will have the security level set ;TI"OTo find the precise error (if any), call Dnsruby::Dnssec::validate(msg) - ;TI"3the resultant exception will define the error.;T:
+@fileI"#lib/dnsruby/message/message.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::Message;TcRDoc::NormalClass0

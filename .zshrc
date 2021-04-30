@@ -63,6 +63,7 @@ alias pl="perl -de 0"
 alias pwsafe="ecryptfs-mount-private; pwsafe -f $HOME/vault/.pwsafe.dat"
 alias py="python -q"
 alias rclone="rclone --config=$HOME/.config/rclone/rclone.conf"
+alias scrcpy="adb kill-server; sudo adb start-server; scrcpy"
 alias screencap="simplescreenrecorder"
 alias signal="signal-desktop-beta"
 alias rnano="sudo rnano"
@@ -73,7 +74,7 @@ alias wifi-menu="sudo wifi-menu"
 #alias win="VBoxManage startvm 'Windows 7'"
 
 # scripts & utilities
-#alias atomic="$HOME/.local/bin/atomicwallet.AppImage --no-sandbox"
+alias atomicwallet="$HOME/.local/bin/atomicwallet.AppImage --no-sandbox"
 alias aur-pull="git clone https://aur.archlinux.org/$1.git"
 alias brave="$HOME/scripts/shell/brave-hardened-malloc"
 alias findinfile="grep -rnw -e $1"
@@ -94,6 +95,7 @@ alias pts-build="phoronix-test-suite benchmark build-linux-kernel"
 alias pts-gcrypt="phoronix-test-suite benchmark gcrypt"
 alias pts-gzip="phoronix-test-suite benchmark compress-gzip"
 alias pts-i="phoronix-test-suite interactive"
+alias rmorphans="sudo pacman -Rns $(pacman -Qtdq)" #unused orphans
 alias scratch="nano $HOME/scratch.pad"
 alias syserror="sudo journalctl -p 0..3 -xn"
 alias sysfail="systemctl --failed"
@@ -164,6 +166,7 @@ alias fb-flash-vendor="fastboot flash vendor"
 alias fb-rb="fastboot reboot"
 
 # user executables
+export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/scripts/shell:$PATH
 export PATH=$HOME/scripts/python:$PATH
 export PATH=$HOME/scirpts/r:$PATH

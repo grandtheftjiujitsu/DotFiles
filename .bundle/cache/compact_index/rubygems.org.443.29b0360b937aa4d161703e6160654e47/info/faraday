@@ -84,3 +84,8 @@
 1.0.1 multipart-post:< 3&>= 1.2|checksum:381aee04fcc9effbe5fa7cc703d8f5f20293722f987ded4f958f77514cd29373,ruby:>= 2.3
 1.1.0 multipart-post:< 3&>= 1.2,ruby2_keywords:>= 0|checksum:6578c3ca23d2f63abf436031ca89b47ffe2c7b0d7952928ba079c75b22bfaa99,ruby:>= 2.4
 1.2.0 multipart-post:< 3&>= 1.2,ruby2_keywords:>= 0|checksum:bd5c138304ee53907f8d0747724660c3a1cdf77d530d1cecd70d141299194b99,ruby:>= 2.4
+1.3.0 faraday-net_http:~> 1.0,multipart-post:< 3&>= 1.2,ruby2_keywords:>= 0|checksum:7f06817ba823ddeabf4dd85ca5e0f63e234527f564a03f09f6c7127951d3bac2,ruby:>= 2.4
+0.17.4 multipart-post:< 3&>= 1.2|checksum:11677b5b261fbbfd4d959f702078d81c0bb66006c00ab2f329f32784778e4d9c,ruby:>= 1.9
+1.3.1 faraday-net_http:~> 1.0,multipart-post:< 3&>= 1.2,ruby2_keywords:>= 0.0.4|checksum:eaf9ee9d2d36735e6928a6e1fcaac3e3fa823f296fe81b254da26aa3d20e534e,ruby:>= 2.4
+1.4.0 faraday-excon:~> 1.0,faraday-net_http:~> 1.0,faraday-net_http_persistent:~> 1.0,multipart-post:< 3&>= 1.2,ruby2_keywords:>= 0.0.4|checksum:fe2839a291686c28e5d3ba54f1d8e0e29500dea33eec203750ee8bd34982abf2,ruby:>= 2.4
+1.4.1 faraday-excon:~> 1.1,faraday-net_http:~> 1.0,faraday-net_http_persistent:~> 1.1,multipart-post:< 3&>= 1.2,ruby2_keywords:>= 0.0.4|checksum:71c3864e7c2325821c6023bc498d748f6502803c073759fa5450397a4035c460,ruby:>= 2.4

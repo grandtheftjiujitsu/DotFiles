@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"precedence:ETI"%Dnsruby::RR::IPSECKEY#precedence;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"DAn 8-bit precedence for this field. Lower values are preferred.;T:
+@fileI"%lib/dnsruby/resource/IPSECKEY.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::RR::IPSECKEY;TcRDoc::NormalClass0

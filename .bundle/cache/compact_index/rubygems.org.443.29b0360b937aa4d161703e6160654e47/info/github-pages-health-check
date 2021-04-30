@@ -50,3 +50,5 @@
 1.15.0 addressable:~> 2.3,dnsruby:~> 1.60,octokit:~> 4.0,public_suffix:~> 3.0,typhoeus:~> 1.3|checksum:dd7e471ae6d7dc1451082816f5d1d235da2e592b23ceb62f312c14a826dbd3ae,ruby:>= 2.2.0
 1.16.0 addressable:~> 2.3,dnsruby:~> 1.60,octokit:~> 4.0,public_suffix:~> 3.0,typhoeus:~> 1.3|checksum:d6de5f6020fa76144458cbbcda255a85dac0290b3ed2ac8b3322b6723d420956,ruby:>= 2.2.0
 1.16.1 addressable:~> 2.3,dnsruby:~> 1.60,octokit:~> 4.0,public_suffix:~> 3.0,typhoeus:~> 1.3|checksum:7079706210ecc1f6a954cd5bc782ad7fcfeee4b8408c4ae726446137bb45681e,ruby:>= 2.2.0
+1.17.0 addressable:~> 2.3,dnsruby:~> 1.60,octokit:~> 4.0,public_suffix:< 5.0&>= 2.0.2,typhoeus:~> 1.3|checksum:d406a802e90eb75b3d89db426de39a053af0e1121a8c1be585d5720d8c1abb71,ruby:>= 2.2.0
+1.17.1 addressable:~> 2.3,dnsruby:~> 1.60,octokit:~> 4.0,public_suffix:< 5.0&>= 2.0.2,typhoeus:~> 1.3|checksum:15aef811ae9db1573cfb6e9c3145f7e23aa3e2747ac668c36c78da35bb2665e0,ruby:>= 2.2.0

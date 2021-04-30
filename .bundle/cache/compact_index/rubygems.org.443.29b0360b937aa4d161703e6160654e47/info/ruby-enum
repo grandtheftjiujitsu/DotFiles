@@ -9,3 +9,4 @@
 0.7.1 i18n:>= 0|checksum:1eb6865e340cd0f2f1b5855eb057cfc47855813bd3ab0bf775e0ac54b278072d,rubygems:>= 1.3.6
 0.7.2 i18n:>= 0|checksum:1d66e6ccbd65570193858616e181dc7ea82a95c5b4e32f6f9fc6a068e356c240,rubygems:>= 1.3.6
 0.8.0 i18n:>= 0|checksum:dcf27c6dc5ea040fd8d5fd14a7dadf201ca718c2c3f296d436ed07f245f76d34,rubygems:>= 1.3.6
+0.9.0 i18n:>= 0|checksum:77a09954184714a9ca0baf2dde91a38b96a8f0f834f1984c7a1e52df2148dadf,rubygems:>= 1.3.6

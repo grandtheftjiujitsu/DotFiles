@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"serial:ETI"Dnsruby::RR::SOA#serial;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"The zone's serial number.;T:
+@fileI" lib/dnsruby/resource/SOA.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::RR::SOA;TcRDoc::NormalClass0

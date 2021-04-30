@@ -1,5 +1,0 @@
-2020/12/31-10:33:39.619 244441 Reusing MANIFEST /home/austin/.config/atomic/IndexedDB/file__0.indexeddb.leveldb/MANIFEST-000001
-2020/12/31-10:33:39.619 244441 Recovering log #6
-2020/12/31-10:33:39.623 244441 Reusing old log /home/austin/.config/atomic/IndexedDB/file__0.indexeddb.leveldb/000006.log 
-2020/12/31-10:33:39.624 244441 Delete type=2 #7
-2020/12/31-10:33:39.624 244441 Delete type=2 #5

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"signers_name:ETI"$Dnsruby::RR::RRSIG#signers_name;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"Didentifies the owner name of the DNSKEY RR that a validator is ;TI"/supposed to use to validate this signature;T:
+@fileI""lib/dnsruby/resource/RRSIG.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::RR::RRSIG;TcRDoc::NormalClass0

@@ -38,7 +38,6 @@
       <property name="XF86WWW" type="string" value="exo-open --launch WebBrowser"/>
       <property name="&lt;Super&gt;p" type="string" value="xfce4-display-settings --minimal"/>
       <property name="override" type="bool" value="true"/>
-      <property name="&lt;Alt&gt;Return" type="string" value="exo-open --launch TerminalEmulator"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Return" type="string" value="systemctl suspend"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Delete" type="string" value="xfce4-session-logout"/>
       <property name="HomePage" type="string" value="xfce4-settings-manager">
@@ -64,6 +63,7 @@
       <property name="&lt;Alt&gt;KP_1" type="string" value="/home/austin/scripts/shell/brave-hardened-malloc"/>
       <property name="Mail" type="string" value="/home/austin/scripts/shell/brave-hardened-malloc"/>
       <property name="&lt;Alt&gt;KP_3" type="string" value="/home/austin/scripts/shell/updcmuslib"/>
+      <property name="&lt;Alt&gt;Return" type="string" value="exo-open --launch TerminalEmulator"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

@@ -51,10 +51,6 @@ view_blockstack: 1
 leftpanel_active_tab: 0
 last_filefilter: 
 c2e.IE_apos_workaround: 0
-recent_files: file:///home/austin/git/savagezen.github.io/_includes/sidebar.html
-recent_files: file:///home/austin/git/savagezen.github.io/index.html
-recent_files: file:///home/austin/git/savagezen.github.io/_includes/default.html
-recent_files: file:///home/austin/git/savagezen.github.io/_includes/page.html
 recent_files: file:///home/austin/git/savagezen.github.io/_posts/2018-12-24-Paleo-and-Keto.md
 recent_files: file:///home/austin/git/savagezen.github.io/_drafts/BJJ-heath-experiments.md
 recent_files: file:///home/austin/git/savagezen.github.io/_drafts/BJJ-Pre-Workout-and-Recovery-Drinks.md
@@ -71,6 +67,10 @@ recent_files: file:///home/austin/git/diligentk9.github.io/index.html
 recent_files: file:///home/austin/git/savagezen.github.io/_drafts/BJJ-measuring-progress.md
 recent_files: file:///home/austin/git/savagezen.github.io/_drafts/NUTRITION-paleo-vs-keto.md
 recent_files: file:///home/austin/git/savagezen.github.io/_drafts/BJJ-what-i-learned-in-2019.md
+recent_files: file:///home/austin/git/savagezen.github.io/_posts/2021-03-07-sunday-news-physical-activity-and-mental-health.md
+recent_files: file:///home/austin/podcast/Bose%20Qcon%2035%20EQ.txt
+recent_files: file:///home/austin/podcast/Josh%20Meyer's%20Male%20EQ.txt
+recent_files: file:///home/austin/git/savagezen.github.io/about.md
 default_mime_type: text/plain
 two_pane_filebrowser_height: 195
 adv_open_matchname: 0
@@ -194,7 +194,7 @@ ssearch_casesens: 0
 fb_focus_follow: 1
 image_thumbnail_refresh_quality: 1
 htmlbar_view: 1
-savedir: file:///home/austin/git/savagezen.github.io/_drafts
+savedir: file:///home/austin/git/savagezen.github.io/_posts
 bmarksearchmode: 0
 enable_syntax_scan: 1
 e2c.convert_num: 0
@@ -214,5 +214,5 @@ view_cline: 1
 c2e.convert_iso: 0
 c2e.convert_special: 0
 spell_lang: en_GB
-opendir: file:///home/austin/git/savagezen.github.io/_drafts
+opendir: file:///home/austin/git/savagezen.github.io
 snr_type: 0

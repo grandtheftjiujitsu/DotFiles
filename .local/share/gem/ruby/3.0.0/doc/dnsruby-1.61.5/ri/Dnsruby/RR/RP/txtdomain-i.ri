@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"txtdomain:ETI"Dnsruby::RR::RP#txtdomain;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"BA domain name that specifies a TXT record containing further ;TI".information about the responsible person.;T:
+@fileI"lib/dnsruby/resource/RP.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::RR::RP;TcRDoc::NormalClass0

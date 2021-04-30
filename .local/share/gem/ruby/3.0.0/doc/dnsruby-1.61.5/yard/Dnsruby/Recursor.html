@@ -1,0 +1,2580 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Dnsruby::Recursor
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Dnsruby::Recursor";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (R)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span>
+     &raquo; 
+    <span class="title">Recursor</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Dnsruby::Recursor
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Dnsruby::Recursor</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/dnsruby/recursor.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Dnsruby::Recursor - Perform recursive dns lookups</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Dnsruby</span><span class='tstring_end'>&#39;</span></span>
+<span class='id identifier rubyid_rec'>rec</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='op'>::</span><span class='const'>Recursor</span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Dnsruby::Recursor#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_answer'>answer</span> <span class='op'>=</span> <span class='id identifier rubyid_rec'>rec</span><span class='period'>.</span><span class='id identifier rubyid_recurse'>recurse</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rob.com.au</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+</code></pre>
+
+<p>This module uses a Dnsruby::Resolver to perform recursive queries.</p>
+
+<h3 id="label-AUTHOR">AUTHOR</h3>
+
+<p>Rob Brown, bbb@cpan.org Alex Dalitz, alexd@nominet.org.uk</p>
+
+<h3 id="label-SEE+ALSO">SEE ALSO</h3>
+
+<p>Dnsruby::Resolver,</p>
+
+<h3 id="label-COPYRIGHT">COPYRIGHT</h3>
+
+<p>Copyright © 2002, Rob Brown.  All rights reserved. Portions Copyright © 2005, Olaf M Kolkman. Ruby version with caching and validation Copyright © 2008, AlexD (Nominet UK)</p>
+
+<p>Example lookup process:</p>
+
+<p>[root@box root]# dig +trace <a href="www.rob.com.au">www.rob.com.au</a>.</p>
+
+<p>; &lt;&lt;&gt;&gt; DiG 9.2.0 &lt;&lt;&gt;&gt; +trace <a href="www.rob.com.au">www.rob.com.au</a>. ;; global options:  printcmd .                       507343  IN      NS      C.ROOT-SERVERS.NET. .                       507343  IN      NS      D.ROOT-SERVERS.NET. .                       507343  IN      NS      E.ROOT-SERVERS.NET. .                       507343  IN      NS      F.ROOT-SERVERS.NET. .                       507343  IN      NS      G.ROOT-SERVERS.NET. .                       507343  IN      NS      H.ROOT-SERVERS.NET. .                       507343  IN      NS      I.ROOT-SERVERS.NET. .                       507343  IN      NS      J.ROOT-SERVERS.NET. .                       507343  IN      NS      K.ROOT-SERVERS.NET. .                       507343  IN      NS      L.ROOT-SERVERS.NET. .                       507343  IN      NS      M.ROOT-SERVERS.NET. .                       507343  IN      NS      A.ROOT-SERVERS.NET. .                       507343  IN      NS      B.ROOT-SERVERS.NET. ;; Received 436 bytes from 127.0.0.1#53(127.0.0.1) in 9 ms</p>
+
+<pre class="code ruby"><code class="ruby">;;; But these should be hard coded as the hints
+
+;;; Ask H.ROOT-SERVERS.NET gave:
+</code></pre>
+
+<p>au.                     172800  IN      NS      NS2.BERKELEY.EDU. au.                     172800  IN      NS      NS1.BERKELEY.EDU. au.                     172800  IN      NS      NS.UU.NET. au.                     172800  IN      NS      BOX2.AUNIC.NET. au.                     172800  IN      NS      SEC1.APNIC.NET. au.                     172800  IN      NS      SEC3.APNIC.NET. ;; Received 300 bytes from 128.63.2.53#53(H.ROOT-SERVERS.NET) in 322 ms</p>
+
+<pre class="code ruby"><code class="ruby">;;; A little closer than before
+
+;;; Ask NS2.BERKELEY.EDU gave:
+</code></pre>
+
+<p>com.au.                 259200  IN      NS      ns4.ausregistry.net. com.au.                 259200  IN      NS      dns1.telstra.net. com.au.                 259200  IN      NS      au2ld.CSIRO.au. com.au.                 259200  IN      NS      audns01.syd.optus.net. com.au.                 259200  IN      NS      ns.ripe.net. com.au.                 259200  IN      NS      ns1.ausregistry.net. com.au.                 259200  IN      NS      ns2.ausregistry.net. com.au.                 259200  IN      NS      ns3.ausregistry.net. com.au.                 259200  IN      NS      ns3.melbourneit.com. ;; Received 387 bytes from 128.32.206.12#53(NS2.BERKELEY.EDU) in 10312 ms</p>
+
+<pre class="code ruby"><code class="ruby">;;; A little closer than before
+
+;;; Ask ns4.ausregistry.net gave:
+</code></pre>
+
+<p>com.au.                 259200  IN      NS      ns1.ausregistry.net. com.au.                 259200  IN      NS      ns2.ausregistry.net. com.au.                 259200  IN      NS      ns3.ausregistry.net. com.au.                 259200  IN      NS      ns4.ausregistry.net. com.au.                 259200  IN      NS      ns3.melbourneit.com. com.au.                 259200  IN      NS      dns1.telstra.net. com.au.                 259200  IN      NS      au2ld.CSIRO.au. com.au.                 259200  IN      NS      ns.ripe.net. com.au.                 259200  IN      NS      audns01.syd.optus.net. ;; Received 259 bytes from 137.39.1.3#53(ns4.ausregistry.net) in 606 ms</p>
+
+<pre class="code ruby"><code class="ruby">;;; Uh... yeah... I already knew this
+;;; from what NS2.BERKELEY.EDU told me.
+;;; ns4.ausregistry.net must have brain damage
+
+;;; Ask ns1.ausregistry.net gave:
+</code></pre>
+
+<p>rob.com.au.             86400   IN      NS      sy-dns02.tmns.net.au. rob.com.au.             86400   IN      NS      sy-dns01.tmns.net.au. ;; Received 87 bytes from 203.18.56.41#53(ns1.ausregistry.net) in 372 ms</p>
+
+<pre class="code ruby"><code class="ruby">;;; Ah, much better.  Something more useful.
+
+;;; Ask sy-dns02.tmns.net.au gave:
+</code></pre>
+
+<p><a href="www.rob.com.au">www.rob.com.au</a>.         7200    IN      A       139.134.5.123 rob.com.au.             7200    IN      NS      sy-dns01.tmns.net.au. rob.com.au.             7200    IN      NS      sy-dns02.tmns.net.au. ;; Received 135 bytes from 139.134.2.18#53(sy-dns02.tmns.net.au) in 525 ms</p>
+
+<pre class="code ruby"><code class="ruby"> ;;; FINALLY, THE ANSWER!
+Now,DNSSEC validation is performed (unless disabled).
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Recursor/AddressCache.html" title="Dnsruby::Recursor::AddressCache (class)">AddressCache</a></span>
+    
+  
+</p>
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="mutex-classvariable" class="">@@mutex =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>For guarding access to shared caches.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='const'>Mutex</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span></pre></dd>
+      
+        <dt id="hints-classvariable" class="">@@hints =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='kw'>nil</span></pre></dd>
+      
+        <dt id="authority_cache-classvariable" class="">@@authority_cache =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span></pre></dd>
+      
+        <dt id="zones_cache-classvariable" class="">@@zones_cache =
+          
+        </dt>
+        <dd><pre class="code"><span class='kw'>nil</span></pre></dd>
+      
+        <dt id="nameservers-classvariable" class="">@@nameservers =
+          
+        </dt>
+        <dd><pre class="code"><span class='kw'>nil</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#callback-instance_method" title="#callback (instance method)">#<strong>callback</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute callback.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dnssec-instance_method" title="#dnssec (instance method)">#<strong>dnssec</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute dnssec.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#hints-instance_method" title="#hints (instance method)">#<strong>hints</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute hints.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ipv6_ok-instance_method" title="#ipv6_ok (instance method)">#<strong>ipv6_ok</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute ipv6_ok.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#nameservers-instance_method" title="#nameservers (instance method)">#<strong>nameservers</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute nameservers.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#recurse-instance_method" title="#recurse (instance method)">#<strong>recurse</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute recurse.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resolver-instance_method" title="#resolver (instance method)">#<strong>resolver</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The resolver to use for the queries.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_to_hints-class_method" title="add_to_hints (class method)">.<strong>add_to_hints</strong>(hints, rr)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear_caches-class_method" title="clear_caches (class method)">.<strong>clear_caches</strong>(resolver = Resolver.new)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#set_hints-class_method" title="set_hints (class method)">.<strong>set_hints</strong>(hints, resolver)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#_dorecursion-instance_method" title="#_dorecursion (instance method)">#<strong>_dorecursion</strong>(name, type, klass, known_zone, known_authorities, depth, no_validation)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc:.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_closest_known_zone_authorities_for-instance_method" title="#get_closest_known_zone_authorities_for (instance method)">#<strong>get_closest_known_zone_authorities_for</strong>(name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc:.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_closest_known_zone_for-instance_method" title="#get_closest_known_zone_for (instance method)">#<strong>get_closest_known_zone_for</strong>(n)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc:.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(res = nil)  &#x21d2; Recursor </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Recursor.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#prune_rrsets_to_rfc5452-instance_method" title="#prune_rrsets_to_rfc5452 (instance method)">#<strong>prune_rrsets_to_rfc5452</strong>(packet, zone)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#query-instance_method" title="#query (instance method)">#<strong>query</strong>(name, type = Types.A, klass = Classes.IN, no_validation = false)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This method is much like the normal query() method except it disables the recurse flag in the packet and explicitly performs the recursion.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#query_no_validation_or_recursion-instance_method" title="#query_no_validation_or_recursion (instance method)">#<strong>query_no_validation_or_recursion</strong>(name, type = Types.A, klass = Classes.IN)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#recursion_callback-instance_method" title="#recursion_callback (instance method)">#<strong>recursion_callback</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#recursion_callback=-instance_method" title="#recursion_callback= (instance method)">#<strong>recursion_callback=</strong>(sub)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This method takes a code reference, which is then invoked each time a packet is received during the recursive lookup.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(res = nil)  &#x21d2; <tt><span class='object_link'><a href="" title="Dnsruby::Recursor (class)">Recursor</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of Recursor.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/recursor.rb', line 172</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_res'>res</span><span class='rparen'>)</span>
+    <span class='ivar'>@resolver</span> <span class='op'>=</span> <span class='id identifier rubyid_res'>res</span>
+  <span class='kw'>else</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='kw'>defined?</span><span class='cvar'>@@nameservers</span> <span class='op'>&amp;&amp;</span> <span class='cvar'>@@nameservers</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rparen'>)</span>
+      <span class='ivar'>@resolver</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Resolver.html" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Resolver.html#initialize-instance_method" title="Dnsruby::Resolver#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='symbol'>:nameserver</span> <span class='op'>=&gt;</span> <span class='cvar'>@@nameservers</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='ivar'>@resolver</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Resolver.html" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Resolver.html#initialize-instance_method" title="Dnsruby::Resolver#initialize (method)">new</a></span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='ivar'>@resolver</span><span class='period'>.</span><span class='id identifier rubyid_dnssec'>dnssec</span> <span class='op'>=</span> <span class='ivar'>@dnssec</span>
+  <span class='ivar'>@ipv6_ok</span> <span class='op'>=</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="callback=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="callback-instance_method">
+  
+    #<strong>callback</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute callback.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+155
+156
+157</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/recursor.rb', line 155</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_callback'>callback</span>
+  <span class='ivar'>@callback</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="dnssec=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="dnssec-instance_method">
+  
+    #<strong>dnssec</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute dnssec.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+156
+157
+158</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/recursor.rb', line 156</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_dnssec'>dnssec</span>
+  <span class='ivar'>@dnssec</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="hints=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="hints-instance_method">
+  
+    #<strong>hints</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute hints.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+156
+157
+158</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/recursor.rb', line 156</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_hints'>hints</span>
+  <span class='ivar'>@hints</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="ipv6_ok=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="ipv6_ok-instance_method">
+  
+    #<strong>ipv6_ok</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute ipv6_ok.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+155
+156
+157</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/recursor.rb', line 155</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ipv6_ok'>ipv6_ok</span>
+  <span class='ivar'>@ipv6_ok</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="nameservers=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="nameservers-instance_method">
+  
+    #<strong>nameservers</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute nameservers.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+155
+156
+157</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/recursor.rb', line 155</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_nameservers'>nameservers</span>
+  <span class='ivar'>@nameservers</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="recurse=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="recurse-instance_method">
+  
+    #<strong>recurse</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute recurse.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+155
+156
+157</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/recursor.rb', line 155</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_recurse'>recurse</span>
+  <span class='ivar'>@recurse</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="resolver=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="resolver-instance_method">
+  
+    #<strong>resolver</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The resolver to use for the queries</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+158
+159
+160</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/recursor.rb', line 158</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_resolver'>resolver</span>
+  <span class='ivar'>@resolver</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add_to_hints-class_method">
+  
+    .<strong>add_to_hints</strong>(hints, rr)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/recursor.rb', line 336</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::Recursor (class)">Recursor</a></span></span><span class='period'>.</span><span class='id identifier rubyid_add_to_hints'>add_to_hints</span><span class='lparen'>(</span><span class='id identifier rubyid_hints'>hints</span><span class='comma'>,</span> <span class='id identifier rubyid_rr'>rr</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_server'>server</span> <span class='op'>=</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+  <span class='id identifier rubyid_server'>server</span><span class='period'>.</span><span class='id identifier rubyid_sub!'>sub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_server'>server</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#A-constant" title="Dnsruby::Types::A (constant)">A</a></span></span><span class='rparen'>)</span>
+      <span class='comment'># print &quot;;; ADDITIONAL HELP: $server -&gt; [&quot;.$rr-&gt;rdatastr.&quot;]\n&quot; if $self-&gt;{&#39;debug&#39;};
+</span>      <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_hints'>hints</span><span class='lbracket'>[</span><span class='id identifier rubyid_server'>server</span><span class='rbracket'>]</span><span class='op'>!=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+        <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; STORING IP: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_server'>server</span><span class='embexpr_end'>}</span><span class='tstring_content'> IN A </span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_address'>address</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='op'>+</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_hints'>hints</span><span class='lbracket'>[</span><span class='id identifier rubyid_server'>server</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_address'>address</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_ttl'>ttl</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#AAAA-constant" title="Dnsruby::Types::AAAA (constant)">AAAA</a></span></span><span class='rparen'>)</span>
+      <span class='comment'># print &quot;;; ADDITIONAL HELP: $server -&gt; [&quot;.$rr-&gt;rdatastr.&quot;]\n&quot; if $self-&gt;{&#39;debug&#39;};
+</span>      <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_hints'>hints</span><span class='lbracket'>[</span><span class='id identifier rubyid_server'>server</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+        <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; STORING IP6: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_server'>server</span><span class='embexpr_end'>}</span><span class='tstring_content'> IN AAAA </span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_address'>address</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='op'>+</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_hints'>hints</span><span class='lbracket'>[</span><span class='id identifier rubyid_server'>server</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_address'>address</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_ttl'>ttl</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="clear_caches-class_method">
+  
+    .<strong>clear_caches</strong>(resolver = Resolver.new)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+381
+382
+383
+384
+385
+386
+387
+388</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/recursor.rb', line 381</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::Recursor (class)">Recursor</a></span></span><span class='period'>.</span><span class='id identifier rubyid_clear_caches'>clear_caches</span><span class='lparen'>(</span><span class='id identifier rubyid_resolver'>resolver</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Resolver.html" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Resolver.html#initialize-instance_method" title="Dnsruby::Resolver#initialize (method)">new</a></span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_resolver'>resolver</span><span class='period'>.</span><span class='id identifier rubyid_dnssec'>dnssec</span> <span class='op'>=</span> <span class='ivar'>@dnssec</span>
+  <span class='const'><span class='object_link'><a href="" title="Dnsruby::Recursor (class)">Recursor</a></span></span><span class='period'>.</span><span class='id identifier rubyid_set_hints'><span class='object_link'><a href="#set_hints-class_method" title="Dnsruby::Recursor.set_hints (method)">set_hints</a></span></span><span class='lparen'>(</span><span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='comma'>,</span> <span class='id identifier rubyid_resolver'>resolver</span><span class='rparen'>)</span>
+  <span class='cvar'>@@zones_cache</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='comment'># key zone_name, values Hash of servers and AddressCaches
+</span>  <span class='cvar'>@@zones_cache</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='cvar'>@@hints</span>
+
+  <span class='cvar'>@@authority_cache</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="set_hints-class_method">
+  
+    .<strong>set_hints</strong>(hints, resolver)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/recursor.rb', line 200</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::Recursor (class)">Recursor</a></span></span><span class='period'>.</span><span class='id identifier rubyid_set_hints'>set_hints</span><span class='lparen'>(</span><span class='id identifier rubyid_hints'>hints</span><span class='comma'>,</span> <span class='id identifier rubyid_resolver'>resolver</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; hints(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_hints'>hints</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>)\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@resolver</span> <span class='op'>=</span> <span class='id identifier rubyid_resolver'>resolver</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_resolver'>resolver</span><span class='period'>.</span><span class='id identifier rubyid_single_resolvers'>single_resolvers</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_resolver'>resolver</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Resolver.html" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Resolver.html#initialize-instance_method" title="Dnsruby::Resolver#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_resolver'>resolver</span><span class='period'>.</span><span class='id identifier rubyid_dnssec'>dnssec</span> <span class='op'>=</span> <span class='ivar'>@dnssec</span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_hints'>hints</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_hints'>hints</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_resolver'>resolver</span><span class='period'>.</span><span class='id identifier rubyid_nameservers'>nameservers</span><span class='op'>=</span><span class='id identifier rubyid_hints'>hints</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='const'>String</span> <span class='op'>===</span> <span class='id identifier rubyid_hints'>hints</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_hints'>hints</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_hints'>hints</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_hints'>hints</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_hint'>hint</span><span class='op'>|</span>
+      <span class='cvar'>@@hints</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+      <span class='cvar'>@@hints</span><span class='lbracket'>[</span><span class='id identifier rubyid_hint'>hint</span><span class='rbracket'>]</span><span class='op'>=</span><span class='id identifier rubyid_hint'>hint</span>
+    <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_hints'>hints</span> <span class='op'>&amp;&amp;</span> <span class='cvar'>@@nameservers</span><span class='rparen'>)</span>
+    <span class='cvar'>@@hints</span><span class='op'>=</span><span class='lparen'>(</span><span class='cvar'>@@nameservers</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='cvar'>@@nameservers</span><span class='op'>=</span><span class='lparen'>(</span><span class='id identifier rubyid_hints'>hints</span><span class='rparen'>)</span>
+    <span class='cvar'>@@hints</span> <span class='op'>=</span> <span class='id identifier rubyid_hints'>hints</span>
+  <span class='kw'>end</span>
+  <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; verifying (root) zone...\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='comment'>#  bind always asks one of the hint servers
+</span>  <span class='comment'>#  for who it thinks is authoritative for
+</span>  <span class='comment'>#  the (root) zone as a sanity check.
+</span>  <span class='comment'>#  Nice idea.
+</span>
+  <span class='comment'>#       if (!@@hints || @@hints.length == 0)
+</span>  <span class='id identifier rubyid_resolver'>resolver</span><span class='period'>.</span><span class='id identifier rubyid_recurse'>recurse</span><span class='op'>=</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_packet'>packet</span><span class='op'>=</span><span class='id identifier rubyid_resolver'>resolver</span><span class='period'>.</span><span class='id identifier rubyid_query_no_validation_or_recursion'>query_no_validation_or_recursion</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NS</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>IN</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_hints'>hints</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_packet'>packet</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_ans'>ans</span> <span class='op'>=</span> <span class='id identifier rubyid_packet'>packet</span><span class='period'>.</span><span class='id identifier rubyid_answer'>answer</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_ans'>ans</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_rr'>rr</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^\.?$</span><span class='regexp_end'>/</span></span> <span class='kw'>and</span>
+              <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#NS-constant" title="Dnsruby::Types::NS (constant)">NS</a></span></span><span class='rparen'>)</span>
+          <span class='comment'>#  Found root authority
+</span>          <span class='id identifier rubyid_server'>server</span> <span class='op'>=</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_nsdname'>nsdname</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+          <span class='id identifier rubyid_server'>server</span><span class='period'>.</span><span class='id identifier rubyid_sub!'>sub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+          <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; FOUND HINT: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_server'>server</span><span class='embexpr_end'>}</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+          <span class='id identifier rubyid_hints'>hints</span><span class='lbracket'>[</span><span class='id identifier rubyid_server'>server</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Recursor/AddressCache.html" title="Dnsruby::Recursor::AddressCache (class)">AddressCache</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Recursor/AddressCache.html#initialize-instance_method" title="Dnsruby::Recursor::AddressCache#initialize (method)">new</a></span></span>
+        <span class='kw'>end</span>
+      <span class='kw'>end</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_packet'>packet</span><span class='period'>.</span><span class='id identifier rubyid_additional'>additional</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span> <span class='op'>||</span>
+             <span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_packet'>packet</span><span class='period'>.</span><span class='id identifier rubyid_additional'>additional</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>==</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_packet'>packet</span><span class='period'>.</span><span class='id identifier rubyid_additional'>additional</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>OPT</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
+        <span class='comment'>#  Some resolvers (e.g. 8.8.8.8) do not send an additional section -
+</span>        <span class='comment'>#  need to make explicit queries for these :(
+</span>        <span class='comment'>#  Probably best to limit the number of outstanding queries - extremely bursty behaviour otherwise
+</span>        <span class='comment'>#  What happens if we select only name
+</span>        <span class='id identifier rubyid_q'>q</span> <span class='op'>=</span> <span class='const'>Queue</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+        <span class='id identifier rubyid_hints'>hints</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_server'>server</span><span class='op'>|</span>
+          <span class='comment'>#  Query for the server address and add it to hints.
+</span>          <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>A</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>AAAA</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_type'>type</span><span class='op'>|</span>
+            <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Message.html#initialize-instance_method" title="Dnsruby::Message#initialize (method)">new</a></span></span>
+            <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_do_caching'>do_caching</span> <span class='op'>=</span> <span class='ivar'>@do_caching</span>
+            <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_rd'>rd</span> <span class='op'>=</span> <span class='kw'>false</span>
+            <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_do_validation'>do_validation</span> <span class='op'>=</span> <span class='kw'>false</span>
+            <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_add_question'>add_question</span><span class='lparen'>(</span><span class='id identifier rubyid_server'>server</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>IN</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+            <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@dnssec</span><span class='rparen'>)</span>
+              <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_cd'>cd</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='comment'># We do our own validation by default
+</span>            <span class='kw'>end</span>
+            <span class='id identifier rubyid_resolver'>resolver</span><span class='period'>.</span><span class='id identifier rubyid_send_async'>send_async</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_q'>q</span><span class='rparen'>)</span>
+          <span class='rbrace'>}</span>
+        <span class='rbrace'>}</span>
+        <span class='lparen'>(</span><span class='id identifier rubyid_hints'>hints</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>*</span> <span class='int'>2</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='lbrace'>{</span>
+          <span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_error'>error</span> <span class='op'>=</span> <span class='id identifier rubyid_q'>q</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
+          <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_answer'>answer</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_rr'>rr</span><span class='op'>|</span>
+              <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; NS address: </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='op'>+</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+              <span class='id identifier rubyid_add_to_hints'>add_to_hints</span><span class='lparen'>(</span><span class='id identifier rubyid_hints'>hints</span><span class='comma'>,</span> <span class='id identifier rubyid_rr'>rr</span><span class='rparen'>)</span>
+            <span class='rbrace'>}</span>
+          <span class='kw'>end</span>
+        <span class='rbrace'>}</span>
+      <span class='kw'>else</span>
+        <span class='id identifier rubyid_packet'>packet</span><span class='period'>.</span><span class='id identifier rubyid_additional'>additional</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_rr'>rr</span><span class='op'>|</span>
+          <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; ADDITIONAL: </span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='op'>+</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+          <span class='id identifier rubyid_add_to_hints'>add_to_hints</span><span class='lparen'>(</span><span class='id identifier rubyid_hints'>hints</span><span class='comma'>,</span> <span class='id identifier rubyid_rr'>rr</span><span class='rparen'>)</span>
+
+        <span class='kw'>end</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='comment'>#                       foreach my $server (keys %hints) {
+</span>    <span class='id identifier rubyid_hints'>hints</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_server'>server</span><span class='op'>|</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_hints'>hints</span><span class='lbracket'>[</span><span class='id identifier rubyid_server'>server</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_hints'>hints</span><span class='lbracket'>[</span><span class='id identifier rubyid_server'>server</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span>
+        <span class='comment'>#  Wipe the servers without lookups
+</span>        <span class='id identifier rubyid_hints'>hints</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_server'>server</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='cvar'>@@hints</span> <span class='op'>=</span> <span class='id identifier rubyid_hints'>hints</span>
+  <span class='kw'>else</span>
+    <span class='cvar'>@@hints</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='cvar'>@@hints</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; USING THE FOLLOWING HINT IPS:\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='cvar'>@@hints</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ips'>ips</span><span class='op'>|</span>
+      <span class='id identifier rubyid_ips'>ips</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_server'>server</span><span class='op'>|</span>
+        <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;;  </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_server'>server</span><span class='embexpr_end'>}</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="ResolvError.html" title="Dnsruby::ResolvError (class)">ResolvError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Server [</span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='lparen'>(</span><span class='cvar'>@@nameservers</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='op'>+</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.] did not give answers</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'>#  Disable recursion flag.
+</span>  <span class='id identifier rubyid_resolver'>resolver</span><span class='period'>.</span><span class='id identifier rubyid_recurse'>recurse</span><span class='op'>=</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span>
+  <span class='comment'>#       end
+</span>
+  <span class='comment'>#   return $self-&gt;nameservers( map { @{ $_ } } values %{ $self-&gt;{&#39;hints&#39;} } );
+</span>  <span class='kw'>if</span> <span class='lparen'>(</span><span class='const'>Array</span> <span class='op'>===</span> <span class='cvar'>@@hints</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_temp'>temp</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='cvar'>@@hints</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_hint'>hint</span><span class='op'>|</span>
+      <span class='id identifier rubyid_temp'>temp</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_hint'>hint</span><span class='rparen'>)</span>
+    <span class='rbrace'>}</span>
+    <span class='cvar'>@@hints</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_count'>count</span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_temp'>temp</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_hint'>hint</span><span class='op'>|</span>
+      <span class='id identifier rubyid_print'>print</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Adding hint : </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_temp'>temp</span><span class='lbracket'>[</span><span class='id identifier rubyid_count'>count</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span>
+      <span class='cvar'>@@hints</span><span class='lbracket'>[</span><span class='id identifier rubyid_count'>count</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_temp'>temp</span><span class='lbracket'>[</span><span class='id identifier rubyid_count'>count</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_count'>count</span> <span class='op'>+=</span> <span class='int'>1</span>
+    <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='const'>String</span> <span class='op'>===</span> <span class='cvar'>@@hints</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_temp'>temp</span> <span class='op'>=</span> <span class='cvar'>@@hints</span>
+    <span class='cvar'>@@hints</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='cvar'>@@hints</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_temp'>temp</span>
+  <span class='kw'>end</span>
+  <span class='comment'># @@nameservers = @@hints.values
+</span>  <span class='cvar'>@@nameservers</span><span class='op'>=</span><span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='cvar'>@@hints</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
+    <span class='cvar'>@@nameservers</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
+  <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='cvar'>@@nameservers</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="_dorecursion-instance_method">
+  
+    #<strong>_dorecursion</strong>(name, type, klass, known_zone, known_authorities, depth, no_validation)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567
+568
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618
+619
+620
+621
+622
+623
+624
+625
+626
+627
+628
+629
+630
+631
+632
+633
+634
+635
+636
+637
+638
+639
+640
+641
+642
+643
+644
+645
+646
+647
+648
+649
+650
+651
+652
+653
+654
+655
+656
+657
+658
+659
+660
+661
+662
+663
+664
+665
+666
+667
+668
+669
+670
+671
+672
+673
+674
+675
+676
+677
+678
+679
+680
+681
+682
+683
+684
+685
+686
+687
+688
+689
+690
+691
+692
+693
+694
+695
+696
+697
+698
+699
+700
+701
+702
+703
+704
+705
+706
+707
+708
+709
+710
+711
+712
+713
+714
+715
+716
+717
+718
+719
+720
+721
+722
+723
+724
+725
+726
+727
+728
+729
+730
+731
+732
+733
+734
+735
+736
+737
+738
+739
+740
+741
+742
+743
+744
+745
+746</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/recursor.rb', line 495</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid__dorecursion'>_dorecursion</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_klass'>klass</span><span class='comma'>,</span> <span class='id identifier rubyid_known_zone'>known_zone</span><span class='comma'>,</span> <span class='id identifier rubyid_known_authorities'>known_authorities</span><span class='comma'>,</span> <span class='id identifier rubyid_depth'>depth</span><span class='comma'>,</span> <span class='id identifier rubyid_no_validation'>no_validation</span><span class='rparen'>)</span> <span class='comment'># :nodoc:
+</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span> <span class='id identifier rubyid_depth'>depth</span> <span class='op'>&gt;</span> <span class='int'>255</span> <span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; _dorecursion() Recursion too deep, aborting...\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='ivar'>@errorstring</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Recursion too deep, aborted</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>return</span> <span class='kw'>nil</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_known_zone'>known_zone</span><span class='period'>.</span><span class='id identifier rubyid_sub!'>sub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.*$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_ns'>ns</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='comment'># Array of AddressCaches (was array of array of addresses)
+</span>  <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span><span class='lbrace'>{</span>
+    <span class='comment'>#  Get IPs from authorities
+</span>    <span class='id identifier rubyid_known_authorities'>known_authorities</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ns_rec'>ns_rec</span><span class='op'>|</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_known_authorities'>known_authorities</span><span class='lbracket'>[</span><span class='id identifier rubyid_ns_rec'>ns_rec</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='kw'>nil</span>  <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_known_authorities'>known_authorities</span><span class='lbracket'>[</span><span class='id identifier rubyid_ns_rec'>ns_rec</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='rparen'>)</span>
+        <span class='cvar'>@@authority_cache</span><span class='lbracket'>[</span><span class='id identifier rubyid_ns_rec'>ns_rec</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_known_authorities'>known_authorities</span><span class='lbracket'>[</span><span class='id identifier rubyid_ns_rec'>ns_rec</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_ns'>ns</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='cvar'>@@authority_cache</span><span class='lbracket'>[</span><span class='id identifier rubyid_ns_rec'>ns_rec</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='cvar'>@@authority_cache</span><span class='lbracket'>[</span><span class='id identifier rubyid_ns_rec'>ns_rec</span><span class='rbracket'>]</span><span class='op'>!=</span><span class='kw'>nil</span> <span class='op'>&amp;&amp;</span> <span class='cvar'>@@authority_cache</span><span class='lbracket'>[</span><span class='id identifier rubyid_ns_rec'>ns_rec</span><span class='rbracket'>]</span><span class='op'>!=</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_known_authorities'>known_authorities</span><span class='lbracket'>[</span><span class='id identifier rubyid_ns_rec'>ns_rec</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='cvar'>@@authority_cache</span><span class='lbracket'>[</span><span class='id identifier rubyid_ns_rec'>ns_rec</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_ns'>ns</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='cvar'>@@authority_cache</span><span class='lbracket'>[</span><span class='id identifier rubyid_ns_rec'>ns_rec</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_ns'>ns</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_found_auth'>found_auth</span> <span class='op'>=</span> <span class='int'>0</span>
+      <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; _dorecursion() Failed to extract nameserver IPs:</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='id identifier rubyid_known_authorities'>known_authorities</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span> <span class='op'>+</span> <span class='cvar'>@@authority_cache</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_known_authorities'>known_authorities</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ns_rec'>ns_rec</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_known_authorities'>known_authorities</span><span class='lbracket'>[</span><span class='id identifier rubyid_ns_rec'>ns_rec</span><span class='rbracket'>]</span><span class='op'>==</span><span class='kw'>nil</span> <span class='op'>||</span> <span class='id identifier rubyid_known_authorities'>known_authorities</span><span class='lbracket'>[</span><span class='id identifier rubyid_ns_rec'>ns_rec</span><span class='rbracket'>]</span><span class='op'>==</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+          <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; _dorecursion() Manual lookup for authority [</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_ns_rec'>ns_rec</span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+          <span class='id identifier rubyid_auth_packet'>auth_packet</span><span class='op'>=</span><span class='kw'>nil</span>
+          <span class='id identifier rubyid_ans'>ans</span><span class='op'>=</span><span class='lbracket'>[</span><span class='rbracket'>]</span>
+
+          <span class='comment'>#  Don&#39;t query for V6 if its not there.
+</span>          <span class='comment'>#  Do this in parallel
+</span>          <span class='id identifier rubyid_ip_mutex'>ip_mutex</span> <span class='op'>=</span> <span class='const'>Mutex</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+          <span class='id identifier rubyid_ip6_thread'>ip6_thread</span> <span class='op'>=</span> <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span> <span class='lbrace'>{</span>
+            <span class='kw'>if</span> <span class='lparen'>(</span> <span class='ivar'>@ipv6_ok</span><span class='rparen'>)</span>
+              <span class='id identifier rubyid_auth_packet'>auth_packet</span> <span class='op'>=</span> <span class='id identifier rubyid__dorecursion'>_dorecursion</span><span class='lparen'>(</span><span class='id identifier rubyid_ns_rec'>ns_rec</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>AAAA</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_klass'>klass</span><span class='comma'>,</span>  <span class='comment'># packet
+</span>                <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>               <span class='comment'># known_zone
+</span>                <span class='cvar'>@@hints</span><span class='comma'>,</span>  <span class='comment'># known_authorities
+</span>                <span class='id identifier rubyid_depth'>depth</span><span class='op'>+</span><span class='int'>1</span><span class='rparen'>)</span><span class='semicolon'>;</span>         <span class='comment'># depth
+</span>              <span class='id identifier rubyid_ip_mutex'>ip_mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
+                <span class='id identifier rubyid_ans'>ans</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_auth_packet'>auth_packet</span><span class='period'>.</span><span class='id identifier rubyid_answer'>answer</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_auth_packet'>auth_packet</span>
+              <span class='rbrace'>}</span>
+            <span class='kw'>end</span>
+          <span class='rbrace'>}</span>
+
+          <span class='id identifier rubyid_ip4_thread'>ip4_thread</span> <span class='op'>=</span> <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span> <span class='lbrace'>{</span>
+            <span class='id identifier rubyid_auth_packet'>auth_packet</span> <span class='op'>=</span> <span class='id identifier rubyid__dorecursion'>_dorecursion</span><span class='lparen'>(</span><span class='id identifier rubyid_ns_rec'>ns_rec</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>A</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='id identifier rubyid_klass'>klass</span><span class='comma'>,</span>  <span class='comment'># packet
+</span>              <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>               <span class='comment'># known_zone
+</span>              <span class='cvar'>@@hints</span><span class='comma'>,</span>  <span class='comment'># known_authorities
+</span>              <span class='id identifier rubyid_depth'>depth</span><span class='op'>+</span><span class='int'>1</span><span class='rparen'>)</span><span class='semicolon'>;</span>         <span class='comment'># depth
+</span>
+            <span class='id identifier rubyid_ip_mutex'>ip_mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
+              <span class='id identifier rubyid_ans'>ans</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_auth_packet'>auth_packet</span><span class='period'>.</span><span class='id identifier rubyid_answer'>answer</span> <span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_auth_packet'>auth_packet</span>
+            <span class='rbrace'>}</span>
+          <span class='rbrace'>}</span>
+          <span class='id identifier rubyid_ip6_thread'>ip6_thread</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span>
+          <span class='id identifier rubyid_ip4_thread'>ip4_thread</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span>
+
+          <span class='kw'>if</span> <span class='lparen'>(</span> <span class='id identifier rubyid_ans'>ans</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='rparen'>)</span>
+            <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; _dorecursion() Answers found for [</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_ns_rec'>ns_rec</span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+            <span class='comment'>#           foreach my $rr (@ans) {
+</span>            <span class='id identifier rubyid_ans'>ans</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_rr_arr'>rr_arr</span><span class='op'>|</span>
+              <span class='id identifier rubyid_rr_arr'>rr_arr</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_rr'>rr</span><span class='op'>|</span>
+                <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; RR:</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+                <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#CNAME-constant" title="Dnsruby::Types::CNAME (constant)">CNAME</a></span></span><span class='rparen'>)</span>
+                  <span class='comment'>#  Follow CNAME
+</span>                  <span class='id identifier rubyid_server'>server</span> <span class='op'>=</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+                  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_server'>server</span><span class='rparen'>)</span>
+                    <span class='id identifier rubyid_server'>server</span><span class='period'>.</span><span class='id identifier rubyid_sub!'>sub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.*$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+                    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_server'>server</span> <span class='op'>==</span> <span class='id identifier rubyid_ns_rec'>ns_rec</span><span class='rparen'>)</span>
+                      <span class='id identifier rubyid_cname'>cname</span> <span class='op'>=</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_cname'>cname</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+                      <span class='id identifier rubyid_cname'>cname</span><span class='period'>.</span><span class='id identifier rubyid_sub!'>sub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.*$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+                      <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; _dorecursion() Following CNAME ns [</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_ns_rec'>ns_rec</span><span class='embexpr_end'>}</span><span class='tstring_content'>] -&gt; [</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_cname'>cname</span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+                      <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='lparen'>(</span><span class='id identifier rubyid_known_authorities'>known_authorities</span><span class='lbracket'>[</span><span class='id identifier rubyid_cname'>cname</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='rparen'>)</span>
+                        <span class='id identifier rubyid_known_authorities'>known_authorities</span><span class='lbracket'>[</span><span class='id identifier rubyid_cname'>cname</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Recursor/AddressCache.html" title="Dnsruby::Recursor::AddressCache (class)">AddressCache</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Recursor/AddressCache.html#initialize-instance_method" title="Dnsruby::Recursor::AddressCache#initialize (method)">new</a></span></span>
+                      <span class='kw'>end</span>
+                      <span class='id identifier rubyid_known_authorities'>known_authorities</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_ns_rec'>ns_rec</span><span class='rparen'>)</span>
+                      <span class='kw'>next</span>
+                    <span class='kw'>end</span>
+                  <span class='kw'>end</span>
+                <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#A-constant" title="Dnsruby::Types::A (constant)">A</a></span></span> <span class='op'>||</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#AAAA-constant" title="Dnsruby::Types::AAAA (constant)">AAAA</a></span></span> <span class='rparen'>)</span>
+                  <span class='id identifier rubyid_server'>server</span> <span class='op'>=</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+                  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_server'>server</span><span class='rparen'>)</span>
+                    <span class='id identifier rubyid_server'>server</span><span class='period'>.</span><span class='id identifier rubyid_sub!'>sub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.*$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+                    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_known_authorities'>known_authorities</span><span class='lbracket'>[</span><span class='id identifier rubyid_server'>server</span><span class='rbracket'>]</span><span class='op'>!=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+                      <span class='id identifier rubyid_ip'>ip</span> <span class='op'>=</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_address'>address</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+                      <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; _dorecursion() Found ns: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_server'>server</span><span class='embexpr_end'>}</span><span class='tstring_content'> IN A </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_ip'>ip</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+                      <span class='cvar'>@@authority_cache</span><span class='lbracket'>[</span><span class='id identifier rubyid_server'>server</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_known_authorities'>known_authorities</span><span class='lbracket'>[</span><span class='id identifier rubyid_server'>server</span><span class='rbracket'>]</span>
+                      <span class='cvar'>@@authority_cache</span><span class='lbracket'>[</span><span class='id identifier rubyid_ns_rec'>ns_rec</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_ip'>ip</span><span class='comma'>,</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_ttl'>ttl</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+                      <span class='id identifier rubyid_found_auth'>found_auth</span><span class='op'>+=</span><span class='int'>1</span>
+                      <span class='kw'>next</span>
+                    <span class='kw'>end</span>
+                  <span class='kw'>end</span>
+                <span class='kw'>end</span>
+                <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; _dorecursion() Ignoring useless answer: </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+              <span class='kw'>end</span>
+            <span class='kw'>end</span>
+          <span class='kw'>else</span>
+            <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; _dorecursion() Could not find A records for [</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_ns_rec'>ns_rec</span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+          <span class='kw'>end</span>
+        <span class='kw'>end</span>
+      <span class='kw'>end</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_found_auth'>found_auth</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rparen'>)</span>
+        <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; _dorecursion() Found </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_found_auth'>found_auth</span><span class='embexpr_end'>}</span><span class='tstring_content'> new NS authorities...</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='id identifier rubyid__dorecursion'>_dorecursion</span><span class='lparen'>(</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_klass'>klass</span><span class='comma'>,</span> <span class='id identifier rubyid_known_zone'>known_zone</span><span class='comma'>,</span> <span class='id identifier rubyid_known_authorities'>known_authorities</span><span class='comma'>,</span> <span class='id identifier rubyid_depth'>depth</span><span class='op'>+</span><span class='int'>1</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+      <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; _dorecursion() No authority information could be obtained.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='kw'>return</span> <span class='kw'>nil</span>
+    <span class='kw'>end</span>
+  <span class='rbrace'>}</span>
+
+  <span class='comment'>#  Cut the deck of IPs in a random place.
+</span>  <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; _dorecursion() cutting deck of (</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_ns'>ns</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>) authorities...</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_splitpos'>splitpos</span> <span class='op'>=</span> <span class='id identifier rubyid_rand'>rand</span><span class='lparen'>(</span><span class='id identifier rubyid_ns'>ns</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_start'>start</span> <span class='op'>=</span> <span class='id identifier rubyid_ns'>ns</span><span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_splitpos'>splitpos</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_endarr'>endarr</span> <span class='op'>=</span> <span class='id identifier rubyid_ns'>ns</span><span class='lbracket'>[</span><span class='id identifier rubyid_splitpos'>splitpos</span><span class='comma'>,</span> <span class='id identifier rubyid_ns'>ns</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>-</span> <span class='id identifier rubyid_splitpos'>splitpos</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_ns'>ns</span> <span class='op'>=</span> <span class='id identifier rubyid_endarr'>endarr</span> <span class='op'>+</span> <span class='id identifier rubyid_start'>start</span>
+
+  <span class='id identifier rubyid_nameservers'>nameservers</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_ns'>ns</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_nss'>nss</span><span class='op'>|</span>
+    <span class='id identifier rubyid_nss'>nss</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_n'>n</span><span class='op'>|</span>
+      <span class='id identifier rubyid_nameservers'>nameservers</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span>
+    <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_resolver'>resolver</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Resolver.html" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Resolver.html#initialize-instance_method" title="Dnsruby::Resolver#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='symbol'>:nameserver</span><span class='op'>=&gt;</span><span class='id identifier rubyid_nameservers'>nameservers</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_resolver'>resolver</span><span class='period'>.</span><span class='id identifier rubyid_dnssec'>dnssec</span> <span class='op'>=</span> <span class='ivar'>@dnssec</span>
+  <span class='id identifier rubyid_servers'>servers</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_resolver'>resolver</span><span class='period'>.</span><span class='id identifier rubyid_single_resolvers'>single_resolvers</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_s'>s</span><span class='op'>|</span>
+    <span class='id identifier rubyid_servers'>servers</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_server'>server</span><span class='rparen'>)</span>
+  <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_resolver'>resolver</span><span class='period'>.</span><span class='id identifier rubyid_retry_delay'>retry_delay</span> <span class='op'>=</span> <span class='id identifier rubyid_nameservers'>nameservers</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
+  <span class='kw'>begin</span>
+    <span class='comment'>#  Should construct packet ourselves and clear RD bit
+</span>    <span class='id identifier rubyid_query'>query</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Message.html#initialize-instance_method" title="Dnsruby::Message#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_klass'>klass</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_query'>query</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_rd'>rd</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='id identifier rubyid_query'>query</span><span class='period'>.</span><span class='id identifier rubyid_do_validation'>do_validation</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='id identifier rubyid_query'>query</span><span class='period'>.</span><span class='id identifier rubyid_do_caching'>do_caching</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='id identifier rubyid_query'>query</span><span class='period'>.</span><span class='id identifier rubyid_do_validation'>do_validation</span> <span class='op'>=</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id identifier rubyid_no_validation'>no_validation</span>
+    <span class='comment'>#             print &quot;Sending msg from resolver, dnssec = #{resolver.dnssec}, do_validation = #{query.do_validation}\n&quot;
+</span>    <span class='id identifier rubyid_packet'>packet</span> <span class='op'>=</span> <span class='id identifier rubyid_resolver'>resolver</span><span class='period'>.</span><span class='id identifier rubyid_send_message'>send_message</span><span class='lparen'>(</span><span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>
+    <span class='comment'>#  @TODO@ Now prune unrelated RRSets (RFC 5452 section 6)
+</span>    <span class='id identifier rubyid_prune_rrsets_to_rfc5452'>prune_rrsets_to_rfc5452</span><span class='lparen'>(</span><span class='id identifier rubyid_packet'>packet</span><span class='comma'>,</span> <span class='id identifier rubyid_known_zone'>known_zone</span><span class='rparen'>)</span>
+  <span class='kw'>rescue</span> <span class='const'><span class='object_link'><a href="ResolvTimeout.html" title="Dnsruby::ResolvTimeout (class)">ResolvTimeout</a></span></span><span class='comma'>,</span> <span class='const'>IOError</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+    <span class='comment'>#             TheLog.debug(&quot;;; nameserver #{levelns.to_s} didn&#39;t respond&quot;)
+</span>    <span class='comment'>#             next
+</span>    <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>No response!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>nil</span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_packet'>packet</span><span class='rparen'>)</span> <span class='comment'># @TODO@ Check that the packet *is* actually authoritative!!
+</span>    <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@callback</span><span class='rparen'>)</span>
+      <span class='ivar'>@callback</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_packet'>packet</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_of'>of</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; _dorecursion() Response received from [</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='ivar'>@answerfrom</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_packet'>packet</span><span class='period'>.</span><span class='id identifier rubyid_rcode'>rcode</span>
+    <span class='id identifier rubyid_authority'>authority</span> <span class='op'>=</span> <span class='id identifier rubyid_packet'>packet</span><span class='period'>.</span><span class='id identifier rubyid_authority'>authority</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NXDOMAIN</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+        <span class='comment'>#  I guess NXDOMAIN is the best we&#39;ll ever get
+</span>        <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; _dorecursion() returning NXDOMAIN</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='id identifier rubyid_packet'>packet</span>
+      <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='id identifier rubyid_packet'>packet</span><span class='period'>.</span><span class='id identifier rubyid_answer'>answer</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rparen'>)</span>
+        <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; _dorecursion() Answers were found.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='id identifier rubyid_packet'>packet</span>
+      <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='id identifier rubyid_packet'>packet</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_aa'>aa</span><span class='rparen'>)</span>
+        <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; _dorecursion() Authoritative answer found</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='id identifier rubyid_packet'>packet</span>
+      <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='id identifier rubyid_authority'>authority</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_auth'>auth</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+        <span class='comment'># 	 foreach my $rr (@authority) {
+</span>        <span class='id identifier rubyid_authority'>authority</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_rr'>rr</span><span class='op'>|</span>
+          <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(NS|SOA)$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_server'>server</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#NS-constant" title="Dnsruby::Types::NS (constant)">NS</a></span></span> <span class='op'>?</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_nsdname'>nsdname</span> <span class='op'>:</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_mname'>mname</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+            <span class='id identifier rubyid_server'>server</span><span class='period'>.</span><span class='id identifier rubyid_sub!'>sub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.*$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_of'>of</span> <span class='op'>=</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+            <span class='id identifier rubyid_of'>of</span><span class='period'>.</span><span class='id identifier rubyid_sub!'>sub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.*$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+            <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; _dorecursion() Received authority [</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_of'>of</span><span class='embexpr_end'>}</span><span class='tstring_content'>] [</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>] [</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_server'>server</span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+            <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_of'>of</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&lt;=</span> <span class='id identifier rubyid_known_zone'>known_zone</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span>
+              <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; _dorecursion() Deadbeat name server did not provide new information.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+              <span class='kw'>next</span>
+            <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='id identifier rubyid_of'>of</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_known_zone'>known_zone</span><span class='embexpr_end'>}</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
+              <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; _dorecursion() FOUND closer authority for [</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_of'>of</span><span class='embexpr_end'>}</span><span class='tstring_content'>] at [</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_server'>server</span><span class='embexpr_end'>}</span><span class='tstring_content'>].</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+              <span class='id identifier rubyid_auth'>auth</span><span class='lbracket'>[</span><span class='id identifier rubyid_server'>server</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="Recursor/AddressCache.html" title="Dnsruby::Recursor::AddressCache (class)">AddressCache</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Recursor/AddressCache.html#initialize-instance_method" title="Dnsruby::Recursor::AddressCache#initialize (method)">new</a></span></span> <span class='comment'>#[] @TODO@ If there is no additional record for this, then we want to use the authority!
+</span>              <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>NS</span><span class='rparen'>)</span>
+                  <span class='kw'>if</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_packet'>packet</span><span class='period'>.</span><span class='id identifier rubyid_additional'>additional</span><span class='period'>.</span><span class='id identifier rubyid_rrset'>rrset</span><span class='lparen'>(</span><span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_nsdname'>nsdname</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#A-constant" title="Dnsruby::Types::A (constant)">A</a></span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+                        <span class='lparen'>(</span><span class='id identifier rubyid_packet'>packet</span><span class='period'>.</span><span class='id identifier rubyid_additional'>additional</span><span class='period'>.</span><span class='id identifier rubyid_rrset'>rrset</span><span class='lparen'>(</span><span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_nsdname'>nsdname</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#AAAA-constant" title="Dnsruby::Types::AAAA (constant)">AAAA</a></span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span><span class='rparen'>)</span>
+                    <span class='id identifier rubyid_auth'>auth</span><span class='lbracket'>[</span><span class='id identifier rubyid_server'>server</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_nsdname'>nsdname</span><span class='comma'>,</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_ttl'>ttl</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+                  <span class='kw'>end</span>
+              <span class='kw'>end</span>
+            <span class='kw'>else</span>
+              <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; _dorecursion() Confused name server [</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='ivar'>@answerfrom</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>] thinks [</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_of'>of</span><span class='embexpr_end'>}</span><span class='tstring_content'>] is closer than [</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_known_zone'>known_zone</span><span class='embexpr_end'>}</span><span class='tstring_content'>]?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+              <span class='kw'>return</span> <span class='kw'>nil</span>
+            <span class='kw'>end</span>
+          <span class='kw'>else</span>
+            <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; _dorecursion() Ignoring NON NS entry found in authority section: </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='rparen'>)</span>
+          <span class='kw'>end</span>
+        <span class='kw'>end</span>
+        <span class='comment'># 	 foreach my $rr ($packet-&gt;additional)
+</span>        <span class='id identifier rubyid_packet'>packet</span><span class='period'>.</span><span class='id identifier rubyid_additional'>additional</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_rr'>rr</span><span class='op'>|</span>
+          <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#CNAME-constant" title="Dnsruby::Types::CNAME (constant)">CNAME</a></span></span><span class='rparen'>)</span>
+            <span class='comment'>#  Store this CNAME into %auth too
+</span>            <span class='id identifier rubyid_server'>server</span> <span class='op'>=</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+            <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_server'>server</span><span class='rparen'>)</span>
+              <span class='id identifier rubyid_server'>server</span><span class='period'>.</span><span class='id identifier rubyid_sub!'>sub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.*$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+              <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_auth'>auth</span><span class='lbracket'>[</span><span class='id identifier rubyid_server'>server</span><span class='rbracket'>]</span><span class='op'>!=</span><span class='kw'>nil</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_auth'>auth</span><span class='lbracket'>[</span><span class='id identifier rubyid_server'>server</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rparen'>)</span>
+                <span class='id identifier rubyid_cname'>cname</span> <span class='op'>=</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_cname'>cname</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+                <span class='id identifier rubyid_cname'>cname</span><span class='period'>.</span><span class='id identifier rubyid_sub!'>sub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.*$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+                <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; _dorecursion() FOUND CNAME authority: </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
+                <span class='id identifier rubyid_auth'>auth</span><span class='lbracket'>[</span><span class='id identifier rubyid_cname'>cname</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="Recursor/AddressCache.html" title="Dnsruby::Recursor::AddressCache (class)">AddressCache</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Recursor/AddressCache.html#initialize-instance_method" title="Dnsruby::Recursor::AddressCache#initialize (method)">new</a></span></span> <span class='comment'># []
+</span>                <span class='id identifier rubyid_auth'>auth</span><span class='lbracket'>[</span><span class='id identifier rubyid_server'>server</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_auth'>auth</span><span class='lbracket'>[</span><span class='id identifier rubyid_cname'>cname</span><span class='rbracket'>]</span>
+                <span class='kw'>next</span>
+              <span class='kw'>end</span>
+
+            <span class='kw'>end</span>
+          <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#A-constant" title="Dnsruby::Types::A (constant)">A</a></span></span> <span class='op'>||</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#AAAA-constant" title="Dnsruby::Types::AAAA (constant)">AAAA</a></span></span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_server'>server</span> <span class='op'>=</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+            <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_server'>server</span><span class='rparen'>)</span>
+              <span class='id identifier rubyid_server'>server</span><span class='period'>.</span><span class='id identifier rubyid_sub!'>sub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\.*$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+              <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_auth'>auth</span><span class='lbracket'>[</span><span class='id identifier rubyid_server'>server</span><span class='rbracket'>]</span><span class='op'>!=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+                <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#A-constant" title="Dnsruby::Types::A (constant)">A</a></span></span><span class='rparen'>)</span>
+                  <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; _dorecursion() STORING: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_server'>server</span><span class='embexpr_end'>}</span><span class='tstring_content'> IN A    </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_address'>address</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span>
+                <span class='kw'>end</span>
+                <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#AAAA-constant" title="Dnsruby::Types::AAAA (constant)">AAAA</a></span></span><span class='rparen'>)</span>
+                  <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; _dorecursion() STORING: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_server'>server</span><span class='embexpr_end'>}</span><span class='tstring_content'> IN AAAA </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_address'>address</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span>
+                <span class='kw'>end</span>
+                <span class='id identifier rubyid_auth'>auth</span><span class='lbracket'>[</span><span class='id identifier rubyid_server'>server</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_address'>address</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_ttl'>ttl</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+                <span class='kw'>next</span>
+              <span class='kw'>end</span>
+            <span class='kw'>end</span>
+          <span class='kw'>end</span>
+          <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;; _dorecursion() Ignoring useless: </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+        <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_of'>of</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_known_zone'>known_zone</span><span class='embexpr_end'>}</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
+          <span class='comment'>#                   print &quot;Adding #{of} with :\n#{auth}\nto zones_cache\n&quot;
+</span>          <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span><span class='lbrace'>{</span>
+            <span class='cvar'>@@zones_cache</span><span class='lbracket'>[</span><span class='id identifier rubyid_of'>of</span><span class='rbracket'>]</span><span class='op'>=</span><span class='id identifier rubyid_auth'>auth</span>
+          <span class='rbrace'>}</span>
+          <span class='kw'>return</span> <span class='id identifier rubyid__dorecursion'>_dorecursion</span><span class='lparen'>(</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_klass'>klass</span><span class='comma'>,</span> <span class='id identifier rubyid_of'>of</span><span class='comma'>,</span> <span class='id identifier rubyid_auth'>auth</span><span class='comma'>,</span> <span class='id identifier rubyid_depth'>depth</span><span class='op'>+</span><span class='int'>1</span><span class='comma'>,</span> <span class='id identifier rubyid_no_validation'>no_validation</span><span class='rparen'>)</span>
+        <span class='kw'>else</span>
+          <span class='kw'>return</span> <span class='id identifier rubyid__dorecursion'>_dorecursion</span><span class='lparen'>(</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_klass'>klass</span><span class='comma'>,</span> <span class='id identifier rubyid_known_zone'>known_zone</span><span class='comma'>,</span> <span class='id identifier rubyid_known_authorities'>known_authorities</span><span class='comma'>,</span> <span class='id identifier rubyid_depth'>depth</span><span class='op'>+</span><span class='int'>1</span><span class='comma'>,</span> <span class='id identifier rubyid_no_validation'>no_validation</span> <span class='rparen'>)</span>
+        <span class='kw'>end</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_closest_known_zone_authorities_for-instance_method">
+  
+    #<strong>get_closest_known_zone_authorities_for</strong>(name)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/recursor.rb', line 471</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_closest_known_zone_authorities_for'>get_closest_known_zone_authorities_for</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='comment'># :nodoc:
+</span>  <span class='id identifier rubyid_done'>done</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='id identifier rubyid_known_authorities'>known_authorities</span><span class='comma'>,</span> <span class='id identifier rubyid_known_zone'>known_zone</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='kw'>while</span> <span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_done'>done</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_known_zone'>known_zone</span> <span class='op'>=</span> <span class='id identifier rubyid_get_closest_known_zone_for'>get_closest_known_zone_for</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+    <span class='comment'>#         print &quot;GOT KNOWN ZONE : #{known_zone}\n&quot;
+</span>    <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
+      <span class='id identifier rubyid_known_authorities'>known_authorities</span> <span class='op'>=</span> <span class='cvar'>@@zones_cache</span><span class='lbracket'>[</span><span class='id identifier rubyid_known_zone'>known_zone</span><span class='rbracket'>]</span> <span class='comment'># &quot;.&quot;, @hints if nothing else
+</span>    <span class='rbrace'>}</span>
+    <span class='comment'>#         print &quot;Known authorities : #{known_authorities}\n&quot;
+</span>
+    <span class='comment'>#  Make sure that known_authorities still contains some authorities!
+</span>    <span class='comment'>#  If not, remove the zone from zones_cache, and start again
+</span>    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_known_authorities'>known_authorities</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_known_authorities'>known_authorities</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_done'>done</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='kw'>else</span>
+      <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span><span class='lbrace'>{</span>
+        <span class='cvar'>@@zones_cache</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_known_zone'>known_zone</span><span class='rparen'>)</span>
+      <span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_known_zone'>known_zone</span><span class='comma'>,</span> <span class='id identifier rubyid_known_authorities'>known_authorities</span> <span class='comment'># @TODO@ Need to synchronize access to these!
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_closest_known_zone_for-instance_method">
+  
+    #<strong>get_closest_known_zone_for</strong>(n)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/recursor.rb', line 435</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_closest_known_zone_for'>get_closest_known_zone_for</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='rparen'>)</span> <span class='comment'># :nodoc:
+</span>  <span class='comment'>#  Find the closest parent of name that we know
+</span>  <span class='comment'>#  e.g. for nominet.org.uk, try nominet.org.uk., org.uk., uk., .
+</span>  <span class='comment'>#  does @zones_cache contain the name we&#39;re after
+</span>  <span class='kw'>if</span> <span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Name.html" title="Dnsruby::Name (class)">Name</a></span></span> <span class='op'>===</span> <span class='id identifier rubyid_n'>n</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_n'>n</span> <span class='op'>=</span> <span class='id identifier rubyid_n'>n</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='comment'># @TODO@ This is a bit crap!
+</span>  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span> <span class='op'>==</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Name is nil</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_raise'>raise</span>  <span class='const'><span class='object_link'><a href="ResolvError.html" title="Dnsruby::ResolvError (class)">ResolvError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Nameserver invalid!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_n'>n</span><span class='period'>.</span><span class='id identifier rubyid_tr'>tr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>while</span> <span class='lparen'>(</span><span class='kw'>true</span><span class='rparen'>)</span>
+    <span class='comment'>#         print &quot;Checking for known zone : #{name}\n&quot;
+</span>    <span class='id identifier rubyid_zone'>zone</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span><span class='lbrace'>{</span>
+      <span class='id identifier rubyid_zone'>zone</span> <span class='op'>=</span> <span class='cvar'>@@zones_cache</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_zone'>zone</span> <span class='op'>!=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+        <span class='kw'>return</span> <span class='id identifier rubyid_name'>name</span>
+      <span class='kw'>end</span>
+    <span class='rbrace'>}</span>
+    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='id identifier rubyid_name'>name</span><span class='op'>==</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span>
+    <span class='comment'>#  strip the name up to the first dot
+</span>    <span class='id identifier rubyid_first_dot'>first_dot</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_first_dot'>first_dot</span> <span class='op'>==</span> <span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='op'>-</span><span class='int'>1</span><span class='rparen'>)</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span><span class='lbracket'>[</span><span class='id identifier rubyid_first_dot'>first_dot</span><span class='op'>+</span><span class='int'>1</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="prune_rrsets_to_rfc5452-instance_method">
+  
+    #<strong>prune_rrsets_to_rfc5452</strong>(packet, zone)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+748
+749
+750
+751
+752
+753
+754
+755
+756
+757
+758
+759
+760
+761
+762
+763
+764
+765
+766
+767
+768
+769
+770
+771
+772
+773
+774
+775
+776</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/recursor.rb', line 748</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_prune_rrsets_to_rfc5452'>prune_rrsets_to_rfc5452</span><span class='lparen'>(</span><span class='id identifier rubyid_packet'>packet</span><span class='comma'>,</span> <span class='id identifier rubyid_zone'>zone</span><span class='rparen'>)</span>
+  <span class='comment'>#  Now prune the response of any unrelated rrsets (RFC5452 section6)
+</span>  <span class='comment'>#  &quot;One very simple way to achieve this is to only accept data if it is
+</span>  <span class='comment'>#  part of the domain for which the query was intended.&quot;
+</span>  <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_packet'>packet</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_aa'>aa</span><span class='rparen'>)</span>
+    <span class='kw'>return</span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_packet'>packet</span><span class='period'>.</span><span class='id identifier rubyid_question'>question</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='kw'>return</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_section_rrsets'>section_rrsets</span> <span class='op'>=</span> <span class='id identifier rubyid_packet'>packet</span><span class='period'>.</span><span class='id identifier rubyid_section_rrsets'>section_rrsets</span>
+  <span class='id identifier rubyid_section_rrsets'>section_rrsets</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_section'>section</span><span class='op'>|</span>
+    <span class='id identifier rubyid_section_rrsets'>section_rrsets</span><span class='lbracket'>[</span><span class='id identifier rubyid_section'>section</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_rrset'>rrset</span><span class='op'>|</span>
+      <span class='id identifier rubyid_n'>n</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Name.html" title="Dnsruby::Name (class)">Name</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="Name.html#create-class_method" title="Dnsruby::Name.create (method)">create</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_rrset'>rrset</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_n'>n</span><span class='period'>.</span><span class='id identifier rubyid_absolute'>absolute</span> <span class='op'>=</span> <span class='kw'>true</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>==</span> <span class='id identifier rubyid_zone'>zone</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Name.html" title="Dnsruby::Name (class)">Name</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="Name.html#create-class_method" title="Dnsruby::Name.create (method)">create</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_zone'>zone</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span> <span class='op'>||</span>
+            <span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='period'>.</span><span class='id identifier rubyid_subdomain_of?'>subdomain_of?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Name.html" title="Dnsruby::Name (class)">Name</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="Name.html#create-class_method" title="Dnsruby::Name.create (method)">create</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_zone'>zone</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>||</span>
+            <span class='lparen'>(</span><span class='id identifier rubyid_rrset'>rrset</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#OPT-constant" title="Dnsruby::Types::OPT (constant)">OPT</a></span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+        <span class='comment'>#             # @TODO@ Leave in the response if it is an SOA, NSEC or RRSIGfor the parent zone
+</span>        <span class='comment'># #          elsif ((query_name.subdomain_of?rrset.name) &amp;&amp;
+</span>        <span class='comment'>#           elsif  ((rrset.type == Types.SOA) || (rrset.type == Types.NSEC) || (rrset.type == Types.NSEC3)) #)
+</span>      <span class='kw'>else</span>
+        <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Removing </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_rrset'>rrset</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>, </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_rrset'>rrset</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span><span class='embexpr_end'>}</span><span class='tstring_content'> from response from server for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_zone'>zone</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_packet'>packet</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_section'>section</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_remove_rrset'>remove_rrset</span><span class='lparen'>(</span><span class='id identifier rubyid_rrset'>rrset</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_rrset'>rrset</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='rbrace'>}</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="query-instance_method">
+  
+    #<strong>query</strong>(name, type = Types.A, klass = Classes.IN, no_validation = false)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This method is much like the normal query() method except it disables the recurse flag in the packet and explicitly performs the recursion.</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_packet'>packet</span> <span class='op'>=</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_query'>query</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>www.netscape.com.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>A</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_packet'>packet</span> <span class='op'>=</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_query'>query</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>www.netscape.com.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>A</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>IN</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span> <span class='comment'># no validation
+</span></code></pre>
+
+<p>The Recursor maintains a cache of known nameservers. DNSSEC validation is performed unless true is passed as the fourth parameter.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/recursor.rb', line 402</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_query'>query</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='op'>=</span><span class='const'>Types</span><span class='period'>.</span><span class='const'>A</span><span class='comma'>,</span> <span class='id identifier rubyid_klass'>klass</span><span class='op'>=</span><span class='const'>Classes</span><span class='period'>.</span><span class='const'>IN</span><span class='comma'>,</span> <span class='id identifier rubyid_no_validation'>no_validation</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='comment'>#  @TODO@ PROVIDE AN ASYNCHRONOUS SEND WHICH RETURNS MESSAGE WITH ERROR!!!
+</span>
+  <span class='comment'>#  Make sure the hint servers are initialized.
+</span>  <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_hints'>hints</span><span class='op'>=</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='cvar'>@@hints</span>
+  <span class='rbrace'>}</span>
+  <span class='ivar'>@resolver</span><span class='period'>.</span><span class='id identifier rubyid_recurse'>recurse</span><span class='op'>=</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span>
+  <span class='comment'>#  Make sure the authority cache is clean.
+</span>  <span class='comment'>#  It is only used to store A and AAAA records of
+</span>  <span class='comment'>#  the suposedly authoritative name servers.
+</span>  <span class='comment'>#  TTLs are respected
+</span>  <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='cvar'>@@zones_cache</span><span class='rparen'>)</span>
+      <span class='const'><span class='object_link'><a href="" title="Dnsruby::Recursor (class)">Recursor</a></span></span><span class='period'>.</span><span class='id identifier rubyid_clear_caches'><span class='object_link'><a href="#clear_caches-class_method" title="Dnsruby::Recursor.clear_caches (method)">clear_caches</a></span></span><span class='lparen'>(</span><span class='ivar'>@resolver</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='rbrace'>}</span>
+
+  <span class='comment'>#  So we have normal hashes, but the array of addresses at the end is now an AddressCache
+</span>  <span class='comment'>#  which respects the ttls of the A/AAAA records
+</span>
+  <span class='comment'>#  Now see if we already know the zone in question
+</span>  <span class='comment'>#  Otherwise, see if we know any of its parents (will know at least &quot;.&quot;)
+</span>  <span class='id identifier rubyid_known_zone'>known_zone</span><span class='comma'>,</span> <span class='id identifier rubyid_known_authorities'>known_authorities</span> <span class='op'>=</span> <span class='id identifier rubyid_get_closest_known_zone_authorities_for'>get_closest_known_zone_authorities_for</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='comment'># &quot;.&quot;, @hints if nothing else
+</span>
+  <span class='comment'>#  Seed name servers with the closest known authority
+</span>  <span class='comment'>#       ret =  _dorecursion( name, type, klass, &quot;.&quot;, @hints, 0)
+</span>  <span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span>  <span class='id identifier rubyid__dorecursion'>_dorecursion</span><span class='lparen'>(</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_klass'>klass</span><span class='comma'>,</span> <span class='id identifier rubyid_known_zone'>known_zone</span><span class='comma'>,</span> <span class='id identifier rubyid_known_authorities'>known_authorities</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_no_validation'>no_validation</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="Dnssec.html" title="Dnsruby::Dnssec (class)">Dnssec</a></span></span><span class='period'>.</span><span class='id identifier rubyid_validate'><span class='object_link'><a href="Dnssec.html#validate-class_method" title="Dnsruby::Dnssec.validate (method)">validate</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_ret'>ret</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_no_validation'>no_validation</span>
+  <span class='comment'>#       print &quot;\n\nRESPONSE:\n#{ret}\n&quot;
+</span>  <span class='kw'>return</span> <span class='id identifier rubyid_ret'>ret</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="query_no_validation_or_recursion-instance_method">
+  
+    #<strong>query_no_validation_or_recursion</strong>(name, type = Types.A, klass = Classes.IN)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+390
+391
+392</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/recursor.rb', line 390</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_query_no_validation_or_recursion'>query_no_validation_or_recursion</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='op'>=</span><span class='const'>Types</span><span class='period'>.</span><span class='const'>A</span><span class='comma'>,</span> <span class='id identifier rubyid_klass'>klass</span><span class='op'>=</span><span class='const'>Classes</span><span class='period'>.</span><span class='const'>IN</span><span class='rparen'>)</span> <span class='comment'># :nodoc: all
+</span>  <span class='kw'>return</span> <span class='id identifier rubyid_query'>query</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_klass'>klass</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="recursion_callback-instance_method">
+  
+    #<strong>recursion_callback</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+377
+378
+379</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/recursor.rb', line 377</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_recursion_callback'>recursion_callback</span>
+  <span class='kw'>return</span> <span class='ivar'>@callback</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="recursion_callback=-instance_method">
+  
+    #<strong>recursion_callback=</strong>(sub)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This method takes a code reference, which is then invoked each time a packet is received during the recursive lookup.  For example to emulate dig&#39;s C&lt;+trace&gt; function:</p>
+
+<pre class="code ruby"><code class="ruby">res.recursion_callback(Proc.new { |packet|
+    print packet.additional.inspect
+
+    print&quot;;; Received %d bytes from %s\n\n&quot;,
+        packetanswersize,
+        packet.answerfrom);
+})
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+371
+372
+373
+374
+375</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/recursor.rb', line 371</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_recursion_callback='>recursion_callback=</span><span class='lparen'>(</span><span class='id identifier rubyid_sub'>sub</span><span class='rparen'>)</span>
+  <span class='comment'>#           if (sub &amp;&amp; UNIVERSAL::isa(sub, &#39;CODE&#39;))
+</span>  <span class='ivar'>@callback</span> <span class='op'>=</span> <span class='id identifier rubyid_sub'>sub</span>
+  <span class='comment'>#           end
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr  9 10:58:10 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-3.0.0).
+</div>
+
+    </div>
+  </body>
+</html>

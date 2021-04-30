@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Dnsruby::RR::OPT
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Dnsruby::RR::OPT";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (O)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">RR</a></span></span>
+     &raquo; 
+    <span class="title">OPT</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Dnsruby::RR::OPT
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">Dnsruby::RR</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">Dnsruby::RR</a></span></li>
+          
+            <li class="next">Dnsruby::RR::OPT</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/dnsruby/resource/OPT.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Class for EDNS pseudo resource record OPT. This class is effectively internal to Dnsruby See RFC 2671, RFC 2435 Section 3</p>
+
+<pre class="code ruby"><code class="ruby">@TODO@ Extended labels RFC2671 section 3
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="OPT/Option.html" title="Dnsruby::RR::OPT::Option (class)">Option</a></span>
+    
+  
+</p>
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="ClassValue-constant" class="">ClassValue =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='kw'>nil</span></pre></dd>
+      
+        <dt id="TypeValue-constant" class="">TypeValue =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Types.html#OPT-constant" title="Dnsruby::Types::OPT (constant)">OPT</a></span></span></pre></dd>
+      
+        <dt id="DO_BIT-constant" class="">DO_BIT =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>0x8000</span></pre></dd>
+      
+        <dt id="ADDRESS_FAMILIES-constant" class="">ADDRESS_FAMILIES =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='rbracket'>]</span></pre></dd>
+      
+        <dt id="EDNS_SUBNET_OPTION-constant" class="">EDNS_SUBNET_OPTION =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>8</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+  
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">Dnsruby::RR</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RR.html#ClassInsensitiveTypes-constant" title="Dnsruby::RR::ClassInsensitiveTypes (constant)">ClassInsensitiveTypes</a></span></p>
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">Dnsruby::RR</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RR.html#klass-instance_method" title="Dnsruby::RR#klass (method)">#klass</a></span>, <span class='object_link'><a href="../RR.html#name-instance_method" title="Dnsruby::RR#name (method)">#name</a></span>, <span class='object_link'><a href="../RR.html#rdata-instance_method" title="Dnsruby::RR#rdata (method)">#rdata</a></span>, <span class='object_link'><a href="../RR.html#ttl-instance_method" title="Dnsruby::RR#ttl (method)">#ttl</a></span>, <span class='object_link'><a href="../RR.html#type-instance_method" title="Dnsruby::RR#type (method)">#type</a></span></p>
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#decode_rdata-class_method" title="decode_rdata (class method)">.<strong>decode_rdata</strong>(msg)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dnssec_ok-instance_method" title="#dnssec_ok (instance method)">#<strong>dnssec_ok</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dnssec_ok=-instance_method" title="#dnssec_ok= (instance method)">#<strong>dnssec_ok=</strong>(on)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#edns_client_subnet-instance_method" title="#edns_client_subnet (instance method)">#<strong>edns_client_subnet</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#encode_rdata-instance_method" title="#encode_rdata (instance method)">#<strong>encode_rdata</strong>(msg, canonical = false)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#flags-instance_method" title="#flags (instance method)">#<strong>flags</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#flags=-instance_method" title="#flags= (instance method)">#<strong>flags=</strong>(code)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#flags_from_ttl-instance_method" title="#flags_from_ttl (instance method)">#<strong>flags_from_ttl</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>4.6.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#from_data-instance_method" title="#from_data (instance method)">#<strong>from_data</strong>(data)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#from_string-instance_method" title="#from_string (instance method)">#<strong>from_string</strong>(input)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_client_subnet-instance_method" title="#get_client_subnet (instance method)">#<strong>get_client_subnet</strong>(opt)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_ip_addr-instance_method" title="#get_ip_addr (instance method)">#<strong>get_ip_addr</strong>(opt, family, source_netmask)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(*args)  &#x21d2; OPT </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Can be called with up to 3 arguments, none of which must be present * OPT.new() * OPT.new(size) * OPT.new(size,flags) * OPT.new(size,flags,options).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#options-instance_method" title="#options (instance method)">#<strong>options</strong>(args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#options=-instance_method" title="#options= (instance method)">#<strong>options=</strong>(options)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#payloadsize-instance_method" title="#payloadsize (instance method)">#<strong>payloadsize</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#payloadsize=-instance_method" title="#payloadsize= (instance method)">#<strong>payloadsize=</strong>(size)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#set_client_subnet-instance_method" title="#set_client_subnet (instance method)">#<strong>set_client_subnet</strong>(subnet)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#set_flags-instance_method" title="#set_flags (instance method)">#<strong>set_flags</strong>(code)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Should always be zero.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_s-instance_method" title="#to_s (instance method)">#<strong>to_s</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#version-instance_method" title="#version (instance method)">#<strong>version</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#version=-instance_method" title="#version= (instance method)">#<strong>version=</strong>(code)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#xrcode-instance_method" title="#xrcode (instance method)">#<strong>xrcode</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#xrcode=-instance_method" title="#xrcode= (instance method)">#<strong>xrcode=</strong>(c)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">Dnsruby::RR</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RR.html#<=>-instance_method" title="Dnsruby::RR#&lt;=&gt; (method)">#<=></a></span>, <span class='object_link'><a href="../RR.html#==-instance_method" title="Dnsruby::RR#== (method)">#==</a></span>, <span class='object_link'><a href="../RR.html#clone-instance_method" title="Dnsruby::RR#clone (method)">#clone</a></span>, <span class='object_link'><a href="../RR.html#create-class_method" title="Dnsruby::RR.create (method)">create</a></span>, <span class='object_link'><a href="../RR.html#eql%3F-instance_method" title="Dnsruby::RR#eql? (method)">#eql?</a></span>, <span class='object_link'><a href="../RR.html#find_class-class_method" title="Dnsruby::RR.find_class (method)">find_class</a></span>, <span class='object_link'><a href="../RR.html#from_hash-instance_method" title="Dnsruby::RR#from_hash (method)">#from_hash</a></span>, <span class='object_link'><a href="../RR.html#get_class-class_method" title="Dnsruby::RR.get_class (method)">get_class</a></span>, <span class='object_link'><a href="../RR.html#get_num-class_method" title="Dnsruby::RR.get_num (method)">get_num</a></span>, <span class='object_link'><a href="../RR.html#hash-instance_method" title="Dnsruby::RR#hash (method)">#hash</a></span>, <span class='object_link'><a href="../RR.html#implemented_rrs-class_method" title="Dnsruby::RR.implemented_rrs (method)">implemented_rrs</a></span>, <span class='object_link'><a href="../RR.html#init_defaults-instance_method" title="Dnsruby::RR#init_defaults (method)">#init_defaults</a></span>, <span class='object_link'><a href="../RR.html#new_from_data-class_method" title="Dnsruby::RR.new_from_data (method)">new_from_data</a></span>, <span class='object_link'><a href="../RR.html#new_from_hash-class_method" title="Dnsruby::RR.new_from_hash (method)">new_from_hash</a></span>, <span class='object_link'><a href="../RR.html#new_from_string-class_method" title="Dnsruby::RR.new_from_string (method)">new_from_string</a></span>, <span class='object_link'><a href="../RR.html#rdata_to_string-instance_method" title="Dnsruby::RR#rdata_to_string (method)">#rdata_to_string</a></span>, <span class='object_link'><a href="../RR.html#rdlength-instance_method" title="Dnsruby::RR#rdlength (method)">#rdlength</a></span>, <span class='object_link'><a href="../RR.html#sameRRset-instance_method" title="Dnsruby::RR#sameRRset (method)">#sameRRset</a></span></p>
+
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="" title="Dnsruby::RR::OPT (class)">OPT</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Can be called with up to 3 arguments, none of which must be present</p>
+<ul><li>
+<p>OPT.new()</p>
+</li><li>
+<p>OPT.new(size)</p>
+</li><li>
+<p>OPT.new(size,flags)</p>
+</li><li>
+<p>OPT.new(size,flags,options)</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/OPT.rb', line 39</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='ivar'>@type</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../CodeMapper.html#initialize-instance_method" title="Dnsruby::CodeMapper#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>OPT</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@ttl</span> <span class='op'>=</span> <span class='kw'>nil</span>
+
+  <span class='ivar'>@options</span><span class='op'>=</span><span class='kw'>nil</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rparen'>)</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_payloadsize'>payloadsize</span><span class='op'>=</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>1</span><span class='rparen'>)</span>
+      <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_flags'>flags</span><span class='op'>=</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>2</span><span class='rparen'>)</span>
+        <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='kw'>else</span>
+        <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='kw'>nil</span>
+      <span class='kw'>end</span>
+    <span class='kw'>else</span>
+      <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_flags'>flags</span><span class='op'>=</span><span class='int'>0</span>
+    <span class='kw'>end</span>
+  <span class='kw'>else</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_payloadsize'>payloadsize</span><span class='op'>=</span><span class='int'>0</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="decode_rdata-class_method">
+  
+    .<strong>decode_rdata</strong>(msg)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/OPT.rb', line 250</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_decode_rdata'>decode_rdata</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span><span class='comment'>#:nodoc: all
+</span>  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_has_remaining?'>has_remaining?</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='kw'>while</span> <span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_has_remaining?'>has_remaining?</span><span class='rparen'>)</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_code'>code</span>  <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_get_unpack'>get_unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>n</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_len'>len</span> <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_get_unpack'>get_unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>n</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_get_bytes'>get_bytes</span><span class='lparen'>(</span><span class='id identifier rubyid_len'>len</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="OPT/Option.html" title="Dnsruby::RR::OPT::Option (class)">Option</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="OPT/Option.html#initialize-instance_method" title="Dnsruby::RR::OPT::Option#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_code'>code</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="dnssec_ok-instance_method">
+  
+    #<strong>dnssec_ok</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+128
+129
+130</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/OPT.rb', line 128</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_dnssec_ok'>dnssec_ok</span>
+  <span class='kw'>return</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_flags'>flags</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='op'>&amp;</span> <span class='const'><span class='object_link'><a href="#DO_BIT-constant" title="Dnsruby::RR::OPT::DO_BIT (constant)">DO_BIT</a></span></span><span class='rparen'>)</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#DO_BIT-constant" title="Dnsruby::RR::OPT::DO_BIT (constant)">DO_BIT</a></span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="dnssec_ok=-instance_method">
+  
+    #<strong>dnssec_ok=</strong>(on)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+132
+133
+134
+135
+136
+137
+138</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/OPT.rb', line 132</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_dnssec_ok='>dnssec_ok=</span><span class='lparen'>(</span><span class='id identifier rubyid_on'>on</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_on'>on</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_set_flags'>set_flags</span><span class='lparen'>(</span><span class='id identifier rubyid_flags'>flags</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='op'>|</span> <span class='const'><span class='object_link'><a href="#DO_BIT-constant" title="Dnsruby::RR::OPT::DO_BIT (constant)">DO_BIT</a></span></span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_set_flags'>set_flags</span><span class='lparen'>(</span><span class='id identifier rubyid_flags'>flags</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='op'>&amp;</span> <span class='lparen'>(</span><span class='op'>~</span><span class='const'><span class='object_link'><a href="#DO_BIT-constant" title="Dnsruby::RR::OPT::DO_BIT (constant)">DO_BIT</a></span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="edns_client_subnet-instance_method">
+  
+    #<strong>edns_client_subnet</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+219
+220
+221
+222
+223</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/OPT.rb', line 219</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_edns_client_subnet'>edns_client_subnet</span>
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+  <span class='id identifier rubyid_subnet_option'>subnet_option</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_detect'>detect</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_option'>option</span><span class='op'>|</span> <span class='id identifier rubyid_option'>option</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#EDNS_SUBNET_OPTION-constant" title="Dnsruby::RR::OPT::EDNS_SUBNET_OPTION (constant)">EDNS_SUBNET_OPTION</a></span></span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_subnet_option'>subnet_option</span> <span class='op'>?</span> <span class='id identifier rubyid_get_client_subnet'>get_client_subnet</span><span class='lparen'>(</span><span class='id identifier rubyid_subnet_option'>subnet_option</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="encode_rdata-instance_method">
+  
+    #<strong>encode_rdata</strong>(msg, canonical = false)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+240
+241
+242
+243
+244
+245
+246
+247
+248</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/OPT.rb', line 240</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_encode_rdata'>encode_rdata</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_canonical'>canonical</span><span class='op'>=</span><span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@options</span><span class='rparen'>)</span>
+    <span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_opt'>opt</span><span class='op'>|</span>
+      <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_pack'>put_pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>n</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_opt'>opt</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_pack'>put_pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>n</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_opt'>opt</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_pack'>put_pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>a*</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_opt'>opt</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="flags-instance_method">
+  
+    #<strong>flags</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+116
+117
+118</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/OPT.rb', line 116</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_flags'>flags</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_flags_from_ttl'>flags_from_ttl</span><span class='lbracket'>[</span><span class='int'>2</span><span class='comma'>,</span> <span class='int'>2</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="flags=-instance_method">
+  
+    #<strong>flags=</strong>(code)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+120
+121
+122</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/OPT.rb', line 120</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_flags='>flags=</span><span class='lparen'>(</span><span class='id identifier rubyid_code'>code</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_set_flags'>set_flags</span><span class='lparen'>(</span><span class='id identifier rubyid_code'>code</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="flags_from_ttl-instance_method">
+  
+    #<strong>flags_from_ttl</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>4.6. The extended RCODE and flags (which OPT stores in the RR TTL field) are structured as follows:</p>
+
+<pre class="code ruby"><code class="ruby">              +0 (MSB)                            +1 (LSB)
+   +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+0: |         EXTENDED-RCODE        |            VERSION            |
+   +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+2: |                               Z                               |
+   +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+EXTENDED-RCODE  Forms upper 8 bits of extended 12-bit RCODE.  Note
+                that EXTENDED-RCODE value &quot;0&quot; indicates that an
+                unextended RCODE is in use (values &quot;0&quot; through &quot;15&quot;).
+
+VERSION         Indicates the implementation level of whoever sets
+                it.  Full conformance with this specification is
+                indicated by version &quot;0.&quot;
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+91
+92
+93
+94
+95
+96
+97</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/OPT.rb', line 91</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_flags_from_ttl'>flags_from_ttl</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@ttl</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='lbracket'>[</span><span class='ivar'>@ttl</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>N</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='kw'>return</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>N</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="from_data-instance_method">
+  
+    #<strong>from_data</strong>(data)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+167
+168
+169</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/OPT.rb', line 167</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_from_data'>from_data</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='ivar'>@options</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="from_string-instance_method">
+  
+    #<strong>from_string</strong>(input)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>NotImplementedError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+171
+172
+173</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/OPT.rb', line 171</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_from_string'>from_string</span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_client_subnet-instance_method">
+  
+    #<strong>get_client_subnet</strong>(opt)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/OPT.rb', line 184</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_client_subnet'>get_client_subnet</span><span class='lparen'>(</span><span class='id identifier rubyid_opt'>opt</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_family'>family</span> <span class='op'>=</span> <span class='id identifier rubyid_opt'>opt</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>C</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Unsupported(family=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_family'>family</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="#ADDRESS_FAMILIES-constant" title="Dnsruby::RR::OPT::ADDRESS_FAMILIES (constant)">ADDRESS_FAMILIES</a></span></span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_family'>family</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_source_netmask'>source_netmask</span> <span class='op'>=</span> <span class='id identifier rubyid_opt'>opt</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>C</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_scope_netmask'>scope_netmask</span> <span class='op'>=</span> <span class='id identifier rubyid_opt'>opt</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>C</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+
+  <span class='kw'>case</span> <span class='id identifier rubyid_family'>family</span>
+  <span class='kw'>when</span> <span class='const'>IPV4_ADDRESS_FAMILY</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>IPAddr</span><span class='op'>::</span><span class='id identifier rubyid_ntop'>ntop</span><span class='lparen'>(</span><span class='id identifier rubyid_get_ip_addr'>get_ip_addr</span><span class='lparen'>(</span><span class='id identifier rubyid_opt'>opt</span><span class='comma'>,</span><span class='id identifier rubyid_family'>family</span><span class='comma'>,</span><span class='id identifier rubyid_source_netmask'>source_netmask</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_source_netmask'>source_netmask</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_scope_netmask'>scope_netmask</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>when</span> <span class='const'>IPV6_ADDRESS_FAMILY</span>
+    <span class='id identifier rubyid_new_ipv6'>new_ipv6</span> <span class='op'>=</span> <span class='const'>IPAddr</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>IPAddr</span><span class='op'>::</span><span class='id identifier rubyid_ntop'>ntop</span><span class='lparen'>(</span><span class='id identifier rubyid_get_ip_addr'>get_ip_addr</span><span class='lparen'>(</span><span class='id identifier rubyid_opt'>opt</span><span class='comma'>,</span><span class='id identifier rubyid_family'>family</span><span class='comma'>,</span><span class='id identifier rubyid_source_netmask'>source_netmask</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='const'>Socket</span><span class='op'>::</span><span class='const'>AF_INET6</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_new_ipv6'>new_ipv6</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_source_netmask'>source_netmask</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_scope_netmask'>scope_netmask</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_ip_addr-instance_method">
+  
+    #<strong>get_ip_addr</strong>(opt, family, source_netmask)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+175
+176
+177
+178
+179
+180
+181
+182</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/OPT.rb', line 175</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_ip_addr'>get_ip_addr</span><span class='lparen'>(</span><span class='id identifier rubyid_opt'>opt</span><span class='comma'>,</span> <span class='id identifier rubyid_family'>family</span><span class='comma'>,</span> <span class='id identifier rubyid_source_netmask'>source_netmask</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_pad_format_string'>pad_format_string</span> <span class='op'>=</span> <span class='id identifier rubyid_family'>family</span> <span class='op'>==</span> <span class='const'>IPV4_ADDRESS_FAMILY</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>x3C</span><span class='tstring_end'>&#39;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>x15C</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_ip_addr'>ip_addr</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='id identifier rubyid_pad_format_string'>pad_format_string</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_num_to_copy'>num_to_copy</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_source_netmask'>source_netmask</span> <span class='op'>+</span> <span class='int'>7</span><span class='rparen'>)</span> <span class='op'>/</span> <span class='int'>8</span>
+  <span class='id identifier rubyid_num_to_copy'>num_to_copy</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_index'>index</span><span class='op'>|</span> <span class='id identifier rubyid_ip_addr'>ip_addr</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_opt'>opt</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span><span class='op'>+</span><span class='int'>4</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_ip_addr'>ip_addr</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="options-instance_method">
+  
+    #<strong>options</strong>(args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/OPT.rb', line 148</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_options'>options</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='op'>==</span><span class='kw'>nil</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='ivar'>@options</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'>Integer</span><span class='rparen'>)</span>
+    <span class='comment'>#  return list of options with that code
+</span>    <span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_option'>option</span><span class='op'>|</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_option'>option</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span> <span class='op'>==</span> <span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_option'>option</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_ret'>ret</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="options=-instance_method">
+  
+    #<strong>options=</strong>(options)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+163
+164
+165</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/OPT.rb', line 163</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_options='>options=</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='ivar'>@options</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="payloadsize-instance_method">
+  
+    #<strong>payloadsize</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+140
+141
+142</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/OPT.rb', line 140</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_payloadsize'>payloadsize</span>
+  <span class='kw'>return</span> <span class='ivar'>@klass</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="payloadsize=-instance_method">
+  
+    #<strong>payloadsize=</strong>(size)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+144
+145
+146</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/OPT.rb', line 144</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_payloadsize='>payloadsize=</span><span class='lparen'>(</span><span class='id identifier rubyid_size'>size</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_klass'>klass</span><span class='op'>=</span><span class='const'>Classes</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_size'>size</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="set_client_subnet-instance_method">
+  
+    #<strong>set_client_subnet</strong>(subnet)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/OPT.rb', line 200</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_set_client_subnet'>set_client_subnet</span><span class='lparen'>(</span><span class='id identifier rubyid_subnet'>subnet</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_family'>family</span> <span class='op'>=</span> <span class='const'>IPV4_ADDRESS_FAMILY</span>
+  <span class='id identifier rubyid_scope_netmask'>scope_netmask</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_ip'>ip</span><span class='comma'>,</span> <span class='id identifier rubyid_source_netmask'>source_netmask</span> <span class='op'>=</span> <span class='id identifier rubyid_subnet'>subnet</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_source_netmask'>source_netmask</span> <span class='op'>=</span> <span class='id identifier rubyid_source_netmask'>source_netmask</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_subnet'>subnet</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>0.0.0.0/0</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_edns_client_subnet'>edns_client_subnet</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">RR</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Dnsruby::RR::OPT (class)">OPT</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="OPT/Option.html" title="Dnsruby::RR::OPT::Option (class)">Option</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="OPT/Option.html#initialize-instance_method" title="Dnsruby::RR::OPT::Option#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+        <span class='const'><span class='object_link'><a href="#EDNS_SUBNET_OPTION-constant" title="Dnsruby::RR::OPT::EDNS_SUBNET_OPTION (constant)">EDNS_SUBNET_OPTION</a></span></span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='id identifier rubyid_family'>family</span><span class='comma'>,</span> <span class='id identifier rubyid_source_netmask'>source_netmask</span><span class='comma'>,</span> <span class='id identifier rubyid_scope_netmask'>scope_netmask</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>xcc*</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_ip_address'>ip_address</span> <span class='op'>=</span> <span class='const'>IPAddr</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_ip'>ip</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_family'>family</span> <span class='op'>=</span> <span class='const'>IPV6_ADDRESS_FAMILY</span> <span class='kw'>if</span> <span class='id identifier rubyid_ip_address'>ip_address</span><span class='period'>.</span><span class='id identifier rubyid_ipv6?'>ipv6?</span>
+    <span class='id identifier rubyid_num_addr_bytes'>num_addr_bytes</span> <span class='op'>=</span> <span class='id identifier rubyid_source_netmask'>source_netmask</span> <span class='op'>/</span> <span class='int'>8</span>
+    <span class='id identifier rubyid_num_addr_bytes'>num_addr_bytes</span> <span class='op'>=</span> <span class='id identifier rubyid_num_addr_bytes'>num_addr_bytes</span> <span class='op'>+</span> <span class='int'>1</span> <span class='kw'>if</span> <span class='id identifier rubyid_source_netmask'>source_netmask</span> <span class='op'>%</span> <span class='int'>8</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_edns_client_subnet'>edns_client_subnet</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">RR</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Dnsruby::RR::OPT (class)">OPT</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="OPT/Option.html" title="Dnsruby::RR::OPT::Option (class)">Option</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="OPT/Option.html#initialize-instance_method" title="Dnsruby::RR::OPT::Option#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#EDNS_SUBNET_OPTION-constant" title="Dnsruby::RR::OPT::EDNS_SUBNET_OPTION (constant)">EDNS_SUBNET_OPTION</a></span></span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='id identifier rubyid_family'>family</span><span class='comma'>,</span> <span class='id identifier rubyid_source_netmask'>source_netmask</span><span class='comma'>,</span> <span class='id identifier rubyid_scope_netmask'>scope_netmask</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>xcc*</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>+</span>
+      <span class='id identifier rubyid_ip_address'>ip_address</span><span class='period'>.</span><span class='id identifier rubyid_hton'>hton</span><span class='period'>.</span><span class='id identifier rubyid_slice'>slice</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_num_addr_bytes'>num_addr_bytes</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_edns_client_subnet'>edns_client_subnet</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="set_flags-instance_method">
+  
+    #<strong>set_flags</strong>(code)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Should always be zero</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+124
+125
+126</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/OPT.rb', line 124</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_set_flags'>set_flags</span><span class='lparen'>(</span><span class='id identifier rubyid_code'>code</span><span class='rparen'>)</span> <span class='comment'># Should always be zero
+</span>  <span class='ivar'>@ttl</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_xrcode'>xrcode</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span> <span class='op'>&lt;&lt;</span> <span class='int'>24</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='id identifier rubyid_version'>version</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='op'>&lt;&lt;</span> <span class='int'>16</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='id identifier rubyid_code'>code</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_s-instance_method">
+  
+    #<strong>to_s</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/OPT.rb', line 225</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>OPT pseudo-record : payloadsize </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_payloadsize'>payloadsize</span><span class='embexpr_end'>}</span><span class='tstring_content'>, xrcode </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_xrcode'>xrcode</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span><span class='embexpr_end'>}</span><span class='tstring_content'>, version </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_version'>version</span><span class='embexpr_end'>}</span><span class='tstring_content'>, flags </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_flags'>flags</span><span class='embexpr_end'>}</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>if</span> <span class='ivar'>@options</span>
+    <span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_opt'>opt</span><span class='op'>|</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_opt'>opt</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#EDNS_SUBNET_OPTION-constant" title="Dnsruby::RR::OPT::EDNS_SUBNET_OPTION (constant)">EDNS_SUBNET_OPTION</a></span></span>
+        <span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='id identifier rubyid_ret'>ret</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CLIENT-SUBNET: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_get_client_subnet'>get_client_subnet</span><span class='lparen'>(</span><span class='id identifier rubyid_opt'>opt</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+      <span class='kw'>else</span>
+        <span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='id identifier rubyid_ret'>ret</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_opt'>opt</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='id identifier rubyid_ret'>ret</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_ret'>ret</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="version-instance_method">
+  
+    #<strong>version</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+108
+109
+110</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/OPT.rb', line 108</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_version'>version</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_flags_from_ttl'>flags_from_ttl</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>C</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="version=-instance_method">
+  
+    #<strong>version=</strong>(code)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+112
+113
+114</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/OPT.rb', line 112</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_version='>version=</span><span class='lparen'>(</span><span class='id identifier rubyid_code'>code</span><span class='rparen'>)</span>
+  <span class='ivar'>@ttl</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_xrcode'>xrcode</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span> <span class='op'>&lt;&lt;</span> <span class='int'>24</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='id identifier rubyid_code'>code</span> <span class='op'>&lt;&lt;</span> <span class='int'>16</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='id identifier rubyid_flags'>flags</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="xrcode-instance_method">
+  
+    #<strong>xrcode</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+99
+100
+101</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/OPT.rb', line 99</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_xrcode'>xrcode</span>
+  <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="../ExtendedRCode.html" title="Dnsruby::ExtendedRCode (class)">ExtendedRCode</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../CodeMapper.html#initialize-instance_method" title="Dnsruby::CodeMapper#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_flags_from_ttl'>flags_from_ttl</span><span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>C</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="xrcode=-instance_method">
+  
+    #<strong>xrcode=</strong>(c)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+103
+104
+105
+106</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/OPT.rb', line 103</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_xrcode='>xrcode=</span><span class='lparen'>(</span><span class='id identifier rubyid_c'>c</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_code'>code</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../ExtendedRCode.html" title="Dnsruby::ExtendedRCode (class)">ExtendedRCode</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../CodeMapper.html#initialize-instance_method" title="Dnsruby::CodeMapper#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_c'>c</span><span class='rparen'>)</span>
+  <span class='ivar'>@ttl</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_code'>code</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span> <span class='op'>&lt;&lt;</span> <span class='int'>24</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='id identifier rubyid_version'>version</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='op'>&lt;&lt;</span> <span class='int'>16</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='id identifier rubyid_flags'>flags</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr  9 10:58:16 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-3.0.0).
+</div>
+
+    </div>
+  </body>
+</html>

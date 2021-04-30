@@ -42,3 +42,6 @@
 1.4.2 faraday:< 2.0&>= 0.8,jwt:< 3.0&>= 1.0,multi_json:~> 1.3,multi_xml:~> 0.5,rack:< 3&>= 1.2|checksum:6680ed0c31137beccc208a3fbc80af7792bc7e4fa7b149c1c853b25b24f92996,ruby:>= 1.9.0,rubygems:>= 1.3.5
 1.4.3 faraday:< 2.0&>= 0.8,jwt:< 3.0&>= 1.0,multi_json:~> 1.3,multi_xml:~> 0.5,rack:< 3&>= 1.2|checksum:3884c8ac60b81c784a0e8bb70848f9642cc07bb9a410e137305f8cd1ffcd38d6,ruby:>= 1.9.0,rubygems:>= 1.3.5
 1.4.4 faraday:< 2.0&>= 0.8,jwt:< 3.0&>= 1.0,multi_json:~> 1.3,multi_xml:~> 0.5,rack:< 3&>= 1.2|checksum:d5ce2e5b61b972eb8b5e0d642a20443931357162a141cb31d3286e30a09c0aae,ruby:>= 1.9.0,rubygems:>= 1.3.5
+1.4.5 faraday:< 2.0&>= 0.8,jwt:< 3.0&>= 1.0,multi_json:~> 1.3,multi_xml:~> 0.5,rack:< 3&>= 1.2|checksum:02ba74554777c4940d135cc390032c1da8d8516ec2cfcac1678eadef5c2804b6,ruby:>= 1.9.0,rubygems:>= 1.3.5
+1.4.6 faraday:< 2.0&>= 0.8,jwt:< 3.0&>= 1.0,multi_json:~> 1.3,multi_xml:~> 0.5,rack:< 3&>= 1.2|checksum:dc78d6dee1a66d6ad55df4cc1856b01518ac3a8a64a8d31ad788a5f016673d91,ruby:>= 1.9.0,rubygems:>= 1.3.5
+1.4.7 faraday:< 2.0&>= 0.8,jwt:< 3.0&>= 1.0,multi_json:~> 1.3,multi_xml:~> 0.5,rack:< 3&>= 1.2|checksum:6366039e1a7205a86f67e5ff4f863a4533c4e727c5e25e279acfd77edf14d8e0,ruby:>= 1.9.0,rubygems:>= 1.3.5

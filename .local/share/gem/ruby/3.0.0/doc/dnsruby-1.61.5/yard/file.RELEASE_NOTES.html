@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: RELEASE_NOTES
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "RELEASE_NOTES";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="file_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: RELEASE_NOTES</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'><h1 id="release-notes">Release Notes</h1>
+
+<h2 id="v1615">v1.61.5</h2>
+
+<ul>
+  <li>CAA record fixes - add contactphone and contactemail</li>
+  <li>Fix eprecation warnings</li>
+</ul>
+
+<h2 id="v1614">v1.61.4</h2>
+
+<ul>
+  <li>Dnsruby::Name : document .punycode</li>
+  <li>gemspec enhancement</li>
+  <li>add yard build file</li>
+  <li>fix create name include url special characters</li>
+  <li>Fix uninitialized constant error when using via Rails</li>
+  <li>Implement ECDSAP256SHA256 (13) / ECDSAP384SHA384 (14) algorithms for DNSKEY</li>
+  <li>Reinitialize all IANA TAR keys with Dnssec.reset</li>
+</ul>
+
+<h2 id="v1613">v1.61.3</h2>
+
+<ul>
+  <li>TCP timeout and port changes</li>
+</ul>
+
+<h2 id="v1612">v1.61.2</h2>
+
+<ul>
+  <li>Add new root key</li>
+</ul>
+
+<h2 id="v1611">v1.61.1</h2>
+
+<ul>
+  <li>Add Addressable as a gem runtime dependency</li>
+</ul>
+
+<h2 id="v1610">v1.61.0</h2>
+
+<ul>
+  <li>Add URI, CDS and CDNSKEY records</li>
+  <li>Supply port to DNS.new as optiona parameter</li>
+  <li>Supply timeout to zone transfer connect</li>
+  <li>Fix multi-line strings</li>
+  <li>Try absolute name as candidate in DNS even if not dot supplied</li>
+  <li>Do not try to generate candidates if no domain is given</li>
+  <li>Handle new OpenSSL interface as well as old</li>
+  <li>Handle new DSA interface</li>
+  <li>fix encode error select thread issue</li>
+  <li>handle encoding errors</li>
+  <li>add punycode support</li>
+  <li>Make sure dnssec is enabled in verifier and also in digroot demo</li>
+  <li>Other minor fixes and changes to test code and infrastructure</li>
+</ul>
+
+<h2 id="v1602">v1.60.2</h2>
+
+<ul>
+  <li>Fix deletion of TXT records with spaces in dynamic updates (thanks Sean Dilda)</li>
+  <li>Fix use of non-default ports in Dnsruby::Resolver (thanks Thomas Morgan)</li>
+  <li>Fix NAPTR encoding for null rdata dynamic update packets</li>
+  <li>Fix CAA resource record encoding</li>
+  <li>Avoid changing ruby global thread abort behavior (thanks Brent Cook)</li>
+</ul>
+
+<h2 id="v1601">v1.60.1</h2>
+
+<ul>
+  <li>DNSSEC validation switched OFF by default (but can still be switched on)</li>
+  <li>Add APL RR support (thanks Manabu Sonoda)</li>
+  <li>Various test fixes (thanks Keith Bennett)</li>
+  <li>‘include’ issues fixed (thanks Keith Bennett!)</li>
+  <li>Fixnum replacement (thanks Keith Bennett)</li>
+  <li>Zone transfer fixes (thanks Manabu Sonoda)</li>
+  <li>Name decoding fix</li>
+  <li>MX record passing error now raised</li>
+  <li>CAA RR support (thanks Richard Luther)</li>
+  <li>TLSA RR support (thanks Manabu Sonoda)</li>
+</ul>
+
+<h2 id="v1600">v1.60.0</h2>
+
+<ul>
+  <li>TCP multi-packet support fixed</li>
+  <li>Response ‘Message’ now included with exception.</li>
+  <li>Docs added</li>
+  <li>CNAME dynamic update fix</li>
+</ul>
+
+<h2 id="v1593">v1.59.3</h2>
+
+<ul>
+  <li>Output TXT record multiple strings correctly</li>
+  <li>NONE class encoding fix</li>
+  <li>only add name labels if there are any</li>
+</ul>
+
+<h2 id="v1592">v1.59.2</h2>
+
+<ul>
+  <li>Timeout error fix</li>
+</ul>
+
+<h2 id="v1591">v1.59.1</h2>
+
+<ul>
+  <li>Support for HMAC SHA512 TSIG keys</li>
+  <li>Fix TCP pipelining tests</li>
+  <li>IDN encoding error returned as Dnsruby::OtherResolvError</li>
+</ul>
+
+<h2 id="v1590">v1.59.0</h2>
+
+<ul>
+  <li>Add LICENSE file</li>
+  <li>Add Cache max_size (gihub issue 64)</li>
+  <li>Disable caching for SOA lookups in demo check_soa.rb</li>
+  <li>Fix for invalid nameserver in config</li>
+  <li>Fix encoding for OPT data (thanks Craig Despeaux)</li>
+  <li>Various test system fixes</li>
+  <li>OPT fixes</li>
+  <li>DNSSEC verification failure handling wrt lack of DS chain</li>
+  <li>DNSSEC validation policy name constants</li>
+  <li>Fix for BOGUS DLV chains</li>
+  <li>demo upgrades</li>
+  <li>Resolver hints improvements</li>
+</ul>
+
+<h2 id="v1580">v1.58.0</h2>
+
+<ul>
+  <li>Add TCP pipelining (reusing a single TCP connection for multiple requests).</li>
+  <li>Enhance zone reading, including reading data from a string.</li>
+  <li>Add add_answer! method for adding duplicate answers, as needed for an AXFR response.</li>
+  <li>Add support for GPOS and NXT resource records.</li>
+  <li>Test cleanup, including removal of use of Nominet servers, soak_test cleanup.</li>
+  <li>Refactorings: MessageDecoder, Resolv, Resolver (part).</li>
+  <li>Fix zone reader adding unwanted dot to relative hostnames being converted to absolute.</li>
+  <li>Fix default access for tsig options in Resolver.</li>
+  <li>Fix ZoneTransfer not to use deprecated SingleResolver.</li>
+  <li>Fix Resolver bug in parameter to create_tsig_options.</li>
+  <li>Fix tests to always use working copy and not gem.</li>
+</ul>
+
+<h2 id="v1570">v1.57.0</h2>
+
+<ul>
+  <li>Add query_raw method as alias for send_plain_message, with option to raise or return error.</li>
+  <li>Fixed a bug in RR hash calculation where TTL should have been ignored but wasn’t.</li>
+  <li>Add support for (obsolete) GPOS resource record type.</li>
+  <li>Tweak Travis CI configuration.</li>
+  <li>Fix zone reader for case where a line contains whitespace preceding a comment.</li>
+  <li>Add post install message.</li>
+  <li>Improve README.</li>
+  <li>Moved content of NEWS to RELEASE_NOTES.md.</li>
+  <li>Use git ls-files now to determine files for inclusion in gem.</li>
+</ul>
+
+<h2 id="v1560">v1.56.0</h2>
+
+<ul>
+  <li>Drop support for Ruby 1.8, using lambda -&gt; and hash ‘key: value’ notations.</li>
+  <li>First release since the move from Rubyforge to Github (https://github.com/alexdalitz/dnsruby).</li>
+  <li>Add EDNS client subnet support.</li>
+  <li>Relocate CodeMapper subclasses, Resolv, RR, and RRSet classes.</li>
+  <li>Add Travis CI and coveralls integration.</li>
+  <li>Improve Google IPV6 support.</li>
+  <li>Convert some file names to snake case.</li>
+  <li>Remove trailing whitespace from lines, and ensure that comments have space between ‘#’ and text.</li>
+  <li>Restore test success when running under JRuby.</li>
+  <li>Disabled attempt to connect to Nominet servers, which are no longer available.</li>
+  <li>Convert from test/unit to minitest/autorun to support Ruby 2.1+.</li>
+  <li>Remove setup.rb.</li>
+  <li>Other minor refactoring and improvements to production code, test code, and documentation.</li>
+</ul>
+
+<h2 id="v153">v1.53</h2>
+
+<ul>
+  <li>Validation routine fixes</li>
+  <li>Ruby 1.9 fixes</li>
+  <li>Recursor fixes</li>
+  <li>IPv4 Regex fixes</li>
+  <li>Fixes for A/PTR lookups with IP-like domain name</li>
+  <li>TXT and SSHFP processing fixes</li>
+  <li>Default retry parameters in Resolver more sensible</li>
+</ul>
+
+<h2 id="v148">v1.48</h2>
+
+<ul>
+  <li>Fixed deadlock/performance issue seen on some platforms</li>
+  <li>DNSSEC validation now disabled by default</li>
+  <li>Signed root DS record can be added to validator</li>
+  <li>ITAR support removed</li>
+  <li>multi-line DS/RRSIG reading bug fixed (thanks Marco Davids!)</li>
+  <li>DS algorithms of more than one digit can now be read from string</li>
+  <li>LOC records now parsed correctly</li>
+  <li>HINFO records now parsed correctly</li>
+</ul>
+
+<h2 id="v142">v1.42</h2>
+
+<ul>
+  <li>Complicated TXT and NAPTR records now handled correctly</li>
+  <li>ZoneReader now handles odd escape characters correctly</li>
+  <li>Warns when immediate timeout occurs because no nameservers are configured</li>
+  <li>Easy hmac-sha1/256 options to Resolver#tsig=</li>
+  <li>ZoneReader fixed for “IN CNAME @” notations</li>
+  <li>ZoneReader supports wildcards</li>
+  <li>Dnsruby.version method added - currently returns 1.42</li>
+</ul>
+
+<h2 id="v141">v1.41</h2>
+
+<ul>
+  <li>RFC3597 unknown classes (e.g. CLASS32) now handled correctly
+  in RRSIGs</li>
+  <li>Resolver#do_caching flag added for Resolver-level caching</li>
+  <li>DNSKEY#key_tag now cached - only recalculated when key data
+  changes</li>
+  <li>Bugfix where Resolver would not time queries out if no 
+  nameservers were configured</li>
+  <li>Recursor now performs A and AAAA queries in parallel</li>
+  <li>Fix for zero length salt</li>
+  <li>Fixing priming for signed root</li>
+  <li>Fixes for DLV verification</li>
+  <li>Other minor fixes</li>
+</ul>
+
+<h2 id="v140">v1.40</h2>
+
+<ul>
+  <li>Zone file reading support added (Dnsruby::ZoneReader)</li>
+  <li>Name and Label speed-ups</li>
+  <li>CodeMapper speed-ups</li>
+  <li>DHCID RR added</li>
+  <li>LOC presentation format parsing fixed</li>
+  <li>KX RR added</li>
+  <li>Quotations now allowed in text representation for ISDN, X25 and HINFO</li>
+  <li>AFSDB from_string fixes</li>
+  <li>Fixing CERT types and from_string</li>
+  <li>CERT now allows algorithm 0</li>
+  <li>Fix for DS record comparison</li>
+  <li>HIP RR added</li>
+  <li>Minor bug fixes</li>
+  <li>IPSECKEY RR added</li>
+  <li>Clients can now manipulate Name::Labels</li>
+</ul>
+</div></div>
+
+      <div id="footer">
+  Generated on Fri Apr  9 10:58:05 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-3.0.0).
+</div>
+
+    </div>
+  </body>
+</html>

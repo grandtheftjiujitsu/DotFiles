@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"hash_alg:ETI"%Dnsruby::RR::NSEC3PARAM#hash_alg;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"JThe Hash Algorithm field identifies the cryptographic hash algorithm ;TI"&used to construct the hash-value.;T:
+@fileI"'lib/dnsruby/resource/NSEC3PARAM.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::RR::NSEC3PARAM;TcRDoc::NormalClass0

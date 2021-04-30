@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"serial:ETI"!Dnsruby::ZoneTransfer#serial;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"PIf using IXFR, this is the SOA serial number to start the incrementals from;T:
+@fileI"!lib/dnsruby/zone_transfer.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::ZoneTransfer;TcRDoc::NormalClass0

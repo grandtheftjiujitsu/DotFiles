@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Dnsruby::SingleResolver
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Dnsruby::SingleResolver";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span>
+     &raquo; 
+    <span class="title">SingleResolver</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Dnsruby::SingleResolver
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="Resolver.html" title="Dnsruby::Resolver (class)">Resolver</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="Resolver.html" title="Dnsruby::Resolver (class)">Resolver</a></span></li>
+          
+            <li class="next">Dnsruby::SingleResolver</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/dnsruby/single_resolver.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<h2 id="label-Dnsruby-3A-3ASingleResolver">Dnsruby::SingleResolver</h2>
+
+<pre class="code ruby"><code class="ruby">This class has been deprecated.
+This implementation exists for legacy clients. New code should use the Dnsruby::Resolver class.
+The SingleResolver class targets a single resolver, and controls the sending of a single
+packet with a packet timeout. It performs no retries. Only two threads are used - the client
+thread and a select thread (which is reused across all queries).
+</code></pre>
+
+<h2 id="label-Methods">Methods</h2>
+
+<h3 id="label-Synchronous">Synchronous</h3>
+
+<p>These methods raise an exception or return a response message with rcode==NOERROR</p>
+<ul><li>
+<p>Dnsruby::SingleResolver#send_message(msg [, use_tcp]))</p>
+</li><li>
+<p>Dnsruby::SingleResolver#query(name [, type [, klass]])</p>
+</li></ul>
+
+<h3 id="label-Asynchronous">Asynchronous</h3>
+
+<p>These methods use a response queue to return the response and the error to the client. Support for EventMachine has been deprecated</p>
+<ul><li>
+<p>Dnsruby::SingleResolver#send_async(…)</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+  <h2>Constant Summary</h2>
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="Resolver.html" title="Dnsruby::Resolver (class)">Resolver</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Resolver.html#AbsoluteMinDnssecUdpSize-constant" title="Dnsruby::Resolver::AbsoluteMinDnssecUdpSize (constant)">Resolver::AbsoluteMinDnssecUdpSize</a></span>, <span class='object_link'><a href="Resolver.html#DefaultDnssec-constant" title="Dnsruby::Resolver::DefaultDnssec (constant)">Resolver::DefaultDnssec</a></span>, <span class='object_link'><a href="Resolver.html#DefaultPacketTimeout-constant" title="Dnsruby::Resolver::DefaultPacketTimeout (constant)">Resolver::DefaultPacketTimeout</a></span>, <span class='object_link'><a href="Resolver.html#DefaultPipeLiningMaxQueries-constant" title="Dnsruby::Resolver::DefaultPipeLiningMaxQueries (constant)">Resolver::DefaultPipeLiningMaxQueries</a></span>, <span class='object_link'><a href="Resolver.html#DefaultPort-constant" title="Dnsruby::Resolver::DefaultPort (constant)">Resolver::DefaultPort</a></span>, <span class='object_link'><a href="Resolver.html#DefaultQueryTimeout-constant" title="Dnsruby::Resolver::DefaultQueryTimeout (constant)">Resolver::DefaultQueryTimeout</a></span>, <span class='object_link'><a href="Resolver.html#DefaultRetryDelay-constant" title="Dnsruby::Resolver::DefaultRetryDelay (constant)">Resolver::DefaultRetryDelay</a></span>, <span class='object_link'><a href="Resolver.html#DefaultRetryTimes-constant" title="Dnsruby::Resolver::DefaultRetryTimes (constant)">Resolver::DefaultRetryTimes</a></span>, <span class='object_link'><a href="Resolver.html#DefaultUDPSize-constant" title="Dnsruby::Resolver::DefaultUDPSize (constant)">Resolver::DefaultUDPSize</a></span>, <span class='object_link'><a href="Resolver.html#MinDnssecUdpSize-constant" title="Dnsruby::Resolver::MinDnssecUdpSize (constant)">Resolver::MinDnssecUdpSize</a></span></p>
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="Resolver.html" title="Dnsruby::Resolver (class)">Resolver</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Resolver.html#config-instance_method" title="Dnsruby::Resolver#config (method)">#config</a></span>, <span class='object_link'><a href="Resolver.html#dnssec-instance_method" title="Dnsruby::Resolver#dnssec (method)">#dnssec</a></span>, <span class='object_link'><a href="Resolver.html#do_caching-instance_method" title="Dnsruby::Resolver#do_caching (method)">#do_caching</a></span>, <span class='object_link'><a href="Resolver.html#do_validation-instance_method" title="Dnsruby::Resolver#do_validation (method)">#do_validation</a></span>, <span class='object_link'><a href="Resolver.html#ignore_truncation-instance_method" title="Dnsruby::Resolver#ignore_truncation (method)">#ignore_truncation</a></span>, <span class='object_link'><a href="Resolver.html#no_tcp-instance_method" title="Dnsruby::Resolver#no_tcp (method)">#no_tcp</a></span>, <span class='object_link'><a href="Resolver.html#packet_timeout-instance_method" title="Dnsruby::Resolver#packet_timeout (method)">#packet_timeout</a></span>, <span class='object_link'><a href="Resolver.html#port-instance_method" title="Dnsruby::Resolver#port (method)">#port</a></span>, <span class='object_link'><a href="Resolver.html#recurse-instance_method" title="Dnsruby::Resolver#recurse (method)">#recurse</a></span>, <span class='object_link'><a href="Resolver.html#retry_delay-instance_method" title="Dnsruby::Resolver#retry_delay (method)">#retry_delay</a></span>, <span class='object_link'><a href="Resolver.html#retry_times-instance_method" title="Dnsruby::Resolver#retry_times (method)">#retry_times</a></span>, <span class='object_link'><a href="Resolver.html#src_address-instance_method" title="Dnsruby::Resolver#src_address (method)">#src_address</a></span>, <span class='object_link'><a href="Resolver.html#src_address6-instance_method" title="Dnsruby::Resolver#src_address6 (method)">#src_address6</a></span>, <span class='object_link'><a href="Resolver.html#tcp_pipelining-instance_method" title="Dnsruby::Resolver#tcp_pipelining (method)">#tcp_pipelining</a></span>, <span class='object_link'><a href="Resolver.html#tcp_pipelining_max_queries-instance_method" title="Dnsruby::Resolver#tcp_pipelining_max_queries (method)">#tcp_pipelining_max_queries</a></span>, <span class='object_link'><a href="Resolver.html#tsig-instance_method" title="Dnsruby::Resolver#tsig (method)">#tsig</a></span>, <span class='object_link'><a href="Resolver.html#udp_size-instance_method" title="Dnsruby::Resolver#udp_size (method)">#udp_size</a></span>, <span class='object_link'><a href="Resolver.html#use_tcp-instance_method" title="Dnsruby::Resolver#use_tcp (method)">#use_tcp</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_opt_rr-instance_method" title="#add_opt_rr (instance method)">#<strong>add_opt_rr</strong>(m)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Add the appropriate EDNS OPT RR for the specified packet.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(*args)  &#x21d2; SingleResolver </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Can take a hash with the following optional keys :.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#packet_timeout=-instance_method" title="#packet_timeout= (instance method)">#<strong>packet_timeout=</strong>(t)  &#x21d2; Object </a>
+    
+
+    
+      (also: #query_timeout=)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#retry_delay=-instance_method" title="#retry_delay= (instance method)">#<strong>retry_delay=</strong>(n)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc:.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#retry_times=-instance_method" title="#retry_times= (instance method)">#<strong>retry_times=</strong>(n)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc:.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#server-instance_method" title="#server (instance method)">#<strong>server</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#server=-instance_method" title="#server= (instance method)">#<strong>server=</strong>(s)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Resolver.html" title="Dnsruby::Resolver (class)">Resolver</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Resolver.html#add_config_nameservers-instance_method" title="Dnsruby::Resolver#add_config_nameservers (method)">#add_config_nameservers</a></span>, <span class='object_link'><a href="Resolver.html#add_server-instance_method" title="Dnsruby::Resolver#add_server (method)">#add_server</a></span>, <span class='object_link'><a href="Resolver.html#add_src_port-instance_method" title="Dnsruby::Resolver#add_src_port (method)">#add_src_port</a></span>, <span class='object_link'><a href="Resolver.html#check_port-class_method" title="Dnsruby::Resolver.check_port (method)">check_port</a></span>, <span class='object_link'><a href="Resolver.html#close-instance_method" title="Dnsruby::Resolver#close (method)">#close</a></span>, <span class='object_link'><a href="Resolver.html#generate_timeouts-instance_method" title="Dnsruby::Resolver#generate_timeouts (method)">#generate_timeouts</a></span>, <span class='object_link'><a href="Resolver.html#get_ports_from-class_method" title="Dnsruby::Resolver.get_ports_from (method)">get_ports_from</a></span>, <span class='object_link'><a href="Resolver.html#get_tsig-class_method" title="Dnsruby::Resolver.get_tsig (method)">get_tsig</a></span>, <span class='object_link'><a href="Resolver.html#nameserver=-instance_method" title="Dnsruby::Resolver#nameserver= (method)">#nameserver=</a></span>, <span class='object_link'><a href="Resolver.html#nameservers=-instance_method" title="Dnsruby::Resolver#nameservers= (method)">#nameservers=</a></span>, <span class='object_link'><a href="Resolver.html#persistent_tcp=-instance_method" title="Dnsruby::Resolver#persistent_tcp= (method)">#persistent_tcp=</a></span>, <span class='object_link'><a href="Resolver.html#persistent_udp=-instance_method" title="Dnsruby::Resolver#persistent_udp= (method)">#persistent_udp=</a></span>, <span class='object_link'><a href="Resolver.html#port_in_range-class_method" title="Dnsruby::Resolver.port_in_range (method)">port_in_range</a></span>, <span class='object_link'><a href="Resolver.html#query-instance_method" title="Dnsruby::Resolver#query (method)">#query</a></span>, <span class='object_link'><a href="Resolver.html#query!-instance_method" title="Dnsruby::Resolver#query! (method)">#query!</a></span>, <span class='object_link'><a href="Resolver.html#query_no_validation_or_recursion-instance_method" title="Dnsruby::Resolver#query_no_validation_or_recursion (method)">#query_no_validation_or_recursion</a></span>, <span class='object_link'><a href="Resolver.html#query_raw-instance_method" title="Dnsruby::Resolver#query_raw (method)">#query_raw</a></span>, <span class='object_link'><a href="Resolver.html#reset_attributes-instance_method" title="Dnsruby::Resolver#reset_attributes (method)">#reset_attributes</a></span>, <span class='object_link'><a href="Resolver.html#send_async-instance_method" title="Dnsruby::Resolver#send_async (method)">#send_async</a></span>, <span class='object_link'><a href="Resolver.html#send_message-instance_method" title="Dnsruby::Resolver#send_message (method)">#send_message</a></span>, <span class='object_link'><a href="Resolver.html#send_message!-instance_method" title="Dnsruby::Resolver#send_message! (method)">#send_message!</a></span>, <span class='object_link'><a href="Resolver.html#send_plain_message-instance_method" title="Dnsruby::Resolver#send_plain_message (method)">#send_plain_message</a></span>, <span class='object_link'><a href="Resolver.html#set_config_nameserver-instance_method" title="Dnsruby::Resolver#set_config_nameserver (method)">#set_config_nameserver</a></span>, <span class='object_link'><a href="Resolver.html#single_res_mutex-instance_method" title="Dnsruby::Resolver#single_res_mutex (method)">#single_res_mutex</a></span>, <span class='object_link'><a href="Resolver.html#single_resolvers-instance_method" title="Dnsruby::Resolver#single_resolvers (method)">#single_resolvers</a></span>, <span class='object_link'><a href="Resolver.html#single_resolvers=-instance_method" title="Dnsruby::Resolver#single_resolvers= (method)">#single_resolvers=</a></span>, <span class='object_link'><a href="Resolver.html#src_port-instance_method" title="Dnsruby::Resolver#src_port (method)">#src_port</a></span>, <span class='object_link'><a href="Resolver.html#src_port=-instance_method" title="Dnsruby::Resolver#src_port= (method)">#src_port=</a></span>, <span class='object_link'><a href="Resolver.html#update-instance_method" title="Dnsruby::Resolver#update (method)">#update</a></span>, <span class='object_link'><a href="Resolver.html#update_internal_res-instance_method" title="Dnsruby::Resolver#update_internal_res (method)">#update_internal_res</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="" title="Dnsruby::SingleResolver (class)">SingleResolver</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Can take a hash with the following optional keys :</p>
+
+<pre class="code ruby"><code class="ruby">* :server
+* :port
+* :use_tcp
+* :no_tcp
+* :ignore_truncation
+* :src_address
+* :src_address6
+* :src_port
+* :udp_size
+* :persistent_tcp
+* :persistent_udp
+* :tsig
+* :packet_timeout
+* :recurse
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/single_resolver.rb', line 57</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_arg'>arg</span><span class='op'>=</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+  <span class='ivar'>@single_res_mutex</span> <span class='op'>=</span> <span class='const'>Mutex</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='ivar'>@packet_timeout</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Resolver.html" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Resolver.html#DefaultPacketTimeout-constant" title="Dnsruby::Resolver::DefaultPacketTimeout (constant)">DefaultPacketTimeout</a></span></span>
+  <span class='ivar'>@query_timeout</span> <span class='op'>=</span> <span class='ivar'>@packet_timeout</span>
+  <span class='ivar'>@port</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Resolver.html" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Resolver.html#DefaultPort-constant" title="Dnsruby::Resolver::DefaultPort (constant)">DefaultPort</a></span></span>
+  <span class='ivar'>@udp_size</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Resolver.html" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Resolver.html#DefaultUDPSize-constant" title="Dnsruby::Resolver::DefaultUDPSize (constant)">DefaultUDPSize</a></span></span>
+  <span class='ivar'>@dnssec</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Resolver.html" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Resolver.html#DefaultDnssec-constant" title="Dnsruby::Resolver::DefaultDnssec (constant)">DefaultDnssec</a></span></span>
+  <span class='ivar'>@use_tcp</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='ivar'>@no_tcp</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='ivar'>@tsig</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@ignore_truncation</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='ivar'>@src_address</span>        <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@src_address6</span>        <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@src_port</span>        <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+  <span class='ivar'>@recurse</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='ivar'>@persistent_udp</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='ivar'>@persistent_tcp</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='ivar'>@retry_times</span> <span class='op'>=</span> <span class='int'>1</span>
+  <span class='ivar'>@retry_delay</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='ivar'>@single_resolvers</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@configured</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='ivar'>@do_caching</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='ivar'>@config</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Config.html" title="Dnsruby::Config (class)">Config</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Config.html#initialize-instance_method" title="Dnsruby::Config#initialize (method)">new</a></span></span>
+
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='op'>==</span><span class='kw'>nil</span><span class='rparen'>)</span>
+    <span class='comment'>#  Get default config
+</span>    <span class='ivar'>@config</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Config.html" title="Dnsruby::Config (class)">Config</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Config.html#initialize-instance_method" title="Dnsruby::Config#initialize (method)">new</a></span></span>
+    <span class='ivar'>@config</span><span class='period'>.</span><span class='id identifier rubyid_get_ready'>get_ready</span>
+    <span class='ivar'>@server</span> <span class='op'>=</span> <span class='ivar'>@config</span><span class='period'>.</span><span class='id identifier rubyid_nameserver'>nameserver</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+  <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='const'>String</span><span class='rparen'>)</span>
+    <span class='ivar'>@config</span><span class='period'>.</span><span class='id identifier rubyid_get_ready'>get_ready</span>
+    <span class='ivar'>@configured</span><span class='op'>=</span> <span class='kw'>true</span>
+    <span class='ivar'>@config</span><span class='period'>.</span><span class='id identifier rubyid_nameserver'>nameserver</span><span class='op'>=</span><span class='lbracket'>[</span><span class='id identifier rubyid_arg'>arg</span><span class='rbracket'>]</span>
+    <span class='ivar'>@server</span> <span class='op'>=</span> <span class='ivar'>@config</span><span class='period'>.</span><span class='id identifier rubyid_nameserver'>nameserver</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+    <span class='comment'>#         @server=arg
+</span>  <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='const'>Name</span><span class='rparen'>)</span>
+    <span class='ivar'>@config</span><span class='period'>.</span><span class='id identifier rubyid_get_ready'>get_ready</span>
+    <span class='ivar'>@configured</span><span class='op'>=</span> <span class='kw'>true</span>
+    <span class='ivar'>@config</span><span class='period'>.</span><span class='id identifier rubyid_nameserver'>nameserver</span><span class='op'>=</span><span class='id identifier rubyid_arg'>arg</span>
+    <span class='ivar'>@server</span> <span class='op'>=</span> <span class='ivar'>@config</span><span class='period'>.</span><span class='id identifier rubyid_nameserver'>nameserver</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+    <span class='comment'>#         @server=arg
+</span>  <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='const'>Hash</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_arg'>arg</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_attr'>attr</span><span class='op'>|</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_attr'>attr</span> <span class='op'>==</span> <span class='symbol'>:server</span><span class='rparen'>)</span>
+        <span class='ivar'>@config</span><span class='period'>.</span><span class='id identifier rubyid_get_ready'>get_ready</span>
+        <span class='ivar'>@configured</span><span class='op'>=</span> <span class='kw'>true</span>
+        <span class='ivar'>@config</span><span class='period'>.</span><span class='id identifier rubyid_nameserver'>nameserver</span><span class='op'>=</span><span class='lbracket'>[</span><span class='id identifier rubyid_arg'>arg</span><span class='lbracket'>[</span><span class='id identifier rubyid_attr'>attr</span><span class='rbracket'>]</span><span class='rbracket'>]</span>
+        <span class='ivar'>@server</span> <span class='op'>=</span> <span class='ivar'>@config</span><span class='period'>.</span><span class='id identifier rubyid_nameserver'>nameserver</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+
+      <span class='kw'>else</span>
+        <span class='kw'>begin</span>
+          <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_attr'>attr</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='op'>+</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_arg'>arg</span><span class='lbracket'>[</span><span class='id identifier rubyid_attr'>attr</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+        <span class='kw'>rescue</span> <span class='const'>Exception</span>
+          <span class='const'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Argument </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_attr'>attr</span><span class='embexpr_end'>}</span><span class='tstring_content'> not valid\n</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span>
+        <span class='kw'>end</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_isr'>isr</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="PacketSender.html" title="Dnsruby::PacketSender (class)">PacketSender</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="PacketSender.html#initialize-instance_method" title="Dnsruby::PacketSender#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='symbol'>:server</span><span class='op'>=&gt;</span><span class='ivar'>@server</span><span class='comma'>,</span> <span class='symbol'>:port</span><span class='op'>=&gt;</span><span class='ivar'>@port</span><span class='comma'>,</span> <span class='symbol'>:dnssec</span><span class='op'>=&gt;</span><span class='ivar'>@dnssec</span><span class='comma'>,</span>
+      <span class='symbol'>:use_tcp</span><span class='op'>=&gt;</span><span class='ivar'>@use_tcp</span><span class='comma'>,</span> <span class='symbol'>:no_tcp</span><span class='op'>=&gt;</span><span class='ivar'>@no_tcp</span><span class='comma'>,</span> <span class='symbol'>:packet_timeout</span><span class='op'>=&gt;</span><span class='ivar'>@packet_timeout</span><span class='comma'>,</span>
+      <span class='symbol'>:tsig</span> <span class='op'>=&gt;</span> <span class='ivar'>@tsig</span><span class='comma'>,</span> <span class='symbol'>:ignore_truncation</span><span class='op'>=&gt;</span><span class='ivar'>@ignore_truncation</span><span class='comma'>,</span>
+      <span class='symbol'>:src_address</span><span class='op'>=&gt;</span><span class='ivar'>@src_address</span><span class='comma'>,</span> <span class='symbol'>:src_address6</span><span class='op'>=&gt;</span><span class='ivar'>@src_address6</span><span class='comma'>,</span> <span class='symbol'>:src_port</span><span class='op'>=&gt;</span><span class='ivar'>@src_port</span><span class='comma'>,</span>
+      <span class='symbol'>:recurse</span><span class='op'>=&gt;</span><span class='ivar'>@recurse</span><span class='comma'>,</span> <span class='symbol'>:udp_size</span><span class='op'>=&gt;</span><span class='ivar'>@udp_size</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@single_resolvers</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_isr'>isr</span><span class='rbracket'>]</span>
+
+  <span class='comment'>#       ResolverRegister::register_single_resolver(self)
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add_opt_rr-instance_method">
+  
+    #<strong>add_opt_rr</strong>(m)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Add the appropriate EDNS OPT RR for the specified packet. This is done</p>
+
+<pre class="code ruby"><code class="ruby">automatically, unless you are using Resolver#send_plain_message
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+168
+169
+170
+171
+172</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/single_resolver.rb', line 168</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_opt_rr'>add_opt_rr</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='rparen'>)</span>
+  <span class='ivar'>@single_res_mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
+    <span class='ivar'>@single_resolvers</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_add_opt_rr'>add_opt_rr</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='rparen'>)</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="packet_timeout=-instance_method">
+  
+    #<strong>packet_timeout=</strong>(t)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='query_timeout=-instance_method'>query_timeout=</span></span>
+    </span>
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+161
+162
+163
+164</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/single_resolver.rb', line 161</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_packet_timeout='>packet_timeout=</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='rparen'>)</span>
+  <span class='ivar'>@packet_timeout</span> <span class='op'>=</span> <span class='id identifier rubyid_t'>t</span>
+  <span class='ivar'>@query_timeout</span> <span class='op'>=</span> <span class='id identifier rubyid_t'>t</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="retry_delay=-instance_method">
+  
+    #<strong>retry_delay=</strong>(n)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>NoMethodError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+157
+158
+159</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/single_resolver.rb', line 157</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_retry_delay='>retry_delay=</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='rparen'>)</span> <span class='comment'># :nodoc:
+</span>  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NoMethodError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SingleResolver does not have retry_delay</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="retry_times=-instance_method">
+  
+    #<strong>retry_times=</strong>(n)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>NoMethodError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+154
+155
+156</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/single_resolver.rb', line 154</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_retry_times='>retry_times=</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='rparen'>)</span> <span class='comment'># :nodoc:
+</span>  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NoMethodError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SingleResolver does not have retry_times</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="server-instance_method">
+  
+    #<strong>server</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+144
+145
+146
+147
+148
+149
+150
+151
+152</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/single_resolver.rb', line 144</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_server'>server</span>
+  <span class='comment'>#       @single_res_mutex.synchronize {
+</span>  <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='ivar'>@configured</span><span class='rparen'>)</span>
+    <span class='ivar'>@config</span><span class='period'>.</span><span class='id identifier rubyid_get_ready'>get_ready</span>
+    <span class='id identifier rubyid_add_config_nameservers'>add_config_nameservers</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='ivar'>@single_resolvers</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_server'>server</span>
+  <span class='comment'>#       }
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="server=-instance_method">
+  
+    #<strong>server=</strong>(s)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/single_resolver.rb', line 128</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_server='>server=</span><span class='lparen'>(</span><span class='id identifier rubyid_s'>s</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='ivar'>@configured</span><span class='rparen'>)</span>
+    <span class='ivar'>@config</span><span class='period'>.</span><span class='id identifier rubyid_get_ready'>get_ready</span>
+  <span class='kw'>end</span>
+  <span class='ivar'>@server</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Config.html" title="Dnsruby::Config (class)">Config</a></span></span><span class='period'>.</span><span class='id identifier rubyid_resolve_server'><span class='object_link'><a href="Config.html#resolve_server-class_method" title="Dnsruby::Config.resolve_server (method)">resolve_server</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_s'>s</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='id identifier rubyid_isr'>isr</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="PacketSender.html" title="Dnsruby::PacketSender (class)">PacketSender</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="PacketSender.html#initialize-instance_method" title="Dnsruby::PacketSender#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='symbol'>:server</span><span class='op'>=&gt;</span><span class='ivar'>@server</span><span class='comma'>,</span> <span class='symbol'>:dnssec</span><span class='op'>=&gt;</span><span class='ivar'>@dnssec</span><span class='comma'>,</span>
+      <span class='symbol'>:use_tcp</span><span class='op'>=&gt;</span><span class='ivar'>@use_tcp</span><span class='comma'>,</span> <span class='symbol'>:no_tcp</span><span class='op'>=&gt;</span><span class='ivar'>@no_tcp</span><span class='comma'>,</span> <span class='symbol'>:packet_timeout</span><span class='op'>=&gt;</span><span class='ivar'>@packet_timeout</span><span class='comma'>,</span>
+      <span class='symbol'>:tsig</span> <span class='op'>=&gt;</span> <span class='ivar'>@tsig</span><span class='comma'>,</span> <span class='symbol'>:ignore_truncation</span><span class='op'>=&gt;</span><span class='ivar'>@ignore_truncation</span><span class='comma'>,</span>
+      <span class='symbol'>:src_address</span><span class='op'>=&gt;</span><span class='ivar'>@src_address</span><span class='comma'>,</span> <span class='symbol'>:src_address6</span><span class='op'>=&gt;</span><span class='ivar'>@src_address6</span><span class='comma'>,</span> <span class='symbol'>:src_port</span><span class='op'>=&gt;</span><span class='ivar'>@src_port</span><span class='comma'>,</span>
+      <span class='symbol'>:recurse</span><span class='op'>=&gt;</span><span class='ivar'>@recurse</span><span class='comma'>,</span> <span class='symbol'>:udp_size</span><span class='op'>=&gt;</span><span class='ivar'>@udp_size</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+
+  <span class='ivar'>@single_res_mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
+    <span class='ivar'>@single_resolvers</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_isr'>isr</span><span class='rbracket'>]</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr  9 10:58:26 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-3.0.0).
+</div>
+
+    </div>
+  </body>
+</html>

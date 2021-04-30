@@ -1,0 +1,2085 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Dnsruby::Dnssec
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Dnsruby::Dnssec";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (D)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span>
+     &raquo; 
+    <span class="title">Dnssec</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Dnsruby::Dnssec
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Dnsruby::Dnssec</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/dnsruby/dnssec.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>RFC4033, section 7</p>
+
+<pre class="code ruby"><code class="ruby">  &quot;There is one more step that a security-aware stub resolver can take
+  if, for whatever reason, it is not able to establish a useful trust
+  relationship with the recursive name servers that it uses: it can
+  perform its own signature validation by setting the Checking Disabled
+  (CD) bit in its query messages.  A validating stub resolver is thus
+  able to treat the DNSSEC signatures as trust relationships between
+  the zone administrators and the stub resolver itself. &quot;
+
+Dnsruby is configured to validate responses by default. However, it is not
+configured with any trusted keys by default. Applications may use the
+verify() method to perform verification with of RRSets of Messages with
+given keys. Alternatively, trusted keys may be added to this class (either
+directly, or by loading the IANA TAR or the DLV ISC ZSK). Validation will then
+be performed from these keys (or the DLV registry, if configured). Negative
+and positive responses are validation.
+
+Messages are tagged with the current security_level (Message::SecurityLevel).
+UNCHECKED means Dnsruby has not attempted to validate the response.
+BOGUS means the response has been checked, and is bogus.
+INSECURE means the response has been validated to be insecure (e.g. in an unsigned zone)
+SECURE means that the response has been verfied to be correct.
+
+Several validators are provided, with each maintaining its own cache of trusted keys.
+If validators are added or removed, the caches of the other validators are not affected.
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Dnssec/ValidationPolicy.html" title="Dnsruby::Dnssec::ValidationPolicy (class)">ValidationPolicy</a></span>
+    
+  
+</p>
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="validation_policy-classvariable" class="">@@validation_policy =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="Dnssec/ValidationPolicy.html" title="Dnsruby::Dnssec::ValidationPolicy (class)">ValidationPolicy</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Dnssec/ValidationPolicy.html#LOCAL_ANCHORS_THEN_ROOT-constant" title="Dnsruby::Dnssec::ValidationPolicy::LOCAL_ANCHORS_THEN_ROOT (constant)">LOCAL_ANCHORS_THEN_ROOT</a></span></span></pre></dd>
+      
+        <dt id="root_verifier-classvariable" class="">@@root_verifier =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="SingleVerifier.html" title="Dnsruby::SingleVerifier (class)">SingleVerifier</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SingleVerifier.html#initialize-instance_method" title="Dnsruby::SingleVerifier#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="SingleVerifier.html" title="Dnsruby::SingleVerifier (class)">SingleVerifier</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SingleVerifier/VerifierType.html" title="Dnsruby::SingleVerifier::VerifierType (class)">VerifierType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SingleVerifier/VerifierType.html#ROOT-constant" title="Dnsruby::SingleVerifier::VerifierType::ROOT (constant)">ROOT</a></span></span><span class='rparen'>)</span></pre></dd>
+      
+        <dt id="root_key-classvariable" class="">@@root_key =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>#NOTE# You may wish to import these via a secure channel yourself, if</p>
+
+<pre class="code ruby"><code class="ruby">using Dnsruby for validation.
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="RR.html" title="Dnsruby::RR (class)">RR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="RR.html#create-class_method" title="Dnsruby::RR.create (method)">create</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>. IN DS 19036 8 2 49AAC11D7B6F6446702E54A1607371607A1A41855200FD2CE1CDDE32F24E8FB5</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></pre></dd>
+      
+        <dt id="root_key_new-classvariable" class="">@@root_key_new =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="RR.html" title="Dnsruby::RR (class)">RR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="RR.html#create-class_method" title="Dnsruby::RR.create (method)">create</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>. IN DS 20326 8 2 E06D44B80B8F1D39A95C0B0D7C65D08458E880409BBC683457104237C7F8EC8D</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></pre></dd>
+      
+        <dt id="dlv_verifier-classvariable" class="">@@dlv_verifier =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="SingleVerifier.html" title="Dnsruby::SingleVerifier (class)">SingleVerifier</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SingleVerifier.html#initialize-instance_method" title="Dnsruby::SingleVerifier#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="SingleVerifier.html" title="Dnsruby::SingleVerifier (class)">SingleVerifier</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SingleVerifier/VerifierType.html" title="Dnsruby::SingleVerifier::VerifierType (class)">VerifierType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SingleVerifier/VerifierType.html#DLV-constant" title="Dnsruby::SingleVerifier::VerifierType::DLV (constant)">DLV</a></span></span><span class='rparen'>)</span></pre></dd>
+      
+        <dt id="anchor_verifier-classvariable" class="">@@anchor_verifier =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>@TODO@ Could add a new one of these for each anchor.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="SingleVerifier.html" title="Dnsruby::SingleVerifier (class)">SingleVerifier</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SingleVerifier.html#initialize-instance_method" title="Dnsruby::SingleVerifier#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="SingleVerifier.html" title="Dnsruby::SingleVerifier (class)">SingleVerifier</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SingleVerifier/VerifierType.html" title="Dnsruby::SingleVerifier::VerifierType (class)">VerifierType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SingleVerifier/VerifierType.html#ANCHOR-constant" title="Dnsruby::SingleVerifier::VerifierType::ANCHOR (constant)">ANCHOR</a></span></span><span class='rparen'>)</span></pre></dd>
+      
+        <dt id="do_validation_with_recursor-classvariable" class="">@@do_validation_with_recursor =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Many nameservers don&#39;t handle DNSSEC correctly yet</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='kw'>true</span></pre></dd>
+      
+        <dt id="default_resolver-classvariable" class="">@@default_resolver =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="Resolver.html" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Resolver.html#initialize-instance_method" title="Dnsruby::Resolver#initialize (method)">new</a></span></span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_dlv_key-class_method" title="add_dlv_key (class method)">.<strong>add_dlv_key</strong>(dlv_key)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Add a trusted Key Signing Key for the ISC DLV registry.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_trust_anchor-class_method" title="add_trust_anchor (class method)">.<strong>add_trust_anchor</strong>(t)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Add a new trust anchor.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_trust_anchor_with_expiration-class_method" title="add_trust_anchor_with_expiration (class method)">.<strong>add_trust_anchor_with_expiration</strong>(k, expiration)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Add the trusted key with the given expiration time.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#anchor_verifier-class_method" title="anchor_verifier (class method)">.<strong>anchor_verifier</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear_trust_anchors-class_method" title="clear_trust_anchors (class method)">.<strong>clear_trust_anchors</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Wipes the cache of trusted keys.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear_trusted_keys-class_method" title="clear_trusted_keys (class method)">.<strong>clear_trusted_keys</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_resolver-class_method" title="default_resolver (class method)">.<strong>default_resolver</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_resolver=-class_method" title="default_resolver= (class method)">.<strong>default_resolver=</strong>(res)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This method overrides the system default resolver configuration for validation  If default_resolver is set, then it will be used to follow the chain of trust.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dlv_verifier-class_method" title="dlv_verifier (class method)">.<strong>dlv_verifier</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#do_validation_with_recursor-class_method" title="do_validation_with_recursor (class method)">.<strong>do_validation_with_recursor</strong>(on)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This method defines the choice of Resolver or Recursor, when the validator  is checking responses.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#do_validation_with_recursor%3F-class_method" title="do_validation_with_recursor? (class method)">.<strong>do_validation_with_recursor?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#no_keys%3F-class_method" title="no_keys? (class method)">.<strong>no_keys?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove_trust_anchor-class_method" title="remove_trust_anchor (class method)">.<strong>remove_trust_anchor</strong>(t)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Remove the trusted key.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reset-class_method" title="reset (class method)">.<strong>reset</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#root_verifier-class_method" title="root_verifier (class method)">.<strong>root_verifier</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#set_hints-class_method" title="set_hints (class method)">.<strong>set_hints</strong>(hints)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#trust_anchors-class_method" title="trust_anchors (class method)">.<strong>trust_anchors</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#try_validation-class_method" title="try_validation (class method)">.<strong>try_validation</strong>(last_level, last_error, last_error_level, proc, msg, query)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc:.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validate-class_method" title="validate (class method)">.<strong>validate</strong>(msg)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns true for secure/insecure, false otherwise  This method will set the security_level on msg to the appropriate value.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validate_with_anchors-class_method" title="validate_with_anchors (class method)">.<strong>validate_with_anchors</strong>(msg, query)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validate_with_dlv-class_method" title="validate_with_dlv (class method)">.<strong>validate_with_dlv</strong>(msg, query)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validate_with_query-class_method" title="validate_with_query (class method)">.<strong>validate_with_query</strong>(query, msg)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validate_with_root-class_method" title="validate_with_root (class method)">.<strong>validate_with_root</strong>(msg, query)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validation_policy-class_method" title="validation_policy (class method)">.<strong>validation_policy</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validation_policy=-class_method" title="validation_policy= (class method)">.<strong>validation_policy=</strong>(p)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#verify-class_method" title="verify (class method)">.<strong>verify</strong>(msg, keys = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#verify_rrset-class_method" title="verify_rrset (class method)">.<strong>verify_rrset</strong>(rrset, keys = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add_dlv_key-class_method">
+  
+    .<strong>add_dlv_key</strong>(dlv_key)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Add a trusted Key Signing Key for the ISC DLV registry.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+95
+96
+97</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 95</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::Dnssec (class)">Dnssec</a></span></span><span class='period'>.</span><span class='id identifier rubyid_add_dlv_key'>add_dlv_key</span><span class='lparen'>(</span><span class='id identifier rubyid_dlv_key'>dlv_key</span><span class='rparen'>)</span>
+  <span class='cvar'>@@dlv_verifier</span><span class='period'>.</span><span class='id identifier rubyid_add_dlv_key'>add_dlv_key</span><span class='lparen'>(</span><span class='id identifier rubyid_dlv_key'>dlv_key</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="add_trust_anchor-class_method">
+  
+    .<strong>add_trust_anchor</strong>(t)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Add a new trust anchor</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+99
+100
+101
+102</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 99</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::Dnssec (class)">Dnssec</a></span></span><span class='period'>.</span><span class='id identifier rubyid_add_trust_anchor'>add_trust_anchor</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='rparen'>)</span>
+  <span class='comment'>#  @TODO@ Create a new verifier?
+</span>  <span class='cvar'>@@anchor_verifier</span><span class='period'>.</span><span class='id identifier rubyid_add_trust_anchor'>add_trust_anchor</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="add_trust_anchor_with_expiration-class_method">
+  
+    .<strong>add_trust_anchor_with_expiration</strong>(k, expiration)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Add the trusted key with the given expiration time</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+104
+105
+106
+107</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 104</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_add_trust_anchor_with_expiration'>add_trust_anchor_with_expiration</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_expiration'>expiration</span><span class='rparen'>)</span>
+  <span class='comment'>#  Create a new verifier?
+</span>  <span class='cvar'>@@anchor_verifier</span><span class='period'>.</span><span class='id identifier rubyid_add_trust_anchor_with_expiration'>add_trust_anchor_with_expiration</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_expiration'>expiration</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="anchor_verifier-class_method">
+  
+    .<strong>anchor_verifier</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+302
+303
+304</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 302</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_anchor_verifier'>anchor_verifier</span>
+  <span class='kw'>return</span> <span class='cvar'>@@anchor_verifier</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="clear_trust_anchors-class_method">
+  
+    .<strong>clear_trust_anchors</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Wipes the cache of trusted keys</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+113
+114
+115</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 113</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_clear_trust_anchors'>clear_trust_anchors</span>
+  <span class='cvar'>@@anchor_verifier</span><span class='period'>.</span><span class='id identifier rubyid_clear_trust_anchors'>clear_trust_anchors</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="clear_trusted_keys-class_method">
+  
+    .<strong>clear_trusted_keys</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+121
+122
+123
+124
+125</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 121</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_clear_trusted_keys'>clear_trusted_keys</span>
+  <span class='lbracket'>[</span><span class='cvar'>@@anchor_verifier</span><span class='comma'>,</span> <span class='cvar'>@@root_verifier</span><span class='comma'>,</span> <span class='cvar'>@@dlv_verifier</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+    <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_clear_trusted_keys'>clear_trusted_keys</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="default_resolver-class_method">
+  
+    .<strong>default_resolver</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+176
+177
+178</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 176</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_default_resolver'>default_resolver</span>
+  <span class='kw'>return</span> <span class='cvar'>@@default_resolver</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="default_resolver=-class_method">
+  
+    .<strong>default_resolver=</strong>(res)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This method overrides the system default resolver configuration for validation</p>
+
+<pre class="code ruby"><code class="ruby">If default_resolver is set, then it will be used to follow the chain of trust.
+If it is not, then the default system resolver will be used (unless do_validation_with_recursor
+is set.
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+173
+174
+175</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 173</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_default_resolver='>default_resolver=</span><span class='lparen'>(</span><span class='id identifier rubyid_res'>res</span><span class='rparen'>)</span>
+  <span class='cvar'>@@default_resolver</span> <span class='op'>=</span> <span class='id identifier rubyid_res'>res</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="dlv_verifier-class_method">
+  
+    .<strong>dlv_verifier</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+305
+306
+307</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 305</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_dlv_verifier'>dlv_verifier</span>
+  <span class='kw'>return</span> <span class='cvar'>@@dlv_verifier</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="do_validation_with_recursor-class_method">
+  
+    .<strong>do_validation_with_recursor</strong>(on)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This method defines the choice of Resolver or Recursor, when the validator</p>
+
+<pre class="code ruby"><code class="ruby">is checking responses.
+If set to true, then a Recursor will be used to query for the DNSSEC records.
+Otherwise, the default system resolver will be used.
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+163
+164
+165</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 163</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_do_validation_with_recursor'>do_validation_with_recursor</span><span class='lparen'>(</span><span class='id identifier rubyid_on'>on</span><span class='rparen'>)</span>
+  <span class='cvar'>@@do_validation_with_recursor</span> <span class='op'>=</span> <span class='id identifier rubyid_on'>on</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="do_validation_with_recursor?-class_method">
+  
+    .<strong>do_validation_with_recursor?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+166
+167
+168</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 166</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_do_validation_with_recursor?'>do_validation_with_recursor?</span>
+  <span class='kw'>return</span> <span class='cvar'>@@do_validation_with_recursor</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="no_keys?-class_method">
+  
+    .<strong>no_keys?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 146</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_no_keys?'>no_keys?</span>
+  <span class='id identifier rubyid_no_keys'>no_keys</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='lbracket'>[</span><span class='cvar'>@@anchor_verifier</span><span class='comma'>,</span> <span class='cvar'>@@root_verifier</span><span class='comma'>,</span> <span class='cvar'>@@dlv_verifier</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_trusted_keys'>trusted_keys</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='op'>||</span>
+          <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_trust_anchors'>trust_anchors</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_no_keys'>no_keys</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='kw'>end</span>
+  <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_no_keys'>no_keys</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="remove_trust_anchor-class_method">
+  
+    .<strong>remove_trust_anchor</strong>(t)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Remove the trusted key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+109
+110
+111</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 109</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::Dnssec (class)">Dnssec</a></span></span><span class='period'>.</span><span class='id identifier rubyid_remove_trust_anchor'>remove_trust_anchor</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='rparen'>)</span>
+  <span class='cvar'>@@anchor_verifier</span><span class='period'>.</span><span class='id identifier rubyid_remove_trust_anchor'>remove_trust_anchor</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reset-class_method">
+  
+    .<strong>reset</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 127</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_reset'>reset</span>
+  <span class='cvar'>@@validation_policy</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Dnssec/ValidationPolicy.html" title="Dnsruby::Dnssec::ValidationPolicy (class)">ValidationPolicy</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Dnssec/ValidationPolicy.html#LOCAL_ANCHORS_THEN_ROOT-constant" title="Dnsruby::Dnssec::ValidationPolicy::LOCAL_ANCHORS_THEN_ROOT (constant)">LOCAL_ANCHORS_THEN_ROOT</a></span></span>
+  <span class='cvar'>@@root_verifier</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SingleVerifier.html" title="Dnsruby::SingleVerifier (class)">SingleVerifier</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SingleVerifier.html#initialize-instance_method" title="Dnsruby::SingleVerifier#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="SingleVerifier.html" title="Dnsruby::SingleVerifier (class)">SingleVerifier</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SingleVerifier/VerifierType.html" title="Dnsruby::SingleVerifier::VerifierType (class)">VerifierType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SingleVerifier/VerifierType.html#ROOT-constant" title="Dnsruby::SingleVerifier::VerifierType::ROOT (constant)">ROOT</a></span></span><span class='rparen'>)</span>
+  <span class='cvar'>@@root_verifier</span><span class='period'>.</span><span class='id identifier rubyid_add_root_ds'>add_root_ds</span><span class='lparen'>(</span><span class='cvar'>@@root_key</span><span class='rparen'>)</span>
+  <span class='cvar'>@@root_verifier</span><span class='period'>.</span><span class='id identifier rubyid_add_root_ds'>add_root_ds</span><span class='lparen'>(</span><span class='cvar'>@@root_key_new</span><span class='rparen'>)</span>
+
+  <span class='cvar'>@@dlv_verifier</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SingleVerifier.html" title="Dnsruby::SingleVerifier (class)">SingleVerifier</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SingleVerifier.html#initialize-instance_method" title="Dnsruby::SingleVerifier#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="SingleVerifier.html" title="Dnsruby::SingleVerifier (class)">SingleVerifier</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SingleVerifier/VerifierType.html" title="Dnsruby::SingleVerifier::VerifierType (class)">VerifierType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SingleVerifier/VerifierType.html#DLV-constant" title="Dnsruby::SingleVerifier::VerifierType::DLV (constant)">DLV</a></span></span><span class='rparen'>)</span>
+
+  <span class='comment'>#  @TODO@ Could add a new one of these for each anchor.
+</span>  <span class='cvar'>@@anchor_verifier</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SingleVerifier.html" title="Dnsruby::SingleVerifier (class)">SingleVerifier</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="SingleVerifier.html#initialize-instance_method" title="Dnsruby::SingleVerifier#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="SingleVerifier.html" title="Dnsruby::SingleVerifier (class)">SingleVerifier</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SingleVerifier/VerifierType.html" title="Dnsruby::SingleVerifier::VerifierType (class)">VerifierType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SingleVerifier/VerifierType.html#ANCHOR-constant" title="Dnsruby::SingleVerifier::VerifierType::ANCHOR (constant)">ANCHOR</a></span></span><span class='rparen'>)</span>
+  <span class='cvar'>@@do_validation_with_recursor</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='comment'># Many nameservers don&#39;t handle DNSSEC correctly yet
+</span>  <span class='cvar'>@@default_resolver</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Resolver.html" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Resolver.html#initialize-instance_method" title="Dnsruby::Resolver#initialize (method)">new</a></span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="root_verifier-class_method">
+  
+    .<strong>root_verifier</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+308
+309
+310</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 308</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_root_verifier'>root_verifier</span>
+  <span class='kw'>return</span> <span class='cvar'>@@root_verifier</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="set_hints-class_method">
+  
+    .<strong>set_hints</strong>(hints)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+141
+142
+143
+144</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 141</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_set_hints'>set_hints</span><span class='lparen'>(</span><span class='id identifier rubyid_hints'>hints</span><span class='rparen'>)</span>
+  <span class='cvar'>@@root_verifier</span><span class='period'>.</span><span class='id identifier rubyid_set_hints'>set_hints</span><span class='lparen'>(</span><span class='id identifier rubyid_hints'>hints</span><span class='rparen'>)</span>
+  <span class='cvar'>@@anchor_verifier</span><span class='period'>.</span><span class='id identifier rubyid_set_hints'>set_hints</span><span class='lparen'>(</span><span class='id identifier rubyid_hints'>hints</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="trust_anchors-class_method">
+  
+    .<strong>trust_anchors</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+117
+118
+119</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 117</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_trust_anchors'>trust_anchors</span>
+  <span class='kw'>return</span> <span class='cvar'>@@anchor_verifier</span><span class='period'>.</span><span class='id identifier rubyid_trust_anchors'>trust_anchors</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="try_validation-class_method">
+  
+    .<strong>try_validation</strong>(last_level, last_error, last_error_level, proc, msg, query)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 265</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_try_validation'>try_validation</span><span class='lparen'>(</span><span class='id identifier rubyid_last_level'>last_level</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error'>last_error</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error_level'>last_error_level</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>   <span class='comment'># :nodoc:
+</span>  <span class='kw'>begin</span>
+    <span class='id identifier rubyid_proc'>proc</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_last_level'>last_level</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Message/SecurityLevel.html" title="Dnsruby::Message::SecurityLevel (class)">SecurityLevel</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="CodeMapper.html#initialize-instance_method" title="Dnsruby::CodeMapper#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_security_level'>security_level</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span><span class='comma'>,</span> <span class='id identifier rubyid_last_level'>last_level</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_max'>max</span><span class='rparen'>)</span>
+  <span class='kw'>rescue</span> <span class='const'><span class='object_link'><a href="VerifyError.html" title="Dnsruby::VerifyError (class)">VerifyError</a></span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_last_error_level'>last_error_level</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_last_level'>last_level</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_last_error'>last_error</span> <span class='op'>=</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+      <span class='id identifier rubyid_last_error_level'>last_error_level</span> <span class='op'>=</span> <span class='id identifier rubyid_last_level'>last_level</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_last_level'>last_level</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error'>last_error</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error_level'>last_error_level</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate-class_method">
+  
+    .<strong>validate</strong>(msg)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns true for secure/insecure, false otherwise</p>
+
+<pre class="code ruby"><code class="ruby">This method will set the security_level on msg to the appropriate value.
+Could be : secure, insecure, bogus or indeterminate
+If an error is encountered during verification, then the thrown exception
+will define the error.
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+185
+186
+187
+188
+189</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 185</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_validate'>validate</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_query'>query</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Message.html#initialize-instance_method" title="Dnsruby::Message#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_query'>query</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_cd'>cd</span><span class='op'>=</span><span class='kw'>true</span>
+  <span class='kw'>return</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_validate_with_query'>validate_with_query</span><span class='lparen'>(</span><span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate_with_anchors-class_method">
+  
+    .<strong>validate_with_anchors</strong>(msg, query)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+278
+279
+280</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 278</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_validate_with_anchors'>validate_with_anchors</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='cvar'>@@anchor_verifier</span><span class='period'>.</span><span class='id identifier rubyid_validate'>validate</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate_with_dlv-class_method">
+  
+    .<strong>validate_with_dlv</strong>(msg, query)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+286
+287
+288</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 286</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_validate_with_dlv'>validate_with_dlv</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='cvar'>@@dlv_verifier</span><span class='period'>.</span><span class='id identifier rubyid_validate'>validate</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate_with_query-class_method">
+  
+    .<strong>validate_with_query</strong>(query, msg)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 191</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_validate_with_query'>validate_with_query</span><span class='lparen'>(</span><span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>false</span>
+  <span class='kw'>end</span>
+  <span class='comment'>#  First, just check there is something to validate!
+</span>  <span class='id identifier rubyid_found_sigs'>found_sigs</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_each_resource'>each_resource</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_rr'>rr</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Types.html#RRSIG-constant" title="Dnsruby::Types::RRSIG (constant)">RRSIG</a></span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_found_sigs'>found_sigs</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='kw'>end</span>
+  <span class='rbrace'>}</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_found_sigs'>found_sigs</span><span class='rparen'>)</span>
+    <span class='kw'>begin</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_verify'>verify</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_security_level'>security_level</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Message/SecurityLevel.html" title="Dnsruby::Message::SecurityLevel (class)">SecurityLevel</a></span></span><span class='period'>.</span><span class='const'>SECURE</span>
+        <span class='kw'>return</span> <span class='kw'>true</span>
+      <span class='kw'>end</span>
+    <span class='kw'>rescue</span> <span class='const'><span class='object_link'><a href="VerifyError.html" title="Dnsruby::VerifyError (class)">VerifyError</a></span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+      <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_security_error'>security_error</span> <span class='op'>=</span> <span class='id identifier rubyid_e'>e</span>
+      <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_security_level'>security_level</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Message/SecurityLevel.html" title="Dnsruby::Message::SecurityLevel (class)">SecurityLevel</a></span></span><span class='period'>.</span><span class='const'>BOGUS</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'>#  SHOULD ALWAYS VERIFY DNSSEC-SIGNED RESPONSES?
+</span>  <span class='comment'>#  Yes - if a trust anchor is configured. Otherwise, act on CD bit (in query)
+</span>  <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Checking whether to validate, query.cd = </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_query'>query</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_cd'>cd</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='cvar'>@@validation_policy</span> <span class='op'>&gt;</span> <span class='const'><span class='object_link'><a href="Dnssec/ValidationPolicy.html" title="Dnsruby::Dnssec::ValidationPolicy (class)">ValidationPolicy</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Dnssec/ValidationPolicy.html#ALWAYS_ROOT_ONLY-constant" title="Dnsruby::Dnssec::ValidationPolicy::ALWAYS_ROOT_ONLY (constant)">ALWAYS_ROOT_ONLY</a></span></span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_trust_anchors'>trust_anchors</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>||</span>
+        <span class='comment'>#  Check query here, and validate if CD is true
+</span>      <span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_query'>query</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_cd'>cd</span> <span class='op'>==</span> <span class='kw'>true</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='comment'># &amp;&amp; (query.do_validation)))
+</span>    <span class='const'><span class='object_link'><a href="TheLog.html" title="Dnsruby::TheLog (class)">TheLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Starting validation</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+    <span class='comment'>#  Validate!
+</span>    <span class='comment'>#  Need to think about trapping/storing exceptions and security_levels here
+</span>    <span class='id identifier rubyid_last_error'>last_error</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_last_level'>last_level</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Message/SecurityLevel.html" title="Dnsruby::Message::SecurityLevel (class)">SecurityLevel</a></span></span><span class='period'>.</span><span class='const'>BOGUS</span>
+    <span class='id identifier rubyid_last_error_level'>last_error_level</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Message/SecurityLevel.html" title="Dnsruby::Message::SecurityLevel (class)">SecurityLevel</a></span></span><span class='period'>.</span><span class='const'>BOGUS</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='cvar'>@@validation_policy</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Dnssec/ValidationPolicy.html" title="Dnsruby::Dnssec::ValidationPolicy (class)">ValidationPolicy</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Dnssec/ValidationPolicy.html#ALWAYS_LOCAL_ANCHORS_ONLY-constant" title="Dnsruby::Dnssec::ValidationPolicy::ALWAYS_LOCAL_ANCHORS_ONLY (constant)">ALWAYS_LOCAL_ANCHORS_ONLY</a></span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_last_level'>last_level</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error'>last_error</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error_level'>last_error_level</span> <span class='op'>=</span> <span class='id identifier rubyid_try_validation'>try_validation</span><span class='lparen'>(</span><span class='id identifier rubyid_last_level'>last_level</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error'>last_error</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error_level'>last_error_level</span><span class='comma'>,</span>
+        <span class='const'>Proc</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_q'>q</span><span class='op'>|</span> <span class='id identifier rubyid_validate_with_anchors'>validate_with_anchors</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_q'>q</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>
+    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='cvar'>@@validation_policy</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Dnssec/ValidationPolicy.html" title="Dnsruby::Dnssec::ValidationPolicy (class)">ValidationPolicy</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Dnssec/ValidationPolicy.html#ALWAYS_ROOT_ONLY-constant" title="Dnsruby::Dnssec::ValidationPolicy::ALWAYS_ROOT_ONLY (constant)">ALWAYS_ROOT_ONLY</a></span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_last_level'>last_level</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error'>last_error</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error_level'>last_error_level</span> <span class='op'>=</span> <span class='id identifier rubyid_try_validation'>try_validation</span><span class='lparen'>(</span><span class='id identifier rubyid_last_level'>last_level</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error'>last_error</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error_level'>last_error_level</span><span class='comma'>,</span>
+        <span class='const'>Proc</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_q'>q</span><span class='op'>|</span> <span class='id identifier rubyid_validate_with_root'>validate_with_root</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_q'>q</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>
+    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='cvar'>@@validation_policy</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Dnssec/ValidationPolicy.html" title="Dnsruby::Dnssec::ValidationPolicy (class)">ValidationPolicy</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Dnssec/ValidationPolicy.html#LOCAL_ANCHORS_THEN_ROOT-constant" title="Dnsruby::Dnssec::ValidationPolicy::LOCAL_ANCHORS_THEN_ROOT (constant)">LOCAL_ANCHORS_THEN_ROOT</a></span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_last_level'>last_level</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error'>last_error</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error_level'>last_error_level</span> <span class='op'>=</span> <span class='id identifier rubyid_try_validation'>try_validation</span><span class='lparen'>(</span><span class='id identifier rubyid_last_level'>last_level</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error'>last_error</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error_level'>last_error_level</span><span class='comma'>,</span>
+        <span class='const'>Proc</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_q'>q</span><span class='op'>|</span> <span class='id identifier rubyid_validate_with_anchors'>validate_with_anchors</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_q'>q</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_last_level'>last_level</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Message/SecurityLevel.html" title="Dnsruby::Message::SecurityLevel (class)">SecurityLevel</a></span></span><span class='period'>.</span><span class='const'>SECURE</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_last_level'>last_level</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error'>last_error</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error_level'>last_error_level</span> <span class='op'>=</span> <span class='id identifier rubyid_try_validation'>try_validation</span><span class='lparen'>(</span><span class='id identifier rubyid_last_level'>last_level</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error'>last_error</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error_level'>last_error_level</span><span class='comma'>,</span>
+          <span class='const'>Proc</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_q'>q</span><span class='op'>|</span> <span class='id identifier rubyid_validate_with_root'>validate_with_root</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_q'>q</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='cvar'>@@validation_policy</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="Dnssec/ValidationPolicy.html" title="Dnsruby::Dnssec::ValidationPolicy (class)">ValidationPolicy</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Dnssec/ValidationPolicy.html#ROOT_THEN_LOCAL_ANCHORS-constant" title="Dnsruby::Dnssec::ValidationPolicy::ROOT_THEN_LOCAL_ANCHORS (constant)">ROOT_THEN_LOCAL_ANCHORS</a></span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_last_level'>last_level</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error'>last_error</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error_level'>last_error_level</span> <span class='op'>=</span> <span class='id identifier rubyid_try_validation'>try_validation</span><span class='lparen'>(</span><span class='id identifier rubyid_last_level'>last_level</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error'>last_error</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error_level'>last_error_level</span><span class='comma'>,</span>
+        <span class='const'>Proc</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_q'>q</span><span class='op'>|</span> <span class='id identifier rubyid_validate_with_root'>validate_with_root</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_q'>q</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_last_level'>last_level</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Message/SecurityLevel.html" title="Dnsruby::Message::SecurityLevel (class)">SecurityLevel</a></span></span><span class='period'>.</span><span class='const'>SECURE</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_last_level'>last_level</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error'>last_error</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error_level'>last_error_level</span> <span class='op'>=</span> <span class='id identifier rubyid_try_validation'>try_validation</span><span class='lparen'>(</span><span class='id identifier rubyid_last_level'>last_level</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error'>last_error</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error_level'>last_error_level</span><span class='comma'>,</span>
+          <span class='const'>Proc</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_q'>q</span><span class='op'>|</span> <span class='id identifier rubyid_validate_with_anchors'>validate_with_anchors</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_q'>q</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_last_level'>last_level</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Message/SecurityLevel.html" title="Dnsruby::Message::SecurityLevel (class)">SecurityLevel</a></span></span><span class='period'>.</span><span class='const'>SECURE</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_last_level'>last_level</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Message/SecurityLevel.html" title="Dnsruby::Message::SecurityLevel (class)">SecurityLevel</a></span></span><span class='period'>.</span><span class='const'>BOGUS</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_last_level'>last_level</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error'>last_error</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error_level'>last_error_level</span> <span class='op'>=</span> <span class='id identifier rubyid_try_validation'>try_validation</span><span class='lparen'>(</span><span class='id identifier rubyid_last_level'>last_level</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error'>last_error</span><span class='comma'>,</span> <span class='id identifier rubyid_last_error_level'>last_error_level</span><span class='comma'>,</span>
+        <span class='const'>Proc</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_q'>q</span><span class='op'>|</span> <span class='id identifier rubyid_validate_with_dlv'>validate_with_dlv</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_q'>q</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='comment'>#  Set the message security level!
+</span>    <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_security_level'>security_level</span> <span class='op'>=</span> <span class='id identifier rubyid_last_level'>last_level</span>
+    <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_security_error'>security_error</span> <span class='op'>=</span> <span class='id identifier rubyid_last_error'>last_error</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_last_error'>last_error</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_last_error'>last_error</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ification error</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_security_level'>security_level</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Message/SecurityLevel.html" title="Dnsruby::Message::SecurityLevel (class)">SecurityLevel</a></span></span><span class='period'>.</span><span class='const'>BOGUS</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="VerifyError.html" title="Dnsruby::VerifyError (class)">VerifyError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_last_error'>last_error</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_last_level'>last_level</span> <span class='op'>&lt;</span> <span class='int'>0</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_security_level'>security_level</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span> <span class='op'>&gt;</span> <span class='const'><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Message/SecurityLevel.html" title="Dnsruby::Message::SecurityLevel (class)">SecurityLevel</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Message/SecurityLevel.html#UNCHECKED-constant" title="Dnsruby::Message::SecurityLevel::UNCHECKED (constant)">UNCHECKED</a></span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_security_level'>security_level</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Message.html" title="Dnsruby::Message (class)">Message</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Message/SecurityLevel.html" title="Dnsruby::Message::SecurityLevel (class)">SecurityLevel</a></span></span><span class='period'>.</span><span class='const'>UNCHECKED</span>
+  <span class='kw'>return</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate_with_root-class_method">
+  
+    .<strong>validate_with_root</strong>(msg, query)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+282
+283
+284</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 282</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_validate_with_root'>validate_with_root</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='cvar'>@@root_verifier</span><span class='period'>.</span><span class='id identifier rubyid_validate'>validate</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validation_policy-class_method">
+  
+    .<strong>validation_policy</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+74
+75
+76</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 74</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::Dnssec (class)">Dnssec</a></span></span><span class='period'>.</span><span class='id identifier rubyid_validation_policy'>validation_policy</span>
+  <span class='cvar'>@@validation_policy</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validation_policy=-class_method">
+  
+    .<strong>validation_policy=</strong>(p)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+68
+69
+70
+71
+72
+73</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 68</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::Dnssec (class)">Dnssec</a></span></span><span class='period'>.</span><span class='id identifier rubyid_validation_policy='>validation_policy=</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span> <span class='op'>&gt;=</span> <span class='const'><span class='object_link'><a href="Dnssec/ValidationPolicy.html" title="Dnsruby::Dnssec::ValidationPolicy (class)">ValidationPolicy</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Dnssec/ValidationPolicy.html#ALWAYS_ROOT_ONLY-constant" title="Dnsruby::Dnssec::ValidationPolicy::ALWAYS_ROOT_ONLY (constant)">ALWAYS_ROOT_ONLY</a></span></span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span> <span class='op'>&lt;=</span> <span class='const'><span class='object_link'><a href="Dnssec/ValidationPolicy.html" title="Dnsruby::Dnssec::ValidationPolicy (class)">ValidationPolicy</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Dnssec/ValidationPolicy.html#ALWAYS_LOCAL_ANCHORS_ONLY-constant" title="Dnsruby::Dnssec::ValidationPolicy::ALWAYS_LOCAL_ANCHORS_ONLY (constant)">ALWAYS_LOCAL_ANCHORS_ONLY</a></span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='cvar'>@@validation_policy</span> <span class='op'>=</span> <span class='id identifier rubyid_p'>p</span>
+    <span class='comment'>#  @TODO@ Should we be clearing the trusted keys now?
+</span>  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="verify-class_method">
+  
+    .<strong>verify</strong>(msg, keys = nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 290</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_verify'>verify</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_keys'>keys</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>begin</span>
+    <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='cvar'>@@anchor_verifier</span><span class='period'>.</span><span class='id identifier rubyid_verify'>verify</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_keys'>keys</span><span class='rparen'>)</span>
+  <span class='kw'>rescue</span> <span class='const'><span class='object_link'><a href="VerifyError.html" title="Dnsruby::VerifyError (class)">VerifyError</a></span></span>
+    <span class='kw'>begin</span>
+      <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='cvar'>@@root_verifier</span><span class='period'>.</span><span class='id identifier rubyid_verify'>verify</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_keys'>keys</span><span class='rparen'>)</span>
+    <span class='kw'>rescue</span> <span class='const'><span class='object_link'><a href="VerifyError.html" title="Dnsruby::VerifyError (class)">VerifyError</a></span></span>
+      <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='cvar'>@@dlv_verifier</span><span class='period'>.</span><span class='id identifier rubyid_verify'>verify</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_keys'>keys</span><span class='rparen'>)</span> <span class='comment'># Will carry error to client
+</span>    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="verify_rrset-class_method">
+  
+    .<strong>verify_rrset</strong>(rrset, keys = nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+315
+316
+317
+318
+319</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/dnssec.rb', line 315</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_verify_rrset'>verify_rrset</span><span class='lparen'>(</span><span class='id identifier rubyid_rrset'>rrset</span><span class='comma'>,</span> <span class='id identifier rubyid_keys'>keys</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='cvar'>@@anchor_verifier</span><span class='period'>.</span><span class='id identifier rubyid_verify_rrset'>verify_rrset</span><span class='lparen'>(</span><span class='id identifier rubyid_rrset'>rrset</span><span class='comma'>,</span> <span class='id identifier rubyid_keys'>keys</span><span class='rparen'>)</span> <span class='op'>||</span>
+        <span class='cvar'>@@root_verifier</span><span class='period'>.</span><span class='id identifier rubyid_verify_rrset'>verify_rrset</span><span class='lparen'>(</span><span class='id identifier rubyid_rrset'>rrset</span><span class='comma'>,</span> <span class='id identifier rubyid_keys'>keys</span><span class='rparen'>)</span> <span class='op'>||</span>
+        <span class='cvar'>@@dlv_verifier</span><span class='period'>.</span><span class='id identifier rubyid_verify_rrset'>verify_rrset</span><span class='lparen'>(</span><span class='id identifier rubyid_rrset'>rrset</span><span class='comma'>,</span> <span class='id identifier rubyid_keys'>keys</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr  9 10:58:08 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-3.0.0).
+</div>
+
+    </div>
+  </body>
+</html>

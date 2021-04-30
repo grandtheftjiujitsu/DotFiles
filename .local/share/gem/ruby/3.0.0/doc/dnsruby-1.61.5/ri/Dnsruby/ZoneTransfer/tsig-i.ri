@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	tsig:ETI"Dnsruby::ZoneTransfer#tsig;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I".The TSIG record used to sign the transfer;T:
+@fileI"!lib/dnsruby/zone_transfer.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::ZoneTransfer;TcRDoc::NormalClass0

@@ -1,0 +1,2621 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Dnsruby::RR::TSIG
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Dnsruby::RR::TSIG";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (T)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">RR</a></span></span>
+     &raquo; 
+    <span class="title">TSIG</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Dnsruby::RR::TSIG
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">Dnsruby::RR</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">Dnsruby::RR</a></span></li>
+          
+            <li class="next">Dnsruby::RR::TSIG</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/dnsruby/resource/TSIG.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>TSIG implements RFC2845.</p>
+
+<p>“This protocol allows for transaction level authentication using shared secrets and one way hashing.  It can be used to authenticate dynamic updates as coming from an approved client, or to authenticate responses as coming from an approved recursive name server.”</p>
+
+<p>A Dnsruby::RR::TSIG can represent the data present in a TSIG RR. However, it can also represent the data (specified in RFC2845) used to sign or verify a DNS message.</p>
+
+<p>Example code :</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Resolver.html" title="Dnsruby::Resolver (class)">Resolver</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Resolver.html#initialize-instance_method" title="Dnsruby::Resolver#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ns0.validation-test-servers.nominet.org.uk</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+<span class='comment'># Now configure the resolver with the TSIG key for signing/verifying
+</span><span class='const'>KEY_NAME</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rubytsig</span><span class='tstring_end'>&quot;</span></span>
+<span class='const'>KEY</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>8n6gugn4aJ7MazyNlMccGKH1WxD2B3UvN/O/RA6iBupO2/03u9CTa3Ewz3gBWTSBCH3crY4Kk+tigNdeJBAvrw==</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_tsig'>tsig</span><span class='op'>=</span><span class='const'>KEY_NAME</span><span class='comma'>,</span> <span class='const'>KEY</span>
+
+<span class='id identifier rubyid_update'>update</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Update.html" title="Dnsruby::Update (class)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Update.html#initialize-instance_method" title="Dnsruby::Update#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>validation-test-servers.nominet.org.uk</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='comment'># Generate update record name, and test it has been made. Then delete it and check it has been deleted
+</span><span class='id identifier rubyid_update_name'>update_name</span> <span class='op'>=</span> <span class='id identifier rubyid_generate_update_name'>generate_update_name</span>
+<span class='id identifier rubyid_update'>update</span><span class='period'>.</span><span class='id identifier rubyid_absent'>absent</span><span class='lparen'>(</span><span class='id identifier rubyid_update_name'>update_name</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_update'>update</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_update_name'>update_name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>TXT</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>100</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>test signed update</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+<span class='comment'># Resolver will automatically sign message and verify response
+</span><span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_send_message'>send_message</span><span class='lparen'>(</span><span class='id identifier rubyid_update'>update</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_assert'>assert</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_verified?'>verified?</span><span class='rparen'>)</span> <span class='comment'># Check that the response has been verified
+</span></code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="HMAC_MD5-constant" class="">HMAC_MD5 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../Name.html" title="Dnsruby::Name (class)">Name</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="../Name.html#create-class_method" title="Dnsruby::Name.create (method)">create</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HMAC-MD5.SIG-ALG.REG.INT.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></pre></dd>
+      
+        <dt id="HMAC_SHA1-constant" class="">HMAC_SHA1 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../Name.html" title="Dnsruby::Name (class)">Name</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="../Name.html#create-class_method" title="Dnsruby::Name.create (method)">create</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hmac-sha1.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></pre></dd>
+      
+        <dt id="HMAC_SHA256-constant" class="">HMAC_SHA256 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../Name.html" title="Dnsruby::Name (class)">Name</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="../Name.html#create-class_method" title="Dnsruby::Name.create (method)">create</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hmac-sha256.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></pre></dd>
+      
+        <dt id="HMAC_SHA512-constant" class="">HMAC_SHA512 =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../Name.html" title="Dnsruby::Name (class)">Name</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="../Name.html#create-class_method" title="Dnsruby::Name.create (method)">create</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hmac-sha512.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></pre></dd>
+      
+        <dt id="DEFAULT_FUDGE-constant" class="">DEFAULT_FUDGE =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>300</span></pre></dd>
+      
+        <dt id="DEFAULT_ALGORITHM-constant" class="">DEFAULT_ALGORITHM =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="#HMAC_MD5-constant" title="Dnsruby::RR::TSIG::HMAC_MD5 (constant)">HMAC_MD5</a></span></span></pre></dd>
+      
+        <dt id="TypeValue-constant" class="">TypeValue =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Types.html#TSIG-constant" title="Dnsruby::Types::TSIG (constant)">TSIG</a></span></span></pre></dd>
+      
+        <dt id="ClassValue-constant" class="">ClassValue =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='kw'>nil</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+  
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">Dnsruby::RR</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RR.html#ClassInsensitiveTypes-constant" title="Dnsruby::RR::ClassInsensitiveTypes (constant)">ClassInsensitiveTypes</a></span></p>
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#algorithm-instance_method" title="#algorithm (instance method)">#<strong>algorithm</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Gets or sets the domain name that specifies the name of the algorithm.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#error-instance_method" title="#error (instance method)">#<strong>error</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the RCODE covering TSIG processing.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#fudge-instance_method" title="#fudge (instance method)">#<strong>fudge</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Gets or sets the “fudge”, i.e., the seconds of error permitted in the signing time.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#key-instance_method" title="#key (instance method)">#<strong>key</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Stores the secret key used for signing/verifying messages.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#mac-instance_method" title="#mac (instance method)">#<strong>mac</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the message authentication code (MAC) as a string of hex characters.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#mac_size-instance_method" title="#mac_size (instance method)">#<strong>mac_size</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the number of octets in the message authentication code (MAC).</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#original_id-instance_method" title="#original_id (instance method)">#<strong>original_id</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Gets or sets the original message ID.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#other_data-instance_method" title="#other_data (instance method)">#<strong>other_data</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the Other Data.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#other_size-instance_method" title="#other_size (instance method)">#<strong>other_size</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the length of the Other Data.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#time_signed-instance_method" title="#time_signed (instance method)">#<strong>time_signed</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Gets or sets the signing time as the number of seconds since 1 Jan 1970 00:00:00 UTC.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">Dnsruby::RR</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RR.html#klass-instance_method" title="Dnsruby::RR#klass (method)">#klass</a></span>, <span class='object_link'><a href="../RR.html#name-instance_method" title="Dnsruby::RR#name (method)">#name</a></span>, <span class='object_link'><a href="../RR.html#rdata-instance_method" title="Dnsruby::RR#rdata (method)">#rdata</a></span>, <span class='object_link'><a href="../RR.html#ttl-instance_method" title="Dnsruby::RR#ttl (method)">#ttl</a></span>, <span class='object_link'><a href="../RR.html#type-instance_method" title="Dnsruby::RR#type (method)">#type</a></span></p>
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#decode_rdata-class_method" title="decode_rdata (class method)">.<strong>decode_rdata</strong>(msg)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#apply-instance_method" title="#apply (instance method)">#<strong>apply</strong>(message, original_request = nil)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Generates a TSIG record and adds it to the message.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#calculate_mac-instance_method" title="#calculate_mac (instance method)">#<strong>calculate_mac</strong>(algorithm, data)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#encode_rdata-instance_method" title="#encode_rdata (instance method)">#<strong>encode_rdata</strong>(msg, canonical = false)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#from_data-instance_method" title="#from_data (instance method)">#<strong>from_data</strong>(data)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#from_string-instance_method" title="#from_string (instance method)">#<strong>from_string</strong>(str)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create the RR from a standard string.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#generate-instance_method" title="#generate (instance method)">#<strong>generate</strong>(msg, original_request = nil, data = &quot;&quot;, msg_bytes = nil, tsig_rr = self)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Generates a TSIG record.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#init_defaults-instance_method" title="#init_defaults (instance method)">#<strong>init_defaults</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#name=-instance_method" title="#name= (instance method)">#<strong>name=</strong>(n)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#query=-instance_method" title="#query= (instance method)">#<strong>query=</strong>(q)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rdata_to_string-instance_method" title="#rdata_to_string (instance method)">#<strong>rdata_to_string</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sig_data-instance_method" title="#sig_data (instance method)">#<strong>sig_data</strong>(tsig_rr, time_signed = @time_signed)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Private method to return the TSIG RR data to be signed.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#verify-instance_method" title="#verify (instance method)">#<strong>verify</strong>(query, response, response_bytes, buf = &quot;&quot;)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Verify a response.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#verify_common-instance_method" title="#verify_common (instance method)">#<strong>verify_common</strong>(response)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#verify_envelope-instance_method" title="#verify_envelope (instance method)">#<strong>verify_envelope</strong>(response, response_bytes)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Checks TSIG signatures across sessions of multiple DNS envelopes.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">Dnsruby::RR</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RR.html#<=>-instance_method" title="Dnsruby::RR#&lt;=&gt; (method)">#<=></a></span>, <span class='object_link'><a href="../RR.html#==-instance_method" title="Dnsruby::RR#== (method)">#==</a></span>, <span class='object_link'><a href="../RR.html#clone-instance_method" title="Dnsruby::RR#clone (method)">#clone</a></span>, <span class='object_link'><a href="../RR.html#create-class_method" title="Dnsruby::RR.create (method)">create</a></span>, <span class='object_link'><a href="../RR.html#eql%3F-instance_method" title="Dnsruby::RR#eql? (method)">#eql?</a></span>, <span class='object_link'><a href="../RR.html#find_class-class_method" title="Dnsruby::RR.find_class (method)">find_class</a></span>, <span class='object_link'><a href="../RR.html#from_hash-instance_method" title="Dnsruby::RR#from_hash (method)">#from_hash</a></span>, <span class='object_link'><a href="../RR.html#get_class-class_method" title="Dnsruby::RR.get_class (method)">get_class</a></span>, <span class='object_link'><a href="../RR.html#get_num-class_method" title="Dnsruby::RR.get_num (method)">get_num</a></span>, <span class='object_link'><a href="../RR.html#hash-instance_method" title="Dnsruby::RR#hash (method)">#hash</a></span>, <span class='object_link'><a href="../RR.html#implemented_rrs-class_method" title="Dnsruby::RR.implemented_rrs (method)">implemented_rrs</a></span>, <span class='object_link'><a href="../RR.html#new_from_data-class_method" title="Dnsruby::RR.new_from_data (method)">new_from_data</a></span>, <span class='object_link'><a href="../RR.html#new_from_hash-class_method" title="Dnsruby::RR.new_from_hash (method)">new_from_hash</a></span>, <span class='object_link'><a href="../RR.html#new_from_string-class_method" title="Dnsruby::RR.new_from_string (method)">new_from_string</a></span>, <span class='object_link'><a href="../RR.html#rdlength-instance_method" title="Dnsruby::RR#rdlength (method)">#rdlength</a></span>, <span class='object_link'><a href="../RR.html#sameRRset-instance_method" title="Dnsruby::RR#sameRRset (method)">#sameRRset</a></span>, <span class='object_link'><a href="../RR.html#to_s-instance_method" title="Dnsruby::RR#to_s (method)">#to_s</a></span></p>
+
+  
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="algorithm=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="algorithm-instance_method">
+  
+    #<strong>algorithm</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Gets or sets the domain name that specifies the name of the algorithm. The only algorithms currently supported are hmac-md5 and hmac-sha1.</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_algorithm'>algorithm</span><span class='op'>=</span><span class='lparen'>(</span><span class='id identifier rubyid_algorithm_name'>algorithm_name</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_print'>print</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>algorithm = </span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_algorithm'>algorithm</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+399
+400
+401</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/TSIG.rb', line 399</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_algorithm'>algorithm</span>
+  <span class='ivar'>@algorithm</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="error=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="error-instance_method">
+  
+    #<strong>error</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the RCODE covering TSIG processing.  Common values are NOERROR, BADSIG, BADKEY, and BADTIME.  See RFC 2845 for details.</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_print'>print</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>error = </span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+449
+450
+451</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/TSIG.rb', line 449</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_error'>error</span>
+  <span class='ivar'>@error</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="fudge=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="fudge-instance_method">
+  
+    #<strong>fudge</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Gets or sets the “fudge”, i.e., the seconds of error permitted in the signing time.</p>
+
+<p>The default fudge is 300 seconds.</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_fudge'>fudge</span><span class='op'>=</span><span class='lparen'>(</span><span class='int'>60</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_print'>print</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>fudge = </span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_fudge'>fudge</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+419
+420
+421</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/TSIG.rb', line 419</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_fudge'>fudge</span>
+  <span class='ivar'>@fudge</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="key=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="key-instance_method">
+  
+    #<strong>key</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Stores the secret key used for signing/verifying messages.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+467
+468
+469</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/TSIG.rb', line 467</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_key'>key</span>
+  <span class='ivar'>@key</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="mac=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="mac-instance_method">
+  
+    #<strong>mac</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the message authentication code (MAC) as a string of hex characters.  The programmer must call a Net::DNS::Packet object&#39;s data method before this will return anything meaningful.</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_print'>print</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MAC = </span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_mac'>mac</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+435
+436
+437</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/TSIG.rb', line 435</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_mac'>mac</span>
+  <span class='ivar'>@mac</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="mac_size=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="mac_size-instance_method">
+  
+    #<strong>mac_size</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the number of octets in the message authentication code (MAC). The programmer must call a Net::DNS::Packet object&#39;s data method before this will return anything meaningful.</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_print'>print</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MAC size = </span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_mac_size'>mac_size</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+427
+428
+429</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/TSIG.rb', line 427</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_mac_size'>mac_size</span>
+  <span class='ivar'>@mac_size</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="original_id=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="original_id-instance_method">
+  
+    #<strong>original_id</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Gets or sets the original message ID.</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_original_id'>original_id</span><span class='lparen'>(</span><span class='int'>12345</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_print'>print</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>original ID = </span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_original_id'>original_id</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+442
+443
+444</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/TSIG.rb', line 442</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_original_id'>original_id</span>
+  <span class='ivar'>@original_id</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="other_data=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="other_data-instance_method">
+  
+    #<strong>other_data</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the Other Data.  This field should be empty unless the error is BADTIME, in which case it will contain the server&#39;s time as the number of seconds since 1 Jan 1970 00:00:00 UTC.</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_print'>print</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>other data = </span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_other_data'>other_data</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+464
+465
+466</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/TSIG.rb', line 464</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_other_data'>other_data</span>
+  <span class='ivar'>@other_data</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="other_size=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="other_size-instance_method">
+  
+    #<strong>other_size</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the length of the Other Data.  Should be zero unless the error is BADTIME.</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_print'>print</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>other len = </span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_other_size'>other_size</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+456
+457
+458</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/TSIG.rb', line 456</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_other_size'>other_size</span>
+  <span class='ivar'>@other_size</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="time_signed=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="time_signed-instance_method">
+  
+    #<strong>time_signed</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Gets or sets the signing time as the number of seconds since 1 Jan 1970 00:00:00 UTC.</p>
+
+<p>The default signing time is the current time.</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_time_signed'>time_signed</span><span class='op'>=</span><span class='lparen'>(</span><span class='id identifier rubyid_time'>time</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_print'>print</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>time signed = </span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_rr'>rr</span><span class='period'>.</span><span class='id identifier rubyid_time_signed'>time_signed</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+409
+410
+411</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/TSIG.rb', line 409</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_time_signed'>time_signed</span>
+  <span class='ivar'>@time_signed</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="decode_rdata-class_method">
+  
+    .<strong>decode_rdata</strong>(msg)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/TSIG.rb', line 584</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_decode_rdata'>decode_rdata</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span> <span class='comment'>#:nodoc: all
+</span>  <span class='id identifier rubyid_alg'>alg</span><span class='op'>=</span><span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_get_name'>get_name</span>
+  <span class='id identifier rubyid_time_high'>time_high</span><span class='comma'>,</span> <span class='id identifier rubyid_time_low'>time_low</span> <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_get_unpack'>get_unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>nN</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_time_signed'>time_signed</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_time_high'>time_high</span> <span class='op'>&lt;&lt;</span> <span class='int'>32</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='id identifier rubyid_time_low'>time_low</span>
+  <span class='id identifier rubyid_fudge'>fudge</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_get_unpack'>get_unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_mac_size'>mac_size</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_get_unpack'>get_unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_mac'>mac</span> <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_get_bytes'>get_bytes</span><span class='lparen'>(</span><span class='id identifier rubyid_mac_size'>mac_size</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_original_id'>original_id</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_get_unpack'>get_unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_error'>error</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_get_unpack'>get_unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_other_size'>other_size</span><span class='comma'>,</span> <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_get_unpack'>get_unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_other_data'>other_data</span> <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_get_bytes'>get_bytes</span><span class='lparen'>(</span><span class='id identifier rubyid_other_size'>other_size</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_alg'>alg</span><span class='comma'>,</span> <span class='id identifier rubyid_time_signed'>time_signed</span><span class='comma'>,</span> <span class='id identifier rubyid_fudge'>fudge</span><span class='comma'>,</span> <span class='id identifier rubyid_mac_size'>mac_size</span><span class='comma'>,</span> <span class='id identifier rubyid_mac'>mac</span><span class='comma'>,</span> <span class='id identifier rubyid_original_id'>original_id</span><span class='comma'>,</span> <span class='id identifier rubyid_error'>error</span><span class='comma'>,</span> <span class='id identifier rubyid_other_size'>other_size</span><span class='comma'>,</span> <span class='id identifier rubyid_other_data'>other_data</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="apply-instance_method">
+  
+    #<strong>apply</strong>(message, original_request = nil)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Generates a TSIG record and adds it to the message. Takes an optional original_request argument for the case where this is a response to a query (RFC2845 3.4.1)</p>
+
+<p>Message#tsigstate will be set to :Signed.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+68
+69
+70
+71
+72
+73
+74
+75
+76</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/TSIG.rb', line 68</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_apply'>apply</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='id identifier rubyid_original_request'>original_request</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_signed?'>signed?</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_tsig_rr'>tsig_rr</span> <span class='op'>=</span> <span class='id identifier rubyid_generate'>generate</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='id identifier rubyid_original_request'>original_request</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_add_additional'>add_additional</span><span class='lparen'>(</span><span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_tsigstate'>tsigstate</span> <span class='op'>=</span> <span class='symbol'>:Signed</span>
+    <span class='ivar'>@query</span> <span class='op'>=</span> <span class='id identifier rubyid_message'>message</span>
+    <span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_query'>query</span> <span class='op'>=</span> <span class='id identifier rubyid_message'>message</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="calculate_mac-instance_method">
+  
+    #<strong>calculate_mac</strong>(algorithm, data)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/TSIG.rb', line 144</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_calculate_mac'>calculate_mac</span><span class='lparen'>(</span><span class='id identifier rubyid_algorithm'>algorithm</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_mac'>mac</span><span class='op'>=</span><span class='kw'>nil</span>
+<span class='comment'># + if (key_size &gt; max_digest_len) {
+</span><span class='comment'># +   EVP_DigestInit(&amp;ectx, digester);
+</span><span class='comment'># +   EVP_DigestUpdate(&amp;ectx, (const void*) key_bytes, key_size);
+</span><span class='comment'># +   EVP_DigestFinal(&amp;ectx, key_bytes, NULL);
+</span><span class='comment'># +   key_size = max_digest_len;
+</span><span class='comment'># + }
+</span>  <span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='ivar'>@key</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+ <span class='comment'>#        key = Base64::decode64(key)
+</span>  <span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>m*</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_algorithm'>algorithm</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#HMAC_MD5-constant" title="Dnsruby::RR::TSIG::HMAC_MD5 (constant)">HMAC_MD5</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_s'><span class='object_link'><a href="../RR.html#to_s-instance_method" title="Dnsruby::RR#to_s (method)">to_s</a></span></span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_mac'>mac</span> <span class='op'>=</span> <span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>HMAC</span><span class='period'>.</span><span class='id identifier rubyid_digest'>digest</span><span class='lparen'>(</span><span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>Digest</span><span class='op'>::</span><span class='const'>MD5</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='id identifier rubyid_algorithm'>algorithm</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#HMAC_SHA1-constant" title="Dnsruby::RR::TSIG::HMAC_SHA1 (constant)">HMAC_SHA1</a></span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_mac'>mac</span> <span class='op'>=</span> <span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>HMAC</span><span class='period'>.</span><span class='id identifier rubyid_digest'>digest</span><span class='lparen'>(</span><span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>Digest</span><span class='op'>::</span><span class='const'>SHA1</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='id identifier rubyid_algorithm'>algorithm</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#HMAC_SHA256-constant" title="Dnsruby::RR::TSIG::HMAC_SHA256 (constant)">HMAC_SHA256</a></span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_mac'>mac</span> <span class='op'>=</span> <span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>HMAC</span><span class='period'>.</span><span class='id identifier rubyid_digest'>digest</span><span class='lparen'>(</span><span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>Digest</span><span class='op'>::</span><span class='const'>SHA256</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='id identifier rubyid_algorithm'>algorithm</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#HMAC_SHA512-constant" title="Dnsruby::RR::TSIG::HMAC_SHA512 (constant)">HMAC_SHA512</a></span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_mac'>mac</span> <span class='op'>=</span> <span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>HMAC</span><span class='period'>.</span><span class='id identifier rubyid_digest'>digest</span><span class='lparen'>(</span><span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>Digest</span><span class='op'>::</span><span class='const'>SHA512</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='comment'>#  Should we allow client to pass in their own signing function?
+</span>    <span class='id identifier rubyid_raise'>raise</span> <span class='const'><span class='object_link'><a href="../VerifyError.html" title="Dnsruby::VerifyError (class)">VerifyError</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Algorithm </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_algorithm'>algorithm</span><span class='embexpr_end'>}</span><span class='tstring_content'> unsupported by TSIG</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_mac'>mac</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="encode_rdata-instance_method">
+  
+    #<strong>encode_rdata</strong>(msg, canonical = false)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/TSIG.rb', line 569</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_encode_rdata'>encode_rdata</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_canonical'>canonical</span><span class='op'>=</span><span class='kw'>false</span><span class='rparen'>)</span> <span class='comment'>#:nodoc: all
+</span>  <span class='comment'>#  Name needs to be added with no compression - done in Dnsruby::Message#encode
+</span>  <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_name'>put_name</span><span class='lparen'>(</span><span class='ivar'>@algorithm</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_time_high'>time_high</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='ivar'>@time_signed</span> <span class='op'>&gt;&gt;</span> <span class='int'>32</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_time_low'>time_low</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='ivar'>@time_signed</span> <span class='op'>&amp;</span> <span class='int'>0xFFFFFFFF</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_pack'>put_pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>nN</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_time_high'>time_high</span><span class='comma'>,</span> <span class='id identifier rubyid_time_low'>time_low</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_pack'>put_pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>n</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='ivar'>@fudge</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_pack'>put_pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>n</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='ivar'>@mac_size</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_bytes'>put_bytes</span><span class='lparen'>(</span><span class='ivar'>@mac</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_pack'>put_pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>n</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='ivar'>@original_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_pack'>put_pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>n</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='ivar'>@error</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_pack'>put_pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>n</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='ivar'>@other_size</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_bytes'>put_bytes</span><span class='lparen'>(</span><span class='ivar'>@other_data</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="from_data-instance_method">
+  
+    #<strong>from_data</strong>(data)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+488
+489
+490</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/TSIG.rb', line 488</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_from_data'>from_data</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span> <span class='comment'>#:nodoc: all
+</span>  <span class='ivar'>@algorithm</span><span class='comma'>,</span> <span class='ivar'>@time_signed</span><span class='comma'>,</span> <span class='ivar'>@fudge</span><span class='comma'>,</span> <span class='ivar'>@mac_size</span><span class='comma'>,</span> <span class='ivar'>@mac</span><span class='comma'>,</span> <span class='ivar'>@original_id</span><span class='comma'>,</span> <span class='ivar'>@error</span><span class='comma'>,</span> <span class='ivar'>@other_size</span><span class='comma'>,</span> <span class='ivar'>@other_data</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="from_string-instance_method">
+  
+    #<strong>from_string</strong>(str)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create the RR from a standard string</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/TSIG.rb', line 504</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_from_string'>from_string</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='rparen'>)</span> <span class='comment'>#:nodoc: all
+</span>  <span class='id identifier rubyid_parts'>parts</span> <span class='op'>=</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[:/]</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_parts'>parts</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&lt;</span> <span class='int'>2</span> <span class='op'>||</span> <span class='id identifier rubyid_parts'>parts</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>3</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentException</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Invalid TSIG key specification</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_parts'>parts</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>==</span> <span class='int'>3</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::RR::TSIG (class)">TSIG</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_parts'>parts</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_parts'>parts</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_parts'>parts</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='semicolon'>;</span>
+  <span class='kw'>else</span>
+    <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="" title="Dnsruby::RR::TSIG (class)">TSIG</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#HMAC_MD5-constant" title="Dnsruby::RR::TSIG::HMAC_MD5 (constant)">HMAC_MD5</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid_parts'>parts</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_parts'>parts</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='semicolon'>;</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="generate-instance_method">
+  
+    #<strong>generate</strong>(msg, original_request = nil, data = &quot;&quot;, msg_bytes = nil, tsig_rr = self)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Generates a TSIG record</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/TSIG.rb', line 84</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_generate'>generate</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_original_request'>original_request</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_msg_bytes'>msg_bytes</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='op'>=</span><span class='kw'>self</span><span class='rparen'>)</span><span class='comment'>#:nodoc: all
+</span>  <span class='id identifier rubyid_time_signed'>time_signed</span><span class='op'>=</span><span class='ivar'>@time_signed</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_time_signed'>time_signed</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_time_signed'>time_signed</span><span class='op'>=</span><span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_time_signed'>time_signed</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_time_signed'>time_signed</span> <span class='op'>=</span> <span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_time_signed'>time_signed</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_original_request'>original_request</span><span class='rparen'>)</span>
+    <span class='comment'># 	# Add the request MAC if present (used to validate responses).
+</span>    <span class='comment'># 	  hmac.update(pack(&quot;H*&quot;, request_mac))
+</span>    <span class='id identifier rubyid_mac_bytes'>mac_bytes</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../MessageEncoder.html" title="Dnsruby::MessageEncoder (class)">MessageEncoder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../MessageEncoder.html#initialize-instance_method" title="Dnsruby::MessageEncoder#initialize (method)">new</a></span></span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_m'>m</span><span class='op'>|</span>
+      <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_put_pack'>put_pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>n</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_original_request'>original_request</span><span class='period'>.</span><span class='id identifier rubyid_tsig'>tsig</span><span class='period'>.</span><span class='id identifier rubyid_mac_size'>mac_size</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_put_bytes'>put_bytes</span><span class='lparen'>(</span><span class='id identifier rubyid_original_request'>original_request</span><span class='period'>.</span><span class='id identifier rubyid_tsig'>tsig</span><span class='period'>.</span><span class='id identifier rubyid_mac'>mac</span><span class='rparen'>)</span>
+    <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+    <span class='id identifier rubyid_data'>data</span>  <span class='op'>+=</span> <span class='id identifier rubyid_mac_bytes'>mac_bytes</span>
+    <span class='comment'>#  Original ID - should we set message ID to original ID?
+</span>    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_tsig_rr'>tsig_rr</span> <span class='op'>!=</span> <span class='kw'>self</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='op'>=</span> <span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_original_id'>original_id</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='op'>=</span> <span class='id identifier rubyid_original_request'>original_request</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_msg_bytes'>msg_bytes</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_msg_bytes'>msg_bytes</span> <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_encode'>encode</span>
+    <span class='id identifier rubyid_data'>data</span> <span class='op'>+=</span> <span class='id identifier rubyid_msg_bytes'>msg_bytes</span>
+  <span class='kw'>else</span>
+    <span class='comment'>#  If msg_bytes came in, we need somehow to remove the TSIG RR
+</span>    <span class='comment'>#  It is the last record, so we can strip it if we know where it starts
+</span>    <span class='comment'>#  We must also poke the header ARcount to decrement it
+</span>    <span class='id identifier rubyid_msg_bytes'>msg_bytes</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Header.html" title="Dnsruby::Header (class)">Header</a></span></span><span class='period'>.</span><span class='id identifier rubyid_decrement_arcount_encoded'><span class='object_link'><a href="../Header.html#decrement_arcount_encoded-class_method" title="Dnsruby::Header.decrement_arcount_encoded (method)">decrement_arcount_encoded</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_msg_bytes'>msg_bytes</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_data'>data</span> <span class='op'>+=</span> <span class='id identifier rubyid_msg_bytes'>msg_bytes</span><span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_tsigstart'>tsigstart</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_data'>data</span> <span class='op'>+=</span> <span class='id identifier rubyid_sig_data'>sig_data</span><span class='lparen'>(</span><span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='comma'>,</span> <span class='id identifier rubyid_time_signed'>time_signed</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_mac'>mac</span> <span class='op'>=</span> <span class='id identifier rubyid_calculate_mac'>calculate_mac</span><span class='lparen'>(</span><span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_algorithm'>algorithm</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_mac_size'>mac_size</span> <span class='op'>=</span> <span class='id identifier rubyid_mac'>mac</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
+
+  <span class='id identifier rubyid_new_tsig_rr'>new_tsig_rr</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">RR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="../RR.html#create-class_method" title="Dnsruby::RR.create (method)">create</a></span></span><span class='lparen'>(</span><span class='lbrace'>{</span>
+      <span class='symbol'>:name</span>        <span class='op'>=&gt;</span> <span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
+      <span class='symbol'>:type</span>        <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='period'>.</span><span class='const'>TSIG</span><span class='comma'>,</span>
+      <span class='symbol'>:ttl</span>         <span class='op'>=&gt;</span> <span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_ttl'>ttl</span><span class='comma'>,</span>
+      <span class='symbol'>:klass</span>       <span class='op'>=&gt;</span> <span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_klass'>klass</span><span class='comma'>,</span>
+      <span class='symbol'>:algorithm</span>   <span class='op'>=&gt;</span> <span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_algorithm'>algorithm</span><span class='comma'>,</span>
+      <span class='symbol'>:fudge</span>       <span class='op'>=&gt;</span> <span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_fudge'>fudge</span><span class='comma'>,</span>
+      <span class='symbol'>:key</span>         <span class='op'>=&gt;</span> <span class='ivar'>@key</span><span class='comma'>,</span>
+      <span class='symbol'>:mac</span>         <span class='op'>=&gt;</span> <span class='id identifier rubyid_mac'>mac</span><span class='comma'>,</span>
+      <span class='symbol'>:mac_size</span>    <span class='op'>=&gt;</span> <span class='id identifier rubyid_mac_size'>mac_size</span><span class='comma'>,</span>
+      <span class='symbol'>:error</span>       <span class='op'>=&gt;</span> <span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span><span class='comma'>,</span>
+      <span class='symbol'>:time_signed</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_time_signed'>time_signed</span><span class='comma'>,</span>
+      <span class='symbol'>:original_id</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span>
+    <span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_new_tsig_rr'>new_tsig_rr</span>
+
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="init_defaults-instance_method">
+  
+    #<strong>init_defaults</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/TSIG.rb', line 469</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_init_defaults'>init_defaults</span>
+  <span class='comment'>#  @TODO@ Have new() method which takes key_name and key?
+</span>  <span class='ivar'>@algorithm</span>   <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#DEFAULT_ALGORITHM-constant" title="Dnsruby::RR::TSIG::DEFAULT_ALGORITHM (constant)">DEFAULT_ALGORITHM</a></span></span>
+  <span class='ivar'>@fudge</span>       <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#DEFAULT_FUDGE-constant" title="Dnsruby::RR::TSIG::DEFAULT_FUDGE (constant)">DEFAULT_FUDGE</a></span></span>
+  <span class='ivar'>@mac_size</span>    <span class='op'>=</span> <span class='int'>0</span>
+  <span class='ivar'>@mac</span>         <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='ivar'>@original_id</span> <span class='op'>=</span> <span class='id identifier rubyid_rand'>rand</span><span class='lparen'>(</span><span class='int'>65536</span><span class='rparen'>)</span>
+  <span class='ivar'>@error</span>       <span class='op'>=</span> <span class='int'>0</span>
+  <span class='ivar'>@other_size</span>   <span class='op'>=</span> <span class='int'>0</span>
+  <span class='ivar'>@other_data</span>  <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='ivar'>@time_signed</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@buf</span> <span class='op'>=</span> <span class='kw'>nil</span>
+
+  <span class='comment'>#  RFC 2845 Section 2.3
+</span>  <span class='ivar'>@klass</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Classes.html" title="Dnsruby::Classes (class)">Classes</a></span></span><span class='period'>.</span><span class='const'>ANY</span>
+
+  <span class='ivar'>@ttl</span> <span class='op'>=</span> <span class='int'>0</span> <span class='comment'># RFC 2845 Section 2.3
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="name=-instance_method">
+  
+    #<strong>name=</strong>(n)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/TSIG.rb', line 492</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_name='>name=</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='period'>.</span><span class='id identifier rubyid_instance_of?'>instance_of?</span><span class='const'>String</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_n'>n</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Name.html" title="Dnsruby::Name (class)">Name</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="../Name.html#create-class_method" title="Dnsruby::Name.create (method)">create</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_n'>n</span><span class='period'>.</span><span class='id identifier rubyid_absolute?'>absolute?</span><span class='rparen'>)</span>
+    <span class='ivar'>@name</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Name.html" title="Dnsruby::Name (class)">Name</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="../Name.html#create-class_method" title="Dnsruby::Name.create (method)">create</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@name</span> <span class='op'>=</span> <span class='id identifier rubyid_n'>n</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="query=-instance_method">
+  
+    #<strong>query=</strong>(q)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+78
+79
+80</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/TSIG.rb', line 78</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_query='>query=</span><span class='id identifier rubyid_q'>q</span><span class='comment'>#:nodoc: all
+</span>  <span class='ivar'>@query</span> <span class='op'>=</span> <span class='id identifier rubyid_q'>q</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="rdata_to_string-instance_method">
+  
+    #<strong>rdata_to_string</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/TSIG.rb', line 554</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_rdata_to_string'>rdata_to_string</span>
+  <span class='id identifier rubyid_rdatastr'>rdatastr</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@algorithm</span><span class='op'>!=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_error'>error</span> <span class='op'>=</span> <span class='ivar'>@error</span>
+    <span class='id identifier rubyid_error'>error</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UNDEFINED</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_error'>error</span><span class='op'>!=</span><span class='kw'>nil</span>
+    <span class='id identifier rubyid_rdatastr'>rdatastr</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@original_id</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='ivar'>@time_signed</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='ivar'>@algorithm</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='lparen'>(</span><span class='kw'>true</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_error'>error</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='semicolon'>;</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@other_size</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@other_data</span><span class='op'>!=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_rdatastr'>rdatastr</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='ivar'>@other_data</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_rdatastr'>rdatastr</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_mac'>mac</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>H*</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_rdatastr'>rdatastr</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sig_data-instance_method">
+  
+    #<strong>sig_data</strong>(tsig_rr, time_signed = @time_signed)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Private method to return the TSIG RR data to be signed</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/TSIG.rb', line 171</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sig_data'>sig_data</span><span class='lparen'>(</span><span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='comma'>,</span> <span class='id identifier rubyid_time_signed'>time_signed</span><span class='op'>=</span><span class='ivar'>@time_signed</span><span class='rparen'>)</span> <span class='comment'>#:nodoc: all
+</span>  <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="../MessageEncoder.html" title="Dnsruby::MessageEncoder (class)">MessageEncoder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../MessageEncoder.html#initialize-instance_method" title="Dnsruby::MessageEncoder#initialize (method)">new</a></span></span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_msg'>msg</span><span class='op'>|</span>
+    <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_name'>put_name</span><span class='lparen'>(</span><span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_pack'>put_pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>nN</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_klass'>klass</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span><span class='comma'>,</span> <span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_ttl'>ttl</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_name'>put_name</span><span class='lparen'>(</span><span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_algorithm'>algorithm</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_time_high'>time_high</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_time_signed'>time_signed</span> <span class='op'>&gt;&gt;</span> <span class='int'>32</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_time_low'>time_low</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_time_signed'>time_signed</span> <span class='op'>&amp;</span> <span class='int'>0xFFFFFFFF</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_pack'>put_pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>nN</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_time_high'>time_high</span><span class='comma'>,</span> <span class='id identifier rubyid_time_low'>time_low</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_pack'>put_pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>n</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_fudge'>fudge</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_pack'>put_pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>n</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_pack'>put_pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>n</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_other_size'>other_size</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_bytes'>put_bytes</span><span class='lparen'>(</span><span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_other_data'>other_data</span><span class='rparen'>)</span>
+  <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="verify-instance_method">
+  
+    #<strong>verify</strong>(query, response, response_bytes, buf = &quot;&quot;)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Verify a response. This method will be called by Dnsruby::SingleResolver before passing a response to the client code. The TSIG record will be removed from packet before passing to client, and the Message#tsigstate and Message#tsigerror will be set accordingly. Message#tsigstate will be set to one of :</p>
+<ul><li>
+<p>:Failed</p>
+</li><li>
+<p>:Verified</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/TSIG.rb', line 194</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_verify'>verify</span><span class='lparen'>(</span><span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_response'>response</span><span class='comma'>,</span> <span class='id identifier rubyid_response_bytes'>response_bytes</span><span class='comma'>,</span> <span class='id identifier rubyid_buf'>buf</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='comment'>#         4.6. Client processing of answer
+</span>  <span class='comment'># 
+</span>  <span class='comment'>#    When a client receives a response from a server and expects to see a
+</span>  <span class='comment'>#    TSIG, it first checks if the TSIG RR is present in the response.
+</span>  <span class='comment'>#    Otherwise, the response is treated as having a format error and
+</span>  <span class='comment'>#    discarded.  The client then extracts the TSIG, adjusts the ARCOUNT,
+</span>  <span class='comment'>#    and calculates the keyed digest in the same way as the server.  If
+</span>  <span class='comment'>#    the TSIG does not validate, that response MUST be discarded, unless
+</span>  <span class='comment'>#    the RCODE is 9 (NOTAUTH), in which case the client SHOULD attempt to
+</span>  <span class='comment'>#    verify the response as if it were a TSIG Error response, as specified
+</span>  <span class='comment'>#    in [4.3].  A message containing an unsigned TSIG record or a TSIG
+</span>  <span class='comment'>#    record which fails verification SHOULD not be considered an
+</span>  <span class='comment'>#    acceptable response; the client SHOULD log an error and continue to
+</span>  <span class='comment'>#    wait for a signed response until the request times out.
+</span>
+  <span class='comment'>#  So, this verify method should simply remove the TSIG RR and calculate
+</span>  <span class='comment'>#  the MAC (using original request MAC if required).
+</span>  <span class='comment'>#  Should set tsigstate on packet appropriately, and return error.
+</span>  <span class='comment'>#  Side effect is packet is stripped of TSIG.
+</span>  <span class='comment'>#  Resolver (or client) can then decide what to do...
+</span>
+  <span class='id identifier rubyid_msg_tsig_rr'>msg_tsig_rr</span> <span class='op'>=</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_tsig'>tsig</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_verify_common'>verify_common</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>false</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_new_msg_tsig_rr'>new_msg_tsig_rr</span> <span class='op'>=</span> <span class='id identifier rubyid_generate'>generate</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_buf'>buf</span><span class='comma'>,</span> <span class='id identifier rubyid_response_bytes'>response_bytes</span><span class='comma'>,</span> <span class='id identifier rubyid_msg_tsig_rr'>msg_tsig_rr</span><span class='rparen'>)</span>
+
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_msg_tsig_rr'>msg_tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_mac'>mac</span> <span class='op'>==</span> <span class='id identifier rubyid_new_msg_tsig_rr'>new_msg_tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_mac'>mac</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_tsigstate'>tsigstate</span> <span class='op'>=</span> <span class='symbol'>:Verified</span>
+    <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_tsigerror'>tsigerror</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../RCode.html" title="Dnsruby::RCode (class)">RCode</a></span></span><span class='period'>.</span><span class='const'>NOERROR</span>
+    <span class='kw'>return</span> <span class='kw'>true</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_tsigstate'>tsigstate</span> <span class='op'>=</span> <span class='symbol'>:Failed</span>
+    <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_tsigerror'>tsigerror</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../RCode.html" title="Dnsruby::RCode (class)">RCode</a></span></span><span class='period'>.</span><span class='const'>BADSIG</span>
+    <span class='kw'>return</span> <span class='kw'>false</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="verify_common-instance_method">
+  
+    #<strong>verify_common</strong>(response)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/TSIG.rb', line 234</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_verify_common'>verify_common</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span><span class='comment'>#:nodoc: all
+</span>  <span class='id identifier rubyid_tsig_rr'>tsig_rr</span> <span class='op'>=</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_tsig'>tsig</span>
+
+	<span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_tsigerror'>tsigerror</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../RCode.html" title="Dnsruby::RCode (class)">RCode</a></span></span><span class='period'>.</span><span class='const'>FORMERR</span>
+    <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_tsigstate'>tsigstate</span> <span class='op'>=</span> <span class='symbol'>:Failed</span>
+    <span class='kw'>return</span> <span class='kw'>false</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_additional'>additional</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_arcount'>arcount</span><span class='op'>-=</span><span class='int'>1</span>
+
+  <span class='comment'>#  First, check the TSIG error in the RR
+</span>  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span> <span class='op'>!=</span> <span class='const'><span class='object_link'><a href="../RCode.html" title="Dnsruby::RCode (class)">RCode</a></span></span><span class='period'>.</span><span class='const'>NOERROR</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_tsigstate'>tsigstate</span> <span class='op'>=</span> <span class='symbol'>:Failed</span>
+    <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_tsigerror'>tsigerror</span> <span class='op'>=</span> <span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span>
+    <span class='kw'>return</span> <span class='kw'>false</span>
+  <span class='kw'>end</span>
+
+	<span class='kw'>if</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>!=</span> <span class='ivar'>@name</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='lparen'>(</span><span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_algorithm'>algorithm</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span> <span class='op'>!=</span> <span class='ivar'>@algorithm</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="../../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>BADKEY failure</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_tsigstate'>tsigstate</span> <span class='op'>=</span> <span class='symbol'>:Failed</span>
+    <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_tsigerror'>tsigerror</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../RCode.html" title="Dnsruby::RCode (class)">RCode</a></span></span><span class='period'>.</span><span class='const'>BADKEY</span>
+    <span class='kw'>return</span> <span class='kw'>false</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'>#  Check time_signed (RFC2845, 4.5.2) - only really necessary for server
+</span>  <span class='kw'>if</span> <span class='lparen'>(</span><span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>&gt;</span> <span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_time_signed'>time_signed</span> <span class='op'>+</span> <span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_fudge'>fudge</span>  <span class='op'>||</span>
+        <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_time_signed'>time_signed</span> <span class='op'>-</span> <span class='id identifier rubyid_tsig_rr'>tsig_rr</span><span class='period'>.</span><span class='id identifier rubyid_fudge'>fudge</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="../../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TSIG failed with BADTIME</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_tsigstate'>tsigstate</span> <span class='op'>=</span> <span class='symbol'>:Failed</span>
+    <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_tsigerror'>tsigerror</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../RCode.html" title="Dnsruby::RCode (class)">RCode</a></span></span><span class='period'>.</span><span class='const'>BADTIME</span>
+    <span class='kw'>return</span> <span class='kw'>false</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="verify_envelope-instance_method">
+  
+    #<strong>verify_envelope</strong>(response, response_bytes)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Checks TSIG signatures across sessions of multiple DNS envelopes. This method is called each time a new envelope comes in. The envelope is checked - if a TSIG is present, them the stream so far is verified, and the response#tsigstate set to :Verified. If a TSIG is not present, and does not need to be present, then the message is added to the digest stream and the response#tsigstate is set to :Intermediate. If there is an error with the TSIG verification, then the response#tsigstate is set to :Failed. Like verify, this method will only be called by the Dnsruby::SingleResolver class. Client code need not call this method directly.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/TSIG.rb', line 282</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_verify_envelope'>verify_envelope</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='comma'>,</span> <span class='id identifier rubyid_response_bytes'>response_bytes</span><span class='rparen'>)</span>
+  <span class='comment'># RFC2845 Section 4.4
+</span>  <span class='comment'># -----
+</span>  <span class='comment'># A DNS TCP session can include multiple DNS envelopes.  This is, for
+</span>  <span class='comment'># example, commonly used by zone transfer.  Using TSIG on such a
+</span>  <span class='comment'># connection can protect the connection from hijacking and provide data
+</span>  <span class='comment'># integrity.  The TSIG MUST be included on the first and last DNS
+</span>  <span class='comment'># envelopes.  It can be optionally placed on any intermediary
+</span>  <span class='comment'># envelopes.  It is expensive to include it on every envelopes, but it
+</span>  <span class='comment'># MUST be placed on at least every 100&#39;th envelope.  The first envelope
+</span>  <span class='comment'># is processed as a standard answer, and subsequent messages have the
+</span>  <span class='comment'># following digest components:
+</span>  <span class='comment'># 
+</span>  <span class='comment'># *   Prior Digest (running)
+</span>  <span class='comment'># *   DNS Messages (any unsigned messages since the last TSIG)
+</span>  <span class='comment'># *   TSIG Timers (current message)
+</span>  <span class='comment'># 
+</span>  <span class='comment'># This allows the client to rapidly detect when the session has been
+</span>  <span class='comment'># altered; at which point it can close the connection and retry.  If a
+</span>  <span class='comment'># client TSIG verification fails, the client MUST close the connection.
+</span>  <span class='comment'># If the client does not receive TSIG records frequently enough (as
+</span>  <span class='comment'># specified above) it SHOULD assume the connection has been hijacked
+</span>  <span class='comment'># and it SHOULD close the connection.  The client SHOULD treat this the
+</span>  <span class='comment'># same way as they would any other interrupted transfer (although the
+</span>  <span class='comment'># exact behavior is not specified).
+</span>  <span class='comment'># -----
+</span>  <span class='comment'># 
+</span>  <span class='comment'>#  Each time a new envelope comes in, this method is called on the QUERY TSIG RR.
+</span>  <span class='comment'>#  It will set the response tsigstate to :Verified :Intermediate or :Failed
+</span>  <span class='comment'>#  as appropriate.
+</span>
+  <span class='comment'>#  Keep digest going of messages as they come in (and mark them intermediate)
+</span>  <span class='comment'>#  When TSIG comes in, work out what key should be and check. If OK, mark
+</span>  <span class='comment'>#  verified. Can reset digest then.
+</span>  <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='ivar'>@buf</span><span class='rparen'>)</span>
+    <span class='ivar'>@num_envelopes</span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='ivar'>@last_signed</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='kw'>end</span>
+  <span class='ivar'>@num_envelopes</span> <span class='op'>+=</span> <span class='int'>1</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_tsig'>tsig</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='ivar'>@num_envelopes</span> <span class='op'>&gt;</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='ivar'>@num_envelopes</span> <span class='op'>-</span> <span class='ivar'>@last_signed</span> <span class='op'>&lt;</span> <span class='int'>100</span><span class='rparen'>)</span><span class='rparen'>)</span>
+      <span class='const'><span class='object_link'><a href="../../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Receiving intermediate envelope in TSIG TCP session</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_tsigstate'>tsigstate</span> <span class='op'>=</span> <span class='symbol'>:Intermediate</span>
+      <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_tsigerror'>tsigerror</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../RCode.html" title="Dnsruby::RCode (class)">RCode</a></span></span><span class='period'>.</span><span class='const'>NOERROR</span>
+      <span class='ivar'>@buf</span> <span class='op'>=</span> <span class='ivar'>@buf</span> <span class='op'>+</span> <span class='id identifier rubyid_response_bytes'>response_bytes</span>
+      <span class='kw'>return</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_tsigstate'>tsigstate</span> <span class='op'>=</span> <span class='symbol'>:Failed</span>
+      <span class='const'><span class='object_link'><a href="../../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Expecting signed packet</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='kw'>return</span> <span class='kw'>false</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='ivar'>@last_signed</span> <span class='op'>=</span> <span class='ivar'>@num_envelopes</span>
+
+  <span class='comment'>#  We have a TSIG - process it!
+</span>  <span class='id identifier rubyid_tsig'>tsig</span> <span class='op'>=</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_tsig'>tsig</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@num_envelopes</span> <span class='op'>==</span> <span class='int'>1</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="../../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>First response in TSIG TCP session - verifying normally</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='comment'>#  Process it as a standard answer
+</span>    <span class='id identifier rubyid_ok'>ok</span> <span class='op'>=</span> <span class='id identifier rubyid_verify'>verify</span><span class='lparen'>(</span><span class='ivar'>@query</span><span class='comma'>,</span> <span class='id identifier rubyid_response'>response</span><span class='comma'>,</span> <span class='id identifier rubyid_response_bytes'>response_bytes</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_ok'>ok</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_mac_bytes'>mac_bytes</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../MessageEncoder.html" title="Dnsruby::MessageEncoder (class)">MessageEncoder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../MessageEncoder.html#initialize-instance_method" title="Dnsruby::MessageEncoder#initialize (method)">new</a></span></span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_m'>m</span><span class='op'>|</span>
+        <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_put_pack'>put_pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>n</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_tsig'>tsig</span><span class='period'>.</span><span class='id identifier rubyid_mac_size'>mac_size</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_put_bytes'>put_bytes</span><span class='lparen'>(</span><span class='id identifier rubyid_tsig'>tsig</span><span class='period'>.</span><span class='id identifier rubyid_mac'>mac</span><span class='rparen'>)</span>
+      <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+      <span class='ivar'>@buf</span> <span class='op'>=</span> <span class='id identifier rubyid_mac_bytes'>mac_bytes</span>
+    <span class='kw'>end</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_ok'>ok</span>
+  <span class='kw'>end</span>
+  <span class='const'><span class='object_link'><a href="../../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Processing TSIG on TSIG TCP session</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_verify_common'>verify_common</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>false</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'>#  Now add the current message data - remember to frig the arcount
+</span>  <span class='id identifier rubyid_response_bytes'>response_bytes</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Header.html" title="Dnsruby::Header (class)">Header</a></span></span><span class='period'>.</span><span class='id identifier rubyid_decrement_arcount_encoded'><span class='object_link'><a href="../Header.html#decrement_arcount_encoded-class_method" title="Dnsruby::Header.decrement_arcount_encoded (method)">decrement_arcount_encoded</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_response_bytes'>response_bytes</span><span class='rparen'>)</span>
+  <span class='ivar'>@buf</span> <span class='op'>+=</span> <span class='id identifier rubyid_response_bytes'>response_bytes</span><span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_tsigstart'>tsigstart</span><span class='rbracket'>]</span>
+
+  <span class='comment'>#  Let&#39;s add the timers
+</span>  <span class='id identifier rubyid_timers_data'>timers_data</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../MessageEncoder.html" title="Dnsruby::MessageEncoder (class)">MessageEncoder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../MessageEncoder.html#initialize-instance_method" title="Dnsruby::MessageEncoder#initialize (method)">new</a></span></span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_msg'>msg</span><span class='op'>|</span>
+    <span class='id identifier rubyid_time_high'>time_high</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_tsig'>tsig</span><span class='period'>.</span><span class='id identifier rubyid_time_signed'>time_signed</span> <span class='op'>&gt;&gt;</span> <span class='int'>32</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_time_low'>time_low</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_tsig'>tsig</span><span class='period'>.</span><span class='id identifier rubyid_time_signed'>time_signed</span> <span class='op'>&amp;</span> <span class='int'>0xFFFFFFFF</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_pack'>put_pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>nN</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_time_high'>time_high</span><span class='comma'>,</span> <span class='id identifier rubyid_time_low'>time_low</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_pack'>put_pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>n</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_tsig'>tsig</span><span class='period'>.</span><span class='id identifier rubyid_fudge'>fudge</span><span class='rparen'>)</span>
+  <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='ivar'>@buf</span> <span class='op'>+=</span> <span class='id identifier rubyid_timers_data'>timers_data</span>
+
+  <span class='id identifier rubyid_mac'>mac</span> <span class='op'>=</span> <span class='id identifier rubyid_calculate_mac'>calculate_mac</span><span class='lparen'>(</span><span class='id identifier rubyid_tsig'>tsig</span><span class='period'>.</span><span class='id identifier rubyid_algorithm'>algorithm</span><span class='comma'>,</span> <span class='ivar'>@buf</span><span class='rparen'>)</span>
+
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_mac'>mac</span> <span class='op'>!=</span> <span class='id identifier rubyid_tsig'>tsig</span><span class='period'>.</span><span class='id identifier rubyid_mac'>mac</span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="../../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../../Dnsruby.html#log-class_method" title="Dnsruby.log (method)">log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TSIG Verify error on TSIG TCP session</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_tsigstate'>tsigstate</span> <span class='op'>=</span> <span class='symbol'>:Failed</span>
+    <span class='kw'>return</span> <span class='kw'>false</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_mac_bytes'>mac_bytes</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../MessageEncoder.html" title="Dnsruby::MessageEncoder (class)">MessageEncoder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../MessageEncoder.html#initialize-instance_method" title="Dnsruby::MessageEncoder#initialize (method)">new</a></span></span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_m'>m</span><span class='op'>|</span>
+    <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_put_pack'>put_pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>n</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_mac'>mac</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_put_bytes'>put_bytes</span><span class='lparen'>(</span><span class='id identifier rubyid_mac'>mac</span><span class='rparen'>)</span>
+  <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='ivar'>@buf</span><span class='op'>=</span><span class='id identifier rubyid_mac_bytes'>mac_bytes</span>
+
+  <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_tsigstate'>tsigstate</span> <span class='op'>=</span> <span class='symbol'>:Verified</span>
+  <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_tsigerror'>tsigerror</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../RCode.html" title="Dnsruby::RCode (class)">RCode</a></span></span><span class='period'>.</span><span class='const'>NOERROR</span>
+  <span class='kw'>return</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr  9 10:58:20 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-3.0.0).
+</div>
+
+    </div>
+  </body>
+</html>

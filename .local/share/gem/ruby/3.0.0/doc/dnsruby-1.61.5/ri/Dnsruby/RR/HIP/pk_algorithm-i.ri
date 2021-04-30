@@ -1,0 +1,4 @@
+U:RDoc::Attr[iI"pk_algorithm:ETI""Dnsruby::RR::HIP#pk_algorithm;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"The PK algorithm used :;To:RDoc::Markup::Verbatim;	[I"0 - no key present
+;TI"1 - DSA key present
+;TI"2 - RSA key present;T:@format0:
+@fileI" lib/dnsruby/resource/HIP.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::RR::HIP;TcRDoc::NormalClass0

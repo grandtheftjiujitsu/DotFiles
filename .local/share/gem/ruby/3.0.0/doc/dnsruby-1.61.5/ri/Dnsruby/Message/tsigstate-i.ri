@@ -1,0 +1,9 @@
+U:RDoc::Attr[iI"tsigstate:ETI"Dnsruby::Message#tsigstate;TI"RW;T:publico:RDoc::Markup::Document:@parts[	o:RDoc::Markup::Paragraph;	[I"Can be;To:RDoc::Markup::List:
+@type:BULLET:@items[	o:RDoc::Markup::ListItem:@label0;	[o;
+;	[I"":Unsigned - the default state;To;;0;	[o;
+;	[I"3:Signed - the outgoing message has been signed;To;;0;	[o;
+;	[I"?:Verified - the incoming message has been verified by TSIG;To;;0;	[o;
+;	[I"V:Intermediate - the incoming message is an intermediate envelope in a TCP session;To;
+;	[I"6in which only every 100th envelope must be signed;To;;;;[o;;0;	[o;
+;	[I"8:Failed - the incoming response failed verification;T:
+@fileI"#lib/dnsruby/message/message.rb;T:0@omit_headings_from_table_of_contents_below0F@/I"Dnsruby::Message;TcRDoc::NormalClass0

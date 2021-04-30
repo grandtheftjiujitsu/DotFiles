@@ -1,0 +1,88 @@
+2021-04-11 18:20:14.974 (I) ==================== SSR started ====================
+2021-04-11 18:20:14.974 (I) SimpleScreenRecorder 0.4.3
+Compiled with GCC 10.2.0
+Qt: header 5.15.2, lib 5.15.2
+libavformat: header 58.45.100, lib 58.45.100
+libavcodec: header 58.91.100, lib 58.91.100
+libavutil: header 56.51.100, lib 56.51.100
+libswscale: header 5.7.100, lib 5.7.100
+2021-04-11 18:20:14.974 (I) [CPUFeatures::Detect] CPU features: mmx sse sse2 sse3 ssse3 sse4_1 sse4_2 avx bmi1
+2021-04-11 18:20:15.028 (I) [ALSAInput::GetSourceList] Generating source list ...
+2021-04-11 18:20:15.029 (I) [ALSAInput::GetSourceList] Found card: [hw:0] HD-Audio Generic
+2021-04-11 18:20:15.030 (I) [ALSAInput::GetSourceList] Found device: [hw:0,0] HD-Audio Generic: ALC887-VD Analog
+2021-04-11 18:20:15.030 (I) [ALSAInput::GetSourceList] Found device: [hw:0,2] HD-Audio Generic: ALC887-VD Alt Analog
+2021-04-11 18:20:15.030 (I) [ALSAInput::GetSourceList] Found card: [hw:1] HDA NVidia
+2021-04-11 18:20:15.030 (I) [ALSAInput::GetSourceList] Found card: [hw:2] Blue Snowball
+2021-04-11 18:20:15.030 (I) [ALSAInput::GetSourceList] Found device: [hw:2,0] Blue Snowball: USB Audio
+2021-04-11 18:20:15.031 (I) [PulseAudioInput::GetSourceList] Generating source list ...
+2021-04-11 18:20:15.035 (I) [SourceNamesCallback] Found source: [alsa_output.pci-0000_00_14.2.analog-stereo.monitor] Monitor of Built-in Audio Analog Stereo
+2021-04-11 18:20:15.035 (I) [SourceNamesCallback] Found source: [ladspa_output.mbeq_1197.mbeq.monitor] Monitor of LADSPA Plugin Multiband EQ on Built-in Audio Analog Stereo
+2021-04-11 18:20:15.035 (I) [SourceNamesCallback] Found source: [alsa_input.usb-BLUE_MICROPHONE_Blue_Snowball_797_2020_11_07_04675-00.mono-fallback] Blue Snowball Mono
+2021-04-11 18:20:15.544 (E) [PageRecord::OnStdin] Standard input read error (ioctl).
+2021-04-11 19:00:55.058 (I) [PageRecord::StartPage] Starting page ...
+2021-04-11 19:00:55.058 (I) [PageRecord::StartPage] Started page.
+2021-04-11 19:05:35.183 (I) [PageRecord::StartOutput] Starting output ...
+2021-04-11 19:05:35.183 (I) [Muxer::Init] Using format mp4 (MP4 (MPEG-4 Part 14)).
+2021-04-11 19:05:35.183 (I) [Muxer::AddStream] Using codec libx264 (libx264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10).
+2021-04-11 19:05:35.184 (I) [VideoEncoder::PrepareStream] Using pixel format nv12.
+2021-04-11 19:05:35.188 (S) [libx264 @ 0x6f8f5959c00] using SAR=1/1
+2021-04-11 19:05:35.190 (S) [libx264 @ 0x6f8f5959c00] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX XOP FMA3 BMI1
+2021-04-11 19:05:35.198 (S) [libx264 @ 0x6f8f5959c00] profile High, level 4.0, 4:2:0, 8-bit
+2021-04-11 19:05:35.200 (S) [libx264 @ 0x6f8f5959c00] 264 - core 161 r3039 544c61f - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=1 deblock=1:0:0 analyse=0x3:0x3 me=dia subme=1 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=4 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc=crf mbtree=0 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 pb_ratio=1.30 aq=1:1.00
+2021-04-11 19:05:35.200 (I) [BaseEncoder::EncoderThread] Encoder thread started.
+2021-04-11 19:05:35.200 (I) [Muxer::AddStream] Using codec libvorbis (libvorbis).
+2021-04-11 19:05:35.200 (I) [AudioEncoder::PrepareStream] Using sample format f32p.
+2021-04-11 19:05:35.209 (I) [BaseEncoder::EncoderThread] Encoder thread started.
+2021-04-11 19:05:35.209 (I) [Muxer::MuxerThread] Muxer thread started.
+2021-04-11 19:05:35.209 (I) [PageRecord::StartOutput] Started output.
+2021-04-11 19:05:35.209 (I) [Synchronizer::SynchronizerThread] Synchronizer thread started.
+2021-04-11 19:05:35.209 (I) [PageRecord::StartInput] Starting input ...
+2021-04-11 19:05:35.210 (I) [X11Input::Init] Using X11 shared memory.
+2021-04-11 19:05:35.210 (I) [X11Input::InputThread] Input thread started.
+2021-04-11 19:05:35.210 (I) [ALSAInput::InputThread] Using sample format s16.
+2021-04-11 19:05:35.210 (W) [ALSAInput::Init] Warning: Channel count 2 is not supported, using 1 instead. This is not a problem.
+2021-04-11 19:05:35.217 (I) [PageRecord::StartInput] Started input.
+2021-04-11 19:05:35.217 (I) [ALSAInput::InputThread] Input thread started.
+2021-04-11 19:05:35.356 (I) [FastResampler::Resample] Resample ratio is 1.0000 (was 0.0000).
+2021-04-11 19:55:31.406 (I) [PageRecord::StopOutput] Stopping output ...
+2021-04-11 19:55:31.406 (I) [PageRecord::StopOutput] Stopped output.
+2021-04-11 19:55:31.406 (I) [PageRecord::StopInput] Stopping input ...
+2021-04-11 19:55:31.406 (I) [X11Input::~X11Input] Stopping input thread ...
+2021-04-11 19:55:31.410 (I) [X11Input::InputThread] Input thread stopped.
+2021-04-11 19:55:31.439 (I) [ALSAInput::~ALSAInput] Stopping input thread ...
+2021-04-11 19:55:31.449 (I) [ALSAInput::InputThread] Input thread stopped.
+2021-04-11 19:55:31.456 (I) [PageRecord::StopInput] Stopped input.
+2021-04-11 19:55:31.456 (I) [PageRecord::StopPage] Stopping page ...
+2021-04-11 19:55:31.456 (I) [Synchronizer::~Synchronizer] Stopping synchronizer thread ...
+2021-04-11 19:55:31.472 (I) [Synchronizer::SynchronizerThread] Synchronizer thread stopped.
+2021-04-11 19:55:31.477 (I) [Muxer::Finish] Finishing encoders ...
+2021-04-11 19:55:31.479 (I) [BaseEncoder::EncoderThread] Flushing encoder ...
+2021-04-11 19:55:31.496 (I) [BaseEncoder::EncoderThread] Flushing encoder ...
+2021-04-11 19:55:31.498 (I) [BaseEncoder::EncoderThread] Encoder thread stopped.
+2021-04-11 19:55:31.543 (I) [BaseEncoder::EncoderThread] Encoder thread stopped.
+2021-04-11 19:55:31.546 (I) [Muxer::MuxerThread] Muxer thread stopped.
+2021-04-11 19:55:31.558 (I) [Muxer::~Muxer] Stopping encoders ...
+2021-04-11 19:55:31.558 (I) [Muxer::~Muxer] Waiting for muxer thread to stop ...
+2021-04-11 19:55:31.599 (I) [BaseEncoder::~BaseEncoder] Stopping encoder thread ...
+2021-04-11 19:55:31.601 (S) [libx264 @ 0x6f8f5959c00] frame I:362   Avg QP:10.62  size:182758
+2021-04-11 19:55:31.601 (S) [libx264 @ 0x6f8f5959c00] frame P:22957 Avg QP:16.99  size: 14923
+2021-04-11 19:55:31.601 (S) [libx264 @ 0x6f8f5959c00] frame B:66563 Avg QP:18.04  size:  3696
+2021-04-11 19:55:31.601 (S) [libx264 @ 0x6f8f5959c00] consecutive B-frames:  1.0%  0.5%  0.5% 98.0%
+2021-04-11 19:55:31.601 (S) [libx264 @ 0x6f8f5959c00] mb I  I16..4: 56.8%  6.6% 36.6%
+2021-04-11 19:55:31.601 (S) [libx264 @ 0x6f8f5959c00] mb P  I16..4:  0.7%  0.9%  0.6%  P16..4: 12.0%  0.0%  0.0%  0.0%  0.0%    skip:85.8%
+2021-04-11 19:55:31.601 (S) [libx264 @ 0x6f8f5959c00] mb B  I16..4:  0.3%  0.1%  0.0%  B16..8:  3.8%  0.0%  0.0%  direct: 3.4%  skip:92.5%  L0:32.3% L1:49.6% BI:18.1%
+2021-04-11 19:55:31.601 (S) [libx264 @ 0x6f8f5959c00] 8x8 transform intra:25.2% inter:35.6%
+2021-04-11 19:55:31.601 (S) [libx264 @ 0x6f8f5959c00] coded y,uvDC,uvAC intra: 53.3% 47.2% 37.1% inter: 3.5% 2.8% 0.1%
+2021-04-11 19:55:31.602 (S) [libx264 @ 0x6f8f5959c00] i16 v,h,dc,p: 39% 52%  6%  3%
+2021-04-11 19:55:31.602 (S) [libx264 @ 0x6f8f5959c00] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 24% 11% 26%  6%  6%  7%  5%  8%  7%
+2021-04-11 19:55:31.602 (S) [libx264 @ 0x6f8f5959c00] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 29% 21% 12%  6%  6%  7%  6%  6%  6%
+2021-04-11 19:55:31.602 (S) [libx264 @ 0x6f8f5959c00] i8c dc,h,v,p: 58% 16% 17%  9%
+2021-04-11 19:55:31.602 (S) [libx264 @ 0x6f8f5959c00] Weighted P-Frames: Y:0.0% UV:0.0%
+2021-04-11 19:55:31.602 (S) [libx264 @ 0x6f8f5959c00] kb/s:1748.35
+2021-04-11 19:55:31.655 (I) [BaseEncoder::~BaseEncoder] Stopping encoder thread ...
+2021-04-11 19:55:31.655 (I) [PageRecord::StopPage] Stopped page.
+2021-04-11 19:59:45.260 (I) [PageRecord::StartPage] Starting page ...
+2021-04-11 19:59:45.260 (I) [PageRecord::StartPage] Started page.
+2021-04-11 20:50:16.199 (I) [PageRecord::StopPage] Stopping page ...
+2021-04-11 20:50:16.199 (I) [PageRecord::StopPage] Stopped page.
+2021-04-11 20:50:16.202 (I) ==================== SSR stopped ====================

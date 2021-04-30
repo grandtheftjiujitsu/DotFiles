@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"hash_length:ETI"#Dnsruby::RR::NSEC3#hash_length;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"GThe Hash Length field defines the length of the Next Hashed Owner ;TI"7Name field, ranging in value from 1 to 255 octets.;T:
+@fileI""lib/dnsruby/resource/NSEC3.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::RR::NSEC3;TcRDoc::NormalClass0

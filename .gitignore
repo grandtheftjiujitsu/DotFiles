@@ -1,5 +1,6 @@
-# $HOME Directories #
+\# $HOME Directories #
 #####################
+/.cache-bk
 /aosp
 /asp
 /Desktop
@@ -31,10 +32,11 @@
 /.ccache
 /.config/BraveSoftware
 /.config/chromium
+/.config/rclone
 /.ecryptfs/Private.sig
 /.ecryptfs/wrapped-passphrase
 /.gem
-/.config/rclone
-/Gemfile.lock
 /.phoronix-test-suite
+/.python_history
 /.Rhistory
+/Gemfile.lock

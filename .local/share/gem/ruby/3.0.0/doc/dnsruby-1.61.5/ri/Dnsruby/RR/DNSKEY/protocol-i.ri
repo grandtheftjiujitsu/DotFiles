@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"protocol:ETI"!Dnsruby::RR::DNSKEY#protocol;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"&The protocol for this DNSKEY RR. ;TI"MUST be 3.;T:
+@fileI"#lib/dnsruby/resource/DNSKEY.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::RR::DNSKEY;TcRDoc::NormalClass0

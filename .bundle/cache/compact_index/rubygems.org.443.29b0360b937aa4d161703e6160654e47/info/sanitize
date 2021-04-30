@@ -60,3 +60,5 @@
 5.1.0 crass:~> 1.0.2,nokogiri:>= 1.8.0,nokogumbo:~> 2.0|checksum:178f1a08c0f5807523b338c006d0ef1d5a74a79a99a8fdf25047d416ac4b3ec1,ruby:>= 2.1.0,rubygems:>= 1.2.0
 5.2.0 crass:~> 1.0.2,nokogiri:>= 1.8.0,nokogumbo:~> 2.0|checksum:a0012296f2288a4725693ba680047c569fefe30c942eb2dfac121fbab813dcd2,ruby:>= 2.1.0,rubygems:>= 1.2.0
 5.2.1 crass:~> 1.0.2,nokogiri:>= 1.8.0,nokogumbo:~> 2.0|checksum:b0352f1eb2ecdbd01b0f6cd5458560f0de29ece008890e5fcdec1d201cfba3a2,ruby:>= 2.1.0,rubygems:>= 1.2.0
+5.2.2 crass:~> 1.0.2,nokogiri:>= 1.8.0,nokogumbo:~> 2.0|checksum:689c4f6a4055e92333449afc7382306bf1ef42491eb7238942ec28aed17c57c7,ruby:>= 2.1.0,rubygems:>= 1.2.0
+5.2.3 crass:~> 1.0.2,nokogiri:>= 1.8.0,nokogumbo:~> 2.0|checksum:6c117962468879683a2b8f4221242dcff43e16cd95f814c97c404bb776622276,ruby:>= 2.1.0,rubygems:>= 1.2.0

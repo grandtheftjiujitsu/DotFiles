@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"signature:ETI"!Dnsruby::RR::RRSIG#signature;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[	I"6contains the cryptographic signature that covers ;TI"Cthe RRSIG RDATA (excluding the Signature field) and the RRset ;TI"Dspecified by the RRSIG owner name, RRSIG class, and RRSIG Type ;TI"Covered field;T:
+@fileI""lib/dnsruby/resource/RRSIG.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::RR::RRSIG;TcRDoc::NormalClass0

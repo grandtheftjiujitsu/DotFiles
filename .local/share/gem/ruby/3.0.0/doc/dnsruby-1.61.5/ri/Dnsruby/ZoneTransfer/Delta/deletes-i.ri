@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"deletes:ETI")Dnsruby::ZoneTransfer::Delta#deletes;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"AA list of records deleted between the start and end versions;T:
+@fileI"!lib/dnsruby/zone_transfer.rb;T:0@omit_headings_from_table_of_contents_below0F@I"!Dnsruby::ZoneTransfer::Delta;TcRDoc::NormalClass0

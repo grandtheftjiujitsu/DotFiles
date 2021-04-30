@@ -68,3 +68,5 @@
 0.20.1 ruby-enum:~> 0.5|checksum:c110e5a2433115b4f713250e253719b2b3ef6446d25588d7ffa08917944deda7,ruby:>= 2.0.0
 0.20.2 ruby-enum:~> 0.5|checksum:6c3792e83f380d93f230370cfde1575fe8f873ee45ba6dc197c67d7842179985,ruby:>= 2.0.0
 0.21.0 ruby-enum:~> 0.5|checksum:d99517b9abbda6dc56af6740555413ce3f1f9c29906fc7cc429da2ec789d976f
+0.21.1 ruby-enum:~> 0.5|checksum:39faa41ef4838a2e9dca5855fc3780c39beeab29a551b7e37b725c899e8aaca2
+0.21.2 ruby-enum:~> 0.5|checksum:e73042b381decd7ecb9e45ab356c95d8580fb2d4eacecc1ef49e2801aba9dabe,ruby:< 4.0&>= 2.4.10

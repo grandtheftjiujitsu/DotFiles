@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"digest:ETI"Dnsruby::RR::DS#digest;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"GThe DS record refers to a DNSKEY RR by including a digest of that ;TI"DNSKEY RR.;T:
+@fileI"lib/dnsruby/resource/DS.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::RR::DS;TcRDoc::NormalClass0

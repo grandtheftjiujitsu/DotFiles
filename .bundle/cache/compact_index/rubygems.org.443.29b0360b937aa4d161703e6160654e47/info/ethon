@@ -39,3 +39,4 @@
 0.10.1 ffi:>= 1.3.0|checksum:d4fe4965b20c92cfc89df916cf8071db1848bdd46a1e196b17451255371b07c5,rubygems:>= 1.3.6
 0.11.0 ffi:>= 1.3.0|checksum:88ec7960a8e00f76afc96ed15dcc8be0cb515f963fe3bb1d4e0b5c51f9d7e078,rubygems:>= 1.3.6
 0.12.0 ffi:>= 1.3.0|checksum:e99d3095e89f82c5a7e63d9261ddf4a21f28ae5d12a9d3abaa6920cce6cbef3d,rubygems:>= 1.3.6
+0.13.0 ffi:>= 1.15.0|checksum:829302877aa7dd5d06ee5667f51a950ff883ef9e847e5aeb7ae8ad443b1314b3,rubygems:>= 1.3.6

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"apply_domain:ETI"!Dnsruby::Config#apply_domain;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"*Should the default domain be applied?;T:
+@fileI"lib/dnsruby/config.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::Config;TcRDoc::NormalClass0

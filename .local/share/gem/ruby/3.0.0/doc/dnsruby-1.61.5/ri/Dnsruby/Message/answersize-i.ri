@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"answersize:ETI" Dnsruby::Message#answersize;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"cIf this Message is a response from a server, then answersize contains the size of the response;T:
+@fileI"#lib/dnsruby/message/message.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::Message;TcRDoc::NormalClass0

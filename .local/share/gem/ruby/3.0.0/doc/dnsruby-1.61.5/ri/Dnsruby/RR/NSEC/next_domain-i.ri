@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"next_domain:ETI""Dnsruby::RR::NSEC#next_domain;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[	I"0The next name which exists after this NSEC ;TI"JThe Next Domain field contains the next owner name (in the canonical ;TI"Eordering of the zone) that has authoritative data or contains a ;TI"delegation point NS RRset;T:
+@fileI"!lib/dnsruby/resource/NSEC.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::RR::NSEC;TcRDoc::NormalClass0

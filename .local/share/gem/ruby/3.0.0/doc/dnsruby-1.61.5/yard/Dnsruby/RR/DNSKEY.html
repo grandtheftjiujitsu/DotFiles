@@ -1,0 +1,2314 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Dnsruby::RR::DNSKEY
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Dnsruby::RR::DNSKEY";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (D)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Dnsruby.html" title="Dnsruby (module)">Dnsruby</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">RR</a></span></span>
+     &raquo; 
+    <span class="title">DNSKEY</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Dnsruby::RR::DNSKEY
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">Dnsruby::RR</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">Dnsruby::RR</a></span></li>
+          
+            <li class="next">Dnsruby::RR::DNSKEY</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/dnsruby/resource/DNSKEY.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>RFC4034, section 2 DNSSEC uses public key cryptography to sign and authenticate DNS resource record sets (RRsets).  The public keys are stored in DNSKEY resource records and are used in the DNSSEC authentication process described in [RFC4035]: A zone signs its authoritative RRsets by using a private key and stores the corresponding public key in a DNSKEY RR.  A resolver can then use the public key to validate signatures covering the RRsets in the zone, and thus to authenticate them.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="CDNSKEY.html" title="Dnsruby::RR::CDNSKEY (class)">CDNSKEY</a></span></p>
+</div>
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="ClassValue-constant" class="">ClassValue =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='kw'>nil</span></pre></dd>
+      
+        <dt id="TypeValue-constant" class="">TypeValue =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../Types.html" title="Dnsruby::Types (class)">Types</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Types.html#DNSKEY-constant" title="Dnsruby::Types::DNSKEY (constant)">DNSKEY</a></span></span></pre></dd>
+      
+        <dt id="REVOKED_KEY-constant" class="">REVOKED_KEY =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Key is revoked</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>0x80</span></pre></dd>
+      
+        <dt id="ZONE_KEY-constant" class="">ZONE_KEY =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Key is a zone key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>0x100</span></pre></dd>
+      
+        <dt id="SEP_KEY-constant" class="">SEP_KEY =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Key is a secure entry point key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>0x1</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+  
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">Dnsruby::RR</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RR.html#ClassInsensitiveTypes-constant" title="Dnsruby::RR::ClassInsensitiveTypes (constant)">ClassInsensitiveTypes</a></span></p>
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#algorithm-instance_method" title="#algorithm (instance method)">#<strong>algorithm</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The algorithm used for this key See Dnsruby::Algorithms for permitted values.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#flags-instance_method" title="#flags (instance method)">#<strong>flags</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The flags for the DNSKEY RR.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#key-instance_method" title="#key (instance method)">#<strong>key</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The public key.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#key_length-instance_method" title="#key_length (instance method)">#<strong>key_length</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The length (in bits) of the key - NOT key.length.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#protocol-instance_method" title="#protocol (instance method)">#<strong>protocol</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The protocol for this DNSKEY RR.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">Dnsruby::RR</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RR.html#klass-instance_method" title="Dnsruby::RR#klass (method)">#klass</a></span>, <span class='object_link'><a href="../RR.html#name-instance_method" title="Dnsruby::RR#name (method)">#name</a></span>, <span class='object_link'><a href="../RR.html#rdata-instance_method" title="Dnsruby::RR#rdata (method)">#rdata</a></span>, <span class='object_link'><a href="../RR.html#ttl-instance_method" title="Dnsruby::RR#ttl (method)">#ttl</a></span>, <span class='object_link'><a href="../RR.html#type-instance_method" title="Dnsruby::RR#type (method)">#type</a></span></p>
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#decode_rdata-class_method" title="decode_rdata (class method)">.<strong>decode_rdata</strong>(msg)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dsa_key-instance_method" title="#dsa_key (instance method)">#<strong>dsa_key</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ec_key-instance_method" title="#ec_key (instance method)">#<strong>ec_key</strong>(curve = &#39;prime256v1&#39;)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>RFC6605, section 4 ECDSA public keys consist of a single value, called “Q” in FIPS 186-3.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#encode_rdata-instance_method" title="#encode_rdata (instance method)">#<strong>encode_rdata</strong>(msg, canonical = false)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#from_data-instance_method" title="#from_data (instance method)">#<strong>from_data</strong>(data)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>def bad_flags?         if ((@flags &amp; ~ZONE_KEY &amp; ~SEP_KEY) &gt; 0)           return true         end         return false       end.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#from_hash-instance_method" title="#from_hash (instance method)">#<strong>from_hash</strong>(hash)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#from_string-instance_method" title="#from_string (instance method)">#<strong>from_string</strong>(input)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#generate_key_tag-instance_method" title="#generate_key_tag (instance method)">#<strong>generate_key_tag</strong>(rdata, algorithm)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_new_key_tag-instance_method" title="#get_new_key_tag (instance method)">#<strong>get_new_key_tag</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#init_defaults-instance_method" title="#init_defaults (instance method)">#<strong>init_defaults</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#key_tag-instance_method" title="#key_tag (instance method)">#<strong>key_tag</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Return the tag for this key.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#key_tag_pre_revoked-instance_method" title="#key_tag_pre_revoked (instance method)">#<strong>key_tag_pre_revoked</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Return the the key tag this key would have had before it was revoked  If the key is not revoked, then the current key_tag will be returned.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#public_key-instance_method" title="#public_key (instance method)">#<strong>public_key</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rdata_to_string-instance_method" title="#rdata_to_string (instance method)">#<strong>rdata_to_string</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc: all.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#revoked=-instance_method" title="#revoked= (instance method)">#<strong>revoked=</strong>(on)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#revoked%3F-instance_method" title="#revoked? (instance method)">#<strong>revoked?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rsa_key-instance_method" title="#rsa_key (instance method)">#<strong>rsa_key</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sep_key=-instance_method" title="#sep_key= (instance method)">#<strong>sep_key=</strong>(on)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sep_key%3F-instance_method" title="#sep_key? (instance method)">#<strong>sep_key?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#zone_key=-instance_method" title="#zone_key= (instance method)">#<strong>zone_key=</strong>(on)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#zone_key%3F-instance_method" title="#zone_key? (instance method)">#<strong>zone_key?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">Dnsruby::RR</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../RR.html#<=>-instance_method" title="Dnsruby::RR#&lt;=&gt; (method)">#<=></a></span>, <span class='object_link'><a href="../RR.html#==-instance_method" title="Dnsruby::RR#== (method)">#==</a></span>, <span class='object_link'><a href="../RR.html#clone-instance_method" title="Dnsruby::RR#clone (method)">#clone</a></span>, <span class='object_link'><a href="../RR.html#create-class_method" title="Dnsruby::RR.create (method)">create</a></span>, <span class='object_link'><a href="../RR.html#eql%3F-instance_method" title="Dnsruby::RR#eql? (method)">#eql?</a></span>, <span class='object_link'><a href="../RR.html#find_class-class_method" title="Dnsruby::RR.find_class (method)">find_class</a></span>, <span class='object_link'><a href="../RR.html#get_class-class_method" title="Dnsruby::RR.get_class (method)">get_class</a></span>, <span class='object_link'><a href="../RR.html#get_num-class_method" title="Dnsruby::RR.get_num (method)">get_num</a></span>, <span class='object_link'><a href="../RR.html#hash-instance_method" title="Dnsruby::RR#hash (method)">#hash</a></span>, <span class='object_link'><a href="../RR.html#implemented_rrs-class_method" title="Dnsruby::RR.implemented_rrs (method)">implemented_rrs</a></span>, <span class='object_link'><a href="../RR.html#new_from_data-class_method" title="Dnsruby::RR.new_from_data (method)">new_from_data</a></span>, <span class='object_link'><a href="../RR.html#new_from_hash-class_method" title="Dnsruby::RR.new_from_hash (method)">new_from_hash</a></span>, <span class='object_link'><a href="../RR.html#new_from_string-class_method" title="Dnsruby::RR.new_from_string (method)">new_from_string</a></span>, <span class='object_link'><a href="../RR.html#rdlength-instance_method" title="Dnsruby::RR#rdlength (method)">#rdlength</a></span>, <span class='object_link'><a href="../RR.html#sameRRset-instance_method" title="Dnsruby::RR#sameRRset (method)">#sameRRset</a></span>, <span class='object_link'><a href="../RR.html#to_s-instance_method" title="Dnsruby::RR#to_s (method)">#to_s</a></span></p>
+
+  
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="algorithm=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="algorithm-instance_method">
+  
+    #<strong>algorithm</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The algorithm used for this key See Dnsruby::Algorithms for permitted values</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/DNSKEY.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_algorithm'>algorithm</span>
+  <span class='ivar'>@algorithm</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="flags=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="flags-instance_method">
+  
+    #<strong>flags</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The flags for the DNSKEY RR</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/DNSKEY.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_flags'>flags</span>
+  <span class='ivar'>@flags</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="key=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="key-instance_method">
+  
+    #<strong>key</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The public key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+49
+50
+51</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/DNSKEY.rb', line 49</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_key'>key</span>
+  <span class='ivar'>@key</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="key_length-instance_method">
+  
+    #<strong>key_length</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The length (in bits) of the key - NOT key.length</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+51
+52
+53</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/DNSKEY.rb', line 51</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_key_length'>key_length</span>
+  <span class='ivar'>@key_length</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="protocol=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="protocol-instance_method">
+  
+    #<strong>protocol</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The protocol for this DNSKEY RR. MUST be 3.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+44
+45
+46</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/DNSKEY.rb', line 44</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_protocol'>protocol</span>
+  <span class='ivar'>@protocol</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="decode_rdata-class_method">
+  
+    .<strong>decode_rdata</strong>(msg)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+214
+215
+216
+217
+218
+219
+220</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/DNSKEY.rb', line 214</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_decode_rdata'>decode_rdata</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span> <span class='comment'>#:nodoc: all
+</span>  <span class='comment'>#  2 octets, then 2 sets of 1 octet
+</span>  <span class='id identifier rubyid_flags'>flags</span><span class='comma'>,</span> <span class='id identifier rubyid_protocol'>protocol</span><span class='comma'>,</span> <span class='id identifier rubyid_algorithm'>algorithm</span> <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_get_unpack'>get_unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ncc</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_get_bytes'>get_bytes</span>
+  <span class='kw'>return</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+    <span class='lbracket'>[</span><span class='id identifier rubyid_flags'>flags</span><span class='comma'>,</span> <span class='id identifier rubyid_protocol'>protocol</span><span class='comma'>,</span> <span class='id identifier rubyid_algorithm'>algorithm</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="dsa_key-instance_method">
+  
+    #<strong>dsa_key</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/DNSKEY.rb', line 354</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_dsa_key'>dsa_key</span>
+  <span class='id identifier rubyid_t'>t</span> <span class='op'>=</span> <span class='ivar'>@key</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_t'>t</span> <span class='op'>=</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_getbyte'>getbyte</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span> <span class='op'>==</span> <span class='const'>String</span>
+  <span class='id identifier rubyid_pgy_len'>pgy_len</span> <span class='op'>=</span> <span class='id identifier rubyid_t'>t</span> <span class='op'>*</span> <span class='int'>8</span> <span class='op'>+</span> <span class='int'>64</span>
+  <span class='id identifier rubyid_pos'>pos</span> <span class='op'>=</span> <span class='int'>1</span>
+  <span class='id identifier rubyid_q'>q</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">RR</a></span></span><span class='op'>::</span><span class='id identifier rubyid_get_num'><span class='object_link'><a href="../RR.html#get_num-class_method" title="Dnsruby::RR.get_num (method)">get_num</a></span></span><span class='lparen'>(</span><span class='ivar'>@key</span><span class='lbracket'>[</span><span class='id identifier rubyid_pos'>pos</span><span class='comma'>,</span> <span class='int'>20</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_pos'>pos</span> <span class='op'>+=</span> <span class='int'>20</span>
+  <span class='id identifier rubyid_p'>p</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">RR</a></span></span><span class='op'>::</span><span class='id identifier rubyid_get_num'><span class='object_link'><a href="../RR.html#get_num-class_method" title="Dnsruby::RR.get_num (method)">get_num</a></span></span><span class='lparen'>(</span><span class='ivar'>@key</span><span class='lbracket'>[</span><span class='id identifier rubyid_pos'>pos</span><span class='comma'>,</span> <span class='id identifier rubyid_pgy_len'>pgy_len</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_pos'>pos</span> <span class='op'>+=</span> <span class='id identifier rubyid_pgy_len'>pgy_len</span>
+  <span class='id identifier rubyid_g'>g</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">RR</a></span></span><span class='op'>::</span><span class='id identifier rubyid_get_num'><span class='object_link'><a href="../RR.html#get_num-class_method" title="Dnsruby::RR.get_num (method)">get_num</a></span></span><span class='lparen'>(</span><span class='ivar'>@key</span><span class='lbracket'>[</span><span class='id identifier rubyid_pos'>pos</span><span class='comma'>,</span> <span class='id identifier rubyid_pgy_len'>pgy_len</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_pos'>pos</span> <span class='op'>+=</span> <span class='id identifier rubyid_pgy_len'>pgy_len</span>
+  <span class='id identifier rubyid_y'>y</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">RR</a></span></span><span class='op'>::</span><span class='id identifier rubyid_get_num'><span class='object_link'><a href="../RR.html#get_num-class_method" title="Dnsruby::RR.get_num (method)">get_num</a></span></span><span class='lparen'>(</span><span class='ivar'>@key</span><span class='lbracket'>[</span><span class='id identifier rubyid_pos'>pos</span><span class='comma'>,</span> <span class='id identifier rubyid_pgy_len'>pgy_len</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_pos'>pos</span> <span class='op'>+=</span> <span class='id identifier rubyid_pgy_len'>pgy_len</span>
+  <span class='ivar'>@key_length</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_pgy_len'>pgy_len</span> <span class='op'>*</span> <span class='int'>8</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_pkey'>pkey</span> <span class='op'>=</span> <span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>PKey</span><span class='op'>::</span><span class='const'>DSA</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='kw'>begin</span>
+    <span class='id identifier rubyid_pkey'>pkey</span><span class='period'>.</span><span class='id identifier rubyid_set_pgq'>set_pgq</span><span class='lparen'>(</span><span class='id identifier rubyid_p'>p</span><span class='comma'>,</span><span class='id identifier rubyid_g'>g</span><span class='comma'>,</span><span class='id identifier rubyid_q'>q</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_pkey'>pkey</span><span class='period'>.</span><span class='id identifier rubyid_set_key'>set_key</span><span class='lparen'>(</span><span class='id identifier rubyid_y'>y</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rparen'>)</span> <span class='comment'># use set_pgq and set_key, present in later versions of openssl gem
+</span>  <span class='kw'>rescue</span> <span class='const'>NoMethodError</span>
+    <span class='id identifier rubyid_pkey'>pkey</span><span class='period'>.</span><span class='id identifier rubyid_p'>p</span> <span class='op'>=</span> <span class='id identifier rubyid_p'>p</span> <span class='comment'># set_key not available in earlier versions, use this approach instead
+</span>    <span class='id identifier rubyid_pkey'>pkey</span><span class='period'>.</span><span class='id identifier rubyid_q'>q</span> <span class='op'>=</span> <span class='id identifier rubyid_q'>q</span>
+    <span class='id identifier rubyid_pkey'>pkey</span><span class='period'>.</span><span class='id identifier rubyid_g'>g</span> <span class='op'>=</span> <span class='id identifier rubyid_g'>g</span>
+    <span class='id identifier rubyid_pkey'>pkey</span><span class='period'>.</span><span class='id identifier rubyid_pub_key'>pub_key</span> <span class='op'>=</span> <span class='id identifier rubyid_y'>y</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_pkey'>pkey</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ec_key-instance_method">
+  
+    #<strong>ec_key</strong>(curve = &#39;prime256v1&#39;)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>RFC6605, section 4 ECDSA public keys consist of a single value, called “Q” in FIPS 186-3.  In DNSSEC keys, Q is a simple bit string that represents the uncompressed form of a curve point, “x | y”.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/DNSKEY.rb', line 387</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ec_key'>ec_key</span><span class='lparen'>(</span><span class='id identifier rubyid_curve'>curve</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>prime256v1</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_group'>group</span> <span class='op'>=</span> <span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>PKey</span><span class='op'>::</span><span class='const'>EC</span><span class='op'>::</span><span class='const'>Group</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_curve'>curve</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_pkey'>pkey</span> <span class='op'>=</span> <span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>PKey</span><span class='op'>::</span><span class='const'>EC</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_group'>group</span><span class='rparen'>)</span>
+
+  <span class='comment'># DNSSEC pub does not have first octet that determines whether it&#39;s uncompressed
+</span>  <span class='comment'># or compressed form, but it&#39;s required by OpenSSL to parse EC point correctly
+</span>  <span class='id identifier rubyid_point_from_pub'>point_from_pub</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\x04</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='ivar'>@key</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='comment'># octet string, \x04 prefix determines uncompressed
+</span>  <span class='id identifier rubyid_pkey'>pkey</span><span class='period'>.</span><span class='id identifier rubyid_public_key'>public_key</span> <span class='op'>=</span> <span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>PKey</span><span class='op'>::</span><span class='const'>EC</span><span class='op'>::</span><span class='const'>Point</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_group'>group</span><span class='comma'>,</span> <span class='id identifier rubyid_point_from_pub'>point_from_pub</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_pkey'>pkey</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="encode_rdata-instance_method">
+  
+    #<strong>encode_rdata</strong>(msg, canonical = false)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+208
+209
+210
+211
+212</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/DNSKEY.rb', line 208</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_encode_rdata'>encode_rdata</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_canonical'>canonical</span><span class='op'>=</span><span class='kw'>false</span><span class='rparen'>)</span> <span class='comment'>#:nodoc: all
+</span>  <span class='comment'>#  2 octets, then 2 sets of 1 octet
+</span>  <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_pack'>put_pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ncc</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='ivar'>@flags</span><span class='comma'>,</span> <span class='ivar'>@protocol</span><span class='comma'>,</span> <span class='ivar'>@algorithm</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_put_bytes'>put_bytes</span><span class='lparen'>(</span><span class='ivar'>@key</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="from_data-instance_method">
+  
+    #<strong>from_data</strong>(data)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>def bad_flags?</p>
+
+<pre class="code ruby"><code class="ruby">  if ((@flags &amp; ~ZONE_KEY &amp; ~SEP_KEY) &gt; 0)
+    return true
+  end
+  return false
+end
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+146
+147
+148
+149
+150
+151
+152
+153
+154</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/DNSKEY.rb', line 146</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_from_data'>from_data</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span> <span class='comment'>#:nodoc: all
+</span>  <span class='id identifier rubyid_flags'>flags</span><span class='comma'>,</span> <span class='id identifier rubyid_protocol'>protocol</span><span class='comma'>,</span> <span class='id identifier rubyid_algorithm'>algorithm</span><span class='comma'>,</span> <span class='ivar'>@key</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span>
+  <span class='ivar'>@make_new_key_tag</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_flags'>flags</span><span class='op'>=</span><span class='lparen'>(</span><span class='id identifier rubyid_flags'>flags</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_protocol'>protocol</span><span class='op'>=</span><span class='lparen'>(</span><span class='id identifier rubyid_protocol'>protocol</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_algorithm'>algorithm</span><span class='op'>=</span><span class='lparen'>(</span><span class='id identifier rubyid_algorithm'>algorithm</span><span class='rparen'>)</span>
+  <span class='ivar'>@make_new_key_tag</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='id identifier rubyid_get_new_key_tag'>get_new_key_tag</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="from_hash-instance_method">
+  
+    #<strong>from_hash</strong>(hash)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+156
+157
+158
+159
+160
+161
+162
+163</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/DNSKEY.rb', line 156</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_from_hash'>from_hash</span><span class='lparen'>(</span><span class='id identifier rubyid_hash'>hash</span><span class='rparen'>)</span> <span class='comment'>#:nodoc: all
+</span>  <span class='ivar'>@make_new_key_tag</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='id identifier rubyid_hash'>hash</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_param'>param</span><span class='op'>|</span>
+    <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_param'>param</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='op'>+</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_param'>param</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='ivar'>@make_new_key_tag</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='id identifier rubyid_get_new_key_tag'>get_new_key_tag</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="from_string-instance_method">
+  
+    #<strong>from_string</strong>(input)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/DNSKEY.rb', line 165</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_from_string'>from_string</span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rparen'>)</span>
+    <span class='ivar'>@make_new_key_tag</span> <span class='op'>=</span> <span class='kw'>false</span>
+    <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_input'>input</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_flags'>flags</span><span class='op'>=</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='rparen'>)</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_protocol'>protocol</span><span class='op'>=</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='rparen'>)</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_algorithm'>algorithm</span><span class='op'>=</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='comment'>#  key can include whitespace - include all text
+</span>    <span class='comment'>#  until we come to &quot; )&quot; at the end, and then gsub
+</span>    <span class='comment'>#  the white space out
+</span>    <span class='comment'>#  Also, brackets may or may not be present
+</span>    <span class='comment'>#  Not to mention comments! &quot;;&quot;
+</span>    <span class='id identifier rubyid_buf'>buf</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_index'>index</span> <span class='op'>=</span> <span class='int'>3</span>
+    <span class='id identifier rubyid_end_index'>end_index</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>-</span> <span class='int'>1</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span><span class='rbracket'>]</span><span class='op'>==</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_end_index'>end_index</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>-</span> <span class='int'>2</span>
+      <span class='id identifier rubyid_index'>index</span> <span class='op'>=</span> <span class='int'>4</span>
+    <span class='kw'>end</span>
+    <span class='lparen'>(</span><span class='id identifier rubyid_index'>index</span><span class='op'>..</span><span class='id identifier rubyid_end_index'>end_index</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_comment_index'>comment_index</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_buf'>buf</span> <span class='op'>+=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_slice'>slice</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_comment_index'>comment_index</span><span class='rparen'>)</span>
+        <span class='comment'>#  @TODO@ We lose the comments here - we should really keep them for when we write back to string format?
+</span>        <span class='kw'>break</span>
+      <span class='kw'>else</span>
+        <span class='id identifier rubyid_buf'>buf</span> <span class='op'>+=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span>
+      <span class='kw'>end</span>
+    <span class='rbrace'>}</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span><span class='op'>=</span><span class='lparen'>(</span><span class='id identifier rubyid_buf'>buf</span><span class='rparen'>)</span>
+    <span class='ivar'>@make_new_key_tag</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='id identifier rubyid_get_new_key_tag'>get_new_key_tag</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="generate_key_tag-instance_method">
+  
+    #<strong>generate_key_tag</strong>(rdata, algorithm)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/DNSKEY.rb', line 252</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_generate_key_tag'>generate_key_tag</span><span class='lparen'>(</span><span class='id identifier rubyid_rdata'>rdata</span><span class='comma'>,</span> <span class='id identifier rubyid_algorithm'>algorithm</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_tag'>tag</span><span class='op'>=</span><span class='int'>0</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_algorithm'>algorithm</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="../Algorithms.html" title="Dnsruby::Algorithms (class)">Algorithms</a></span></span><span class='period'>.</span><span class='const'>RSAMD5</span><span class='rparen'>)</span>
+    <span class='comment'># The key tag for algorithm 1 (RSA/MD5) is defined differently from the
+</span>    <span class='comment'># key tag for all other algorithms, for historical reasons.
+</span>    <span class='id identifier rubyid_d1'>d1</span> <span class='op'>=</span> <span class='id identifier rubyid_rdata'>rdata</span><span class='lbracket'>[</span><span class='id identifier rubyid_rdata'>rdata</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>-</span> <span class='int'>3</span><span class='rbracket'>]</span> <span class='op'>&amp;</span> <span class='int'>0xFF</span>
+    <span class='id identifier rubyid_d2'>d2</span> <span class='op'>=</span> <span class='id identifier rubyid_rdata'>rdata</span><span class='lbracket'>[</span><span class='id identifier rubyid_rdata'>rdata</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>-</span> <span class='int'>2</span><span class='rbracket'>]</span> <span class='op'>&amp;</span> <span class='int'>0xFF</span>
+    <span class='id identifier rubyid_tag'>tag</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_d1'>d1</span> <span class='op'>&lt;&lt;</span> <span class='int'>8</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='id identifier rubyid_d2'>d2</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_tag'>tag</span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_last'>last</span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='int'>0</span><span class='period'>.</span><span class='id identifier rubyid_step'>step</span><span class='lparen'>(</span><span class='id identifier rubyid_rdata'>rdata</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>-</span> <span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+      <span class='id identifier rubyid_last'>last</span> <span class='op'>=</span> <span class='id identifier rubyid_i'>i</span>
+      <span class='id identifier rubyid_d1'>d1</span> <span class='op'>=</span> <span class='id identifier rubyid_rdata'>rdata</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_d2'>d2</span> <span class='op'>=</span> <span class='id identifier rubyid_rdata'>rdata</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span> <span class='op'>+</span> <span class='int'>1</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='int'>0</span> <span class='comment'># odd number of bytes possible
+</span>
+      <span class='id identifier rubyid_d1'>d1</span> <span class='op'>=</span> <span class='id identifier rubyid_d1'>d1</span><span class='period'>.</span><span class='id identifier rubyid_getbyte'>getbyte</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_d1'>d1</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span> <span class='op'>==</span> <span class='const'>String</span> <span class='comment'># Ruby 1.9
+</span>      <span class='id identifier rubyid_d2'>d2</span> <span class='op'>=</span> <span class='id identifier rubyid_d2'>d2</span><span class='period'>.</span><span class='id identifier rubyid_getbyte'>getbyte</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_d2'>d2</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span> <span class='op'>==</span> <span class='const'>String</span> <span class='comment'># Ruby 1.9
+</span>
+      <span class='id identifier rubyid_d1'>d1</span> <span class='op'>=</span> <span class='id identifier rubyid_d1'>d1</span>  <span class='op'>&amp;</span> <span class='int'>0xFF</span>
+      <span class='id identifier rubyid_d2'>d2</span> <span class='op'>=</span> <span class='id identifier rubyid_d2'>d2</span>  <span class='op'>&amp;</span> <span class='int'>0xFF</span>
+
+      <span class='id identifier rubyid_tag'>tag</span> <span class='op'>+=</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_d1'>d1</span> <span class='op'>&lt;&lt;</span> <span class='int'>8</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='id identifier rubyid_d2'>d2</span><span class='rparen'>)</span>
+    <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_last'>last</span><span class='op'>+=</span><span class='int'>2</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_last'>last</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_rdata'>rdata</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_d1'>d1</span> <span class='op'>=</span> <span class='id identifier rubyid_rdata'>rdata</span><span class='lbracket'>[</span><span class='id identifier rubyid_last'>last</span><span class='rbracket'>]</span>
+
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_d1'>d1</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span> <span class='op'>==</span> <span class='const'>String</span><span class='rparen'>)</span> <span class='comment'># Ruby 1.9
+</span>        <span class='id identifier rubyid_d1'>d1</span> <span class='op'>=</span> <span class='id identifier rubyid_d1'>d1</span><span class='period'>.</span><span class='id identifier rubyid_getbyte'>getbyte</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+
+      <span class='id identifier rubyid_d1'>d1</span> <span class='op'>=</span> <span class='id identifier rubyid_d1'>d1</span> <span class='op'>&amp;</span> <span class='int'>0xFF</span>
+      <span class='id identifier rubyid_tag'>tag</span> <span class='op'>+=</span> <span class='lparen'>(</span><span class='id identifier rubyid_d1'>d1</span> <span class='op'>&lt;&lt;</span> <span class='int'>8</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_tag'>tag</span> <span class='op'>+=</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_tag'>tag</span> <span class='op'>&gt;&gt;</span> <span class='int'>16</span><span class='rparen'>)</span> <span class='op'>&amp;</span> <span class='int'>0xFFFF</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_tag'>tag</span><span class='op'>=</span><span class='id identifier rubyid_tag'>tag</span><span class='op'>&amp;</span><span class='int'>0xFFFF</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_tag'>tag</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_new_key_tag-instance_method">
+  
+    #<strong>get_new_key_tag</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+233
+234
+235
+236
+237
+238
+239
+240
+241</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/DNSKEY.rb', line 233</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_new_key_tag'>get_new_key_tag</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@make_new_key_tag</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_rdata'>rdata</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../MessageEncoder.html" title="Dnsruby::MessageEncoder (class)">MessageEncoder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../MessageEncoder.html#initialize-instance_method" title="Dnsruby::MessageEncoder#initialize (method)">new</a></span></span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_msg'>msg</span><span class='op'>|</span>
+      <span class='id identifier rubyid_encode_rdata'>encode_rdata</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span>
+    <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+    <span class='id identifier rubyid_tag'>tag</span> <span class='op'>=</span> <span class='id identifier rubyid_generate_key_tag'>generate_key_tag</span><span class='lparen'>(</span><span class='id identifier rubyid_rdata'>rdata</span><span class='comma'>,</span> <span class='ivar'>@algorithm</span><span class='rparen'>)</span>
+    <span class='ivar'>@key_tag</span> <span class='op'>=</span> <span class='id identifier rubyid_tag'>tag</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="init_defaults-instance_method">
+  
+    #<strong>init_defaults</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55
+56
+57
+58
+59
+60
+61</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/DNSKEY.rb', line 53</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_init_defaults'>init_defaults</span>
+  <span class='ivar'>@make_new_key_tag</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_protocol'>protocol</span><span class='op'>=</span><span class='int'>3</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_flags'>flags</span><span class='op'>=</span><span class='const'>ZONE_KEY</span>
+  <span class='ivar'>@algorithm</span><span class='op'>=</span><span class='const'><span class='object_link'><a href="../Algorithms.html" title="Dnsruby::Algorithms (class)">Algorithms</a></span></span><span class='period'>.</span><span class='const'>RSASHA1</span>
+  <span class='ivar'>@public_key</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@key_tag</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@make_new_key_tag</span> <span class='op'>=</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="key_tag-instance_method">
+  
+    #<strong>key_tag</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Return the tag for this key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+244
+245
+246
+247
+248
+249
+250</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/DNSKEY.rb', line 244</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_key_tag'>key_tag</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='ivar'>@key_tag</span><span class='rparen'>)</span>
+    <span class='ivar'>@make_new_key_tag</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='id identifier rubyid_get_new_key_tag'>get_new_key_tag</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='ivar'>@key_tag</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="key_tag_pre_revoked-instance_method">
+  
+    #<strong>key_tag_pre_revoked</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Return the the key tag this key would have had before it was revoked</p>
+
+<pre class="code ruby"><code class="ruby">If the key is not revoked, then the current key_tag will be returned
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+224
+225
+226
+227
+228
+229
+230
+231</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/DNSKEY.rb', line 224</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_key_tag_pre_revoked'>key_tag_pre_revoked</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_revoked?'>revoked?</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_key_tag'>key_tag</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_new_key'>new_key</span> <span class='op'>=</span> <span class='id identifier rubyid_clone'>clone</span>
+  <span class='id identifier rubyid_new_key'>new_key</span><span class='period'>.</span><span class='id identifier rubyid_revoked'>revoked</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_new_key'>new_key</span><span class='period'>.</span><span class='id identifier rubyid_key_tag'>key_tag</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="public_key-instance_method">
+  
+    #<strong>public_key</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/DNSKEY.rb', line 306</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_public_key'>public_key</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='ivar'>@public_key</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="../Algorithms.html" title="Dnsruby::Algorithms (class)">Algorithms</a></span></span><span class='period'>.</span><span class='const'>RSASHA1</span><span class='comma'>,</span>
+        <span class='const'><span class='object_link'><a href="../Algorithms.html" title="Dnsruby::Algorithms (class)">Algorithms</a></span></span><span class='period'>.</span><span class='const'>RSASHA256</span><span class='comma'>,</span>
+        <span class='const'><span class='object_link'><a href="../Algorithms.html" title="Dnsruby::Algorithms (class)">Algorithms</a></span></span><span class='period'>.</span><span class='const'>RSASHA512</span><span class='comma'>,</span>
+        <span class='const'><span class='object_link'><a href="../Algorithms.html" title="Dnsruby::Algorithms (class)">Algorithms</a></span></span><span class='period'>.</span><span class='const'>RSASHA1_NSEC3_SHA1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='ivar'>@algorithm</span><span class='rparen'>)</span>
+      <span class='ivar'>@public_key</span> <span class='op'>=</span> <span class='id identifier rubyid_rsa_key'>rsa_key</span>
+    <span class='kw'>elsif</span> <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="../Algorithms.html" title="Dnsruby::Algorithms (class)">Algorithms</a></span></span><span class='period'>.</span><span class='const'>DSA</span><span class='comma'>,</span>
+        <span class='const'><span class='object_link'><a href="../Algorithms.html" title="Dnsruby::Algorithms (class)">Algorithms</a></span></span><span class='period'>.</span><span class='const'>DSA_NSEC3_SHA1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='ivar'>@algorithm</span><span class='rparen'>)</span>
+      <span class='ivar'>@public_key</span> <span class='op'>=</span> <span class='id identifier rubyid_dsa_key'>dsa_key</span>
+    <span class='kw'>elsif</span> <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="../Algorithms.html" title="Dnsruby::Algorithms (class)">Algorithms</a></span></span><span class='period'>.</span><span class='const'>ECDSAP256SHA256</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="../Algorithms.html" title="Dnsruby::Algorithms (class)">Algorithms</a></span></span><span class='period'>.</span><span class='const'>ECDSAP384SHA384</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='ivar'>@algorithm</span><span class='rparen'>)</span>
+      <span class='ivar'>@public_key</span> <span class='op'>=</span> <span class='id identifier rubyid_ec_key'>ec_key</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Algorithms.html" title="Dnsruby::Algorithms (class)">Algorithms</a></span></span><span class='period'>.</span><span class='const'>ECDSAP256SHA256</span> <span class='op'>==</span> <span class='ivar'>@algorithm</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>prime256v1</span><span class='tstring_end'>&#39;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>secp384r1</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='comment'>#  @TODO@ Support other key encodings!
+</span>  <span class='kw'>return</span> <span class='ivar'>@public_key</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="rdata_to_string-instance_method">
+  
+    #<strong>rdata_to_string</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc: all</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+199
+200
+201
+202
+203
+204
+205
+206</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/DNSKEY.rb', line 199</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_rdata_to_string'>rdata_to_string</span> <span class='comment'>#:nodoc: all
+</span>  <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@flags</span><span class='op'>!=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+    <span class='comment'>#           return &quot;#{@flags} #{@protocol} #{@algorithm.string} ( #{Base64.encode64(@key.to_s)} )&quot;
+</span>    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@flags</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='ivar'>@protocol</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='ivar'>@algorithm</span><span class='period'>.</span><span class='id identifier rubyid_string'>string</span><span class='embexpr_end'>}</span><span class='tstring_content'> ( </span><span class='embexpr_beg'>#{</span><span class='lbracket'>[</span><span class='ivar'>@key</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>m*</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> ) ; key_tag=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key_tag'>key_tag</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>else</span>
+    <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="revoked=-instance_method">
+  
+    #<strong>revoked=</strong>(on)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+86
+87
+88
+89
+90
+91
+92
+93</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/DNSKEY.rb', line 86</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_revoked='>revoked=</span><span class='lparen'>(</span><span class='id identifier rubyid_on'>on</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_on'>on</span><span class='rparen'>)</span>
+    <span class='ivar'>@flags</span> <span class='op'>|=</span> <span class='const'><span class='object_link'><a href="#REVOKED_KEY-constant" title="Dnsruby::RR::DNSKEY::REVOKED_KEY (constant)">REVOKED_KEY</a></span></span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@flags</span> <span class='op'>&amp;=</span> <span class='lparen'>(</span><span class='op'>~</span><span class='const'><span class='object_link'><a href="#REVOKED_KEY-constant" title="Dnsruby::RR::DNSKEY::REVOKED_KEY (constant)">REVOKED_KEY</a></span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_get_new_key_tag'>get_new_key_tag</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="revoked?-instance_method">
+  
+    #<strong>revoked?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+95
+96
+97</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/DNSKEY.rb', line 95</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_revoked?'>revoked?</span>
+  <span class='kw'>return</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='ivar'>@flags</span> <span class='op'>&amp;</span> <span class='const'><span class='object_link'><a href="#REVOKED_KEY-constant" title="Dnsruby::RR::DNSKEY::REVOKED_KEY (constant)">REVOKED_KEY</a></span></span><span class='rparen'>)</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="rsa_key-instance_method">
+  
+    #<strong>rsa_key</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/DNSKEY.rb', line 324</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_rsa_key'>rsa_key</span>
+  <span class='id identifier rubyid_exponentLength'>exponentLength</span> <span class='op'>=</span> <span class='ivar'>@key</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_exponentLength'>exponentLength</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span> <span class='op'>==</span> <span class='const'>String</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_exponentLength'>exponentLength</span> <span class='op'>=</span> <span class='id identifier rubyid_exponentLength'>exponentLength</span><span class='period'>.</span><span class='id identifier rubyid_getbyte'>getbyte</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span> <span class='comment'># Ruby 1.9
+</span>  <span class='kw'>end</span>
+  <span class='id identifier rubyid_pos'>pos</span> <span class='op'>=</span> <span class='int'>1</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_exponentLength'>exponentLength</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_key1'>key1</span> <span class='op'>=</span> <span class='ivar'>@key</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_key1'>key1</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span> <span class='op'>==</span> <span class='const'>String</span><span class='rparen'>)</span> <span class='comment'># Ruby 1.9
+</span>      <span class='id identifier rubyid_key1'>key1</span> <span class='op'>=</span> <span class='id identifier rubyid_key1'>key1</span><span class='period'>.</span><span class='id identifier rubyid_getbyte'>getbyte</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_exponentLength'>exponentLength</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_key1'>key1</span><span class='op'>&lt;&lt;</span><span class='int'>8</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='id identifier rubyid_key1'>key1</span>
+    <span class='id identifier rubyid_pos'>pos</span> <span class='op'>+=</span> <span class='int'>2</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_exponent'>exponent</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">RR</a></span></span><span class='op'>::</span><span class='id identifier rubyid_get_num'><span class='object_link'><a href="../RR.html#get_num-class_method" title="Dnsruby::RR.get_num (method)">get_num</a></span></span><span class='lparen'>(</span><span class='ivar'>@key</span><span class='lbracket'>[</span><span class='id identifier rubyid_pos'>pos</span><span class='comma'>,</span> <span class='id identifier rubyid_exponentLength'>exponentLength</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_pos'>pos</span> <span class='op'>+=</span> <span class='id identifier rubyid_exponentLength'>exponentLength</span>
+
+  <span class='id identifier rubyid_modulus'>modulus</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../RR.html" title="Dnsruby::RR (class)">RR</a></span></span><span class='op'>::</span><span class='id identifier rubyid_get_num'><span class='object_link'><a href="../RR.html#get_num-class_method" title="Dnsruby::RR.get_num (method)">get_num</a></span></span><span class='lparen'>(</span><span class='ivar'>@key</span><span class='lbracket'>[</span><span class='id identifier rubyid_pos'>pos</span><span class='comma'>,</span> <span class='ivar'>@key</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='ivar'>@key_length</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='ivar'>@key</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>-</span> <span class='id identifier rubyid_pos'>pos</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='int'>8</span>
+
+  <span class='id identifier rubyid_pkey'>pkey</span> <span class='op'>=</span> <span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>PKey</span><span class='op'>::</span><span class='const'>RSA</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='kw'>begin</span>
+    <span class='id identifier rubyid_pkey'>pkey</span><span class='period'>.</span><span class='id identifier rubyid_set_key'>set_key</span><span class='lparen'>(</span><span class='id identifier rubyid_modulus'>modulus</span><span class='comma'>,</span> <span class='id identifier rubyid_exponent'>exponent</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rparen'>)</span> <span class='comment'># use set_key, present in later versions of openssl gem
+</span>  <span class='kw'>rescue</span> <span class='const'>NoMethodError</span>
+    <span class='id identifier rubyid_pkey'>pkey</span><span class='period'>.</span><span class='id identifier rubyid_e'>e</span> <span class='op'>=</span> <span class='id identifier rubyid_exponent'>exponent</span> <span class='comment'># set_key not available in earlier versions, use this approach instead
+</span>    <span class='id identifier rubyid_pkey'>pkey</span><span class='period'>.</span><span class='id identifier rubyid_n'>n</span> <span class='op'>=</span> <span class='id identifier rubyid_modulus'>modulus</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_pkey'>pkey</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sep_key=-instance_method">
+  
+    #<strong>sep_key=</strong>(on)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+112
+113
+114
+115
+116
+117
+118
+119</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/DNSKEY.rb', line 112</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sep_key='>sep_key=</span><span class='lparen'>(</span><span class='id identifier rubyid_on'>on</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_on'>on</span><span class='rparen'>)</span>
+    <span class='ivar'>@flags</span> <span class='op'>|=</span> <span class='const'><span class='object_link'><a href="#SEP_KEY-constant" title="Dnsruby::RR::DNSKEY::SEP_KEY (constant)">SEP_KEY</a></span></span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@flags</span> <span class='op'>&amp;=</span> <span class='lparen'>(</span><span class='op'>~</span><span class='const'><span class='object_link'><a href="#SEP_KEY-constant" title="Dnsruby::RR::DNSKEY::SEP_KEY (constant)">SEP_KEY</a></span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_get_new_key_tag'>get_new_key_tag</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sep_key?-instance_method">
+  
+    #<strong>sep_key?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+121
+122
+123</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/DNSKEY.rb', line 121</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_sep_key?'>sep_key?</span>
+  <span class='kw'>return</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='ivar'>@flags</span> <span class='op'>&amp;</span> <span class='const'><span class='object_link'><a href="#SEP_KEY-constant" title="Dnsruby::RR::DNSKEY::SEP_KEY (constant)">SEP_KEY</a></span></span><span class='rparen'>)</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="zone_key=-instance_method">
+  
+    #<strong>zone_key=</strong>(on)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+99
+100
+101
+102
+103
+104
+105
+106</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/DNSKEY.rb', line 99</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_zone_key='>zone_key=</span><span class='lparen'>(</span><span class='id identifier rubyid_on'>on</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_on'>on</span><span class='rparen'>)</span>
+    <span class='ivar'>@flags</span> <span class='op'>|=</span> <span class='const'><span class='object_link'><a href="#ZONE_KEY-constant" title="Dnsruby::RR::DNSKEY::ZONE_KEY (constant)">ZONE_KEY</a></span></span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@flags</span> <span class='op'>&amp;=</span> <span class='lparen'>(</span><span class='op'>~</span><span class='const'><span class='object_link'><a href="#ZONE_KEY-constant" title="Dnsruby::RR::DNSKEY::ZONE_KEY (constant)">ZONE_KEY</a></span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_get_new_key_tag'>get_new_key_tag</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="zone_key?-instance_method">
+  
+    #<strong>zone_key?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+108
+109
+110</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dnsruby/resource/DNSKEY.rb', line 108</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_zone_key?'>zone_key?</span>
+  <span class='kw'>return</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='ivar'>@flags</span> <span class='op'>&amp;</span> <span class='const'><span class='object_link'><a href="#ZONE_KEY-constant" title="Dnsruby::RR::DNSKEY::ZONE_KEY (constant)">ZONE_KEY</a></span></span><span class='rparen'>)</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Apr  9 10:58:26 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-3.0.0).
+</div>
+
+    </div>
+  </body>
+</html>

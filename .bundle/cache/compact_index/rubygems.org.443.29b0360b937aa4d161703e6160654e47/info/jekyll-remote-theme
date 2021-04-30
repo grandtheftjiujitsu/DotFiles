@@ -10,3 +10,4 @@
 0.4.0 addressable:~> 2.0,jekyll:~> 3.5,rubyzip:< 3.0&>= 1.2.1|checksum:23a1454dcfec8e12d7a3f2ab08406ccc690df09563f766bf67af5131d6c2d907,ruby:>= 2.3.0
 0.4.1 addressable:~> 2.0,jekyll:< 5.0&>= 3.5,rubyzip:>= 1.3.0|checksum:6b6e673d6c4a8960032e2886755532e4419c404fe8042988072aa7ce4b4bc605,ruby:>= 2.3.0
 0.4.2 addressable:~> 2.0,jekyll:< 5.0&>= 3.5,jekyll-sass-converter:!= 2.0.0&<= 3.0.0&>= 1.0,rubyzip:< 3.0&>= 1.3.0|checksum:d0d0b1b07dadc7bc24fc543410a796f2472396713f0438f9e407ed97fc6dfb7d,ruby:>= 2.3.0
+0.4.3 addressable:~> 2.0,jekyll:< 5.0&>= 3.5,jekyll-sass-converter:!= 2.0.0&<= 3.0.0&>= 1.0,rubyzip:< 3.0&>= 1.3.0|checksum:d3fde726484fb3df04de9e347baf75aaa3d5bfea771a330412e0c52608e54b40,ruby:>= 2.3.0

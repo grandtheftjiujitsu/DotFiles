@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"property_value:ETI"$Dnsruby::RR::CAA#property_value;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"#The value for the property_tag;T:
+@fileI" lib/dnsruby/resource/CAA.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::RR::CAA;TcRDoc::NormalClass0

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"subtype:ETI"#Dnsruby::RR::IN::AFSDB#subtype;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"+The RR's subtype field.  See RFC 1183.;T:
+@fileI""lib/dnsruby/resource/AFSDB.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::RR::IN::AFSDB;TcRDoc::NormalClass0

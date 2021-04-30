@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"use_tcp:ETI"Dnsruby::Resolver#use_tcp;TI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"8Should TCP be used as a transport rather than UDP? ;TI"AIf use_tcp==true, then ONLY TCP will be used as a transport.;T:
+@fileI"lib/dnsruby/resolver.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::Resolver;TcRDoc::NormalClass0

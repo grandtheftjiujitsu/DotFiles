@@ -60,7 +60,7 @@
     <property name="vblank_mode" type="string" value="auto"/>
     <property name="theme" type="string" value="Variation"/>
     <property name="tile_on_move" type="bool" value="true"/>
-    <property name="title_alignment" type="string" value="center"/>
+    <property name="title_alignment" type="string" value="right"/>
     <property name="title_font" type="string" value="Cantarell Ultra-Bold 12"/>
     <property name="title_horizontal_offset" type="int" value="0"/>
     <property name="titleless_maximize" type="bool" value="false"/>
@@ -80,7 +80,7 @@
     <property name="wrap_workspaces" type="bool" value="false"/>
     <property name="zoom_desktop" type="bool" value="true"/>
     <property name="workspace_names" type="array">
-      <value type="string" value="Web"/>
+      <value type="string" value="Term"/>
       <value type="string" value="Term"/>
       <value type="string" value="Editor"/>
       <value type="string" value="Media"/>

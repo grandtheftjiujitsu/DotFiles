@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"cpu:ETI"Dnsruby::RR::HINFO#cpu;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"The CPU type for this RR.;T:
+@fileI""lib/dnsruby/resource/HINFO.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::RR::HINFO;TcRDoc::NormalClass0

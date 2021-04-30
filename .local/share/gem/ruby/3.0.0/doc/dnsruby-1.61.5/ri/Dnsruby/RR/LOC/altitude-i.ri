@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"altitude:ETI"Dnsruby::RR::LOC#altitude;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I";The altitude of the center of the sphere described by ;TI">the size method, in centimeters, from a base of 100,000m ;TI"5below the WGS 84 reference spheroid used by GPS.;T:
+@fileI" lib/dnsruby/resource/LOC.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Dnsruby::RR::LOC;TcRDoc::NormalClass0

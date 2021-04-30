@@ -1,0 +1,90 @@
+2021-03-14 18:21:07.837 (I) ==================== SSR started ====================
+2021-03-14 18:21:07.837 (I) SimpleScreenRecorder 0.4.3
+Compiled with GCC 10.2.0
+Qt: header 5.15.2, lib 5.15.2
+libavformat: header 58.45.100, lib 58.45.100
+libavcodec: header 58.91.100, lib 58.91.100
+libavutil: header 56.51.100, lib 56.51.100
+libswscale: header 5.7.100, lib 5.7.100
+2021-03-14 18:21:07.837 (I) [CPUFeatures::Detect] CPU features: mmx sse sse2 sse3 ssse3 sse4_1 sse4_2 avx bmi1
+2021-03-14 18:21:07.897 (I) [ALSAInput::GetSourceList] Generating source list ...
+2021-03-14 18:21:07.898 (I) [ALSAInput::GetSourceList] Found card: [hw:0] HD-Audio Generic
+2021-03-14 18:21:07.898 (I) [ALSAInput::GetSourceList] Found device: [hw:0,0] HD-Audio Generic: ALC887-VD Analog
+2021-03-14 18:21:07.898 (I) [ALSAInput::GetSourceList] Found device: [hw:0,2] HD-Audio Generic: ALC887-VD Alt Analog
+2021-03-14 18:21:07.899 (I) [ALSAInput::GetSourceList] Found card: [hw:1] HDA NVidia
+2021-03-14 18:21:07.901 (I) [PulseAudioInput::GetSourceList] Generating source list ...
+2021-03-14 18:21:07.905 (I) [SourceNamesCallback] Found source: [alsa_output.pci-0000_00_14.2.analog-stereo.monitor] Monitor of Built-in Audio Analog Stereo
+2021-03-14 18:21:07.905 (I) [SourceNamesCallback] Found source: [ladspa_output.mbeq_1197.mbeq.monitor] Monitor of LADSPA Plugin Multiband EQ on Built-in Audio Analog Stereo
+2021-03-14 18:21:08.332 (E) [PageRecord::OnStdin] Standard input read error (ioctl).
+2021-03-14 18:21:15.476 (I) [PageRecord::StartPage] Starting page ...
+2021-03-14 18:21:15.477 (I) [PageRecord::StartPage] Started page.
+2021-03-14 18:21:21.312 (I) [PageRecord::StartOutput] Starting output ...
+2021-03-14 18:21:21.312 (I) [Muxer::Init] Using format mp4 (MP4 (MPEG-4 Part 14)).
+2021-03-14 18:21:21.312 (I) [Muxer::AddStream] Using codec libx264 (libx264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10).
+2021-03-14 18:21:21.313 (I) [VideoEncoder::PrepareStream] Using pixel format nv12.
+2021-03-14 18:21:21.314 (S) [libx264 @ 0x3e3c5a59880] using SAR=1/1
+2021-03-14 18:21:21.315 (S) [libx264 @ 0x3e3c5a59880] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX XOP FMA3 BMI1
+2021-03-14 18:21:21.323 (S) [libx264 @ 0x3e3c5a59880] profile High, level 4.0, 4:2:0, 8-bit
+2021-03-14 18:21:21.327 (S) [libx264 @ 0x3e3c5a59880] 264 - core 160 r3011 cde9a93 - H.264/MPEG-4 AVC codec - Copyleft 2003-2020 - http://www.videolan.org/x264.html - options: cabac=1 ref=1 deblock=1:0:0 analyse=0x3:0x3 me=dia subme=1 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=4 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc=crf mbtree=0 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 pb_ratio=1.30 aq=1:1.00
+2021-03-14 18:21:21.327 (I) [Muxer::AddStream] Using codec libvorbis (libvorbis).
+2021-03-14 18:21:21.327 (I) [AudioEncoder::PrepareStream] Using sample format f32p.
+2021-03-14 18:21:21.327 (I) [BaseEncoder::EncoderThread] Encoder thread started.
+2021-03-14 18:21:21.342 (I) [BaseEncoder::EncoderThread] Encoder thread started.
+2021-03-14 18:21:21.342 (I) [PageRecord::StartOutput] Started output.
+2021-03-14 18:21:21.342 (I) [Muxer::MuxerThread] Muxer thread started.
+2021-03-14 18:21:21.342 (I) [Synchronizer::SynchronizerThread] Synchronizer thread started.
+2021-03-14 18:21:21.342 (I) [PageRecord::StartInput] Starting input ...
+2021-03-14 18:21:21.343 (I) [X11Input::Init] Using X11 shared memory.
+2021-03-14 18:21:21.343 (I) [X11Input::InputThread] Input thread started.
+2021-03-14 18:21:21.345 (I) [ALSAInput::InputThread] Using sample format s16.
+2021-03-14 18:21:21.346 (I) [PageRecord::StartInput] Started input.
+2021-03-14 18:21:21.346 (I) [ALSAInput::InputThread] Input thread started.
+2021-03-14 18:21:21.479 (I) [FastResampler::Resample] Resample ratio is 1.0000 (was 0.0000).
+2021-03-14 18:22:18.403 (I) [PageRecord::StopOutput] Stopping output ...
+2021-03-14 18:22:18.403 (I) [PageRecord::StopOutput] Stopped output.
+2021-03-14 18:22:18.403 (I) [PageRecord::StopInput] Stopping input ...
+2021-03-14 18:22:18.403 (I) [X11Input::~X11Input] Stopping input thread ...
+2021-03-14 18:22:18.422 (I) [X11Input::InputThread] Input thread stopped.
+2021-03-14 18:22:18.431 (I) [ALSAInput::~ALSAInput] Stopping input thread ...
+2021-03-14 18:22:18.431 (I) [ALSAInput::InputThread] Input thread stopped.
+2021-03-14 18:22:18.432 (I) [PageRecord::StopInput] Stopped input.
+2021-03-14 18:22:18.432 (I) [PageRecord::StopPage] Stopping page ...
+2021-03-14 18:22:18.432 (I) [Synchronizer::~Synchronizer] Stopping synchronizer thread ...
+2021-03-14 18:22:18.440 (I) [Synchronizer::SynchronizerThread] Synchronizer thread stopped.
+2021-03-14 18:22:18.440 (I) [Muxer::Finish] Finishing encoders ...
+2021-03-14 18:22:18.442 (I) [BaseEncoder::EncoderThread] Flushing encoder ...
+2021-03-14 18:22:18.460 (I) [BaseEncoder::EncoderThread] Flushing encoder ...
+2021-03-14 18:22:18.461 (I) [BaseEncoder::EncoderThread] Encoder thread stopped.
+2021-03-14 18:22:18.504 (I) [BaseEncoder::EncoderThread] Encoder thread stopped.
+2021-03-14 18:22:18.522 (I) [Muxer::MuxerThread] Muxer thread stopped.
+2021-03-14 18:22:18.541 (I) [Muxer::~Muxer] Stopping encoders ...
+2021-03-14 18:22:18.541 (I) [Muxer::~Muxer] Waiting for muxer thread to stop ...
+2021-03-14 18:22:18.542 (I) [BaseEncoder::~BaseEncoder] Stopping encoder thread ...
+2021-03-14 18:22:18.542 (S) [libx264 @ 0x3e3c5a59880] frame I:8     Avg QP:11.51  size:222664
+2021-03-14 18:22:18.542 (S) [libx264 @ 0x3e3c5a59880] frame P:442   Avg QP:16.61  size: 21362
+2021-03-14 18:22:18.542 (S) [libx264 @ 0x3e3c5a59880] frame B:1259  Avg QP:18.36  size:  5665
+2021-03-14 18:22:18.543 (S) [libx264 @ 0x3e3c5a59880] consecutive B-frames:  1.5%  0.5%  1.4% 96.7%
+2021-03-14 18:22:18.543 (S) [libx264 @ 0x3e3c5a59880] mb I  I16..4: 57.3%  6.2% 36.5%
+2021-03-14 18:22:18.543 (S) [libx264 @ 0x3e3c5a59880] mb P  I16..4:  1.6%  2.4%  0.9%  P16..4: 10.6%  0.0%  0.0%  0.0%  0.0%    skip:84.5%
+2021-03-14 18:22:18.543 (S) [libx264 @ 0x3e3c5a59880] mb B  I16..4:  0.3%  0.3%  0.0%  B16..8:  4.3%  0.0%  0.0%  direct: 3.5%  skip:91.6%  L0:34.4% L1:44.2% BI:21.5%
+2021-03-14 18:22:18.543 (S) [libx264 @ 0x3e3c5a59880] 8x8 transform intra:39.9% inter:28.4%
+2021-03-14 18:22:18.543 (S) [libx264 @ 0x3e3c5a59880] coded y,uvDC,uvAC intra: 63.6% 40.0% 23.6% inter: 3.9% 1.9% 0.1%
+2021-03-14 18:22:18.543 (S) [libx264 @ 0x3e3c5a59880] i16 v,h,dc,p: 47% 21% 21% 11%
+2021-03-14 18:22:18.543 (S) [libx264 @ 0x3e3c5a59880] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 16% 14% 31%  9%  5%  6%  5%  7%  8%
+2021-03-14 18:22:18.543 (S) [libx264 @ 0x3e3c5a59880] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 29% 25% 12%  6%  5%  5%  6%  6%  6%
+2021-03-14 18:22:18.543 (S) [libx264 @ 0x3e3c5a59880] i8c dc,h,v,p: 58% 18% 19%  6%
+2021-03-14 18:22:18.543 (S) [libx264 @ 0x3e3c5a59880] Weighted P-Frames: Y:0.0% UV:0.0%
+2021-03-14 18:22:18.543 (S) [libx264 @ 0x3e3c5a59880] kb/s:2577.80
+2021-03-14 18:22:18.585 (I) [BaseEncoder::~BaseEncoder] Stopping encoder thread ...
+2021-03-14 18:22:18.586 (I) [PageRecord::StopPage] Stopped page.
+2021-03-14 18:23:33.026 (I) [ALSAInput::GetSourceList] Generating source list ...
+2021-03-14 18:23:33.029 (I) [ALSAInput::GetSourceList] Found card: [hw:0] HD-Audio Generic
+2021-03-14 18:23:33.029 (I) [ALSAInput::GetSourceList] Found device: [hw:0,0] HD-Audio Generic: ALC887-VD Analog
+2021-03-14 18:23:33.029 (I) [ALSAInput::GetSourceList] Found device: [hw:0,2] HD-Audio Generic: ALC887-VD Alt Analog
+2021-03-14 18:23:33.029 (I) [ALSAInput::GetSourceList] Found card: [hw:1] HDA NVidia
+2021-03-14 18:23:34.532 (I) [ALSAInput::GetSourceList] Generating source list ...
+2021-03-14 18:23:34.533 (I) [ALSAInput::GetSourceList] Found card: [hw:0] HD-Audio Generic
+2021-03-14 18:23:34.533 (I) [ALSAInput::GetSourceList] Found device: [hw:0,0] HD-Audio Generic: ALC887-VD Analog
+2021-03-14 18:23:34.533 (I) [ALSAInput::GetSourceList] Found device: [hw:0,2] HD-Audio Generic: ALC887-VD Alt Analog
+2021-03-14 18:23:34.533 (I) [ALSAInput::GetSourceList] Found card: [hw:1] HDA NVidia
+2021-03-14 18:23:40.619 (I) ==================== SSR stopped ====================
